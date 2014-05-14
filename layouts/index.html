@@ -1,0 +1,81 @@
+<!-- This file is the homepage of the website. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+      This section just sets up some metadata for the website.
+
+      It probably does not need to be changed.
+    -->
+    <meta charset="utf-8">
+    <base href="{{ .Site.BaseUrl }}">
+    <title>{{ .Site.Title }}</title>
+    <link rel="canonical" href="{{ .Permalink }}">
+    <link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+
+    {{ template "chrome/head_includes.html" . }}
+</head>
+  <body class="theme-base-08" lang="en">
+
+  {{ template "chrome/sidebar.html" . }}
+
+  <!-- See /layouts/indexes/category.html for explanation of this section -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/" title="Home">Home</a>
+            &nbsp;⋅&nbsp;
+            <a href="https://github.com/tendermint/tendermint" title="GitHub">GitHub</a>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+        <h1>TenderMint</h1>
+        <p class="lead"> A Novel Consensus Protocol </p>
+
+        <p>
+            Bitcoin proved to us what is possible with a distributed consensus protocol.
+            Yet, Bitcoin's mining (proof of work) comes with a hefty cost.
+            At today’s Bitcoin prices and reward schedule, miners are rewarded on the
+            order of $1,500,000 a day to secure the blockchain – and a significant portion of that
+            money is spent on electricity. Proof-of-work based consensus algorithms are also
+            slow, requiring up to an hour to fully confirm a payment to prevent double-spending.
+        </p>
+        <p>
+            The TenderMint protocol is a solution to the mining problem based on a solution to the
+            Byzantine Generals Problem by Dwork, Lynch, and Stockmeyer (<a href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.13.3423">link</a>).
+            It is suitable to use as a replacement to mining for Bitcoin, Ethereum, etc.
+        </p>
+        <p>
+            A minimal prototype is being developed in Go.<br/>
+            Interested in participating? <a href="mailto:dev@tendermint.com" title="Contact us">Let us know!</a>
+        </p>
+
+        <h2>Resources</h2>
+
+        <ul>
+            <li><a href="/docs/tendermint_v02.pdf" title="Whitepaper PDF">whitepaper</a></li>
+            <li>#tendermint on FreeNode IRC</li>
+        </ul>
+
+        <!-- Recent Posts section -->
+        <!--
+        <h1 class="post-title">Recent Posts</h1>
+          <section id="main">
+            <ul id="list">
+              {{ range first 10 .Data.Pages }}
+              {{ .Render "summary"}}
+              {{ end }}
+            </ul>
+          </section>
+        -->
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+{{ template "chrome/footer.html" }}
