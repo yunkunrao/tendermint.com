@@ -17,4 +17,4 @@ git commit -m "$msg"
 
 # Push source and build repos.
 git push origin sources
-git subtree push --prefix=public git@github.com:tendermint/tendermint.com.git master
+git subtree push --prefix=public git@github.com:tendermint/tendermint.github.io.git master
