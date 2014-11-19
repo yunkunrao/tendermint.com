@@ -3,7 +3,7 @@
 }
 
 #page-header .container {
-	padding: 1em 10%;
+	padding: 1em 7%;
 }
 
 .hero,
@@ -23,8 +23,24 @@ nav ul li {
     margin-left: 2.5em;
 }
 
+nav ul li:first-child {
+    margin-left: 0em;
+}
+
 nav ul {
     font-size: 0.85em;
+}
+
+nav .col {
+    margin-left:2%;
+	padding:0 1.5%;
+	clear: none;
+	width: auto;
+}
+
+nav .col.first {
+    margin-left:0;
+    clear: both;
 }
 
 .col {

@@ -52,6 +52,7 @@ h1 {
 .post_container {
 	font-family: Georgia, Serif;
 	width: 500px;
+	margin: 0px 10%;
 }
 
 .post_container p {

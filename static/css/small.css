@@ -1,9 +1,23 @@
+body {
+	min-width: 400px;
+}
+
 .container {
     padding: 0 1.875em;
 }
 
 #page-header .container {
 	padding: 0.25em 1.875em;
+}
+
+nav .col {
+    margin-left:2%;
+	padding:0 1.5%;
+	width: auto;
+}
+
+nav .col.first {
+    margin-left:0;
 }
 
 .col {
