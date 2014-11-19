@@ -1,0 +1,89 @@
+.container {
+    max-width: 120em;
+    margin: 0 10em;
+}
+
+.duo.row .col p:last-child {
+    margin-bottom: 0;
+}
+
+.cta form {
+    width: 50%;
+}
+
+.hero,
+#page-header + section {
+    margin-top: 3.75em;
+}
+
+#page-header {
+    height: 3.75em;
+}
+
+nav ul li {
+    margin-left: 5em;
+}
+
+.hero .container.bottom {
+    margin-top: 20%;
+}
+        
+.col {
+    margin-left:2%;
+	padding:0 1.5%;
+}
+
+.col.first,
+.row .col:first-child {
+    margin-left:0;
+    clear: both;
+}
+
+
+
+.col-1 {
+    width:6.5%;
+}
+.col-2 {
+    width:15.0%;
+}
+.col-3 {
+    width:23.5%;
+}
+.col-4 {
+    width:32.0%;
+}
+.col-5 {
+    width:40.5%;
+}
+.col-6 {
+    width:49.0%;
+}
+.col-7 {
+    width:57.5%;
+}
+.col-8 {
+    width:66.0%;
+}
+.col-9 {
+    width:74.5%;
+}
+.col-10 {
+    width:83.0%;
+}
+.col-11 {
+    width:91.5%;
+}
+.col-12 {
+    margin-left:0;
+    width:100%;
+}
+
+
+@media (max-width: 1100px) {
+
+    nav ul li {
+        margin-left: 2.5em;
+    }
+    
+}

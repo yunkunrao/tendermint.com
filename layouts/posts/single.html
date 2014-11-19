@@ -5,18 +5,10 @@
 {{ template "chrome/header.html" . }}
 
 <body class="theme-base-08">
-  {{ template "chrome/sidebar.html" . }}
+  {{ template "chrome/banner.html" . }}
 
   <!-- See /layouts/indexes/category.html for explanation of this section -->
   <div class="wrap">
-    <div class="masthead">
-      <div class="container">
-        <h3 class="masthead-title">
-          <a href="/posts" title="Blog">Blog</a>
-        </h3>
-      </div>
-    </div>
-
     <!--
       This is where the actual post is displayed.
 
@@ -28,24 +20,20 @@
 
       Finally we include the actual content of the post.
     -->
-    <div class="container content">
+    <div class="container content post_container">
       <h1 class="post-title">{{ .Title }}</h1>
-        <section id="main">
+        <div id="main">
           <h5 id="date"> {{ .Date.Format "Mon Jan 2, 2006" }} </h5>
           {{ .Content }}
-        </section>
+        </div>
     </div>
   </div>
 
   <label for="sidebar-checkbox" class="sidebar-toggle"></label>
 
   {{ template "chrome/prev_next.html" . }}
-  <br />
   {{ template "chrome/categories.html" . }}
+  <br />
 
-
-  <!-- Include footer (ends <body class="theme-base-08"> and <html>) -->
-  {{ template "chrome/footer.html" }}
-
-
-
+<!-- Include footer (ends <body class="theme-base-08"> and <html>) -->
+{{ template "chrome/footer.html" }}

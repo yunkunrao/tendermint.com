@@ -1,0 +1,174 @@
+.container {
+    padding: 0 1.875em;
+}
+
+#page-header .container {
+	padding: 0.25em 1.875em;
+}
+
+.col {
+	width: 100%;
+	clear: both;
+}
+
+.hero,
+#page-header + section {
+    margin-top: 2.5em;
+}
+
+#page-header {
+    height: 3.75em;
+}
+
+nav ul {
+    font-size: 0.75em;
+    text-align: center;
+}
+
+nav ul li {
+	display: inline-block;
+	float: none;
+}
+
+nav ul li,
+nav ul li:first-child, 
+nav ul li:last-child {
+	margin: 0 0.625em;
+}
+
+nav ul li.left {
+	display: block;
+	float: none;
+}
+
+nav ul li a i.fa {
+	display: none;
+}
+
+.hero .container.bottom {
+	margin-top: 1.25em;
+}
+
+.hero .down-arrow {
+	font-size: 5em;
+}
+
+.big-icon li a {
+    padding: 1.25em 0.625em;
+}
+
+.resource-list h3 {
+	margin-top: 0.625em;
+}
+
+
+.resources p.tagline {
+	margin-top: 2.5em;
+}
+
+.cta h2,
+.hero h1 {
+	font-size: 3.125em;
+}
+
+.hero h1 + p {
+	font-size: 1em;
+	line-height: 1.5625em;
+}
+
+.hero form p {
+	font-size: 1em;
+}
+
+.hero form .button {
+	position: absolute;
+	right: 3.375em;	
+}
+
+.hero form input, 
+.cta form input {
+	height: 3.125em;
+}
+
+.hero form .button,
+.cta form .button {
+	height: 4.15em;
+}
+
+.cta form .button {
+	height: 4.65em;
+}
+
+.hero input,
+.cta input {
+	min-width: 0;
+	padding-right: 1em;
+	width: 100%;
+}
+
+section.cta {
+	padding: 2.5em 0;
+}
+
+h1,
+h2,
+.cta h2 {
+	font-size: 1.5625em;
+}
+
+.big-icon li, 
+.intro li, 
+.tagline, 
+.intro p {
+	font-size: 0.85em;
+}
+
+table {
+	margin-bottom: 0;
+}
+
+.comparison td, 
+.comparison th {
+	padding: 0.85em 2%;
+	font-size: 0.75em;
+}
+
+.comparison i.fa {
+	display: block;
+}
+
+.resources p.tagline a {
+	display: block;
+}
+
+.bullet {
+	display: none;
+}
+
+.intro .processing,
+.processing {
+	width: 300%;
+	height: auto;
+	left: 0;
+}
+
+.intro .processing {
+	opacity: 0.2;
+}
+
+body .details .processing.one,
+body .details .processing.two,
+body .org .processing.one,
+body .org .processing.two {
+	width: 300%;
+	left: -50%;
+	top: auto;
+	bottom: 0;
+	opacity: 0.2;
+}
+
+body .org .processing.one,
+body .details .processing.one {
+	top: 0;
+	bottom: auto;
+}

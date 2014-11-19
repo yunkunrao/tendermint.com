@@ -40,64 +40,28 @@
           box-sizing: border-box;
 }
 
-html,
-body {
-  margin: 0;
-  padding: 0;
+#page-header {
+	position: relative !important;
+	margin-bottom: 40px;
 }
 
-html {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-}
-@media (min-width: 38rem) {
-  html {
-    font-size: 20px;
-  }
+h1 {
+	font-size: 2em;
 }
 
-body {
-  color: #515151;
-  background-color: #fff;
-  -webkit-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
+.post_container {
+	font-family: Georgia, Serif;
+	width: 500px;
 }
 
-/* No `:visited` state is required by default (browsers will use `a`) */
-a {
-  color: #268bd2;
-  text-decoration: none;
+.post_container p {
+	color: black;
 }
+
 /* `:focus` is linked to `:hover` for basic accessibility */
 a:hover,
 a:focus {
   text-decoration: underline;
-}
-
-/* Headings */
-h1, h2, h3, h4, h5, h6 {
-  margin-bottom: .5rem;
-  font-weight: bold;
-  line-height: 1.25;
-  color: #313131;
-  text-rendering: optimizeLegibility;
-}
-h1 {
-  font-size: 2rem;
-}
-h2 {
-  margin-top: 1rem;
-  font-size: 1.5rem;
-}
-h3 {
-  margin-top: 1.5rem;
-  font-size: 1.25rem;
-}
-h4, h5, h6 {
-  font-family: "ff-meta-web-pro", "Helvetica Neue", "Helvetica", Arial, sans-serif;  
-  margin-top: 1rem;
-  font-size: 1rem;
 }
 
 /* Body text */
@@ -112,10 +76,6 @@ strong {
 
 /* Lists */
 ul, ol, dl {
-  margin-top: 0;
-  padding-left: 0;
-  margin-bottom: 1rem;
-  list-style-type: none;
 }
 
 
@@ -313,49 +273,6 @@ ul.catlist li:last-child:after { content: ""; }
   background-color: #f9f9f9;
 }
 
-
-/*
- * Container
- *
- * Center the page content.
- */
-
-.container {
-  max-width: 38rem;
-  padding-left:  1rem;
-  padding-right: 1rem;
-  margin-left:  auto;
-  margin-right: auto;
-}
-
-
-/*
- * Masthead
- *
- * Super small header above the content for site name and short description.
- */
-
-.masthead {
-  padding-top:    1rem;
-  padding-bottom: 1rem;
-  margin-bottom: 3rem;
-}
-.masthead-title {
-  margin-top: 0;
-  margin-bottom: 0;
-  color: #505050;
-}
-.masthead-title a {
-  color: #505050;
-}
-.masthead-title small {
-  font-size: 75%;
-  font-weight: 400;
-  color: #c0c0c0;
-  letter-spacing: 0;
-}
-
-
 /*
  * Posts and pages
  *
@@ -393,4 +310,3 @@ ul.catlist li:last-child:after { content: ""; }
     margin-top:0;
     padding-bottom: 0;
 }
-

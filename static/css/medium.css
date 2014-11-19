@@ -1,0 +1,75 @@
+.container {
+    padding: 0 10%;
+}
+
+#page-header .container {
+	padding: 1em 10%;
+}
+
+.hero,
+#page-header + section {
+    margin-top: 3.75em;
+}
+
+#page-header {
+    height: 3.75em;
+}
+
+.hero .container.bottom {
+	margin-top: 2.5em;
+}
+
+nav ul li {
+    margin-left: 2.5em;
+}
+
+nav ul {
+    font-size: 0.85em;
+}
+
+.col {
+	width: 100%;
+	clear: both;
+}
+
+.big-icon .col {
+	width: 30%;
+	margin-right: 5%;
+	clear: none;
+}
+
+.big-icon .col:last-child {
+	margin-right: 0;
+}
+
+.resources p.tagline {
+	margin-top: 2.5em;
+}
+
+.intro .processing,
+.processing {
+	width: 200%;
+	height: auto;
+	left: 0;
+}
+
+.intro .processing {
+	opacity: 0.1;
+}
+
+body .details .processing.one,
+body .details .processing.two,
+body .org .processing.one,
+body .org .processing.two {
+	width: 200%;
+	left: -50%;
+	top: auto;
+	bottom: 0;
+	opacity: 0.2;
+}
+
+body .org .processing.one,
+body .details .processing.one {
+	top: 0;
+	bottom: auto;
+}

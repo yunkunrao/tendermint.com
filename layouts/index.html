@@ -3,106 +3,333 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <!--
-      This section just sets up some metadata for the website.
+	<!--
+	  This section just sets up some metadata for the website.
 
-      It probably does not need to be changed.
-    -->
-    <meta charset="utf-8">
-    <base href="{{ .Site.BaseUrl }}">
-    <title>{{ .Site.Title }}</title>
-    <link rel="canonical" href="{{ .Permalink }}">
-    <link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+	  It probably does not need to be changed.
+	-->
+	<meta charset="utf-8">
+	<base href="{{ .Site.BaseUrl }}">
+	<title>Tendermint</title>
+	<link rel="canonical" href="{{ .Permalink }}">
+	<link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+	<meta content="on" http-equiv="cleartype" />
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" /> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" href="/images/favicon.ico">
 
-    {{ template "chrome/head_includes.html" . }}
+	<link rel="stylesheet" type="text/css" media="screen" href="/css/reset.css" />
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" media="screen" href="/css/screen-base.css" />
+	<link media="screen and (min-width: 0em) and (max-width: 37.4375em)" href="/css/small.css" rel="stylesheet" />
+	<link media="screen and (min-width: 37.5em) and (max-width: 64.9375em)" href="/css/medium.css" rel="stylesheet" />
+	<link media="screen and (min-width: 65em)" href="/css/large.css" rel="stylesheet" />
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
 </head>
-  <body class="theme-base-08" lang="en">
 
-  {{ template "chrome/sidebar.html" . }}
+<body>
+	{{ template "chrome/banner.html" . }}
 
-  <!-- See /layouts/indexes/category.html for explanation of this section -->
-    <div class="wrap">
-      <div class="masthead">
-        <div class="container">
-          <h3 class="masthead-title">
-            <a href="/" title="Home">Home</a>
-            &nbsp;⋅&nbsp;
-            <a href="/posts/" title="Blog">Blog</a>
-          </h3>
-        </div>
-      </div>
+	<section class="hero">
+		<div class="processing">
+			<img src="/images/small-circle-white.png"/>
+		</div>
 
-      <div class="container content">
-        <h1>TenderMint</h1>
-        <p class="lead"> A Novel Consensus Protocol </p>
+		<div class="bg-01"></div>
+		<div class="bg-02"></div>
+		<div class="bg-03"></div>
+		<div class="container">
 
-        <p>
-            Bitcoin proved to us what is possible with a distributed consensus protocol.
-            Yet, Bitcoin's mining (proof of work) comes with a hefty cost.
-            At today’s Bitcoin prices and reward schedule, miners are rewarded on the
-            order of $1,500,000 a day to secure the blockchain – and a significant portion of that
-            money is spent on electricity. Proof-of-work based consensus algorithms are also
-            slow, requiring up to an hour to fully confirm a payment to prevent double-spending.
-        </p>
-        <p>
-            The TenderMint protocol is a solution to the mining problem based on a solution to the
-            Byzantine Generals Problem by Dwork, Lynch, and Stockmeyer (<a href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.13.3423">link</a>).
-            It is suitable to use as a replacement to mining for Bitcoin, Ethereum, etc.
-        </p>
-        <p>
-            A minimal prototype is being developed in Go.<br/>
-            Interested in participating? <a href="mailto:dev@tendermint.com" title="Contact us">Let us know!</a>
-        </p>
+			<div class="col first">
 
-        <h2>Resources</h2>
+				<h1><span class="block">Introducing</span> Tendermint</h1>
+				<p>The completely decentralized consensus engine.</p>
+				<!-- Begin MailChimp Signup Form -->
+				<form action="http://tendermint.us8.list-manage1.com/subscribe/post?u=89d5a312be95ee3f0c9cf7ecd&amp;id=4af1217bca" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate style="padding-left: 0px;">
+					<p>
+						<input type="email" name="EMAIL" id="mce-EMAIL" placeholder="Subscribe to the newsletter"/>
+						<button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" style="border-left: 0px; border-right: 0px;">
+							<i class="fa fa-envelope-o"></i>
+						</button>
+					</p>
+					<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+					<div style="position: absolute; left: -5000px;"><input type="text" name="b_89d5a312be95ee3f0c9cf7ecd_4af1217bca" tabindex="-1" value=""></div>
+				</form>
+				<!--End mc_embed_signup-->
 
-        <ul>
-            <li><a href="/docs/tendermint_v05.pdf" title="Whitepaper PDF">whitepaper</a></li>
-            <li><a href="http://goo.gl/XaAS9H" title="NewsGroup">newsgroup mailing list</a></li>
-            <li><a href="https://github.com/tendermint/tendermint" title="GitHub">github</a></li>
-            <li>#tendermint on FreeNode IRC</li>
-        </ul>
+			</div>
 
-        <h2>Newsletter</h2>
+		</div>
+		<div class="container bottom">
+			<i class="fa fa-angle-down down-arrow"></i>
+		</div>
+	</section>
 
-        <p>
-            Subscribe to our newsletter for progress updates!
-        </p>
 
-        <div>
-            <!-- Begin MailChimp Signup Form -->
-            <link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
-            <style type="text/css">
-                #mc_embed_signup{background:#fff; clear:left; width:400px;}
-                /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
-                   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-            </style>
-            <div id="mc_embed_signup">
-            <form action="http://tendermint.us8.list-manage1.com/subscribe/post?u=89d5a312be95ee3f0c9cf7ecd&amp;id=4af1217bca" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate style="padding-left: 0px;">
-                <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                <div style="position: absolute; left: -5000px;"><input type="text" name="b_89d5a312be95ee3f0c9cf7ecd_4af1217bca" tabindex="-1" value=""></div>
-                <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-            </form>
-            </div>
-            <!--End mc_embed_signup-->
-        </div>
+	<section class="intro">
 
-        <!-- Recent Posts section -->
-        <!--
-        <h1 class="post-title">Recent Posts</h1>
-          <section id="main">
-            <ul id="list">
-              {{ range first 10 .Data.Pages }}
-              {{ .Render "summary"}}
-              {{ end }}
-            </ul>
-          </section>
-        -->
+		<div class="processing one">
+			<img src="/images/small-circle.png"/>
+		</div>
+		<div class="processing two">
+			<img src="/images/small-circle.png"/>
+		</div>
 
-      </div>
-    </div>
+		<div class="container">
 
-    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+			<div class="col col-6 first">
+
+				<h2>Satoshi created a spark with Bitcoin, but the future is in Tendermint.</h2>
+
+				<p>Research in decentralized consensus algorithms has been <a href="http://en.wikipedia.org/wiki/Dijkstra_Prize">in progress since the early '80s</a>. Today we have the ubiquitous and powerful computing network to run a decentralized blockchain ledger, and thanks to Bitcoin and the cryptocurrency community all the pieces are in place to redefine the nature of finance.</p>
+
+			</div>
+
+		</div>
+
+	</section>
+
+	<section class="details">
+
+		<div class="processing one">
+			<img src="/images/small-circle.png"/>
+		</div>
+		<div class="processing two">
+			<img src="/images/small-circle.png"/>
+		</div>
+
+		<div class="container">
+
+			<div class="col col-8 first intro">
+				<h2>What makes Tendermint special?</h2>
+
+				<p>At today’s Bitcoin prices and reward schedule, miners are rewarded on the order of $1,000,000 a day to secure the blockchain ledger — and a significant portion of that money is wasted on electricity.</p>
+
+				<p>Proof-of-work based consensus algorithms are slow, requiring up to an hour (or more for large transactions) to fully confirm a payment to prevent double-spending, and the forking nature of the blockchain makes application difficult to implement.</p>
+
+				<p>Tendermint solves these problems because it solves the long-standing <a href="http://www.reddit.com/r/Bitcoin/comments/1oi7su/criticisms_of_proofofstake/ccsd6rm">“nothing at stake” problem</a>. The solution is comprised of two parts.</p>
+			</div>
+
+			<div class="duo row clearfix">
+
+				<div class="col col-6 first">
+
+					<h3>First, we have a byzantine fault tolerant consensus algorithm.</h3>
+
+					<p>In particular we choose as the algorithm framework, the <a href="http://dx.doi.org/10.1145%2F42282.42283">DLS algorithm</a> for its simplicity and ability to tolerate arbitrary disruptions in the network. This algorithm doesn’t incentivize nodes to waste electricity. Instead, it requires nodes to securely sign messages while participating in a round-based protocol.</p>
+
+					<p>Tendermint introduces a few innovations on top of the DLS algorithm to make it suitable for completely decentralized P2P gossip networks, just like Bitcoin.</p>
+				</div>
+
+				<div class="col col-6">
+
+					<h3>Second, we create an incentive for nodes to behave in a way that makes blockchain forks extremely unlikely.</h3>
+
+					<p>To do this, participants post a surety bond before becoming a validator that participates in the consensus process. To get the surety bond back validators must wait a relatively long duration of time.</p>
+
+					<p>If the validator causes a blockchain fork within this time bubble, he/she loses all of his/her surety bond. This creates a rolling checkpointing system that is updated in a completely decentralized fashion with no central authority.</p>
+
+				</div>
+			</div>
+
+			<p class="center col tagline col-12">For more information, <a href="/docs/tendermint.pdf">check out the whitepaper &rsaquo;</a></p>
+
+
+		</div>
+	</section>
+
+	<section class="comparison">
+		<div class="container">
+
+			<h2 class="col first">Tendermint vs Bitcoin</h2>
+
+			<div class="corner-wrapper">
+				<table class="duo row clearfix">
+					<thead>
+						<tr>
+							<th><i class="fa fa-circle-o"></i> Tendermint</th>
+							<th><i class="fa fa-btc"></i> Bitcoin</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<strong>Maximum security</strong>
+								&mdash; backed by underlying coins
+							</td>
+							<td>
+								<strong>Difficult to quantify</strong>
+								&mdash; depends on extrinsic factors
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<strong>Incentivizes privacy</strong>
+								&mdash; powered by cryptography
+							</td>
+							<td>
+								<strong>Incentivizes hashing</strong>
+								&mdash; powered by wasteful energy expenditure
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<strong>Immediate confirmations</strong>
+								&mdash; ideal for application development
+							</td>
+							<td>
+								<strong>Blockchain forks often</strong>
+								&mdash; difficult to build upon
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<strong>Compatible with an ecosystem of secure blockchains</strong>
+								&mdash; ideal for sidechain innovation
+							</td>
+							<td>
+								<strong>Only supports one secure blockchain globally</strong>
+								&mdash; requires brittle merged mining
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</section>
+
+
+	<section class="org">
+		<div class="processing one">
+			<img src="/images/small-circle.png"/>
+		</div>
+		<div class="processing two">
+			<img src="/images/small-circle.png"/>
+		</div>
+		<div class="container">
+
+			<div class="col col-8 first">
+
+				<div class="intro">
+					<h2>A technology &amp; a community</h2>
+
+					<p>Tendermint is both a decentralized organization as well as a foundational technology.</p>
+
+					<p>We believe that the future is comprised of many interconnected-but-sovereign blockchains that serve different purposes for a variety of communities, and Tendermint will be the leader driving innovation to bring interoperability.</p>
+
+					<p>Tendermint the decentralized organization is comprised of all the users and contributors of this technology. Our first prototype network will be a blockchain ledger that represents contributions and interests towards Tendermint.</p>
+				</div>
+
+				<h2>Connect with us</h2>
+
+				<ul class="big-icon nostyle">
+					<li class="col col-4 first">
+						<a class="block" href="./developers">
+							<i class="fa fa-code"></i>
+							<span class="block">Developers</span>
+						</a>
+					</li>
+					<li class="col col-4">
+						<a class="block" href="./designers">
+							<i class="fa fa-file-image-o"></i>
+							<span class="block">Designers</span>
+						</a>
+					</li>
+					<li class="col col-4">
+						<a class="block" href="./partners">
+							<i class="fa fa-group"></i>
+							<span class="block">Partners</span>
+						</a>
+					</li>
+				</ul>
+
+			</div>
+
+		</div>
+	</section>
+
+	<section class="resources">
+		<div class="container">
+
+			<h2 class="col first">Resources</h2>
+
+			<div class="col col-6 first resource-list">
+				<h3>
+					<a href="/posts/" class="block">
+						<i class="fa fa-rss"></i> Blog
+					</a>
+				</h3>
+				<ul class="nostyle">
+					{{ range first 4 .Data.Pages }}
+					{{ .Render "li_frontpage"}}
+					{{ end }}
+				</ul>
+			</div>
+
+			<div class="col col-6 resource-list">
+				<h3>
+					<a href="https://github.com/tendermint/tendermint/" class="block">
+						<i class="fa fa-github-alt"></i> Browse the GitHub repo
+					</a>
+				</h3>
+				<ul class="task-list nostyle">
+					<li>
+						<strong><a href="https://github.com/tendermint/tendermint/blob/master/consensus">consensus</a>:</strong> The core consensus algorithm</li>
+					<li>
+						<strong><a href="https://github.com/tendermint/tendermint/blob/master/state">state</a>:</strong> The application state, mutated by transactions</li>
+					<li>
+						<strong><a href="https://github.com/tendermint/tendermint/blob/master/blocks">blocks</a>:</strong> Structures of the blockchain</li>
+					<li>
+						<strong><a href="https://github.com/tendermint/tendermint/blob/master/mempool">mempool</a>:</strong> Handles gossip of new transactions</li>
+					<li>
+						<strong><a href="https://github.com/tendermint/tendermint/blob/master/merkle">merkle</a>:</strong> Merkle hash trees for blocks and application state</li>
+					<li>
+						<strong><a href="https://github.com/tendermint/tendermint/blob/master/p2p">p2p</a>:</strong>  Extensible P2P networking stack</li>
+				</ul>
+			</div>
+
+			<div class="col col-12 first">
+				<p class="tagline center">More resources:
+					<a href="/docs/tendermint.pdf">read the whitepaper</a> <span class="bullet">&bull;</span>
+					<a href="http://forum.tendermint.com/">join the forum</a> <span class="bullet">&bull;</span>
+					<a href="http://webchat.freenode.net/?randomnick=1&channels=%23tendermint">chat on IRC</a></p>
+			</div>
+		</div>
+	</section>
+
+	<section class="cta">
+		<div class="container">
+			<h2 class="center">Subscribe to the Tendermint newsletter.</h2>
+
+			<!-- Begin MailChimp Signup Form -->
+			<form action="http://tendermint.us8.list-manage1.com/subscribe/post?u=89d5a312be95ee3f0c9cf7ecd&amp;id=4af1217bca" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate style="padding-left: 0px;">
+				<p>
+					<input type="email" name="EMAIL" id="mce-EMAIL" placeholder="your@email.address"/>
+					<button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" style="border-left: 0px; border-right: 0px; height: 53px;">
+						<i class="fa fa-envelope-o"></i>
+					</button>
+				</p>
+				<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+				<div style="position: absolute; left: -5000px;"><input type="text" name="b_89d5a312be95ee3f0c9cf7ecd_4af1217bca" tabindex="-1" value=""></div>
+			</form>
+			<!--End mc_embed_signup-->
+		</div>
+	</section>
+
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script>
+		$( document ).on("ready", function() {
+			$(".hero").on("click", ".down-arrow", function() {
+				var next = parseInt($("section.intro").offset().top) - parseInt($("#page-header").height());
+				$("html, body").animate({
+					 scrollTop: next
+				}, 1000);
+			});
+		});
+	</script>
+</body>
 
 {{ template "chrome/footer.html" }}

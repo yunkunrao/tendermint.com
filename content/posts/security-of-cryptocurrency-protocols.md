@@ -1,0 +1,30 @@
+---
+title: "The Security of Cryptocurrency Protocols"
+description: "Security analysis of cryptocurrency protocols is complicated by incentive-alignment and extrinsic factors.  A look at more robust security guarantees"
+date: "2014-11-19"
+categories: 
+    - "consensus"
+    - "security"
+---
+
+<br/>
+Many solutions to the consensus problem for cryptocurrencies have been proposed.  Since the innovation of Bitcoin’s proof-of-work based consensus algorithm--where miners compete in an energy intensive game to determine the order of transactions--several proof-of-stake algorithms have been proposed to make consensus faster while removing the reliance on energy expenditure.  The common objective of these protocols is to maintain a live decentralized transaction ledger while defending against double-spend attacks from malicious Byzantine actors deviating from the protocol.  Considering the financial nature of these protocols, we should strive to support a protocol that has well defined and robust security guarantees.
+
+The security analysis of cryptocurrency protocols is complicated by many factors.   One such complicating factor is the rational self-interested nature of participants.  The ideal protocol is an incentive aligned Nash equilibrium such that deviating from the protocol does not result in a net gain \[[1](http://fc14.ifca.ai/papers/fc14_submission_82.pdf), [2](https://www.cs.princeton.edu/~kroll/papers/weis13_bitcoin.pdf)\].  This is a topic worthy of its own post, but won’t be discussed further here.
+
+Another complicating factor is whether the power to achieve or disrupt consensus is extrinsic in origin (e.g. access to the production of mining equipment or cheap access to electricity) or intrinsic in origin (e.g. the “stake” of validators in proof-of-stake protocols) and whether the disruption of consensus--especially via a successful double-spend attack--is associated with a commensurate penalty.  The problem with extrinsic factors of security is that they are not easily quantifiable for analysis.  For example, the depreciation costs of Bitcoin mining hardware in the event of a successful double-spend attack may not be significant compared to the running costs of electricity in mining.  On the other hand existing proof-of-stake protocols do not have a well defined intrinsic penalty for instigators of a double-spend attack.  This is commonly called, ironically, the “nothing at stake” problem.  Newer protocols like the BitShares delegated-proof-of-stake protocol attempt to address this problem by placing the role of ranked-delegate at stake, but security is dependant on the extrinsic ability of stakeholders to accurately predict the future performance of delegates.
+
+What is needed is a radical simplification.  Security analysis is much simpler for an intrinsically secure cryptocurrency protocol when it can be proved that launching a double-spend attack necessarily results in a very high intrinsic penalty compared to the possible intrinsic gains.  Then, the protocol may be considered resistant to double-spent attacks assuming no further extrinsic complications.
+
+For example, consider a protocol that requires stakeholders to first post a surety bond before becoming a validator to participate in the consensus process.  To get the bonded coins back, the validator must first submit an unbonding transaction and wait a fixed, relatively long duration of time.  The validator’s only duty until the unbonding period is over is to participate in the protocol while taking care not to sign two blocks at the same height: the only way to fork the block-chain.  The validator that signs duplicitously loses its bonded coins as evidence of duplicity is entered onto the block-chain.  This protocol might adapt an existing Byzantine consensus algorithm from academic research (e.g. one proposed by Dwork, et al. \[[3](http://groups.csail.mit.edu/tds/papers/Lynch/jacm88.pdf)\]) to create a quorum of validators that agree on and sign the next block.  For a partially synchronous network (such as the Internet) at least two thirds of voting power is needed to agree on the next block, and up to one third of Byzantine voting power can be tolerated.  A double-spend attack implies a fork in the block-chain, which by simple arithmetic requires at least one third of voting power to have signed duplicitously.
+
+The above proposed protocol is secured by completely intrinsic means; it does not require a massive expenditure of energy to secure.  The total intrinsic penalty for successfully launching a double-spend attack (which is at least one third of all bonded coins as mentioned previously) can be adjusted by judiciously setting the incentives given to validators by way of fees or inflationary rewards.  The block-chain does not fork at all except in extraordinary circumstances, making it ideally suited for side-chain extensions.  It is to the my best knowledge the only completely decentralized cryptocurrency protocol that could be proven to be intrinsically incentive aligned.  Perhaps it is time to consider this kind of algorithm.
+
+<div class="credit">
+Links:
+<ol>
+	<li>Eyal and Sirer.  The Majority is Not Enough. 2014, http://fc14.ifca.ai/papers/fc14_submission_82.pdf</li>
+	<li>Kroll et al.  The Economics of Bitcoin Mining, or Bitcoin in the Presence of Adversaries. 2013, https://www.cs.princeton.edu/~kroll/papers/weis13_bitcoin.pdf</li>
+	<li>Dwork, Lynch, and Stockmeyer.  Consensus in the Presence of Partial Synchrony. 1988, http://groups.csail.mit.edu/tds/papers/Lynch/jacm88.pdf</li>
+</ol>
+</div>
