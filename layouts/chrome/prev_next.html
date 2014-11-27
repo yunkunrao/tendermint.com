@@ -12,18 +12,15 @@
   If there is ever not a next or previous post, it does nothing.
 -->
 
+<!-- Fix to make links appear on top of categories tags -->
 <div class="container">
-  <hr />
-  <hr />
   {{if .Prev}}
-    <span class="left">
-    &nbsp; <em>&laquo; Previous:</em> <a class="next" href="{{.Prev.Permalink}}">{{.Prev.Title}}</a>
-    </span>
+    <em>Previous:</em> <a class="next" href="{{.Prev.Permalink}}">{{.Prev.Title}}</a>
+    <br />
   {{end}}
 
-  {{if .Next}}
-    <span class="right">
-    <em>Next: </em><a class="next" href="{{.Next.Permalink}}"> &nbsp; {{ .Next.Title }}</a> &raquo;
-    </span>
-  {{end}}
+  {{if .Next}}{{if .Next.Title}}
+    <em>Next:</em> <a class="next" href="{{.Next.Permalink}}">{{.Next.Title}}</a>
+    <br />
+  {{end}}{{end}}
 </div>

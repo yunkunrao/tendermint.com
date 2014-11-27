@@ -2,9 +2,9 @@
   This file is a template that is included various places to have a list of
   that particular posts categories generated.
 -->
-<div class="container">
+<div class="container" style="clear: both;">
+  <span class="left"><em>Categories:</em></span>
   <ul class="catlist">
-    <li><em>Categories: </em></li>
     {{ range .Params.categories }}
       <li><a href="/categories/{{ . | urlize }}">{{ . }}</a> </li>
     {{ end }}

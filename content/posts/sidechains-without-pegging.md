@@ -3,7 +3,7 @@ title: "Sidechains without Pegging"
 description: "Sidechains is more than one-way or two-way pegging, and beyond Bitcoin Maximalism."
 date: "2014-11-25"
 categories: 
-    - "sidechain"
+    - "sidechains"
     - "pegging"
 ---
 
@@ -23,4 +23,4 @@ The main thing I’d like to talk about is sidechains.  The term was first intro
 
 The beautiful thing about sidechains is that it’s more than currency pegging.  For example, it can be used to run a decentralized exchange between two currencies.  You can do this now with “cross-chain-transactions”, but it requires both parties to be online, or for both to trust a few “smart oracles” with threshold signatures to handle the trade.  But when your block-chain can track the state of another with sidechain technology, you don’t have to trust anyone except the cryptocurrency network, which you trust already.  If you trust a block-chain enough to hold coins in it, you should trust the block-chain to enforce your exchange orders for you when you want to trade with a sidechain.  So now you can bootstrap a currency *and* provide liquidity without trusted centralized exchanges, and really incentivize the development of new currencies without pegging the valuation onto <s>the Euro</s>Bitcoin.  It’s especially important to have sovereign unpegged market-priced block-chains if the very thing you want to experiment with is monetary policy.
 
-Side-chain technology is more than 1-way or 2-way pegging to Bitcoin. It's about contractual agreement between two communities represented by different consensus ledgers.  To pretend otherwise will only hurt the cryptocurrency movement.
+Sidechain technology is more than 1-way or 2-way pegging to Bitcoin. It's about contractual agreement between two communities represented by different consensus ledgers.  To pretend otherwise will only hurt the cryptocurrency movement.
