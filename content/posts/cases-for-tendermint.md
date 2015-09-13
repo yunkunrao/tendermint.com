@@ -63,11 +63,12 @@ In future posts we'll go into detail about the consensus algorithm and how it ca
 <img src="/images/tm_architecture.png"/>
 
 The above diagram is meant to show that:
- * the consensus and tx-execution modules are separate except for the shared (immutable/merkle-ized) state.
- * the consensus module takes a block, a commit for the block, and the last state and uses the tx-execution module to produce the next state.
- * the VM call transaction is one of many transaction types offered by the tx-execution module.
- * the Ethereum VM (EVM) is only one of potentially many supported virtual machines.
- * the next state is completely determined by the old state and the transactions in a block.
+
+* the consensus and tx-execution modules are separate except for the shared (immutable/merkle-ized) state.
+* the consensus module takes a block, a commit for the block, and the last state and uses the tx-execution module to produce the next state.
+* the VM call transaction is one of many transaction types offered by the tx-execution module.
+* the Ethereum VM (EVM) is only one of potentially many supported virtual machines.
+* the next state is completely determined by the old state and the transactions in a block.
 
 So, if you have a blockchain application in mind, on Tendermint there are two options to consider -- a smart contract on the Ethereum VM (and in the future, other VMs as well), or, a native transaction type (like SendTx or NameTx above).
 
@@ -77,7 +78,7 @@ The main benefit of a turing-complete VM on a blockchain is that potentially any
 
 One thing that developers will appreciate in Tendermint is how much easier it is to code contract logic natively at the blockchain level, rather than as a contract script on a virtual machine.  You should use the VM if you need to deploy the contract on a public blockchain such as Ethereum.  You should use the EVM if you don't have systems programming experience, and you find that writing a solidity contract is easier than writing in Golang, or if your contract-logic is simple enough that you wouldn't mind stepping over bytecode execution to debug your contract.  But for other applications where the former exceptions don't apply, you probably want to write native code on Tendermint for a variety of reasons -- Golang's language tooling is better so debugging is easier, it's computationally more efficient by far, and it's two less complex layers (one for the bytecode compiled language, and one for the VM itself) for already seasoned developers to have to deal with.
 
-I'm not knocking on EVM development.  The Ethereum team did a great job inventing the EVM and developing a lot of theory behind turing-complete smart-contracts.  It's necessary on a public blockchain like Ethereum.  So, if you want to port your EVM contract over to Tendermint, that's easy.  On the other hand, if you want full control over your merkle-ized data structures (e.g. without the 32-by-32-byte restriction of the EVM's patricia trie) then you can write your contract as a native transaction type on Tendermint.
+The Ethereum team did a great job inventing the EVM and developing a lot of theory behind turing-complete smart-contracts.  It's necessary on a public blockchain like Ethereum.  So, if you want to port your EVM contract over to Tendermint, that's easy.  On the other hand, if you want full control over your merkle-ized data structures (e.g. without the 32-by-32-byte restriction of the EVM's patricia trie) then you can write your contract as a native transaction type on Tendermint.
 
 ## Fin
 
