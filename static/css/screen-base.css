@@ -305,7 +305,6 @@ h1 span {
 label,
 td,
 th,
-div > ul li,
 ol li,
 div > p {
     font-size: 0.85em;
@@ -651,6 +650,7 @@ section.cta {
     background: linear-gradient(to top, #d8f9fe 0%, rgba(82, 255, 208, 0.5) 100%);
 }
 
+section.comparison,
 section.form,
 section.intro {
     background: linear-gradient(to right, #eafbfe 0%, #fff 100%);

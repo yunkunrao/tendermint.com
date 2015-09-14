@@ -4,9 +4,9 @@
 <html>
 <head>
 	<!--
-	  This section just sets up some metadata for the website.
+		This section just sets up some metadata for the website.
 
-	  It probably does not need to be changed.
+		It probably does not need to be changed.
 	-->
 	<meta charset="utf-8">
 	<base href="{{ .Site.BaseUrl }}">
@@ -46,7 +46,7 @@
 			<div class="col first">
 
 				<h1><span class="block">Introducing</span> Tendermint</h1>
-				<p>The completely decentralized consensus engine.</p>
+				<p>Byzantine Consensus Blockchain Stack</p>
 				<!-- Begin MailChimp Signup Form -->
 				<form action="http://tendermint.us8.list-manage1.com/subscribe/post?u=89d5a312be95ee3f0c9cf7ecd&amp;id=4af1217bca" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate style="padding-left: 0px;">
 					<p>
@@ -82,9 +82,13 @@
 
 			<div class="col col-6 first">
 
-				<h2>Satoshi created a spark with Bitcoin, but the future is in Tendermint.</h2>
+				<h2>Tendermint solves the blockchain consensus problem</h2>
 
-				<p>Research in decentralized consensus algorithms has been <a href="http://en.wikipedia.org/wiki/Dijkstra_Prize">in progress since the early '80s</a>. Today we have the ubiquitous and powerful computing network to run a decentralized blockchain ledger, and thanks to Bitcoin and the cryptocurrency community all the pieces are in place to redefine the nature of finance.</p>
+				<p>At today’s Bitcoin prices and reward schedule, miners are rewarded on the order of $1,500,000 a day to secure the blockchain ledger — and a significant portion of that money is wasted on electricity.</p>
+
+				<p>Proof-of-work based consensus algorithms are also slow, requiring up to an hour (or more for large transactions) to fully confirm a payment to prevent double-spending, and the forking nature of the blockchain makes applications difficult to implement correctly.</p>
+
+				<p>Tendermint uses an advanced public-key-cryptography-based <a href="https://en.wikipedia.org/wiki/Byzantine_fault_tolerance">BFT algorithm</a> as well as collateral deposits to create a better consensus solution for blockchains and cryptocurrencies.</p>
 
 			</div>
 
@@ -105,21 +109,13 @@
 
 			<div class="col col-8 first intro">
 				<h2>What makes Tendermint special?</h2>
-
-				<p>At today’s Bitcoin prices and reward schedule, miners are rewarded on the order of $1,500,000 a day to secure the blockchain ledger — and a significant portion of that money is wasted on electricity.</p>
-
-				<p>Proof-of-work based consensus algorithms are also slow, requiring up to an hour (or more for large transactions) to fully confirm a payment to prevent double-spending, and the forking nature of the blockchain makes applications difficult to implement correctly.</p>
-
-				<p>Tendermint solves these problems because it solves the long-standing <a href="http://www.reddit.com/r/Bitcoin/comments/1oi7su/criticisms_of_proofofstake/ccsd6rm">“nothing at stake” problem</a>. The solution is comprised of two parts.</p>
 			</div>
 
 			<div class="duo row clearfix">
-
 				<div class="col col-6 first">
-
 					<h3>First, we use a Byzantine consensus algorithm to agree on the next block.</h3>
 
-					<p>We choose the <a href="http://dx.doi.org/10.1145%2F42282.42283">DLS algorithm</a> for its simplicity and ability to tolerate arbitrary disruptions in the network. This algorithm doesn’t incentivize nodes to waste electricity. Instead, it requires nodes to securely sign messages while participating in a round-based protocol.</p>
+					<p>We adapted the <a href="http://dx.doi.org/10.1145%2F42282.42283">DLS algorithm</a> for its simplicity and ability to tolerate arbitrary disruptions in the network. This algorithm doesn’t incentivize nodes to waste electricity. Instead, it requires nodes to securely sign messages while participating in a round-based protocol.</p>
 
 					<p>Tendermint introduces a few innovations on top of the DLS algorithm to make it suitable for the blockchain, and for completely decentralized P2P gossip networks (like Bitcoin).</p>
 				</div>
@@ -130,12 +126,12 @@
 
 					<p>Users must first post a bond deposit before becoming a validator to participate in the consensus process. To get the bond deposit back, validators must post an unbond-transaction and wait a long duration of time.</p>
 
-					<p>If the validator causes the blockchain to fork while its coins are locked in bond, all of its coins are destroyed.  This means that as long as you sync your blockchain with the network periodically you never have to trust a central checkpoint.</p>
+					<p>If the validator causes the blockchain to fork while its coins are locked in bond, all of its coins are destroyed. This means that as long as you sync your blockchain with the network periodically you never have to trust a central checkpoint.</p>
 
 				</div>
 			</div>
 
-			<p class="center col tagline col-12">For more information, <a href="/docs/tendermint.pdf">check out the whitepaper &rsaquo;</a></p>
+			<p class="center col tagline col-12">For more information, <a href="http://github.com/tendermint/tendermint/wiki">check out the spec &rsaquo;&rsaquo;</a></p>
 
 
 		</div>
@@ -157,40 +153,50 @@
 					<tbody>
 						<tr>
 							<td>
-								<strong>Maximum security</strong>
-								&mdash; backed by underlying coins
+								<strong>Secured by collateral deposits</strong>
+								<br/>no wasteful mining involved
 							</td>
 							<td>
-								<strong>Security difficult to quantify</strong>
-								&mdash; depends on extrinsic factors
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<strong>Incentivizes privacy</strong>
-								&mdash; powered by cryptography
-							</td>
-							<td>
-								<strong>Incentivizes hashing</strong>
-								&mdash; powered by wasteful energy expenditure
+								<strong>Secured by proof-of-work mining</strong>
+								<br/> requires expensive upkeep to keep secure
 							</td>
 						</tr>
 						<tr>
 							<td>
-								<strong>Immediate confirmations</strong>
-								&mdash; ideal for usability and application development
+								<strong>Accountable public-key securty</strong>
+								<br/> determine who caused double-spend attacks; collateral is at stake
 							</td>
 							<td>
-								<strong>Blockchain forks often</strong>
-								&mdash; difficult to build applications upon
+								<strong>Anonymous mining security</strong>
+								<br/> double-spend attacks only incur relatively small opportunity costs; attackers remain anonymous
 							</td>
 						</tr>
 						<tr>
 							<td>
-								<strong>Compatible with an ecosystem of secure blockchains</strong>
+								<strong>Transactions commit immediately and deterministically</strong>
+								<br/> two communication rounds to commit, takes seconds; blockchaon does not fork
 							</td>
 							<td>
-								<strong>Only supports one secure blockchain globally</strong>
+								<strong>Transactions commit slowly and probabilistically</strong>
+								<br/> forkful model is cumbersome for application developers
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<strong>Ships with the Ethereum virtual machine</strong>
+								<br/> and an advanced permissions system developed by Eris Industries
+							</td>
+							<td>
+								<strong>Non-Turing-complete bytecode scripts</strong>
+								<br/> limited functionality
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<strong>Compatible with an ecosystem of inifintely many secure blockchains for scaling</strong>
+							</td>
+							<td>
+								<strong>Only supports one secure global blockchain, only allows vertical scaling</strong>
 							</td>
 						</tr>
 					</tbody>
@@ -200,6 +206,7 @@
 	</section>
 
 
+<!--
 	<section class="org">
 		<div class="processing one">
 			<img src="/images/small-circle2.png"/>
@@ -248,6 +255,7 @@
 
 		</div>
 	</section>
+-->
 
 	<section class="resources">
 		<div class="container">
@@ -270,33 +278,34 @@
 			<div class="col col-6 resource-list">
 				<h3>
 					<a href="https://github.com/tendermint/tendermint/" class="block">
-						<i class="fa fa-github-alt"></i> Browse the GitHub repo
+						<i class="fa fa-github-alt"></i> GitHub
 					</a>
 				</h3>
 				<ul class="task-list nostyle">
 					<li>
 						<strong><a href="https://github.com/tendermint/tendermint/blob/master/consensus">consensus</a>:</strong> The core consensus algorithm</li>
 					<li>
-						<strong><a href="https://github.com/tendermint/tendermint/blob/master/state">state</a>:</strong> The application state, mutated by transactions</li>
+						<strong><a href="https://github.com/tendermint/tendermint/blob/master/p2p">p2p</a>:</strong> Extensible P2P networking stack</li>
 					<li>
-						<strong><a href="https://github.com/tendermint/tendermint/blob/master/blocks">blocks</a>:</strong> Structures of the blockchain</li>
-					<li>
-						<strong><a href="https://github.com/tendermint/tendermint/blob/master/mempool">mempool</a>:</strong> Handles gossip of new transactions</li>
+						<strong><a href="https://github.com/tendermint/tendermint/blob/master/wire">wire</a>:</strong> Binary and custom JSON encoding/decoding</li>
 					<li>
 						<strong><a href="https://github.com/tendermint/tendermint/blob/master/merkle">merkle</a>:</strong> Merkle hash trees for blocks and application state</li>
 					<li>
-						<strong><a href="https://github.com/tendermint/tendermint/blob/master/p2p">p2p</a>:</strong>  Extensible P2P networking stack</li>
+						<strong><a href="https://github.com/tendermint/tendermint/blob/master/state">state</a>:</strong> The application state, mutated by transactions</li>
+					<li>
+						<strong><a href="https://github.com/tendermint/tendermint/blob/master/vm">vm</a>:</strong> Ethereum virtual machine</li>
+					<li>
+						<strong><a href="https://github.com/tendermint/tendermint/blob/master/mempool">mempool</a>:</strong> Handles gossip of new transactions</li>
 				</ul>
 			</div>
 
 			<div class="col col-12 first">
 				<p class="tagline center">More resources:
 					<br/>
-					<a href="/docs/tendermint.pdf">read the whitepaper</a> <span class="bullet">&bull;</span>
+					<a href="http://github.com/tendermint/tendermint/wiki">read the spec</a> <span class="bullet">&bull;</span>
 					<a href="mailto:hello@tendermint.com/">email us</a>
 					<br/>
-					<a href="http://forum.tendermint.com/">join the forum</a> <span class="bullet">&bull;</span>
-					<a href="http://webchat.freenode.net/?randomnick=1&channels=%23tendermint">chat on IRC</a>
+					<a href="http://forum.tendermint.com/">join the forum</a>
 				</p>
 			</div>
 		</div>
