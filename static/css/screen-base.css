@@ -305,7 +305,6 @@ h1 span {
 label,
 td,
 th,
-ol li,
 div > p {
     font-size: 0.85em;
     line-height: 1.5625em;
@@ -754,3 +753,19 @@ section.org {
     top: -10%;
     opacity: 0.2;
 }
+
+/* MARKDOWN POST CONTAINER */
+
+.post_container ul,
+.post_container ol {
+    position: relative;
+    top: -15px;
+    left: 20px;
+}
+
+.post_container ul li,
+.post_container ol li {
+    font-size: 0.85em;
+    color: #333;
+}
+
