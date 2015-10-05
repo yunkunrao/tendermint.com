@@ -30,7 +30,7 @@ Where the two differ is in what happens when more than ⅓ of validators are Byz
 
 ### Round-robin vs sticky leaders
 
-PBFT's whitepaper illustrates a "sticky" leader (a.k.a. primary/proposer) system.  Tendermint's specification describes a round-robin scheme for selecting new leaders for every block.
+PBFT's whitepaper, which was the inspiration for Hyperledger, illustrates a "sticky" leader (a.k.a. primary/proposer) system.  Tendermint's specification describes a round-robin scheme for selecting new leaders for every block.
 
 In some scenarios, the sticky-leader approach has an advantage over the round-robin approach; the throughput in transactions-per-second is higher with sticky-leaders because the leader doesn't have to wait for block confirmations before proposing the next block.  On the other hand, the round-robin approach has the benefit that leaders are continuously tested (preventing possible cascading failures), and the power to re-order transactions is shared equally among the participants.
 
