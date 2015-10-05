@@ -26,7 +26,7 @@ _terminology comparison between Tendermint and PBFT_
 
 Both PBFT and Tendermint are Byzantine fault-tolerant transaction systems.  Both can handle up to ⅓ of malicious Byzantine validators/replicas.  Both require three steps/phases;  the first for broadcasting the block, and the last two for broadcasting signatures.  Finally, both require two quorums of signatures to commit a block.
 
-Where the two differ is in what happens when more than ⅓ of validators are Byzantine.  In PBFT, when there are between ⅓ and ⅔ of Byzantine validators, no guarantees are provided whatsoever; the attackers can return arbitrary results to the client ([source](https://www.usenix.org/conference/nsdi-07/beyond-one-third-faulty-replicas-byzantine-fault-tolerant-systems)).  Tendermint’s consensus model considers a block to be committed when there are more than ⅔ of precommit signatures for the blockhash, which mitigates this issue.
+Where the two differ is in what happens when more than ⅓ of validators are Byzantine.  In PBFT, when there are between ⅓ and ⅔ of Byzantine validators, no guarantees are provided whatsoever; the attackers can return arbitrary results to the client ([source](https://www.usenix.org/conference/nsdi-07/beyond-one-third-faulty-replicas-byzantine-fault-tolerant-systems)).  Tendermint’s consensus model considers a block to be committed when there are more than ⅔ of precommit signatures for the blockhash, which mitigates this issue.   Thus if ½ of the validators are Byzantine they can prevent future blocks from being committed; however, they cannot commit new blocks like they can in PBFT. 
 
 ### Round-robin vs sticky leaders
 
