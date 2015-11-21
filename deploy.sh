@@ -5,6 +5,10 @@ echo -e "\033[0;32mDeploying updates to Github...\033[0m"
 ### INIT
 
 git submodule update --init
+cd public
+git fetch origin master:master
+git checkout master
+cd ..
 
 ### SOURCES
 
@@ -21,8 +25,6 @@ git push origin sources
 ### PUBLIC (master)
 
 cd public
-git fetch origin master:master
-git checkout master
 git add -A
 git commit -m "$msg"
 git push origin master
