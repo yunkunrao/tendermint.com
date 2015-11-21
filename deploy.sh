@@ -21,6 +21,8 @@ git push origin sources
 ### PUBLIC (master)
 
 cd public
+git fetch origin master:master
+git checkout master
 git add -A
 git commit -m "$msg"
 git push origin master
