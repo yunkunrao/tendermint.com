@@ -1,2 +1,4 @@
-[submodule "public"]
-	branch = master
+[submodule "public_"]
+  path = public
+  url = git@github.com:tendermint/tendermint.github.io.git
+  branch = master
