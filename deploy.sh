@@ -2,6 +2,10 @@
 
 echo -e "\033[0;32mDeploying updates to Github...\033[0m"
 
+### INIT
+
+git submodule update --init
+
 ### SOURCES
 
 hugo
