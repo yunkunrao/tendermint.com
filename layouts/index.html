@@ -11,11 +11,10 @@
     <link rel="canonical" href="{{ .Permalink }}">
     <link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}">
     <meta content="on" http-equiv="cleartype">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="/images/favicon.ico">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="/css/screen.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="/styles/screen.css">
 
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -23,73 +22,140 @@
   </head>
 
   <body>
-    {{ template "chrome/banner.html" . }}
+    {{ template "chrome/site-header.html" . }}
 
-    <section class="hero">
+    <section id="section-hero" class="section-dark">
     <div class="container">
-      <div class="col first">
+      <div class="text">
         <h1>Tendermint</h1>
         <p>The Enterprise Blockchain Platform</p>
-        {{ template "chrome/email-signup.html" . }}
       </div>
+      {{ template "chrome/email-signup.html" . }}
     </div>
     </section>
 
-    <section class="intro">
+    <section id="section-intro">
     <div class="container">
-      <div class="col col-6 first">
-        <p>The Tendermint Enterprise Blockchain Platform (TEBP) removes all of the complexity of blockchain application development, allowing enterprise application developers to focus on business logic.</p>
+      <p>The Tendermint Enterprise Blockchain Platform (TEBP) removes all of the complexity of blockchain application development, allowing enterprise application developers to focus on business logic.</p>
 
-        <p>Built from the ground up for the needs of enterprise clients - Tendermint consensus supports applications with the best in blockchain speed, security, &amp; scalability.</p>
-      </div>
+      <p>Built from the ground up for the needs of enterprise clients - Tendermint consensus supports applications with the best in blockchain speed, security, &amp; scalability.</p>
     </div>
     </section>
 
-    <section class="resources">
+    <section id="section-team">
     <div class="container">
+      <div class="section-header">
+        <h2>The Team</h2>
+      </div>
 
-      <h2 class="col first">Resources</h2>
-
-      <div class="col col-6 first resource-list">
-        <h3><a href="/posts/" class="block">Blog</a></h3>
-        <ul class="nostyle">
-          {{ range first 4 .Data.Pages }}
-          {{ .Render "li_frontpage"}}
-          {{ end }}
+      <div class="section-content">
+        <ul id="ul-team">
+          <li>
+          <img class="portrait" src="http://placehold.it/400x400" alt="Jae Kwon">
+          <div class="label">
+            <span class="name">Jae Kwon</span>
+            <span class="title">CEO</span>
+            <span class="title">Founder</span>
+          </div>
+          </li>
+          <li>
+          <img class="portrait" src="http://placehold.it/400x400" alt="Jae Kwon">
+          <div class="label">
+            <span class="name">Dustin Byington</span>
+            <span class="title">President</span>
+            <span class="title">Co-founder</span>
+          </div>
+          </li>
+          <li>
+          <img class="portrait" src="http://placehold.it/400x400" alt="Jae Kwon">
+          <div class="label">
+            <span class="name">Ethan Buchman</span>
+            <span class="title">Blockchain Engineer</span>
+            <span class="title">Co-founder</span>
+          </div>
+          </li>
+          <li>
+          <img class="portrait" src="http://placehold.it/400x400" alt="Jae Kwon">
+          <div class="label">
+            <span class="name">Peng Zhong</span>
+            <span class="title">Front-end Engineer</span>
+          </div>
+          </li>
         </ul>
       </div>
-
-      <div class="col col-6 resource-list">
-        <h3><a href="https://github.com/tendermint/tendermint/" class="block">GitHub</a></h3>
-        <ul class="task-list nostyle">
-          <li>
-          <strong><a href="https://github.com/tendermint/tendermint/blob/master/consensus">consensus</a>:</strong> The core consensus algorithm</li>
-          <li>
-          <strong><a href="https://github.com/tendermint/tendermint/blob/master/p2p">p2p</a>:</strong> Extensible P2P networking stack</li>
-          <li>
-          <strong><a href="https://github.com/tendermint/tendermint/blob/master/wire">wire</a>:</strong> Binary and custom JSON encoding/decoding</li>
-          <li>
-          <strong><a href="https://github.com/tendermint/tendermint/blob/master/merkle">merkle</a>:</strong> Merkle hash trees for blocks and application state</li>
-          <li>
-          <strong><a href="https://github.com/tendermint/tendermint/blob/master/state">state</a>:</strong> The application state, mutated by transactions</li>
-          <li>
-          <strong><a href="https://github.com/tendermint/tendermint/blob/master/vm">vm</a>:</strong> Ethereum virtual machine</li>
-          <li>
-          <strong><a href="https://github.com/tendermint/tendermint/blob/master/mempool">mempool</a>:</strong> Handles gossip of new transactions</li>
-        </ul>
-      </div>
-
-      <div class="col col-12 first">
-        <p class="tagline center">More resources
-        <br/>
-        <a href="http://github.com/tendermint/tendermint/wiki">read the spec</a> <span class="bullet">&bull;</span>
-        <a href="mailto:hello@tendermint.com">email us</a>
-        <br/>
-        <a href="http://forum.tendermint.com/">join the forum</a>
-        </p>
-      </div>
     </div>
-
     </section>
 
-    {{ template "chrome/footer.html" }}
+    <section id="section-resources">
+    <div class="container">
+      <div class="section-header">
+        <h2>Resources</h2>
+      </div>
+
+      <div class="panel">
+        <div class="panel-header">
+          <h3><a href="/posts/" class="block">Blog</a></h3>
+        </div>
+        <div class="panel-body">
+          <ul>
+            {{ range first 4 .Data.Pages }}
+            {{ .Render "li_frontpage"}}
+            {{ end }}
+          </ul>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-header">
+          <h3><a href="https://github.com/tendermint/tendermint/" class="block">GitHub</a></h3>
+        </div>
+        <div class="panel-body">
+          <ul>
+            <li>
+              <h4><a href="https://github.com/tendermint/tendermint/blob/master/consensus">consensus</a></h4>
+              <p>The core consensus algorithm</p>
+            </li>
+            <li>
+              <h4><a href="https://github.com/tendermint/tendermint/blob/master/p2p">p2p</a></h4>
+              <p>Extensible P2P networking stack</p>
+            </li>
+            <li>
+              <h4><a href="https://github.com/tendermint/tendermint/blob/master/wire">wire</a></h4>
+              <p>Binary and custom JSON encoding/decoding</p>
+            </li>
+            <li>
+              <h4><a href="https://github.com/tendermint/tendermint/blob/master/merkle">merkle</a></h4>
+              <p>Merkle hash trees for blocks and application state</p>
+            </li>
+            <li>
+              <h4><a href="https://github.com/tendermint/tendermint/blob/master/state">state</a></h4>
+              <p>The application state, mutated by transactions</p>
+            </li>
+            <li>
+              <h4><a href="https://github.com/tendermint/tendermint/blob/master/vm">vm</a></h4>
+              <p>Ethereum virtual machine</p>
+            </li>
+            <li>
+              <h4><a href="https://github.com/tendermint/tendermint/blob/master/mempool">mempool</a></h4>
+              <p>Handles gossip of new transactions</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-header">
+          <h3>More resources</h3>
+        </div>
+        <div class="panel-body">
+          <ul>
+            <li><h4><a href="http://github.com/tendermint/tendermint/wiki">Read the Tendermint spec &rsaquo;</a></h4></li>
+            <li><h4><a href="mailto:hello@tendermint.com">Send us an email &rsaquo;</a></h4></li>
+            <li><h4><a href="http://forum.tendermint.com/">Join the discussion on the forum &rsaquo;</a></h4></li>
+          </ul>
+        </div>
+      </div>
+
+      </section>
+
+      {{ template "chrome/site-footer.html" }}
