@@ -35,7 +35,7 @@ section
   
 #section-hero
   padding 4.5em 0 3.5em
-  border-bottom 8px solid lighten(mcolor,65%)
+  border-bottom 8px solid lighten(mcolor,10%)
   text-align center
   background mcolor
 
@@ -51,12 +51,17 @@ section
 #section-intro
   background lighten(mcolor,90%)
   color mcolor
-  p:first-of-type
+
+  background hsl(mhue,msat,mlit - 5%)
+  color lcolor
+  p.first
     font-size 1.2em
-    text-shadow #fff 0 -1px 0
-    border-bottom 2px solid lighten(mcolor,85%)
+    text-shadow #000 0 1px 0
+    border-bottom 2px solid darken(lcolor,55%)
     margin 0 0 1em
     padding 0 0 1em
+    color hsl(mhue,msat,90%)
+    color lighten(lcolor,50%)
 
 #section-team
   .container
