@@ -1,5 +1,24 @@
 logo-size = 32px
 
+.site-logo
+  background acolor
+  position absolute
+  left 50%
+  margin-left -0.75 * logo-size
+  width logo-size * 1.5
+  height logo-size * 1.5 + 4px
+  img
+    margin logo-size * 0.25
+    width logo-size
+    height logo-size
+    &:hover
+      animation spin 4s linear infinite
+
+@keyframes spin
+   100%
+    -webkit-transform: rotate(360deg)
+    transform:rotate(360deg)
+
 .site-bookend
   clearfix()
   position relative
@@ -14,25 +33,11 @@ logo-size = 32px
     &:hover
       text-decoration underline
 
-  #site-logo
-    position absolute
-    left 50%
-    margin-left -0.75 * logo-size
-    width logo-size * 1.5
-    height logo-size * 1.5 + 4px
-    background #fff
-    background acolor
-    img
-      margin logo-size * 0.25
-      width logo-size
-      height logo-size
-
-
 #site-header
   border-top 2px solid hsl(mhue,msat,10%)
   border-bottom 1px solid hsl(mhue,msat,mlit + 8%)
 
-  #site-logo
+  .site-logo
     top -2px
     border-bottom 4px solid darken(acolor,20%)
 
@@ -43,8 +48,8 @@ logo-size = 32px
     li
       margin 0
       float left
+      width 50%
       a
-        width 60px
         display block
         text-align center
 
@@ -52,10 +57,11 @@ logo-size = 32px
   border-top 1px solid hsl(mhue,msat,mlit + 8%)
   border-bottom 2px solid hsl(mhue,msat,10%)
 
-  #site-logo
+  .site-logo
     bottom -2px
     background lighten(mcolor,30%)
     border-bottom 4px solid lighten(mcolor,15%)
 
   p
     padding 0 1em
+    margin 0

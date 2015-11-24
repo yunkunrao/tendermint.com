@@ -6,7 +6,7 @@
     It probably does not need to be changed.
     -->
     <meta charset="utf-8">
-    <base href="{{ .Site.BaseUrl }}">
+    <base href="{{ .Site.BaseURL }}">
     <title>Tendermint</title>
     <link rel="canonical" href="{{ .Permalink }}">
     <link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}">
@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="/images/favicon.ico">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="/styles/screen.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/screen.css">
 
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -92,19 +92,22 @@
         <h2>Resources</h2>
       </div>
 
-      <div class="panel">
-        <div class="panel-header">
-          <h3><a href="/posts/" class="block">Blog</a></h3>
-        </div>
-        <div class="panel-body">
-          <ul>
-            {{ range first 4 .Data.Pages }}
-            {{ .Render "li_frontpage"}}
-            {{ end }}
-          </ul>
+      <div class="thirds">
+        <div class="panel">
+          <div class="panel-header">
+            <h3><a href="/posts/" class="block">Blog</a></h3>
+          </div>
+          <div class="panel-body">
+            <ul>
+              {{ range first 4 .Data.Pages }}
+              {{ .Render "li_frontpage"}}
+              {{ end }}
+            </ul>
+          </div>
         </div>
       </div>
 
+      <div class="thirds">
       <div class="panel">
         <div class="panel-header">
           <h3><a href="https://github.com/tendermint/tendermint/" class="block">GitHub</a></h3>
@@ -142,7 +145,9 @@
           </ul>
         </div>
       </div>
+    </div>
 
+      <div class="thirds">
       <div class="panel">
         <div class="panel-header">
           <h3>More resources</h3>
@@ -155,6 +160,7 @@
           </ul>
         </div>
       </div>
+    </div>
 
       </section>
 
