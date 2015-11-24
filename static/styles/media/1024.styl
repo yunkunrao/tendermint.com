@@ -8,10 +8,13 @@ logo-size = 60px
   margin-left -0.75 * logo-size
   width logo-size * 1.5
   height logo-size * 1.5 + 4px
+  transition .15s ease-in-out
   img
     margin logo-size * 0.25
     width logo-size
     height logo-size
+  &:hover
+    height logo-size * 1.75 + 4px
 
 #site-header
   .left, .right
@@ -21,6 +24,8 @@ logo-size = 60px
     float left
     margin-top -2px
     margin-left 3em
+    &:hover
+      padding-top logo-size * 0.25
 
 #site-footer
   .site-logo
@@ -28,6 +33,9 @@ logo-size = 60px
     float left
     margin-left 3em
     margin-top -3 * x + 2px
+    &:hover
+      padding-bottom logo-size * 0.5
+      margin-top -3 * x + 2px - logo-size * 0.25
 
 /*----------------------------------------------------------------------
 Sections & Containers
@@ -72,8 +80,13 @@ Homepage
     font-weight 600
   p
     font-size 3em
-    font-weight 500
     margin 0
+    font-weight 500
+    display inline
+    line-height 1.125em
+    background hsl(ahue,asat,alit)
+    color hsl(ahue,asat,85%)
+    box-shadow hsl(ahue,asat,30%) 0 4px 0
 
   form
     margin-top 2em
