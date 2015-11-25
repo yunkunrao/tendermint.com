@@ -55,19 +55,31 @@ Body - Home
 Body - Blog
 ----------------------------------------------------------------------*/
 
-#body-blog
-  article
-    border 1px solid #ddd
-    padding 1em
-    max-width 768px
-    margin 0 auto 1.5em
+.body-blog
+  #section-posts
+    // make sure last article doesn't have too much padding
+    margin-bottom -1.5em
+
+    article
+      border 1px solid #ddd
+      padding 1em
+      max-width 768px
+      margin 0 auto 1.5em
+      h2
+        font-size 1.75em
 
   #section-hero
     padding 4em 0 3em
 
-  h1
-    font-size 3.5em
-  h2
-    font-size 1.75em
-  p
-    font-size 1.125em
+    h1
+      font-size 2em * 1.75em
+    p
+      font-size 1em * 1.75em
+
+  .article-body
+    h2
+      font-size 1.5em * 1.125
+    h3
+      font-size 1.25em * 1.125
+    p, ul, ol, blockquote, table
+      font-size 1.125em * 1.125

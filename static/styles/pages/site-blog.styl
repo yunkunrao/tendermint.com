@@ -5,12 +5,33 @@
 
     h1
       text-align center
-      font-size 2.5em
-      margin 0 auto
+      font-size 2em
+      padding 0 0.25em
+
+    p
+      font-size 1em
+      margin 0 0 1em
+
+    ul.categories
+      clearfix()
+      margin 0
+      text-align center
+      li
+        display inline-block
+        a
+          display block
+          color light
+          padding 0 0.5em
+          line-height 2em
+          font-size 0.75em
+          font-weight bold
+          border 1px solid lighten(mcolor,20%)
+
 
   #section-posts
     article
       margin 0 0 1.5em
+
       .date
         font-size 0.75em
         color dim
@@ -18,8 +39,10 @@
       h2
         line-height 1.25em
         margin 0 0 0.125em
+
       p
         margin 0 0 0.5em
+
       .date
         display inline-block
         color dim
@@ -42,3 +65,7 @@
           line-height 2em
           font-size 0.75em
           font-weight bold
+
+  #section-post
+    .article-body
+      max-width 60em
