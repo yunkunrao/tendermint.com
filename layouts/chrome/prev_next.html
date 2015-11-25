@@ -15,12 +15,12 @@
 <!-- Fix to make links appear on top of categories tags -->
 <div class="container">
   {{if .Prev}}
-    <em>Previous:</em> <a class="next" href="{{.Prev.Permalink}}">{{.Prev.Title}}</a>
-    <br />
+    <div class="label">Prev</div>
+    <div class="title"><a href="{{.Prev.Permalink}}">{{.Prev.Title}}</a></div>
   {{end}}
 
   {{if .Next}}{{if .Next.Title}}
-    <em>Next:</em> <a class="next" href="{{.Next.Permalink}}">{{.Next.Title}}</a>
-    <br />
+    <div class="label">Next</div>
+    <div class="title"><a href="{{.Next.Permalink}}">{{.Next.Title}}</a></div>
   {{end}}{{end}}
 </div>
