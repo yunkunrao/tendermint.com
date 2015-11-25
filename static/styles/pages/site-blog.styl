@@ -1,17 +1,44 @@
-#body-blog
-
+.body-blog
   #section-hero
-    padding 2em 1em 1em
+    padding 3em 0 2em
     border-bottom 8px solid lighten(mcolor,10%)
+
     h1
-      font-size 2em
+      text-align center
+      font-size 2.5em
+      margin 0 auto
 
-  ul.categories
-    li
-      display inline-block
-      background hsl(ahue,asat,alit)
-      box-shadow hsl(ahue,asat,30%) 0 4px 0
-      padding 0 0.5em
-      a
-        color #fff
+  #section-posts
+    article
+      margin 0 0 1.5em
+      .date
+        font-size 0.75em
+        color dim
+        margin 0
+      h2
+        line-height 1.25em
+        margin 0 0 0.125em
+      p
+        margin 0 0 0.5em
+      .date
+        display inline-block
+        color dim
+        background hsl(0,0,95%)
+        line-height x*1.5
+        padding 0 0.3em
 
+    ul.categories
+      clearfix()
+      margin 0
+      li
+        display block
+        float left
+        margin-right 0.33em
+        a
+          display block
+          color light
+          background hsl(mhue,msat,90%)
+          padding 0 0.5em
+          line-height 2em
+          font-size 0.75em
+          font-weight bold

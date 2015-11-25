@@ -4,7 +4,7 @@
 
 {{ template "chrome/header.html" . }}
 
-<body id="body-blog">
+<body id="body-blog" class="body-blog">
   {{ template "chrome/site-header.html" . }}
 
   <!-- See /layouts/indexes/category.html for explanation of this section -->
@@ -17,11 +17,13 @@
   </section>
 
   <section id="section-posts">
-    <ul>
-      {{ range .Data.Pages }}
-      {{ .Render "li"}}
-      {{ end }}
-    </ul>
+    <div class="container">
+      <ul>
+        {{ range .Data.Pages }}
+        {{ .Render "li"}}
+        {{ end }}
+      </ul>
+  </div>
   </section>
 
   {{ template "chrome/site-footer.html" }}

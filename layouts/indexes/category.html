@@ -2,29 +2,26 @@
   This file is used to render a list of all posts that belong to a specific
   category.
 -->
-
-
 {{ template "chrome/header.html" . }}
 
-<body class="theme-base-08">
-  {{ template "chrome/banner.html" . }}
+<body class="body-blog">
+  {{ template "chrome/site-header.html" . }}
 
-  <div class="wrap">
+  <section id="section-hero" class="section-dark">
+    <h1>&ldquo;{{ .Title }}&rdquo; Posts</h1>
+  </section>
+
+  <section id="section-posts">
   <!-- Show summary of all posts in a category -->
-    <div class="container content">
-      <h1 class="post-title">Recent Posts</h1>
-        <div id="main">
-          <div>
-            <h5><a href="/categories">Full Category Index</a></h5>
-            <h2>Posts in &ldquo;{{ .Title }}&rdquo;</h2>
-            {{ range .Data.Pages }}
-            {{ .Render "summary"}}
-            {{ end }}
-          </div>
-        </div>
-
+  <!--<h5><a href="/categories">Full Category Index</a></h5>-->
+    <div class="container">
+      <ul>
+        {{ range .Data.Pages }}
+        {{ .Render "li"}}
+        {{ end }}
+      </ul>
     </div>
-  </div>
+  </section>
 
 <!-- Include footer (ends <body> and <html>) -->
-{{ template "chrome/footer.html" }}
+{{ template "chrome/site-footer.html" }}
