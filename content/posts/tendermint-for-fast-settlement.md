@@ -8,7 +8,6 @@ categories:
     - "settlement"
 ---
 
-<br/>
 Some experts in the nascent blockchain industry have said the following:
 
 * _The blockchain is just a database_

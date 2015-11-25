@@ -7,7 +7,6 @@ categories:
     - "security"
 ---
 
-<br/>
 Many solutions to the consensus problem for cryptocurrencies have been proposed.  Since the innovation of Bitcoin’s proof-of-work based consensus algorithm--where miners compete in an energy intensive game to determine the order of transactions--several proof-of-stake algorithms have been proposed to make consensus faster while removing the reliance on energy expenditure.  The common objective of these protocols is to maintain a live decentralized transaction ledger while defending against double-spend attacks from malicious Byzantine actors deviating from the protocol.  Considering the financial nature of these protocols, we should strive to support a protocol that has well defined and robust security guarantees.
 
 The security analysis of cryptocurrency protocols is complicated by many factors.   One such complicating factor is the rational self-interested nature of participants.  The ideal protocol is an incentive aligned Nash equilibrium such that deviating from the protocol does not result in a net gain \[[1](http://fc14.ifca.ai/papers/fc14_submission_82.pdf), [2](https://www.cs.princeton.edu/~kroll/papers/weis13_bitcoin.pdf)\].  This is a topic worthy of its own post, but won’t be discussed further here.

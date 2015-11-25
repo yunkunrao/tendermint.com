@@ -7,7 +7,6 @@ categories:
     - "pegging"
 ---
 
-<br/>
 There is an interesting debate happening between Bitcoin maximalists and the rest of the cryptocurrency community.
 
 First, BlockStream published Bitcoin maximalist paper on [sidechains](http://www.blockstream.com/sidechains.pdf).

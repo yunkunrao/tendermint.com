@@ -7,7 +7,6 @@ categories:
     - "EVM"
 ---
 
-<br/>
 You may have an application that benefits from blockchain technology, and you may be trying to figure out whether to build that on Bitcoin, some meta-coin protocol like Counterparty, with Solidity/Serpent on the Ethereum virtual machine, or on a new blockchain stack altogether.  Actually, you should seriously consider building on Tendermint.
 
 ## A little background on Tendermint
