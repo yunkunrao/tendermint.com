@@ -19,11 +19,8 @@ For example, consider a protocol that requires stakeholders to first post a sure
 
 The above proposed protocol is secured by completely intrinsic means; it does not require a massive expenditure of energy to secure.  The total intrinsic penalty for successfully launching a double-spend attack (which is at least one third of all bonded coins as mentioned previously) can be adjusted by judiciously setting the incentives given to validators by way of fees or inflationary rewards.  The block-chain does not fork at all except in extraordinary circumstances, making it ideally suited for side-chain extensions.  It is to the my best knowledge the only completely decentralized cryptocurrency protocol that could be proven to be intrinsically incentive aligned.  Perhaps it is time to consider this kind of algorithm.
 
-<div class="credit">
-Links:
-<ol>
-	<li>Eyal and Sirer.  The Majority is Not Enough. 2014, http://fc14.ifca.ai/papers/fc14_submission_82.pdf</li>
-	<li>Kroll et al.  The Economics of Bitcoin Mining, or Bitcoin in the Presence of Adversaries. 2013, https://www.cs.princeton.edu/~kroll/papers/weis13_bitcoin.pdf</li>
-	<li>Dwork, Lynch, and Stockmeyer.  Consensus in the Presence of Partial Synchrony. 1988, http://groups.csail.mit.edu/tds/papers/Lynch/jacm88.pdf</li>
-</ol>
-</div>
+## Links
+
+1. Eyal and Sirer.  The Majority is Not Enough. 2014, http://fc14.ifca.ai/papers/fc14_submission_82.pdf
+2. Kroll et al.  The Economics of Bitcoin Mining, or Bitcoin in the Presence of Adversaries. 2013, https://www.cs.princeton.edu/~kroll/papers/weis13_bitcoin.pdf
+3. Dwork, Lynch, and Stockmeyer.  Consensus in the Presence of Partial Synchrony. 1988, http://groups.csail.mit.edu/tds/papers/Lynch/jacm88.pdf
