@@ -38,8 +38,14 @@ input
 
 button
   background acolor
-  color #fff
   border none
-  border-bottom 4px solid darken(acolor,20%)
   cursor pointer
   text-shadow darken(acolor,20%) 0 1px 0
+
+button, .button
+  color #fff
+  border-bottom 4px solid darken(acolor,20%)
+  transition .15s ease-in-out
+  &:hover
+    background darken(acolor,10%)
+    border-color darken(acolor,40%)
