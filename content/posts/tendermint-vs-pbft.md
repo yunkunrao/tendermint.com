@@ -62,7 +62,7 @@ Though Tendermint was developed independently from PBFT, both algorithms share m
 <blockquote>
 “Interestingly, we may find that the current BFT debate may evolve to resemble the microkernel debate, with one camp advocating that the BFT concept is ultimately impractical for real-world applications and the other camp advocating that it is not the concept that is impractical/faulty, but it is the implementation that is impractical/faulty. Building a complete implementation that supports a real application for a long duration rather than for the length of time it takes to build and test a prototype implementation, that does not cut corners, that is not missing features, that does not make optimizations that break down in corner cases, that can be applied to more than one application, and that has good performance will go a long way to settling the debate. A tall order, for sure.”
 </blockquote>
-- [_On the Practicality of Byzantine Fault Tolerance_](http://arxiv.org/pdf/1110.4854.pdf), 2011
 
+<cite>[_On the Practicality of Byzantine Fault Tolerance_](http://arxiv.org/pdf/1110.4854.pdf), 2011</cite>
 
 <sup>\*</sup> _This isn’t completely implemented yet.  The Merkle proof logic is implemented, but we still need to implement a data structure to communicate validator set changes to clients, and ideally client code in Javascript as a demo._
