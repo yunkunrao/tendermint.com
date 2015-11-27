@@ -1,6 +1,23 @@
 .body-blog
+  ul.categories
+    clearfix()
+    margin 0
+    li
+      display block
+      float left
+      margin-right 0.33em
+      a
+        display block
+        color light
+        background hsl(mhue,msat,90%)
+        padding 0 0.5em
+        line-height 2em
+        font-size 0.75em
+        font-weight bold
+
+#body-blog-index
   #section-hero
-    padding 3em 0 1em
+    padding 3em 0 2em
     border-bottom 8px solid lighten(mcolor,10%)
 
     h1
@@ -11,25 +28,6 @@
     p
       font-size 1em
       margin 0 0 1em
-
-    ul.categories
-      clearfix()
-      margin 0
-      text-align center
-      li
-        display inline-block
-        a
-          display block
-          color light
-          padding 0 0.5em
-          line-height 2em
-          font-size 0.75em
-          font-weight bold
-          border 1px solid lighten(mcolor,20%)
-  &#body-blog-index
-    #section-hero
-      padding-bottom 2em
-
 
   #section-posts
     article
@@ -53,22 +51,29 @@
         line-height x*1.5
         padding 0 0.3em
 
-    ul.categories
-      clearfix()
-      margin 0
-      li
-        display block
-        float left
-        margin-right 0.33em
-        a
-          display block
-          color light
-          background hsl(mhue,msat,90%)
-          padding 0 0.5em
-          line-height 2em
-          font-size 0.75em
-          font-weight bold
-
-  #section-post
-    .article-body
+#body-blog-post
+  #section-hero, #section-post
+    .container
       max-width 60em
+      &#article-prev-next
+        max-width 1280px
+
+  #section-hero
+    padding 2em 0 1.5em
+    border-bottom 1px solid mborder
+
+    h1
+      font-size 2em
+      color txt
+      text-shadow none
+      font-weight bold
+      color mcolor
+
+    p
+      font-size 1em
+      margin 0 0 0.5em
+      color dim
+
+    ul.categories
+      li
+        margin-bottom 0

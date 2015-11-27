@@ -4,13 +4,15 @@
 
 {{ template "chrome/header.html" . }}
 
-<body class="body-blog">
+<body id="body-blog-post" class="body-blog">
   {{ template "chrome/site-header.html" . }}
 
-  <section id="section-hero" class="section-dark">
-    <h1>{{ .Title }}</h1>
-    <p>{{ .Date.Format "January 2, 2006" }}</p>
-    {{ template "chrome/categories.html" . }}
+  <section id="section-hero">
+    <div class="container">
+      <h1>{{ .Title }}</h1>
+      <p>{{ .Date.Format "January 2, 2006" }}</p>
+      {{ template "chrome/categories.html" . }}
+    </div>
   </section>
 
   <!-- See /layouts/indexes/category.html for explanation of this section -->
@@ -29,11 +31,11 @@
     <div class="container article-body">
       {{ .Content }}
     </div>
-  </div>
 
-  <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
 
-  {{ template "chrome/prev_next.html" . }}
+    {{ template "chrome/prev_next.html" . }}
+  </section>
 
 <!-- Include footer (ends <body class="theme-base-08"> and <html>) -->
 {{ template "chrome/site-footer.html" }}

@@ -29,6 +29,20 @@ section
   width 768px
   margin 0 auto
 
+a.article-prev-next
+  margin 0 0 1.5em
+  .arrow
+    line-height 5*x + 1.5*0.5*x + 1.5*0.25*x
+    font-size 3em
+    width x*4
+  .text
+    padding 1em
+  .label
+    font-size 1.25em
+  .title
+    font-size 1.5em
+    font-weight 500
+
 /*----------------------------------------------------------------------
 Body - Home
 ----------------------------------------------------------------------*/
@@ -55,31 +69,36 @@ Body - Home
 Body - Blog
 ----------------------------------------------------------------------*/
 
-.body-blog
-  #section-posts
-    // make sure last article doesn't have too much padding
-    margin-bottom -1.5em
-
-    article
-      border 1px solid #ddd
-      padding 1em
-      max-width 768px
-      margin 0 auto 1.5em
-      h2
-        font-size 1.75em
-
+#body-blog-index
+#body-blog-post
   #section-hero
-    padding 4em 0 3em
-
     h1
       font-size 2em * 1.75em
     p
       font-size 1em * 1.75em
+    ul.categories
+      font-size 0.75em * 1.75em
 
+#body-blog-index
+  #section-posts
+    // make sure last article doesn't have too much padding
+    margin-bottom -1.5em
+    .container
+      max-width 60em
+
+    article
+      border 1px solid #ddd
+      padding 1em
+      margin 0 auto 1.5em
+      h2
+        font-size 1.75em
+        width auto
+
+#body-blog-post
   .article-body
     h2
-      font-size 1.5em * 1.125
+      font-size 1.5em * 1.25
     h3
-      font-size 1.25em * 1.125
+      font-size 1.25em * 1.25
     p, ul, ol, blockquote, table
       font-size 1.125em * 1.125

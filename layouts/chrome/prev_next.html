@@ -13,14 +13,24 @@
 -->
 
 <!-- Fix to make links appear on top of categories tags -->
-<div class="container">
+<div id="article-prev-next" class="container">
   {{if .Prev}}
-    <div class="label">Prev</div>
-    <div class="title"><a href="{{.Prev.Permalink}}">{{.Prev.Title}}</a></div>
+    <a id="article-prev" class="article-prev-next" href="{{.Prev.Permalink}}">
+      <div class="arrow">&lsaquo;</div>
+      <div class="text">
+        <div class="label">Previous Post</div>
+        <div class="title">{{.Prev.Title}}</div>
+      </div>
+    </a>
   {{end}}
 
   {{if .Next}}{{if .Next.Title}}
-    <div class="label">Next</div>
-    <div class="title"><a href="{{.Next.Permalink}}">{{.Next.Title}}</a></div>
+    <a id="article-next" class="article-prev-next" href="{{.Next.Permalink}}">
+      <div class="text">
+        <div class="label">Next Post</div>
+        <div class="title">{{.Next.Title}}</div>
+      </div>
+      <div class="arrow">&rsaquo;</div>
+    </a>
   {{end}}{{end}}
 </div>
