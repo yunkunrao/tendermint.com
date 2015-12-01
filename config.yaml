@@ -4,6 +4,6 @@ layoutdir: "layouts"
 publishdir: "public"
 indexes:
   category: "categories"
-baseurl: "http://tendermint.nylira.com"
+baseurl: "http://tendermint.com"
 title: "Tendermint"
 ...
