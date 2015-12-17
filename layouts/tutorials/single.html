@@ -1,5 +1,5 @@
 <!--
-  This file is responsible for rendering a single blog post.
+  This file is responsible for rendering a single tutorial.
 -->
 
 {{ template "chrome/header.html" . }}
@@ -18,15 +18,15 @@
   <!-- See /layouts/indexes/category.html for explanation of this section -->
   <section id="section-post">
     <!--
-      This is where the actual post is displayed.
+      This is where the actual tutorial is displayed.
 
       We first access the title metadata field from the markdown source and
       display it as a heading.
 
-      We then access the date the post was written (also in the markdown
+      We then access the date the tutorial was written (also in the markdown
       metadata) and display a formated version of it
 
-      Finally we include the actual content of the post.
+      Finally we include the actual content of the tutorial.
     -->
     <div class="container article-body">
       {{ .Content }}

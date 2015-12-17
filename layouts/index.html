@@ -86,22 +86,33 @@
         <h2>Resources</h2>
       </div>
 
-      <div class="thirds">
+      <div class="content">
         <div class="panel">
           <div class="panel-header">
             <h3><a href="/posts/" class="block">Blog</a></h3>
           </div>
           <div class="panel-body">
             <ul>
-              {{ range first 4 .Data.Pages }}
+              {{ range first 4 (where .Data.Pages "Section" "posts") }}
               {{ .Render "li_frontpage"}}
               {{ end }}
             </ul>
           </div>
         </div>
-      </div>
 
-      <div class="thirds">
+        <div class="panel">
+          <div class="panel-header">
+            <h3><a href="/tutorials/" class="block">Tutorials</a></h3>
+          </div>
+          <div class="panel-body">
+            <ul>
+              {{ range first 4 (where .Data.Pages "Section" "tutorials") }}
+              {{ .Render "li_frontpage"}}
+              {{ end }}
+            </ul>
+          </div>
+        </div>
+
       <div class="panel">
         <div class="panel-header">
           <h3><a href="https://github.com/tendermint/tendermint/" class="block">GitHub</a></h3>
@@ -127,9 +138,7 @@
           </ul>
         </div>
       </div>
-    </div>
 
-      <div class="thirds">
       <div class="panel">
         <div class="panel-header">
           <h3>More resources</h3>
@@ -142,9 +151,10 @@
           </ul>
         </div>
       </div>
-    </div>
-  </div>
 
-      </section>
+  </div><!--content-->
+
+  </div><!--container-->
+</section>
 
       {{ template "chrome/site-footer.html" }}
