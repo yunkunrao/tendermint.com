@@ -87,7 +87,6 @@ Body - Home
       font-size 5em
     p
       font-size 3em
-      font-weight 500
       display inline
       line-height 1.125em
 
@@ -121,10 +120,21 @@ Body - Home
       display flex
       flex-flow row wrap
       padding 0 0.5em
+      margin 0 -1em
 
       .panel
         flex 1
         margin 0 0.5em
+        .panel-header
+          background lighten(mcolor, 95%)
+          padding 0 x*0.75
+          h3
+            font-size 1.25em
+            font-weight normal
+            line-height 3em
+        ul
+          li
+            padding-left 0.75em
 
 /*----------------------------------------------------------------------
 Body - Blog
@@ -134,3 +144,6 @@ Body - Blog
   #section-hero
     padding-top 5em
     padding-bottom 3em
+
+a.footer-large-button
+  margin 4em 0 0

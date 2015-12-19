@@ -9,19 +9,18 @@
       margin 0 0 3em
 
   #section-intro
-    background lighten(mcolor,90%)
     color mcolor
 
-    background hsl(mhue,msat,mlit - 5%)
+    background hsl(mhue,msat - 40%,mlit - 5%)
     color lcolor
+
     p.first
       font-size 1.2em
       text-shadow #000 0 1px 0
-      border-bottom 2px solid darken(lcolor,55%)
+      border-bottom 2px solid hsl(mhue,msat - 40%,mlit + 10%)
       margin 0 0 1em
       padding 0 0 1em
-      color hsl(mhue,msat,90%)
-      color lighten(lcolor,50%)
+      color lighten(lcolor,60%)
 
   #section-team
     .container

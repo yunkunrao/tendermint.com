@@ -15,7 +15,6 @@
     </div>
   </section>
 
-  <!-- See /layouts/indexes/category.html for explanation of this section -->
   <section id="section-post">
     <!--
       This is where the actual tutorial is displayed.
@@ -30,11 +29,10 @@
     -->
     <div class="container article-body">
       {{ .Content }}
+      <a class="footer-large-button">
+        View <strong>All Tutorials</strong> &rsaquo;
+      </a>
     </div>
-
-    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
-
-    {{ template "chrome/prev_next.html" . }}
   </section>
 
 <!-- Include footer (ends <body class="theme-base-08"> and <html>) -->

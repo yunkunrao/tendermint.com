@@ -4,17 +4,15 @@
 -->
 {{ template "chrome/header.html" . }}
 
-<body id="body-blog-index" class="body-blog">
+<body class="site-articles body-articles">
   {{ template "chrome/site-header.html" . }}
 
   <section id="section-hero" class="section-dark">
     <h1>&ldquo;{{ .Title }}&rdquo;</h1>
-    <p>Posts in this category</p>
+    <p>Category</p>
   </section>
 
   <section id="section-posts">
-  <!-- Show summary of all posts in a category -->
-  <!--<h5><a href="/categories">Full Category Index</a></h5>-->
     <div class="container">
       <ul>
         {{ range .Data.Pages }}
