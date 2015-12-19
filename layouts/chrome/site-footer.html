@@ -26,7 +26,10 @@
 
 <!-- code highlighting -->
 <script src="scripts/highlight.pack.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
+<script>
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+</script>
 
 {{ template "chrome/ga.html" . }}
 
