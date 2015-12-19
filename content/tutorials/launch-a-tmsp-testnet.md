@@ -8,7 +8,7 @@ categories:
     - "mintnet"
 ---
 
-_This tutorial is second in a series.  See [Introducing TMSP](/posts/introducing-tmsp/) for links to all the tutorials in this series._
+_This tutorial is second in a series.  See [this post](/posts/tendermint-socket-protocol/) for links to all the tutorials in this series._
 
 ### Tendermint Core
 

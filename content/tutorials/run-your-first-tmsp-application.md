@@ -8,7 +8,8 @@ categories:
     - "tmsp_cli"
 ---
 
-_This tutorial is first in a series.  See [Introducing TMSP](/posts/introducing-tmsp/) for links to all the tutorials in this series._
+_This tutorial is first in a series.  See [this post](/posts/tendermint-socket-protocol/) for links to all the tutorials in this series._
+
 
 ### A First Example
 
