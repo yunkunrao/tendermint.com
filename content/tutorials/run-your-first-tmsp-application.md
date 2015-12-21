@@ -1,27 +1,27 @@
 ---
 title: "Run your first TMSP application"
-description: "We explain what TMSP is and how to inspect TMSP applications using the tmsp_cli tool"
+description: "We explain what TMSP is and how to inspect TMSP applications using the tmsp-cli tool"
 date: "2015-12-16"
 categories: 
     - "tutorial"
     - "TMSP"
-    - "tmsp_cli"
+    - "tmsp-cli"
 ---
 
-_This tutorial is first in a series.  See [this post](/posts/tendermint-socket-protocol/) for links to all the tutorials in this series._
+_This tutorial is first in a series.  See [this post](/posts/tendermint-socket-protocol/) for an overview of TMSP and links to all the tutorials in this series._
 
 
 ### A First Example
 
 Make sure you [have Go installed](https://golang.org/doc/install) and [put `$GOPATH/bin` in your `$PATH`](https://github.com/tendermint/tendermint/wiki/Setting-GOPATH).
 
-Next, install the `tmsp_cli` tool and example applications:
+Next, install the `tmsp-cli` tool and example applications:
 
 ```
 go get github.com/tendermint/tmsp/cmd/...
 ```
 
-Now run `tmsp_cli --help` to see the list of commands:
+Now run `tmsp-cli --help` to see the list of commands:
 
 ```
 COMMANDS:
@@ -42,10 +42,10 @@ GLOBAL OPTIONS:
    --version, -v                        print the version
 ```
 
-The `tmsp_cli` tool lets us send TMSP messages to our application, to help build and debug them.
+The `tmsp-cli` tool lets us send TMSP messages to our application, to help build and debug them.
 
-As you can see, the TMSP API has more than the four messages outlined above 
-for convenience, configuration, and information purposes, but it remains quite general.
+The most important messages are `append_tx`, `get_hash`, `commit`, and `rollback`,
+but there are others for convenience, configuration, and information purposes.
 
 Let's start a dummy application:
 
@@ -56,20 +56,22 @@ dummy
 In another terminal, run 
 
 ```
-tmsp_cli echo hello
-tmsp_cli info
+tmsp-cli echo hello
+tmsp-cli info
 ```
+
+The application should echo `hello` and give you some information about itself.
 
 A TMSP application must provide two things:
 
   - a socket server
   - a handler for TMSP messages
 
-When we run the `tmsp_cli` tool we open a new connection to the application's socket server, 
+When we run the `tmsp-cli` tool we open a new connection to the application's socket server, 
 send the given TMSP message, and wait for a response.
 
 The server may be generic for a particular language, and we provide one for Go in `tmsp/server`.
-There is one for Python in `example/python/tmsp/server.py`, but it could use more love.
+There is one for Python in `example/python/tmsp/server.py`, and one for Node JS in `example/js/server.js`.
 
 The handler is specific to the application, and may be arbitrary, 
 so long as it is deterministic and conforms to the TMSP interface specification.
@@ -84,12 +86,12 @@ Where `example.NewDummyApplication()` has methods for each of the TMSP messages 
 
 See the dummy app in `example/golang/dummy.go`. It simply adds transaction bytes to a merkle tree, hashing when we call `get_hash` and saving when we call `commit`.
 
-So when we run `tmsp_cli info`, we open a new connection to the TMSP server, which calls the `Info()` method on the application, which tells us the number of transactions in our merlke tree.
+So when we run `tmsp-cli info`, we open a new connection to the TMSP server, which calls the `Info()` method on the application, which tells us the number of transactions in our merlke tree.
 
-Now, since every command opens a new connection, we provide the `tmsp_cli console` and `tmsp_cli batch` commands, 
-to allow multiple TMSP messages on a single connection.
+Now, since every command opens a new connection, we provide the `tmsp-cli console` and `tmsp-cli batch` commands, 
+to allow multiple TMSP messages to be sent over a single connection.
 
-Running `tmsp_cli console` should drop you in an interactive console for speaking TMSP messages to your application.
+Running `tmsp-cli console` should drop you in an interactive console for speaking TMSP messages to your application.
 
 Try running these commands:
 
@@ -102,15 +104,20 @@ Try running these commands:
 > get_hash
 ```
 
-Similarly, you could put the commands in a file and run `tmsp_cli batch < myfile`.
+Similarly, you could put the commands in a file and run `tmsp-cli batch < myfile`.
 
 ### Another Example
 
 Now that we've got the hang of it, let's try another application, the "counter" app.
 
+The counter app doesn't use a merkle tree, it just counts how many times we've sent a transaction,
+asked for a hash, or committed the state. The result of `get_hash` is just the number of transactions sent.
+
 This application has two modes: `serial=off` and `serial=on`.
 
 When `serial=on`, transactions must be a big-endian encoded incrementing integer, starting at 0.
+
+If `serial=off`, there are no restrictions on transactions.
 
 We can toggle the value of `serial` using the `set_option` TMSP message.
 
@@ -128,7 +135,7 @@ server.StartListener("tcp://0.0.0.0:46658", example.NewCounterApplication())
 
 where the CounterApplication is defined in `example/golang/counter.go`, and implements the TMSP application interface.
 
-In another window, start the `tmsp_cli console`:
+In another window, start the `tmsp-cli console`:
 
 ```
 > echo hello
@@ -152,7 +159,7 @@ In the near future, `erisdb` of Eris Industries will also run atop TMSP, bringin
 
 But the ultimate flexibility comes from being able to write the application easily in any language. 
 
-We have implemented the counter app in Python:
+We have implemented the counter app in Python and in Node JS:
 
 ```
 cd example/python
@@ -163,11 +170,13 @@ python app.py
 In another window, run the console and those previous TMSP commands. 
 You should get the same results as for the Go version.
 
-Want to write the counter app in your favorite language?! We'd be happy to accept the pull request.
+To run the Node JS version, `cd` to `example/js` and run 
 
-Before continuing, please kill the `python app.py` process.
+```
+node app.js
+```
 
-TODO: write it in Javascript
+Want to write the counter app in your favorite language?! We'd be happy to accept the pull request!
 
 ### Next steps
 

@@ -12,11 +12,11 @@ _This tutorial is second in a series.  See [this post](/posts/tendermint-socket-
 
 ### Tendermint Core
 
-Now that we've seen how TMSP works, and even played with a few applications using the `tmsp` tool,
+Now that we've seen how TMSP works, and even played with a few applications using the `tmsp-cli` tool,
 let's run an actual Tendermint node.
 
-When running a live application, a Tendermint node takes the place of the `tmsp` tool by sending TMSP requests
-to the application: `append_tx` when transactions are received by the mempool, `commit` when the consensus protocol commits a new block, and so on.
+When running a live application, a Tendermint node takes the place of the `tmsp-cli` tool by sending TMSP requests
+to the application: `append_tx` when transactions are received, `commit` when the consensus protocol commits a new block, and so on.
 
 Installing Tendermint is easy:
 
