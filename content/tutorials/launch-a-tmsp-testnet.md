@@ -71,18 +71,18 @@ Now you can send transactions through the Tendermint RPC server with curl reques
 curl http://localhost:46657/broadcast_tx?tx=\"abcd\"
 ```
 
-For handling responses, we recommend you [install the `jq` tool](https://stedolan.github.io/jq/) to pretty print the JSON
+For handling responses, we recommend you [install the `jsonpp` tool](http://jmhodges.github.io/jsonpp/) to pretty print the JSON
 
 We can see the chain's status at the `/status` end-point:
 
 ```
-curl http://localhost:46657/status |  jq .
+curl http://localhost:46657/status |  jsonpp
 ```
 
 and the `latest_app_hash` in particular:
 
 ```
-curl http://localhost:46657/status |  jq . | grep app_hash
+curl http://localhost:46657/status |  jsonpp | grep app_hash
 ```
 
 visit http://localhost:46657 in your browser to see the other endpoints.
