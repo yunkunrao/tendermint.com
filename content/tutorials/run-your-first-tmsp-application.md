@@ -145,7 +145,7 @@ In another window, start the `tmsp-cli console`:
 > append_tx abc
 > get_hash
 > set_option serial on
-> append_tx def
+> append_tx 0x00
 > append_tx 0x01
 > append_tx 0x02
 > append_tx 0x05
