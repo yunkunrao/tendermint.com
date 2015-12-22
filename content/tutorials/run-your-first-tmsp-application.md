@@ -84,9 +84,9 @@ server.StartListener("tcp://0.0.0.0:46658", example.NewDummyApplication())
 
 Where `example.NewDummyApplication()` has methods for each of the TMSP messages and `server` handles everything else.
 
-See the dummy app in `example/golang/dummy.go`. It simply adds transaction bytes to a merkle tree, hashing when we call `get_hash` and saving when we call `commit`.
+See the dummy app in `example/golang/dummy.go`. It simply adds transaction bytes to a Merkle tree, hashing when we call `get_hash` and saving when we call `commit`.
 
-So when we run `tmsp-cli info`, we open a new connection to the TMSP server, which calls the `Info()` method on the application, which tells us the number of transactions in our merlke tree.
+So when we run `tmsp-cli info`, we open a new connection to the TMSP server, which calls the `Info()` method on the application, which tells us the number of transactions in our Merkle tree.
 
 Now, since every command opens a new connection, we provide the `tmsp-cli console` and `tmsp-cli batch` commands, 
 to allow multiple TMSP messages to be sent over a single connection.
@@ -110,7 +110,7 @@ Similarly, you could put the commands in a file and run `tmsp-cli batch < myfile
 
 Now that we've got the hang of it, let's try another application, the "counter" app.
 
-The counter app doesn't use a merkle tree, it just counts how many times we've sent a transaction,
+The counter app doesn't use a Merkle tree, it just counts how many times we've sent a transaction,
 asked for a hash, or committed the state. The result of `get_hash` is just the number of transactions sent.
 
 This application has two modes: `serial=off` and `serial=on`.
