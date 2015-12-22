@@ -95,9 +95,58 @@ let's deploy a testnet to run our application with four validators.
 For this part of the tutorial, we assume you have an account at digital ocean and are willing to 
 pay to start some new droplets to run your nodes. You can of course stop and destroy them at any time.
 
-To deploy a testnet, use the `mintnet` tool:
+First, install [`docker-machine`](https://docs.docker.com/machine/install-machine/) and get a DigitalOcean account and access token.
+
+Then, install `mintnet`.
 
 ```
 go get github.com/tendermint/mintnet
 ```
 
+To provision machines on DigitalOcean:
+
+```
+mintnet create -- --driver=digitalocean --digitalocean-access-token=YOUR_ACCCESS_TOKEN
+```
+
+By default this creates 4 new machines.  Check the help messages for more info, e.g. `mintnet create --help`.
+
+Next, create the testnet configuration folders.
+
+```
+mintnet init mytest_dir/
+```
+
+This creates directories in `mytest` for the application.
+
+```
+ls mytest_dir/
+  app   # Common configuration directory for your blockchain applicaiton
+  mach1 # Configuration directory for the Tendermint core daemon on machine 1
+  mach2 # Configuration directory for the Tendermint core daemon on machine 2
+  mach3 # Configuration directory for the Tendermint core daemon on machine 3
+  mach4 # Configuration directory for the Tendermint core daemon on machine 4
+```
+
+You can change the files in the app folder to change which TMSP application run on your testnet.
+The default script app/init.sh gets run on each node to install the TMSP application straight from Github.
+
+Now start the testnet service.
+
+```
+mintnet start mytest mytest_dir/
+```
+
+You can stop and remove the application as well.
+
+```
+mintnet stop mytest; mintnet rm mytest
+```
+
+Don't forget to destroy your provisioned machines!
+
+```
+mintnet destroy --machines="mach1,mach2,mach3,mach4"
+```
+
+TODO: Document tutorial on docker-machine ssh mach1, docker ps, etc, or at least link to good Docker tutorials.
