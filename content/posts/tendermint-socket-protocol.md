@@ -16,7 +16,7 @@ Another problem with this approach is that it limits you to the language of the 
 
 If we could only split a blockchain into two so that a standalone "business logic" application speaks to the rest of the blockchain via a language-agnostic socket protocol, we wouldn't be limited in this way.  Lo and behold, TMSP is that socket protocol.  Implementing TMSP is the easiest way to develop a new blockchain app.  You don't need to fork a whole blockchain stack, and you can program your application in any language.
 
-The other half of TMSP is the [Tendermint Core](https://github.com/tendermint/tendermint) program (the "consensus engine").  Tendermint Core speaks to your TMSP application via a socket connection to empower it with the best propoerties of blockchains, including optimal Byzantine fault-tolerant consensus, P2P connectivity, transaction mempool, blockchain storage, and more.  Of course, you're not limited to Tendermint Core.  In the future there will likely be alternative consensu engines to choose from.  You're not locked in to Tendermint Core with TMSP. 
+The other half of TMSP is the [Tendermint Core](https://github.com/tendermint/tendermint) program (the "consensus engine").  Tendermint Core speaks to your TMSP application via a socket connection to empower it with the best propoerties of blockchains, including optimal Byzantine fault-tolerant consensus, P2P connectivity, transaction mempool, blockchain storage, and more.  Of course, you're not limited to Tendermint Core.  In the future there will likely be alternative consensus engines to choose from.  You're not locked in to Tendermint Core with TMSP. 
 
 As an added benefit, designing your blockchain app to support TMSP is a great way to make your application more modular and testable.
 
