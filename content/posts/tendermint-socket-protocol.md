@@ -29,8 +29,7 @@ The application will be responsible for
 
 - Maintaining the UTXO database
 - Validating cryptographic signatures of transactions
-- Preventing transactions from spending non-existent transactions
-Allowing clients to query the UTXO database.
+- Preventing transactions from spending non-existent transactions allowing clients to query the UTXO database.
 
 Tendermint is able to decompose the blockchain design by offering a very simple API between the application layer and consensus layer.
 
