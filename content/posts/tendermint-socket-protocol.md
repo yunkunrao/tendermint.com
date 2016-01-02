@@ -14,22 +14,18 @@ This approach to blockchain development has several problems.  First, creating a
 
 Another problem with this approach is that it limits you to the language of the blockchain stack (or vice versa).  In the case of Ethereum which supports a Turing-complete bytecode virtual-machine, it limits you to languages that compile down to that bytecode; today, those are Serpent and Solidity.
 
-If we could only split a blockchain into two so that a standalone "business logic" application speaks to the rest of the blockchain via a language-agnostic socket protocol, we wouldn't be limited in this way.  Lo and behold, TMSP is that socket protocol.  Implementing TMSP is the easiest way to develop a new blockchain app.  You don't need to fork a whole blockchain stack, and you can program your application in any language.
-
-The other half of TMSP is the [Tendermint Core](https://github.com/tendermint/tendermint) program (the "consensus engine").  Tendermint Core speaks to your TMSP application via a socket connection to empower it with the best propoerties of blockchains, including optimal Byzantine fault-tolerant consensus, P2P connectivity, transaction mempool, blockchain storage, and more.  Of course, you're not limited to Tendermint Core.  In the future there will likely be alternative consensu engines to choose from.  You're not locked in to Tendermint Core with TMSP. 
-
-As an added benefit, designing your blockchain app to support TMSP is a great way to make your application more modular and testable.
+In contrast, our approach is to decouple the consensus engine and P2P layer from the details of the application state of the particular blockchain application.
 
 ### Intro to TMSP
 
-The Tendermint Socket Protocol (TMSP) and Tendermint Core are a set of tools for building blockchain based databases. Blockchains are a system for creating shared multi-master application state. The Tendermint Core approach is to decouple the consensus engine and P2P layer from the details of the application state of the particular blockchain.
+[Tendermint Core](https://github.com/tendermint/tendermint) (the "consensus engine") speaks to the application via a socket protocol called [TMSP](https://github.com/tendermint/tmsp). 
 
 To draw an analogy, lets talk about a well-known cryptocurrency, Bitcoin.  Bitcoin creates a cryptocurrency from a blockchain by having each full node maintain a fully audited Unspent Transaction Output (UTXO) database. If one wanted to create a Bitcoin like system on top of TMSP, Tendermint Core would be responsible for 
 
 - Sharing blocks and transactions between nodes
 - Establishing a canonical/immutable order of transactions (the blockchain)
 
-The Applications developer will be responsible for
+The applications developer will be responsible for
 
 - Maintaining the UTXO database
 - Validating cryptographic signatures of transactions
@@ -43,7 +39,7 @@ The API consists of 4 primary message types from the consensus engine that the a
 The messages are specified here:
 https://github.com/tendermint/tmsp#message-types
 
-The `AppendTx` message type is the work horse of the Application. Each transaction from the blockchain is delivered with this message. The developer needs to validate each transactions received with the `AppendTx` message against the current state, application protocol, and the cryptographic credentials of the transaction. A validated transaction then needs to update the application state — by binding a value into a key values store, or by updating the UTXO database.
+The `AppendTx` message type is the work horse of the application. Each transaction from the blockchain is delivered with this message. The developer needs to validate each transactions received with the `AppendTx` message against the current state, application protocol, and the cryptographic credentials of the transaction. A validated transaction then needs to update the application state — by binding a value into a key values store, or by updating the UTXO database.
 
 The purpose of the `GetHash` message is to allow a cryptographic commitment to the current application state to be placed into the next block header. This has some handy properties. Inconsistencies in updating that state will now appear as blockchain forks which catches a whole class of programming errors. This also simplifies the development of secure lightweight clients.
 
@@ -57,7 +53,7 @@ It's probably evident that applications designers need to very carefully design 
 
 ### A Note on Determinism
 
-The logic for blockchain transaction processing must be deterministic.  If the application logic weren't deterministic, consensus would not be reached among the Tendermint Core replica nodes.  
+The logic for blockchain transaction processing must be deterministic.  If the application logic weren't deterministic, consensus would not be reached among the Tendermint Core replica nodes.
 
 Solidity on Ethereum is a great language of choice for blockchain applications because, among other reasons, it is a completely deterministic programming language.  However, it's also possible to create deterministic applications using existing popular languages like Java, C++, Python, or Go.  Game programmers and blockchain developers are already familiar with creating deterministic programs by avoiding sources of non-determinism such as:
 
