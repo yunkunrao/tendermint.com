@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch-css": "stylus -w --compress -u nib static/styles/screen.styl -o static/styles/",
-    "build-css": "stylus --compress -u nib static/styles/screen.styl -o static/styles/",
+    "watch-css": "stylus -w -u nib static/styles/screen.styl -o static/styles/",
+    "build-css": "stylus -u nib static/styles/screen.styl -o static/styles/",
     "dev-deploy": "rsync -avzru --delete-excluded --partial --progress ./public/ 91.121.116.55:~/www/tendermint.nylira.com/"
   },
   "repository": {
