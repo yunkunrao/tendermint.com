@@ -1037,6 +1037,11 @@ section .content ul {
   #body-home #section-intro p.first {
     font-size: 21.328px;
   }
+  #body-home #section-video iframe {
+    display: block;
+    width: 768px;
+    height: 432px;
+  }
   #body-about ul#ul-team {
     margin: -1em 0 0;
     padding: 0.75em;

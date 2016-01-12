@@ -40,20 +40,19 @@ The application will be responsible for
 
 Tendermint is able to decompose the blockchain design by offering a very simple API between the application process and consensus process.
 
-The API consists of 3 primary message types from the consensus engine that the application process needs to respond to.
+The API consists of 3 primary message types that get delivered from the core to the application.  The application replies with corresponding response messages.
 
-The messages are specified here:
-https://github.com/tendermint/tmsp#message-types
+The messages are specified here: https://github.com/tendermint/tmsp#message-types
 
-The `AppendTx` message is the work horse of the application. Each transaction from the blockchain is delivered with this message. The application needs to validate each transactions received with the `AppendTx` message against the current state, application protocol, and the cryptographic credentials of the transaction. A validated transaction then needs to update the application state — by binding a value into a key values store, or by updating the UTXO database.
+The `AppendTx` message is the work horse of the application.  Each transaction in the blockchain is delivered with this message. The application needs to validate each transactions received with the `AppendTx` message against the current state, application protocol, and the cryptographic credentials of the transaction. A validated transaction then needs to update the application state — by binding a value into a key values store, or by updating the UTXO database.
 
-The `CheckTx` message is for validating transactions.  The Tendermint Core mempool first checks the validity of a transaction with `CheckTx`, and only relays valid transactions to its peers.  Applications may check an incrementing nonce in the transaction and return an error upon `CheckTx` if the nonce is old.
+The `CheckTx` message is similar to `AppendTx`, but it's only for validating transactions.  Tendermint Core's mempool first checks the validity of a transaction with `CheckTx`, and only relays valid transactions to its peers.  Applications may check an incrementing nonce in the transaction and return an error upon `CheckTx` if the nonce is old.
 
-The `GetHash` message is used to compute a cryptographic commitment to the current application state, to be placed into the next block header. This has some handy properties. Inconsistencies in updating that state will now appear as blockchain forks which catches a whole class of programming errors. This also simplifies the development of secure lightweight clients, as Merkle-hash proofs can be verified by checking against the block hash signed by a quorum of validators.
+The `GetHash` message is used to compute a cryptographic commitment to the current application state, to be placed into the next block header. This has some handy properties. Inconsistencies in updating that state will now appear as blockchain forks which catches a whole class of programming errors. This also simplifies the development of secure lightweight clients, as Merkle-hash proofs can be verified by checking against the block hash, and the block hash is signed by a quorum of validators.
 
 There can be multiple TMSP socket connections to an application.  Tendermint Core creates two TMSP connections to the application; one for the validation of transactions when broadcasting in the mempool, and another for the consensus engine to run block proposals.
 
-It's probably evident that applications designers need to very carefully design their message handlers to create a blockchain that does anything useful but this architecture provides a place to start.
+t's probably evident that applications designers need to very carefully design their message handlers to create a blockchain that does anything useful but this architecture provides a place to start.
 
 ### A Note on Determinism
 
