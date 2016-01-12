@@ -31,9 +31,8 @@ COMMANDS:
    info         Get some info about the application
    set_option   Set an option on the application
    append_tx    Append a new tx to application
+   check_tx     Validate a tx
    get_hash     Get application Merkle root hash
-   commit       Commit the application state
-   rollback     Roll back the application state to the latest commit
    help, h      Shows a list of commands or help for one command
    
 GLOBAL OPTIONS:
@@ -44,7 +43,7 @@ GLOBAL OPTIONS:
 
 The `tmsp-cli` tool lets us send TMSP messages to our application, to help build and debug them.
 
-The most important messages are `append_tx`, `get_hash`, `commit`, and `rollback`,
+The most important messages are `append_tx`, `check_tx`, and `get_hash`,
 but there are others for convenience, configuration, and information purposes.
 
 Let's start a dummy application:
@@ -84,7 +83,7 @@ server.StartListener("tcp://0.0.0.0:46658", example.NewDummyApplication())
 
 Where `example.NewDummyApplication()` has methods for each of the TMSP messages and `server` handles everything else.
 
-See the dummy app in `example/golang/dummy.go`. It simply adds transaction bytes to a Merkle tree, hashing when we call `get_hash` and saving when we call `commit`.
+See the dummy app in `example/golang/dummy.go`. It simply adds transaction bytes to a Merkle tree, and hashes when we call `get_hash`.
 
 So when we run `tmsp-cli info`, we open a new connection to the TMSP server, which calls the `Info()` method on the application, which tells us the number of transactions in our Merkle tree.
 
@@ -138,20 +137,32 @@ where the CounterApplication is defined in `example/golang/counter.go`, and impl
 In another window, start the `tmsp-cli console`:
 
 ```
-> echo hello
-> info
-> get_hash
-> info
-> append_tx abc
-> get_hash
 > set_option serial on
+-> serial=on
+
+> check_tx 0x00
+-> RetCodeBadNonce
+
+> check_tx 0xFF
+-> RetCodeOK
+
 > append_tx 0x00
+-> RetCodeBadNonce
+
 > append_tx 0x01
-> append_tx 0x02
-> append_tx 0x05
+-> RetCodeOK
+
+> append_tx 0x01
+-> RetCodeBadNonce
+
+> check_tx 0x01
+-> RetCodeBadNonce
+
+> check_tx 0x02
+-> RetCodeOK
+
 > info
-> commit
-> info
+-> {[hashes:0, txs:2]}
 ```
 
 This is a very simple application, but between `counter` and `dummy`, its easy to see how you can build out arbitrary application states on top of the TMSP.
