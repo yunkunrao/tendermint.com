@@ -433,6 +433,14 @@ section .container:after {
 section .section-header {
   margin: 0 0 1.5em;
 }
+section h2 {
+  line-height: 1.25em;
+  margin: 0 0 16px;
+}
+section .content ul {
+  list-style: disc;
+  padding-left: 2em;
+}
 .section-dark {
   background: #0a335c;
   text-align: center;
@@ -568,6 +576,87 @@ section .section-header {
   border: 0px;
   width: 100px;
 }
+#body-about #section-hero {
+  padding: 3.5em 0 2.5em;
+}
+#body-about #section-about h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+#body-about #section-about p {
+  font-size: 1.8em;
+}
+#body-about #section-about .container {
+  padding: 0;
+}
+#body-about ul#ul-team {
+  zoom: 1;
+  margin: -10px 0 0;
+  padding: 5px;
+}
+#body-about ul#ul-team:before,
+#body-about ul#ul-team:after {
+  content: "";
+  display: table;
+}
+#body-about ul#ul-team:after {
+  clear: both;
+}
+#body-about ul#ul-team li {
+  float: left;
+  margin: 0;
+  width: 50%;
+  padding: 5px;
+  margin: 0 0 11px;
+}
+#body-about ul#ul-team img {
+  width: 100%;
+}
+#body-about ul#ul-team span {
+  display: block;
+}
+#body-about ul#ul-team span.name {
+  font-weight: bold;
+}
+#body-about ul#ul-team span.title {
+  line-height: 1.25em;
+  font-size: 0.9em;
+  color: #47596b;
+}
+#body-home #section-hero {
+  padding: 4.5em 0 3.5em;
+}
+#body-home #section-hero h1 {
+  line-height: 1.2em;
+}
+#body-home #section-hero .text {
+  margin: 0 0 3em;
+}
+#body-home #section-intro {
+  background: #172636;
+  color: #74b2f0;
+  border-bottom: none;
+}
+#body-home #section-intro .divider {
+  width: 100%;
+  border-bottom: 2px solid #2e4c6b;
+}
+#body-home #section-intro p {
+  font-size: 1.2em;
+  text-shadow: #000 0 1px 0;
+  color: #9ac7f4;
+}
+#body-home #section-resources {
+  display: block;
+}
+#body-home #section-resources .content ul {
+  list-style: none;
+  padding: 0;
+}
+#body-home #tendermint-youtube {
+  width: 100vw;
+  height: 56.25vw;
+}
 .site-articles ul.categories {
   zoom: 1;
   margin: 0;
@@ -654,101 +743,6 @@ section .section-header {
 }
 .body-article #section-hero ul.categories li {
   margin-bottom: 0;
-}
-#body-home #section-hero {
-  padding: 4.5em 0 3.5em;
-}
-#body-home #section-hero h1 {
-  line-height: 1.2em;
-}
-#body-home #section-hero .text {
-  margin: 0 0 3em;
-}
-#body-home #section-intro {
-  background: #172636;
-  color: #74b2f0;
-}
-#body-home #section-intro h2 {
-  text-align: left;
-  color: #b3d5f7;
-  margin: 1em 0 0.5em 0;
-  width: auto;
-}
-#body-home #section-intro div.dividor {
-  width: 100%;
-  border-bottom: 2px solid #2e4c6b;
-}
-#body-home #section-intro p.first {
-  font-size: 1.2em;
-  text-shadow: #000 0 1px 0;
-  margin: 0 0 0;
-  padding: 0 0 0;
-  color: #9ac7f4;
-}
-#body-home #section-intro #architecture-container {
-  position: relative;
-}
-#body-home #section-intro #architecture-container #architecture-text p {
-  margin-bottom: 1em;
-}
-#body-home #section-intro #architecture-container #architecture-image {
-  float: right;
-  margin-top: 2em;
-}
-#body-home #section-resources {
-  display: block;
-}
-#body-home #section-resources h2 {
-  text-align: center;
-}
-#body-home #section-about h2 {
-  text-align: center;
-  margin-bottom: 10px;
-}
-#body-home #section-about p {
-  font-size: 1.8em;
-}
-#body-home #section-about .container {
-  padding: 0;
-}
-#body-home ul#ul-team {
-  zoom: 1;
-  margin: -10px 0 0;
-  padding: 5px;
-}
-#body-home ul#ul-team:before,
-#body-home ul#ul-team:after {
-  content: "";
-  display: table;
-}
-#body-home ul#ul-team:after {
-  clear: both;
-}
-#body-home ul#ul-team li {
-  float: left;
-  margin: 0;
-  width: 50%;
-  padding: 5px;
-  margin: 0 0 11px;
-}
-#body-home ul#ul-team img {
-  width: 100%;
-}
-#body-home ul#ul-team span {
-  display: block;
-}
-#body-home ul#ul-team span.name {
-  font-weight: bold;
-}
-#body-home ul#ul-team span.title {
-  line-height: 1.25em;
-  font-size: 0.9em;
-  color: #47596b;
-}
-#tendermint_youtube {
-  margin: 10px 0px;
-  width: 350px;
-  height: 197px;
 }
 @media screen and (min-width: 375px) {
   .site-logo {
