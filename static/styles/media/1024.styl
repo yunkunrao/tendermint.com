@@ -26,6 +26,18 @@ logo-size = 60px
     margin-left 3em
     &:hover
       padding-top logo-size * 0.25
+  ul
+    width auto
+    li
+      border-left 1px solid mcolor
+      width 12em
+      a
+        text-align left
+        padding 0 x*1.5
+        &:hover
+          border-top-color lighten(mcolor,15%)
+          background darken(mcolor,20%)
+          text-decoration none
 
 #site-footer
   .site-logo
@@ -73,6 +85,17 @@ section
       text-align left
       margin-bottom x*2
 
+#section-social-media
+  ul
+    li
+      flex 1 0 25%
+      a
+        padding 0
+        h3
+          font-size 1.25em
+        p
+          font-size 1.125em
+          margin 0 0 1.5em
 
 .section-dark
   form
@@ -178,7 +201,6 @@ Body - Home
         flex 1
         margin 0 0.5em
         .panel-header
-          background lighten(mcolor, 95%)
           padding 0 x*0.75
           h3
             font-size 1.25em

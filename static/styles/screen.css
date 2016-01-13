@@ -351,13 +351,14 @@ button:hover,
   margin: 0 0 1.5em;
 }
 .panel .panel-header {
-  background: #dde6ee;
   padding: 0 0.5em;
+  background: #edf5fd;
   line-height: 2em;
   border-bottom: 1px solid #c8e0f9;
 }
 .panel .panel-header a {
-  color: #222;
+  color: #0e4781;
+  font-weight: 500;
 }
 .panel .panel-body li {
   padding: 0.5em;
@@ -496,10 +497,82 @@ section .content ul {
 #section-hero p {
   margin: 0;
 }
+#section-social-media {
+  border-top: 4px solid #125ca5;
+  border-bottom: none;
+}
+#section-social-media ul {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -o-box-orient: vertical;
+  -webkit-box-lines: single;
+  -moz-box-lines: single;
+  -o-box-lines: single;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  margin: -0.5em -0.5em 1em;
+}
+#section-social-media ul li {
+  text-align: left;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin: 0;
+}
+#section-social-media ul li a {
+  margin: 0.5em;
+  display: block;
+  border: 1px solid #0e4781;
+  padding: 0.55em 0.75em;
+  background: #0b3967;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+#section-social-media ul li a h3 {
+  color: #a3ccf5;
+  font-size: 16px;
+  line-height: 1.5em;
+  font-weight: 500;
+}
+#section-social-media ul li a p {
+  font-size: 16px;
+  line-height: 1.5em;
+  margin: 0;
+}
+#section-social-media ul li a:hover {
+  text-decoration: none;
+  border-color: #125ca5;
+  background: #0c3d6e;
+}
+#section-social-media ul li a:hover h3 {
+  color: #c8e0f9;
+}
 #section-cta {
   text-align: center;
-  border-top: 4px solid #125ca5;
-  padding: 2.5em 0 3.5em;
+  border-top: 1px solid #0e4781;
+  padding: 2.5em 0 3em;
   margin-bottom: -1px;
 }
 .site-logo {
@@ -571,6 +644,8 @@ section .content ul {
 #site-header ul li a {
   display: block;
   text-align: center;
+  border-top: 2px solid #05192e;
+  margin-top: -2px;
 }
 #site-footer {
   border-top: 1px solid #0e4781;
@@ -595,6 +670,11 @@ section .content ul {
   right: 0px;
   border: 0px;
   width: 100px;
+}
+#body-posts #nav-blog a,
+#body-tutorials #nav-tutorials a,
+#body-about #nav-about a {
+  border-top-color: #4799eb;
 }
 #body-about #section-hero {
   padding: 3.5em 0 2.5em;
@@ -697,6 +777,7 @@ section .content ul {
 #body-home #section-resources .content ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 #body-home #section-video iframe {
   display: block;
@@ -752,6 +833,7 @@ section .content ul {
 .body-articles #section-posts article h2 {
   line-height: 1.25em;
   margin: 0 0 0.125em;
+  text-align: left;
 }
 .body-articles #section-posts article p {
   margin: 0 0 0.5em;
@@ -930,6 +1012,36 @@ section .content ul {
   }
   a.article-prev-next .title {
     font-size: 1.25em;
+  }
+  #section-social-media ul {
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -o-box-orient: horizontal;
+    -webkit-box-lines: multiple;
+    -moz-box-lines: multiple;
+    -o-box-lines: multiple;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+  }
+  #section-social-media ul li {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -o-box-flex: 1;
+    box-flex: 1;
+    -webkit-flex: 1 0 50%;
+    -ms-flex: 1 0 50%;
+    flex: 1 0 50%;
+  }
+  #section-social-media ul li a {
+    padding: 0;
+  }
+  #section-social-media ul li a h3 {
+    border-bottom: 1px solid #0e4781;
+    padding: 0.75em 1em;
+  }
+  #section-social-media ul li a p {
+    padding: 0.75em 1em;
   }
   #body-home #section-hero h1,
   #body-about #section-hero h1 {
@@ -1128,6 +1240,22 @@ section .content ul {
   #site-header .site-logo:hover {
     padding-top: 15px;
   }
+  #site-header ul {
+    width: auto;
+  }
+  #site-header ul li {
+    border-left: 1px solid #0a335c;
+    width: 12em;
+  }
+  #site-header ul li a {
+    text-align: left;
+    padding: 0 24px;
+  }
+  #site-header ul li a:hover {
+    border-top-color: #105293;
+    background: #082949;
+    text-decoration: none;
+  }
   #site-footer .site-logo {
     position: static;
     float: left;
@@ -1195,6 +1323,25 @@ section .content ul {
     width: auto;
     text-align: left;
     margin-bottom: 32px;
+  }
+  #section-social-media ul li {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -o-box-flex: 1;
+    box-flex: 1;
+    -webkit-flex: 1 0 25%;
+    -ms-flex: 1 0 25%;
+    flex: 1 0 25%;
+  }
+  #section-social-media ul li a {
+    padding: 0;
+  }
+  #section-social-media ul li a h3 {
+    font-size: 1.25em;
+  }
+  #section-social-media ul li a p {
+    font-size: 1.125em;
+    margin: 0 0 1.5em;
   }
   .section-dark form {
     width: 320px;
@@ -1353,7 +1500,6 @@ section .content ul {
     margin: 0 0.5em;
   }
   #body-home #section-resources .content .panel .panel-header {
-    background: #edf5fd;
     padding: 0 12px;
   }
   #body-home #section-resources .content .panel .panel-header h3 {
