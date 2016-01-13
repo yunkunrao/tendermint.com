@@ -16,7 +16,7 @@ Now that we've seen how TMSP works, and even played with a few applications usin
 let's run an actual Tendermint node.
 
 When running a live application, a Tendermint node takes the place of the `tmsp-cli` tool by sending TMSP requests
-to the application: `append_tx` when transactions are received, `commit` when the consensus protocol commits a new block, and so on.
+to the application: many `append_tx` msgs to run transactions followed by a `get_hash` to get the application Merkle root hash, and so on.
 
 Installing Tendermint is easy:
 

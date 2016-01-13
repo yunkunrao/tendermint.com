@@ -21,7 +21,7 @@ This approach to blockchain development has several problems.  First, creating a
 
 Another problem with this approach is that it limits you to the language of the blockchain stack (or vice versa).  In the case of Ethereum which supports a Turing-complete bytecode virtual-machine, it limits you to languages that compile down to that bytecode; today, those are Serpent and Solidity.
 
-In contrast, our approach is to decouple the consensus engine and P2P layer from the details of the application state of the particular blockchain application.
+In contrast, our approach is to decouple the consensus engine and P2P layers from the details of the application state of the particular blockchain application.
 
 ### Intro to TMSP
 
@@ -38,24 +38,21 @@ The application will be responsible for
 - Validating cryptographic signatures of transactions
 - Preventing transactions from spending non-existent transactions allowing clients to query the UTXO database.
 
-Tendermint is able to decompose the blockchain design by offering a very simple API between the application layer and consensus layer.
+Tendermint is able to decompose the blockchain design by offering a very simple API between the application process and consensus process.
 
-The API consists of 4 primary message types from the consensus engine that the application layer needs to respond to.
+The API consists of 3 primary message types that get delivered from the core to the application.  The application replies with corresponding response messages.
 
-The messages are specified here:
-https://github.com/tendermint/tmsp#message-types
+The messages are specified here: https://github.com/tendermint/tmsp#message-types
 
-The `AppendTx` message type is the work horse of the application. Each transaction from the blockchain is delivered with this message. The application needs to validate each transactions received with the `AppendTx` message against the current state, application protocol, and the cryptographic credentials of the transaction. A validated transaction then needs to update the application state — by binding a value into a key values store, or by updating the UTXO database.
+The `AppendTx` message is the work horse of the application.  Each transaction in the blockchain is delivered with this message. The application needs to validate each transactions received with the `AppendTx` message against the current state, application protocol, and the cryptographic credentials of the transaction. A validated transaction then needs to update the application state — by binding a value into a key values store, or by updating the UTXO database.
 
-The purpose of the `GetHash` message is to allow a cryptographic commitment to the current application state to be placed into the next block header. This has some handy properties. Inconsistencies in updating that state will now appear as blockchain forks which catches a whole class of programming errors. This also simplifies the development of secure lightweight clients.
+The `CheckTx` message is similar to `AppendTx`, but it's only for validating transactions.  Tendermint Core's mempool first checks the validity of a transaction with `CheckTx`, and only relays valid transactions to its peers.  Applications may check an incrementing nonce in the transaction and return an error upon `CheckTx` if the nonce is old.
 
-Finally, in order to recover from faulty proposers (e.g. a malicious validator that proposes two conflicting blocks), the application must be able to roll back transactions.  The `Commit` message tells the application to create a checkpoint, and the `Rollback` message to unwind the state back to that checkpoint.
+The `GetHash` message is used to compute a cryptographic commitment to the current application state, to be placed into the next block header. This has some handy properties. Inconsistencies in updating that state will now appear as blockchain forks which catches a whole class of programming errors. This also simplifies the development of secure lightweight clients, as Merkle-hash proofs can be verified by checking against the block hash, and the block hash is signed by a quorum of validators.
 
-There can be multiple TMSP socket connections to an application.  Each connection has an isolated “view” of the application state, but `Commit`/`Rollback` work across connections. Applications can store the application state in an immutable data structure (such as Tendermint’s Go-Merkle library) to make this easy to develop.
+There can be multiple TMSP socket connections to an application.  Tendermint Core creates two TMSP connections to the application; one for the validation of transactions when broadcasting in the mempool, and another for the consensus engine to run block proposals.
 
-NOTE: Tendermint Core creates two TMSP connections to the application; one for the validation of transactions when broadcasting in the mempool layer, and another for the consensus engine to run block proposals.  A commit on one connection followed by a rollback on the other syncs both views.
-
-It's probably evident that applications designers need to very carefully design their message handlers to create a blockchain that does anything useful but this architecture provides a place to start.
+t's probably evident that applications designers need to very carefully design their message handlers to create a blockchain that does anything useful but this architecture provides a place to start.
 
 ### A Note on Determinism
 
