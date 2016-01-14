@@ -11,6 +11,7 @@ if [ ! -d "public" ]; then
   git submodule update --init
 fi
 cd public
+rm -rf public/*
 git fetch origin master
 git reset --hard origin/master
 cd ..
