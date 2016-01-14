@@ -13,6 +13,7 @@ fi
 cd public
 rm -rf public/*
 git fetch origin master
+git checkout master
 git reset --hard origin/master
 cd ..
 
