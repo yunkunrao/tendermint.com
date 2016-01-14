@@ -24,6 +24,7 @@ git fetch -a origin
 git branch -D backup || true
 git checkout -b backup
 git checkout sources
+git merge origin/sources
 echo "DONE"
 
 
