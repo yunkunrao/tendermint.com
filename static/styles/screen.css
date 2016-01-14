@@ -459,6 +459,9 @@ section .content ul {
 .section-thirds .column h2 {
   padding: 24px 0 0;
 }
+.section-thirds .column h2 .long {
+  display: none;
+}
 .section-thirds .column p {
   text-align: center;
 }
@@ -1519,5 +1522,13 @@ section .content ul {
   }
   a.footer-large-button {
     margin: 4em 0 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section-thirds .column h2 .short {
+    display: none;
+  }
+  .section-thirds .column h2 .long {
+    display: block;
   }
 }
