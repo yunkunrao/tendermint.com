@@ -36,7 +36,7 @@ msg="rebuilding site `date`"
 if [ $# -eq 1 ]
   then msg="$1"
 fi
-git commit -m "$msg" || true
+git commit -m "$msg" || true # Ignore message about public folder
 git push origin sources
 
 
