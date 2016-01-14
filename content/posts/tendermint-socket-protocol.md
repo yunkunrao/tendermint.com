@@ -52,7 +52,7 @@ The `GetHash` message is used to compute a cryptographic commitment to the curre
 
 There can be multiple TMSP socket connections to an application.  Tendermint Core creates two TMSP connections to the application; one for the validation of transactions when broadcasting in the mempool, and another for the consensus engine to run block proposals.
 
-t's probably evident that applications designers need to very carefully design their message handlers to create a blockchain that does anything useful but this architecture provides a place to start.
+It's probably evident that applications designers need to very carefully design their message handlers to create a blockchain that does anything useful but this architecture provides a place to start.
 
 ### A Note on Determinism
 
