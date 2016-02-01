@@ -1,5 +1,5 @@
 ---
-title: "Launch a TMSP testnet"
+title: "Launch a TMSP testnet using mintnet"
 description: "This tutorial shows how to launch a TMSP blockchain application using the mintnet tool"
 date: "2015-12-16"
 categories: 
