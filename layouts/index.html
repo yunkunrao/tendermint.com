@@ -9,24 +9,7 @@
     <meta content="on" http-equiv="cleartype">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!--favicons-->
-    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/manifesjson">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
+    {{ template "chrome/favicons.html" . }}
 
     <link rel="stylesheet" type="text/css" media="screen" href="styles/screen.css">
     <!--[if lt IE 9]>
@@ -45,28 +28,12 @@
     <div class="container">
       <div class="text">
         <h1>Tendermint</h1>
-        <p>Build, Deploy, Manage</p>
+        <div id="tagline">Build, Deploy, Manage</p>
+        <p>The <strong>Tendermint Blockchain Platform</strong> removes all of the complexity of blockchain application development, deployment, and management - allowing application developers to focus on business logic.
       </div>
       {{ template "chrome/email-signup.html" . }}
     </div>
     </section>
-
-    <section id="section-intro">
-      <div class="container">
-        <p>The <strong>Tendermint Blockchain Platform</strong> removes all of the complexity of blockchain application development, deployment, and management - allowing application developers to focus on business logic.
-      </div>
-    </section>
-
-    <section id="section-video" class="section-borderless"><div class="container">
-      <div class="section-header">
-        <h2>Watch the Tendermint interview</h2>
-      </div>
-      <div class="content">
-        <center>
-        <iframe id="tendermint-youtube" src="https://www.youtube.com/embed/EfFVh1DIKds" frameborder="0" allowfullscreen></iframe>
-        </center>
-      </div>
-    </div></section>
 
     <section class="section-thirds section-borderless"><div class="container">
       <div class="content">
@@ -162,47 +129,55 @@
           </div>
         </div>
 
-      <div class="panel">
-        <div class="panel-header">
-          <h3><a href="https://github.com/tendermint/tendermint/" class="block">GitHub</a></h3>
-        </div>
-        <div class="panel-body">
-          <ul>
-            <li>
-              <h4><a href="http://github.com/tendermint/tendermint/wiki">Tendermint Spec</a></h4>
-              <p>Get an overview of Tendermint&rsquo;s structure, algorithms, and roadmap.</p>
-            </li>
-            <li>
-              <h4><a href="https://github.com/tendermint/tendermint">Tendermint Core</a></h4>
-              <p>Tendermint Core</p>
-            </li>
-            <li>
-              <h4><a href="https://github.com/tendermint/tmsp">TMSP</a></h4>
-              <p>Tendermint socket protocol for blockchain applications</p>
-            </li>
-            <li>
-              <h4><a href="https://github.com/tendermint/mintnet">Mintnet</a></h4>
-              <p>Developer tool for deploying a Tendermint testnet</p>
-            </li>
-            <li>
-              <h4><a href="https://github.com/tendermint/go-p2p">Go-P2P</a></h4>
-              <p>Extensible P2P networking stack</p>
-            </li>
-            <li>
-              <h4><a href="https://github.com/tendermint/go-merkle">Go-Merkle</a></h4>
-              <p>Merkle hash trees for blocks and application state</p>
-            </li>
-            <li>
-              <h4><a href="https://github.com/tendermint/go-wire">Go-Wire</a></h4>
-              <p>Binary and JSON encoding/decoding</p>
-            </li>
-          </ul>
-        </div>
+        <div class="panel">
+          <div class="panel-header">
+            <h3><a href="https://github.com/tendermint/tendermint/" class="block">GitHub</a></h3>
+          </div>
+          <div class="panel-body">
+            <ul>
+              <li>
+                <h4><a href="http://github.com/tendermint/tendermint/wiki">Tendermint Spec</a></h4>
+                <p>Get an overview of Tendermint&rsquo;s structure, algorithms, and roadmap.</p>
+              </li>
+              <li>
+                <h4><a href="https://github.com/tendermint/tendermint">Tendermint Core</a></h4>
+                <p>Tendermint Core</p>
+              </li>
+              <li>
+                <h4><a href="https://github.com/tendermint/tmsp">TMSP</a></h4>
+                <p>Tendermint socket protocol for blockchain applications</p>
+              </li>
+              <li>
+                <h4><a href="https://github.com/tendermint/mintnet">Mintnet</a></h4>
+                <p>Developer tool for deploying a Tendermint testnet</p>
+              </li>
+              <li>
+                <h4><a href="https://github.com/tendermint/go-p2p">Go-P2P</a></h4>
+                <p>Extensible P2P networking stack</p>
+              </li>
+              <li>
+                <h4><a href="https://github.com/tendermint/go-merkle">Go-Merkle</a></h4>
+                <p>Merkle hash trees for blocks and application state</p>
+              </li>
+              <li>
+                <h4><a href="https://github.com/tendermint/go-wire">Go-Wire</a></h4>
+                <p>Binary and JSON encoding/decoding</p>
+              </li>
+            </ul>
+          </div>
+        </div><!--panel-->
+      </div><!--content-->
+    </div><!--container--></section>
+
+    <section id="section-video" class="section-borderless"><div class="container">
+      <div class="section-header">
+        <h2>Watch the Tendermint interview</h2>
       </div>
-
-  </div><!--content-->
-
-  </div><!--container-->
-</section>
+      <div class="content">
+        <center>
+        <iframe id="tendermint-youtube" src="https://www.youtube.com/embed/EfFVh1DIKds" frameborder="0" allowfullscreen></iframe>
+        </center>
+      </div>
+    </div></section>
 
 {{ template "chrome/site-footer.html" }}

@@ -112,7 +112,7 @@ em {
 }
 a {
   text-decoration: none;
-  color: #1773cf;
+  color: #0073e6;
 }
 .container a:hover {
   text-decoration: underline;
@@ -142,10 +142,8 @@ h1 {
   font-weight: 500;
 }
 h2 {
-  font-weight: bold;
-  font-size: 1.5em;
-  color: #0a335c;
-  font-weight: 500;
+  font-size: 1.25em;
+  color: #036;
 }
 h3 {
   font-weight: bold;
@@ -207,10 +205,10 @@ p code:after {
   padding-top: 1em;
   font-weight: bold;
   width: 100%;
-  border-top: 1px solid #c8e0f9;
+  border-top: 1px solid #c2e0ff;
 }
 .article-body h3 {
-  color: #0a335c;
+  color: #036;
   font-size: 1.25em;
   line-height: 1.25em;
   margin: 2em 0 0.5em;
@@ -234,12 +232,12 @@ p code:after {
 }
 .article-body table th {
   font-weight: bold;
-  background: #e8f2fc;
-  color: #0a335c;
+  background: #e5f2ff;
+  color: #036;
 }
 .article-body table td,
 .article-body table th {
-  border: 1px solid #c8e0f9;
+  border: 1px solid #c2e0ff;
   padding: 0.25em 0.5em;
 }
 .article-body blockquote {
@@ -266,14 +264,14 @@ a.footer-large-button {
   line-height: 2em;
   font-size: 1.25em;
   text-align: center;
-  border: 2px solid #c8e0f9;
+  border: 2px solid #c2e0ff;
   margin: 1.5em 0;
   cursor: pointer;
 }
 a.footer-large-button:hover {
   text-decoration: none;
-  background: #f7fafe;
-  border-color: #8bbef2;
+  background: #f6faff;
+  border-color: #7fbeff;
 }
 body {
   background: #fcfdfd;
@@ -347,22 +345,22 @@ button:hover,
   border-color: #007a29;
 }
 .panel {
-  border: 1px solid #c8e0f9;
+  border: 1px solid #c2e0ff;
   margin: 0 0 1.5em;
 }
 .panel .panel-header {
   padding: 0 0.5em;
-  background: #edf5fd;
+  background: #ebf5ff;
   line-height: 2em;
-  border-bottom: 1px solid #c8e0f9;
+  border-bottom: 1px solid #c2e0ff;
 }
 .panel .panel-header a {
-  color: #0e4781;
+  color: #00478f;
   font-weight: 500;
 }
 .panel .panel-body li {
   padding: 0.5em;
-  border-bottom: 1px solid #c8e0f9;
+  border-bottom: 1px solid #c2e0ff;
   margin: 0;
 }
 .panel .panel-body li:last-of-type {
@@ -376,7 +374,7 @@ button:hover,
 }
 a.article-prev-next {
   display: block;
-  border: 1px solid #c8e0f9;
+  border: 1px solid #c2e0ff;
   margin: 0 0 10px;
   display: table;
   width: 100%;
@@ -387,7 +385,7 @@ a.article-prev-next .arrow {
   width: 32px;
   text-align: center;
   font-size: 32px;
-  border-right: 1px solid #c8e0f9;
+  border-right: 1px solid #c2e0ff;
   margin-right: 16px;
   vertical-align: middle;
 }
@@ -407,16 +405,16 @@ a.article-prev-next:hover {
   text-decoration: none;
 }
 a.article-prev-next:hover .arrow {
-  background: #c8e0f9;
+  background: #c2e0ff;
 }
 #article-next .arrow {
-  border-left: 1px solid #c8e0f9;
+  border-left: 1px solid #c2e0ff;
   border-right: none;
   margin-right: 0;
   margin-left: 16px;
 }
 section {
-  border-bottom: 1px solid #c8e0f9;
+  border-bottom: 1px solid #c2e0ff;
   padding: 1.5em 0 0;
 }
 section .container {
@@ -450,7 +448,7 @@ section .content ul {
   padding: 0;
 }
 .section-thirds .column {
-  border-bottom: 1px solid #c8e0f9;
+  border-bottom: 1px solid #c2e0ff;
   padding: 0 10px;
 }
 .section-thirds .column:last-of-type {
@@ -466,13 +464,13 @@ section .content ul {
   text-align: center;
 }
 .section-dark {
-  background: #0a335c;
+  background: #036;
   text-align: center;
 }
 .section-dark h1,
 .section-dark h2 {
-  color: #d6e5f5;
-  text-shadow: #1466b8 0 1px 0;
+  color: #fff;
+  text-shadow: #06c 0 1px 0;
   line-height: 1.25em;
 }
 .section-dark form {
@@ -495,13 +493,13 @@ section .content ul {
   font-weight: 200;
 }
 #section-hero {
-  border-bottom: 4px solid #0e4781;
+  border-bottom: 4px solid #00478f;
 }
 #section-hero p {
   margin: 0;
 }
 #section-social-media {
-  border-top: 4px solid #125ca5;
+  border-top: 4px solid #005cb8;
   border-bottom: none;
 }
 #section-social-media ul {
@@ -542,9 +540,9 @@ section .content ul {
 #section-social-media ul li a {
   margin: 0.5em;
   display: block;
-  border: 1px solid #0e4781;
+  border: 1px solid #00478f;
   padding: 0.55em 0.75em;
-  background: #0b3967;
+  background: #003972;
   -webkit-box-flex: 1;
   -moz-box-flex: 1;
   -o-box-flex: 1;
@@ -554,7 +552,7 @@ section .content ul {
   flex: 1;
 }
 #section-social-media ul li a h3 {
-  color: #a3ccf5;
+  color: #9cf;
   font-size: 16px;
   line-height: 1.5em;
   font-weight: 500;
@@ -566,15 +564,15 @@ section .content ul {
 }
 #section-social-media ul li a:hover {
   text-decoration: none;
-  border-color: #125ca5;
-  background: #0c3d6e;
+  border-color: #005cb8;
+  background: #003d7a;
 }
 #section-social-media ul li a:hover h3 {
-  color: #c8e0f9;
+  color: #c2e0ff;
 }
 #section-cta {
   text-align: center;
-  border-top: 1px solid #0e4781;
+  border-top: 1px solid #00478f;
   padding: 2.5em 0 3em;
   margin-bottom: -1px;
 }
@@ -594,11 +592,11 @@ section .content ul {
 .site-bookend {
   zoom: 1;
   position: relative;
-  background: #082645;
+  background: #00264d;
   height: 39px;
   line-height: 3em;
   font-size: 12px;
-  color: #1773cf;
+  color: #0073e6;
 }
 .site-bookend:before,
 .site-bookend:after {
@@ -609,14 +607,14 @@ section .content ul {
   clear: both;
 }
 .site-bookend a {
-  color: #75b2f0;
+  color: #66b2ff;
 }
 .site-bookend a:hover {
   text-decoration: underline;
 }
 #site-header {
-  border-top: 2px solid #05192e;
-  border-bottom: 1px solid #0e4781;
+  border-top: 2px solid #001933;
+  border-bottom: 1px solid #00478f;
 }
 #site-header .site-logo {
   top: -2px;
@@ -647,21 +645,21 @@ section .content ul {
 #site-header ul li a {
   display: block;
   text-align: center;
-  border-top: 2px solid #05192e;
+  border-top: 2px solid #001933;
   margin-top: -2px;
 }
 #site-footer {
-  border-top: 1px solid #0e4781;
-  border-bottom: 2px solid #05192e;
+  border-top: 1px solid #00478f;
+  border-bottom: 2px solid #001933;
 }
 #site-footer .site-logo {
   bottom: -2px;
-  background: #1670ca;
-  border-bottom: 4px solid #105293;
+  background: #0070e0;
+  border-bottom: 4px solid #0052a3;
 }
 #site-footer .site-logo:hover {
-  background: #125ca5;
-  border-color: #0a3057;
+  background: #005cb8;
+  border-color: #003061;
 }
 #site-footer p {
   padding: 0 1em;
@@ -677,7 +675,7 @@ section .content ul {
 #body-posts #nav-blog a,
 #body-tutorials #nav-tutorials a,
 #body-about #nav-about a {
-  border-top-color: #4799eb;
+  border-top-color: #39f;
 }
 #body-about #section-hero {
   padding: 3.5em 0 2.5em;
@@ -754,20 +752,6 @@ section .content ul {
 #body-home #section-hero .text {
   margin: 0 0 3em;
 }
-#body-home #section-intro {
-  background: #172636;
-  color: #74b2f0;
-  border-bottom: none;
-}
-#body-home #section-intro .divider {
-  width: 100%;
-  border-bottom: 2px solid #2e4c6b;
-}
-#body-home #section-intro p {
-  font-size: 1.2em;
-  text-shadow: #000 0 1px 0;
-  color: #9ac7f4;
-}
 #body-home #section-architecture {
   text-align: center;
 }
@@ -807,7 +791,7 @@ section .content ul {
 .site-articles ul.categories li a {
   display: block;
   color: #337fcc;
-  background: #d1e5fa;
+  background: #cce5ff;
   padding: 0 0.5em;
   line-height: 2em;
   font-size: 0.75em;
@@ -815,7 +799,7 @@ section .content ul {
 }
 .body-articles #section-hero {
   padding: 3em 0 2em;
-  border-bottom: 8px solid #0e4781;
+  border-bottom: 8px solid #00478f;
 }
 .body-articles #section-hero h1 {
   text-align: center;
@@ -858,14 +842,14 @@ section .content ul {
 }
 .body-article #section-hero {
   padding: 2em 0 1.5em;
-  border-bottom: 1px solid #c8e0f9;
+  border-bottom: 1px solid #c2e0ff;
 }
 .body-article #section-hero h1 {
   font-size: 2em;
-  color: #222;
+  color: #333;
   text-shadow: none;
   font-weight: bold;
-  color: #0a335c;
+  color: #036;
 }
 .body-article #section-hero p {
   font-size: 1em;
@@ -1040,15 +1024,11 @@ section .content ul {
     padding: 0;
   }
   #section-social-media ul li a h3 {
-    border-bottom: 1px solid #0e4781;
+    border-bottom: 1px solid #00478f;
     padding: 0.75em 1em;
   }
   #section-social-media ul li a p {
     padding: 0.75em 1em;
-  }
-  #body-home #section-hero h1,
-  #body-about #section-hero h1 {
-    font-weight: bold;
   }
   #body-home #section-hero input,
   #body-home #section-hero button {
@@ -1188,7 +1168,7 @@ section .content ul {
     max-width: 60em;
   }
   .body-articles #section-posts article {
-    border: 1px solid #c8e0f9;
+    border: 1px solid #c2e0ff;
     padding: 1em;
     margin: 0 auto 1.5em;
   }
@@ -1247,7 +1227,7 @@ section .content ul {
     width: auto;
   }
   #site-header ul li {
-    border-left: 1px solid #0a335c;
+    border-left: 1px solid #036;
     width: 12em;
   }
   #site-header ul li a {
@@ -1255,8 +1235,8 @@ section .content ul {
     padding: 0 24px;
   }
   #site-header ul li a:hover {
-    border-top-color: #105293;
-    background: #082949;
+    border-top-color: #0052a3;
+    background: #002952;
     text-decoration: none;
   }
   #site-footer .site-logo {
@@ -1274,7 +1254,6 @@ section .content ul {
   }
   section h2 {
     margin-bottom: 48px;
-    font-size: 2em;
   }
   section .container {
     width: 100%;
@@ -1298,7 +1277,7 @@ section .content ul {
     flex: 1;
     border-bottom: none;
     padding: 1.5em 2em 1.5em;
-    border-right: 1px solid #c8e0f9;
+    border-right: 1px solid #c2e0ff;
     display: -webkit-box;
     display: -moz-box;
     display: -webkit-flex;
@@ -1349,8 +1328,8 @@ section .content ul {
   .section-dark form {
     width: 320px;
     padding: 1.5em 1.5em 0.5em;
-    background: #0d4073;
-    border-bottom: 4px solid #082645;
+    background: #004080;
+    border-bottom: 4px solid #00264d;
   }
   .section-dark form input,
   .section-dark form button {
@@ -1365,7 +1344,6 @@ section .content ul {
     margin-right: 2%;
   }
   #body-home #section-hero {
-    text-align: left;
     padding: 6em 0 3em;
     zoom: 1;
   }
@@ -1380,10 +1358,6 @@ section .content ul {
   #body-home #section-hero .container {
     padding: 0 3em;
   }
-  #body-home #section-hero .text {
-    float: left;
-    width: 50%;
-  }
   #body-home #section-hero h1 {
     font-size: 5em;
   }
@@ -1391,11 +1365,6 @@ section .content ul {
     font-size: 3em;
     display: inline;
     line-height: 1.125em;
-  }
-  #body-home #section-hero form {
-    margin-top: 1em;
-    margin-right: 4em;
-    float: right;
   }
   #body-home #section-intro .container {
     padding: 0 3em;
@@ -1441,7 +1410,7 @@ section .content ul {
     padding: 0 1em 1.5em;
   }
   #body-home #section-architecture .content .anchor-img img {
-    height: 360px;
+    height: 224px;
     width: auto;
   }
   #body-home #section-architecture .content .text {
@@ -1452,12 +1421,11 @@ section .content ul {
     -webkit-flex: 2;
     -ms-flex: 2;
     flex: 2;
-    border-left: 1px dotted #c8e0f9;
+    border-left: 1px dotted #c2e0ff;
     padding: 0 2em 1.5em;
   }
   #body-home #section-architecture .content .text p {
     text-align: left;
-    font-size: 1.25em;
   }
   #body-home #section-resources {
     zoom: 1;
