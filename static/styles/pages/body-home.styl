@@ -1,12 +1,36 @@
 #body-home
-  #section-hero
-    padding 4.5em 0 3.5em
+  #section-hero-home
+    background mcolor
+    background linear-gradient(top, lighten(mcolor,5%), darken(mcolor,5%))
+    padding 4em 0 3em
+    text-align center
+
+    .container
+      padding 0 1.5em
+      display flex
+      flex-flow column
+      align-items center
 
     h1
-      line-height 1.2em
+      color lighten(mcolor,90%)
+      font-weight 500
+      line-height 1em
+      margin 0 0 x*0.5
+      text-shadow darken(mcolor,50%) 0 2px 0
 
-    .text
-      margin 0 0 3em
+    #tagline
+      color lighten(mcolor,80%)
+      span.slash
+        color lighten(mcolor,20%)
+        font-weight 200
+
+    #intro
+      max-width 30*x
+      width 100%
+
+      color lighten(mcolor,50%)
+      font-size 1.25em
+      font-weight 200
 
   #section-architecture
     text-align center
