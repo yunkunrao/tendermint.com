@@ -98,6 +98,8 @@ section
           margin 0 0 1.5em
 
 .section-dark
+  h2
+    margin 0 0 x
   form
     width 320px
     padding 1.5em 1.5em 0.5em
@@ -181,20 +183,26 @@ Body - Home
         flex 1
         margin 0 0.5em
         .panel-header
-          padding 0 x*0.75
+          padding 0 1em
+          background transparent
           h3
             font-size 1.25em
-            font-weight normal
-            line-height 3em
+            line-height 2.5em
+            a
+              color txt
+              font-weight normal
         ul
           li
-            padding-left 0.75em
+            padding 0.75em 1em
 
 /*----------------------------------------------------------------------
 Body - About
 ----------------------------------------------------------------------*/
 
 #body-about
+  #section-hero
+    padding-top 4em
+    padding-bottom 3em
   ul#ul-team
     margin 0
 
