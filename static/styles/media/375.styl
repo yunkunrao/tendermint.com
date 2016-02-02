@@ -51,31 +51,35 @@ section
   margin 0 0 12px
 
 /*----------------------------------------------------------------------
-Body
-----------------------------------------------------------------------*/
-
-#body-home
-#body-about
-  #section-hero
-    h1
-      font-size 3.5em
-    p
-      font-size 1.6em
-
-/*----------------------------------------------------------------------
 Body - Home
 ----------------------------------------------------------------------*/
 
 #body-home
-  #section-hero
-    input, button
-      margin-bottom 0.8em
+  section#section-hero-home
+
+    h1
+      padding-top 0
+      padding-bottom x*0.5
+
+    p#tagline, p#intro
+      line-height 1.5em
+      margin 0 0 1.5em
+
+    .social-media
+      margin-top x*2
+      a
+        font-size 1.25em
 
 /*----------------------------------------------------------------------
 Body - About
 ----------------------------------------------------------------------*/
 
 #body-about
+  #section-hero
+    h1
+      font-size 3.5em
+    p
+      font-size 1.6em
   ul#ul-team
     margin -12px 0 0
     padding 6px

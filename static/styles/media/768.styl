@@ -31,13 +31,14 @@ section
     flex-flow column
 
   #mc-embedded-subscribe-form
-    margin 0 auto
-    max-width 40*x
-    display flex
-    padding 0.5em 0.25em 0.25em
+    max-width 24*x
     .input-group
-      flex 1
-      margin 0 0.25em
+      input, button
+        font-size x*1.5
+        height x*3
+        line-height x*3 - 2px
+        vertical-align top
+        width 100%
 
 .container
   padding 0 1.5em
@@ -63,9 +64,25 @@ Body - Home
 ----------------------------------------------------------------------*/
 
 #body-home
-  #section-hero-home
-    .text
-      max-width 30*x
+  section#section-hero-home
+    h1
+      font-size 4em
+
+    #tagline
+      font-size 1.5em
+
+    #intro
+      max-width 21em
+      font-size 2em
+
+    .social-media
+      margin-top x*4
+      a
+        font-size 2em
+
+    #home-arrow-down
+      font-size x*2
+      line-height x*3
 
 /*----------------------------------------------------------------------
 Body - About

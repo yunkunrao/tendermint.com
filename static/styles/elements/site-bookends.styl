@@ -29,11 +29,17 @@ logo-size = 32px
 #site-header
   border-top 2px solid hsl(mhue,msat,10%)
   border-bottom 1px solid hsl(mhue,msat,mlit + 8%)
+  position fixed
+  top 0
+  left 0
+  z-index 100
+  width 100%
+  box-shadow hsla(0,0,0,0.25) 0 1px 2px
 
   .site-logo
     top -2px
     border-bottom 4px solid darken(acolor,20%)
-    box-shadow darken(mcolor,25%) 0 1px 3px
+    box-shadow hsla(0,0,0,0.25) 0 1px 2px
     &:hover
       background darken(acolor,10%)
       border-color darken(acolor,40%)

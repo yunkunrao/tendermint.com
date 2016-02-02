@@ -1,23 +1,72 @@
 #body-home
-  #section-hero-home
+  section#section-hero-home
     background mcolor
     background linear-gradient(top, lighten(mcolor,5%), darken(mcolor,5%))
-    padding 4em 0 3em
     text-align center
-    //width 100vw
-    //height 100vh
+    width 100vw
+    height 100vh
+    border-bottom none
+    position relative
 
     .container
+      width 100vw
+      height 100vh
+      display flex
+      align-items center
+      justify-content center
       padding 0 1.5em
 
     h1
-      margin 0 0 x*0.5
+      margin 0 0 x*0.25
 
-    p#tagline
-      color lighten(mcolor,80%)
+    #tagline
+    #intro
+      margin 0 0 1em
+
+    #tagline
+      color lighten(mcolor,70%)
+      font-size 1em
+      font-weight bold
       span.slash
         color lighten(mcolor,20%)
         font-weight 200
+
+    #intro
+      line-height 1.25em
+
+    .social-media
+      display flex
+      margin 0 auto
+      margin-top 1.5em
+      a
+        margin x*0.25
+        display block
+
+        background darken(mcolor,20%)
+
+        font-size 1em
+        width 2em
+        line-height 2em
+        color lighten(mcolor,60%)
+
+    #home-arrow-down
+      position absolute
+      bottom 0
+      left 50%
+
+      background darken(mcolor,20%)
+      line-height x*1.5
+      width x*8
+      margin-left x*-4
+
+      color lighten(mcolor,60%)
+      font-size x*1.5
+
+    .social-media a, #home-arrow-down
+      transition 0.2s ease all
+      &:hover
+        background darken(mcolor,40%)
+        color lighten(mcolor,80%)
 
   #section-architecture
     a.anchor-img
