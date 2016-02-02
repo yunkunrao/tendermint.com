@@ -6,25 +6,25 @@
     <ul>
       <li>
         <a href="mailto:slack@tendermint.com?subject=Please&nbsp;Add&nbsp;Me&nbsp;To&nbsp;Slack!">
-          <h3>Slack</h3>
+          <h3><i class="fa fa-slack"></i> Slack</h3>
           <p>Get an invitation to join the discussion on our Slack.</p>
         </a>
       </li>
       <li>
         <a href="https://twitter.com/tendermint_team">
-          <h3>Twitter</h3>
+          <h3><i class="fa fa-twitter"></i> Twitter</h3>
           <p>Follow <strong>@tendermint_team</strong> on Twitter to get our latest updates.</p>
         </a>
       </li>
       <li>
         <a href="https://www.facebook.com/tendermint/">
-          <h3>Facebook</h3>
+          <h3><i class="fa fa-facebook"></i> Facebook</h3>
           <p>Like and follow Tendermint on Facebook.</p>
         </a>
       </li>
       <li>
         <a href="mailto:hello@tendermint.com">
-          <h3>Email</h3>
+          <h3><i class="fa fa-facebook"></i> Email</h3>
           <p>Get in touch with us at <strong>hello@tendermint.com</strong>.</p>
         </a>
       </li>
@@ -42,20 +42,17 @@
 </section>
 
 <footer id="site-footer" class="site-bookend">
+  <div class="site-logo">
+    <a href="/"><img src="images/tm-logo-white-640.png" alt="Tendermint logo"/></a>
+  </div>
 
-<div class="site-logo">
-  <a href="/"><img src="images/tm-logo-white-640.png" alt="Tendermint logo"/></a>
-</div>
+  <p class="left">&copy; 2016 Tendermint</p>
 
-<p class="left">
-&copy; 2016 Tendermint
-</p>
-
-<p class="right">
-<a href="/about">About</a>
-&middot;
-<a href="mailto:hello@tendermint.com">Contact</a>
-</p>
+  <p class="right">
+    <a href="/about">About</a>
+    &middot;
+    <a href="mailto:hello@tendermint.com">Contact</a>
+  </p>
 </footer>
 
 <!-- code highlighting -->
@@ -64,6 +61,8 @@
   hljs.configure({languages: []});
   hljs.initHighlightingOnLoad();
 </script>
+
+<script src="scripts/bundle.js"></script>
 
 {{ template "chrome/ga.html" . }}
 

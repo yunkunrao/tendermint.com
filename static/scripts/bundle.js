@@ -2,8 +2,7 @@
 (function() {
 'use strict'
 
-alert('hello')
 
-})
+})()
 
 },{}]},{},[1]);
