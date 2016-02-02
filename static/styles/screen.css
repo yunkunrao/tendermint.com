@@ -756,10 +756,16 @@ section .content ul {
   padding: 0;
   margin: 0;
 }
+#body-home #section-video {
+  border-bottom: none;
+}
 #body-home #section-video iframe {
   display: block;
   width: 100vw;
   height: 56.25vw;
+  max-width: 720px;
+  max-height: 405px;
+  margin: 0 auto;
 }
 .site-articles ul.categories {
   zoom: 1;
