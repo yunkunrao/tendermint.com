@@ -21,4 +21,21 @@ In the project root directory, run `hugo server`. The visit `localhost:1313` in 
 
 ### Watching CSS for changes
 
-To change the site styles, edit the `.styl` files in `./static/styles`. To compile the Stylus files into CSS, run `npm run build-css`.  To continually watch for Stylus changes, run `npm run watch-css` in the project root directory. 
+To change the site styles, edit the `.styl` files in `./static/styles`. To compile the Stylus files into CSS, run `npm run bcss`.  To continually watch for Stylus changes, run `npm run wcss` in the project root directory. 
+
+### Watching JS for changes
+
+```
+// watch js
+npm run wjs
+
+// build js
+npm run bjs
+```
+
+### Build for production
+
+```
+// builds both CSS and JS
+npm run build
+```
