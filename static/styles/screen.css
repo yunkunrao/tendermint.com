@@ -750,7 +750,7 @@ section .content ul {
 #body-about ul#ul-team img {
   width: 100%;
   border: 1px solid #ddd;
-  padding: 16px;
+  padding: 8px;
 }
 #body-about ul#ul-team span {
   display: block;
