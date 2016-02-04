@@ -476,10 +476,10 @@ section .content ul {
 }
 .section-dark h1 {
   line-height: 1em;
+  margin: 48px 0 0;
 }
 .section-dark h2 {
   line-height: 1.25em;
-  margin: 0;
 }
 .section-dark p {
   max-width: 480px;
@@ -696,7 +696,7 @@ section .content ul {
   padding: 3.5em 0 2.5em;
 }
 #body-about #section-hero h1 {
-  margin: 0 0 16px;
+  margin-bottom: 16px;
 }
 #body-about #section-hero p {
   max-width: 640px;
