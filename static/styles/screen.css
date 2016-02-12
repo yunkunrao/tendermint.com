@@ -701,14 +701,14 @@ section .content ul {
 #body-about #section-hero p {
   max-width: 640px;
 }
-#body-about #section-about h2 {
+#body-about section.section-portraits h2 {
   text-align: center;
   margin-bottom: 10px;
 }
-#body-about #section-about .container {
+#body-about section.section-portraits .container {
   padding: 0;
 }
-#body-about ul#ul-team {
+#body-about .ul-portraits {
   zoom: 1;
   margin: -10px 0 0;
   padding: 5px;
@@ -727,16 +727,22 @@ section .content ul {
   -webkit-flex-flow: row wrap;
   -ms-flex-flow: row wrap;
   flex-flow: row wrap;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -o-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
-#body-about ul#ul-team:before,
-#body-about ul#ul-team:after {
+#body-about .ul-portraits:before,
+#body-about .ul-portraits:after {
   content: "";
   display: table;
 }
-#body-about ul#ul-team:after {
+#body-about .ul-portraits:after {
   clear: both;
 }
-#body-about ul#ul-team li {
+#body-about .ul-portraits li {
   -webkit-box-flex: 1;
   -moz-box-flex: 1;
   -o-box-flex: 1;
@@ -747,18 +753,21 @@ section .content ul {
   padding: 5px;
   margin-bottom: 12px;
 }
-#body-about ul#ul-team img {
+#body-about .ul-portraits img {
   width: 100%;
-  border: 1px solid #ddd;
-  padding: 8px;
+  border: 1px solid #6f6f6f;
 }
-#body-about ul#ul-team span {
+#body-about .ul-portraits .label {
+  text-align: center;
+}
+#body-about .ul-portraits span.name,
+#body-about .ul-portraits span.title {
   display: block;
 }
-#body-about ul#ul-team span.name {
-  font-weight: bold;
+#body-about .ul-portraits span.name {
+  font-weight: 500;
 }
-#body-about ul#ul-team span.title {
+#body-about .ul-portraits span.title {
   line-height: 1.25em;
   font-size: 0.9em;
   color: #47596b;
@@ -1776,12 +1785,16 @@ select {
   #body-about #section-hero p {
     font-size: 1.6em;
   }
-  #body-about ul#ul-team {
+  #body-about .ul-portraits {
     margin: -12px 0 0;
     padding: 6px;
   }
-  #body-about ul#ul-team li {
+  #body-about .ul-portraits li {
     padding: 6px;
+  }
+  #body-about .ul-portraits li img {
+    padding: 4px;
+    border-color: #ddd;
   }
   .site-articles #section-hero h1 {
     font-size: 2.34em;
@@ -1832,13 +1845,26 @@ select {
   #body-about #section-hero p {
     font-size: 1.75em;
   }
-  #body-about ul#ul-team {
+  #body-about ul.ul-portraits {
     margin: -1em 0 0;
     padding: 0.5em;
   }
-  #body-about ul#ul-team li {
+  #body-about ul.ul-portraits li {
     padding: 0.5em;
     margin: 0 0 1em;
+  }
+  #body-about ul.ul-portraits li .label {
+    margin-top: 4px;
+  }
+  #body-about ul.ul-portraits li span.name {
+    line-height: 2em;
+    margin: 0 0 8px;
+    border-bottom: 1px dotted #ddd;
+  }
+  #body-about ul.ul-portraits li span.title {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 12px;
   }
   .site-articles #section-hero h1 {
     font-size: 2.6em;
@@ -1906,13 +1932,16 @@ select {
   #section-social-media ul li a p {
     padding: 0.75em 1em;
   }
-  #body-about ul#ul-team {
+  #body-about ul.ul-portraits {
     margin: -1.5em 0 0;
     padding: 0.75em;
   }
-  #body-about ul#ul-team li {
+  #body-about ul.ul-portraits li {
     padding: 0.75em;
     margin: 0;
+  }
+  #body-about ul.ul-portraits li span.name {
+    font-size: 1.125em;
   }
   .site-articles #section-hero h1 {
     font-size: 3em;
@@ -2040,11 +2069,11 @@ select {
     font-size: 32px;
     line-height: 48px;
   }
-  #body-about ul#ul-team {
+  #body-about ul.ul-portraits {
     margin: -1em 0 0;
     padding: 0.75em;
   }
-  #body-about ul#ul-team li {
+  #body-about ul.ul-portraits li {
     -webkit-box-flex: 1;
     -moz-box-flex: 1;
     -o-box-flex: 1;
@@ -2054,6 +2083,7 @@ select {
     flex: 1 0 25%;
     padding: 0.75em;
     margin: 0;
+    max-width: 186px;
   }
   .site-articles #section-hero h1 {
     font-size: 3.5em;
@@ -2379,8 +2409,11 @@ select {
     padding-top: 4em;
     padding-bottom: 3em;
   }
-  #body-about ul#ul-team {
+  #body-about ul.ul-portraits {
     margin: 0;
+  }
+  #body-about ul.ul-portraits li {
+    max-width: 250px;
   }
   .body-article #section-hero {
     padding-top: 5em;
@@ -2396,5 +2429,8 @@ select {
   }
   .section-split .column h2 .long {
     display: block;
+  }
+  #body-about ul.ul-portraits li {
+    max-width: 270px;
   }
 }
