@@ -48,7 +48,7 @@ The `AppendTx` message is the work horse of the application.  Each transaction i
 
 The `CheckTx` message is similar to `AppendTx`, but it's only for validating transactions.  Tendermint Core's mempool first checks the validity of a transaction with `CheckTx`, and only relays valid transactions to its peers.  Applications may check an incrementing nonce in the transaction and return an error upon `CheckTx` if the nonce is old.
 
-The `GetHash` message is used to compute a cryptographic commitment to the current application state, to be placed into the next block header. This has some handy properties. Inconsistencies in updating that state will now appear as blockchain forks which catches a whole class of programming errors. This also simplifies the development of secure lightweight clients, as Merkle-hash proofs can be verified by checking against the block hash, and the block hash is signed by a quorum of validators.
+The `Commit` message is used to compute a cryptographic commitment to the current application state, to be placed into the next block header. This has some handy properties. Inconsistencies in updating that state will now appear as blockchain forks which catches a whole class of programming errors. This also simplifies the development of secure lightweight clients, as Merkle-hash proofs can be verified by checking against the block hash, and the block hash is signed by a quorum of validators.
 
 There can be multiple TMSP socket connections to an application.  Tendermint Core creates two TMSP connections to the application; one for the validation of transactions when broadcasting in the mempool, and another for the consensus engine to run block proposals.
 
