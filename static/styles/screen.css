@@ -767,6 +767,7 @@ section .content ul {
   width: 100vw;
   height: 100vh;
   position: relative;
+  border-bottom: none;
 }
 #body-home section#section-hero-home .container {
   width: 100vw;
