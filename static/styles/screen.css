@@ -500,10 +500,18 @@ section .content ul {
   width: 100%;
 }
 #section-hero {
-  border-bottom: 4px solid #0e4781;
+  background: #0a335c url("../images/home/gradient.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  padding: 96px 0 24px;
+}
+#section-hero h1 {
+  margin: 0 0 16px;
 }
 #section-hero p {
-  margin: 0;
+  max-width: 640px;
+  margin: 0 0 24px;
 }
 #section-social-media {
   border-top: 4px solid #125ca5;
@@ -679,15 +687,6 @@ section .content ul {
 #body-about #nav-about a {
   border-top-color: #4799eb;
 }
-#body-about #section-hero {
-  padding: 3.5em 0 2.5em;
-}
-#body-about #section-hero h1 {
-  margin-bottom: 16px;
-}
-#body-about #section-hero p {
-  max-width: 640px;
-}
 #body-about section.section-portraits h2 {
   text-align: center;
   margin-bottom: 10px;
@@ -760,20 +759,13 @@ section .content ul {
   color: #47596b;
 }
 #body-home section#section-hero-home {
-  background: #0a335c;
-  background: -webkit-linear-gradient(top, #0c3d6e, #0a3057);
-  background: -moz-linear-gradient(top, #0c3d6e, #0a3057);
-  background: -o-linear-gradient(top, #0c3d6e, #0a3057);
-  background: -ms-linear-gradient(top, #0c3d6e, #0a3057);
-  background: linear-gradient(to bottom, #0c3d6e, #0a3057);
-  background: url("../images/home/gradient.jpg") no-repeat center center;
+  background: #0a335c url("../images/home/gradient.jpg") no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   text-align: center;
   width: 100vw;
   height: 100vh;
-  border-bottom: none;
   position: relative;
 }
 #body-home section#section-hero-home .container {
@@ -930,18 +922,6 @@ section .content ul {
   font-size: 0.75em;
   font-weight: bold;
 }
-.body-articles #section-hero {
-  padding: 3em 0 2em;
-  border-bottom: 8px solid #0e4781;
-}
-.body-articles #section-hero h1 {
-  text-align: center;
-  font-size: 2em;
-  padding: 0 0.25em;
-}
-.body-articles #section-hero p {
-  font-size: 1em;
-}
 .body-articles #section-posts article {
   margin: 0 0 1.5em;
 }
@@ -965,6 +945,10 @@ section .content ul {
   line-height: 24px;
   padding: 0 0.3em;
 }
+.body-article #section-hero,
+.body-article #section-post {
+  background: none;
+}
 .body-article #section-hero .container,
 .body-article #section-post .container {
   max-width: 60em;
@@ -974,15 +958,17 @@ section .content ul {
   max-width: 1280px;
 }
 .body-article #section-hero {
-  padding: 2em 0 1.5em;
+  padding: 80px 0 24px;
   border-bottom: 1px solid #ddd;
 }
 .body-article #section-hero h1 {
   font-size: 2em;
   color: #333;
   text-shadow: none;
-  font-weight: bold;
+  line-height: 1;
   color: #0a335c;
+  margin: 0 0 8px;
+  font-weight: normal;
 }
 .body-article #section-hero p {
   font-size: 1em;
@@ -1771,12 +1757,6 @@ select {
   #body-home section#section-hero-home .social-media a {
     font-size: 1.25em;
   }
-  #body-about #section-hero h1 {
-    font-size: 3.5em;
-  }
-  #body-about #section-hero p {
-    font-size: 1.6em;
-  }
   #body-about .ul-portraits {
     margin: -12px 0 0;
     padding: 6px;
@@ -1787,12 +1767,6 @@ select {
   #body-about .ul-portraits li img {
     padding: 4px;
     border-color: #ddd;
-  }
-  .site-articles #section-hero h1 {
-    font-size: 2.34em;
-  }
-  .site-articles #section-hero p {
-    font-size: 1.17em;
   }
   .site-articles #section-hero ul.categories li a {
     font-size: 0.8775em;
@@ -1838,12 +1812,6 @@ select {
   #body-home section#section-hero-home .social-media a {
     font-size: 1.5em;
   }
-  #body-about #section-hero h1 {
-    font-size: 4em;
-  }
-  #body-about #section-hero p {
-    font-size: 1.75em;
-  }
   #body-about ul.ul-portraits {
     margin: -1em 0 0;
     padding: 0.5em;
@@ -1864,12 +1832,6 @@ select {
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 12px;
-  }
-  .site-articles #section-hero h1 {
-    font-size: 2.6em;
-  }
-  .site-articles #section-hero p {
-    font-size: 1.3em;
   }
   .site-articles #section-hero ul.categories li a {
     font-size: 0.975em;
@@ -1937,13 +1899,6 @@ select {
   #body-about ul.ul-portraits li span.name {
     font-size: 1.125em;
   }
-  .site-articles #section-hero h1 {
-    font-size: 3em;
-    font-weight: 500;
-  }
-  .site-articles #section-hero p {
-    font-size: 1.5em;
-  }
   .site-articles #section-post p,
   .site-articles #section-posts p,
   .site-articles #section-post ul,
@@ -1955,9 +1910,6 @@ select {
   .site-articles #section-post table,
   .site-articles #section-posts table {
     font-size: 1.125em;
-  }
-  .body-articles #section-hero {
-    padding: 4em 0 3em;
   }
   .body-articles h2 {
     font-size: 1.666em;
@@ -1989,6 +1941,16 @@ select {
     font-weight: bold;
     width: 580px;
     margin: 0 auto 32px;
+  }
+  #section-hero {
+    padding: 112px 0 40px;
+  }
+  #section-hero h1 {
+    margin: 0 0 16px;
+    font-size: 48px;
+  }
+  #section-hero p {
+    font-size: 24px;
   }
   .section-dark .container {
     display: -webkit-box;
@@ -2073,12 +2035,6 @@ select {
     padding: 0.75em;
     margin: 0;
     max-width: 186px;
-  }
-  .site-articles #section-hero h1 {
-    font-size: 3.5em;
-  }
-  .site-articles #section-hero p {
-    font-size: 1.75em;
   }
   .site-articles #section-hero ul.categories {
     font-size: 1.3125em;
@@ -2382,10 +2338,6 @@ select {
   }
   #body-home #section-resources .content .panel ul li {
     padding: 0.75em 1em;
-  }
-  #body-about #section-hero {
-    padding-top: 4em;
-    padding-bottom: 3em;
   }
   #body-about ul.ul-portraits {
     margin: 0;
