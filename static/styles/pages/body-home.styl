@@ -2,6 +2,8 @@
   section#section-hero-home
     background mcolor
     background linear-gradient(top, lighten(mcolor,5%), darken(mcolor,5%))
+    background url('../images/home/gradient.jpg') no-repeat center center
+    background-size cover
     text-align center
     width 100vw
     height 100vh
@@ -17,19 +19,21 @@
       padding 0 1.5em
 
     h1
-      margin 0 0 x*0.25
+      margin 0 0 x*0.5
 
     #tagline
     #intro
-      margin 0 0 1em
+      margin 0 0 1.5em
 
     #tagline
       color lighten(mcolor,70%)
       font-size 1em
-      font-weight 500
+      text-transform uppercase
+      font-weight 200
+      font-size 0.8em
+      letter-spacing 1px
       span.slash
         color lighten(mcolor,20%)
-        font-weight 200
 
     #intro
       line-height 1.25em
@@ -42,7 +46,8 @@
         margin x*0.25
         display block
 
-        background darken(mcolor,20%)
+        background hsla(mhue,msat,mlit - 20%,0.5)
+        background hsla(0,0,0,0.25)
 
         font-size 1em
         width 2em
@@ -55,6 +60,7 @@
       left 50%
 
       background darken(mcolor,20%)
+      background hsla(0,0,0,0.25)
       line-height x*1.5
       width x*8
       margin-left x*-4
@@ -65,7 +71,7 @@
     .social-media a, #home-arrow-down
       transition 0.2s ease all
       &:hover
-        background darken(mcolor,40%)
+        background hsla(0,0,0,0.5)
         color lighten(mcolor,80%)
 
   #section-architecture
