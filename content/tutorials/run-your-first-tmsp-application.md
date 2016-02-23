@@ -150,25 +150,28 @@ In another window, start the `tmsp-cli console`:
 -> data: {serial=on}
 
 > check_tx 0x00
--> 
+-> code: OK
 
 > check_tx 0xFF
--> 
+-> code: OK
 
 > append_tx 0x00
--> 
+-> code: OK
 
 > check_tx 0x00
--> code: BadNoncelog: Invalid nonce. Expected >= 1, got 0
+-> code: BadNonce
+-> log: Invalid nonce. Expected >= 1, got 0
 
 > append_tx 0x01
--> 
+-> code: OK
 
 > append_tx 0x04
--> code: BadNoncelog: Invalid nonce. Expected 2, got 4
+-> code: BadNonce
+-> log: Invalid nonce. Expected 2, got 4
 
-> info     
+> info
 -> data: {hashes:0, txs:2}
+
 ```
 
 This is a very simple application, but between `counter` and `dummy`, its easy to see how you can build out arbitrary application states on top of the TMSP.
