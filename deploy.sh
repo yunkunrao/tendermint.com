@@ -10,12 +10,10 @@ echo -e "\033[0;32mInitializing public/...\033[0m"
 if [ ! -d "public" ]; then
   git submodule update --init
 fi
-cd public
 rm -rf public/*
 git fetch origin master
 git checkout master
 git reset --hard origin/master
-cd ..
 
 ### MERGE
 
