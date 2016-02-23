@@ -120,6 +120,15 @@ If `serial=off`, there are no restrictions on transactions.
 
 We can toggle the value of `serial` using the `set_option` TMSP message.
 
+When `serial=on`, some transactions are invalid. 
+In a live blockchain, transactions collect in memory before they are committed into blocks.
+To avoid wasting resources on invalid transactions,
+TMSP provides the `check_tx` message, 
+which application developers can use to accept or reject messages, 
+before they are stored in memory or gossipped to other peers.
+
+In this instance of the counter app, `check_tx` only allows transactions whose integer is greater than the last committed one.
+
 Let's kill the console and the dummy application, and start the counter app:
 
 ```
@@ -138,31 +147,31 @@ In another window, start the `tmsp-cli console`:
 
 ```
 > set_option serial on
--> serial=on
+-> data: {serial=on}
 
 > check_tx 0x00
--> RetCodeBadNonce
+-> code: OK
 
 > check_tx 0xFF
--> RetCodeOK
+-> code: OK
 
 > append_tx 0x00
--> RetCodeBadNonce
+-> code: OK
+
+> check_tx 0x00
+-> code: BadNonce
+-> log: Invalid nonce. Expected >= 1, got 0
 
 > append_tx 0x01
--> RetCodeOK
+-> code: OK
 
-> append_tx 0x01
--> RetCodeBadNonce
-
-> check_tx 0x01
--> RetCodeBadNonce
-
-> check_tx 0x02
--> RetCodeOK
+> append_tx 0x04
+-> code: BadNonce
+-> log: Invalid nonce. Expected 2, got 4
 
 > info
--> {[hashes:0, txs:2]}
+-> data: {hashes:0, txs:2}
+
 ```
 
 This is a very simple application, but between `counter` and `dummy`, its easy to see how you can build out arbitrary application states on top of the TMSP.
@@ -170,22 +179,17 @@ In the near future, `erisdb` of Eris Industries will also run atop TMSP, bringin
 
 But the ultimate flexibility comes from being able to write the application easily in any language. 
 
-We have implemented the counter app in Python and in Node JS:
-
-```
-cd example/python
-python app.py
-```
-
-(you'll have to kill the other counter application process). 
-In another window, run the console and those previous TMSP commands. 
-You should get the same results as for the Go version.
+We have implemented the counter in a number of languages (see the example directory).
 
 To run the Node JS version, `cd` to `example/js` and run 
 
 ```
 node app.js
 ```
+
+(you'll have to kill the other counter application process). 
+In another window, run the console and those previous TMSP commands. 
+You should get the same results as for the Go version.
 
 Want to write the counter app in your favorite language?! We'd be happy to accept the pull request!
 
