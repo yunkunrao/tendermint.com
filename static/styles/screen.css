@@ -220,8 +220,13 @@ p code:after {
   color: #0a335c;
   font-size: 1.25em;
   line-height: 1.25em;
-  margin: 2em 0 0.5em;
+  margin: 0 0 16px;
   font-weight: 500;
+}
+.article-body ul + h3,
+.article-body p + h3,
+.article-body ol + h3 {
+  margin-top: 32px;
 }
 .article-body ul,
 .article-body ol {
@@ -959,7 +964,8 @@ section .content ul {
   max-width: 1280px;
 }
 .body-article #section-hero {
-  padding: 80px 0 24px;
+  margin-top: 39px;
+  padding: 32px 0 24px;
   border-bottom: 1px solid #ddd;
 }
 .body-article #section-hero h1 {
@@ -1769,7 +1775,10 @@ select {
     padding: 4px;
     border-color: #ddd;
   }
-  .site-articles #section-hero ul.categories li a {
+  .body-article #section-hero {
+    margin-top: 51px;
+  }
+  .body-article #section-hero ul.categories li a {
     font-size: 0.8775em;
   }
   a.footer-large-button {
@@ -2037,8 +2046,18 @@ select {
     margin: 0;
     max-width: 186px;
   }
-  .site-articles #section-hero ul.categories {
-    font-size: 1.3125em;
+  .body-article #section-hero .container,
+  .body-article #section-post .container {
+    max-width: 40em;
+  }
+  .body-article #section-hero h1 {
+    font-weight: bold;
+  }
+  .body-article #section-hero p {
+    font-size: 20px;
+  }
+  .body-article #section-hero ul.categories {
+    font-size: 18px;
   }
   .body-articles #section-posts {
     margin-bottom: -1.5em;
@@ -2345,6 +2364,10 @@ select {
   }
   #body-about ul.ul-portraits li {
     max-width: 250px;
+  }
+  .body-article #section-hero .container,
+  .body-article #section-post .container {
+    max-width: 50em;
   }
   .body-article #section-hero {
     padding-top: 5em;
