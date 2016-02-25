@@ -1,0 +1,94 @@
+.article-body
+  /* These are technically the same, but use both */
+  overflow-wrap break-word
+  word-wrap break-word
+
+  /* Adds a hyphen where the word breaks, if supported (No Blink) */
+  -ms-hyphens auto
+  -moz-hyphens auto
+  -webkit-hyphens auto
+  hyphens auto
+
+  ul, ol, table, blockquote, img
+    margin 0 0 1.5em
+
+  p img
+    margin 0
+
+  img
+    max-width 100%
+
+  h2
+    text-align left
+    font-size 1.5em
+    line-height 1.25em
+    margin 1.5em 0 1em
+    padding-top 1em
+    font-weight bold
+    width 100%
+    border-top 1px solid bc
+
+  h3
+    color mcolor
+    font-size 1.25em
+    line-height 1.25em
+    margin 0 0 x
+    font-weight 500
+
+  ul + h3, p + h3, ol + h3
+    margin-top x*2
+
+  ul, ol
+    padding-left 1.5em
+
+  ul li
+    list-style square
+    margin 0 0 0.25em
+  ol li
+    list-style decimal
+
+  table
+    border 1px solid #ddd
+    border-collapse collapse
+    width 100%
+
+    th
+      font-weight bold
+      background hsl(mhue,msat,95%)
+      color mcolor
+
+    td, th
+      border 1px solid bc
+      padding 0.25em .5em
+
+  blockquote
+    border-left 10px solid #ccc
+    background #f9f9f9
+    font 1em/1.5 sans
+    margin 1.5em 0
+    padding 0.5em 0.75em
+    quotes "\201C""\201D""\2018""\2019"
+
+  blockquote:before
+    color #ccc
+    content open-quote
+    font-size 4em
+    line-height 0.1em
+    margin-right 0.25em
+    vertical-align -0.4em
+
+  blockquote p
+    display inline
+
+a.footer-large-button
+  display block
+  line-height 2em
+  font-size 1.25em
+  text-align center
+  border 2px solid bc
+  margin 1.5em 0
+  cursor pointer
+  &:hover
+    text-decoration none
+    background lighten(bc,85%)
+    border-color darken(bc,15%)
