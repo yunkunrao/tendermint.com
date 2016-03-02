@@ -52,9 +52,9 @@ In future posts I'll go into detail about the consensus algorithm and how it can
 
 ## Tendermint architecture
 
-<img src="/images/tm_architecture.png"/>
+<img src="/images/home/tmsp_architecture.png" class="left">
 
-The above diagram is meant to show that:
+The diagram to the left is meant to show that:
 
 * the consensus and transaction-execution (aka state-transition) modules are separate except for the shared (immutable/Merkle-ized) state.
 * the consensus module takes a block, a commit for the block, and the last state, and uses the transaction-execution module to produce the next state.

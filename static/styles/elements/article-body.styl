@@ -4,9 +4,6 @@
   word-wrap break-word
 
   /* Adds a hyphen where the word breaks, if supported (No Blink) */
-  -ms-hyphens auto
-  -moz-hyphens auto
-  -webkit-hyphens auto
   hyphens auto
 
   ul, ol, table, blockquote, img
@@ -14,6 +11,16 @@
 
   p img
     margin 0
+
+  .left, .right
+    margin-bottom 2.5em !important
+
+  .left
+    float left !important
+    padding-right 2.5em !important
+  .right
+    float right !important
+    padding-left 2.5em !important
 
   img
     max-width 100%
