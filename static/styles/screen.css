@@ -185,9 +185,6 @@ p code:after {
   overflow-wrap: break-word;
   word-wrap: break-word;
 /* Adds a hyphen where the word breaks, if supported (No Blink) */
-  -ms-hyphens: auto;
-  -moz-hyphens: auto;
-  -webkit-hyphens: auto;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   -ms-hyphens: auto;
@@ -202,6 +199,18 @@ p code:after {
 }
 .article-body p img {
   margin: 0;
+}
+.article-body .left,
+.article-body .right {
+  margin-bottom: 2.5em !important;
+}
+.article-body .left {
+  float: left !important;
+  padding-right: 2.5em !important;
+}
+.article-body .right {
+  float: right !important;
+  padding-left: 2.5em !important;
 }
 .article-body img {
   max-width: 100%;
@@ -984,6 +993,18 @@ section .content ul {
 }
 .body-article #section-hero ul.categories li {
   margin-bottom: 0;
+}
+.body-article #section-hero .left,
+.body-article #section-hero .right {
+  margin-bottom: 1em;
+}
+.body-article #section-hero .left {
+  float: left;
+  margin-right: 1em;
+}
+.body-article #section-hero .right {
+  float: right;
+  margin-left: 1em;
 }
 .btn {
   background: -webkit-linear-gradient(top, hsla(0,0%,99%,1), hsla(0,0%,93%,1));
