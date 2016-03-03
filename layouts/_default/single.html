@@ -1,6 +1,6 @@
 {{ partial "header.html" . }}
 
-<body id="body-about">
+<body id="{{ .Params.body }}">
   {{ partial "site-header.html" . }}
 
   {{ .Content }}

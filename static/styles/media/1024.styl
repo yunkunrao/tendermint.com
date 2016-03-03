@@ -80,6 +80,35 @@ section
     .column
       border-color lighten(mcolor,10%)
 
+.section-panels
+  clearfix()
+
+  .container
+    padding-right 0
+
+  .content
+    display flex
+    flex-flow row wrap
+    padding 0 0.5em
+    margin 0 -1em
+
+    .panel
+      flex 1
+      margin 0 0.5em
+      .panel-header
+        padding 0 1em
+        background transparent
+        h3
+          font-size 1.25em
+          line-height 2.5em
+          a
+            color txt
+            font-weight normal
+      ul
+        li
+          padding 0.75em 1em
+
+
 #section-social-media
   ul
     li
@@ -152,34 +181,6 @@ Body - Home
         font-size 1.125em
         p
           text-align left
-
-  #section-resources
-    clearfix()
-
-    .container
-      padding-right 0
-
-    .content
-      display flex
-      flex-flow row wrap
-      padding 0 0.5em
-      margin 0 -1em
-
-      .panel
-        flex 1
-        margin 0 0.5em
-        .panel-header
-          padding 0 1em
-          background transparent
-          h3
-            font-size 1.25em
-            line-height 2.5em
-            a
-              color txt
-              font-weight normal
-        ul
-          li
-            padding 0.75em 1em
 
 /*----------------------------------------------------------------------
 Body - About

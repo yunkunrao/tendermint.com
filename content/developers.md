@@ -2,17 +2,18 @@
 date = "2016-03-03T11:59:27+08:00"
 draft = true
 title = "Developers"
+body = "body-developers"
 +++
 
 <section id="section-hero" class="section-dark">
 <div class="container">
   <h1>Developers</h1>
-  <p><a href="/tutorials">Build</a> on Tendermint&rsquo;s open source platform.</p>
+  <p>Build on Tendermint&rsquo;s open source platform. Start learning with <a href="/tutorials">these tutorials</a>.</p>
   </div>
 </div>
 </section>
 
-<section>
+<section class="section-panels">
 <div class="container">
   <div class="content">
     <div class="panel">

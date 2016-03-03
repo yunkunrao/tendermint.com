@@ -2,6 +2,7 @@
 date = "2016-03-03T11:59:27+08:00"
 draft = true
 title = "About"
+body = "body-about"
 +++
 
 <section id="section-hero" class="section-dark">
