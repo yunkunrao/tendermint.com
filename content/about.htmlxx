@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <base href="{{ .Site.BaseURL }}">
-    <title>Tendermint | About</title>
+    <title>About &ndash; Tendermint</title>
     <link rel="canonical" href="{{ .Permalink }}">
     <link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}">
     <meta content="on" http-equiv="cleartype">
