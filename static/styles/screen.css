@@ -94,7 +94,6 @@ a img {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-@import './highlightjs/github.css';
 .dim {
   color: #666;
 }
@@ -2410,3 +2409,4 @@ select {
     max-width: 270px;
   }
 }
+@import './highlightjs/github.css';
