@@ -113,18 +113,65 @@
 
         <div class="panel">
           <div class="panel-header">
-            <h3><a href="/tutorials/" class="block">
-              <i class="fa fa-book"></i> Tutorials
-            </a></h3>
+            <h3>
+              <i class="fa fa-video-camera"></i> Videos
+            </h3>
           </div>
           <div class="panel-body">
             <ul>
-              {{ range first 4 (where .Data.Pages "Section" "tutorials") }}
-              {{ .Render "li_frontpage"}}
-              {{ end }}
+              <li>
+                <h4><a href="https://www.youtube.com/watch?v=9krAQzN6tbc&t=1952">
+                  Live Blockchain Demo
+                </a></h4>
+                <p>Ethan Buchman demos a live Tendermint-powered blockchain, with nodes coming on and offline.</p>
+              </li>
+              <li>
+                <h4><a href="https://www.youtube.com/watch?v=9krAQzN6tbc&t=14m42s">
+                  Tendermint = Simple
+                </a></h4>
+                <p>Jae Kwon: Program your app any language &ndash; stay focused on business logic.</p>
+              </li>
+              <li>
+                <h4><a href="https://www.youtube.com/watch?v=MoacpJvCM4A">
+                  Blockchains = Trust-As-A-Service
+                </a></h4>
+                <p>Dustin Byington talks with Jeff Frick at the Block Chain Conference in San Francisco.</p>
+              </li>
+
             </ul>
           </div>
-        </div>
+        </div><!--panel-->
+
+        <div class="panel">
+          <div class="panel-header">
+            <h3>
+              <i class="fa fa-newspaper-o"></i> Media Mentions
+            </h3>
+          </div>
+          <div class="panel-body">
+            <ul>
+              <li>
+                <h4><a href="http://bravenewcoin.com/news/the-block-chain-conference-brings-finance-industry-and-blockchain-companies-together/">
+                  The Block Chain Conference brings finance industry and blockchain companies together
+                </a></h4>
+                <p>Brave New Coin &ndash; February 13th, 2016</p>
+              </li>
+              <li>
+                <h4><a href="http://bitcoinist.net/tendermint-unveil-ui-demo-first-blockchain-apps/">
+                  Tendermint to Unveil UI, Demo First Blockchain Apps
+                </a></h4>
+                <p>Bitcoinist &ndash; February 9th, 2016</p>
+              </li>
+              <li>
+                <h4><a href="http://cointelegraph.com/news/tendermints-mintnet-for-launching-blockchains-to-any-cloud-provider">
+                  Tendermint&rsquo;s mintnet For Launching Blockchains To Any Cloud Provider
+                </a></h4>
+                <p>The CoinTelegraph &ndash; February 6th, 2016</p>
+              </li>
+
+            </ul>
+          </div>
+        </div><!--panel-->
 
       </div><!--content-->
     </div><!--container--></section>

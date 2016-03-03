@@ -318,11 +318,15 @@ body {
   line-height: 2em;
   border-bottom: 1px solid #ddd;
 }
-.panel .panel-header a {
-  color: #0e4781;
+.panel .panel-header h3,
+.panel .panel-header h3 a {
   font-weight: 500;
+  color: #0e4781;
 }
-.panel .panel-header a i.fa {
+.panel .panel-header h3 a:hover {
+  color: #1773cf;
+}
+.panel .panel-header h3 a:hover i.fa {
   padding-right: 0.2em;
 }
 .panel .panel-body ul {
@@ -2275,10 +2279,6 @@ select {
   .section-panels .content .panel .panel-header h3 {
     font-size: 1.25em;
     line-height: 2.5em;
-  }
-  .section-panels .content .panel .panel-header h3 a {
-    color: #333;
-    font-weight: normal;
   }
   .section-panels .content .panel ul li {
     padding: 0.75em 1em;
