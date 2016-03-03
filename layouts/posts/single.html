@@ -2,16 +2,16 @@
   This file is responsible for rendering a single blog post.
 -->
 
-{{ template "chrome/header.html" . }}
+{{ partial "header.html" . }}
 
 <body id="body-post" class="body-article site-articles">
-  {{ template "chrome/site-header.html" . }}
+  {{ partial "site-header.html" . }}
 
   <section id="section-hero">
     <div class="container">
       <h1>{{ .Title }}</h1>
       <p>{{ .Date.Format "January 2, 2006" }}</p>
-      {{ template "chrome/categories.html" . }}
+      {{ partial "categories.html" . }}
     </div>
   </section>
 
@@ -34,8 +34,8 @@
 
     <label for="sidebar-checkbox" class="sidebar-toggle"></label>
 
-    {{ template "chrome/prev_next.html" . }}
+    {{ partial "prev_next.html" . }}
   </section>
 
 <!-- Include footer (ends <body class="theme-base-08"> and <html>) -->
-{{ template "chrome/site-footer.html" }}
+{{ partial "site-footer.html" }}

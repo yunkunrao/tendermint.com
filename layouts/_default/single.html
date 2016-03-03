@@ -1,11 +1,11 @@
-{{ template "chrome/header.html" }}
+{{ partial "header.html" . }}
 
 <body id="body-about">
-  {{ template "chrome/site-header.html" . }}
+  {{ partial "site-header.html" . }}
 
   {{ .Content }}
 
-  {{ template "chrome/site-footer.html" }}
+  {{ partial "site-footer.html" . }}
 
 </body>
 </html>

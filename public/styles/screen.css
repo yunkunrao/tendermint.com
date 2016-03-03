@@ -2409,3 +2409,4 @@ select {
     max-width: 270px;
   }
 }
+@import './highlightjs/github.css';

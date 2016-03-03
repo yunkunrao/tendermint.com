@@ -2,10 +2,10 @@
   This file is used to render a list of all posts on our blog.
 -->
 
-{{ template "chrome/header.html" . }}
+{{ partial "header.html" . }}
 
 <body id="body-tutorials" class="body-articles site-articles">
-  {{ template "chrome/site-header.html" . }}
+  {{ partial "site-header.html" . }}
 
   <!-- See /layouts/indexes/category.html for explanation of this section -->
   <!--In this section we have Hugo generate a list of all blog posts, ordered by date.
@@ -29,4 +29,4 @@
     </div>
   </section>
 
-{{ template "chrome/site-footer.html" }}
+{{ partial "site-footer.html" }}
