@@ -325,6 +325,11 @@ body {
 .panel .panel-header a i.fa {
   padding-right: 0.2em;
 }
+.panel .panel-body ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 .panel .panel-body li {
   padding: 0.5em;
   border-bottom: 1px solid #ddd;
@@ -526,6 +531,15 @@ section .content ul {
 #section-hero p {
   max-width: 640px;
   margin: 0 0 24px;
+}
+#section-hero p a {
+  color: #81b9f1;
+  background: rgba(0,0,0,0.25);
+  padding: 0 8px;
+}
+#section-hero p a:hover {
+  color: #c0dcf8;
+  text-decoration: underline;
 }
 #section-social-media {
   border-top: 4px solid #125ca5;
@@ -891,14 +905,6 @@ section .content ul {
   border: 1px solid #0e4781;
   padding: 0.75em 1em;
   background: #092e53;
-}
-#body-home #section-resources {
-  display: block;
-}
-#body-home #section-resources .content ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
 }
 #body-home #section-video {
   border-bottom: none;
