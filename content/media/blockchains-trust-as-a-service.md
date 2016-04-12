@@ -1,11 +1,10 @@
 +++
-date = "2016-04-12T09:00:45+08:00"
-draft = true
-title = "blockchains trust as a service"
-
+date = "2016-02-15T09:00:45+08:00"
+draft = false
+title = "Blockchains = Trust-As-A-Service"
+description = "Dustin Byington talks with Jeff Frick at the Block Chain Conference in San Francisco."
 +++
 
-<h4><a href="https://www.youtube.com/watch?v=MoacpJvCM4A">
-  Blockchains = Trust-As-A-Service
-</a></h4>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MoacpJvCM4A" frameborder="0" allowfullscreen></iframe>
+
 <p>Dustin Byington talks with Jeff Frick at the Block Chain Conference in San Francisco.</p>

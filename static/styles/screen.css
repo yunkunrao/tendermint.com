@@ -193,6 +193,10 @@ p code:after {
 .article-body img {
   margin: 0 0 1.5em;
 }
+.article-body iframe {
+  display: block;
+  margin: 0 auto 1.5em;
+}
 .article-body p img {
   margin: 0;
 }

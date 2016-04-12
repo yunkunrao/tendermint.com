@@ -1,11 +1,11 @@
 +++
-date = "2016-04-12T09:00:21+08:00"
-draft = true
-title = "tendermint is simple"
-
+date = "2016-02-10T09:00:21+08:00"
+draft = false
+title = "Tendermint = Simple"
+description = "Jae Kwon: Program your app any language - stay focused on business logic."
 +++
 
-<h4><a href="https://www.youtube.com/watch?v=9krAQzN6tbc&t=14m42s">
-  Tendermint = Simple
-</a></h4>
-<p>Jae Kwon: Program your app any language &ndash; stay focused on business logic.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9krAQzN6tbc?start=882" frameborder="0" allowfullscreen></iframe>
+
+<p>Jae Kwon: Program your app any language &ndash; stay focused on business logic.
+</p>

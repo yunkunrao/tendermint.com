@@ -1,11 +1,11 @@
 +++
-date = "2016-04-12T09:00:05+08:00"
-draft = true
-title = "live blockchain demo"
+date = "2016-02-10T09:00:05+08:00"
+draft = false
+title = "Live Blockchain Demo"
+description = "Ethan Buchman demos a live Tendermint-powered blockchain, with nodes coming on and offline."
 
 +++
 
-<h4><a href="https://www.youtube.com/watch?v=9krAQzN6tbc&t=1952">
-  Live Blockchain Demo
-</a></h4>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9krAQzN6tbc&start=1952" frameborder="0" allowfullscreen></iframe>
+
 <p>Ethan Buchman demos a live Tendermint-powered blockchain, with nodes coming on and offline.</p>
