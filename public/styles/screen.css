@@ -94,12 +94,6 @@ a img {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-.dim {
-  color: #666;
-}
-.light {
-  color: #999;
-}
 html {
   -webkit-text-size-adjust: 100%;
 }
@@ -181,6 +175,8 @@ p code:after {
   font-weight: normal;
 }
 .article-body {
+  font-family: Cambria, 'Hoefler Text', Utopia, 'Liberation Serif', 'Nimbus Roman No9 L Regular', Times, 'Times New Roman', serif;
+  font-size: 16px;
 /* These are technically the same, but use both */
   overflow-wrap: break-word;
   word-wrap: break-word;
@@ -196,6 +192,10 @@ p code:after {
 .article-body blockquote,
 .article-body img {
   margin: 0 0 1.5em;
+}
+.article-body iframe {
+  display: block;
+  margin: 0 auto 1.5em;
 }
 .article-body p img {
   margin: 0;
@@ -215,6 +215,14 @@ p code:after {
 .article-body img {
   max-width: 100%;
 }
+.article-body h1,
+.article-body h2,
+.article-body h3,
+.article-body h4,
+.article-body h5,
+.article-body h6 {
+  font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
 .article-body h2 {
   text-align: left;
   font-size: 1.5em;
@@ -229,8 +237,8 @@ p code:after {
   color: #0a335c;
   font-size: 1.25em;
   line-height: 1.25em;
+  font-weight: bold;
   margin: 0 0 16px;
-  font-weight: 500;
 }
 .article-body ul + h3,
 .article-body p + h3,
@@ -371,7 +379,7 @@ a.article-prev-next .text {
   vertical-align: top;
 }
 a.article-prev-next .label {
-  color: #47596b;
+  color: #666;
 }
 a.article-prev-next .title {
   font-weight: bold;
@@ -715,10 +723,30 @@ section .content ul {
   margin: 0;
 }
 #body-posts #nav-blog a,
+#body-post #nav-blog a,
 #body-tutorials #nav-tutorials a,
+#body-tutorial #nav-tutorials a,
 #body-about #nav-about a,
 #body-developers #nav-developers a {
   border-top-color: #4799eb;
+}
+.tags {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  margin: -4px;
+}
+.tags .tag {
+  display: block;
+  margin: 4px;
+  padding: 0 12px;
+  background: #f7f7f7;
+  border: 1px solid #ebebeb;
+  line-height: 32px;
+  color: #666;
 }
 #body-about section.section-portraits h2 {
   text-align: center;
@@ -789,7 +817,7 @@ section .content ul {
 #body-about .ul-portraits span.title {
   line-height: 1.25em;
   font-size: 0.9em;
-  color: #47596b;
+  color: #666;
 }
 #body-home section#section-hero-home {
   background: #0a335c url("../images/home/gradient.jpg") no-repeat center center;
@@ -922,38 +950,12 @@ section .content ul {
   max-height: 405px;
   margin: 0 auto;
 }
-.site-articles ul.categories {
-  zoom: 1;
-  margin: 0;
-}
-.site-articles ul.categories:before,
-.site-articles ul.categories:after {
-  content: "";
-  display: table;
-}
-.site-articles ul.categories:after {
-  clear: both;
-}
-.site-articles ul.categories li {
-  display: block;
-  float: left;
-  margin-right: 0.33em;
-}
-.site-articles ul.categories li a {
-  display: block;
-  color: #337fcc;
-  background: #d1e5fa;
-  padding: 0 0.5em;
-  line-height: 2em;
-  font-size: 0.75em;
-  font-weight: bold;
-}
 .body-articles #section-posts article {
   margin: 0 0 1.5em;
 }
 .body-articles #section-posts article .date {
   font-size: 0.75em;
-  color: #47596b;
+  color: #666;
   margin: 0;
 }
 .body-articles #section-posts article h2 {
@@ -966,7 +968,7 @@ section .content ul {
 }
 .body-articles #section-posts article .date {
   display: inline-block;
-  color: #47596b;
+  color: #666;
   background: #f2f2f2;
   line-height: 24px;
   padding: 0 0.3em;
@@ -1000,7 +1002,7 @@ section .content ul {
 .body-article #section-hero p {
   font-size: 1em;
   margin: 0 0 0.5em;
-  color: #47596b;
+  color: #666;
 }
 .body-article #section-hero ul.categories li {
   margin-bottom: 0;
@@ -1133,7 +1135,7 @@ section .content ul {
   opacity: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
-  color: #9cacbd;
+  color: #b3b3b3;
 }
 .btn-copy:not(:active) .label-default,
 .btn-copy:not(:active) .label-active {
@@ -1242,7 +1244,7 @@ section .content ul {
 .checkbox label ul li .key {
   font-size: 12px;
   margin-right: 0.5em;
-  color: #9cacbd;
+  color: #b3b3b3;
   text-shadow: none;
   font-weight: normal;
 }
@@ -1252,7 +1254,9 @@ section .content ul {
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   max-width: 24em;
-  color: #47596b;
+  font-family: Consolas, Monaco, monospace;
+  font-weight: normal;
+  color: #666;
 }
 .session-logo {
   position: absolute;
@@ -1553,7 +1557,7 @@ section .content ul {
   background: -o-linear-gradient(top, hsla(0,0%,99%,1), hsla(0,0%,93%,1));
   background: -ms-linear-gradient(top, hsla(0,0%,99%,1), hsla(0,0%,93%,1));
   background: linear-gradient(to bottom, hsla(0,0%,99%,1), hsla(0,0%,93%,1));
-  color: #47596b;
+  color: #666;
   text-align: left;
   border: 1px solid #ddd;
   line-height: 30px;
@@ -1609,7 +1613,7 @@ input[type=datetime-local]:disabled,
 textarea:disabled,
 select:disabled {
   background: #fafafa;
-  color: #337fcc;
+  color: #999;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -1658,7 +1662,7 @@ textarea {
   content: '▼';
   text-align: center;
   line-height: 30px;
-  color: #47596b;
+  color: #666;
   pointer-events: none;
 }
 select {
@@ -2080,7 +2084,7 @@ select {
   }
   .body-article #section-hero .container,
   .body-article #section-post .container {
-    max-width: 40em;
+    max-width: 640px;
   }
   .body-article #section-hero h1 {
     font-weight: bold;
@@ -2395,7 +2399,7 @@ select {
   }
   .body-article #section-hero .container,
   .body-article #section-post .container {
-    max-width: 50em;
+    max-width: 800px;
   }
   .body-article #section-hero {
     padding-top: 5em;
