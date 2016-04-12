@@ -119,6 +119,10 @@
           </div>
           <div class="panel-body">
             <ul>
+              {{ range first 4 (where .Data.Pages "Section" "media") }}
+              {{ .Render "li_frontpage"}}
+              {{ end }}
+            <!--
               <li>
                 <h4><a href="https://www.youtube.com/watch?v=9krAQzN6tbc&t=1952">
                   Live Blockchain Demo
@@ -137,7 +141,7 @@
                 </a></h4>
                 <p>Dustin Byington talks with Jeff Frick at the Block Chain Conference in San Francisco.</p>
               </li>
-
+              -->
             </ul>
           </div>
         </div><!--panel-->
