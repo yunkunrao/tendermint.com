@@ -105,7 +105,7 @@
           <div class="panel-body">
             <ul>
               {{ range first 4 (where .Data.Pages "Section" "posts") }}
-              {{ .Render "li_frontpage"}}
+              {{ .Render "li"}}
               {{ end }}
             </ul>
           </div>
@@ -120,28 +120,8 @@
           <div class="panel-body">
             <ul>
               {{ range first 4 (where .Data.Pages "Section" "media") }}
-              {{ .Render "li_frontpage"}}
+              {{ .Render "li"}}
               {{ end }}
-            <!--
-              <li>
-                <h4><a href="https://www.youtube.com/watch?v=9krAQzN6tbc&t=1952">
-                  Live Blockchain Demo
-                </a></h4>
-                <p>Ethan Buchman demos a live Tendermint-powered blockchain, with nodes coming on and offline.</p>
-              </li>
-              <li>
-                <h4><a href="https://www.youtube.com/watch?v=9krAQzN6tbc&t=14m42s">
-                  Tendermint = Simple
-                </a></h4>
-                <p>Jae Kwon: Program your app any language &ndash; stay focused on business logic.</p>
-              </li>
-              <li>
-                <h4><a href="https://www.youtube.com/watch?v=MoacpJvCM4A">
-                  Blockchains = Trust-As-A-Service
-                </a></h4>
-                <p>Dustin Byington talks with Jeff Frick at the Block Chain Conference in San Francisco.</p>
-              </li>
-              -->
             </ul>
           </div>
         </div><!--panel-->

@@ -94,12 +94,6 @@ a img {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-.dim {
-  color: #666;
-}
-.light {
-  color: #999;
-}
 html {
   -webkit-text-size-adjust: 100%;
 }
@@ -371,7 +365,7 @@ a.article-prev-next .text {
   vertical-align: top;
 }
 a.article-prev-next .label {
-  color: #47596b;
+  color: #666;
 }
 a.article-prev-next .title {
   font-weight: bold;
@@ -789,7 +783,7 @@ section .content ul {
 #body-about .ul-portraits span.title {
   line-height: 1.25em;
   font-size: 0.9em;
-  color: #47596b;
+  color: #666;
 }
 #body-home section#section-hero-home {
   background: #0a335c url("../images/home/gradient.jpg") no-repeat center center;
@@ -941,7 +935,7 @@ section .content ul {
 }
 .site-articles ul.categories li a {
   display: block;
-  color: #337fcc;
+  color: #999;
   background: #d1e5fa;
   padding: 0 0.5em;
   line-height: 2em;
@@ -953,7 +947,7 @@ section .content ul {
 }
 .body-articles #section-posts article .date {
   font-size: 0.75em;
-  color: #47596b;
+  color: #666;
   margin: 0;
 }
 .body-articles #section-posts article h2 {
@@ -966,7 +960,7 @@ section .content ul {
 }
 .body-articles #section-posts article .date {
   display: inline-block;
-  color: #47596b;
+  color: #666;
   background: #f2f2f2;
   line-height: 24px;
   padding: 0 0.3em;
@@ -1000,7 +994,7 @@ section .content ul {
 .body-article #section-hero p {
   font-size: 1em;
   margin: 0 0 0.5em;
-  color: #47596b;
+  color: #666;
 }
 .body-article #section-hero ul.categories li {
   margin-bottom: 0;
@@ -1133,7 +1127,7 @@ section .content ul {
   opacity: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
-  color: #9cacbd;
+  color: #b3b3b3;
 }
 .btn-copy:not(:active) .label-default,
 .btn-copy:not(:active) .label-active {
@@ -1242,7 +1236,7 @@ section .content ul {
 .checkbox label ul li .key {
   font-size: 12px;
   margin-right: 0.5em;
-  color: #9cacbd;
+  color: #b3b3b3;
   text-shadow: none;
   font-weight: normal;
 }
@@ -1252,7 +1246,9 @@ section .content ul {
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   max-width: 24em;
-  color: #47596b;
+  font-family: Consolas, Monaco, monospace;
+  font-weight: normal;
+  color: #666;
 }
 .session-logo {
   position: absolute;
@@ -1553,7 +1549,7 @@ section .content ul {
   background: -o-linear-gradient(top, hsla(0,0%,99%,1), hsla(0,0%,93%,1));
   background: -ms-linear-gradient(top, hsla(0,0%,99%,1), hsla(0,0%,93%,1));
   background: linear-gradient(to bottom, hsla(0,0%,99%,1), hsla(0,0%,93%,1));
-  color: #47596b;
+  color: #666;
   text-align: left;
   border: 1px solid #ddd;
   line-height: 30px;
@@ -1609,7 +1605,7 @@ input[type=datetime-local]:disabled,
 textarea:disabled,
 select:disabled {
   background: #fafafa;
-  color: #337fcc;
+  color: #999;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -1658,7 +1654,7 @@ textarea {
   content: '▼';
   text-align: center;
   line-height: 30px;
-  color: #47596b;
+  color: #666;
   pointer-events: none;
 }
 select {
