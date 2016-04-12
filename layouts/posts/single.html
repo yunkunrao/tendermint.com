@@ -1,7 +1,3 @@
-<!--
-  This file is responsible for rendering a single blog post.
--->
-
 {{ partial "header.html" . }}
 
 <body id="body-post" class="body-article site-articles">
@@ -11,23 +7,12 @@
     <div class="container">
       <h1>{{ .Title }}</h1>
       <p>{{ .Date.Format "January 2, 2006" }}</p>
-      {{ partial "categories.html" . }}
+      {{ partial "tags.html" . }}
     </div>
   </section>
 
-  <!-- See /layouts/indexes/category.html for explanation of this section -->
   <section id="section-post">
-    <!--
-      This is where the actual post is displayed.
 
-      We first access the title metadata field from the markdown source and
-      display it as a heading.
-
-      We then access the date the post was written (also in the markdown
-      metadata) and display a formated version of it
-
-      Finally we include the actual content of the post.
-    -->
     <div class="container article-body">
       {{ .Content }}
     </div>
@@ -37,5 +22,4 @@
     {{ partial "prev_next.html" . }}
   </section>
 
-<!-- Include footer (ends <body class="theme-base-08"> and <html>) -->
 {{ partial "site-footer.html" }}

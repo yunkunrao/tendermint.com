@@ -1,20 +1,11 @@
-<!--
-  This file is used to render a list of all posts on our blog.
--->
-
 {{ partial "header.html" . }}
 
 <body id="body-posts" class="body-articles site-articles">
   {{ partial "site-header.html" . }}
 
-  <!-- See /layouts/indexes/category.html for explanation of this section -->
-  <!--In this section we have Hugo generate a list of all blog posts, ordered by date.
-
-  When showing each post we ask Hugo to use the template in /layouts/posts/li.html to provide a short description of each post.-->
-
   <section id="section-hero" class="section-dark">
     <div class="container">
-      <h1>Blog</h1>
+      <h1>News</h1>
       <p>Learn about what we&rsquo;re working on, right this moment.</p>
     </div>
   </section>
@@ -23,7 +14,7 @@
     <div class="container">
       <ul>
         {{ range .Data.Pages }}
-        {{ .Render "li"}}
+        {{ .Render "summary"}}
         {{ end }}
       </ul>
     </div>
