@@ -1,0 +1,25 @@
+{{ partial "header.html" . }}
+
+<body id="body-post" class="body-article site-articles">
+  {{ partial "site-header.html" . }}
+
+  <section id="section-hero">
+    <div class="container">
+      <h1>{{ .Title }}</h1>
+      <p>{{ .Date.Format "January 2, 2006" }}</p>
+      {{ partial "categories.html" . }}
+    </div>
+  </section>
+
+  <section id="section-post">
+
+    <div class="container article-body">
+      {{ .Content }}
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    {{ partial "prev_next.html" . }}
+  </section>
+
+{{ partial "site-footer.html" }}
