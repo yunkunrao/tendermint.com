@@ -175,6 +175,8 @@ p code:after {
   font-weight: normal;
 }
 .article-body {
+  font-family: Cambria, 'Hoefler Text', Utopia, 'Liberation Serif', 'Nimbus Roman No9 L Regular', Times, 'Times New Roman', serif;
+  font-size: 16px;
 /* These are technically the same, but use both */
   overflow-wrap: break-word;
   word-wrap: break-word;
@@ -209,6 +211,14 @@ p code:after {
 .article-body img {
   max-width: 100%;
 }
+.article-body h1,
+.article-body h2,
+.article-body h3,
+.article-body h4,
+.article-body h5,
+.article-body h6 {
+  font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
 .article-body h2 {
   text-align: left;
   font-size: 1.5em;
@@ -223,8 +233,8 @@ p code:after {
   color: #0a335c;
   font-size: 1.25em;
   line-height: 1.25em;
+  font-weight: bold;
   margin: 0 0 16px;
-  font-weight: 500;
 }
 .article-body ul + h3,
 .article-body p + h3,
@@ -716,6 +726,24 @@ section .content ul {
 #body-developers #nav-developers a {
   border-top-color: #4799eb;
 }
+.tags {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  margin: -4px;
+}
+.tags .tag {
+  display: block;
+  margin: 4px;
+  padding: 0 12px;
+  background: #f7f7f7;
+  border: 1px solid #ebebeb;
+  line-height: 32px;
+  color: #666;
+}
 #body-about section.section-portraits h2 {
   text-align: center;
   margin-bottom: 10px;
@@ -917,32 +945,6 @@ section .content ul {
   max-width: 720px;
   max-height: 405px;
   margin: 0 auto;
-}
-.site-articles ul.categories {
-  zoom: 1;
-  margin: 0;
-}
-.site-articles ul.categories:before,
-.site-articles ul.categories:after {
-  content: "";
-  display: table;
-}
-.site-articles ul.categories:after {
-  clear: both;
-}
-.site-articles ul.categories li {
-  display: block;
-  float: left;
-  margin-right: 0.33em;
-}
-.site-articles ul.categories li a {
-  display: block;
-  color: #999;
-  background: #d1e5fa;
-  padding: 0 0.5em;
-  line-height: 2em;
-  font-size: 0.75em;
-  font-weight: bold;
 }
 .body-articles #section-posts article {
   margin: 0 0 1.5em;
@@ -2078,7 +2080,7 @@ select {
   }
   .body-article #section-hero .container,
   .body-article #section-post .container {
-    max-width: 40em;
+    max-width: 640px;
   }
   .body-article #section-hero h1 {
     font-weight: bold;
@@ -2393,7 +2395,7 @@ select {
   }
   .body-article #section-hero .container,
   .body-article #section-post .container {
-    max-width: 50em;
+    max-width: 800px;
   }
   .body-article #section-hero {
     padding-top: 5em;
