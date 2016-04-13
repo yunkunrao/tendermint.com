@@ -543,6 +543,7 @@ iframe.iframe-video {
   width: 100%;
   background: rgba(0,0,0,0.25);
   padding: 4px;
+  margin: 0 auto;
   display: -webkit-box;
   display: -moz-box;
   display: -webkit-flex;
@@ -681,6 +682,24 @@ iframe.iframe-video {
   padding: 0 16px;
   margin: 0 0 8px;
 }
+.section-default.section-dark {
+  background: #0a335c;
+}
+.section-default.section-dark .container {
+  border-bottom: 1px solid #0e4781;
+}
+.section-default.section-dark .container header.section-header {
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -o-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  padding: 8px 16px 16px;
+}
+.section-default.section-dark .container header.section-header h2 {
+  color: #daebfb;
+}
 #section-hero {
   background: #0a335c url("../images/home/gradient.jpg") no-repeat center center;
   -webkit-background-size: cover;
@@ -810,9 +829,6 @@ iframe.iframe-video {
 #section-social-media ul li a h3 i.fa {
   padding-right: 0.2em;
 }
-#section-social-media ul li a p {
-  font-size: 12px;
-}
 #section-social-media ul li a:hover {
   border-color: #125ca5;
   background: #0c3d6e;
@@ -910,6 +926,9 @@ ul.ul-boxed li {
   border: 1px solid #ddd;
   padding: 8px 12px;
   margin: 0 0 8px;
+}
+ul.ul-boxed li p {
+  font-size: 12px;
 }
 .btn {
   background: -webkit-linear-gradient(top, hsla(0,0%,99%,1), hsla(0,0%,93%,1));
