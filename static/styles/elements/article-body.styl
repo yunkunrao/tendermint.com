@@ -2,6 +2,24 @@
   font-family times-stack
   font-size x
 
+  a
+    text-decoration none
+    color lcolor
+    &:hover
+      text-decoration underline
+
+  strong
+    font-weight bold
+
+  em
+    font-style italic
+
+  code
+    font-family Consolas, 'Deja Vu Sans Mono', 'Andale Sans Mono', monospace
+    line-height 1.25em
+    margin 0 0 1.5em
+
+
   /* These are technically the same, but use both */
   overflow-wrap break-word
   word-wrap break-word
@@ -9,15 +27,28 @@
   /* Adds a hyphen where the word breaks, if supported (No Blink) */
   hyphens auto
 
-  ul, ol, table, blockquote, img
+  p, ul, ol, table, blockquote, img
     margin 0 0 1.5em
 
   iframe
     display block
     margin 0 auto 1.5em
 
-  p img
-    margin 0
+  p
+    code
+      background-color #F0F0F0
+      padding 0
+      padding-top 0.2em
+      padding-bottom 0.2em
+      margin 0
+      font-size 85%
+      border-radius 3px
+
+      &:before, &:after
+        letter-spacing -0.2em
+        content "\00a0"
+   img
+      margin 0
 
   .left, .right
     margin-bottom 2.5em !important
@@ -97,15 +128,4 @@
   blockquote p
     display inline
 
-a.footer-large-button
-  display block
-  line-height 2em
-  font-size 1.25em
-  text-align center
-  border 2px solid bc
-  margin 1.5em 0
-  cursor pointer
-  &:hover
-    text-decoration none
-    background lighten(bc,85%)
-    border-color darken(bc,15%)
+

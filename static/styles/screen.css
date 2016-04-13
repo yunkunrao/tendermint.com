@@ -99,75 +99,11 @@ html {
 }
 body,
 input,
-button {
+button,
+textarea {
   font-size: 16px;
   line-height: 1.5;
   font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
-}
-strong {
-  font-weight: bold;
-}
-em {
-  font-style: italic;
-}
-a {
-  text-decoration: none;
-  color: #1773cf;
-}
-.container a:hover {
-  text-decoration: underline;
-}
-p,
-ul,
-ol {
-  margin: 0 0 1.5em;
-}
-li {
-  margin: 0 0 0.5em;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-  padding: 0;
-  font-weight: normal;
-}
-h1 {
-  font-size: 2.5em;
-  font-weight: 200;
-}
-h2 {
-  font-size: 1.25em;
-  color: #0a335c;
-}
-h3 {
-  font-weight: bold;
-}
-h4 {
-  font-weight: 500;
-}
-code {
-  font-family: Consolas, 'Deja Vu Sans Mono', 'Andale Sans Mono', monospace;
-  line-height: 1.25em;
-  margin: 0 0 1.5em;
-}
-p code {
-  background-color: #f0f0f0;
-  padding: 0;
-  padding-top: 0.2em;
-  padding-bottom: 0.2em;
-  margin: 0;
-  font-size: 85%;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-}
-p code:before,
-p code:after {
-  letter-spacing: -0.2em;
-  content: "\00a0";
 }
 .amp {
   font-style: italic;
@@ -186,6 +122,25 @@ p code:after {
   -ms-hyphens: auto;
   hyphens: auto;
 }
+.article-body a {
+  text-decoration: none;
+  color: #1773cf;
+}
+.article-body a:hover {
+  text-decoration: underline;
+}
+.article-body strong {
+  font-weight: bold;
+}
+.article-body em {
+  font-style: italic;
+}
+.article-body code {
+  font-family: Consolas, 'Deja Vu Sans Mono', 'Andale Sans Mono', monospace;
+  line-height: 1.25em;
+  margin: 0 0 1.5em;
+}
+.article-body p,
 .article-body ul,
 .article-body ol,
 .article-body table,
@@ -197,7 +152,22 @@ p code:after {
   display: block;
   margin: 0 auto 1.5em;
 }
-.article-body p img {
+.article-body p code {
+  background-color: #f0f0f0;
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+.article-body p code:before,
+.article-body p code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+.article-body img {
   margin: 0;
 }
 .article-body .left,
@@ -289,20 +259,6 @@ p code:after {
 }
 .article-body blockquote p {
   display: inline;
-}
-a.footer-large-button {
-  display: block;
-  line-height: 2em;
-  font-size: 1.25em;
-  text-align: center;
-  border: 2px solid #ddd;
-  margin: 1.5em 0;
-  cursor: pointer;
-}
-a.footer-large-button:hover {
-  text-decoration: none;
-  background: #fafafa;
-  border-color: #bcbcbc;
 }
 body {
   background: #fcfdfd;
@@ -770,6 +726,20 @@ section.section-default .content ul {
   float: right;
   margin-left: 1em;
 }
+a.footer-large-button {
+  display: block;
+  line-height: 2em;
+  font-size: 1.25em;
+  text-align: center;
+  border: 2px solid #ddd;
+  margin: 1.5em 0;
+  cursor: pointer;
+}
+a.footer-large-button:hover {
+  text-decoration: none;
+  background: #fafafa;
+  border-color: #bcbcbc;
+}
 #mc-embedded-subscribe-form {
   max-width: 320px;
   width: 100%;
@@ -853,19 +823,19 @@ section.section-default .content ul {
   padding: 0 1.5em;
 }
 #section-hero h1 {
+  font-size: 40px;
+  font-weight: 200;
   color: #daebfb;
-  margin: 0 0 8px;
 }
 #section-hero .tagline,
 #section-hero .introduction {
-  margin: 0 0 24px;
+  margin: 0 0 20px;
 }
 #section-hero .tagline {
   color: #91c2f3;
-  font-size: 1em;
+  font-size: 12px;
   text-transform: uppercase;
   font-weight: 200;
-  font-size: 0.8em;
   letter-spacing: 1px;
 }
 #section-hero .tagline span.slash {
@@ -883,16 +853,15 @@ section.section-default .content ul {
   display: box;
   display: flex;
   margin: 0 auto;
-  margin-top: 1.5em;
+  margin-top: 16px;
 }
 #section-hero .social-media a {
   margin: 4px;
   display: block;
   background: rgba(0,0,0,0.5);
   background: rgba(0,0,0,0.25);
-  font-size: 1em;
-  width: 2em;
-  line-height: 2em;
+  width: 40px;
+  line-height: 40px;
   color: #6cadef;
 }
 #section-hero #home-arrow-down {
@@ -901,11 +870,11 @@ section.section-default .content ul {
   left: 50%;
   background: #082949;
   background: rgba(0,0,0,0.25);
-  line-height: 24px;
-  width: 128px;
-  margin-left: -64px;
-  color: #6cadef;
+  width: 96px;
+  margin-left: -48px;
   font-size: 24px;
+  line-height: 32px;
+  color: #6cadef;
 }
 #section-hero .social-media a,
 #section-hero #home-arrow-down {
