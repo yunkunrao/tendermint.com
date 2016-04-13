@@ -1,0 +1,32 @@
+.section-default
+  .container
+    padding x
+    border-bottom 1px solid bc
+
+    header.section-header
+      display flex
+      align-items center
+      padding 0.5*x 0 0.75*x
+
+      i.fa
+        margin-right 0.5*x
+        background lighten(mcolor,25%)
+        width 1.5*x
+        border-radius 0.75*x
+
+        font-size 0.666*x
+        line-height 1.5*x
+        text-align center
+        color #fff
+
+      h2
+        font-weight bold
+        color mcolor
+        line-height 1.25*x
+
+    .content
+      margin 0 0 0.5*x
+
+  &.section-borderless
+    .container
+      padding x 0

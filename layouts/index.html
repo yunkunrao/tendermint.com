@@ -9,155 +9,57 @@
   <body id="body-home">
     {{ partial "site-header.html" . }}
     {{ partial "section-hero.html" . }}
+    {{ partial "section-benefits.html" . }}
 
-    <section class="section-split section-borderless"><div class="container">
-      <div class="content">
-        <div class="column">
-          <h2><i class="fa fa-wrench"></i> Blockchain Apps</h2>
-          <p>Whether you are developing a blockchain app within a Fortune 500 company or creating your own personal blockchain, Tendermint can help.</p>
-        </div>
-        <div class="column">
-          <h2><i class="fa fa-cloud-upload"></i> Easy Deployment</h2>
-          <p>Deploy your blockchain app to AWS, Google Cloud, Microsoft Azure, or Digital Ocean in <a href="http://tendermint.com/tutorials/">fewer than three minutes</a>.</p>
-        </div>
-        <div class="column">
-          <h2><i class="fa fa-code"></i> Open Source</h2>
-          <p>Our source code is available on <a href="https://github.com/tendermint">GitHub</a>. Tendermint Core is licensed under AGPLv3, and all other libraries are Apache 2.0.</p>
-        </div>
-      </div>
-    </div></section>
+    <section id="section-architecture" class="section-default">
+      <div class="container">
+        <header class="section-header">
+          <h2>Next Generation Enterprise Architecture</h2>
+        </header>
+        <div class="content">
+          <a class="anchor-img" href="/posts/tendermint-socket-protocol"><img src="/images/home/tmsp_architecture.png"/></a>
+          <div class="text">
 
-    <section class="section-split section-borderless"><div class="container">
-      <div class="content">
-        <div class="column">
-          <h2><i class="fa fa-tachometer"></i> Fast</h2>
-          <p>Over 10,000 transactions per second, per blockchain. New blocks are committed in less than 1000ms. Achievable today.</p>
-        </div>
-        <div class="column">
-          <h2><i class="fa fa-database"></i> Scalable</h2>
-          <p>Tendermint blockchain apps are infinitely scalable across commodity hardware through efficient container-based deployment.</p>
-        </div>
-        <div class="column">
-          <h2><i class="fa fa-lock"></i> Secure</h2>
-          <p>Tendermint is a Byzantine Fault Tolerant consensus algorithm. Our systems are designed for accountability and regulatory compliance.</p>
-        </div>
-      </div>
-    </div></section>
-
-    <section id="section-architecture" class="section-inverse"><div class="container">
-      <div class="section-header">
-        <h2>Next Generation Enterprise Architecture</h2>
-      </div>
-      <div class="content">
-        <a class="anchor-img" href="/posts/tendermint-socket-protocol"><img src="/images/home/tmsp_architecture.png"/></a>
-        <div class="text">
-
-          <ul>
-          <li>Blockchains continue their journey - increasing functionality while decreasing development complexity.</li> 
-          <li>First there was Bitcoin, an accounting system with limited functionality that is difficult to build on top of.</li>
-          <li>Then came Ethereum, which unlocked the potential of blockchains with a Turing-complete virtual machine that can run any smart contract written in Serpent or Solidity.</li> 
-          <li>Now with Tendermint <a href="http://tendermint.com/posts/tendermint-socket-protocol/">TMSP</a>, you can write smart-contracts in any programming language. Leverage existing codebases, workflows, and development ecosystems to build complex &amp; production-quality applications.</li>
-          </ul>
-
-        </div>
-      </div>
-    </div></section>
-
-    <section id="section-resources" class="section-panels">
-    <div class="container">
-      <div class="section-header">
-        <h2>Tendermint Resources</h2>
-      </div>
-
-      <div class="content">
-        <div class="panel">
-          <div class="panel-header">
-            <h3><a href="/posts/" class="block">
-              <i class="fa fa-rss"></i> Blog
-            </a></h3>
-          </div>
-          <div class="panel-body">
             <ul>
-              {{ range first 4 (where .Data.Pages "Section" "posts") }}
-              {{ .Render "li"}}
-              {{ end }}
+              <li>Blockchains continue their journey - increasing functionality while decreasing development complexity.</li> 
+              <li>First there was Bitcoin, an accounting system with limited functionality that is difficult to build on top of.</li>
+              <li>Then came Ethereum, which unlocked the potential of blockchains with a Turing-complete virtual machine that can run any smart contract written in Serpent or Solidity.</li> 
+              <li>Now with Tendermint <a href="http://tendermint.com/posts/tendermint-socket-protocol/">TMSP</a>, you can write smart-contracts in any programming language. Leverage existing codebases, workflows, and development ecosystems to build complex &amp; production-quality applications.</li>
             </ul>
-          </div>
-        </div>
 
-        <div class="panel">
-          <div class="panel-header">
-            <h3><a href="/media/" class="block">
-              <i class="fa fa-video-camera"></i> Media
-            </a></h3>
           </div>
-          <div class="panel-body">
-            <ul>
-              {{ range first 4 (where .Data.Pages "Section" "media") }}
-              {{ .Render "li"}}
-              {{ end }}
-            </ul>
-          </div>
-        </div><!--panel-->
-
-        <div class="panel">
-          <div class="panel-header">
-            <h3>
-              <i class="fa fa-newspaper-o"></i> In The News
-            </h3>
-          </div>
-          <div class="panel-body">
-            <ul>
-              <li>
-                <h4><a href="http://bravenewcoin.com/news/the-block-chain-conference-brings-finance-industry-and-blockchain-companies-together/">
-                  The Block Chain Conference brings finance industry and blockchain companies together
-                </a></h4>
-                <p>Brave New Coin &ndash; February 13th, 2016</p>
-              </li>
-              <li>
-                <h4><a href="http://bitcoinist.net/tendermint-unveil-ui-demo-first-blockchain-apps/">
-                  Tendermint to Unveil UI, Demo First Blockchain Apps
-                </a></h4>
-                <p>Bitcoinist &ndash; February 9th, 2016</p>
-              </li>
-              <li>
-                <h4><a href="http://cointelegraph.com/news/tendermints-mintnet-for-launching-blockchains-to-any-cloud-provider">
-                  Tendermint&rsquo;s mintnet For Launching Blockchains To Any Cloud Provider
-                </a></h4>
-                <p>The CoinTelegraph &ndash; February 6th, 2016</p>
-              </li>
-
-            </ul>
-          </div>
-        </div><!--panel-->
-
-      </div><!--content-->
-    </div><!--container--></section>
-
-    <section class="section-split section-borderless section-inverse"><div class="container">
-      <div class="content">
-        <div class="column">
-          <h2>
-            <span class="short">We&rsquo;re looking for blockchain engineers</span>
-            <span class="long">We&rsquo;re seeking talented blockchain engineers</span>
-          </h2>
-          <p>Are you an industry leading blockchain engineer looking to make open-source contributions to a state-of-the-art codebase on the bleeding edge of blockchain tech? If so, we’d love to <a href="mailto:hello@tendermint.com">hear from you</a>.
-        </div>
-        <div class="column">
-          <h2>
-            <span class="short">We also build custom blockchain apps</span>
-            <span class="long">We also build custom blockchain applications</span>
-          </h2>
-          <p>We work directly with a small number of high value clients to help bring their vision to reality. <a href="mailto:hello@tendermint.com">Lets talk.</a></p>
         </div>
       </div>
-    </div></section>
+    </section>
 
-    <section id="section-video"><div class="content">
-      <div class="section-header">
-        <h2>Watch an interview with the Tendermint team</h2>
-      </div>
-      <iframe src="https://www.youtube.com/embed/EfFVh1DIKds" frameborder="0" allowfullscreen></iframe>
-    </div></section>
+    {{ partial "section-resources.html" . }}
 
-{{ partial "site-footer.html" }}
+    <section class="section-split section-borderless sections-dark"><div class="container">
+        <div class="content">
+          <div class="column">
+            <h2>
+              <span class="short">We&rsquo;re looking for blockchain engineers</span>
+              <span class="long">We&rsquo;re seeking talented blockchain engineers</span>
+            </h2>
+            <p>Are you an industry leading blockchain engineer looking to make open-source contributions to a state-of-the-art codebase on the bleeding edge of blockchain tech? If so, we’d love to <a href="mailto:hello@tendermint.com">hear from you</a>.
+            </div>
+            <div class="column">
+              <h2>
+                <span class="short">We also build custom blockchain apps</span>
+                <span class="long">We also build custom blockchain applications</span>
+              </h2>
+              <p>We work directly with a small number of high value clients to help bring their vision to reality. <a href="mailto:hello@tendermint.com">Lets talk.</a></p>
+            </div>
+          </div>
+      </div></section>
+
+      <section class="section-default section-borderless">
+        <div class="container">
+          <header class="section-header">
+            <h2>Watch an interview with the Tendermint team</h2>
+          </header>
+          <iframe class="iframe-video" src="https://www.youtube.com/embed/EfFVh1DIKds" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </section>
+
+      {{ partial "site-footer.html" }}
