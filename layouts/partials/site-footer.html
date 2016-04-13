@@ -1,49 +1,52 @@
-<section id="section-social-media" class="section-dark">
+<section id="section-social-media" class="section-default section-dark">
   <div class="container">
-    <div class="section-header">
+    <header class="section-header">
       <h2>Learn more by joining the&nbsp;discussion</h2>
-    </div>
-    <ul>
-      <li>
-        <a href="mailto:slack@tendermint.com?subject=Please&nbsp;Add&nbsp;Me&nbsp;To&nbsp;Slack!">
-          <h3><i class="fa fa-slack"></i> Slack</h3>
-          <p>Get an invitation to join the discussion on our Slack.</p>
-        </a>
-      </li>
-      <li>
-        <a href="https://twitter.com/tendermint_team">
-          <h3><i class="fa fa-twitter"></i> Twitter</h3>
-          <p>Follow <strong>@tendermint_team</strong> on Twitter to get our latest updates.</p>
-        </a>
-      </li>
-      <li>
-        <a href="https://www.facebook.com/tendermint/">
-          <h3><i class="fa fa-facebook"></i> Facebook</h3>
-          <p>Like and follow Tendermint on Facebook.</p>
-        </a>
-      </li>
-      <li>
-        <a href="https://www.linkedin.com/company/tendermint">
-          <h3><i class="fa fa-linkedin"></i> LinkedIn</h3>
-          <p>View our profile and connect with us on LinkedIn.</p>
-        </a>
-      </li>
-    </ul>
-  </div>
+    </header>
+    <div class="content">
+      <ul class="ul-boxed">
+        <li>
+          <a href="mailto:slack@tendermint.com?subject=Please&nbsp;Add&nbsp;Me&nbsp;To&nbsp;Slack!">
+            <h3><i class="fa fa-slack"></i> Slack</h3>
+            <p>Get an invitation to join the discussion on our Slack.</p>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/tendermint_team">
+            <h3><i class="fa fa-twitter"></i> Twitter</h3>
+            <p>Follow <strong>@tendermint_team</strong> on Twitter to get our latest updates.</p>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/tendermint/">
+            <h3><i class="fa fa-facebook"></i> Facebook</h3>
+            <p>Like and follow Tendermint on Facebook.</p>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/company/tendermint">
+            <h3><i class="fa fa-linkedin"></i> LinkedIn</h3>
+            <p>View our profile and connect with us on LinkedIn.</p>
+          </a>
+        </li>
+      </ul>
+    </div><!--content-->
+  </div><!--container-->
 </section>
 
-<section id="section-cta" class="section-dark">
+<section id="section-cta" class="section-default section-dark">
   <div class="container">
-    <div class="section-header">
+    <header class="section-header">
       <h2>Stay updated on Tendermint&nbsp;news</h2>
-    </div>
-    {{ partial "email-signup.html" . }}
+    </header>
+    <div class="content">
+      {{ partial "email-signup.html" . }}
+  </div>
   </div>
 </section>
 
-<footer id="site-footer" class="site-bookend">
+<footer id="site-footer">
   <p class="left">&copy; 2016 Tendermint</p>
-
   <p class="right">
     <a href="/about">About</a>
     &middot;

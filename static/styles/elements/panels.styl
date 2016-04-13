@@ -3,20 +3,21 @@
   margin 0 0 0.5*x
 
   .panel-header
-    padding 0 0.5em
+    padding 0.25*x 0.5*x
     background lighten(mcolor,95%)
-    line-height 2em
     border-bottom 1px solid bc
 
-
     h3, h3 a
-      font-weight 500
       color lighten(mcolor,10%)
+      text-transform uppercase
+      font-size 0.75*x
+      font-weight bold
+
     h3 a:hover
       color link
 
       i.fa
-        padding-right 0.2em
+        padding-right 0.25*x
 
   .panel-body
     ul
@@ -29,5 +30,8 @@
       margin 0
       &:last-of-type
         border-bottom none
+      h4
+        line-height 1.25
+        margin 0 0 0.25*x
       p
-        margin 0
+        font-size 0.75*x
