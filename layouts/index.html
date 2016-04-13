@@ -10,56 +10,41 @@
     {{ partial "site-header.html" . }}
     {{ partial "section-hero.html" . }}
     {{ partial "section-benefits.html" . }}
+    {{ partial "section-architecture.html" . }}
+    {{ partial "section-resources.html" . }}
 
-    <section id="section-architecture" class="section-default">
+    <section class="section-default section-columns">
       <div class="container">
         <header class="section-header">
-          <h2>Next Generation Enterprise Architecture</h2>
+          <h2>
+            <span class="short">We&rsquo;re looking for blockchain engineers</span>
+            <span class="long">We&rsquo;re seeking talented blockchain engineers</span>
+          </h2>
         </header>
         <div class="content">
-          <a class="anchor-img" href="/posts/tendermint-socket-protocol"><img src="/images/home/tmsp_architecture.png"/></a>
-          <div class="text">
+          <p>Are you an industry leading blockchain engineer looking to make open-source contributions to a state-of-the-art codebase on the bleeding edge of blockchain tech? If so, we’d love to <a href="mailto:hello@tendermint.com">hear from you</a>.</p>
+        </div><!--content-->
+      </div><!--container-->
+      <div class="container">
+        <header class="section-header">
+          <h2>
+            <span class="short">We also build custom blockchain apps</span>
+            <span class="long">We also build custom blockchain applications</span>
+          </h2>
+        </header>
+        <div class="content">
+          <p>We work directly with a small number of high value clients to help bring their vision to reality. <a href="mailto:hello@tendermint.com">Lets talk.</a></p>
+        </div><!--content-->
+      </div><!--container-->
+    </section>
 
-            <ul>
-              <li>Blockchains continue their journey - increasing functionality while decreasing development complexity.</li> 
-              <li>First there was Bitcoin, an accounting system with limited functionality that is difficult to build on top of.</li>
-              <li>Then came Ethereum, which unlocked the potential of blockchains with a Turing-complete virtual machine that can run any smart contract written in Serpent or Solidity.</li> 
-              <li>Now with Tendermint <a href="http://tendermint.com/posts/tendermint-socket-protocol/">TMSP</a>, you can write smart-contracts in any programming language. Leverage existing codebases, workflows, and development ecosystems to build complex &amp; production-quality applications.</li>
-            </ul>
-
-          </div>
-        </div>
+    <section class="section-default">
+      <div class="container">
+        <header class="section-header">
+          <h2>Watch an interview with the Tendermint team</h2>
+        </header>
+        <iframe class="iframe-video" src="https://www.youtube.com/embed/EfFVh1DIKds" frameborder="0" allowfullscreen></iframe>
       </div>
     </section>
 
-    {{ partial "section-resources.html" . }}
-
-    <section class="section-split section-borderless sections-dark"><div class="container">
-        <div class="content">
-          <div class="column">
-            <h2>
-              <span class="short">We&rsquo;re looking for blockchain engineers</span>
-              <span class="long">We&rsquo;re seeking talented blockchain engineers</span>
-            </h2>
-            <p>Are you an industry leading blockchain engineer looking to make open-source contributions to a state-of-the-art codebase on the bleeding edge of blockchain tech? If so, we’d love to <a href="mailto:hello@tendermint.com">hear from you</a>.
-            </div>
-            <div class="column">
-              <h2>
-                <span class="short">We also build custom blockchain apps</span>
-                <span class="long">We also build custom blockchain applications</span>
-              </h2>
-              <p>We work directly with a small number of high value clients to help bring their vision to reality. <a href="mailto:hello@tendermint.com">Lets talk.</a></p>
-            </div>
-          </div>
-      </div></section>
-
-      <section class="section-default section-borderless">
-        <div class="container">
-          <header class="section-header">
-            <h2>Watch an interview with the Tendermint team</h2>
-          </header>
-          <iframe class="iframe-video" src="https://www.youtube.com/embed/EfFVh1DIKds" frameborder="0" allowfullscreen></iframe>
-        </div>
-      </section>
-
-      {{ partial "site-footer.html" }}
+    {{ partial "site-footer.html" }}

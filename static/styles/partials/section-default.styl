@@ -1,12 +1,12 @@
 .section-default
   .container
-    padding x
+    padding x 0
     border-bottom 1px solid bc
 
     header.section-header
       display flex
       align-items center
-      padding 0.5*x 0 0.75*x
+      padding 0.5*x x 0.75*x
 
       i.fa
         margin-right 0.5*x
@@ -23,10 +23,11 @@
         font-weight bold
         color mcolor
         line-height 1.25*x
+        span.short
+          display inline
+        span.long
+          display none
 
     .content
+      padding 0 x
       margin 0 0 0.5*x
-
-  &.section-borderless
-    .container
-      padding x 0
