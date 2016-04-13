@@ -1,6 +1,3 @@
 # Stuff done today
-* Started on a Media page: http://localhost:1313/media/ 
-* Started on general site design improvements. Not live yet.
-* Deleted and improved the organized a lot of the tmweb template files to comply with the latest version of Hugo
-* Fixed several design bugs around the site.
-* Renamed 'Blog' to 'News' for clarity, because we're adding another blog (presentations) to the site.
+* Worked on improving the design of the marketing site.
+* Simplified a lot of the CSS IDs to prevent too much cascading of styles, reducing bugs.
