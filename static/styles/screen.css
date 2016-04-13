@@ -876,16 +876,16 @@ a.footer-large-button:hover {
   margin: 0 auto;
 }
 #site-footer {
-  border-top: 1px solid #0e4781;
-  border-bottom: 2px solid #05192e;
-}
-#site-footer .site-logo {
-  bottom: -2px;
-  border-bottom: 4px solid #062;
+  height: 48px;
+  line-height: 48px;
+  background: #0a335c;
 }
 #site-footer p {
   padding: 0 1em;
-  margin: 0;
+  color: #4799eb;
+}
+#site-footer a {
+  color: #daebfb;
 }
 #site-header {
   position: fixed;
