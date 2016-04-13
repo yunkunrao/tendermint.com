@@ -1,7 +1,6 @@
 #section-hero
   background mcolor url('../images/home/gradient.jpg') no-repeat center center
   background-size cover
-  text-align center
   width 100vw
   height 100vh
   position relative
@@ -14,7 +13,7 @@
     flex-flow column no-wrap
     align-items center
     justify-content center
-    padding 0 1.5em
+    padding 0 1.5*x
 
   h1
     font-size 2.5*x
@@ -33,9 +32,14 @@
     span.slash
       color lighten(mcolor,20%)
 
+
   .introduction
     color lighten(mcolor,55%)
-    line-height 1.25em
+    line-height 1.25*x
+    text-align center
+
+  .social-media a, #home-arrow-down
+    background hsla(mhue,msat,mlit - 20%,0.2)
 
   .social-media
     display flex
@@ -45,26 +49,24 @@
       margin x*0.25
       display block
 
-      background hsla(mhue,msat,mlit - 20%,0.5)
-      background hsla(0,0,0,0.25)
 
       width 2.5*x
       line-height 2.5*x
       color lighten(mcolor,60%)
+      text-align center
 
   #home-arrow-down
     position absolute
     bottom 0
     left 50%
 
-    background darken(mcolor,20%)
-    background hsla(0,0,0,0.25)
     width 6*x
     margin-left -3*x
 
     font-size 1.5*x
     line-height 2*x
     color lighten(mcolor,60%)
+    text-align center
 
   .social-media a, #home-arrow-down
     transition 0.2s ease all

@@ -110,6 +110,10 @@ textarea {
   font-family: Baskerville, 'Goudy Old Style', Palatino, 'Book Antiqua', serif;
   font-weight: normal;
 }
+a {
+  text-decoration: none;
+  color: #1773cf;
+}
 .article-body {
   font-family: Cambria, 'Hoefler Text', Utopia, 'Liberation Serif', 'Nimbus Roman No9 L Regular', Times, 'Times New Roman', serif;
   font-size: 16px;
@@ -121,10 +125,6 @@ textarea {
   -moz-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
-}
-.article-body a {
-  text-decoration: none;
-  color: #1773cf;
 }
 .article-body a:hover {
   text-decoration: underline;
@@ -785,7 +785,6 @@ a.footer-large-button:hover {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
-  text-align: center;
   width: 100vw;
   height: 100vh;
   position: relative;
@@ -820,7 +819,7 @@ a.footer-large-button:hover {
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  padding: 0 1.5em;
+  padding: 0 24px;
 }
 #section-hero h1 {
   font-size: 40px;
@@ -843,7 +842,12 @@ a.footer-large-button:hover {
 }
 #section-hero .introduction {
   color: #5aa3ed;
-  line-height: 1.25em;
+  line-height: 20px;
+  text-align: center;
+}
+#section-hero .social-media a,
+#section-hero #home-arrow-down {
+  background: rgba(0,0,0,0.2);
 }
 #section-hero .social-media {
   display: -webkit-box;
@@ -858,23 +862,21 @@ a.footer-large-button:hover {
 #section-hero .social-media a {
   margin: 4px;
   display: block;
-  background: rgba(0,0,0,0.5);
-  background: rgba(0,0,0,0.25);
   width: 40px;
   line-height: 40px;
   color: #6cadef;
+  text-align: center;
 }
 #section-hero #home-arrow-down {
   position: absolute;
   bottom: 0;
   left: 50%;
-  background: #082949;
-  background: rgba(0,0,0,0.25);
   width: 96px;
   margin-left: -48px;
   font-size: 24px;
   line-height: 32px;
   color: #6cadef;
+  text-align: center;
 }
 #section-hero .social-media a,
 #section-hero #home-arrow-down {
