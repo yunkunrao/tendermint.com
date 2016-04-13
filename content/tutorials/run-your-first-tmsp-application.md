@@ -98,7 +98,7 @@ Try running these commands:
 > echo hello
 > info
 > commit
-> append_tx abc
+> append_tx "abc"
 > info
 > commit
 ```
@@ -149,23 +149,23 @@ In another window, start the `tmsp-cli console`:
 > set_option serial on
 -> data: {serial=on}
 
-> check_tx 0x00
+> check_tx x00
 -> code: OK
 
-> check_tx 0xFF
+> check_tx xFF
 -> code: OK
 
-> append_tx 0x00
+> append_tx x00
 -> code: OK
 
-> check_tx 0x00
+> check_tx x00
 -> code: BadNonce
 -> log: Invalid nonce. Expected >= 1, got 0
 
-> append_tx 0x01
+> append_tx x01
 -> code: OK
 
-> append_tx 0x04
+> append_tx x04
 -> code: BadNonce
 -> log: Invalid nonce. Expected 2, got 4
 
