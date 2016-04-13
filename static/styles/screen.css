@@ -735,7 +735,7 @@ a.footer-large-button:hover {
   margin: 0 0 20px;
 }
 #section-hero .tagline {
-  color: #91c2f3;
+  color: #4799eb;
   font-size: 12px;
   text-transform: uppercase;
   font-weight: 200;
@@ -745,7 +745,7 @@ a.footer-large-button:hover {
   color: #125ca5;
 }
 #section-hero .introduction {
-  color: #5aa3ed;
+  color: #4799eb;
   line-height: 20px;
   text-align: center;
 }
@@ -777,7 +777,7 @@ a.footer-large-button:hover {
 }
 #section-hero .social-media a,
 #section-hero #home-arrow-down {
-  background: rgba(0,0,0,0.2);
+  background: rgba(0,0,0,0.1);
   -webkit-transition: 0.2s ease all;
   -moz-transition: 0.2s ease all;
   -o-transition: 0.2s ease all;
@@ -893,7 +893,10 @@ a.footer-large-button:hover {
   left: 0;
   z-index: 100;
   height: 48px;
-  background: rgba(5,25,46,0.85);
+  background: #0a335c url("../images/home/gradient.jpg") no-repeat center top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
   width: 100vw;
   display: -webkit-box;
   display: -moz-box;
@@ -922,7 +925,7 @@ a.footer-large-button:hover {
   display: block;
   padding: 0 8px;
   line-height: 48px;
-  color: #91c2f3;
+  color: #4799eb;
 }
 #body-posts #nav-blog a,
 #body-post #nav-blog a,
