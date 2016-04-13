@@ -472,102 +472,6 @@ section.section-default .content ul {
   font-size: 1.25em;
   font-weight: 200;
 }
-.site-logo {
-  background: #0c4;
-  position: absolute;
-  left: 50%;
-  margin-left: -24px;
-  width: 48px;
-  height: 52px;
-}
-.site-logo img {
-  width: 100%;
-  height: 100%;
-}
-.site-bookend {
-  zoom: 1;
-  position: relative;
-  height: 39px;
-  line-height: 3em;
-  font-size: 12px;
-  color: #1773cf;
-}
-.site-bookend:before,
-.site-bookend:after {
-  content: "";
-  display: table;
-}
-.site-bookend:after {
-  clear: both;
-}
-.site-bookend a {
-  color: #75b2f0;
-}
-.site-bookend#site-header {
-  background: rgba(8,38,69,0.9);
-}
-.site-bookend#site-footer {
-  background: #082645;
-}
-#site-header {
-  border-top: 2px solid #05192e;
-  border-bottom: 1px solid rgba(7,33,60,0.9);
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 100;
-  width: 100%;
-}
-#site-header .site-logo {
-  top: -2px;
-  border-bottom: 4px solid #062;
-  -webkit-box-shadow: rgba(0,0,0,0.1) 0 1px 2px;
-  box-shadow: rgba(0,0,0,0.1) 0 1px 2px;
-}
-#site-header ul {
-  zoom: 1;
-  width: 120px;
-  margin: 0;
-}
-#site-header ul:before,
-#site-header ul:after {
-  content: "";
-  display: table;
-}
-#site-header ul:after {
-  clear: both;
-}
-#site-header ul li {
-  margin: 0;
-  float: left;
-  width: 50%;
-}
-#site-header ul li a {
-  display: block;
-  text-align: center;
-  border-top: 2px solid #05192e;
-  margin-top: -2px;
-}
-#site-footer {
-  border-top: 1px solid #0e4781;
-  border-bottom: 2px solid #05192e;
-}
-#site-footer .site-logo {
-  bottom: -2px;
-  border-bottom: 4px solid #062;
-}
-#site-footer p {
-  padding: 0 1em;
-  margin: 0;
-}
-#body-posts #nav-blog a,
-#body-post #nav-blog a,
-#body-tutorials #nav-tutorials a,
-#body-tutorial #nav-tutorials a,
-#body-about #nav-about a,
-#body-developers #nav-developers a {
-  border-top-color: #4799eb;
-}
 .tags {
   display: -webkit-box;
   display: -moz-box;
@@ -845,10 +749,6 @@ a.footer-large-button:hover {
   line-height: 20px;
   text-align: center;
 }
-#section-hero .social-media a,
-#section-hero #home-arrow-down {
-  background: rgba(0,0,0,0.2);
-}
 #section-hero .social-media {
   display: -webkit-box;
   display: -moz-box;
@@ -856,12 +756,10 @@ a.footer-large-button:hover {
   display: -ms-flexbox;
   display: box;
   display: flex;
-  margin: 0 auto;
-  margin-top: 16px;
+  margin: 16px auto 0;
 }
 #section-hero .social-media a {
   margin: 4px;
-  display: block;
   width: 40px;
   line-height: 40px;
   color: #6cadef;
@@ -870,16 +768,16 @@ a.footer-large-button:hover {
 #section-hero #home-arrow-down {
   position: absolute;
   bottom: 0;
-  left: 50%;
-  width: 96px;
-  margin-left: -48px;
+  left: 0;
+  width: 100vw;
   font-size: 24px;
   line-height: 32px;
-  color: #6cadef;
+  color: #4799eb;
   text-align: center;
 }
 #section-hero .social-media a,
 #section-hero #home-arrow-down {
+  background: rgba(0,0,0,0.2);
   -webkit-transition: 0.2s ease all;
   -moz-transition: 0.2s ease all;
   -o-transition: 0.2s ease all;
@@ -976,6 +874,63 @@ a.footer-large-button:hover {
   max-width: 720px;
   max-height: 405px;
   margin: 0 auto;
+}
+#site-footer {
+  border-top: 1px solid #0e4781;
+  border-bottom: 2px solid #05192e;
+}
+#site-footer .site-logo {
+  bottom: -2px;
+  border-bottom: 4px solid #062;
+}
+#site-footer p {
+  padding: 0 1em;
+  margin: 0;
+}
+#site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  height: 48px;
+  background: rgba(5,25,46,0.85);
+  width: 100vw;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+}
+#site-header a#nav-home {
+  display: block;
+}
+#site-header a#nav-home img {
+  width: 48px;
+  height: 48px;
+}
+#site-header nav {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  padding: 0 8px;
+}
+#site-header nav a {
+  display: block;
+  padding: 0 8px;
+  line-height: 48px;
+  color: #91c2f3;
+}
+#body-posts #nav-blog a,
+#body-post #nav-blog a,
+#body-tutorials #nav-tutorials a,
+#body-tutorial #nav-tutorials a,
+#body-about #nav-about a,
+#body-developers #nav-developers a {
+  border-top-color: #4799eb;
 }
 .btn {
   background: -webkit-linear-gradient(top, hsla(0,0%,99%,1), hsla(0,0%,93%,1));
