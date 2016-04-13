@@ -542,10 +542,32 @@ iframe.iframe-video {
   max-width: 320px;
   width: 100%;
   background: rgba(0,0,0,0.25);
-  padding: 0.5em 0.5em 0;
+  padding: 4px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -o-box-orient: vertical;
+  -webkit-box-lines: single;
+  -moz-box-lines: single;
+  -o-box-lines: single;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
 }
 #mc-embedded-subscribe-form .input-group {
-  margin: 0 0 0.5em;
+  margin: 4px;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 #mc-embedded-subscribe-form .input-group input,
 #mc-embedded-subscribe-form .input-group button {
