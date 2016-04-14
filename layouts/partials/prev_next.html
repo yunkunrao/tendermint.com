@@ -1,36 +1,15 @@
-<!--
-  This is a helper file that adds previous and next links to the bottom of each
-  blog post. (below next and previous refer to chronological next and previous)
-
-  It will check to see if there is a previous blog post. If is, it will print
-  an arrow as well as the title of the previous post as a link as
-  left-justified text.
-
-  It will then check for a next blog post. If there is one it prints the title
-  of the next post with a right arrow as right justified text on the same line.
-
-  If there is ever not a next or previous post, it does nothing.
--->
-
-<!-- Fix to make links appear on top of categories tags -->
-<div id="article-prev-next" class="container">
+<div id="article-prev-next">
   {{if .PrevInSection}}
-    <a id="article-prev" class="article-prev-next" href="{{.PrevInSection.Permalink}}">
-      <div class="arrow">&lsaquo;</div>
-      <div class="text">
-        <div class="label">Previous Post</div>
-        <div class="title">{{.PrevInSection.Title}}</div>
-      </div>
+    <a class="article-prev-next article-prev" href="{{.PrevInSection.Permalink}}">
+      <div class="label"><i class="fa fa-angle-left"></i> Previous Article</div>
+      <div class="title">{{.PrevInSection.Title}}</div>
     </a>
   {{end}}
 
   {{if .NextInSection}}{{if .NextInSection.Title}}
-    <a id="article-next" class="article-prev-next" href="{{.NextInSection.Permalink}}">
-      <div class="text">
-        <div class="label">Next Post</div>
-        <div class="title">{{.NextInSection.Title}}</div>
-      </div>
-      <div class="arrow">&rsaquo;</div>
+    <a class="article-prev-next article-next" href="{{.NextInSection.Permalink}}">
+      <div class="label"><i class="fa fa-angle-right"></i> Next Article</div>
+      <div class="title">{{.NextInSection.Title}}</div>
     </a>
   {{end}}{{end}}
 </div>
