@@ -359,23 +359,14 @@ a.article-prev-next:hover .arrow {
   margin-right: 0;
   margin-left: 16px;
 }
-.tags {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: box;
-  display: flex;
-  margin: -4px;
-}
 .tags .tag {
-  display: block;
-  margin: 4px;
-  padding: 0 12px;
-  background: #f7f7f7;
-  border: 1px solid #ebebeb;
-  line-height: 32px;
-  color: #666;
+  display: inline;
+  margin-right: 8px;
+  color: #333;
+}
+.tags .tag:hover {
+  text-decoration: underline;
+  color: #1773cf;
 }
 .body-article #section-hero,
 .body-article #section-post {
@@ -446,26 +437,55 @@ iframe.iframe-video {
   margin: 0 auto;
 }
 .li-article {
-  border: 1px solid #ddd;
   margin-bottom: 16px;
 }
 .li-article:last-of-type {
   margin-bottom: 0;
 }
+.li-article .li-article-link {
+  display: block;
+  color: #333;
+  border: 1px solid #ddd;
+}
+.li-article .li-article-link:hover {
+  background: #f4f9fe;
+  border-color: #91c2f3;
+}
 .li-article .li-article-header {
-  padding: 16px 16px 8px;
+  padding: 10px 12px 8px;
 }
 .li-article .li-article-header h2 {
   line-height: 1.25;
   font-weight: 500;
+  color: #1773cf;
 }
 .li-article .li-article-content {
-  padding: 0 16px 16px;
+  padding: 0 12px 8px;
 }
 .li-article .li-article-meta {
   background: #f2f2f2;
+  border: 1px solid #ddd;
+  border-top: none;
+  padding: 8px 12px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -o-box-orient: vertical;
+  -webkit-box-lines: single;
+  -moz-box-lines: single;
+  -o-box-lines: single;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
   font-size: 12px;
-  border-top: 1px solid #ddd;
+}
+.li-article .li-article-meta .tags .tag {
+  color: #999;
 }
 #mc-embedded-subscribe-form {
   max-width: 320px;
@@ -737,7 +757,7 @@ iframe.iframe-video {
   position: relative;
   margin-top: 48px;
 }
-#section-top .container {
+#section-top .section-container {
   width: 100vw;
   height: 192px;
   display: -webkit-box;

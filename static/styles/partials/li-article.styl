@@ -1,21 +1,38 @@
 .li-article
-  border 1px solid bc
   margin-bottom x
-
   &:last-of-type
     margin-bottom 0
 
+  .li-article-link
+    display block
+    color txt
+    border 1px solid bc
+    &:hover
+      background lighten(mcolor,97%)
+      border-color lighten(mcolor,70%)
+
+
   .li-article-header
-    padding x x 0.5*x
+    padding 0.625*x 0.75*x 0.5*x
 
     h2
       line-height 1.25
       font-weight 500
+      color link
 
   .li-article-content
-    padding 0 x x
+    padding 0 0.75*x 0.5*x
 
   .li-article-meta
     background hsl(0,0,95%)
+    border 1px solid bc
+    border-top none
+    padding 0.5*x 0.75*x
+    display flex
+    flex-flow column no-wrap
+
     font-size 0.75*x
-    border-top 1px solid bc
+
+    .tags
+      .tag
+        color light

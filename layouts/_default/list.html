@@ -12,11 +12,9 @@
   <section class="section-default">
     <div class="section-container">
       <div class="section-content">
-        <ul>
-          {{ range .Data.Pages }}
-          {{ .Render "summary"}}
-          {{ end }}
-        </ul>
+        {{ range .Data.Pages }}
+        {{ .Render "summary"}}
+        {{ end }}
       </div>
     </div>
   </section>
