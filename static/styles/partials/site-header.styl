@@ -5,31 +5,47 @@
   z-index 100
 
   height 3*x
-  background mcolor url('../images/home/gradient.jpg') no-repeat center top
+  background mcolor url('../images/home/gradient.jpg') no-repeat top right
   background-size cover
 
   width 100vw
   display flex
 
+  box-shadow hsla(mhue,msat,mlit - 15%,0.15) 0 0.125*x 0.16*x
+  // box-shadow hsla(0,0,0,0.5) 0 0.125*x 0.16*x
+
   a#nav-home
     display block
+    border-top 4px solid darken(mcolor,25%)
     img
-      width 3*x
-      height 3*x
+      width 3*x - 4px
+      height 3*x - 4px
 
   nav
+    flex 1
     display flex
     padding 0 0.5*x
+    border-top 4px solid darken(mcolor,25%)
+    box-shadow inset lighten(mcolor,10%) 1px 0 0
     a
       display block
-      padding 0 0.5*x
-      line-height 3*x
-      color lighten(mcolor,50%)
+      padding 0 0.25*x
+      margin-right 0.5*x
+      line-height 3*x - 4px
+      color lighten(mcolor,75%)
+      border-top 4px solid darken(mcolor,25%)
+      margin-top -4px
+      &:hover
+        border-top-color lighten(mcolor,25%)
+        color lighten(mcolor,90%)
 
-#body-posts #nav-blog a
-#body-post #nav-blog a
-#body-tutorials #nav-tutorials a
-#body-tutorial #nav-tutorials a
-#body-about #nav-about a
-#body-developers #nav-developers a
-  border-top-color lighten(mcolor,50%)
+#body-home #nav-home
+  border-top-color darken(acolor,25%) !important
+
+#body-posts #nav-posts
+#body-post #nav-posts
+#body-tutorials #nav-tutorials
+#body-tutorial #nav-tutorials
+#body-about #nav-about
+#body-developers #nav-developers
+  border-top-color lighten(mcolor,25%) !important

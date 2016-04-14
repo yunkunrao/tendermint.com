@@ -5,7 +5,7 @@ title = "Developers"
 body = "body-developers"
 +++
 
-<section id="section-hero" class="section-dark">
+<section id="section-top">
 <div class="container">
   <h1>Developers</h1>
   <p>Build on Tendermint&rsquo;s open source platform. Start learning with <a href="/tutorials">these tutorials</a>.</p>
@@ -13,7 +13,7 @@ body = "body-developers"
 </div>
 </section>
 
-<section class="section-panels">
+<section class="section-default">
 <div class="container">
   <div class="content">
     <div class="panel">

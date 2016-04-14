@@ -274,7 +274,10 @@ body {
 }
 .panel {
   border: 1px solid #ddd;
-  margin: 0 0 8px;
+  margin-bottom: 8px;
+}
+.panel:last-of-type {
+  margin-bottom: 0;
 }
 .panel .panel-header {
   padding: 4px 8px;
@@ -373,13 +376,6 @@ a.article-prev-next:hover .arrow {
   border: 1px solid #ebebeb;
   line-height: 32px;
   color: #666;
-}
-#body-about section.section-portraits h2 {
-  text-align: center;
-  margin-bottom: 10px;
-}
-#body-about section.section-portraits .container {
-  padding: 0;
 }
 #body-about .ul-portraits {
   zoom: 1;
@@ -626,7 +622,6 @@ iframe.iframe-video {
 }
 .section-default .container .content {
   padding: 0 16px;
-  margin: 0 0 8px;
 }
 .section-default.section-dark {
   background: #0a335c -webkit-linear-gradient(top, #0c3d6e, #0a3057);
@@ -704,12 +699,14 @@ iframe.iframe-video {
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  padding: 0 24px;
+  padding: 24px 24px 0;
 }
 #section-hero h1 {
   font-size: 40px;
   font-weight: 200;
   color: #daebfb;
+  line-height: 1;
+  margin: 0 0 8px;
 }
 #section-hero .tagline,
 #section-hero .introduction {
@@ -867,7 +864,7 @@ iframe.iframe-video {
   left: 0;
   z-index: 100;
   height: 48px;
-  background: #0a335c url("../images/home/gradient.jpg") no-repeat center top;
+  background: #0a335c url("../images/home/gradient.jpg") no-repeat top right;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -878,15 +875,25 @@ iframe.iframe-video {
   display: -ms-flexbox;
   display: box;
   display: flex;
+  -webkit-box-shadow: rgba(3,13,23,0.15) 0 2px 2.56px;
+  box-shadow: rgba(3,13,23,0.15) 0 2px 2.56px;
 }
 #site-header a#nav-home {
   display: block;
+  border-top: 4px solid #082645;
 }
 #site-header a#nav-home img {
-  width: 48px;
-  height: 48px;
+  width: 44px;
+  height: 44px;
 }
 #site-header nav {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   display: -webkit-box;
   display: -moz-box;
   display: -webkit-flex;
@@ -894,20 +901,33 @@ iframe.iframe-video {
   display: box;
   display: flex;
   padding: 0 8px;
+  border-top: 4px solid #082645;
+  -webkit-box-shadow: inset #0e4781 1px 0 0;
+  box-shadow: inset #0e4781 1px 0 0;
 }
 #site-header nav a {
   display: block;
-  padding: 0 8px;
-  line-height: 48px;
-  color: #4799eb;
+  padding: 0 4px;
+  margin-right: 8px;
+  line-height: 44px;
+  color: #a3ccf5;
+  border-top: 4px solid #082645;
+  margin-top: -4px;
 }
-#body-posts #nav-blog a,
-#body-post #nav-blog a,
-#body-tutorials #nav-tutorials a,
-#body-tutorial #nav-tutorials a,
-#body-about #nav-about a,
-#body-developers #nav-developers a {
-  border-top-color: #4799eb;
+#site-header nav a:hover {
+  border-top-color: #1466b8;
+  color: #daebfb;
+}
+#body-home #nav-home {
+  border-top-color: #093 !important;
+}
+#body-posts #nav-posts,
+#body-post #nav-posts,
+#body-tutorials #nav-tutorials,
+#body-tutorial #nav-tutorials,
+#body-about #nav-about,
+#body-developers #nav-developers {
+  border-top-color: #1466b8 !important;
 }
 ul.ul-boxed {
   text-align: left;
