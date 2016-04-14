@@ -1,6 +1,6 @@
 {{ partial "header.html" . }}
 
-<body id="body-posts" class="body-articles site-articles">
+<body id="body-posts">
   {{ partial "site-header.html" . }}
 
   <section id="section-top">
@@ -10,13 +10,13 @@
     </div>
   </section>
 
-  <section id="section-posts">
+  <section class="section-default">
     <div class="container">
-      <ul>
+      <div class="content">
         {{ range .Data.Pages }}
         {{ .Render "summary"}}
         {{ end }}
-      </ul>
+      </div>
     </div>
   </section>
 

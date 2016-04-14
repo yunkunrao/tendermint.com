@@ -1,8 +1,12 @@
-<article>
-  <h2><a href='{{ .Permalink }}'> {{ .Title }}</a></h2>
-  <p>
-    {{ .Description }} 
-    <span class="date">{{ .Date.Format "January 2, 2006" }}</span></p>
-  </p>
-  {{ partial "tags.html" . }}
-</article>
+<div class="li-article">
+  <header class="li-article-header">
+    <h2><a href='{{ .Permalink }}'> {{ .Title }}</a></h2>
+  </header>
+  <div class="li-article-content">
+    {{ .Description }}
+  </div>
+  <div class="li-article-meta">
+    <div class="date">{{ .Date.Format "January 2, 2006" }}</div>
+    {{ partial "tags.html" . }}
+  </div>
+</div>
