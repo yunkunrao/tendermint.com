@@ -7,14 +7,14 @@ body = "body-about"
 +++
 
 <section id="section-top">
-  <div class="container">
+  <div class="section-container">
     <h1>About</h1>
     <p>Bringing simplicity, security, and speed to the world's blockchains.</p>
   </div>
 </section>
 
 <section class="section-default">
-  <div class="container">
+  <div class="section-container">
     <header class="section-header">
       <h2>The Team</h2>
     </header>
