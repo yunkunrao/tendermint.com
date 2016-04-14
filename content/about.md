@@ -58,30 +58,31 @@ body = "body-about"
   </div>
 </section>
 
-<section class="section-portraits">
-  <div class="section-header">
-    <h2>The Advisors</h2>
-  </div>
+<section class="section-default">
+  <div class="section-container">
+    <header class="section-header">
+      <h2>The Advisors</h2>
+    </header>
 
-  <div class="section-content">
-    <ul class="ul-portraits">
-      <li>
-        <img class="portrait"
-        src="/images/advisors/pete-harris-01.jpg" alt="Pete Harris">
-        <div class="label">
-          <span class="name">Pete Harris</span>
-          <span class="title">Advisor</span>
-        </div>
-      </li>
-      <li>
-        <img class="portrait"
-        src="/images/advisors/ryan-singer-01.jpg" alt="Ryan Singer">
-        <div class="label">
-          <span class="name">Ryan Singer</span>
-          <span class="title">Advisor</span>
-        </div>
-      </li>
-    </ul>
+    <div class="section-content">
+      <ul class="ul-portraits">
+        <li>
+          <img class="portrait"
+          src="/images/advisors/pete-harris-01.jpg" alt="Pete Harris">
+          <div class="label">
+            <span class="name">Pete Harris</span>
+            <span class="title">Advisor</span>
+          </div>
+        </li>
+        <li>
+          <img class="portrait"
+          src="/images/advisors/ryan-singer-01.jpg" alt="Ryan Singer">
+          <div class="label">
+            <span class="name">Ryan Singer</span>
+            <span class="title">Advisor</span>
+          </div>
+        </li>
+      </ul>
+    </div>
   </div>
 </section>
-
