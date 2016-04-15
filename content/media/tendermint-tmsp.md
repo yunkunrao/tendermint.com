@@ -6,6 +6,6 @@ description = "Jae Kwon and Ethan Buchman discussed how developers can write blo
 
 +++
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/9krAQzN6tbc" frameborder="0" allowfullscreen></iframe>
+<iframe class="iframe-video" width="560" height="315" src="https://www.youtube.com/embed/9krAQzN6tbc" frameborder="0" allowfullscreen></iframe>
 
 <p>Jae Kwon and Ethan Buchman discussed how developers can write blockchain smart contracts in any language using TMSP (Tendermint Socket Protocol).</p>

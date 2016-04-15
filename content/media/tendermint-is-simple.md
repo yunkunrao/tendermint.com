@@ -5,7 +5,7 @@ title = "Tendermint = Simple"
 description = "Jae Kwon: Program your app any language - stay focused on business logic."
 +++
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/9krAQzN6tbc?start=882" frameborder="0" allowfullscreen></iframe>
+<iframe class="iframe-video" width="560" height="315" src="https://www.youtube.com/embed/9krAQzN6tbc?start=882" frameborder="0" allowfullscreen></iframe>
 
 <p>Jae Kwon: Program your app any language &ndash; stay focused on business logic.
 </p>

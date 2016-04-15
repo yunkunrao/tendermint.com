@@ -148,11 +148,11 @@ a {
 .article-body table,
 .article-body blockquote,
 .article-body img {
-  margin: 0 0 1.5em;
+  margin-bottom: 1.5em;
 }
 .article-body iframe {
   display: block;
-  margin: 0 auto 1.5em;
+  margin-bottom: 24px;
 }
 .article-body p code {
   -webkit-border-radius: 3px;
@@ -268,49 +268,6 @@ body {
 .right {
   float: right;
 }
-.panel {
-  border: 1px solid #ddd;
-  margin-bottom: 8px;
-}
-.panel:last-of-type {
-  margin-bottom: 0;
-}
-.panel .panel-header {
-  padding: 4px 8px;
-  background: #edf5fd;
-  border-bottom: 1px solid #ddd;
-}
-.panel .panel-header h3,
-.panel .panel-header h3 a {
-  color: #0e4781;
-  text-transform: uppercase;
-  font-size: 12px;
-  font-weight: bold;
-}
-.panel .panel-header h3 a:hover {
-  color: #1773cf;
-}
-.panel .panel-header h3 a:hover i.fa {
-  padding-right: 4px;
-}
-.panel .panel-body ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.panel .panel-body li {
-  padding: 10px 12px 8px;
-  border-bottom: 1px solid #ddd;
-  margin: 0;
-}
-.panel .panel-body li:last-of-type {
-  border-bottom: none;
-}
-.panel .panel-body li h4 {
-  line-height: 1.25;
-  margin: 0 0 4px;
-  font-weight: 500;
-}
 #article-prev-next {
   margin-top: 1.5em;
 }
@@ -414,7 +371,14 @@ iframe.iframe-video {
   height: 56.25vw;
   max-width: 720px;
   max-height: 405px;
-  margin: 0 auto;
+  margin-left: -16px;
+  margin-right: -16px;
+}
+@media screen and (min-width: 768px) {
+  iframe.iframe-video {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 .li-article {
   margin-bottom: 16px;
@@ -503,6 +467,78 @@ iframe.iframe-video {
 #mc-embedded-subscribe-form .input-group button {
   vertical-align: top;
   width: 100%;
+}
+.panels {
+  margin: -8px;
+}
+.panels .panel {
+  padding: 8px;
+}
+.panels .panel .panel-container {
+  border: 1px solid #ddd;
+}
+.panels .panel .panel-header {
+  padding: 4px 8px;
+  background: #edf5fd;
+  border-bottom: 1px solid #ddd;
+}
+.panels .panel .panel-header h3,
+.panels .panel .panel-header h3 a {
+  color: #0e4781;
+  font-size: 16px;
+  font-weight: 500;
+}
+.panels .panel .panel-header h3 a:hover {
+  color: #1773cf;
+}
+.panels .panel .panel-header h3 a:hover i.fa {
+  padding-right: 4px;
+}
+.panels .panel .panel-body ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.panels .panel .panel-body li {
+  padding: 10px 12px 8px;
+  border-bottom: 1px solid #ddd;
+  margin: 0;
+}
+.panels .panel .panel-body li:last-of-type {
+  border-bottom: none;
+}
+.panels .panel .panel-body li h4 {
+  line-height: 1.25;
+  margin: 0 0 4px;
+  font-weight: 500;
+}
+@media screen and (min-width: 768px) {
+  .panels {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -o-box-orient: horizontal;
+    -webkit-box-lines: multiple;
+    -moz-box-lines: multiple;
+    -o-box-lines: multiple;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+  }
+  .panels .panel {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -o-box-flex: 1;
+    box-flex: 1;
+    -webkit-flex: 1 0 50%;
+    -ms-flex: 1 0 50%;
+    flex: 1 0 50%;
+  }
 }
 #section-architecture a.anchor-img {
   text-align: center;
@@ -816,31 +852,17 @@ iframe.iframe-video {
     max-width: 22em;
   }
 }
-#section-social-media ul li {
-  padding: 0;
-}
-#section-social-media ul li a {
-  display: block;
-  padding: 0.55em 0.75em;
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
-  -o-box-flex: 1;
-  box-flex: 1;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-#section-social-media ul li a h3 {
+#section-social-media ul.ul-boxed li a h3 {
   color: #a3ccf5;
   font-size: 16px;
 }
-#section-social-media ul li a h3 i.fa {
+#section-social-media ul.ul-boxed li a h3 i.fa {
   padding-right: 0.2em;
 }
-#section-social-media ul li a:hover {
+#section-social-media ul.ul-boxed li a:hover {
   background: #0e4781;
 }
-#section-social-media ul li a:hover h3 {
+#section-social-media ul.ul-boxed li a:hover h3 {
   color: #c8e0f9;
 }
 #section-top {
