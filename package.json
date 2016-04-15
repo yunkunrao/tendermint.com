@@ -9,7 +9,7 @@
     "bcss": "stylus -u nib static/styles/screen.styl -o static/styles/",
     "wjs": "watchify -e static/scripts/app.js -o static/scripts/bundle.js",
     "bjs": "browserify -e static/scripts/app.js > static/scripts/bundle.js",
-    "build": "stylus -u nib static/styles/screen.styl -o static/styles/ && browserify -e static/scripts/app.js > static/scripts/bundle.js",
+    "build": "stylus -u nib -c static/styles/screen.styl -o static/styles/ && browserify -e static/scripts/app.js > static/scripts/bundle.js",
     "dev-deploy": "rsync -avzru --delete-excluded --partial --progress ./public/ 91.121.116.55:~/www/tendermint.nylira.com/"
   },
   "repository": {
