@@ -950,15 +950,14 @@ iframe.iframe-video {
   display: -ms-flexbox;
   display: box;
   display: flex;
-  padding: 0 8px;
   border-top: 4px solid #082645;
   -webkit-box-shadow: inset #0e4781 1px 0 0;
   box-shadow: inset #0e4781 1px 0 0;
+  padding-left: 8px;
 }
 #site-header nav a {
   display: block;
-  padding: 0 4px;
-  margin-right: 8px;
+  padding: 0 8px;
   line-height: 44px;
   color: #a3ccf5;
   border-top: 4px solid #082645;
@@ -978,6 +977,30 @@ iframe.iframe-video {
 #body-about #nav-about,
 #body-developers #nav-developers {
   border-top-color: #1466b8 !important;
+}
+@media screen and (min-width: 400px) {
+  #site-header nav {
+    padding-left: 12px;
+  }
+  #site-header nav a {
+    padding: 0 12px;
+  }
+}
+@media screen and (min-width: 768px) {
+  #site-header nav {
+    padding-left: 12px;
+    -webkit-box-pack: end;
+    -moz-box-pack: end;
+    -o-box-pack: end;
+    -ms-flex-pack: end;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+  }
+  #site-header nav a {
+    border-left: 1px solid #082949;
+    border-left: 1px solid rgba(0,0,0,0.2);
+    padding: 0 32px;
+  }
 }
 ul.ul-boxed {
   text-align: left;
