@@ -82,11 +82,10 @@
 
 @media screen and (min-width: 768px)
   .section-default
-
     .section-container
       padding 1.25*x
 
-    &.section-columns
+    &.section-columns .columns
       display flex
       flex-flow row wrap
       .section-container
@@ -94,7 +93,15 @@
         &:nth-of-type(2n - 1)
           border-right 1px solid bc
 
-      &.section-dark
-        .section-container
-          &:nth-of-type(2n - 1)
-            border-right-color lighten(mcolor, 20%)
+    &.section-columns.section-dark .columns
+      .section-container
+        &:nth-of-type(2n - 1)
+          border-right-color lighten(mcolor, 20%)
+
+@media screen and (min-width: 960px)
+  .section-default
+    .section-container
+      .section-header
+      .section-content
+        max-width 960px
+        margin 0 auto
