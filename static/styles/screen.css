@@ -1210,6 +1210,9 @@ iframe.iframe-video {
   border-top-color: #1466b8;
   color: #daebfb;
 }
+#site-header nav a#nav-media {
+  display: none;
+}
 #body-home #nav-home {
   border-top-color: #093 !important;
 }
@@ -1243,6 +1246,9 @@ iframe.iframe-video {
     border-left: 1px solid #082949;
     border-left: 1px solid rgba(0,0,0,0.2);
     padding: 0 32px;
+  }
+  #site-header nav a#nav-media {
+    display: block;
   }
 }
 ul.ul-boxed {
