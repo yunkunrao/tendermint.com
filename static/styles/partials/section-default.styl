@@ -6,10 +6,9 @@
     .section-header
       display flex
       align-items center
-      padding 0.5*x x 0.75*x
+      padding 0.5*x x x
 
       i.fa
-        margin-right 0.5*x
         background lighten(mcolor,25%)
         width 1.5*x
         border-radius 0.75*x
@@ -18,6 +17,8 @@
         line-height 1.5*x
         text-align center
         color #fff
+        margin -0.5*x 0
+        margin-right 0.5*x
 
       h2
         font-weight bold
@@ -55,3 +56,15 @@
         color lighten(mcolor,90%)
         &:hover
           color #fff
+
+@media screen and (min-width: 400px)
+  .section-default
+    .section-container
+      .section-header
+        i.fa
+          width 1.875*x
+          line-height 1.875*x
+          font-size 0.8333*x
+          border-radius 0.9375*x
+        h2
+          font-size 1.25*x

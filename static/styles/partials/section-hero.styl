@@ -22,8 +22,8 @@
     line-height 1
     margin 0 0 0.5*x
 
-  .tagline, .introduction
-    margin 0 0 1.25*x
+  .tagline, .introduction, form
+    margin-bottom 1.25*x
 
   .tagline
     color lighten(mcolor,50%)
@@ -36,12 +36,11 @@
 
   .introduction
     color lighten(mcolor,50%)
-    line-height 1.25*x
+    line-height 1.25
     text-align center
 
   .social-media
     display flex
-    margin x auto 0
     a
       margin x*0.25
 
@@ -67,3 +66,37 @@
     &:hover
       background hsla(mhue,msat,mlit - 20%,0.5)
       color lighten(mcolor,80%)
+
+
+@media screen and (min-width: 360px)
+  #section-hero
+    h1
+      font-size 3.25*x
+
+    .tagline, .introduction, form
+      margin-bottom 2*x
+
+    .tagline
+      font-size x
+
+    .introduction
+      font-size 1.25*x
+
+    .social-media
+      a
+        margin 0.333*x
+        width 3*x
+        line-height 3*x
+        font-size 1.20*x
+
+@media screen and (min-width: 400px)
+  #section-hero
+    .section-container
+      padding-left 3*x
+      padding-right 3*x
+
+    .social-media
+      a
+        width 3.5*x
+        line-height 3.5*x
+        font-size 1.5*x
