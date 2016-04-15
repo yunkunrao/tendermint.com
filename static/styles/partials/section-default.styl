@@ -1,12 +1,13 @@
 .section-default
   .section-container
-    padding x 0
+    padding x
     border-bottom 1px solid bc
 
     .section-header
       display flex
       align-items center
-      padding 0.5*x x x
+      padding-top 0.5*x
+      padding-bottom x
 
       i.fa
         background lighten(mcolor,25%)
@@ -29,9 +30,6 @@
         span.long
           display none
 
-    .section-content
-      padding 0 x
-
   &.section-dark
     background mcolor linear-gradient(top, lighten(mcolor,5%), darken(mcolor,5%))
 
@@ -40,7 +38,6 @@
 
       .section-header
         justify-content center
-        padding 0.5*x x x
         h2
           color lighten(mcolor,90%)
 
@@ -49,7 +46,7 @@
 
       ul
         li
-          border 1px solid lighten(mcolor,10%)
+          border 1px solid lighten(mcolor,12%)
           background lighten(mcolor,3%)
 
       a
@@ -68,3 +65,20 @@
           border-radius 0.9375*x
         h2
           font-size 1.25*x
+
+@media screen and (min-width: 768px)
+  .section-default
+
+    &.section-columns
+      display flex
+      flex-flow row wrap
+      .section-container
+        flex 1 0 50%
+        padding 1.25*x
+        &:nth-of-type(2n - 1)
+          border-right 1px solid bc
+
+      &.section-dark
+        .section-container
+          &:nth-of-type(2n - 1)
+            border-right-color lighten(mcolor, 20%)
