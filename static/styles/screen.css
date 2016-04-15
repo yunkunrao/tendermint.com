@@ -953,7 +953,7 @@ iframe.iframe-video {
 }
 #section-top .section-container {
   width: 100vw;
-  height: 192px;
+  height: 160px;
   display: -webkit-box;
   display: -moz-box;
   display: -webkit-flex;
@@ -995,6 +995,39 @@ iframe.iframe-video {
   color: #4799eb;
   line-height: 20px;
   text-align: center;
+  max-width: 20em;
+}
+#section-top p a {
+  color: #a3ccf5;
+  background: rgba(0,0,0,0.2);
+  padding: 0 4px;
+}
+#section-top p a:hover {
+  color: #fff;
+}
+@media screen and (min-width: 400px) {
+  #section-top .section-container {
+    height: 192px;
+  }
+  #section-top h1 {
+    font-size: 40px;
+    margin: 0 0 12px;
+  }
+  #section-top p {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 768px) {
+  #section-top .section-container {
+    height: 256px;
+  }
+  #section-top h1 {
+    font-size: 40px;
+    margin: 0 0 12px;
+  }
+  #section-top p {
+    font-size: 20px;
+  }
 }
 #site-footer {
   height: 48px;
@@ -1195,6 +1228,22 @@ ul.ul-boxed li {
   line-height: 1.25em;
   font-size: 0.9em;
   color: #666;
+}
+@media screen and (min-width: 768px) {
+  .ul-portraits li {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -o-box-flex: 1;
+    box-flex: 1;
+    -webkit-flex: 0 0 25%;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+  }
+  .ul-portraits span.name {
+    border-bottom: 1px dotted #ddd;
+    margin-bottom: 5.328px;
+    padding-bottom: 5.328px;
+  }
 }
 .btn {
   background: -webkit-linear-gradient(top, hsla(0,0%,99%,1), hsla(0,0%,93%,1));
