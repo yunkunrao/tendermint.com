@@ -1,0 +1,50 @@
+#section-social-media ul.ul-social-media
+  display flex
+  flex-flow column no-wrap
+  align-items stretch
+
+  margin -0.25*x
+  li
+    padding 0.25*x
+    background transparent
+    border none
+    a
+      display block
+      padding 0.75*x x
+      border 1px solid lighten(mcolor,15%)
+      background lighten(mcolor,5%)
+      h3
+        color lighten(mcolor,85%)
+        font-size x
+        font-weight 500
+        i.fa
+          padding-right 0.2em
+
+      &:hover
+        background lighten(mcolor,10%)
+        h3
+          color lighten(mcolor,85%)
+
+@media screen and (min-width: 400px)
+  #section-social-media ul.ul-social-media
+    li
+      a
+        h3
+          border-bottom 1px dotted lighten(mcolor,15%)
+          padding-bottom 0.5*x
+          margin-bottom 0.5*x
+
+@media screen and (min-width: 768px)
+  #section-social-media ul.ul-social-media
+    display flex
+    flex-flow row wrap
+    li
+      flex 1 0 50%
+      display flex
+      a
+        flex 1
+
+@media screen and (min-width: 960px)
+  #section-social-media ul.ul-social-media
+    li
+      flex 1 0 25%

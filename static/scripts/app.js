@@ -15,7 +15,7 @@ $("#home-arrow-down").click(function(event) {
   console.log('how-arrow clicked!')
 
   $('html, body').animate({
-    scrollTop: $("#scroll-down-here").offset().top - 50
+    scrollTop: $("#scroll-down-here").offset().top - 48
   }, 1000)
 })
 

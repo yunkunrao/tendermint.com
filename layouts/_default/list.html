@@ -3,19 +3,19 @@
 <body class="body-articles site-articles">
   {{ partial "site-header.html" . }}
 
-  <section id="section-hero" class="section-dark">
-    <div class="container">
+  <section id="section-top">
+    <div class="section-container">
       <h1>{{ .Title}}</h1>
     </div>
   </section>
 
-  <section id="section-posts">
-    <div class="container">
-      <ul>
+  <section class="section-default">
+    <div class="section-container">
+      <div class="section-content">
         {{ range .Data.Pages }}
         {{ .Render "summary"}}
         {{ end }}
-      </ul>
+      </div>
     </div>
   </section>
 

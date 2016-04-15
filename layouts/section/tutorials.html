@@ -1,22 +1,22 @@
 {{ partial "header.html" . }}
 
-<body id="body-tutorials" class="body-articles site-articles">
+<body id="body-tutorials">
   {{ partial "site-header.html" . }}
 
-  <section id="section-hero" class="section-dark">
-    <div class="container">
+  <section id="section-top">
+    <div class="section-container">
       <h1>{{ .Title}}</h1>
       <p>Understand how to use and develop for Tendermint.</p>
     </div>
   </section>
 
-  <section id="section-posts">
-    <div class="container">
-      <ul>
+  <section class="section-default">
+    <div class="section-container">
+      <div class="section-content">
         {{ range .Data.Pages }}
         {{ .Render "summary"}}
         {{ end }}
-      </ul>
+      </div>
     </div>
   </section>
 

@@ -1,0 +1,49 @@
+.li-article
+  margin-bottom x
+  &:last-of-type
+    margin-bottom 0
+
+  .li-article-link
+    display block
+    color txt
+    border 1px solid bc
+    &:hover
+      background lighten(mcolor,97%)
+      border-color lighten(mcolor,70%)
+
+
+  .li-article-header
+    padding 0.625*x 0.75*x 0.5*x
+
+    h2
+      line-height 1.25
+      font-weight 500
+      color darken(link,25%)
+
+  .li-article-content
+    padding 0 0.75*x 0.5*x
+
+  .li-article-meta
+    background hsl(0,0,95%)
+    border 1px solid bc
+    border-top none
+    padding 0.5*x 0.75*x
+    display flex
+    flex-flow column no-wrap
+
+    font-size 0.75*x
+
+    .tags
+      .tag
+        color light
+
+@media screen and (min-width: 768px)
+  .li-article
+    .li-article-header
+      h2
+        font-size 1.25*x
+    .li-article-meta
+      flex-flow row no-wrap
+      .tags
+        flex 1
+        text-align right

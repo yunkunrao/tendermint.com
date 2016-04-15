@@ -1,0 +1,53 @@
+.panels
+  margin -0.5*x
+  .panel
+    padding 0.5*x
+
+    .panel-container
+      border 1px solid bc
+
+    .panel-header
+      padding 0.25*x 0.5*x
+      background lighten(mcolor,95%)
+      border-bottom 1px solid bc
+
+      h3, h3 a
+        color lighten(mcolor,10%)
+
+        font-size x
+        font-weight 500
+
+      h3 a:hover
+        color link
+
+        i.fa
+          padding-right 0.25*x
+
+    .panel-body
+      ul
+        list-style none
+        padding 0
+        margin 0
+      li
+        padding 0.625*x 0.75*x 0.5*x
+        border-bottom 1px solid bc
+        margin 0
+        &:last-of-type
+          border-bottom none
+        h4
+          line-height 1.25
+          margin 0 0 0.25*x
+          font-weight 500
+
+@media screen and (min-width: 768px)
+  .panels
+    display flex
+    flex-flow row wrap
+    .panel
+      flex 1 0 50%
+
+@media screen and (min-width: 1280px)
+  .panels
+    .panel
+      flex 1 0 33.3333%
+

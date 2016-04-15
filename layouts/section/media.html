@@ -1,0 +1,23 @@
+{{ partial "header.html" . }}
+
+<body id="body-tutorials">
+  {{ partial "site-header.html" . }}
+
+  <section id="section-top">
+    <div class="section-container">
+      <h1>{{ .Title}}</h1>
+      <p>View media related to Tendermint.</p>
+    </div>
+  </section>
+
+  <section class="section-default">
+    <div class="section-container">
+      <div class="section-content">
+        {{ range .Data.Pages }}
+        {{ .Render "summary"}}
+        {{ end }}
+      </div>
+    </div>
+  </section>
+
+{{ partial "site-footer.html" }}

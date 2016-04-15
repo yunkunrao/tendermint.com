@@ -1,5 +1,5 @@
 <div class="tags">
 {{ range .Params.categories }}
- <a class="tag" href="/categories/{{ . | urlize }}">{{ . }}</a>
+ <a class="tag" href="/categories/{{ . | urlize }}">#{{ . }}</a>
 {{ end }}
 </div>
