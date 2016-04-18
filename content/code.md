@@ -7,8 +7,8 @@ body = "body-developers"
 
 <section id="section-top">
   <div class="section-container">
-    <h1>Developers</h1>
-    <p>Build on Tendermint&rsquo;s open source platform. Start learning with <a href="/tutorials">these tutorials</a>.</p>
+    <h1>Code</h1>
+    <p>Develop on Tendermint&rsquo;s open source platform. Start learning with <a href="/tutorials">these tutorials</a>.</p>
     </div>
   </div>
 </section>
