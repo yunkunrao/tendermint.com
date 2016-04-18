@@ -1,28 +1,23 @@
 {{ partial "header.html" . }}
 
-<body id="body-tutorial">
+<body id="body-guide">
   {{ partial "site-header.html" . }}
 
   <section id="section-top">
     <div class="section-container">
-      <h1>{{ .Title }}</h1>
-      <p>{{ .Date.Format "January 2, 2006" }}</p>
-      <!-- {{ partial "tags.html" . }} -->
+      <h1><i class="fa fa-book"></i> Guide</h1>
+      <p>Understand how to use and develop for Tendermint.</p>
     </div>
   </section>
 
   <section class="section-default">
     <div class="section-container">
       <div class="section-content">
-        <div class="article-body">
-          {{ .Content }}
-        </div>
-
-        <label for="sidebar-checkbox" class="sidebar-toggle"></label>
-        {{ partial "prev_next.html" . }}
+        {{ range .Data.Pages }}
+        {{ .Render "summary"}}
+        {{ end }}
       </div>
     </div>
-
   </section>
 
 {{ partial "site-footer.html" }}

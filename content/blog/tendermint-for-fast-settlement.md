@@ -6,6 +6,8 @@ categories:
     - "consensus"
     - "clearing"
     - "settlement"
+aliases:
+    - /posts/tendermint-for-fast-settlement/
 ---
 
 Some experts in the nascent blockchain industry have said the following:

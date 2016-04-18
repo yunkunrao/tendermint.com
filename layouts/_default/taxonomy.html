@@ -1,26 +1,23 @@
-<!--
-  This file is used to render a list of all posts that belong to a specific
-  category.
--->
 {{ partial "header.html" . }}
 
-<body class="site-articles body-articles">
+<body id="body-taxonomy">
   {{ partial "site-header.html" . }}
 
-  <section id="section-hero" class="section-dark">
-    <h1>&ldquo;{{ .Title }}&rdquo;</h1>
-    <p>Category</p>
-  </section>
-
-  <section id="section-posts">
-    <div class="container">
-      <ul>
-        {{ range .Data.Pages }}
-        {{ .Render "summary"}}
-        {{ end }}
-      </ul>
+  <section id="section-top">
+    <div class="section-container">
+      <h1>&ldquo;{{ .Title }}&rdquo;</h1>
+      <p>Articles in this category&hellip;</p>
     </div>
   </section>
 
-<!-- Include footer (ends <body> and <html>) -->
+  <section class="section-default">
+    <div class="section-container">
+      <div class="section-content">
+        {{ range .Data.Pages }}
+        {{ .Render "summary"}}
+        {{ end }}
+      </div>
+    </div>
+  </section>
+
 {{ partial "site-footer.html" }}

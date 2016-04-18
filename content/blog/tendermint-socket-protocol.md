@@ -1,9 +1,11 @@
 ---
-title: "The Tendermint Socket Protocol (TMSP)"
+title: "TMSP: The Tendermint Socket Protocol"
 description: "TMSP lets you create blockchain application easily in any languge.  This post describes the motivation behind TMSP and links to tutorials."
 date: "2015-12-19"
 categories: 
     - "TMSP"
+aliases:
+    - /posts/tendermint-socket-protocol/
 ---
 
 ### Tutorials

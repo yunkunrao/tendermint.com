@@ -1,15 +1,29 @@
 <div id="article-prev-next">
-  {{if .PrevInSection}}
-    <a class="article-prev-next article-prev" href="{{.PrevInSection.Permalink}}">
-      <div class="label"><i class="fa fa-angle-left"></i> Previous Article</div>
-      <div class="title">{{.PrevInSection.Title}}</div>
-    </a>
-  {{end}}
+  <div class="article-prev-next article-prev">
+    {{if .PrevInSection}}
+      <a  href="{{.PrevInSection.Permalink}}">
+        <div class="label"><i class="fa fa-angle-left"></i> Prev</div>
+        <div class="title">{{.PrevInSection.Title}}</div>
+      </a>
+    {{else}}
+      <div class="end">
+        <div class="label"><i class="fa fa-angle-left"></i> Prev</div>
+        <div class="title">No newer entries in this section.</div>
+      </div>
+    {{end}}
+  </div>
 
-  {{if .NextInSection}}{{if .NextInSection.Title}}
-    <a class="article-prev-next article-next" href="{{.NextInSection.Permalink}}">
-      <div class="label"><i class="fa fa-angle-right"></i> Next Article</div>
-      <div class="title">{{.NextInSection.Title}}</div>
-    </a>
-  {{end}}{{end}}
+  <div class="article-prev-next article-next">
+    {{if .NextInSection}}
+      <a href="{{.NextInSection.Permalink}}">
+        <div class="label">Next <i class="fa fa-angle-right"></i></div>
+        <div class="title">{{.NextInSection.Title}}</div>
+      </a>
+    {{else}}
+      <div class="end">
+        <div class="label">Next <i class="fa fa-angle-right"></i></div>
+        <div class="title">No newer entries in this section.</div>
+      </div>
+    {{end}}
+  </div>
 </div>

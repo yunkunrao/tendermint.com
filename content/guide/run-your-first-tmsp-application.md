@@ -6,6 +6,8 @@ categories:
     - "tutorial"
     - "TMSP"
     - "tmsp-cli"
+aliases:
+    - /tutorials/run-your-first-tmsp-application/
 ---
 
 _This tutorial is first in a series.  See [this post](/posts/tendermint-socket-protocol/) for an overview of TMSP and links to all the tutorials in this series._

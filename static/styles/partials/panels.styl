@@ -7,21 +7,20 @@
       border 1px solid bc
 
     .panel-header
-      padding 0.25*x 0.5*x
-      background lighten(mcolor,95%)
+      line-height 2*x
+      padding 0 0.5*x
       border-bottom 1px solid bc
+      background hsl(0,0,97%)
 
-      h3, h3 a
-        color lighten(mcolor,10%)
-
+      h3
         font-size x
         font-weight 500
-
-      h3 a:hover
-        color link
-
-        i.fa
-          padding-right 0.25*x
+        color mcolor
+        a
+          color mcolor
+          display block
+          &:hover
+            color link
 
     .panel-body
       ul
@@ -30,7 +29,7 @@
         margin 0
       li
         padding 0.625*x 0.75*x 0.5*x
-        border-bottom 1px solid bc
+        border-bottom 1px dotted bc
         margin 0
         &:last-of-type
           border-bottom none
@@ -43,10 +42,24 @@
   .panels
     display flex
     flex-flow row wrap
+
     .panel
       flex 1 0 50%
 
-@media screen and (min-width: 1280px)
+      .panel-header
+        line-height 3*x
+        padding 0 x
+        h3, h3 a
+          font-size 1.125*x
+        i.fa
+          padding-right 0.2*x
+
+      .panel-body
+        li
+          padding 0.75*x x
+
+
+@media screen and (min-width: 1200px)
   .panels
     .panel
       flex 1 0 33.3333%
