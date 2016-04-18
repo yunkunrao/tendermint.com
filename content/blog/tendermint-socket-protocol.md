@@ -4,6 +4,8 @@ description: "TMSP lets you create blockchain application easily in any languge.
 date: "2015-12-19"
 categories: 
     - "TMSP"
+aliases:
+    - /posts/tendermint-socket-protocol/
 ---
 
 ### Tutorials

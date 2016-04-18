@@ -1,13 +1,13 @@
 +++
 date = "2016-03-03T11:59:27+08:00"
 draft = false
-title = "Developers"
-body = "body-developers"
+title = "Source Code"
+body = "body-code"
 +++
 
 <section id="section-top">
   <div class="section-container">
-    <h1>Code</h1>
+    <h1>Source Code</h1>
     <p>Develop on Tendermint&rsquo;s open source platform. Start learning with <a href="/tutorials">these tutorials</a>.</p>
     </div>
   </div>

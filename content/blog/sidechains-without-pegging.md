@@ -5,6 +5,8 @@ date: "2014-11-25"
 categories: 
     - "sidechains"
     - "pegging"
+aliases:
+    - /posts/sidechains-without-pegging/
 ---
 
 There is an interesting debate happening between Bitcoin maximalists and the rest of the cryptocurrency community.

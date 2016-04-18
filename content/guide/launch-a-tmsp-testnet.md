@@ -6,6 +6,8 @@ categories:
     - "tutorial"
     - "TMSP"
     - "mintnet"
+aliases:
+    - /tutorials/launch-a-tmsp-testnet/
 ---
 
 _This tutorial is second in a series.  See [this post](/posts/tendermint-socket-protocol/) for links to all the tutorials in this series._
