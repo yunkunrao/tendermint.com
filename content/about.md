@@ -8,8 +8,8 @@ body = "body-about"
 
 <section id="section-top">
   <div class="section-container">
-    <h1>About Tendermint</h1>
-    <p>Bringing simplicity, security, and speed to the world's blockchains.</p>
+    <h1>About</h1>
+    <p>Our mission: to bring simplicity, security, and speed to the world&rsquo;s blockchains.</p>
   </div>
 </section>
 

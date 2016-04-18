@@ -1074,13 +1074,14 @@ iframe.iframe-video {
   font-weight: 200;
   letter-spacing: 1px;
 }
-#section-hero .tagline span.slash {
-  color: #125ca5;
+#section-hero .tagline i.fa {
+  color: #1466b8;
 }
 #section-hero .introduction {
-  color: #4799eb;
+  color: #65a9ee;
   line-height: 1.25;
   text-align: center;
+  max-width: 16em;
 }
 #section-hero .social-media {
   display: -webkit-box;
@@ -1094,7 +1095,7 @@ iframe.iframe-video {
   margin: 4px;
   width: 40px;
   line-height: 40px;
-  color: #6cadef;
+  color: #65a9ee;
   text-align: center;
 }
 #section-hero #home-arrow-down {
@@ -1163,7 +1164,8 @@ iframe.iframe-video {
 }
 @media screen and (min-width: 768px) {
   #section-hero .introduction {
-    max-width: 22em;
+    font-size: 24px;
+    font-weight: 200;
   }
 }
 #section-social-media {

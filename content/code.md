@@ -7,7 +7,7 @@ body = "body-code"
 
 <section id="section-top">
   <div class="section-container">
-    <h1>Source Code</h1>
+    <h1><i class="fa fa-code"></i> Source Code</h1>
     <p>Develop on Tendermint&rsquo;s open source platform. Start learning with <a href="/tutorials">these tutorials</a>.</p>
     </div>
   </div>
