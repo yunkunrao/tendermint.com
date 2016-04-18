@@ -1,24 +1,33 @@
 #section-social-media ul.ul-social-media
+  margin -0.25*x
+
   display flex
   flex-flow column no-wrap
-  align-items stretch
-
-  margin -0.25*x
   li
     padding 0.25*x
     background transparent
     border none
+
+    flex 1
+    display flex
     a
-      display block
       padding 0.75*x x
       border 1px solid lighten(mcolor,15%)
       background lighten(mcolor,5%)
+
+      flex 1
+      display flex
+      flex-flow column no-wrap
+
       h3
         color lighten(mcolor,85%)
         font-size x
         font-weight 500
         i.fa
           padding-right 0.2em
+
+      .content
+        flex 1
 
       &:hover
         background lighten(mcolor,10%)
@@ -36,15 +45,15 @@
 
 @media screen and (min-width: 768px)
   #section-social-media ul.ul-social-media
-    display flex
     flex-flow row wrap
     li
       flex 1 0 50%
-      display flex
-      a
-        flex 1
 
-@media screen and (min-width: 960px)
+@media screen and (min-width: 1024px)
+  #section-social-media ul.ul-social-media
+    padding x 0
+
+@media screen and (min-width: 1280px)
   #section-social-media ul.ul-social-media
     li
       flex 1 0 25%
