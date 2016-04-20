@@ -531,7 +531,7 @@ iframe.iframe-video {
 }
 .li-article .li-article-header h2 {
   line-height: 1.25;
-  font-weight: 500;
+  font-weight: 600;
   color: #11569b;
 }
 .li-article .li-article-content {
@@ -690,9 +690,8 @@ iframe.iframe-video {
 .panels .panel .panel-body li a h4 {
   line-height: 1.25;
   margin: 0 0 4px;
-  font-weight: 500;
-  color: #333;
   font-weight: 600;
+  color: #333;
 }
 .panels .panel .panel-body li a p {
   color: #666;
@@ -1244,7 +1243,7 @@ iframe.iframe-video {
 #section-social-media ul.ul-social-media li a h3 {
   color: #c8e0f9;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
 }
 #section-social-media ul.ul-social-media li a h3 i.fa {
   padding-right: 0.2em;
@@ -1587,7 +1586,7 @@ iframe.iframe-video {
   border: 1px solid #fff;
 }
 .ul-portraits a.twitter .name {
-  font-weight: 500;
+  font-weight: 600;
   color: #333;
 }
 .ul-portraits a.twitter .handle {
@@ -1663,7 +1662,7 @@ iframe.iframe-video {
   padding: 0 1.5em;
   height: 2em;
   line-height: 30px;
-  font-weight: 500;
+  font-weight: 600;
   text-align: center;
   color: #333;
   text-shadow: #fff 0 -1px 0;
