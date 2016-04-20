@@ -25,7 +25,10 @@ body = "body-about"
           <img class="portrait"
           src="/images/team/jae-01.jpg" alt="Jae Kwon">
           <div class="label">
-            <span class="name">Jae Kwon</span>
+            <a class="twitter" href="https://twitter.com/jaekwon">
+              <span class="name">Jae Kwon</span>
+              <spanclass="handle">@jaekwon</a>
+            </a>
             <span class="title">CEO <span class="amp">&amp;</span> Founder</span>
           </div>
         </li>
@@ -33,7 +36,10 @@ body = "body-about"
           <img class="portrait"
           src="/images/team/dustin-01.jpg" alt="Dustin Byington">
           <div class="label">
-            <span class="name">Dustin Byington</span>
+            <a class="twitter" href="https://twitter.com/dustin_byington">
+              <span class="name">Dustin Byington</span>
+              <spanclass="handle">@dustin_byington</a>
+            </a>
             <span class="title">President <span class="amp">&amp;</span> Cofounder</span>
           </div>
         </li>
@@ -41,7 +47,10 @@ body = "body-about"
           <img class="portrait"
           src="/images/team/ethan-01.jpg" alt="Ethan Buchman">
           <div class="label">
-            <span class="name">Ethan Buchman</span>
+            <a class="twitter" href="https://twitter.com/buchmanster">
+              <span class="name">Ethan Buchman</span>
+              <span class="handle">@buchmanster</a>
+            </a>
             <span class="title">CTO <span class="amp">&amp;</span> Cofounder</span>
           </div>
         </li>
@@ -49,7 +58,10 @@ body = "body-about"
           <img class="portrait"
           src="/images/team/peng-01.jpg" alt="Peng Zhong">
           <div class="label">
-            <span class="name">Peng Zhong</span>
+            <a class="twitter" href="https://twitter.com/zcpeng">
+              <span class="name">Peng Zhong</span>
+              <span class="handle">@zcpeng</a>
+            </a>
             <span class="title">CDO</span>
           </div>
         </li>
