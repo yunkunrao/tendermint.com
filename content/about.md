@@ -82,7 +82,10 @@ body = "body-about"
           <img class="portrait"
           src="/images/advisors/pete-harris-01.jpg" alt="Pete Harris">
           <div class="label">
-            <span class="name">Pete Harris</span>
+            <a class="twitter" href="https://twitter.com/peteharrislp">
+              <span class="name">Pete Harris</span>
+              <span class="handle">@peteharrislp</a>
+            </a>
             <span class="title">Advisor</span>
           </div>
         </li>
