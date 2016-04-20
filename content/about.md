@@ -25,33 +25,33 @@ body = "body-about"
           <img class="portrait"
           src="/images/team/jae-01.jpg" alt="Jae Kwon">
           <div class="label">
-            <a class="twitter" href="https://twitter.com/jaekwon">
-              <span class="name">Jae Kwon</span>
-              <spanclass="handle">@jaekwon</a>
+            <a class="twitter" href="https://twitter.com/jaekwon" target="_blank">
+              <div class="name">Jae Kwon</div>
+              <div class="handle">@jaekwon</div>
             </a>
-            <span class="title">CEO <span class="amp">&amp;</span> Founder</span>
+            <div class="title">CEO <span class="amp">&amp;</span> Founder</div>
           </div>
         </li>
         <li>
           <img class="portrait"
           src="/images/team/dustin-01.jpg" alt="Dustin Byington">
           <div class="label">
-            <a class="twitter" href="https://twitter.com/dustin_byington">
-              <span class="name">Dustin Byington</span>
-              <spanclass="handle">@dustin_byington</a>
+            <a class="twitter" href="https://twitter.com/dustin_byington" target="_blank">
+              <div class="name">Dustin Byington</div>
+              <div class="handle">@dustin_byington</div>
             </a>
-            <span class="title">President <span class="amp">&amp;</span> Cofounder</span>
+            <div class="title">President <span class="amp">&amp;</span> Cofounder</div>
           </div>
         </li>
         <li>
           <img class="portrait"
           src="/images/team/ethan-01.jpg" alt="Ethan Buchman">
           <div class="label">
-            <a class="twitter" href="https://twitter.com/buchmanster">
-              <span class="name">Ethan Buchman</span>
-              <span class="handle">@buchmanster</a>
+            <a class="twitter" href="https://twitter.com/buchmanster" target="_blank">
+              <div class="name">Ethan Buchman</div>
+              <div class="handle">@buchmanster</div>
             </a>
-            <span class="title">CTO <span class="amp">&amp;</span> Cofounder</span>
+            <div class="title">CTO <span class="amp">&amp;</span> Cofounder</div>
           </div>
         </li>
         <li>
@@ -59,10 +59,10 @@ body = "body-about"
           src="/images/team/peng-01.jpg" alt="Peng Zhong">
           <div class="label">
             <a class="twitter" href="https://twitter.com/zcpeng">
-              <span class="name">Peng Zhong</span>
-              <span class="handle">@zcpeng</a>
+              <div class="name">Peng Zhong</div>
+              <div class="handle">@zcpeng</div>
             </a>
-            <span class="title">CDO</span>
+            <div class="title">Chief Design Officer</div>
           </div>
         </li>
       </ul>
@@ -82,19 +82,22 @@ body = "body-about"
           <img class="portrait"
           src="/images/advisors/pete-harris-01.jpg" alt="Pete Harris">
           <div class="label">
-            <a class="twitter" href="https://twitter.com/peteharrislp">
-              <span class="name">Pete Harris</span>
-              <span class="handle">@peteharrislp</a>
+            <a class="twitter" href="https://twitter.com/peteharrislp" target="_blank">
+              <div class="name">Pete Harris</div>
+              <div class="handle">@peteharrislp</div>
             </a>
-            <span class="title">Advisor</span>
+            <div class="title">Advisor</div>
           </div>
         </li>
         <li>
           <img class="portrait"
           src="/images/advisors/ryan-singer-01.jpg" alt="Ryan Singer">
           <div class="label">
-            <span class="name">Ryan Singer</span>
-            <span class="title">Advisor</span>
+            <a class="twitter" href="https://twitter.com/ryan_singer" target="_blank">
+              <div class="name">Ryan Singer</div>
+              <div class="handle">@ryan_singer</div>
+            </a>
+            <div class="title">Advisor</div>
           </div>
         </li>
       </ul>

@@ -1,7 +1,7 @@
 .article-body
-  font-family times-stack
   font-size x
   padding-top 0.5*x
+  padding-bottom 1.5*x
 
   a
     &:hover
@@ -61,30 +61,28 @@
     color mcolor
 
   h2
-    text-align left
-    font-size 1.5em
-    line-height 1.25em
-    margin 1.5em 0 1em
-    padding-top 1em
-    font-weight bold
-    width 100%
+    margin 3*x 0 x
     border-top 1px solid bc
+    padding-top x
+
+    font-size 1.5*x
+    line-height 1.25
+    font-weight bold
+    letter-spacing -0.025em
 
   h3
-    font-size 1.25em
-    line-height 1.25em
+    font-size 1.25*x
+    line-height 1.25
     font-weight bold
-    margin 0 0 x
-
-  ul + h3, p + h3, ol + h3
-    margin-top x*2
+    margin 1.5*x 0 0.5*x
 
   ul, ol
     padding-left 1.5em
 
   ul li
     list-style square
-    margin 0 0 0.25em
+    margin-bottom 0.25em
+
   ol li
     list-style decimal
 
@@ -103,23 +101,21 @@
       padding 0.25em .5em
 
   blockquote
-    border-left 10px solid #ccc
-    background #f9f9f9
-    font 1em/1.5 sans
-    margin 1.5em 0
-    padding 0.5em 0.75em
-    quotes "\201C""\201D""\2018""\2019"
+    border 1px solid lighten(mcolor,85%)
+    padding 0.75*x x
+    background lighten(mcolor,95%)
+    position relative
 
-  blockquote:before
-    color #ccc
-    content open-quote
-    font-size 4em
-    line-height 0.1em
-    margin-right 0.25em
-    vertical-align -0.4em
+    color mcolor
+  
+    p, ul, ol
+      margin-bottom 0.75*x
 
-  blockquote p
-    display inline
+    p:last-child, ul:last-child, ol:last-child
+      margin-bottom 0
+
+  blockquote + h2
+    margin-top 1.5*x
 
 @media screen and (min-width: 768px)
   .article-body

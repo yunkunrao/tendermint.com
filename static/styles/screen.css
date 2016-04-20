@@ -103,7 +103,7 @@ button,
 textarea {
   font-size: 16px;
   line-height: 1.5;
-  font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
 }
 .amp {
   font-style: italic;
@@ -115,9 +115,9 @@ a {
   color: #1773cf;
 }
 .article-body {
-  font-family: Cambria, 'Hoefler Text', Utopia, 'Liberation Serif', 'Nimbus Roman No9 L Regular', Times, 'Times New Roman', serif;
   font-size: 16px;
   padding-top: 8px;
+  padding-bottom: 24px;
 /* These are technically the same, but use both */
   overflow-wrap: break-word;
   word-wrap: break-word;
@@ -187,29 +187,23 @@ a {
 .article-body h4,
 .article-body h5,
 .article-body h6 {
-  font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
   color: #0a335c;
 }
 .article-body h2 {
-  text-align: left;
-  font-size: 1.5em;
-  line-height: 1.25em;
-  margin: 1.5em 0 1em;
-  padding-top: 1em;
-  font-weight: bold;
-  width: 100%;
+  margin: 48px 0 16px;
   border-top: 1px solid #ddd;
+  padding-top: 16px;
+  font-size: 24px;
+  line-height: 1.25;
+  font-weight: bold;
+  letter-spacing: -0.025em;
 }
 .article-body h3 {
-  font-size: 1.25em;
-  line-height: 1.25em;
+  font-size: 20px;
+  line-height: 1.25;
   font-weight: bold;
-  margin: 0 0 16px;
-}
-.article-body ul + h3,
-.article-body p + h3,
-.article-body ol + h3 {
-  margin-top: 32px;
+  margin: 24px 0 8px;
 }
 .article-body ul,
 .article-body ol {
@@ -217,7 +211,7 @@ a {
 }
 .article-body ul li {
   list-style: square;
-  margin: 0 0 0.25em;
+  margin-bottom: 0.25em;
 }
 .article-body ol li {
   list-style: decimal;
@@ -238,23 +232,24 @@ a {
   padding: 0.25em 0.5em;
 }
 .article-body blockquote {
-  border-left: 10px solid #ccc;
-  background: #f9f9f9;
-  font: 1em/1.5 'Helvetica Neue', Arial, Helvetica, sans-serif;
-  margin: 1.5em 0;
-  padding: 0.5em 0.75em;
-  quotes: "\201C" "\201D" "\2018" "\2019";
+  border: 1px solid #c8e0f9;
+  padding: 12px 16px;
+  background: #edf5fd;
+  position: relative;
+  color: #0a335c;
 }
-.article-body blockquote:before {
-  color: #ccc;
-  content: open-quote;
-  font-size: 4em;
-  line-height: 0.1em;
-  margin-right: 0.25em;
-  vertical-align: -0.4em;
+.article-body blockquote p,
+.article-body blockquote ul,
+.article-body blockquote ol {
+  margin-bottom: 12px;
 }
-.article-body blockquote p {
-  display: inline;
+.article-body blockquote p:last-child,
+.article-body blockquote ul:last-child,
+.article-body blockquote ol:last-child {
+  margin-bottom: 0;
+}
+.article-body blockquote + h2 {
+  margin-top: 24px;
 }
 @media screen and (min-width: 768px) {
   .article-body {
@@ -284,8 +279,6 @@ body {
   float: right;
 }
 #article-prev-next {
-  margin-top: 12px;
-  padding-top: 12px;
   display: -webkit-box;
   display: -moz-box;
   display: -webkit-flex;
@@ -394,7 +387,7 @@ body {
     -webkit-flex-flow: row;
     -ms-flex-flow: row;
     flex-flow: row;
-    margin: 20px -8px -8px;
+    margin: 0 -8px -8px;
   }
   #article-prev-next .article-prev-next a,
   #article-prev-next .article-prev-next .end {
@@ -426,7 +419,7 @@ body {
 }
 @media screen and (min-width: 960px) {
   #article-prev-next {
-    margin-top: 64px;
+    margin-top: 24px;
   }
 }
 .tags {
@@ -1061,6 +1054,7 @@ iframe.iframe-video {
   color: #daebfb;
   line-height: 1;
   margin: 0 0 8px;
+  letter-spacing: -0.025em;
 }
 #section-hero .tagline,
 #section-hero .introduction,
@@ -1359,6 +1353,7 @@ iframe.iframe-video {
   margin: 0 0 8px;
   text-align: center;
   max-width: 576px;
+  letter-spacing: -0.025em;
 }
 #section-top p {
   color: #4799eb;
@@ -1434,7 +1429,7 @@ iframe.iframe-video {
 }
 #site-header a#nav-home {
   display: block;
-  border-top: 4px solid #082645;
+  border-top: 4px solid #07223e;
 }
 #site-header a#nav-home img {
   width: 44px;
@@ -1454,7 +1449,7 @@ iframe.iframe-video {
   display: -ms-flexbox;
   display: box;
   display: flex;
-  border-top: 4px solid #082645;
+  border-top: 4px solid #07223e;
   -webkit-box-shadow: inset #0e4781 1px 0 0;
   box-shadow: inset #0e4781 1px 0 0;
   padding-left: 8px;
@@ -1464,7 +1459,7 @@ iframe.iframe-video {
   padding: 0 8px;
   line-height: 44px;
   color: #a3ccf5;
-  border-top: 4px solid #082645;
+  border-top: 4px solid #07223e;
   margin-top: -4px;
 }
 #site-header nav a .short {
@@ -1474,7 +1469,7 @@ iframe.iframe-video {
   display: none;
 }
 #site-header nav a:hover {
-  border-top-color: #1466b8;
+  border-top-color: #1876d5 !important;
   color: #daebfb;
 }
 #site-header nav a#nav-media {
@@ -1488,7 +1483,7 @@ iframe.iframe-video {
 #body-guide #nav-guide,
 #body-about #nav-about,
 #body-code #nav-code {
-  border-top-color: #1466b8 !important;
+  border-top-color: #1876d5 !important;
 }
 @media screen and (min-width: 400px) {
   #site-header nav {
@@ -1566,26 +1561,49 @@ iframe.iframe-video {
   -ms-flex: 1 0 50%;
   flex: 1 0 50%;
   padding: 8px;
-  margin-bottom: 4px;
+  margin-bottom: 8px;
 }
 .ul-portraits img {
   width: 100%;
-  border: 1px solid #6f6f6f;
+  border: 1px solid #ddd;
+  padding: 4px;
+  vertical-align: top;
+  display: block;
 }
 .ul-portraits .label {
   text-align: center;
 }
-.ul-portraits span.name,
-.ul-portraits span.title {
+.ul-portraits a.twitter {
   display: block;
+  padding: 5.328px 0;
+  border: 1px solid #fff;
 }
-.ul-portraits span.name {
+.ul-portraits a.twitter .name {
   font-weight: 500;
+  color: #333;
 }
-.ul-portraits span.title {
-  line-height: 1.25em;
-  font-size: 0.9em;
-  color: #666;
+.ul-portraits a.twitter .handle {
+  color: #999;
+  font-size: 12px;
+}
+.ul-portraits a.twitter:hover .name {
+  color: #1773cf;
+}
+.ul-portraits a.twitter:hover .handle {
+  color: #81b9f1;
+}
+.ul-portraits .title {
+  border-top: 1px dotted #ddd;
+  padding-top: 5.328px;
+  font-size: 12px;
+}
+@media screen and (min-width: 360px) {
+  .ul-portraits a.twitter {
+    padding: 8px 0;
+  }
+  .ul-portraits .title {
+    padding-top: 8px;
+  }
 }
 @media screen and (min-width: 768px) {
   .ul-portraits li {
@@ -1597,15 +1615,30 @@ iframe.iframe-video {
     -ms-flex: 0 0 25%;
     flex: 0 0 25%;
   }
-  .ul-portraits span.name {
-    border-bottom: 1px dotted #ddd;
-    margin-bottom: 5.328px;
-    padding-bottom: 5.328px;
+  .ul-portraits a.twitter {
+    margin: 4px 0;
+  }
+  .ul-portraits a.twitter:hover {
+    background: #edf5fd;
+    border-color: #81b9f1;
   }
 }
 @media screen and (min-width: 1024px) {
   .ul-portraits {
     margin: 0 auto -8px;
+  }
+  .ul-portraits a.twitter {
+    padding: 10.656px 0;
+  }
+  .ul-portraits a.twitter .name {
+    font-size: 18px;
+  }
+  .ul-portraits a.twitter .handle {
+    font-size: 13.6px;
+  }
+  .ul-portraits .title {
+    padding-top: 10.656px;
+    font-size: 13.6px;
   }
 }
 .btn {
