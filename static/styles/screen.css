@@ -196,13 +196,13 @@ a {
   padding-top: 16px;
   font-size: 24px;
   line-height: 1.25;
-  font-weight: bold;
+  font-weight: 600;
   letter-spacing: -0.025em;
 }
 .article-body h3 {
   font-size: 20px;
   line-height: 1.25;
-  font-weight: bold;
+  font-weight: 600;
   margin: 24px 0 8px;
 }
 .article-body ul,
@@ -222,7 +222,7 @@ a {
   width: 100%;
 }
 .article-body table th {
-  font-weight: bold;
+  font-weight: 600;
   background: #e8f2fc;
   color: #0a335c;
 }
@@ -355,7 +355,7 @@ body {
 }
 #article-prev-next .article-prev-next a .title,
 #article-prev-next .article-prev-next .end .title {
-  font-weight: bold;
+  font-weight: 600;
   font-size: 20px;
   line-height: 1.25;
   -webkit-box-flex: 1;
@@ -847,7 +847,7 @@ iframe.iframe-video {
   margin-right: 8px;
 }
 .section-default .section-container .section-header h2 {
-  font-weight: bold;
+  font-weight: 600;
   color: #0a335c;
   line-height: 20px;
   max-width: 704px;
@@ -916,7 +916,6 @@ iframe.iframe-video {
   }
   .section-default .section-container .section-header h2 {
     font-size: 21.328px;
-    font-weight: 500;
   }
   .section-default.section-columns .columns {
     display: -webkit-box;
@@ -1050,7 +1049,6 @@ iframe.iframe-video {
 }
 #section-hero h1 {
   font-size: 40px;
-  font-weight: 200;
   color: #daebfb;
   line-height: 1;
   margin: 0 0 8px;
@@ -1065,7 +1063,6 @@ iframe.iframe-video {
   color: #4799eb;
   font-size: 12px;
   text-transform: uppercase;
-  font-weight: 200;
   letter-spacing: 1px;
 }
 #section-hero .tagline i.fa {
