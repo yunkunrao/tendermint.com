@@ -665,7 +665,7 @@ iframe.iframe-video {
 }
 .panels .panel .panel-header h3 {
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
   color: #0a335c;
 }
 .panels .panel .panel-header h3 a {
@@ -675,23 +675,37 @@ iframe.iframe-video {
 .panels .panel .panel-header h3 a:hover {
   color: #1773cf;
 }
-.panels .panel .panel-body ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
 .panels .panel .panel-body li {
-  padding: 10px 12px 8px;
   border-bottom: 1px dotted #ddd;
-  margin: 0;
 }
 .panels .panel .panel-body li:last-of-type {
   border-bottom: none;
 }
-.panels .panel .panel-body li h4 {
+.panels .panel .panel-body li a {
+  display: block;
+  padding: 10px 12px 8px;
+  margin: -1px;
+  border: 1px solid transparent;
+}
+.panels .panel .panel-body li a h4 {
   line-height: 1.25;
   margin: 0 0 4px;
   font-weight: 500;
+  color: #333;
+  font-weight: 600;
+}
+.panels .panel .panel-body li a p {
+  color: #666;
+}
+.panels .panel .panel-body li a:hover {
+  background: #edf5fd;
+  border-color: #81b9f1;
+}
+.panels .panel .panel-body li a:hover h4 {
+  color: #1773cf;
+}
+.panels .panel .panel-body li a:hover p {
+  color: #4296ea;
 }
 @media screen and (min-width: 768px) {
   .panels {
@@ -731,8 +745,8 @@ iframe.iframe-video {
   .panels .panel .panel-header i.fa {
     padding-right: 3.2px;
   }
-  .panels .panel .panel-body li {
-    padding: 12px 16px;
+  .panels .panel .panel-body li a {
+    padding: 20px 24px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -801,11 +815,6 @@ iframe.iframe-video {
 #section-cta .section-container {
   border-top: 1px solid #105293;
   border-bottom-color: #082949;
-}
-@media screen and (min-width: 1024px) {
-  #section-cta .section-content {
-    padding: 16px 0;
-  }
 }
 .section-default .section-container {
   padding: 16px;
@@ -959,9 +968,14 @@ iframe.iframe-video {
   .section-default.section-columns .columns {
     max-width: 100%;
   }
+  .section-default.section-dark .section-header {
+    padding: 16px 0;
+  }
+  .section-default.section-dark .section-content {
+    padding: 16px 0;
+  }
 }
 @media screen and (min-width: 1200px) {
-  .section-default .section-container .section-header,
   .section-default .section-container .section-content {
     max-width: 1200px;
     margin: 0 auto;
@@ -1282,9 +1296,6 @@ iframe.iframe-video {
   }
 }
 @media screen and (min-width: 1024px) {
-  #section-social-media ul.ul-social-media {
-    padding: 16px 0;
-  }
   #section-social-media ul.ul-social-media li {
     -webkit-box-flex: 1;
     -moz-box-flex: 1;

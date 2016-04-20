@@ -14,7 +14,7 @@
 
       h3
         font-size x
-        font-weight 500
+        font-weight 600
         color mcolor
         a
           color mcolor
@@ -23,20 +23,35 @@
             color link
 
     .panel-body
-      ul
-        list-style none
-        padding 0
-        margin 0
       li
-        padding 0.625*x 0.75*x 0.5*x
         border-bottom 1px dotted bc
-        margin 0
         &:last-of-type
           border-bottom none
-        h4
-          line-height 1.25
-          margin 0 0 0.25*x
-          font-weight 500
+
+        a
+          display block
+          padding 0.625*x 0.75*x 0.5*x
+          margin -1px
+          border 1px solid transparent
+
+          h4
+            line-height 1.25
+            margin 0 0 0.25*x
+            font-weight 500
+            color txt
+            font-weight 600
+
+          p
+            color dim
+
+          &:hover
+            background lighten(mcolor,95%)
+            border-color lighten(link,50%)
+
+            h4
+              color link
+            p
+              color lighten(link,25%)
 
 @media screen and (min-width: 768px)
   .panels
@@ -56,7 +71,8 @@
 
       .panel-body
         li
-          padding 0.75*x x
+          a
+            padding 1.25*x 1.5*x
 
 
 @media screen and (min-width: 1200px)
