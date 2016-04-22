@@ -10,10 +10,10 @@ aliases:
     - /tutorials/run-your-first-tmsp-application/
 ---
 
-_This tutorial is first in a series.  See [this post](/posts/tendermint-socket-protocol/) for an overview of TMSP and links to all the tutorials in this series._
+> This tutorial is first in a series.  See [this post](/posts/tendermint-socket-protocol/) for an overview of TMSP and links to all the tutorials in this series.
 
 
-### A First Example
+## A First Example
 
 Make sure you [have Go installed](https://golang.org/doc/install) and [put `$GOPATH/bin` in your `$PATH`](https://github.com/tendermint/tendermint/wiki/Setting-GOPATH).
 
@@ -107,7 +107,7 @@ Try running these commands:
 
 Similarly, you could put the commands in a file and run `tmsp-cli batch < myfile`.
 
-### Another Example
+## Another Example
 
 Now that we've got the hang of it, let's try another application, the "counter" app.
 
@@ -195,6 +195,6 @@ You should get the same results as for the Go version.
 
 Want to write the counter app in your favorite language?! We'd be happy to accept the pull request!
 
-### Next steps
+## Next steps
 
 In the next tutorial, we will show how to [launch a TMSP testnet](/tutorials/launch-a-tmsp-testnet).

@@ -8,14 +8,13 @@ aliases:
     - /posts/tendermint-socket-protocol/
 ---
 
-### Tutorials
+> <p>After you read this post, don't forget to check out our tutorials!  They also appear at the end of this page.</p>
 
-After you read this post, don't forget to check out our tutorials!  They also appear at the end of this page.
 
-* [Run your first TMSP application](/tutorials/run-your-first-tmsp-application/)
-* [Launch a TMSP testnet](/tutorials/launch-a-tmsp-testnet/)
+> 1. [Run your first TMSP application](/tutorials/run-your-first-tmsp-application/)
+> 2. [Launch a TMSP testnet](/tutorials/launch-a-tmsp-testnet/)
 
-### Motivation
+## Motivation
 
 Thus far, all blockchains "stacks" (such as [Bitcoin](https://github.com/bitcoin/bitcoin)) have had a monolithic design.  That is, each blockchain stack is a single program that handles all the concerns of a decentralized ledger; this includes P2P connectivity, the "mempool" broadcasting of transactions, consensus on the most recent block, account balances, Turing-complete contracts, user-level permissions, etc.
 
@@ -25,7 +24,7 @@ Another problem with this approach is that it limits you to the language of the 
 
 In contrast, our approach is to decouple the consensus engine and P2P layers from the details of the application state of the particular blockchain application.
 
-### Intro to TMSP
+## Intro to TMSP
 
 [Tendermint Core](https://github.com/tendermint/tendermint) (the "consensus engine") speaks to the application via a socket protocol called [TMSP](https://github.com/tendermint/tmsp). 
 
@@ -56,7 +55,7 @@ There can be multiple TMSP socket connections to an application.  Tendermint Cor
 
 It's probably evident that applications designers need to very carefully design their message handlers to create a blockchain that does anything useful but this architecture provides a place to start.
 
-### A Note on Determinism
+## A Note on Determinism
 
 The logic for blockchain transaction processing must be deterministic.  If the application logic weren't deterministic, consensus would not be reached among the Tendermint Core replica nodes.
 
@@ -71,13 +70,13 @@ Solidity on Ethereum is a great language of choice for blockchain applications b
 
 While programmers can avoid non-determinism by being careful, it is also possible to create a special linter or static analyzer for each language to check for determinism.  In the future we may work with partners to create such tools.
 
-### Tutorials
+## Tutorials
 
 Follow these tutorials to quickly get started developing your TMSP application.
 
 * [Run your first TMSP application](/tutorials/run-your-first-tmsp-application/)
 * [Launch a TMSP testnet](/tutorials/launch-a-tmsp-testnet/)
 
-### Contributions
+## Contributions
 
 _Many thanks to Zaki Manian for providing the "Intro to TMSP" section_

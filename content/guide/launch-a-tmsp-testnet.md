@@ -10,9 +10,9 @@ aliases:
     - /tutorials/launch-a-tmsp-testnet/
 ---
 
-_This tutorial is second in a series.  See [this post](/posts/tendermint-socket-protocol/) for links to all the tutorials in this series._
+> This tutorial is second in a series.  See [this post](/posts/tendermint-socket-protocol/) for links to all the tutorials in this series.
 
-### Tendermint Core
+## Tendermint Core
 
 Now that we've seen how TMSP works, and even played with a few applications using the `tmsp-cli` tool,
 let's run an actual Tendermint node.
@@ -89,7 +89,7 @@ curl http://localhost:46657/status |  jsonpp | grep app_hash
 
 visit http://localhost:46657 in your browser to see the other endpoints.
 
-### Deploy a Tendermint Testnet
+## Deploy a Tendermint Testnet
 
 Now that we've run a single Tendermint node with one validator and a couple applications, 
 let's deploy a testnet to run our application with four validators.

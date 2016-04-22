@@ -1,6 +1,4 @@
 #article-prev-next
-  margin-top 0.75*x
-  padding-top 0.75*x
   display flex
   flex-flow column no-wrap
   margin 1.25*x -0.25*x -0.25*x
@@ -26,7 +24,7 @@
         margin 0 0 0.25*x
 
       .title
-        font-weight bold
+        font-weight 600
         font-size 1.25*x
         line-height 1.25
 
@@ -46,7 +44,7 @@
 @media screen and (min-width: 768px)
   #article-prev-next
     flex-flow row 
-    margin 1.25*x -0.5*x -0.5*x
+    margin 0 -0.5*x -0.5*x
 
     .article-prev-next
       a, .end
@@ -70,4 +68,4 @@
 
 @media screen and (min-width: 960px)
   #article-prev-next
-    margin-top 4*x
+    margin-top 1.5*x
