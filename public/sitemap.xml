@@ -13,7 +13,7 @@
   </url>
   
   <url>
-    <loc>http://tendermint.com/developers/</loc>
+    <loc>http://tendermint.com/code/</loc>
     <lastmod>2016-03-03T11:59:27+08:00</lastmod>
   </url>
   
@@ -38,37 +38,42 @@
   </url>
   
   <url>
-    <loc>http://tendermint.com/posts/tendermint-socket-protocol/</loc>
+    <loc>http://tendermint.com/blog/tendermint-socket-protocol/</loc>
     <lastmod>2015-12-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://tendermint.com/tutorials/launch-a-tmsp-testnet/</loc>
+    <loc>http://tendermint.com/guide/launch-a-tmsp-testnet/</loc>
     <lastmod>2015-12-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://tendermint.com/tutorials/run-your-first-tmsp-application/</loc>
+    <loc>http://tendermint.com/guide/run-your-first-tmsp-application/</loc>
     <lastmod>2015-12-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://tendermint.com/posts/tendermint-for-fast-settlement/</loc>
+    <loc>http://tendermint.com/blog/tendermint-for-fast-settlement/</loc>
     <lastmod>2015-10-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://tendermint.com/posts/tendermint-vs-pbft/</loc>
+    <loc>http://tendermint.com/blog/tendermint-vs-pbft/</loc>
     <lastmod>2015-10-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://tendermint.com/posts/sidechains-without-pegging/</loc>
+    <loc>http://tendermint.com/blog/cases-for-tendermint/</loc>
+    <lastmod>2015-09-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://tendermint.com/blog/sidechains-without-pegging/</loc>
     <lastmod>2014-11-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://tendermint.com/posts/security-of-cryptocurrency-protocols/</loc>
+    <loc>http://tendermint.com/blog/security-of-cryptocurrency-protocols/</loc>
     <lastmod>2014-11-19T00:00:00+00:00</lastmod>
   </url>
   

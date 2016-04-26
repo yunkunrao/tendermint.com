@@ -32,6 +32,8 @@
 <meta name="msapplication-TileImage" content="/images/favicon/mstile-144x144.png">
 <meta name="theme-color" content="#ffffff">
 <link rel="stylesheet" type="text/css" media="screen" href="/styles/screen.css">
+<link rel="stylesheet" type="text/css" media="screen" href="/styles/highlightjs/default.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 
 
@@ -39,120 +41,116 @@
 
 
 <body id="body-developers">
-  <header id="site-header">
-<a href="/" id="nav-home">
-  <img src="/images/home/tendermint-logo-200-green.jpg" alt="Tendermint logo"/>
-</a>
-<nav>
-  <a id="nav-posts" href="/posts">News</a>
-  <a id="nav-about" href="/about">About</a>
-  <a id="nav-developers"href="/developers">Developers</a>
-  <a id="nav-tutorials" href="/tutorials">Docs</a>
-</nav>
+  <header id="site-header" class="site-bookend">
+<div class="site-logo">
+  <a href="/">
+    <img src="/images/home/tendermint-logo-400-green.png" alt="Tendermint logo"/>
+  </a>
+</div>
+<ul class="right">
+  <li id="nav-developers"><a href="/developers">Devs</a></li>
+  <li id="nav-tutorials"><a href="/tutorials">Docs</a></li>
+</ul>
+<ul class="left">
+  <li id="nav-blog"><a href="/posts">News</a></li>
+  <li id="nav-about"><a href="/about">About</a></li>
+</ul>
 </header>
 
 
-  <section id="section-top">
-  <div class="section-container">
-    <h1>Developers</h1>
-    <p>Build on Tendermint&rsquo;s open source platform. Start learning with <a href="/tutorials">these tutorials</a>.</p>
-    </div>
+  <section id="section-hero" class="section-dark">
+<div class="container">
+  <h1>Developers</h1>
+  <p>Build on Tendermint&rsquo;s open source platform. Start learning with <a href="/tutorials">these tutorials</a>.</p>
   </div>
+</div>
 </section>
 
-<section class="section-default">
-  <div class="section-container">
-    <div class="section-content">
-      <div class="panels">
-        <div class="panel">
-          <div class="panel-container">
-            <div class="panel-header">
-              <h3><a href="https://github.com/tendermint/tendermint/" class="block">
-                <i class="fa fa-github"></i> GitHub</a></h3>
-            </div>
-            <div class="panel-body">
-              <ul>
-                <li>
-                  <h4><a href="http://github.com/tendermint/tendermint/wiki">Tendermint Spec</a></h4>
-                  <p>Get an overview of Tendermint&rsquo;s structure, algorithms, and roadmap.</p>
-                </li>
-                <li>
-                  <h4><a href="https://github.com/tendermint/tendermint">Tendermint Core</a></h4>
-                  <p>Tendermint Core</p>
-                </li>
-                <li>
-                  <h4><a href="https://github.com/tendermint/tmsp">TMSP</a></h4>
-                  <p>Tendermint socket protocol for blockchain applications</p>
-                </li>
-                <li>
-                  <h4><a href="https://github.com/tendermint/mintnet">Mintnet</a></h4>
-                  <p>Developer tool for deploying a Tendermint testnet</p>
-                </li>
-                <li>
-                  <h4><a href="https://github.com/tendermint/go-p2p">Go-P2P</a></h4>
-                  <p>Extensible P2P networking stack</p>
-                </li>
-                <li>
-                  <h4><a href="https://github.com/tendermint/go-merkle">Go-Merkle</a></h4>
-                  <p>Merkle hash trees for blocks and application state</p>
-                </li>
-                <li>
-                  <h4><a href="https://github.com/tendermint/go-wire">Go-Wire</a></h4>
-                  <p>Binary and JSON encoding/decoding</p>
-                </li>
-              </ul>
-            </div><!--panel-body-->
-          </div><!--panel-container-->
-        </div><!--panel-->
-      </div><!--panels-->
-    </div><!--section-content-->
-  </div><!--section-container-->
-</section>
-
-
-  <section id="section-social-media" class="section-default section-dark">
-  <div class="section-container">
-    <header class="section-header">
-      <h2>Learn more by joining the&nbsp;discussion</h2>
-    </header>
-    <div class="section-content">
-      <ul class="ul-social-media">
+<section class="section-panels">
+<div class="container">
+  <div class="content">
+    <div class="panel">
+    <div class="panel-header">
+      <h3><a href="https://github.com/tendermint/tendermint/" class="block">
+        <i class="fa fa-github"></i> GitHub</a></h3>
+    </div>
+    <div class="panel-body">
+      <ul>
         <li>
-          <a href="mailto:slack@tendermint.com?subject=Please&nbsp;Add&nbsp;Me&nbsp;To&nbsp;Slack!">
-            <h3><i class="fa fa-slack"></i> Slack</h3>
-            <p>Get an invitation to join the discussion on our Slack.</p>
-          </a>
+          <h4><a href="http://github.com/tendermint/tendermint/wiki">Tendermint Spec</a></h4>
+          <p>Get an overview of Tendermint&rsquo;s structure, algorithms, and roadmap.</p>
         </li>
         <li>
-          <a href="https://twitter.com/tendermint_team">
-            <h3><i class="fa fa-twitter"></i> Twitter</h3>
-            <p>Follow <strong>@tendermint_team</strong> on Twitter to get our latest updates.</p>
-          </a>
+          <h4><a href="https://github.com/tendermint/tendermint">Tendermint Core</a></h4>
+          <p>Tendermint Core</p>
         </li>
         <li>
-          <a href="https://www.facebook.com/tendermint/">
-            <h3><i class="fa fa-facebook"></i> Facebook</h3>
-            <p>Like and follow Tendermint on Facebook.</p>
-          </a>
+          <h4><a href="https://github.com/tendermint/tmsp">TMSP</a></h4>
+          <p>Tendermint socket protocol for blockchain applications</p>
         </li>
         <li>
-          <a href="https://www.linkedin.com/company/tendermint">
-            <h3><i class="fa fa-linkedin"></i> LinkedIn</h3>
-            <p>View our profile and connect with us on LinkedIn.</p>
-          </a>
+          <h4><a href="https://github.com/tendermint/mintnet">Mintnet</a></h4>
+          <p>Developer tool for deploying a Tendermint testnet</p>
+        </li>
+        <li>
+          <h4><a href="https://github.com/tendermint/go-p2p">Go-P2P</a></h4>
+          <p>Extensible P2P networking stack</p>
+        </li>
+        <li>
+          <h4><a href="https://github.com/tendermint/go-merkle">Go-Merkle</a></h4>
+          <p>Merkle hash trees for blocks and application state</p>
+        </li>
+        <li>
+          <h4><a href="https://github.com/tendermint/go-wire">Go-Wire</a></h4>
+          <p>Binary and JSON encoding/decoding</p>
         </li>
       </ul>
     </div>
+    </div><!--panel-->
+  </div><!--content-->
+</section>
+
+
+  <section id="section-social-media" class="section-dark">
+  <div class="container">
+    <div class="section-header">
+      <h2>Learn more by joining the&nbsp;discussion</h2>
+    </div>
+    <ul>
+      <li>
+        <a href="mailto:slack@tendermint.com?subject=Please&nbsp;Add&nbsp;Me&nbsp;To&nbsp;Slack!">
+          <h3><i class="fa fa-slack"></i> Slack</h3>
+          <p>Get an invitation to join the discussion on our Slack.</p>
+        </a>
+      </li>
+      <li>
+        <a href="https://twitter.com/tendermint_team">
+          <h3><i class="fa fa-twitter"></i> Twitter</h3>
+          <p>Follow <strong>@tendermint_team</strong> on Twitter to get our latest updates.</p>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.facebook.com/tendermint/">
+          <h3><i class="fa fa-facebook"></i> Facebook</h3>
+          <p>Like and follow Tendermint on Facebook.</p>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/company/tendermint">
+          <h3><i class="fa fa-linkedin"></i> LinkedIn</h3>
+          <p>View our profile and connect with us on LinkedIn.</p>
+        </a>
+      </li>
+    </ul>
   </div>
 </section>
 
-<section id="section-cta" class="section-default section-dark">
-  <div class="section-container">
-    <header class="section-header">
+<section id="section-cta" class="section-dark">
+  <div class="container">
+    <div class="section-header">
       <h2>Stay updated on Tendermint&nbsp;news</h2>
-    </header>
-    <div class="section-content">
-      
+    </div>
+    
 <form action="http://tendermint.us8.list-manage1.com/subscribe/post?u=89d5a312be95ee3f0c9cf7ecd&amp;id=4af1217bca" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 
   <div class="input-group">
@@ -170,11 +168,11 @@
 </form>
 
   </div>
-  </div>
 </section>
 
-<footer id="site-footer">
+<footer id="site-footer" class="site-bookend">
   <p class="left">&copy; 2016 Tendermint</p>
+
   <p class="right">
     <a href="/about">About</a>
     &middot;

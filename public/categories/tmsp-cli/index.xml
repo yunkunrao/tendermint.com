@@ -10,15 +10,17 @@
     
     <item>
       <title>Run your first TMSP application</title>
-      <link>http://tendermint.com/tutorials/run-your-first-tmsp-application/</link>
+      <link>http://tendermint.com/guide/run-your-first-tmsp-application/</link>
       <pubDate>Wed, 16 Dec 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://tendermint.com/tutorials/run-your-first-tmsp-application/</guid>
+      <guid>http://tendermint.com/guide/run-your-first-tmsp-application/</guid>
       <description>
 
-&lt;p&gt;&lt;em&gt;This tutorial is first in a series.  See &lt;a href=&#34;http://tendermint.com/posts/tendermint-socket-protocol/&#34;&gt;this post&lt;/a&gt; for an overview of TMSP and links to all the tutorials in this series.&lt;/em&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This tutorial is first in a series.  See &lt;a href=&#34;http://tendermint.com/posts/tendermint-socket-protocol/&#34;&gt;this post&lt;/a&gt; for an overview of TMSP and links to all the tutorials in this series.&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;h3 id=&#34;a-first-example:639016e1af3277f51024e0a6d4712e42&#34;&gt;A First Example&lt;/h3&gt;
+&lt;h2 id=&#34;a-first-example:639016e1af3277f51024e0a6d4712e42&#34;&gt;A First Example&lt;/h2&gt;
 
 &lt;p&gt;Make sure you &lt;a href=&#34;https://golang.org/doc/install&#34;&gt;have Go installed&lt;/a&gt; and &lt;a href=&#34;https://github.com/tendermint/tendermint/wiki/Setting-GOPATH&#34;&gt;put &lt;code&gt;$GOPATH/bin&lt;/code&gt; in your &lt;code&gt;$PATH&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
 
@@ -108,7 +110,7 @@ to allow multiple TMSP messages to be sent over a single connection.&lt;/p&gt;
 
 &lt;p&gt;Similarly, you could put the commands in a file and run &lt;code&gt;tmsp-cli batch &amp;lt; myfile&lt;/code&gt;.&lt;/p&gt;
 
-&lt;h3 id=&#34;another-example:639016e1af3277f51024e0a6d4712e42&#34;&gt;Another Example&lt;/h3&gt;
+&lt;h2 id=&#34;another-example:639016e1af3277f51024e0a6d4712e42&#34;&gt;Another Example&lt;/h2&gt;
 
 &lt;p&gt;Now that we&amp;rsquo;ve got the hang of it, let&amp;rsquo;s try another application, the &amp;ldquo;counter&amp;rdquo; app.&lt;/p&gt;
 
@@ -192,7 +194,7 @@ You should get the same results as for the Go version.&lt;/p&gt;
 
 &lt;p&gt;Want to write the counter app in your favorite language?! We&amp;rsquo;d be happy to accept the pull request!&lt;/p&gt;
 
-&lt;h3 id=&#34;next-steps:639016e1af3277f51024e0a6d4712e42&#34;&gt;Next steps&lt;/h3&gt;
+&lt;h2 id=&#34;next-steps:639016e1af3277f51024e0a6d4712e42&#34;&gt;Next steps&lt;/h2&gt;
 
 &lt;p&gt;In the next tutorial, we will show how to &lt;a href=&#34;http://tendermint.com/tutorials/launch-a-tmsp-testnet&#34;&gt;launch a TMSP testnet&lt;/a&gt;.&lt;/p&gt;
 </description>

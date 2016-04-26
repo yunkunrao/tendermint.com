@@ -39,7 +39,7 @@
       <pubDate>Wed, 10 Feb 2016 09:00:05 +0800</pubDate>
       
       <guid>http://tendermint.com/media/live-blockchain-demo/</guid>
-      <description>&lt;iframe class=&#34;iframe-video&#34; width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/9krAQzN6tbc&amp;start=1952&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+      <description>&lt;iframe class=&#34;iframe-video&#34; width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/9krAQzN6tbc?start=1952&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
 
 &lt;p&gt;Ethan Buchman demos a live Tendermint-powered blockchain, with nodes coming on and offline.&lt;/p&gt;
 </description>

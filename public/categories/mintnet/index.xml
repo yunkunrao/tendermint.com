@@ -10,15 +10,17 @@
     
     <item>
       <title>Launch a TMSP testnet using mintnet</title>
-      <link>http://tendermint.com/tutorials/launch-a-tmsp-testnet/</link>
+      <link>http://tendermint.com/guide/launch-a-tmsp-testnet/</link>
       <pubDate>Wed, 16 Dec 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://tendermint.com/tutorials/launch-a-tmsp-testnet/</guid>
+      <guid>http://tendermint.com/guide/launch-a-tmsp-testnet/</guid>
       <description>
 
-&lt;p&gt;&lt;em&gt;This tutorial is second in a series.  See &lt;a href=&#34;http://tendermint.com/posts/tendermint-socket-protocol/&#34;&gt;this post&lt;/a&gt; for links to all the tutorials in this series.&lt;/em&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This tutorial is second in a series.  See &lt;a href=&#34;http://tendermint.com/posts/tendermint-socket-protocol/&#34;&gt;this post&lt;/a&gt; for links to all the tutorials in this series.&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;h3 id=&#34;tendermint-core:e6f6bbc740be2f7da0f93ab7574b2f68&#34;&gt;Tendermint Core&lt;/h3&gt;
+&lt;h2 id=&#34;tendermint-core:e6f6bbc740be2f7da0f93ab7574b2f68&#34;&gt;Tendermint Core&lt;/h2&gt;
 
 &lt;p&gt;Now that we&amp;rsquo;ve seen how TMSP works, and even played with a few applications using the &lt;code&gt;tmsp-cli&lt;/code&gt; tool,
 let&amp;rsquo;s run an actual Tendermint node.&lt;/p&gt;
@@ -86,7 +88,7 @@ go install ./cmd/tendermint
 
 &lt;p&gt;visit &lt;a href=&#34;http://localhost:46657&#34;&gt;http://localhost:46657&lt;/a&gt; in your browser to see the other endpoints.&lt;/p&gt;
 
-&lt;h3 id=&#34;deploy-a-tendermint-testnet:e6f6bbc740be2f7da0f93ab7574b2f68&#34;&gt;Deploy a Tendermint Testnet&lt;/h3&gt;
+&lt;h2 id=&#34;deploy-a-tendermint-testnet:e6f6bbc740be2f7da0f93ab7574b2f68&#34;&gt;Deploy a Tendermint Testnet&lt;/h2&gt;
 
 &lt;p&gt;Now that we&amp;rsquo;ve run a single Tendermint node with one validator and a couple applications,
 let&amp;rsquo;s deploy a testnet to run our application with four validators.&lt;/p&gt;

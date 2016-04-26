@@ -8,25 +8,35 @@
       max-height 360px
       margin 0 auto
 
+  ul.ul-boxed
+    border 1px solid dbc
+    background hsla(0,0,0,0.15)
+    li
+      border-bottom 1px dotted dbc
+      padding 0.666*x x
+      &:last-of-type
+        border-bottom none
+
 @media screen and (min-width: 768px)
   #section-architecture
     .section-container
       .section-content
         display flex
-        a.anchor-img
-          margin-right x
+
+    a.anchor-img
+      margin-right x
 
 
 @media screen and (min-width: 960px)
   #section-architecture
     .section-container
       .section-content
+        max-width 960px
         display flex
         a.anchor-img
-          border-right 4px solid lighten(mcolor,10%)
           margin-right 1.5*x
           padding-right 1.5*x
-        ul.ul-boxed
-          li
-            padding x 1.25*x
 
+    ul.ul-boxed
+      li
+        padding x 1.5*x

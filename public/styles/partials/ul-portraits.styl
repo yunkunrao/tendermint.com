@@ -4,37 +4,79 @@
   flex-flow row wrap
   justify-content center
 
+  max-width 60*x
+
   margin 0 -0.5*x -0.5*x
 
   li
     flex 1 0 50%
     padding 0.5*x
-    margin-bottom 0.25*x
+    margin-bottom 0.5*x
 
   img
     width 100%
-    border 1px solid darken(bc,50%)
+    border 1px solid bc
+    padding 0.25*x
+    vertical-align top
+    display block
 
   .label
     text-align center
 
-  span.name, span.title
+  a.twitter
     display block
+    padding 0.333*x 0
+    border 1px solid #fff
 
-  span.name
-    font-weight 500
+    .name
+      font-weight 600
+      color txt
 
-  span.title
-    line-height 1.25em
-    font-size 0.9em
-    color dim
+    .handle
+      color light
+      font-size 0.75*x
+
+
+    &:hover
+      .name
+        color link
+      .handle
+        color lighten(link,50%)
+
+  .title
+    border-top 1px dotted bc
+    padding-top 0.333*x
+    font-size 0.75*x
+
+
+@media screen and (min-width: 360px)
+  .ul-portraits
+    a.twitter
+      padding 0.5*x 0
+    .title
+      padding-top 0.5*x
 
 @media screen and (min-width: 768px)
   .ul-portraits
     li
       flex 0 0 25%
 
-    span.name
-      border-bottom 1px dotted bc
-      margin-bottom 0.333*x
-      padding-bottom 0.333*x
+    a.twitter
+      margin 0.25*x 0
+      &:hover
+        background lighten(mcolor,95%)
+        border-color lighten(link,50%)
+
+@media screen and (min-width: 1024px)
+  .ul-portraits
+    margin 0 auto -0.5*x
+
+    a.twitter
+      padding 0.666*x 0
+      .name
+        font-size 1.125*x
+      .handle
+        font-size 0.85*x
+    .title
+      padding-top 0.666*x
+      font-size 0.85*x

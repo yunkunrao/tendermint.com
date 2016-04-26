@@ -10,10 +10,10 @@
     
     <item>
       <title>Tendermint for Fast Settlement</title>
-      <link>http://tendermint.com/posts/tendermint-for-fast-settlement/</link>
+      <link>http://tendermint.com/blog/tendermint-for-fast-settlement/</link>
       <pubDate>Sat, 03 Oct 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://tendermint.com/posts/tendermint-for-fast-settlement/</guid>
+      <guid>http://tendermint.com/blog/tendermint-for-fast-settlement/</guid>
       <description>
 
 &lt;p&gt;Some experts in the nascent blockchain industry have said the following:&lt;/p&gt;
@@ -61,10 +61,10 @@
     
     <item>
       <title>Tendermint vs PBFT</title>
-      <link>http://tendermint.com/posts/tendermint-vs-pbft/</link>
+      <link>http://tendermint.com/blog/tendermint-vs-pbft/</link>
       <pubDate>Sat, 03 Oct 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://tendermint.com/posts/tendermint-vs-pbft/</guid>
+      <guid>http://tendermint.com/blog/tendermint-vs-pbft/</guid>
       <description>
 
 &lt;p&gt;Tendermint was originally inspired by the DLS algorithm (&lt;a href=&#34;http://groups.csail.mit.edu/tds/papers/Lynch/jacm88.pdf&#34;&gt;link&lt;/a&gt;).  After several iterations to improve efficiency, (namely, making it more asynchronous), it has become quite similar to the PBFT algorithm (&lt;a href=&#34;http://www.pmg.lcs.mit.edu/papers/osdi99.pdf&#34;&gt;link&lt;/a&gt;).  This document serves to illustrate the similarities and differences between Tendermint and PBFT.&lt;/p&gt;
@@ -112,13 +112,13 @@
 
 &lt;p&gt;&lt;em&gt;terminology comparison between Tendermint and PBFT&lt;/em&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;byzantine-fault-tolerance:e7e7efb14f67469318954b6d027907a0&#34;&gt;Byzantine fault tolerance&lt;/h3&gt;
+&lt;h2 id=&#34;byzantine-fault-tolerance:e7e7efb14f67469318954b6d027907a0&#34;&gt;Byzantine fault tolerance&lt;/h2&gt;
 
 &lt;p&gt;Both PBFT and Tendermint are Byzantine fault-tolerant transaction systems.  Both can handle up to ⅓ of malicious Byzantine validators/replicas.  Both require three steps/phases;  the first for broadcasting the block, and the last two for broadcasting signatures.  Finally, both require two quorums of signatures to commit a block.&lt;/p&gt;
 
 &lt;p&gt;Where the two differ is in what happens when more than ⅓ of validators are Byzantine.  In PBFT, when there are between ⅓ and ⅔ of Byzantine validators, no guarantees are provided whatsoever; the attackers can return arbitrary results to the client (&lt;a href=&#34;https://www.usenix.org/conference/nsdi-07/beyond-one-third-faulty-replicas-byzantine-fault-tolerant-systems&#34;&gt;source&lt;/a&gt;).  Tendermint’s consensus model considers a block to be committed when there are more than ⅔ of precommit signatures for the blockhash, which mitigates this issue.   Thus if ½ of the validators are Byzantine they can prevent future blocks from being committed; however, they cannot commit new blocks like they can in PBFT.&lt;/p&gt;
 
-&lt;h3 id=&#34;round-robin-vs-sticky-leaders:e7e7efb14f67469318954b6d027907a0&#34;&gt;Round-robin vs sticky leaders&lt;/h3&gt;
+&lt;h2 id=&#34;round-robin-vs-sticky-leaders:e7e7efb14f67469318954b6d027907a0&#34;&gt;Round-robin vs sticky leaders&lt;/h2&gt;
 
 &lt;p&gt;PBFT&amp;rsquo;s whitepaper, which was the inspiration for Hyperledger, illustrates a &amp;ldquo;sticky&amp;rdquo; leader (a.k.a. primary/proposer) system.  Tendermint&amp;rsquo;s specification describes a round-robin scheme for selecting new leaders for every block.&lt;/p&gt;
 
@@ -126,21 +126,21 @@
 
 &lt;p&gt;We don&amp;rsquo;t have to pick one solution; we can combine the two approaches into a hybrid scheme.  Fortunately, making this change is straightforward in Tendermint, so it&amp;rsquo;s easy to configure it for any purpose.&lt;/p&gt;
 
-&lt;h3 id=&#34;dynamic-membership:e7e7efb14f67469318954b6d027907a0&#34;&gt;Dynamic membership&lt;/h3&gt;
+&lt;h2 id=&#34;dynamic-membership:e7e7efb14f67469318954b6d027907a0&#34;&gt;Dynamic membership&lt;/h2&gt;
 
 &lt;p&gt;The PBFT algorithm assumes a fixed set of replicas/validators in the network.  This may work for internal systems, but it doesn&amp;rsquo;t work for &amp;ldquo;consortium&amp;rdquo; or &amp;ldquo;public&amp;rdquo; blockchains where the participants are expected to change over time.  Tendermint supports dynamic membership safely by requiring a +⅔ quorum of validators to approve of membership changes.  The reference implementation allows anyone to post a bond collateral (with intrinsic coins), but other variations are possible (especially when combined with our permissions framework).  For example, Tendermint could be easily modified to reject new members by default, and only approve new members that have been whitelisted (perhaps by an independent third party).&lt;/p&gt;
 
-&lt;h3 id=&#34;epidemic-gossip-vs-point-to-point:e7e7efb14f67469318954b6d027907a0&#34;&gt;Epidemic gossip vs point-to-point&lt;/h3&gt;
+&lt;h2 id=&#34;epidemic-gossip-vs-point-to-point:e7e7efb14f67469318954b6d027907a0&#34;&gt;Epidemic gossip vs point-to-point&lt;/h2&gt;
 
 &lt;p&gt;The PBFT algorithm illustrates a point-to-point consensus algorithm, which is simpler but is less robust to disruptions in the network.  Tendermint&amp;rsquo;s implementation uses an epidemic gossip protocol to ensure that consensus can be reached as long as the network is connected, no matter how many point-to-point edge connections have been broken.&lt;/p&gt;
 
-&lt;h3 id=&#34;block-propagation-optimizations:e7e7efb14f67469318954b6d027907a0&#34;&gt;Block propagation optimizations&lt;/h3&gt;
+&lt;h2 id=&#34;block-propagation-optimizations:e7e7efb14f67469318954b6d027907a0&#34;&gt;Block propagation optimizations&lt;/h2&gt;
 
 &lt;p&gt;Tendermint goes a step further than PBFT and implements a BitTorrent/LibSwift-inspired algorithm to quickly broadcast transaction blocks.  This makes the most out of limited available bandwidth to commit transactions sooner.&lt;/p&gt;
 
 &lt;p&gt;See &lt;a href=&#34;http://www.ict.kth.se/courses/ID2210/presentation-papers/2012%20-%20Performance%20Analysis%20of%20Libswift.pdf&#34;&gt;&lt;em&gt;Performance Analysis of the Libswift P2P Streaming Protocol&lt;/em&gt;&lt;/a&gt; for details on how LibSwift fares in “flashcrowd” scenarios, which is similar to new block propagations in Tendermint.&lt;/p&gt;
 
-&lt;h3 id=&#34;self-balancing-merkle-trees:e7e7efb14f67469318954b6d027907a0&#34;&gt;Self-balancing Merkle trees&lt;/h3&gt;
+&lt;h2 id=&#34;self-balancing-merkle-trees:e7e7efb14f67469318954b6d027907a0&#34;&gt;Self-balancing Merkle trees&lt;/h2&gt;
 
 &lt;p&gt;PBFT and its implementation (the BFS filesystem) doesn&amp;rsquo;t provide much by way of useful data structures.  Tendermint ships with a self-balancing Merkle tree library which can be used to keep track of application data (e.g. account balances) and prove any part of the application state to a client (with a Merkle proof and quorum of signatures).  Of course, it&amp;rsquo;s not necessary to use such a data structure if you need to build a blockchain that can handle a million transactions per second &amp;ndash; for that, you should combine Tendermint with an LMAX &amp;ldquo;disruptor&amp;rdquo; (&lt;a href=&#34;http://martinfowler.com/articles/lmax.html&#34;&gt;source&lt;/a&gt;) to process all transactions in memory.&lt;/p&gt;
 
@@ -161,11 +161,99 @@
     </item>
     
     <item>
+      <title>Cases for Tendermint</title>
+      <link>http://tendermint.com/blog/cases-for-tendermint/</link>
+      <pubDate>Sun, 13 Sep 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://tendermint.com/blog/cases-for-tendermint/</guid>
+      <description>
+
+&lt;p&gt;You may have an application that benefits from blockchain technology, and you may be trying to figure out whether to build that on Bitcoin, some meta-coin protocol like Counterparty, with Solidity/Serpent on the Ethereum virtual machine, or on a new blockchain stack altogether.  Actually, you should seriously consider building on Tendermint.&lt;/p&gt;
+
+&lt;h2 id=&#34;a-little-background-on-tendermint:1825e1740a61156b2d6c2c2a5daacec7&#34;&gt;A little background on Tendermint&lt;/h2&gt;
+
+&lt;p&gt;Tendermint is not a fork of Bitcoin, NXT, Ripple, or Ethereum.  Tendermint is its own blockchain stack written from the ground up.  It was built to be the base blockchain stack from which to fork off of for a wide variety of decentralized applications.  It started back in 2014 as an ambitious project to solve the Bitcoin mining problem and bring real Byzantine fault-tolerant consensus to cryptocurrencies.  First we adapted an existing BGA consensus algorithm to make it suitable for blockchains.  For the actual implementation we considered forking Bitcoin, NXT, BitShares, and other projects, but none could easily accommodate the desired project architecture.  So, a brand spanking new blockchain stack was born.&lt;/p&gt;
+
+&lt;p&gt;Tendermint offers:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Byzantine fault-tolerant consensus with unparalleled speed and security guarantees &amp;ndash; without mining. &lt;a href=&#34;https://github.com/tendermint/tendermint/wiki/Byzantine-Consensus-Algorithm&#34;&gt;(see spec)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;A very clean codebase with clear separation of concerns &amp;ndash; no spaghetti, thanks Golang!&lt;/li&gt;
+&lt;li&gt;Throttled/fair P2P stack to handle multiplexed channels of communication.&lt;/li&gt;
+&lt;li&gt;Clear P2P logic with the &lt;a href=&#34;https://en.wikipedia.org/wiki/Reactor_pattern&#34;&gt;reactor pattern&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;On top of this foundation, we&amp;rsquo;ve built more advanced blockchain features.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;A compatible and efficient Ethereum VM implementation&lt;/li&gt;
+&lt;li&gt;A permissions system that works across accounts and VM contracts&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We&amp;rsquo;re going to build more exciting features going forward, except this time we&amp;rsquo;ll blog about it while we do it, so hang on to your metaphorical horses.&lt;/p&gt;
+
+&lt;h2 id=&#34;on-tendermint-consensus:1825e1740a61156b2d6c2c2a5daacec7&#34;&gt;On Tendermint consensus&lt;/h2&gt;
+
+&lt;p&gt;The consensus system is the foundational layer of any blockchain stack. It is the process by which all of the transaction validators (equivalent to miners in Bitcoin) agree on the state of the network.  Improvements in speed, security, and cost of a consensus system ripple up and improve the performance of any network or application built on top of it.  Let&amp;rsquo;s dive into some examples to get a sense of how it works.&lt;/p&gt;
+
+&lt;h3 id=&#34;case-1-payment-verification:1825e1740a61156b2d6c2c2a5daacec7&#34;&gt;Case 1: Payment verification&lt;/h3&gt;
+
+&lt;p&gt;Say that your mobile phone is connected to untrusted wifi, and you&amp;rsquo;re making a business deal with Satoshi.  Satoshi just sent you a large payment, and you need to verify that this payment was committed onto the blockchain network irreversibly.&lt;/p&gt;
+
+&lt;p&gt;With Bitcoin, you generally need to wait up to 6 confirmation blocks (about 1 hour, sometimes longer) to consider a transaction fully committed.  For very large payment transactions you should wait even longer, because the security afforded by the blockchain miners is no greater than the cost of double-spending that transaction, which is today only about 25 Bitcoins per reverted block, and soon to be half of that.&lt;/p&gt;
+
+&lt;p&gt;With Tendermint, a global network of 1000 independent validators can commit a transaction in less than 60 seconds.  The time required to commit only gets shorter with increased bandwidth and computational capacity of the nodes of the network.  In the near future we&amp;rsquo;ll be able to commit transactions on a global Tendermint blockchain with more than 1000 validators in a matter of seconds &amp;ndash; the only real limitation is the time it takes for light to travel around the globe.&lt;/p&gt;
+
+&lt;h3 id=&#34;case-2-name-registry-lookup:1825e1740a61156b2d6c2c2a5daacec7&#34;&gt;Case 2: Name registry lookup&lt;/h3&gt;
+
+&lt;p&gt;Similar to case 1, but instead of verifying a payment, you need to verify Satoshi&amp;rsquo;s public key as registered under the name &amp;ldquo;@satoshi&amp;rdquo; on a name-registry blockchain.  The difference here as compared to case 1 is that instead of verifying a new transaction, you&amp;rsquo;re verifying the current value of a pre-registered key that may have been changed by other transactions.&lt;/p&gt;
+
+&lt;p&gt;With Bitcoin (and Namecoin), you can verify that &amp;ldquo;@satoshi&amp;rdquo; was registered with a particular public key at some point in the past, but you wouldn&amp;rsquo;t know whether the public key had since been updated without downloading the whole blockchain.  This is because the presence of a name-registration transaction in the blockchain does not imply that later transactions hadn&amp;rsquo;t updated the value for that key.  In order for you to efficiently check for the current value of a name, the blockchain should support a balanced Merkle tree on the most recent name-registry state.  Even if Bitcoin/Namecoin did support such a data structure, you would still have to download and verify all the blockchain hashes and headers, and if the value might have been updated recently you&amp;rsquo;re still vulnerable to a fork-censorship attack.&lt;/p&gt;
+
+&lt;p&gt;With Tendermint, all you need is the most recent blockhash signed by more than &lt;sup&gt;2&lt;/sup&gt;&amp;frasl;&lt;sub&gt;3&lt;/sub&gt; of the validators, and a Merkle proof that proves the current value associated with the name &amp;ldquo;@satoshi&amp;rdquo;.  You don&amp;rsquo;t even need to wait for a single commit.  If you&amp;rsquo;re interested, see &lt;a href=&#34;https://github.com/tendermint/tendermint/wiki/Merkle-Trees#iavl-tree&#34;&gt;this link&lt;/a&gt; for more information on our balanced binary Merkle tree implementation.&lt;/p&gt;
+
+&lt;p&gt;In future posts I&amp;rsquo;ll go into detail about the consensus algorithm and how it can provide these unique speed &amp;amp; security guarantees without proof-of-work mining.  For now, you can check the most recent Tendermint spec on the github wiki &lt;a href=&#34;https://github.com/tendermint/tendermint/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;tendermint-architecture:1825e1740a61156b2d6c2c2a5daacec7&#34;&gt;Tendermint architecture&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://tendermint.com/images/tm_architecture.png&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;The diagram above is meant to show that:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;the consensus and transaction-execution (aka state-transition) modules are separate except for the shared (immutable/Merkle-ized) state.&lt;/li&gt;
+&lt;li&gt;the consensus module takes a block, a commit for the block, and the last state, and uses the transaction-execution module to produce the next state.&lt;/li&gt;
+&lt;li&gt;the VM call transaction is one of many transaction types offered by the transaction-execution module.&lt;/li&gt;
+&lt;li&gt;the Ethereum VM (EVM) is only one of potentially many supported virtual machines.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If you have a blockchain application in mind, on Tendermint there are two options to consider &amp;ndash; a smart contract on the Ethereum VM (and in the future, other VMs as well), or, a native transaction type (like SendTx or NameTx above).&lt;/p&gt;
+
+&lt;h2 id=&#34;whether-to-develop-a-vm-smart-contract-or-develop-a-native-tendermint-contract:1825e1740a61156b2d6c2c2a5daacec7&#34;&gt;Whether to develop a VM smart contract or develop a native Tendermint contract&lt;/h2&gt;
+
+&lt;p&gt;The main benefit of a Turing-complete VM on a blockchain is that anyone can upload new contract logic onto the blockchain.  This is especially true on big-bad-public-blockchains (BBPB) like Bitcoin or Ethereum which were designed to allow anyone to upload new contract logic.  On the other hand, private blockchains and consortium blockchains that are more tightly managed may not need or even want arbitrary user-defined logic.&lt;/p&gt;
+
+&lt;p&gt;Sometimes, writing an EVM contract is the right answer.  Use the EVM if you need to deploy the contract on a public blockchain such as Ethereum.  Use the EVM if you don&amp;rsquo;t have systems programming experience, and you find that writing a solidity contract is easier than writing in Golang.  Use the EVM if your contract-logic is simple enough that you wouldn&amp;rsquo;t mind stepping over bytecode execution to debug your contract.&lt;/p&gt;
+
+&lt;p&gt;For other applications where the former exceptions don&amp;rsquo;t apply, you probably want to write native code on Tendermint for a variety of reasons &amp;ndash; Golang&amp;rsquo;s language tooling is better so debugging is easier, it&amp;rsquo;s computationally more efficient by far, and it removes two complex layers (one for the bytecode compiled language, and one for the VM itself).  If you want full control over your Merkle-ized data structures (e.g. without the 32-by-32-byte restriction of the EVM&amp;rsquo;s Patricia-trie) then you have to write your contract logic at the native level.  Tendermint provides you with the right tools to make this as easy as possible.&lt;/p&gt;
+
+&lt;h2 id=&#34;fin:1825e1740a61156b2d6c2c2a5daacec7&#34;&gt;Fin&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Go to &lt;a href=&#34;http://tendermint.com&#34;&gt;http://tendermint.com&lt;/a&gt; and sign up for the newsletter.&lt;/li&gt;
+&lt;li&gt;Check out the &lt;a href=&#34;https://github.com/tendermint/tendermint/wiki&#34;&gt;Tendermint wiki&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Develop on Tendermint.&lt;/li&gt;
+&lt;li&gt;Email us at hello@tendermint.com with your full name to join our Slack channel.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>The Security of Cryptocurrency Protocols</title>
-      <link>http://tendermint.com/posts/security-of-cryptocurrency-protocols/</link>
+      <link>http://tendermint.com/blog/security-of-cryptocurrency-protocols/</link>
       <pubDate>Wed, 19 Nov 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://tendermint.com/posts/security-of-cryptocurrency-protocols/</guid>
+      <guid>http://tendermint.com/blog/security-of-cryptocurrency-protocols/</guid>
       <description>
 
 &lt;p&gt;Many solutions to the consensus problem for cryptocurrencies have been proposed.  Since the innovation of Bitcoin’s proof-of-work based consensus algorithm&amp;ndash;where miners compete in an energy intensive game to determine the order of transactions&amp;ndash;several proof-of-stake algorithms have been proposed to make consensus faster while removing the reliance on energy expenditure.  The common objective of these protocols is to maintain a live decentralized transaction ledger while defending against double-spend attacks from malicious Byzantine actors deviating from the protocol.  Considering the financial nature of these protocols, we should strive to support a protocol that has well defined and robust security guarantees.&lt;/p&gt;

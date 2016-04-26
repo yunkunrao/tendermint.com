@@ -1,3 +1,9 @@
+default-border-top()
+  border-top 4px solid darken(mcolor, 33%)
+
+highlighted-border-top-color()
+  border-top-color lighten(mcolor, 33%) !important
+
 #site-header
   position fixed
   top 0
@@ -12,11 +18,10 @@
   display flex
 
   box-shadow hsla(mhue,msat,mlit - 15%,0.15) 0 0.125*x 0.16*x
-  // box-shadow hsla(0,0,0,0.5) 0 0.125*x 0.16*x
 
   a#nav-home
     display block
-    border-top 4px solid darken(mcolor,25%)
+    default-border-top()
     img
       width 3*x - 4px
       height 3*x - 4px
@@ -24,7 +29,7 @@
   nav
     flex 1
     display flex
-    border-top 4px solid darken(mcolor,25%)
+    default-border-top()
     box-shadow inset lighten(mcolor,10%) 1px 0 0
     padding-left 0.5*x
     a
@@ -32,22 +37,29 @@
       padding 0 0.5*x
       line-height 3*x - 4px
       color lighten(mcolor,75%)
-      border-top 4px solid darken(mcolor,25%)
+      default-border-top()
       margin-top -4px
+
+      .short
+        display inline
+      .long
+        display none
+
       &:hover
-        border-top-color lighten(mcolor,25%)
+        highlighted-border-top-color()
         color lighten(mcolor,90%)
+      &#nav-media
+        display none
 
 #body-home #nav-home
   border-top-color darken(acolor,25%) !important
 
-#body-posts #nav-posts
-#body-post #nav-posts
-#body-tutorials #nav-tutorials
-#body-tutorial #nav-tutorials
+#body-blog #nav-blog
+#body-media #nav-media
+#body-guide #nav-guide
 #body-about #nav-about
-#body-developers #nav-developers
-  border-top-color lighten(mcolor,25%) !important
+#body-code #nav-code
+  highlighted-border-top-color()
 
 @media screen and (min-width: 400px)
   #site-header
@@ -65,3 +77,10 @@
         border-left 1px solid darken(mcolor,20%)
         border-left 1px solid hsla(0,0,0,0.2)
         padding 0 2*x
+        &#nav-media
+          display block
+
+        .short
+          display none
+        .long
+          display inline
