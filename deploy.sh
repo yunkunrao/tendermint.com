@@ -3,51 +3,26 @@
 echo -e "\033[0;32mRunning deploy script...\033[0m"
 set -e # terminate when anything fails
 
-### INIT
+### INIT PUBLIC (master)
 
 echo -e "\033[0;32mInitializing public/...\033[0m"
 
-if [ ! -d "public" ]; then
-  git submodule update --init
+if [ ! -d "public_master" ]; then
+  mkdir public_master
+  cd public_master
+  git init
+  git remote add origin git@github.com:tendermint/tendermint.github.io.git
+  cd ..
 fi
-cd public
-rm -rf public/*
-git fetch origin master
-git checkout master
-git reset --hard origin/master
-cd ..
-
-### MERGE
-
-echo -e "\033[0;32mMerging changes from Github...\033[0m"
-
-git fetch -a origin
-git branch -D backup || true
-git checkout -b backup
-git checkout sources
-git merge origin/sources
-echo "DONE"
 
 
-### SOURCES
-
-echo -e "\033[0;32mPushing sources to Github...\033[0m"
-
-hugo
-git add -A
-msg="rebuilding site `date`"
-if [ $# -eq 1 ]
-  then msg="$1"
-fi
-git commit -m "$msg" || true # Ignore message about public folder
-git push origin sources
-
-
-### PUBLIC (master)
+### DEPLOY PUBLIC (master)
 
 echo -e "\033[0;32mPushing compiled files to Github...\033[0m"
 
-cd public
+rm -rf public_master/*
+cp -r public/* public_master/
+cd public_master
 git add -A
-git commit -m "$msg"
-git push origin master
+git commit -m "deploying website"
+git push origin master --force
