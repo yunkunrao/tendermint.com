@@ -1,9 +1,14 @@
 (function() {
 'use strict'
 
+var $ = require('jquery')
+var FastClick = require('fastclick')
 var hljs = require('highlight.js')
 
-var $ = require('jquery')
+// setup fastclick
+$(function() {
+  FastClick.attach(document.body)
+})
 
 // setup highlighting
 hljs.initHighlightingOnLoad()
