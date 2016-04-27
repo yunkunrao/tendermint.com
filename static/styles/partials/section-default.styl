@@ -79,7 +79,6 @@
 @media screen and (min-width: 768px)
   .section-default
     .section-container
-      padding 1.25*x
 
       .section-header
         padding-bottom 1.75*x
@@ -102,18 +101,19 @@
 @media screen and (min-width: 960px)
   .section-default
     .section-container
+
       .section-header
       .section-content
         max-width 960px
         margin 0 auto
+        padding x 0
+
     &.section-columns .columns
       max-width 100%
 
-    &.section-dark
-      .section-header
-        padding x 0
+    &.section-flush
       .section-content
-        padding x 0
+        padding 0
 
 @media screen and (min-width: 1200px)
   .section-default
