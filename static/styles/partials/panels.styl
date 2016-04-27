@@ -1,7 +1,11 @@
 .panels
+  display flex
+  flex-flow column
   margin -0.5*x
+
   .panel
     padding 0.5*x
+    max-width 60*x
 
     .panel-container
       border 1px solid bc
@@ -54,8 +58,8 @@
 
 @media screen and (min-width: 768px)
   .panels
-    display flex
     flex-flow row wrap
+    justify-content center
 
     .panel
       flex 1 0 50%
@@ -78,4 +82,3 @@
   .panels
     .panel
       flex 1 0 33.3333%
-
