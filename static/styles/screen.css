@@ -1315,9 +1315,22 @@ iframe.iframe-video {
   text-align: center;
   max-width: 576px;
   letter-spacing: -0.025em;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
 }
-#section-top i.fa {
-  margin-right: 4px;
+#section-top h1 i.fa {
+  margin-right: 8px;
+  color: #4799eb;
 }
 #section-top p {
   color: #4799eb;
@@ -4795,4 +4808,16 @@ select {
     -ms-transform: rotate(359deg);
     transform: rotate(359deg);
   }
+}
+.fa-twatter:before {
+  content: "\f099";
+}
+.fa-footbook:before {
+  content: "\f09a";
+}
+.fa-slick:before {
+  content: "\f198";
+}
+.fa-linkedout:before {
+  content: "\f0e1";
 }
