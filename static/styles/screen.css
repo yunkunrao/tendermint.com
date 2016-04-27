@@ -1367,6 +1367,9 @@ iframe.iframe-video {
     font-size: 40px;
     margin: 0 0 12px;
   }
+  #section-top h1 i.fa {
+    margin-right: 12px;
+  }
   #section-top p {
     font-size: 20px;
   }
