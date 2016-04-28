@@ -8,7 +8,7 @@ body = "body-code"
 <section id="section-top">
   <div class="section-container">
     <h1><i class="fa fa-code"></i> Source Code</h1>
-    <p>Develop on Tendermint&rsquo;s open source platform. Start learning with <a href="/tutorials">these tutorials</a>.</p>
+    <p>Develop on Tendermint&rsquo;s open source platform. Start learning with <a href="/guide">the guide</a>.</p>
     </div>
   </div>
 </section>
@@ -17,7 +17,7 @@ body = "body-code"
   <div class="section-container">
     <div class="section-content">
       <div class="panels">
-        <div class="panel">
+        <div class="panel panel-external">
           <div class="panel-container">
             <div class="panel-header">
               <h3><a href="https://github.com/tendermint/tendermint/" class="block">
