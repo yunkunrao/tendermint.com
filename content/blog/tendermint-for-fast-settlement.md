@@ -12,7 +12,7 @@ aliases:
 
 Some experts in the nascent blockchain industry have said the following:
 
-* _The blockchain is just a database_
+* The blockchain is just a database_
 * _Blockchains don’t help with fast settlement_
 * _The future of finance on the blockchain may not involve consensus_
 * _You can build on top of the Bitcoin blockchain for fast settlement_
@@ -32,7 +32,6 @@ Once we have a common ledger, we can think about tradeoffs between security and 
 ### The source of Bitcoin’s security
 
 Bitcoin and Bitcoin’s proof-of-work (PoW) mining, or Nakamoto consensus, provides something that until 2008 had never existed before.  Bitcoin was the first open decentralized application to provide Byzantine fault-tolerant (BFT) consensus on a global currency ledger.  Nakamoto consensus is a novel BFT consensus algorithm that utilizes computational power as a proxy for membership.
-
 
 The security of Nakamoto consensus depends on extrinsic factors such as the availability of energy and access to semiconductor fabs.  Ignoring these factors, the security of Nakamoto consensus can be modeled by the makeup and diversity of the mining network.  The more diverse the mining participants, the more difficult it is to coordinate a sufficiently large coalition to successfully attack the network and cause double-spends. If we discount the difficulty of coordination (which may be prudent considering that major mining pools communicate with each other routinely), what’s left is the opportunity cost of producing blockchain forks--just 25 bitcoins per block at today’s inflationary reward schedule.
 
