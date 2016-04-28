@@ -2,7 +2,7 @@
   background mcolor url('../images/home/gradient.jpg') no-repeat center center
   background-size cover
   position relative
-  margin-top 3*x
+  margin-top 2.4*x
 
   .section-container
     width 100vw
@@ -43,7 +43,11 @@
       &:hover
         color #fff
 
-@media screen and (min-width: 400px)
+@media screen and (min-height: 400px)
+  #section-top
+    margin-top 3*x
+
+@media screen and (min-width: 400px) and (min-height: 400px)
   #section-top
     .section-container
       height 12*x
@@ -53,10 +57,10 @@
       margin 0 0 0.75*x
 
     p
-      font-size 1.25*x
-      line-height 1.5
+      font-size 1.125*x
+      line-height 1.375
 
-@media screen and (min-width: 768px)
+@media screen and (min-width: 720px) and (min-height: 480px)
   #section-top
     .section-container
       height 16*x
@@ -69,3 +73,4 @@
 
     p
       font-size 1.25*x
+      line-height 1.5
