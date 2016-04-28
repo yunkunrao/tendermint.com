@@ -115,7 +115,7 @@
       <description>&lt;section id=&#34;section-top&#34;&gt;
   &lt;div class=&#34;section-container&#34;&gt;
     &lt;h1&gt;&lt;i class=&#34;fa fa-code&#34;&gt;&lt;/i&gt; Source Code&lt;/h1&gt;
-    &lt;p&gt;Develop on Tendermint&amp;rsquo;s open source platform. Start learning with &lt;a href=&#34;http://tendermint.com/tutorials&#34;&gt;these tutorials&lt;/a&gt;.&lt;/p&gt;
+    &lt;p&gt;Develop on Tendermint&amp;rsquo;s open source platform. Start learning with &lt;a href=&#34;http://tendermint.com/guide&#34;&gt;the guide&lt;/a&gt;.&lt;/p&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/section&gt;
@@ -124,7 +124,7 @@
   &lt;div class=&#34;section-container&#34;&gt;
     &lt;div class=&#34;section-content&#34;&gt;
       &lt;div class=&#34;panels&#34;&gt;
-        &lt;div class=&#34;panel&#34;&gt;
+        &lt;div class=&#34;panel panel-external&#34;&gt;
           &lt;div class=&#34;panel-container&#34;&gt;
             &lt;div class=&#34;panel-header&#34;&gt;
               &lt;h3&gt;&lt;a href=&#34;https://github.com/tendermint/tendermint/&#34; class=&#34;block&#34;&gt;
