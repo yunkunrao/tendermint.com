@@ -34,17 +34,6 @@ body = "body-about"
         </li>
         <li>
           <img class="portrait"
-          src="/images/team/dustin-01.jpg" alt="Dustin Byington">
-          <div class="label">
-            <a class="twitter" href="https://twitter.com/dustin_byington" target="_blank">
-              <div class="name">Dustin Byington</div>
-              <div class="handle">@dustin_byington</div>
-            </a>
-            <div class="title">President <span class="amp">&amp;</span> Cofounder</div>
-          </div>
-        </li>
-        <li>
-          <img class="portrait"
           src="/images/team/ethan-01.jpg" alt="Ethan Buchman">
           <div class="label">
             <a class="twitter" href="https://twitter.com/buchmanster" target="_blank">
@@ -80,11 +69,11 @@ body = "body-about"
       <ul class="ul-portraits">
         <li>
           <img class="portrait"
-          src="/images/advisors/pete-harris-01.jpg" alt="Pete Harris">
+          src="/images/advisors/dustin-01.jpg" alt="Dustin Byington">
           <div class="label">
-            <a class="twitter" href="https://twitter.com/peteharrislp" target="_blank">
-              <div class="name">Pete Harris</div>
-              <div class="handle">@peteharrislp</div>
+            <a class="twitter" href="https://twitter.com/dustin_byington" target="_blank">
+              <div class="name">Dustin Byington</div>
+              <div class="handle">@dustin_byington</div>
             </a>
             <div class="title">Advisor</div>
           </div>
@@ -96,6 +85,17 @@ body = "body-about"
             <a class="twitter" href="https://twitter.com/ryan_singer" target="_blank">
               <div class="name">Ryan Singer</div>
               <div class="handle">@ryan_singer</div>
+            </a>
+            <div class="title">Advisor</div>
+          </div>
+        </li>
+        <li>
+          <img class="portrait"
+          src="/images/advisors/pete-harris-01.jpg" alt="Pete Harris">
+          <div class="label">
+            <a class="twitter" href="https://twitter.com/peteharrislp" target="_blank">
+              <div class="name">Pete Harris</div>
+              <div class="handle">@peteharrislp</div>
             </a>
             <div class="title">Advisor</div>
           </div>
