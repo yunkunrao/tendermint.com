@@ -21,94 +21,85 @@
   &lt;/div&gt;
 &lt;/section&gt;
 
-&lt;section class=&#34;section-default&#34;&gt;
+&lt;section class=&#34;section-default section-portraits&#34;&gt;
   &lt;div class=&#34;section-container&#34;&gt;
     &lt;header class=&#34;section-header&#34;&gt;
       &lt;h2&gt;The Team&lt;/h2&gt;
     &lt;/header&gt;
 
     &lt;div class=&#34;section-content&#34;&gt;
-      &lt;ul class=&#34;ul-portraits&#34;&gt;
-        &lt;li&gt;
-          &lt;img class=&#34;portrait&#34;
-          src=&#34;http://tendermint.com/images/team/jae-01.jpg&#34; alt=&#34;Jae Kwon&#34;&gt;
-          &lt;div class=&#34;label&#34;&gt;
-            &lt;a class=&#34;twitter&#34; href=&#34;https://twitter.com/jaekwon&#34; target=&#34;_blank&#34;&gt;
-              &lt;div class=&#34;name&#34;&gt;Jae Kwon&lt;/div&gt;
-              &lt;div class=&#34;handle&#34;&gt;@jaekwon&lt;/div&gt;
-            &lt;/a&gt;
-            &lt;div class=&#34;title&#34;&gt;CEO &lt;span class=&#34;amp&#34;&gt;&amp;amp;&lt;/span&gt; Founder&lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/li&gt;
-        &lt;li&gt;
-          &lt;img class=&#34;portrait&#34;
-          src=&#34;http://tendermint.com/images/team/dustin-01.jpg&#34; alt=&#34;Dustin Byington&#34;&gt;
-          &lt;div class=&#34;label&#34;&gt;
-            &lt;a class=&#34;twitter&#34; href=&#34;https://twitter.com/dustin_byington&#34; target=&#34;_blank&#34;&gt;
-              &lt;div class=&#34;name&#34;&gt;Dustin Byington&lt;/div&gt;
-              &lt;div class=&#34;handle&#34;&gt;@dustin_byington&lt;/div&gt;
-            &lt;/a&gt;
-            &lt;div class=&#34;title&#34;&gt;President &lt;span class=&#34;amp&#34;&gt;&amp;amp;&lt;/span&gt; Cofounder&lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/li&gt;
-        &lt;li&gt;
-          &lt;img class=&#34;portrait&#34;
-          src=&#34;http://tendermint.com/images/team/ethan-01.jpg&#34; alt=&#34;Ethan Buchman&#34;&gt;
-          &lt;div class=&#34;label&#34;&gt;
-            &lt;a class=&#34;twitter&#34; href=&#34;https://twitter.com/buchmanster&#34; target=&#34;_blank&#34;&gt;
-              &lt;div class=&#34;name&#34;&gt;Ethan Buchman&lt;/div&gt;
-              &lt;div class=&#34;handle&#34;&gt;@buchmanster&lt;/div&gt;
-            &lt;/a&gt;
-            &lt;div class=&#34;title&#34;&gt;CTO &lt;span class=&#34;amp&#34;&gt;&amp;amp;&lt;/span&gt; Cofounder&lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/li&gt;
-        &lt;li&gt;
-          &lt;img class=&#34;portrait&#34;
-          src=&#34;http://tendermint.com/images/team/peng-01.jpg&#34; alt=&#34;Peng Zhong&#34;&gt;
-          &lt;div class=&#34;label&#34;&gt;
-            &lt;a class=&#34;twitter&#34; href=&#34;https://twitter.com/zcpeng&#34;&gt;
-              &lt;div class=&#34;name&#34;&gt;Peng Zhong&lt;/div&gt;
-              &lt;div class=&#34;handle&#34;&gt;@zcpeng&lt;/div&gt;
-            &lt;/a&gt;
-            &lt;div class=&#34;title&#34;&gt;Chief Design Officer&lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/li&gt;
-      &lt;/ul&gt;
+      &lt;div class=&#34;portrait&#34;&gt;
+        &lt;img src=&#34;http://tendermint.com/images/team/jae-01.jpg&#34; alt=&#34;Jae Kwon&#34;&gt;
+        &lt;div class=&#34;label&#34;&gt;
+          &lt;a class=&#34;twitter&#34; href=&#34;https://twitter.com/jaekwon&#34; target=&#34;_blank&#34;&gt;
+            &lt;div class=&#34;name&#34;&gt;Jae Kwon&lt;/div&gt;
+            &lt;div class=&#34;handle&#34;&gt;@jaekwon&lt;/div&gt;
+          &lt;/a&gt;
+          &lt;div class=&#34;title&#34;&gt;CEO &lt;span class=&#34;amp&#34;&gt;&amp;amp;&lt;/span&gt; Founder&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&#34;portrait&#34;&gt;
+        &lt;img src=&#34;http://tendermint.com/images/team/dustin-01.jpg&#34; alt=&#34;Dustin Byington&#34;&gt;
+        &lt;div class=&#34;label&#34;&gt;
+          &lt;a class=&#34;twitter&#34; href=&#34;https://twitter.com/dustin_byington&#34; target=&#34;_blank&#34;&gt;
+            &lt;div class=&#34;name&#34;&gt;Dustin Byington&lt;/div&gt;
+            &lt;div class=&#34;handle&#34;&gt;@dustin_byington&lt;/div&gt;
+          &lt;/a&gt;
+          &lt;div class=&#34;title&#34;&gt;President &lt;span class=&#34;amp&#34;&gt;&amp;amp;&lt;/span&gt; Cofounder&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&#34;portrait&#34;&gt;
+        &lt;img src=&#34;http://tendermint.com/images/team/ethan-01.jpg&#34; alt=&#34;Ethan Buchman&#34;&gt;
+        &lt;div class=&#34;label&#34;&gt;
+          &lt;a class=&#34;twitter&#34; href=&#34;https://twitter.com/buchmanster&#34; target=&#34;_blank&#34;&gt;
+            &lt;div class=&#34;name&#34;&gt;Ethan Buchman&lt;/div&gt;
+            &lt;div class=&#34;handle&#34;&gt;@buchmanster&lt;/div&gt;
+          &lt;/a&gt;
+          &lt;div class=&#34;title&#34;&gt;CTO &lt;span class=&#34;amp&#34;&gt;&amp;amp;&lt;/span&gt; Cofounder&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&#34;portrait&#34;&gt;
+        &lt;img src=&#34;http://tendermint.com/images/team/peng-01.jpg&#34; alt=&#34;Peng Zhong&#34;&gt;
+        &lt;div class=&#34;label&#34;&gt;
+          &lt;a class=&#34;twitter&#34; href=&#34;https://twitter.com/zcpeng&#34;&gt;
+            &lt;div class=&#34;name&#34;&gt;Peng Zhong&lt;/div&gt;
+            &lt;div class=&#34;handle&#34;&gt;@zcpeng&lt;/div&gt;
+          &lt;/a&gt;
+          &lt;div class=&#34;title&#34;&gt;Chief Design Officer&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
+&lt;/div&gt;
 &lt;/section&gt;
 
-&lt;section class=&#34;section-default&#34;&gt;
+&lt;section class=&#34;section-default section-portraits&#34;&gt;
   &lt;div class=&#34;section-container&#34;&gt;
     &lt;header class=&#34;section-header&#34;&gt;
       &lt;h2&gt;The Advisors&lt;/h2&gt;
     &lt;/header&gt;
 
     &lt;div class=&#34;section-content&#34;&gt;
-      &lt;ul class=&#34;ul-portraits&#34;&gt;
-        &lt;li&gt;
-          &lt;img class=&#34;portrait&#34;
-          src=&#34;http://tendermint.com/images/advisors/pete-harris-01.jpg&#34; alt=&#34;Pete Harris&#34;&gt;
-          &lt;div class=&#34;label&#34;&gt;
-            &lt;a class=&#34;twitter&#34; href=&#34;https://twitter.com/peteharrislp&#34; target=&#34;_blank&#34;&gt;
-              &lt;div class=&#34;name&#34;&gt;Pete Harris&lt;/div&gt;
-              &lt;div class=&#34;handle&#34;&gt;@peteharrislp&lt;/div&gt;
-            &lt;/a&gt;
-            &lt;div class=&#34;title&#34;&gt;Advisor&lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/li&gt;
-        &lt;li&gt;
-          &lt;img class=&#34;portrait&#34;
-          src=&#34;http://tendermint.com/images/advisors/ryan-singer-01.jpg&#34; alt=&#34;Ryan Singer&#34;&gt;
-          &lt;div class=&#34;label&#34;&gt;
-            &lt;a class=&#34;twitter&#34; href=&#34;https://twitter.com/ryan_singer&#34; target=&#34;_blank&#34;&gt;
-              &lt;div class=&#34;name&#34;&gt;Ryan Singer&lt;/div&gt;
-              &lt;div class=&#34;handle&#34;&gt;@ryan_singer&lt;/div&gt;
-            &lt;/a&gt;
-            &lt;div class=&#34;title&#34;&gt;Advisor&lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/li&gt;
-      &lt;/ul&gt;
+      &lt;div class=&#34;portrait&#34;&gt;
+        &lt;img src=&#34;http://tendermint.com/images/advisors/pete-harris-01.jpg&#34; alt=&#34;Pete Harris&#34;&gt;
+        &lt;div class=&#34;label&#34;&gt;
+          &lt;a class=&#34;twitter&#34; href=&#34;https://twitter.com/peteharrislp&#34; target=&#34;_blank&#34;&gt;
+            &lt;div class=&#34;name&#34;&gt;Pete Harris&lt;/div&gt;
+            &lt;div class=&#34;handle&#34;&gt;@peteharrislp&lt;/div&gt;
+          &lt;/a&gt;
+          &lt;div class=&#34;title&#34;&gt;Advisor&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&#34;portrait&#34;&gt;
+        &lt;img src=&#34;http://tendermint.com/images/advisors/ryan-singer-01.jpg&#34; alt=&#34;Ryan Singer&#34;&gt;
+        &lt;div class=&#34;label&#34;&gt;
+          &lt;a class=&#34;twitter&#34; href=&#34;https://twitter.com/ryan_singer&#34; target=&#34;_blank&#34;&gt;
+            &lt;div class=&#34;name&#34;&gt;Ryan Singer&lt;/div&gt;
+            &lt;div class=&#34;handle&#34;&gt;@ryan_singer&lt;/div&gt;
+          &lt;/a&gt;
+          &lt;div class=&#34;title&#34;&gt;Advisor&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/section&gt;
@@ -124,7 +115,7 @@
       <description>&lt;section id=&#34;section-top&#34;&gt;
   &lt;div class=&#34;section-container&#34;&gt;
     &lt;h1&gt;&lt;i class=&#34;fa fa-code&#34;&gt;&lt;/i&gt; Source Code&lt;/h1&gt;
-    &lt;p&gt;Develop on Tendermint&amp;rsquo;s open source platform. Start learning with &lt;a href=&#34;http://tendermint.com/tutorials&#34;&gt;these tutorials&lt;/a&gt;.&lt;/p&gt;
+    &lt;p&gt;Develop on Tendermint&amp;rsquo;s open source platform. Start learning with &lt;a href=&#34;http://tendermint.com/guide&#34;&gt;the guide&lt;/a&gt;.&lt;/p&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/section&gt;
@@ -133,7 +124,7 @@
   &lt;div class=&#34;section-container&#34;&gt;
     &lt;div class=&#34;section-content&#34;&gt;
       &lt;div class=&#34;panels&#34;&gt;
-        &lt;div class=&#34;panel&#34;&gt;
+        &lt;div class=&#34;panel panel-external&#34;&gt;
           &lt;div class=&#34;panel-container&#34;&gt;
             &lt;div class=&#34;panel-header&#34;&gt;
               &lt;h3&gt;&lt;a href=&#34;https://github.com/tendermint/tendermint/&#34; class=&#34;block&#34;&gt;
@@ -186,7 +177,7 @@
       <pubDate>Mon, 15 Feb 2016 09:00:45 +0800</pubDate>
       
       <guid>http://tendermint.com/media/blockchains-trust-as-a-service/</guid>
-      <description>&lt;iframe class=&#34;iframe-video&#34; width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/MoacpJvCM4A&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+      <description>&lt;iframe class=&#34;youtube&#34; width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/MoacpJvCM4A&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
 
 &lt;p&gt;Dustin Byington talks with Jeff Frick at the Block Chain Conference in San Francisco.&lt;/p&gt;
 </description>
@@ -198,7 +189,7 @@
       <pubDate>Wed, 10 Feb 2016 09:00:21 +0800</pubDate>
       
       <guid>http://tendermint.com/media/tendermint-is-simple/</guid>
-      <description>&lt;iframe class=&#34;iframe-video&#34; width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/9krAQzN6tbc?start=882&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+      <description>&lt;iframe class=&#34;youtube&#34; width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/9krAQzN6tbc?start=882&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
 
 &lt;p&gt;Jae Kwon: Program your app any language &amp;ndash; stay focused on business logic.
 &lt;/p&gt;
@@ -211,7 +202,7 @@
       <pubDate>Wed, 10 Feb 2016 09:00:05 +0800</pubDate>
       
       <guid>http://tendermint.com/media/live-blockchain-demo/</guid>
-      <description>&lt;iframe class=&#34;iframe-video&#34; width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/9krAQzN6tbc?start=1952&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+      <description>&lt;iframe class=&#34;youtube&#34; width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/9krAQzN6tbc?start=1952&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
 
 &lt;p&gt;Ethan Buchman demos a live Tendermint-powered blockchain, with nodes coming on and offline.&lt;/p&gt;
 </description>
@@ -223,7 +214,7 @@
       <pubDate>Wed, 10 Feb 2016 08:49:40 +0800</pubDate>
       
       <guid>http://tendermint.com/media/tendermint-tmsp/</guid>
-      <description>&lt;iframe class=&#34;iframe-video&#34; width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/9krAQzN6tbc&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+      <description>&lt;iframe class=&#34;youtube&#34; width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/9krAQzN6tbc&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
 
 &lt;p&gt;Jae Kwon and Ethan Buchman discussed how developers can write blockchain smart contracts in any language using TMSP (Tendermint Socket Protocol).&lt;/p&gt;
 </description>
@@ -665,7 +656,7 @@ You should get the same results as for the Go version.&lt;/p&gt;
 &lt;p&gt;Some experts in the nascent blockchain industry have said the following:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;The blockchain is just a database&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;The blockchain is just a database_&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;Blockchains don’t help with fast settlement&lt;/em&gt;&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;The future of finance on the blockchain may not involve consensus&lt;/em&gt;&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;You can build on top of the Bitcoin blockchain for fast settlement&lt;/em&gt;&lt;/li&gt;

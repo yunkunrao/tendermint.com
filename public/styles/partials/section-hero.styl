@@ -3,11 +3,13 @@
   background-size cover
   width 100vw
   height 100vh
+  max-height 178vw
   position relative
 
   .section-container
     width 100vw
     height 100vh
+    max-height 178vw
 
     display flex
     flex-flow column no-wrap
@@ -16,14 +18,14 @@
     padding 1.5*x 1.5*x 0
 
   h1
-    font-size 2.5*x
     color lighten(mcolor,90%)
     line-height 1
     margin 0 0 0.5*x
     letter-spacing -0.025em
+    font-size 2.5*x
 
   .tagline, .introduction, form
-    margin-bottom 1.25*x
+    margin-bottom x
 
   .tagline
     color lighten(mcolor,50%)
@@ -37,17 +39,10 @@
     color lighten(mcolor,58%)
     line-height 1.25
     text-align center
-    max-width 16em
+    max-width 24em
 
-  .social-media
-    display flex
-    a
-      margin x*0.25
-
-      width 2.5*x
-      line-height 2.5*x
-      color lighten(mcolor,58%)
-      text-align center
+  .connections
+    display none
 
   #home-arrow-down
     position absolute
@@ -55,20 +50,43 @@
     left 0
     width 100vw
 
-    font-size 1.5*x
-    line-height 2*x
+    font-size x
+    line-height 1.5*x
     color lighten(mcolor,50%)
     text-align center
 
-  .social-media a, #home-arrow-down
+  .connections a, #home-arrow-down
     background hsla(mhue,msat,mlit - 20%,0.1)
     transition 0.2s ease all
     &:hover
       background hsla(mhue,msat,mlit - 20%,0.5)
       color lighten(mcolor,80%)
 
+@media screen and (min-height: 400px)
+  #section-hero
 
-@media screen and (min-width: 360px)
+    .tagline, .introduction, form
+      margin-bottom 1.25*x
+
+    .connections
+      display flex
+      a
+        margin x*0.25
+        width 2.5*x
+        line-height 2.5*x
+        color lighten(mcolor,58%)
+        text-align center
+
+    #home-arrow-down
+      font-size 1.5*x
+      line-height 2*x
+
+@media screen and (min-width: 320px) and (min-height: 480px)
+  #section-hero
+    .introduction
+      max-width 16em
+
+@media screen and (min-width: 360px) and (min-height: 480px)
   #section-hero
     h1
       font-size 3.25*x
@@ -82,14 +100,14 @@
     .introduction
       font-size 1.25*x
 
-    .social-media
+    .connections
       a
         margin 0.333*x
         width 3*x
         line-height 3*x
         font-size 1.20*x
 
-@media screen and (min-width: 400px)
+@media screen and (min-width: 400px) and (min-height: 480px)
   #section-hero
     .section-container
       padding-left 3*x
@@ -98,7 +116,7 @@
     .introduction
       line-height 1.5
 
-    .social-media
+    .connections
       a
         width 3.5*x
         line-height 3.5*x
@@ -108,7 +126,7 @@
       font-size 2*x
       line-height 3*x
 
-@media screen and (min-width: 768px)
+@media screen and (min-width: 720px) and (min-height: 480px)
   #section-hero
     .introduction
       font-size 1.5*x

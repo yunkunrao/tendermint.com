@@ -1,17 +1,20 @@
-.ul-portraits
-  clearfix()
-  display flex
-  flex-flow row wrap
-  justify-content center
+.section-portraits
+  .section-container
+    padding-left 0
+    padding-right 0
 
-  max-width 60*x
+  .section-content
+    max-width 60*x
+    padding 0 0.5*x
 
-  margin 0 -0.5*x -0.5*x
+    display flex
+    flex-flow wrap
+    justify-content center
 
-  li
-    flex 1 0 50%
-    padding 0.5*x
-    margin-bottom 0.5*x
+  .portrait
+    flex 0 0 50%
+    padding 0.5*x 0.5*x x
+    max-width 14*x
 
   img
     width 100%
@@ -50,16 +53,18 @@
 
 
 @media screen and (min-width: 360px)
-  .ul-portraits
+  .section-portraits
     a.twitter
       padding 0.5*x 0
+
     .title
       padding-top 0.5*x
 
-@media screen and (min-width: 768px)
-  .ul-portraits
-    li
+@media screen and (min-width: 720px)
+  .section-portraits
+    .portrait
       flex 0 0 25%
+      max-width 18*x
 
     a.twitter
       margin 0.25*x 0
@@ -68,9 +73,7 @@
         border-color lighten(link,50%)
 
 @media screen and (min-width: 1024px)
-  .ul-portraits
-    margin 0 auto -0.5*x
-
+  .section-portraits
     a.twitter
       padding 0.666*x 0
       .name
