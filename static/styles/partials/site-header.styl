@@ -27,12 +27,11 @@ highlighted-border-top-color()
 
   a#nav-home
     display block
-    default-border-top-sm()
+    border-top-color darken(acolor,25%)
     img
       width 2.4*x - 3px
       height 2.4*x - 3px
-    &:hover
-      border-top-color darken(acolor,25%) !important
+      border-top-color darken(acolor,15%)
 
   nav
     flex 1
@@ -63,9 +62,6 @@ highlighted-border-top-color()
       &#nav-code
         display none
         display none
-
-#body-home #nav-home
-  border-top-color darken(acolor,25%) !important
 
 #body-blog #nav-blog
 #body-media #nav-media
