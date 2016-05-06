@@ -20,6 +20,7 @@ fi
 
 echo -e "\033[0;32mPushing compiled files to Github...\033[0m"
 
+hugo
 rm -rf public_master/*
 cp -r public/* public_master/
 cd public_master
