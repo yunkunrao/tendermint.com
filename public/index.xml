@@ -26,7 +26,6 @@
     &lt;header class=&#34;section-header&#34;&gt;
       &lt;h2&gt;The Team&lt;/h2&gt;
     &lt;/header&gt;
-
     &lt;div class=&#34;section-content&#34;&gt;
       &lt;div class=&#34;portrait&#34;&gt;
         &lt;img src=&#34;http://tendermint.com/images/team/jae-01.jpg&#34; alt=&#34;Jae Kwon&#34;&gt;
@@ -36,16 +35,6 @@
             &lt;div class=&#34;handle&#34;&gt;@jaekwon&lt;/div&gt;
           &lt;/a&gt;
           &lt;div class=&#34;title&#34;&gt;CEO &lt;span class=&#34;amp&#34;&gt;&amp;amp;&lt;/span&gt; Founder&lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class=&#34;portrait&#34;&gt;
-        &lt;img src=&#34;http://tendermint.com/images/team/dustin-01.jpg&#34; alt=&#34;Dustin Byington&#34;&gt;
-        &lt;div class=&#34;label&#34;&gt;
-          &lt;a class=&#34;twitter&#34; href=&#34;https://twitter.com/dustin_byington&#34; target=&#34;_blank&#34;&gt;
-            &lt;div class=&#34;name&#34;&gt;Dustin Byington&lt;/div&gt;
-            &lt;div class=&#34;handle&#34;&gt;@dustin_byington&lt;/div&gt;
-          &lt;/a&gt;
-          &lt;div class=&#34;title&#34;&gt;President &lt;span class=&#34;amp&#34;&gt;&amp;amp;&lt;/span&gt; Cofounder&lt;/div&gt;
         &lt;/div&gt;
       &lt;/div&gt;
       &lt;div class=&#34;portrait&#34;&gt;
@@ -78,8 +67,17 @@
     &lt;header class=&#34;section-header&#34;&gt;
       &lt;h2&gt;The Advisors&lt;/h2&gt;
     &lt;/header&gt;
-
     &lt;div class=&#34;section-content&#34;&gt;
+      &lt;div class=&#34;portrait&#34;&gt;
+        &lt;img src=&#34;http://tendermint.com/images/advisors/dustin-01.jpg&#34; alt=&#34;Dustin Byington&#34;&gt;
+        &lt;div class=&#34;label&#34;&gt;
+          &lt;a class=&#34;twitter&#34; href=&#34;https://twitter.com/dustin_byington&#34; target=&#34;_blank&#34;&gt;
+            &lt;div class=&#34;name&#34;&gt;Dustin Byington&lt;/div&gt;
+            &lt;div class=&#34;handle&#34;&gt;@dustin_byington&lt;/div&gt;
+          &lt;/a&gt;
+          &lt;div class=&#34;title&#34;&gt;Advisor&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
       &lt;div class=&#34;portrait&#34;&gt;
         &lt;img src=&#34;http://tendermint.com/images/advisors/pete-harris-01.jpg&#34; alt=&#34;Pete Harris&#34;&gt;
         &lt;div class=&#34;label&#34;&gt;
@@ -172,31 +170,6 @@
     </item>
     
     <item>
-      <title>Blockchains = Trust-As-A-Service</title>
-      <link>http://tendermint.com/media/blockchains-trust-as-a-service/</link>
-      <pubDate>Mon, 15 Feb 2016 09:00:45 +0800</pubDate>
-      
-      <guid>http://tendermint.com/media/blockchains-trust-as-a-service/</guid>
-      <description>&lt;iframe class=&#34;youtube&#34; width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/MoacpJvCM4A&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;Dustin Byington talks with Jeff Frick at the Block Chain Conference in San Francisco.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Tendermint = Simple</title>
-      <link>http://tendermint.com/media/tendermint-is-simple/</link>
-      <pubDate>Wed, 10 Feb 2016 09:00:21 +0800</pubDate>
-      
-      <guid>http://tendermint.com/media/tendermint-is-simple/</guid>
-      <description>&lt;iframe class=&#34;youtube&#34; width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/9krAQzN6tbc?start=882&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;Jae Kwon: Program your app any language &amp;ndash; stay focused on business logic.
-&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Live Blockchain Demo</title>
       <link>http://tendermint.com/media/live-blockchain-demo/</link>
       <pubDate>Wed, 10 Feb 2016 09:00:05 +0800</pubDate>
@@ -263,7 +236,8 @@
 &lt;ul&gt;
 &lt;li&gt;Maintaining the UTXO database&lt;/li&gt;
 &lt;li&gt;Validating cryptographic signatures of transactions&lt;/li&gt;
-&lt;li&gt;Preventing transactions from spending non-existent transactions allowing clients to query the UTXO database.&lt;/li&gt;
+&lt;li&gt;Preventing transactions from spending non-existent transactions&lt;/li&gt;
+&lt;li&gt;Allowing clients to query the UTXO database.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Tendermint is able to decompose the blockchain design by offering a very simple API between the application process and consensus process.&lt;/p&gt;
@@ -882,6 +856,18 @@ You should get the same results as for the Go version.&lt;/p&gt;
 &lt;li&gt;Develop on Tendermint.&lt;/li&gt;
 &lt;li&gt;Email us at hello@tendermint.com with your full name to join our Slack channel.&lt;/li&gt;
 &lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Blockchains = Trust-As-A-Service</title>
+      <link>http://tendermint.com/media/blockchains-trust-as-a-service/</link>
+      <pubDate>Sun, 15 Feb 2015 09:00:45 +0800</pubDate>
+      
+      <guid>http://tendermint.com/media/blockchains-trust-as-a-service/</guid>
+      <description>&lt;iframe class=&#34;youtube&#34; width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/MoacpJvCM4A&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Dustin Byington talks with Jeff Frick at the Block Chain Conference in San Francisco.&lt;/p&gt;
 </description>
     </item>
     

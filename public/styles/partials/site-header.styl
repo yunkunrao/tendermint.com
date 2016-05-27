@@ -1,3 +1,5 @@
+@import '../variables.styl'
+
 default-border-top-sm()
   border-top 3px solid darken(mcolor, 33%)
 
@@ -58,6 +60,8 @@ highlighted-border-top-color()
         highlighted-border-top-color()
         color lighten(mcolor,90%)
       &#nav-media
+      &#nav-code
+        display none
         display none
 
 #body-home #nav-home
@@ -65,6 +69,7 @@ highlighted-border-top-color()
 
 #body-blog #nav-blog
 #body-media #nav-media
+#body-forum #nav-forum
 #body-guide #nav-guide
 #body-about #nav-about
 #body-code #nav-code
@@ -90,7 +95,7 @@ highlighted-border-top-color()
   #site-header
     nav
       a
-        &#nav-media
+        &#nav-code
           display block
 
 @media screen and (min-width: 400px)
@@ -100,17 +105,23 @@ highlighted-border-top-color()
       a
         padding 0 0.75*x
 
+@media screen and (min-width: 480px)
+  #site-header
+    nav
+      a
+        &#nav-media
+          display block
+
 @media screen and (min-width: 640px)
   #site-header
     nav
       a
         border-left 1px solid darken(mcolor,20%)
         border-left 1px solid hsla(0,0,0,0.2)
-        padding 0 2*x
-        &#nav-media
-          display block
+        padding 0 1.5*x
 
-        .short
-          display none
-        .long
-          display inline
+@media screen and (min-width: 768px)
+  #site-header
+    nav
+      a
+        padding 0 2*x
