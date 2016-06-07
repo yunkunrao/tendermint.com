@@ -11,7 +11,7 @@ categories:
 
 ## Merkle's New DAO Paper
 
-I've been looking for a paper that criticizes the futarchy, that specifically
+I've been looking for a paper that criticizes futarchy that specifically
 addresses the thin-market and corresponding manipulation and feedback problems
 that my gut tells me there is.  I haven't found it yet, but I did stumble upon
 what may be a solution to it.
