@@ -4,9 +4,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>The Security of Cryptocurrency Protocols &ndash; Tendermint</title>
+  <title>A Critique of Merkle&#39;s DAO Democracy: Making it Reliable &ndash; Tendermint</title>
   <base href="http://tendermint.com">
-<link rel="canonical" href="http://tendermint.com/blog/security-of-cryptocurrency-protocols/">
+<link rel="canonical" href="http://tendermint.com/blog/critique-merkle-dao-democracy/">
 <link href="" rel="alternate" type="application/rss+xml" title="Tendermint">
 
 <meta content="on" http-equiv="cleartype" />
@@ -55,8 +55,8 @@
 
   <section id="section-top">
     <div class="section-container">
-      <h1>The Security of Cryptocurrency Protocols</h1>
-      <p>November 19, 2014</p>
+      <h1>A Critique of Merkle&#39;s DAO Democracy: Making it Reliable</h1>
+      <p>June 6, 2016</p>
       
     </div>
   </section>
@@ -67,25 +67,108 @@
         <div class="article-body">
           
 
-<p>Many solutions to the consensus problem for cryptocurrencies have been proposed.  Since the innovation of Bitcoin’s proof-of-work based consensus algorithm&ndash;where miners compete in an energy intensive game to determine the order of transactions&ndash;several proof-of-stake algorithms have been proposed to make consensus faster while removing the reliance on energy expenditure.  The common objective of these protocols is to maintain a live decentralized transaction ledger while defending against double-spend attacks from malicious Byzantine actors deviating from the protocol.  Considering the financial nature of these protocols, we should strive to support a protocol that has well defined and robust security guarantees.</p>
+<h2 id="merkle-s-new-dao-paper:b6d05f8ed6e228f546325f0fbad28100">Merkle&rsquo;s New DAO Paper</h2>
 
-<p>The security analysis of cryptocurrency protocols is complicated by many factors.   One such complicating factor is the rational self-interested nature of participants.  The ideal protocol is an incentive aligned Nash equilibrium such that deviating from the protocol does not result in a net gain [<a href="http://fc14.ifca.ai/papers/fc14_submission_82.pdf">1</a>, <a href="https://www.cs.princeton.edu/~kroll/papers/weis13_bitcoin.pdf">2</a>].  This is a topic worthy of its own post, but won’t be discussed further here.</p>
+<p>I&rsquo;ve been looking for a paper that criticizes the futarchy, that specifically
+addresses the thin-market and corresponding manipulation and feedback problems
+that my gut tells me there is.  I haven&rsquo;t found it yet, but I did stumble upon
+what may be a solution to it.</p>
 
-<p>Another complicating factor is whether the power to achieve or disrupt consensus is extrinsic in origin (e.g. access to the production of mining equipment or cheap access to electricity) or intrinsic in origin (e.g. the “stake” of validators in proof-of-stake protocols) and whether the disruption of consensus&ndash;especially via a successful double-spend attack&ndash;is associated with a commensurate penalty.  The problem with extrinsic factors of security is that they are not easily quantifiable for analysis.  For example, the depreciation costs of Bitcoin mining hardware in the event of a successful double-spend attack may not be significant compared to the running costs of electricity in mining.  On the other hand existing proof-of-stake protocols do not have a well defined intrinsic penalty for instigators of a double-spend attack.  This is commonly called, ironically, the “nothing at stake” problem.  Newer protocols like the BitShares delegated-proof-of-stake protocol attempt to address this problem by placing the role of ranked-delegate at stake, but security is dependant on the extrinsic ability of stakeholders to accurately predict the future performance of delegates.</p>
+<p><a href="http://merkle.com/papers/DAOdemocracyDraft.pdf">Link to the paper</a></p>
 
-<p>What is needed is a radical simplification.  Security analysis is much simpler for an intrinsically secure cryptocurrency protocol when it can be proved that launching a double-spend attack necessarily results in a very high intrinsic penalty compared to the possible intrinsic gains.  Then, the protocol may be considered resistant to double-spent attacks assuming no further extrinsic complications.</p>
+<p>While giving it a proper read, I noticed part way through that it includes a
+section that attempts to address the problem of securing a blockchain ledger
+using prediction markets.</p>
 
-<p>For example, consider a protocol that requires stakeholders to first post a surety bond before becoming a validator to participate in the consensus process.  To get the bonded coins back, the validator must first submit an unbonding transaction and wait a fixed, relatively long duration of time.  The validator’s only duty until the unbonding period is over is to participate in the protocol while taking care not to sign two blocks at the same height: the only way to fork the block-chain.  The validator that signs duplicitously loses its bonded coins as evidence of duplicity is entered onto the block-chain.  This protocol might adapt an existing Byzantine consensus algorithm from academic research (e.g. one proposed by Dwork, et al. [<a href="http://groups.csail.mit.edu/tds/papers/Lynch/jacm88.pdf">3</a>]) to create a quorum of validators that agree on and sign the next block.  For a partially synchronous network (such as the Internet) at least two thirds of voting power is needed to agree on the next block, and up to one third of Byzantine voting power can be tolerated.  A double-spend attack implies a fork in the block-chain, which by simple arithmetic requires at least one third of voting power to have signed duplicitously.</p>
+<p>I predict that a general prediction market will find that a PoS system on
+Tendermint will be favored over the BFT validator-set selection system as
+proposed by Merkle.</p>
 
-<p>The above proposed protocol is secured by completely intrinsic means; it does not require a massive expenditure of energy to secure.  The total intrinsic penalty for successfully launching a double-spend attack (which is at least one third of all bonded coins as mentioned previously) can be adjusted by judiciously setting the incentives given to validators by way of fees or inflationary rewards.  The block-chain does not fork at all except in extraordinary circumstances, making it ideally suited for side-chain extensions.  It is to the my best knowledge the only completely decentralized cryptocurrency protocol that could be proven to be intrinsically incentive aligned.  Perhaps it is time to consider this kind of algorithm.</p>
+<blockquote>
+<p>
+Breaking the system requires sneaking past a fully functioning and well financed
+prediction market that is actively looking for any attack and which is running
+as a distributed algorithm on a set of core servers that are fully protected
+from any attack. Any slightest hint of any attack that might actually be
+successful on any core server <b>will result in its immediate removal from the
+pool of core servers</b>, and its replacement with any one of a large number of
+constantly running alternate servers. Any strategy for better protecting the
+core servers, or for better detecting an attack, will be immediately adopted
+(thanks to a prediction market specifically aimed at improving security which is
+constantly evaluating new and better strategies). It will be hard to corrupt
+even a few core servers, let alone half of them. Yet half of them (and possibly
+more) would have to be corrupted before it would even be possible to gain
+control of the system and corrupt the prediction market.
+</p>
+<footer>- Merkle in "DAOs, Democracy and Governance"</footer>
+</blockquote>
 
-<h2 id="links:332834bd1d2a52cc97bf52e097939cbf">Links</h2>
+<p>The problem with futarchy, which is not the same problem with prediction
+markets, is that in a futarchy, the prediction market is used to make a decision
+that can have arbitrary impact.  In other words, <b>a futarchy is a prediction
+market plus feedback</b>.  In order to have futarchy be a good method of
+governance, not only do <b>you need a good prediction market free of noise by
+virtue of being sufficiently capitalized</b>, <b>you also need to ensure the
+prediction market cannot be manipulated to make a decision that yields an
+undesirable result</b> (but still creates a positive ROI for the manipulator).</p>
 
-<ol>
-<li>Eyal and Sirer.  The Majority is Not Enough. 2014, <a href="http://fc14.ifca.ai/papers/fc14_submission_82.pdf">http://fc14.ifca.ai/papers/fc14_submission_82.pdf</a></li>
-<li>Kroll et al.  The Economics of Bitcoin Mining, or Bitcoin in the Presence of Adversaries. 2013, <a href="https://www.cs.princeton.edu/~kroll/papers/weis13_bitcoin.pdf">https://www.cs.princeton.edu/~kroll/papers/weis13_bitcoin.pdf</a></li>
-<li>Dwork, Lynch, and Stockmeyer.  Consensus in the Presence of Partial Synchrony. 1988, <a href="http://groups.csail.mit.edu/tds/papers/Lynch/jacm88.pdf">http://groups.csail.mit.edu/tds/papers/Lynch/jacm88.pdf</a></li>
-</ol>
+<p><blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr"><a
+href="https://twitter.com/paulg">@paulg</a> Noise in thin markets?</p>&mdash;
+Bram Cohen (@bramcohen) <a
+href="https://twitter.com/bramcohen/status/739261628303081472">June 5,
+2016</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+<p>I think the first part of Merkle&rsquo;s paper addresses this problem by giving each
+person a vote of 0 to 1, assuming that bribing attacks can be mitigated.  But
+the section entitled &ldquo;Making it Reliable&rdquo; which uses the prediction market to
+decide on the validator set, does not prevent manipulation.</p>
+
+<p>First, Merkle&rsquo;s proposal makes it impossible to determine the true outcome of
+the fitness of a validator, because the outcome of the prediction market that
+assesses the fitness of the validator makes a decision to remove that validator
+from the validator set if it is deemed insecure.  <b>Once you make a decision to
+remove a validator, you&rsquo;ve removed the incentive for that validator to perform
+correctly at all</b> &ndash; at least if you want financially sustainable blockchain
+security.  To secure a validator requires investment in internet/power/compute
+infrastructure, to invest in good op-sec, to pay the bills and salaries, etc.  A
+financially sustainable blockchain should only compensate those validators that
+have a reasonable expectation of being secure, and if the prediction market says
+otherwise, it should not be compensated.</p>
+
+<p>Well, if you dis-incentivize a validator, it will fail, so letting the
+prediction market dictate whether a validator should be allowed membership in
+the validator-set of a blockchain opens it up to arbitrary feedback, and thus
+manipulation.</p>
+
+<p>Second, a secure validator shouldn&rsquo;t be leaking much information about its
+weaknesses for the prediction market to make judgements on.  Security in
+validating is about operational-security of human resources, of source-code, of
+compute hardware, and of internet/power reliability.  The best judge of one&rsquo;s
+ability should be oneself &ndash; if a validator has resources to invest in either
+improving its operational-security or bonding more stake, it should be able to
+make the best judgement about where to allocate capital.  Meanwhile, it should
+invest in preventing any information leaks about its weaknesses to the public!</p>
+
+<p>Likely, any vulnerability in a mature validator-set will be ones that were
+difficult to detect, like a needle in a haystack.  The validators are their own
+best predictors of their own vulnerabilities, if additional stake can be
+purchased in the market.</p>
+
+<p>Fortunately, I think we can use the prediction market to help make blockchains
+reliable.  You can make a prediction market based on the high-level
+operational-security strategy choices made by validators (such as the
+operating-system used, etc), if any such information can be compelled to be
+truthfully published, and use the outcome of the prediction market to tweak the
+relative sizes of quorums of the disparate strategies.  This minimizes the
+effect of the decision swaying the measured outcome.</p>
+
+<p>Could you also use the prediction market to practically decide on the overall
+consensus strategy?  Maybe, if the prediction were about the security of the
+blockchain as a whole, and that prediction weren&rsquo;t used to make any decisions
+that might impact the incentive structure of the blockchain once the consensus
+strategy is chosen. In other words, I think we just need to experiment with
+self-incentivized blockchains.</p>
 
         </div>
 
@@ -115,19 +198,19 @@ Disqus.</a></noscript>
         <div id="article-prev-next">
   <div class="article-prev-next article-prev">
     
-      <div class="end">
+      <a  href="http://tendermint.com/blog/tendermint-socket-protocol/">
         <div class="label"><i class="fa fa-angle-left"></i> Prev</div>
-        <div class="title">No newer entries in this section.</div>
-      </div>
+        <div class="title">TMSP: The Tendermint Socket Protocol</div>
+      </a>
     
   </div>
 
   <div class="article-prev-next article-next">
     
-      <a href="http://tendermint.com/blog/sidechains-without-pegging/">
+      <div class="end">
         <div class="label">Next <i class="fa fa-angle-right"></i></div>
-        <div class="title">Sidechains without Pegging</div>
-      </a>
+        <div class="title">No newer entries in this section.</div>
+      </div>
     
   </div>
 </div>
