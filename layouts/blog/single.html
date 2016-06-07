@@ -18,6 +18,10 @@
           {{ .Content }}
         </div>
 
+        <div class="disqus">
+          {{ partial "disqus.html" }}
+        </div>
+
         <label for="sidebar-checkbox" class="sidebar-toggle"></label>
         {{ partial "prev_next.html" . }}
       </div>
