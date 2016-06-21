@@ -271,12 +271,12 @@ found to be buggy, in the same way that many existing legal jurisdictions look
 into the intent of contracts, in the case of typos or mistakes -- code doesn't
 need to be any different.  Ethereum lets us write contracts in Solidity, to be
 interpreted by a virtual machine, rather by an army of expensive lawyers.
-Allowing for deliberated roll-backs does not take that value away.  I think it
-would strengthen the Ethereum community.
+Allowing for deliberated roll-backs does not take that value away.  On the
+contrary, it would strengthen the Ethereum community.
 
 Finally, it could be argued that the original premise of _unstoppable code_ is
 [not
-desirable.](https://medium.com/@lemurvanstar/immutability-of-any-blockchain-is-an-unrealistic-attempt-at-perfection-that-will-never-be-possible-4e4fcae59804)
+desirable anyways.](https://medium.com/@lemurvanstar/immutability-of-any-blockchain-is-an-unrealistic-attempt-at-perfection-that-will-never-be-possible-4e4fcae59804)
 
 ## An Alternative System
 
