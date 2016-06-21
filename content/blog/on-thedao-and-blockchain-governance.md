@@ -151,10 +151,9 @@ expropriating a minority.
 This is mostly a matter of perspective.  Once we drop Ethereum's original
 premise, it becomes apparent that the former argument's logical extreme would
 make the absurd claim that the "acquisition" of tokens via theft of private keys
-at gunpoint would also constitute fair-game -- an extreme form of
-crypto-anarchism.  That's perfectly fine as a personal subjective philosophy,
-but if society as a whole decides against such theft, the might of society is
-also morally justified under the framework of such extreme anarchism.
+at gunpoint would also constitute fair-game.  That's perfectly fine as a
+personal subjective philosophy, but if society as a whole decides to counteract
+theft, the might of society is likewise justified.
 
 In this light, not returning the stolen funds might be a case of a minority
 expropriating a majority.
@@ -244,7 +243,7 @@ accelerate security improvements, rather than hinder it.
 To allow all such hackers to keep all of their stolen funds, in general, is to
 subject ourselves to the existing power structures that be, e.g.  to
 nation-states with immense intelligence capabilities like the NSA.  It's great
-that we have a cryptocurrency whose premise is based on crypto-anarchy
+that we have a cryptocurrency whose premise is based on extreme crypto-anarchy
 (Bitcoin), but, if we allow all of our cryptocurrency systems to be coopted by
 the same technocratic bias, we deserve what we get.  On the other hand, if we
 don't reward hackers sufficiently, we risk creating a fragile house of cards.
@@ -487,7 +486,7 @@ consensus](https://github.com/gnuclear/gnuclear-whitepaper#consensus)._
 ### Conclusion
 
 * It's people all the way down.
-* Ethereum doesn't have to cater to crypto-anarchists.
+* Ethereum doesn't have to cater to extremists.
 * Either way, lets create a diverse ecosystem of antifragile distributed
   ledgers.
 * Check out [Gnuclear](http://github.com/gnuclear/gnuclear-whitepaper) and [join
