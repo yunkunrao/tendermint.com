@@ -2,6 +2,7 @@
 title: "On TheDAO and Proof-of-Stake Governance"
 description: ""
 date: "2016-06-21"
+author: "Jae Kwon"
 categories: 
     - "DAO"
     - "proof-of-stake"

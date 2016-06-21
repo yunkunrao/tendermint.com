@@ -6,6 +6,9 @@
   <section id="section-top">
     <div class="section-container">
       <h1>{{ .Title }}</h1>
+      {{ if .Params.author }}
+      <p>{{ .Params.author }}</p>
+      {{ end }}
       <p>{{ .Date.Format "January 2, 2006" }}</p>
       <!-- {{ partial "tags.html" . }} -->
     </div>
