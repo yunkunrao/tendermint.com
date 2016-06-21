@@ -490,5 +490,5 @@ consensus](https://github.com/gnuclear/gnuclear-whitepaper#consensus)._
 * Ethereum doesn't have to cater to crypto-anarchists.
 * Either way, lets create a diverse ecosystem of antifragile distributed
   ledgers.
-* Check out [Gnuclear](github.com/gnuclear/gnuclear-whitepaper) and join the
-  discussions!
+* Check out [Gnuclear](http://github.com/gnuclear/gnuclear-whitepaper) and join
+  the discussions!
