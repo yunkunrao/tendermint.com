@@ -31,18 +31,18 @@ here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Since then, the &lt;a href=&#34;https://blog.ethereum.org/2016/06/17/critical-update-re-dao-vulnerability/&#34;&gt;Ethereum
 Foundation&lt;/a&gt;
-has suggested that the community decide on whether they want to soft-fork to
-freeze the funds of the hacker.  The Parity and Geth clients have released
-(differing?) updates that let the miner choose whether to soft-fork, or not.
-Furthermore, Slock.it has come out with a
+has asked the community to decide on whether they want to soft-fork to freeze
+the funds of the hacker.  The Parity and Geth clients have released (differing?)
+updates that let the miner choose whether to soft-fork, or not.  Furthermore,
+Slock.it has come out with a
 &lt;a href=&#34;https://twitter.com/jaekwon/status/744609177738219520&#34;&gt;counter-attack&lt;/a&gt; against
 the hacker.&lt;/p&gt;
 
-&lt;p&gt;Meanwhile, the community is arguing about the pros and cons of a soft-fork, as
-well as a hard-fork to return the funds, or &lt;a href=&#34;https://twitter.com/crainbf/status/743842869010665472&#34;&gt;negotiation-with/extorting the
+&lt;p&gt;Meanwhile, the community is arguing about the pros and cons of a soft-fork, and
+a hard-fork to return the funds, or &lt;a href=&#34;https://twitter.com/crainbf/status/743842869010665472&#34;&gt;negotiating-with/extorting the
 hacker&lt;/a&gt; to return most of
-the funds without the need for a hard-fork.  An &lt;a href=&#34;http://pastebin.com/CcGUBgDG&#34;&gt;open
-letter&lt;/a&gt; as well as an
+the funds without a hard-fork.  An &lt;a href=&#34;http://pastebin.com/CcGUBgDG&#34;&gt;open letter&lt;/a&gt;
+as well as an
 &lt;a href=&#34;https://www.cryptocoinsnews.com/exclusive-full-interview-transcript-alleged-dao-attacker/&#34;&gt;interview&lt;/a&gt;
 allegedly from the hacker is circulating in the web discussing
 plausibly-deniable bribes against the miners to prevent a soft-fork at all, but
@@ -61,7 +61,7 @@ programmed without any chance of fraud, censorship, or third-party influence&amp
 
 &lt;p&gt;So, Ethereum is in a difficult position where it must either let the hacker get
 away with the theft of TheDAO&amp;rsquo;s ether, or, undermine its stated premise.  The
-arguments in favor of mitigating the hack is clear &amp;ndash; few in the Ethereum
+arguments in favor of mitigating the hack is clear. Few in the Ethereum
 community really want 5% of the entire token supply of Ethereum to go to the
 hacker &amp;ndash; the actual DAO experiment hadn&amp;rsquo;t event begun!.  And yet, a coordinated
 action to reverse the attack or freeze the stolen funds is to undermine
@@ -79,13 +79,13 @@ purpose and value of Ethereum.&lt;/p&gt;
 &lt;li&gt;Everyone else&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;The DAO token holders (DTH)&lt;/strong&gt; are quite obviously the victim of this tragedy.
-&lt;strong&gt;The ether holders&lt;/strong&gt; are necessarily involved because most of the suggested
+&lt;p&gt;&lt;em&gt;The DAO token holders (DTH)&lt;/em&gt; are quite obviously the victim of this tragedy.
+&lt;em&gt;The ether holders&lt;/em&gt; are necessarily involved because most of the suggested
 courses of action start with a soft-fork to freeze the attacker&amp;rsquo;s funds
 currently held locked in the child DAO.  Ultimately, whether any soft-fork or
-hard-fork will happen at all hinges on the support from the &lt;strong&gt;Ethereum miners&lt;/strong&gt;,
+hard-fork will happen at all hinges on the support from the &lt;em&gt;Ethereum miners&lt;/em&gt;,
 though theoretically they are incentivized to follow the will of the community.
-&lt;strong&gt;Everyone else&lt;/strong&gt; is composed of the greater cryptocurrency community, including
+&lt;em&gt;Everyone else&lt;/em&gt; is composed of the greater cryptocurrency community, including
 those who are actively attempting to harm the system.&lt;/p&gt;
 
 &lt;h3 id=&#34;the-dao-wars:f0e38eb4136149a5f18af07afd523b2a&#34;&gt;The DAO Wars&lt;/h3&gt;
@@ -103,7 +103,7 @@ href=&#34;https://twitter.com/simondlr/status/744926345679994881&#34;&gt;June 20
 
 &lt;p&gt;&lt;br /&gt;
 First of all, it should be noted that both Bitcoin and Ethereum themselves are
-DAOs, much as TheDAO is.  Some claim that Bitcoin and Ethereum are in
+DAOs, just as TheDAO is.  Some claim that Bitcoin and Ethereum are in
 competition with each other.  Thus, the Ethereum community would be wise to note
 that there is probably a distributed Sybil attack in social media to confuse
 Ethereum while it is vulnerable.&lt;/p&gt;
@@ -118,24 +118,25 @@ process.&lt;/p&gt;
 &lt;h3 id=&#34;the-intention-of-thedao-investors:f0e38eb4136149a5f18af07afd523b2a&#34;&gt;The Intention of TheDAO Investors&lt;/h3&gt;
 
 &lt;p&gt;It&amp;rsquo;s pretty obvious that the &amp;ldquo;feature&amp;rdquo; that enabled the hacker to abscond with
-TheDAO&amp;rsquo;s ether was indeed a bug.  The arguments that it isn&amp;rsquo;t a bug points to
-two things: the text of TheDAO&amp;rsquo;s terms and conditions, and the stated premise of
-Ethereum.  For the former, we point the reader to &lt;a href=&#34;http://www.bloomberg.com/view/articles/2016-06-17/blockchain-company-s-smart-contracts-were-dumb&#34;&gt;this nuanced
+TheDAO&amp;rsquo;s ether was indeed a bug.  Arguments that it isn&amp;rsquo;t a bug generally point
+to two things: the text of TheDAO&amp;rsquo;s terms and conditions, and the stated premise
+of Ethereum.  For the former, we point the reader to &lt;a href=&#34;http://www.bloomberg.com/view/articles/2016-06-17/blockchain-company-s-smart-contracts-were-dumb&#34;&gt;this nuanced
 article&lt;/a&gt;,
 and we accept that the latter premise is flawed &amp;ndash; more on that later.&lt;/p&gt;
 
 &lt;p&gt;The participants of TheDAO experiment were interested in seeing the investment
 mechanics &amp;ndash; as written in English by the &lt;a href=&#34;https://download.slock.it/public/DAO/WhitePaper.pdf&#34;&gt;Slock.it team&amp;rsquo;s DAO
 whitepaper&lt;/a&gt; &amp;ndash; unfold as a
-social phenomenon.  There were plenty of precautions taken to ensure that the
-DAO contract code was bug-free, and so the DTH arguably weren&amp;rsquo;t expecting the
-funds to get drained before a single real proposal had a chance to see the light
-of day.&lt;/p&gt;
+social and cryptoeconomic experiment.  There were plenty of precautions taken to
+ensure that the DAO contract code was bug-free, and so many in the DTH weren&amp;rsquo;t
+expecting the funds to get drained before a single real proposal had a chance to
+see the light of day.&lt;/p&gt;
 
 &lt;p&gt;To find out, one could simply ask the DAO holders or the original funders with
 an on-chain or off-chain poll (with cryptographic signature verification, of
-course).  No-one is actually contesting the assumption that the DTH would vote
-in favor of a statement that claims that they were victims of grand theft token.&lt;/p&gt;
+course).  However, noone is actually challenging the assumption that the DTH
+would vote in favor of a statement that claims that they were victims of grand
+theft token.&lt;/p&gt;
 
 &lt;h3 id=&#34;too-big-to-fail:f0e38eb4136149a5f18af07afd523b2a&#34;&gt;Too Big to Fail&lt;/h3&gt;
 
@@ -143,13 +144,12 @@ in favor of a statement that claims that they were victims of grand theft token.
 bail out banks.&lt;/p&gt;
 
 &lt;p&gt;Comparing the rescue of TheDAO to the oligopoly of the too-big-to-fail US banks
-is a stretch.  The analogy would be better had TheDAO failed due to bad
+is a stretch.  The analogy would be better had if TheDAO failed due to bad
 investments, or if it had somehow turned into a ponzi scheme.  But that is not
 the case here.  The very mechanism that was designed to protect the DTH were
-unexpected used against them.  If any bank were to roll back their ledger
-database after getting hacked in a singular event, as long as it could do so and
-recover cleanly, nobody would complain that the bank were rescued becasue it was
-too-big-to-fail.&lt;/p&gt;
+unexpectedly used against them.  If any bank (or the Fed) were to roll back
+their database after getting hacked in a singular event, as long as it could do
+so and recover cleanly, nobody would complain that the bank were rescued.&lt;/p&gt;
 
 &lt;h3 id=&#34;moral-hazard-tyrrany-of-the-majority:f0e38eb4136149a5f18af07afd523b2a&#34;&gt;Moral Hazard - Tyrrany of the Majority&lt;/h3&gt;
 
@@ -159,11 +159,11 @@ expropriating a minority.&lt;/p&gt;
 
 &lt;p&gt;This is mostly a matter of perspective.  Once we drop Ethereum&amp;rsquo;s original
 premise, it becomes apparent that the former argument&amp;rsquo;s logical extreme would
-make the case that the &amp;ldquo;acquisition&amp;rdquo; of tokens via theft of private keys at
-gunpoint would also constitute fair-game &amp;ndash; an extreme form of anarchism
-perhaps.  That&amp;rsquo;s perfectly fine as a personal subjective philosophy, but if
-society as a whole decides against such theft, the might of society is also
-morally justified under the framework of such extreme anarchism.&lt;/p&gt;
+make the absurd claim that the &amp;ldquo;acquisition&amp;rdquo; of tokens via theft of private keys
+at gunpoint would also constitute fair-game &amp;ndash; an extreme form of
+crypto-anarchism.  That&amp;rsquo;s perfectly fine as a personal subjective philosophy,
+but if society as a whole decides against such theft, the might of society is
+also morally justified under the framework of such extreme anarchism.&lt;/p&gt;
 
 &lt;p&gt;In this light, not returning the stolen funds might be a case of a minority
 expropriating a majority.&lt;/p&gt;
@@ -215,8 +215,8 @@ because a lot of users won&amp;rsquo;t vote, and, ether held in complex contract
 get any votes.  Also, it presupposes agreement about where to vote.  But just
 maybe, if enough ether holders vote (e.g. more than 25% of all ether) and there
 is a super-majority (e.g. more than 67% in favor of a soft-fork, of those who
-voted), then it seems prudent to consider that a vote by the Ethereum community
-in favor of a soft-fork.&lt;/p&gt;
+voted), then it seems prudent to consider that to be a vote by the Ethereum
+community in favor of a soft-fork.&lt;/p&gt;
 
 &lt;h4 id=&#34;coordinating-the-ethereum-miners:f0e38eb4136149a5f18af07afd523b2a&#34;&gt;Coordinating the Ethereum Miners&lt;/h4&gt;
 
@@ -252,14 +252,13 @@ stolen funds.  A social contract to reward hackers a small amount would be akin
 to enabling an automated penetration-testing bounty system, and would likely
 accelerate security improvements, rather than hinder it.&lt;/p&gt;
 
-&lt;p&gt;Finally, note that to allow any such hacker to keep all of their stolen funds,
-in general, is to subject ourselves to the existing power structures that be,
-e.g.  to nation-states with immense intelligence capabilities like the NSA.
-It&amp;rsquo;s great that we have a cryptocurrency whose premise is based on
-crypto-anarchy (Bitcoin), but, if we allow all of our cryptocurrency systems to
-be coopted by the same technocratic bias, we deserve what we get.  On the other
-hand, if we don&amp;rsquo;t reward hackers sufficiently, we risk creating a fragile house
-of cards.&lt;/p&gt;
+&lt;p&gt;To allow all such hackers to keep all of their stolen funds, in general, is to
+subject ourselves to the existing power structures that be, e.g.  to
+nation-states with immense intelligence capabilities like the NSA.  It&amp;rsquo;s great
+that we have a cryptocurrency whose premise is based on crypto-anarchy
+(Bitcoin), but, if we allow all of our cryptocurrency systems to be coopted by
+the same technocratic bias, we deserve what we get.  On the other hand, if we
+don&amp;rsquo;t reward hackers sufficiently, we risk creating a fragile house of cards.&lt;/p&gt;
 
 &lt;h2 id=&#34;what-about-the-premise:f0e38eb4136149a5f18af07afd523b2a&#34;&gt;What About the Premise?&lt;/h2&gt;
 
@@ -268,11 +267,11 @@ of cards.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;&amp;rdquo;&amp;hellip; a decentralized platform for applications that run exactly as
 programmed without any chance of fraud, censorship, or third-party influence&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;Such a thing cannot exist in practice.  Fraud happens at all levels,
-especially at the human level.  For all we know, this whole DAO heist could have
-been planned all along &amp;ndash; though the creators should be given the benefit of the
-doubt.  Private keys can be swindled.  If there is a sudden influx of
-legitimate transactions, the system can be coerced into dropping the majority of
+&lt;p&gt;Such a thing cannot exist in practice.  Fraud happens at all levels, especially
+at the human level.  For all we know, this whole DAO heist could have been
+premedidated all along &amp;ndash; though the creators should be given the benefit of the
+doubt.  Private keys can be swindled.  If there is a sudden influx of legitimate
+transactions, the system can be coerced into dropping the majority of
 transactions.  And there is always a chance of third-party influence.&lt;/p&gt;
 
 &lt;p&gt;Some argue that dropping this premise would undermine the entire purpose, and
@@ -283,7 +282,8 @@ found to be buggy, in the same way that many existing legal jurisdictions look
 into the intent of contracts, in the case of typos or mistakes &amp;ndash; code doesn&amp;rsquo;t
 need to be any different.  Ethereum lets us write contracts in Solidity, to be
 interpreted by a virtual machine, rather by an army of expensive lawyers.
-Allowing for deliberated roll-backs does not take that value away.&lt;/p&gt;
+Allowing for deliberated roll-backs does not take that value away.  I think it
+would strengthen the Ethereum community.&lt;/p&gt;
 
 &lt;p&gt;Finally, it could be argued that the original premise of &lt;em&gt;unstoppable code&lt;/em&gt; is
 &lt;a href=&#34;https://medium.com/@lemurvanstar/immutability-of-any-blockchain-is-an-unrealistic-attempt-at-perfection-that-will-never-be-possible-4e4fcae59804&#34;&gt;not
@@ -301,7 +301,7 @@ proof-of-stake cryptocurrency powered by Tendermint BFT consensus.&lt;/p&gt;
 &lt;p&gt;First, we start with a different premise.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Gnuclear is a multi-asset, scalable, proof-of-stake-2.0
-cryptocurrency run by its stakeholders, for the benefit of the stakeholders&lt;/em&gt;.&lt;/p&gt;
+cryptocurrency run by stakeholders, for the benefit of stakeholders&lt;/em&gt;.&lt;/p&gt;
 
 &lt;p&gt;There&amp;rsquo;s no magic here, just a straight up business run by a distributed set of
 stakeholders using a BFT consensus algorithm.  There are no impossible
@@ -327,30 +327,30 @@ some form of consensus.&lt;/p&gt;
 
 &lt;p&gt;Besides permissioning of its validators and stakeholders, a distributed ledger
 can use permissioning at the application-logic level to create a better curated
-and &lt;em&gt;well regulated&lt;/em&gt; system.  For example, imagine if each top-level contract in
-Ethereum could have an optional field specifying which regulatory group (similar
-to TheDAO&amp;rsquo;s curators) can decide on whether the spirit of the contract had been
-violated by bug or theft.  Then, for the benefit of the ledger&amp;rsquo;s
-less-sophisticated users, the stakeholders may wish to whitelist certain
-regulatory groups at the system level.&lt;/p&gt;
+and &lt;em&gt;well regulated&lt;/em&gt; system for the benefit of its users.  For example, imagine
+that each top-level contract in Ethereum has a mandatory field specifying which
+regulatory group (similar to TheDAO&amp;rsquo;s curators) can decide on whether the spirit
+of the contract had been violated by bug or by theft.  Then, for the benefit of
+the ledger&amp;rsquo;s less-sophisticated users, the stakeholders may wish to whitelist
+certain regulatory groups at the system level.&lt;/p&gt;
 
 &lt;p&gt;This field could be left &lt;em&gt;null&lt;/em&gt; if the contract developers wanted to explicitly
 allow for absolute no roll-backs, but at least there would be a standard so that
 client-software can inform the user about the consequences of sending money to
-that contract.&lt;/p&gt;
+that contract &amp;ndash; like when visiting a website with a broken cert.&lt;/p&gt;
 
-&lt;p&gt;Note that this not the same as arguing for a walled-garden internet.  The
+&lt;p&gt;Note that this not analogous to arguing for a walled-garden internet.  The
 internet is composed of many independent domains with differing strategies on
 membership and permissions, and this has proven to be immensely valuable,
-enabling a Cambrian explosion of strategies.  Nor is this the same as arguing in
-favor of a federation of data-silos.  Blockchains depend on transparency for
+enabling a Cambrian explosion of strategies.  Nor is this analogous to arguing
+in favor of a federation of data-silos.  Blockchains depend on transparency for
 their security.  A federation of permissioned and unpermissioned distributed
-ledgers is not the same thing as a federation of data-silos.&lt;/p&gt;
+ledgers is not at all like a federation of data-silos.&lt;/p&gt;
 
 &lt;p&gt;Think of blockchains as sovereign transparent ecosystems, and the stakeholders
 of a blockchain as independent entities that are self-incentivized to make that
 blockchain succeed, in a sea of competing ledgers.  Permissioning may be a
-superior strategy for winning market-share.&lt;/p&gt;
+superior strategy for winning market-share in certain niches.&lt;/p&gt;
 
 &lt;h3 id=&#34;proof-of-stake-on-tendermint:f0e38eb4136149a5f18af07afd523b2a&#34;&gt;Proof-of-Stake on Tendermint&lt;/h3&gt;
 
@@ -363,9 +363,9 @@ than &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;3&lt;/sub&gt; of Byzantine ac
 Byzantine, they could halt or fork the blockchain ledger.  Satoshi Nakamoto
 wrote that Bitcoin can handle up to &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;2&lt;/sub&gt;, but that only works because clients are
 suppose to wait on the order of an hour for confirmation, thereby allowing the
-network to be modeled as a fully-synchronous system.  In other words, if you
-want a distributed ledger that commit transactions to finality quickly on the
-order of seconds, you cannot do better than Tendermint.&lt;/p&gt;
+network to be modeled as a (slow) fully-synchronous system.  In other words, if
+you want a distributed ledger that can commit transactions to finality quickly
+(on the order of seconds), Tendermint offers an optimal solution.&lt;/p&gt;
 
 &lt;p&gt;More information on how to solve the nothing-at-stake problem and the long-range
 forking problem are documented in the &lt;a href=&#34;https://github.com/gnuclear/gnuclear-whitepaper#preventing-long-range-attacks&#34;&gt;gnuclear
@@ -380,10 +380,11 @@ confidence in the ledger.  In other words, since a &lt;sup&gt;1&lt;/sup&gt;&amp;
 halt the ledger, it creates an incentive for the stakeholders to find a
 compromise.&lt;/p&gt;
 
-&lt;p&gt;The proposal system in Gnuclear polls the stakeholders to see what they would do
-if the decision is passed, and calls off the proposal if it appears that a
-forced halt is likely.  Instead of actually halting the blockchain and punishing
-everyone, it imposes a slight penalty for everyone involved.&lt;/p&gt;
+&lt;p&gt;The Gnuclear proposal system polls the stakeholders to see what they would do if
+the proposal were passed, and calls off the proposal if it appears that the
+proposal is contentious enough to cause a halt or filibuster.  Instead of
+actually halting the blockchain and punishing everyone, it imposes a slight
+penalty for everyone involved.&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;
@@ -411,9 +412,9 @@ everyone, it imposes a slight penalty for everyone involved.&lt;/p&gt;
   &lt;/footer&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;It&amp;rsquo;s interesting to compare this to the &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;2&lt;/sub&gt; vs &lt;sup&gt;2&lt;/sup&gt;&amp;frasl;&lt;sub&gt;3&lt;/sub&gt; required quorum for different
-types of proposals in various existing governance systems.  In Gnuclear, it&amp;rsquo;s
-one and the same &amp;ndash; a simple majority is sufficient to pass the measure, unless
+&lt;p&gt;It&amp;rsquo;s interesting to compare this to the &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;2&lt;/sub&gt; or &lt;sup&gt;2&lt;/sup&gt;&amp;frasl;&lt;sub&gt;3&lt;/sub&gt; required quorum for different
+types of proposals in various existing governance systems.  In Gnuclear, it&amp;rsquo;s a
+unified system &amp;ndash; a simple majority is sufficient to pass any measure, unless
 there is a simultaneous veto by a &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;3&lt;/sub&gt; minority.&lt;/p&gt;
 
 &lt;h4 id=&#34;need-for-a-constitution:f0e38eb4136149a5f18af07afd523b2a&#34;&gt;Need for a Constitution&lt;/h4&gt;
@@ -437,7 +438,7 @@ human-readible proposals called TextProposals.&lt;/p&gt;
 structures cannot prevent the system from disintegrating if the constitutents
 cannot agree on process.  A breakdown of communication or understanding can
 quickly lead to a breakdown of live-consensus, and ultimately can lead to a
-blockchain split.&lt;/p&gt;
+blockchain halt or split.&lt;/p&gt;
 
 &lt;p&gt;For this reason, there needs to be a written constitution, or a human-protocol,
 that must be followed.  In the very least, the constitution must contain the
@@ -459,19 +460,15 @@ stakeholders with compatible interests.&lt;/p&gt;
 
 &lt;p&gt;In Gnuclear proof-of-stake, there are three groups to consider: the validators,
 the staked delegators, and the non-staked token holders. The validators get to
-vote on any proposal (in fact, they must vote if they wish to avoid incurring a
-penalty). By default the delegators vote in accordance with the delegated
-validators, but delegators can override the vote manually.&lt;/p&gt;
+vote on any proposal (in fact, they must vote to avoid incurring a penalty). By
+default the delegators inherit the vote of the delegated validators, but
+delegators can override the vote manually.&lt;/p&gt;
 
-&lt;p&gt;Non-staked token holders who aren&amp;rsquo;t placing their tokens at stake (and thus are
+&lt;p&gt;Non-staked token holders who aren&amp;rsquo;t putting their tokens at stake (and thus are
 not participating in the consensus process) do not get to vote on proposals.  In
 a future post we&amp;rsquo;ll discuss the pros and cons of this design decision.&lt;/p&gt;
 
 &lt;h4 id=&#34;accountability-and-reputation:f0e38eb4136149a5f18af07afd523b2a&#34;&gt;Accountability and Reputation&lt;/h4&gt;
-
-&lt;p&gt;&lt;em&gt;For an unrelated explantion of Tendermint&amp;rsquo;s fork-accountability, refer to the
-Gnuclear whitepaper section on &lt;a href=&#34;https://github.com/gnuclear/gnuclear-whitepaper#consensus&#34;&gt;Tendermint
-consensus&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;A major benefit of the Gnuclear proof-of-stake system over any proof-of-work
 system is about accountability and reputation.&lt;/p&gt;
@@ -480,30 +477,38 @@ system is about accountability and reputation.&lt;/p&gt;
 miners&lt;/a&gt;
 to prevent a soft-fork.  Though this threat has little credibility until
 cryptographic evidence is published, the hypothetical threat is real.  Since
-miners are completely anonymous with no associable stake in the system, there&amp;rsquo;s
-not a whole lot that could be done to prevent such a bribe, except to bribe even
-more. Furthermore, there is little incentive for the miners to be enganged in
-these political issues, so the alleged hacker&amp;rsquo;s note about plausible deniability
-is also real.&lt;/p&gt;
+proof-of-work miners are completely anonymous with no associable stake in the
+system, there&amp;rsquo;s not a whole lot that could be done to prevent such a bribe,
+except to bribe even more. Furthermore, there is little incentive for the miners
+to be enganged in these political issues, so the alleged hacker&amp;rsquo;s note about
+plausible deniability is also real.&lt;/p&gt;
 
-&lt;p&gt;In Gnuclear, these issues are resolved, because stakeholders are pseudonymous
-with associated stake, and validators are required to vote on all proposals.&lt;/p&gt;
+&lt;p&gt;In Gnuclear, these issues resolved, because stakeholders are pseudonymous with
+associated stake, and validators are required to vote on all proposals.&lt;/p&gt;
 
 &lt;p&gt;This pseudonymous reputation system also enables true antifragility. A
 blockchain split in a proof-of-stake blockchain is very different than a
 blockchain split in a proof-of-work blockchain.  In a proof-of-work blockchain,
 nobody rational would follow a fork with less than 50% of the mining power
-behind it because that fork is vulnerable to attack by anonymous miners &lt;em&gt;unless
+behind it because it would be vulnerable to attack by anonymous miners &lt;em&gt;unless
 there were also a change in the hashing algorithm that required an investment in
 different kinds of hardware&lt;/em&gt;.  In Tendermint proof-of-stake, a blockchain split
 can result in increased security for both child blockchains.&lt;/p&gt;
 
+&lt;p&gt;&lt;em&gt;For a related explantion of Tendermint&amp;rsquo;s fork-accountability, refer to the
+Gnuclear whitepaper section on &lt;a href=&#34;https://github.com/gnuclear/gnuclear-whitepaper#consensus&#34;&gt;Tendermint
+consensus&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+
 &lt;h3 id=&#34;conclusion:f0e38eb4136149a5f18af07afd523b2a&#34;&gt;Conclusion&lt;/h3&gt;
 
-&lt;p&gt;It&amp;rsquo;s people all the way down.  Ethereum doesn&amp;rsquo;t have to cater to the
-crypto-anarchists.  Either way, lets create a diverse ecosystem of antifragile
-distributed ledgers.  Check out
-&lt;a href=&#34;github.com/gnuclear/gnuclear-whitepaper&#34;&gt;Gnuclear&lt;/a&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;It&amp;rsquo;s people all the way down.&lt;/li&gt;
+&lt;li&gt;Ethereum doesn&amp;rsquo;t have to cater to crypto-anarchists.&lt;/li&gt;
+&lt;li&gt;Either way, lets create a diverse ecosystem of antifragile distributed
+ledgers.&lt;/li&gt;
+&lt;li&gt;Check out &lt;a href=&#34;github.com/gnuclear/gnuclear-whitepaper&#34;&gt;Gnuclear&lt;/a&gt; and join the
+discussions!&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
