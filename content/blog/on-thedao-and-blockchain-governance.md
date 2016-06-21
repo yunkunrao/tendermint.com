@@ -19,7 +19,7 @@ address issues related to bugs and theft.
 ## TheDAO Hack
 
 An attacker (the hacker) has stolen more than 3.5mm ether (around $45mm) from
-the DAO yesterday.  The vulnerability [is described
+the DAO yesterday.  The attack [is described
 here](http://vessenes.com/deconstructing-thedao-attack-a-brief-code-tour/).
 
 Since then, the [Ethereum
