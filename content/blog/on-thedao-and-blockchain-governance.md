@@ -159,7 +159,7 @@ also morally justified under the framework of such extreme anarchism.
 In this light, not returning the stolen funds might be a case of a minority
 expropriating a majority.
 
-### Moral Hazard - Slippery Slop
+### Moral Hazard - Slippery Slope
 
 Some argue that once you allow one contract to be rolled back, you open
 Pandora's box to allow anything to be rolled back. For example, a nation-state
