@@ -57,7 +57,7 @@ So, Ethereum is in a difficult position where it must either let the hacker get
 away with the theft of TheDAO's ether, or, undermine its stated premise.  The
 arguments in favor of mitigating the hack is clear. Few in the Ethereum
 community really want 5% of the entire token supply of Ethereum to go to the
-hacker -- the actual DAO experiment hadn't event begun!.  And yet, a coordinated
+hacker -- the actual DAO experiment hadn't even begun!  And yet, a coordinated
 action to reverse the attack or freeze the stolen funds is to undermine
 Ethereum's stated premise.  Some argue that to do so would destroy the very
 purpose and value of Ethereum.
