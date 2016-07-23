@@ -72,7 +72,7 @@ When we run the `tmsp-cli` tool we open a new connection to the application's so
 send the given TMSP message, and wait for a response.
 
 The server may be generic for a particular language, and we provide one for Go in `tmsp/server`.
-There is one for Python in `example/python/tmsp/server.py`, and one for Node JS in `example/js/server.js`.
+There is one for Python in `example/python/tmsp/server.py`, and one for Node JS in `github.com/tendermint/js-tmsp`. 
 
 The handler is specific to the application, and may be arbitrary, 
 so long as it is deterministic and conforms to the TMSP interface specification.
@@ -98,14 +98,43 @@ Try running these commands:
 
 ```
 > echo hello
-> info
-> commit
-> append_tx "abc"
-> info
-> commit
+-> data: {hello}
+
+> info 
+-> data: {size:0}
+
+> commit 
+
+> append_tx abc
+-> code: OK
+
+> info 
+-> data: {size:1}
+
+> commit 
+-> data: {750502FC7E84BBD788ED589624F06CFA871845D1}
+
+> query abc
+-> code: OK
+-> data: {Index=0 value=abc exists=true}
+
+> append_tx def=xyz
+-> code: OK
+
+> commit 
+-> data: {76393B8A182E450286B0694C629ECB51B286EFD5}
+
+> query def
+-> code: OK
+-> data: {Index=1 value=xyz exists=true}
+
 ```
 
-Similarly, you could put the commands in a file and run `tmsp-cli batch < myfile`.
+Note that if we do `append_tx abc` it will store `(abc, abc)`, 
+but if we do `append_tx abc=efg` it will store `(abc, efg)`.
+
+Similarly, you could put the commands in a file and run `tmsp-cli --verbose batch < myfile`.
+
 
 ## Another Example
 
@@ -151,29 +180,28 @@ In another window, start the `tmsp-cli console`:
 > set_option serial on
 -> data: {serial=on}
 
-> check_tx x00
+> check_tx 0x00
 -> code: OK
 
-> check_tx xFF
+> check_tx 0xff
 -> code: OK
 
-> append_tx x00
+> append_tx 0x00
 -> code: OK
 
-> check_tx x00
+> check_tx 0x00
 -> code: BadNonce
 -> log: Invalid nonce. Expected >= 1, got 0
 
-> append_tx x01
+> append_tx 0x01
 -> code: OK
 
-> append_tx x04
+> append_tx 0x04
 -> code: BadNonce
 -> log: Invalid nonce. Expected 2, got 4
 
-> info
+> info 
 -> data: {hashes:0, txs:2}
-
 ```
 
 This is a very simple application, but between `counter` and `dummy`, its easy to see how you can build out arbitrary application states on top of the TMSP.
