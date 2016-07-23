@@ -20,7 +20,7 @@ Make sure you [have Go installed](https://golang.org/doc/install) and [put `$GOP
 Next, install the `tmsp-cli` tool and example applications:
 
 ```
-go get github.com/tendermint/tmsp/cmd/...
+go get -u github.com/tendermint/tmsp/cmd/...
 ```
 
 Now run `tmsp-cli --help` to see the list of commands:
