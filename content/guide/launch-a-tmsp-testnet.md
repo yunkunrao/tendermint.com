@@ -108,22 +108,27 @@ go get github.com/tendermint/mintnet
 To provision machines on DigitalOcean:
 
 ```
-mintnet create -- --driver=digitalocean --digitalocean-access-token=YOUR_ACCCESS_TOKEN
+mintnet create -- --driver=digitalocean --digitalocean-image=docker --digitalocean-access-token=YOUR_ACCCESS_TOKEN
 ```
+
+You can leave out the `--digitalocean-access-token` flag if you set your `DIGITALOCEAN_ACCESS_TOKEN` environment variable.
 
 By default this creates 4 new machines.  Check the help messages for more info, e.g. `mintnet create --help`.
 
 Next, create the testnet configuration folders.
 
 ```
-mintnet init mytest_dir/
+mintnet init chain mytest_dir/
 ```
 
 This creates directories in `mytest` for the application.
 
 ```
 ls mytest_dir/
+  chain_config.json # list of validator pubkeys and ip:ports
   app   # Common configuration directory for your blockchain applicaiton
+  core  # Common configuration directory for Tendermint core
+  data  # Common configuration directory for the Merkleyes key-value store
   mach1 # Configuration directory for the Tendermint core daemon on machine 1
   mach2 # Configuration directory for the Tendermint core daemon on machine 2
   mach3 # Configuration directory for the Tendermint core daemon on machine 3
@@ -132,6 +137,7 @@ ls mytest_dir/
 
 You can change the files in the app folder to change which TMSP application run on your testnet.
 The default script app/init.sh gets run on each node to install the TMSP application straight from Github.
+Edit core/init.sh to change the Tendermint version being run.
 
 Now start the testnet service.
 
@@ -150,5 +156,8 @@ Don't forget to destroy your provisioned machines!
 ```
 mintnet destroy --machines="mach1,mach2,mach3,mach4"
 ```
+
+Note you can use the `--machines` flag on any command to specify machines,
+for instance `--machines mach[1-3],mach7` will apply to mach1, mach2, mach3, and mach7.
 
 TODO: Document tutorial on docker-machine ssh mach1, docker ps, etc, or at least link to good Docker tutorials.
