@@ -28,7 +28,7 @@
 
 &lt;p&gt;The above proposed protocol is secured by completely intrinsic means; it does not require a massive expenditure of energy to secure.  The total intrinsic penalty for successfully launching a double-spend attack (which is at least one third of all bonded coins as mentioned previously) can be adjusted by judiciously setting the incentives given to validators by way of fees or inflationary rewards.  The block-chain does not fork at all except in extraordinary circumstances, making it ideally suited for side-chain extensions.  It is to the my best knowledge the only completely decentralized cryptocurrency protocol that could be proven to be intrinsically incentive aligned.  Perhaps it is time to consider this kind of algorithm.&lt;/p&gt;
 
-&lt;h2 id=&#34;links:332834bd1d2a52cc97bf52e097939cbf&#34;&gt;Links&lt;/h2&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Eyal and Sirer.  The Majority is Not Enough. 2014, &lt;a href=&#34;http://fc14.ifca.ai/papers/fc14_submission_82.pdf&#34;&gt;http://fc14.ifca.ai/papers/fc14_submission_82.pdf&lt;/a&gt;&lt;/li&gt;

@@ -4,9 +4,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>The Security of Cryptocurrency Protocols &ndash; Tendermint</title>
+  <title>Tendermint: from Then to Now &ndash; Tendermint</title>
   <base href="http://tendermint.com">
-<link rel="canonical" href="http://tendermint.com/blog/security-of-cryptocurrency-protocols/">
+<link rel="canonical" href="http://tendermint.com/blog/tendermint-then-to-now/">
 <link href="" rel="alternate" type="application/rss+xml" title="Tendermint">
 
 <meta content="on" http-equiv="cleartype" />
@@ -55,9 +55,9 @@
 
   <section id="section-top">
     <div class="section-container">
-      <h1>The Security of Cryptocurrency Protocols</h1>
+      <h1>Tendermint: from Then to Now</h1>
       
-      <p>November 19, 2014</p>
+      <p>September 17, 2016</p>
       
     </div>
   </section>
@@ -68,25 +68,43 @@
         <div class="article-body">
           
 
-<p>Many solutions to the consensus problem for cryptocurrencies have been proposed.  Since the innovation of Bitcoin’s proof-of-work based consensus algorithm&ndash;where miners compete in an energy intensive game to determine the order of transactions&ndash;several proof-of-stake algorithms have been proposed to make consensus faster while removing the reliance on energy expenditure.  The common objective of these protocols is to maintain a live decentralized transaction ledger while defending against double-spend attacks from malicious Byzantine actors deviating from the protocol.  Considering the financial nature of these protocols, we should strive to support a protocol that has well defined and robust security guarantees.</p>
+<h2 id="tendermint-from-then-to-now">Tendermint: from Then to Now</h2>
 
-<p>The security analysis of cryptocurrency protocols is complicated by many factors.   One such complicating factor is the rational self-interested nature of participants.  The ideal protocol is an incentive aligned Nash equilibrium such that deviating from the protocol does not result in a net gain [<a href="http://fc14.ifca.ai/papers/fc14_submission_82.pdf">1</a>, <a href="https://www.cs.princeton.edu/~kroll/papers/weis13_bitcoin.pdf">2</a>].  This is a topic worthy of its own post, but won’t be discussed further here.</p>
+<p>Some of you have asked about the history of <a href="http://tendermint.com/">Tendermint</a>, so here it is. Back in the day, we had some serious concerns about Bitcoin as a global currency, mainly because it is incredibly <a href="http://motherboard.vice.com/read/bitcoin-could-consume-as-much-electricity-as-denmark-by-2020">energy intensive</a>. So we started Tendermint to develop a more environmentally friendly cryptocurrency.</p>
 
-<p>Another complicating factor is whether the power to achieve or disrupt consensus is extrinsic in origin (e.g. access to the production of mining equipment or cheap access to electricity) or intrinsic in origin (e.g. the “stake” of validators in proof-of-stake protocols) and whether the disruption of consensus&ndash;especially via a successful double-spend attack&ndash;is associated with a commensurate penalty.  The problem with extrinsic factors of security is that they are not easily quantifiable for analysis.  For example, the depreciation costs of Bitcoin mining hardware in the event of a successful double-spend attack may not be significant compared to the running costs of electricity in mining.  On the other hand existing proof-of-stake protocols do not have a well defined intrinsic penalty for instigators of a double-spend attack.  This is commonly called, ironically, the “nothing at stake” problem.  Newer protocols like the BitShares delegated-proof-of-stake protocol attempt to address this problem by placing the role of ranked-delegate at stake, but security is dependant on the extrinsic ability of stakeholders to accurately predict the future performance of delegates.</p>
+<p>But what started as a simple cryptocurrency based on an adaptation of a <a href="http://groups.csail.mit.edu/tds/papers/Lynch/jacm88.pdf">1980’s consensus algorithm called DLS</a> eventually evolved into what it is today: a general purpose Byzantine fault tolerant (BFT) consensus algorithm for running replicated state machines over the internet in possibly adversarial conditions.</p>
 
-<p>What is needed is a radical simplification.  Security analysis is much simpler for an intrinsically secure cryptocurrency protocol when it can be proved that launching a double-spend attack necessarily results in a very high intrinsic penalty compared to the possible intrinsic gains.  Then, the protocol may be considered resistant to double-spent attacks assuming no further extrinsic complications.</p>
+<p>Replicated state machines are a staple of modern Internet technology. They permit a consistent and fault-tolerant view of some set of data. Popular open-source implementations of replicated state machines include <a href="http://bookkeeper.apache.org/">Apache ZooKeeper</a>, <a href="https://coreos.com/etcd/">CoreOS&rsquo; etcd</a>, and <a href="https://www.consul.io/">Hashicorp&rsquo;s Consul</a>.</p>
 
-<p>For example, consider a protocol that requires stakeholders to first post a surety bond before becoming a validator to participate in the consensus process.  To get the bonded coins back, the validator must first submit an unbonding transaction and wait a fixed, relatively long duration of time.  The validator’s only duty until the unbonding period is over is to participate in the protocol while taking care not to sign two blocks at the same height: the only way to fork the block-chain.  The validator that signs duplicitously loses its bonded coins as evidence of duplicity is entered onto the block-chain.  This protocol might adapt an existing Byzantine consensus algorithm from academic research (e.g. one proposed by Dwork, et al. [<a href="http://groups.csail.mit.edu/tds/papers/Lynch/jacm88.pdf">3</a>]) to create a quorum of validators that agree on and sign the next block.  For a partially synchronous network (such as the Internet) at least two thirds of voting power is needed to agree on the next block, and up to one third of Byzantine voting power can be tolerated.  A double-spend attack implies a fork in the block-chain, which by simple arithmetic requires at least one third of voting power to have signed duplicitously.</p>
+<p>In each of these, the state machine is a simple key-value store, and the underlying consensus algorithm is either Paxos or <a href="https://raft.github.io/">Raft</a>. Neither of these algorithms tolerate even a single malicious node in the system. You can see an animation of the Paxos algorithm <a href="http://harry.me/blog/2014/12/27/neat-algorithms-paxos/">here</a>.</p>
 
-<p>The above proposed protocol is secured by completely intrinsic means; it does not require a massive expenditure of energy to secure.  The total intrinsic penalty for successfully launching a double-spend attack (which is at least one third of all bonded coins as mentioned previously) can be adjusted by judiciously setting the incentives given to validators by way of fees or inflationary rewards.  The block-chain does not fork at all except in extraordinary circumstances, making it ideally suited for side-chain extensions.  It is to the my best knowledge the only completely decentralized cryptocurrency protocol that could be proven to be intrinsically incentive aligned.  Perhaps it is time to consider this kind of algorithm.</p>
+<p>In contrast, Tendermint lets you build arbitrary state machines in any programming language, whether that is a key-value store in Go, a voting system in C++, or a cryptocurrency in OCaml. In each case, the application implements a simple interface, and Tendermint handles the rest, including connecting to peers, syncing the latest state, gossipping transactions, and maintaining a consistent log of transactions.</p>
 
-<h2 id="links">Links</h2>
+<h2 id="who-is-using-tendermint">Who is using Tendermint?</h2>
 
-<ol>
-<li>Eyal and Sirer.  The Majority is Not Enough. 2014, <a href="http://fc14.ifca.ai/papers/fc14_submission_82.pdf">http://fc14.ifca.ai/papers/fc14_submission_82.pdf</a></li>
-<li>Kroll et al.  The Economics of Bitcoin Mining, or Bitcoin in the Presence of Adversaries. 2013, <a href="https://www.cs.princeton.edu/~kroll/papers/weis13_bitcoin.pdf">https://www.cs.princeton.edu/~kroll/papers/weis13_bitcoin.pdf</a></li>
-<li>Dwork, Lynch, and Stockmeyer.  Consensus in the Presence of Partial Synchrony. 1988, <a href="http://groups.csail.mit.edu/tds/papers/Lynch/jacm88.pdf">http://groups.csail.mit.edu/tds/papers/Lynch/jacm88.pdf</a></li>
-</ol>
+<p>It’s been an exciting journey, and over the past few months people have been putting Tendermint to work in several applications.</p>
+
+<p>Probably the most complicated implementation of Tendermint so far is by Eris Industries. Eris is using Tendermint to power its <a href="https://erisindustries.com/components/erisdb/">eris:db</a> blockchain client. Eris:db includes a fully compatible Ethereum virtual machine and other features that make it a full-fledged blockchain.</p>
+
+<p>But there are other implementations. <a href="http://www.cloudsoft.io/">CloudSoft</a> published a <a href="http://www.cloudsoft.io/tendermint-and-clocker/">deployment strategy</a> for Apache Brooklyn that uses Tendermint and Clocker. Martin Dyring wrote an <a href="https://github.com/mdyring/cpp-tmsp">implementation of Tendermint TMSP in C++</a>, and wolfposd wrote a <a href="https://github.com/wolfposd/TMChat">chatroom app in Java</a> that uses Tendermint to broadcast messages from one user to another. Yes, that’s right, a chatroom.</p>
+
+<p>While it might sound crazy to run a chat application on a blockchain, this is simply an example of the flexibility of Tendermint. This sort of implementation might even come in handy in instances where you have several actors who are malicious and maintaining the total order of the system matters, for instance, in p2p gaming.</p>
+
+<p>Other companies building on Tendermint include <a href="https://blockfreight.com/">Blockfreight</a>, <a href="http://www.vidroll.com/">Vidroll</a>, and <a href="https://stratumn.com/">Stratumn</a> to name a few. Of course, we use Tendermint too. Our first product built on Tendermint is <a href="http://cosmos.network/">Cosmos, the internet of blockchains</a>.</p>
+
+<h2 id="what-s-new">What’s new?</h2>
+
+<p>In August 2016, we released Tendermint v0.7.0, the first stable release of our middleware. It featured a weakly-synchronous BFT consensus algorithm, which can process thousands of transactions per second with latencies on the order of a second and cluster sizes ranging from 4 to 64 nodes.</p>
+
+<p>Recently we released <a href="https://github.com/tendermint/tendermint">Tendermint v0.7.1</a>, which includes a variety of fixes, as well as the ability for applications to determine what peers Tendermint can connect to and filtering either by IP address, or by public key.</p>
+
+<p>In the next major release, Tendermint v0.8.0, which should be in October, we plan to introduce a handshake between Tendermint and whatever application is using it, ensuring the two stay synced even after crashes and restarts.</p>
+
+<p>Additionally, we’ll include some important fixes to the BFT consensus module. While testing Tendermint in adversarial conditions, we discovered a Byzantine node could potentially halt the system in some circumstances—this fix will prevent that from happening.</p>
+
+<p>This is critical because even though the Tendermint consensus algorithm guarantees your blockchain won&rsquo;t fork, all of the subcomponents need to work perfectly to ensure liveness.</p>
+
+<p>Stay tuned for more updates. We are continuing to test Tendermint extensively in a push to provide a production ready offering in early 2017. And, if you are using Tendermint in a project, <a href="https://docs.google.com/a/tendermint.com/forms/d/e/1FAIpQLSclH87WiZrer8aUzO5oNWoSCqcbn4mwQ3sDJJX44E9rhdVJFw/viewform?c=0&amp;w=1">let us know</a>! We want to hear how you’re using it and what your feedback is.</p>
 
         </div>
 
@@ -116,19 +134,19 @@ Disqus.</a></noscript>
         <div id="article-prev-next">
   <div class="article-prev-next article-prev">
     
-      <div class="end">
+      <a  href="http://tendermint.com/blog/on-thedao-and-blockchain-governance/">
         <div class="label"><i class="fa fa-angle-left"></i> Prev</div>
-        <div class="title">No newer entries in this section.</div>
-      </div>
+        <div class="title">On TheDAO and Proof-of-Stake Governance</div>
+      </a>
     
   </div>
 
   <div class="article-prev-next article-next">
     
-      <a href="http://tendermint.com/blog/sidechains-without-pegging/">
+      <div class="end">
         <div class="label">Next <i class="fa fa-angle-right"></i></div>
-        <div class="title">Sidechains without Pegging</div>
-      </a>
+        <div class="title">No newer entries in this section.</div>
+      </div>
     
   </div>
 </div>

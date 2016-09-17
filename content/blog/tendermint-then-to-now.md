@@ -10,7 +10,7 @@ categories:
 
 Some of you have asked about the history of [Tendermint](http://tendermint.com/), so here it is. Back in the day, we had some serious concerns about Bitcoin as a global currency, mainly because it is incredibly [energy intensive](http://motherboard.vice.com/read/bitcoin-could-consume-as-much-electricity-as-denmark-by-2020). So we started Tendermint to develop a more environmentally friendly cryptocurrency. 
 
-But what started as a simple cryptocurrency based on an adaptation of a [1980’s consensus algorithm called DLS](http://groups.csail.mit.edu/tds/papers/Lynch/jacm88.pdf) evolved into a proof-of-stake. And eventually, Tendermint became what it is today: a general purpose Byzantine fault tolerant (BFT) consensus algorithm for running replicated state machines over the internet in possibly adversarial conditions.
+But what started as a simple cryptocurrency based on an adaptation of a [1980’s consensus algorithm called DLS](http://groups.csail.mit.edu/tds/papers/Lynch/jacm88.pdf) eventually evolved into what it is today: a general purpose Byzantine fault tolerant (BFT) consensus algorithm for running replicated state machines over the internet in possibly adversarial conditions.
 
 Replicated state machines are a staple of modern Internet technology. They permit a consistent and fault-tolerant view of some set of data. Popular open-source implementations of replicated state machines include [Apache ZooKeeper](http://bookkeeper.apache.org/), [CoreOS' etcd](https://coreos.com/etcd/), and [Hashicorp's Consul](https://www.consul.io/). 
 
