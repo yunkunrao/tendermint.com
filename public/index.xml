@@ -1303,7 +1303,7 @@ In the near future, &lt;code&gt;erisdb&lt;/code&gt; of Eris Industries will also
 
 &lt;p&gt;We have implemented the counter in a number of languages (see the example directory).&lt;/p&gt;
 
-&lt;p&gt;To run the Node JS version, &lt;code&gt;cd&lt;/code&gt; to &lt;code&gt;example/js&lt;/code&gt; and run&lt;/p&gt;
+&lt;p&gt;To run the Node JS version, checkout the &lt;code&gt;github.com/tendermint/js-tmsp&lt;/code&gt; repo, &lt;code&gt;cd&lt;/code&gt; to &lt;code&gt;example&lt;/code&gt; and run&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;node app.js
 &lt;/code&gt;&lt;/pre&gt;
