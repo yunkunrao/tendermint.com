@@ -1,17 +1,3 @@
----
-title: "Run your first TMSP application"
-description: "We explain what TMSP is and how to inspect TMSP applications using the tmsp-cli tool"
-date: "2015-12-16"
-categories: 
-    - "tutorial"
-    - "TMSP"
-    - "tmsp-cli"
-aliases:
-    - /tutorials/run-your-first-tmsp-application/
----
-
-> This tutorial is first in a series.  See [this post](/posts/tendermint-socket-protocol/) for an overview of TMSP and links to all the tutorials in this series.
-
 
 ## A First Example
 
@@ -48,7 +34,7 @@ The `tmsp-cli` tool lets us send TMSP messages to our application, to help build
 The most important messages are `append_tx`, `check_tx`, and `commit`,
 but there are others for convenience, configuration, and information purposes.
 
-Let's start a dummy application:
+Let's start a dummy application. The dummy just stores transactions in a merkle tree:
 
 ```
 dummy
@@ -76,16 +62,6 @@ There is one for Python in `example/python/tmsp/server.py`, and one for Node JS 
 
 The handler is specific to the application, and may be arbitrary, 
 so long as it is deterministic and conforms to the TMSP interface specification.
-
-For example, starting the `dummy` application in Go looks like:
-
-```go
-server.StartListener("tcp://0.0.0.0:46658", example.NewDummyApplication())
-```
-
-Where `example.NewDummyApplication()` has methods for each of the TMSP messages and `server` handles everything else.
-
-See the dummy app in `example/golang/dummy.go`. It simply adds transaction bytes to a Merkle tree, and hashes when we call `commit`.
 
 So when we run `tmsp-cli info`, we open a new connection to the TMSP server, which calls the `Info()` method on the application, which tells us the number of transactions in our Merkle tree.
 

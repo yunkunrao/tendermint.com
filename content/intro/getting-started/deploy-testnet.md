@@ -1,16 +1,3 @@
----
-title: "Launch a TMSP testnet using mintnet"
-description: "This tutorial shows how to launch a TMSP blockchain application using the mintnet tool"
-date: "2015-12-16"
-categories: 
-    - "tutorial"
-    - "TMSP"
-    - "mintnet"
-aliases:
-    - /tutorials/launch-a-tmsp-testnet/
----
-
-> This tutorial is second in a series.  See [this post](/posts/tendermint-socket-protocol/) for links to all the tutorials in this series.
 
 ## Tendermint Core
 
@@ -20,22 +7,7 @@ let's run an actual Tendermint node.
 When running a live application, a Tendermint node takes the place of the `tmsp-cli` tool by sending TMSP requests
 to the application: many `append_tx` msgs to run transactions followed by a `commit` to get the application Merkle root hash, and so on.
 
-Installing Tendermint is easy:
-
-```
-go get github.com/tendermint/tendermint/cmd/tendermint
-```
-
-If you already have Tendermint installed, then you can either set a new `$GOPATH` and run the previous command,
-or else fetch and checkout the latest master branch in `$GOPATH/src/github.com/tendermint/tendermint`,
-and from that directory run
-
-```
-go get ./cmd/tendermint
-go install ./cmd/tendermint
-```
-
-To initialize a genesis and validator key in `~/.tendermint`, run
+First, we need to initialize a genesis file and a validator key in `~/.tendermint`:
 
 ```
 tendermint init
@@ -49,20 +21,13 @@ Now,
 tendermint node
 ```
 
-You should see `Failed to connect to proxy for mempool: dial tcp 127.0.0.1:46658: getsockopt: connection refused`
+Tendermint will try to connect to a tmsp appliction by default on `127.0.0.1:46658`, 
+but you probably don't have one running yet.
 
-That's because we don't have an application process running, and Tendermint will only run if there's an application it can speak TMSP with.
-
-So lets start the `dummy` app,
+So in another window, lets start the `dummy` app,
 
 ```
 dummy
-```
-
-and in another window, start Tendermint:
-
-```
-tendermint node
 ```
 
 After a few seconds you should see blocks start streaming in!
