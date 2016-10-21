@@ -17,5 +17,3 @@ Responsibilities:
 - Implement infrastructure-as-code policies and manage infrastructure
 - Quality Assurance
 - Improve Go unit-test coverage across repositories
-- Documentation and Tutorials
-
