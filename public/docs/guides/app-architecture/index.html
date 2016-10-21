@@ -1,0 +1,226 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title> &ndash; Tendermint</title>
+  <base href="http://tendermint.com">
+<link rel="canonical" href="http://tendermint.com/docs/guides/app-architecture/">
+<link href="" rel="alternate" type="application/rss+xml" title="Tendermint">
+
+<meta content="on" http-equiv="cleartype" />
+<meta name="viewport" content="width=device-width, user-scalable=0, minimal-ui" />
+
+<link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/images/favicon/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/images/favicon/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/images/favicon/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="/images/favicon/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="/images/favicon/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/images/favicon/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/images/favicon/manifest.json">
+<link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-TileImage" content="/images/favicon/mstile-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" type="text/css" media="screen" href="/styles/screen.css">
+
+
+
+</head>
+
+
+<body id="">
+  <header id="site-header">
+<a href="/" id="nav-home">
+  <img src="/images/home/tendermint-logo-88-green.jpg" alt="Tendermint logo"/>
+</a>
+<nav>
+  <a id="nav-intro" href="/intro">Intro</a>
+  <a id="nav-docs" href="/docs">Docs</a>
+  <a id="nav-community" href="/community">Community</a>
+  <a id="nav-blog" href="/blog">Blog</a>
+</nav>
+</header>
+
+
+  
+
+<h1 id="overview">Overview</h1>
+
+<p>A blockchain application is more than the consensus engine and the transaction logic (eg. smart contracts, business logic) as implemented in the TMSP app.  There are also (mobile, web, desktop) clients that will need to connect and make use of the app.  We will assume for now that you have a well designed transactions and database model, but maybe this will be the topic of another article.  This article is more interested in various ways of setting up the &ldquo;plumbing&rdquo; and connecting these pieces, and demonstrating some evolving best practices.</p>
+
+<h1 id="security">Security</h1>
+
+<p>A very important aspect when constructing a blockchain is security.  The consensus model can be DoSed (no consensus possible) by corrupting <sup>1</sup>&frasl;<sub>3</sub> of the validators and exploited (writing arbitrary blocks) by corrupting <sup>2</sup>&frasl;<sub>3</sub> of the validators. So, while the security is not that of the &ldquo;weakest link&rdquo;, you should take care that the &ldquo;average link&rdquo; is sufficiently hardened.</p>
+
+<p>One big attack surface on the validators is the communication between the TMSP app and the tendermint core.  This should be highly protected. Ideally, the app and the core are running on the same machine, so no external agent can target the communication channel.  You can use unix sockets (with permissions preventing access from other users), or even compile the two apps into one binary if the TMSP app is also writen in go (@ebuchman says this is possible). If you are unable to do that due to language support, then the TMSP app should bind a TCP connection to localhost (127.0.0.1), which is less efficient and secure, but still not reachable from outside.  If you must run the TMSP app and tendermint core on separate machines, make sure you have a secure communication channel (ssh tunnel?)</p>
+
+<p>Now assuming, you have linked together your app and the core securely, you must also make sure no one can get on the machine it is hosted on.  At this point it is basic network security. Run on a secure operating system (SELinux?). Limit who has access to the machine (user accounts, but also where the physical machine is hosted).  Turn off all services except for ssh, which should only be accessible by some well-guarded public/private key pairs (no password). And maybe even firewall off access to the ports used by the validators, so only known validators can connect.</p>
+
+<p>There was also a suggestion on slack from @jhon about compiling everything together with a unikernel for more security, such as <a href="https://mirage.io">Mirage</a> or <a href="https://github.com/emc-advanced-dev/unik">UNIK</a>.</p>
+
+<h1 id="connecting-your-client-to-the-blockchain">Connecting your client to the blockchain</h1>
+
+<h2 id="tendermint-core-rpc">Tendermint Core RPC</h2>
+
+<p>I believe this was the original design from @ebuchman.  The concept is that the TMSP app is completely hidden from the outside world and only communicated through a tested and secured <a href="../RPC">interface exposed by the tendermint core</a>.  This interface exposes a lot of data on the block header and consensus process, which is quite useful for externally verifying the system.  It also includes 3(!) methods to broadcast a transaction (propose it for the blockchain, and possibly await a response).  And one method to query app-specific data from the TMSP application.</p>
+
+<p>Pros:
+* Server code already written
+* Access to block headers to validate merkle proofs (nice for light clients)
+* Basic read/write functionality is supported</p>
+
+<p>Cons:
+* Limited interface to app.  All queries must be serialized into []byte (less expressive than JSON over HTTP) and there is no way to push data from TMSP app to the client (eg. notify me if account X receives a transaction)</p>
+
+<h2 id="custom-tmsp-server">Custom TMSP server</h2>
+
+<p>This was proposed by @wolfposd on slack and demonstrated by <a href="https://github.com/wolfposd/TMChat">TMChat</a>, a sample app. The concept is to write a custom server for your app (with typical REST API/websockets/etc for easy use by a mobile app). This custom server is in the same binary as the TMSP app and data store, so can easily react to complex events there that involve understanding the data format (send a message if my balance drops below 500). All &ldquo;writes&rdquo; sent to this server are proxied via websocket/JSON-RPC to tendermint core.  When they come back as append_tx over TMSP, they will be written to the data store. For &ldquo;reads&rdquo;, we can do any queries we wish that are supported by our architecture, using any web technology that is useful. The general architecture is shown in the following diagram:</p>
+
+<p>[[<a href="https://github.com/wolfposd/tutorials/blob/master/images/tendermint/TMApplicationExample.png|alt=applicationarchitecture]">https://github.com/wolfposd/tutorials/blob/master/images/tendermint/TMApplicationExample.png|alt=applicationarchitecture]</a>]</p>
+
+<p>Pros:
+* Separates application logic from blockchain logic
+* Allows much richer, more flexible client-facing API
+* Allows pub-sub, watching certain fields, etc.</p>
+
+<p>Cons:
+* Access to TMSP app can be dangerous (be VERY careful not to write unless it comes from the validator node)
+* No direct access to the blockchain headers to verify tx
+* You must write your own API (but maybe that&rsquo;s a pro&hellip;)</p>
+
+<h2 id="hybrid-solutions">Hybrid solutions</h2>
+
+<p>Likely the least secure but most versatile.  The client can access both the tendermint node for all blockchain info, as well as a custom app server, for complex queries and pub-sub on the tmsp app.</p>
+
+<p>Pros:
+* All from both above solutions</p>
+
+<p>Cons:
+* Even more complexity
+* Even more attack vectors (less security)</p>
+
+<h1 id="scalability">Scalability</h1>
+
+<p>Read replica using non-validating nodes?  They could forward transactions to the validators (fewer connections, more security), and locally allow all queries in any of the above configurations. Thus, while transaction-processing speed is limited by the speed of the tmsp app and the number of validators, one should be able to scale our read performance to quite an extent (until the replication process drains too many resources from the validator nodes).</p>
+
+<h1 id="example-code">Example Code</h1>
+
+<ul>
+<li><a href="https://github.com/wolfposd/TMChat">TMChat</a></li>
+</ul>
+
+<p>TODO: more!</p>
+
+<h1 id="contributions">Contributions</h1>
+
+<p>Many thanks to Ethan Frey for writing this page.</p>
+
+
+  <section id="section-connections" class="section-default section-dark">
+  <div class="section-container">
+    <header class="section-header">
+      <h2>Learn more by joining the&nbsp;discussion</h2>
+    </header>
+    <div class="section-content">
+      <ul class="ul-connections">
+        <li>
+          <a href="http://forum.tendermint.com:3000">
+            <h3><i class="fa fa-slick"></i> Slack</h3>
+            <div class="content">
+              <p>Get an invitation to join the discussion on our Slack.</p>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/tendermint_team">
+            <h3><i class="fa fa-twatter"></i> Twitter</h3>
+            <div class="content">
+              <p>Follow <strong>@tendermint_team</strong> on Twitter for our latest updates.</p>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/tendermint/">
+            <h3><i class="fa fa-footbook"></i> Facebook</h3>
+            <div class="content">
+              <p>Like and follow Tendermint on Facebook.</p>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/company/tendermint">
+            <h3><i class="fa fa-linkedout"></i> LinkedIn</h3>
+            <div class="content">
+              <p>View our profile and connect with us on LinkedIn.</p>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="section-cta" class="section-default section-dark">
+  <div class="section-container">
+    <header class="section-header">
+      <h2>Stay updated on Tendermint&nbsp;news</h2>
+    </header>
+    <div class="section-content">
+      
+<form action="http://tendermint.us8.list-manage1.com/subscribe/post?u=89d5a312be95ee3f0c9cf7ecd&amp;id=4af1217bca" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+
+  <div class="input-group">
+    <input type="email" name="EMAIL" id="mce-EMAIL" placeholder="Enter your email">
+  </div>
+
+  <div class="input-group">
+    <button name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary">
+      <i class="fa fa-newspaper-o"></i> Subscribe
+    </button>
+  </div>
+
+  
+  <div style="position: absolute; left: -5000px;"><input type="text" name="b_89d5a312be95ee3f0c9cf7ecd_4af1217bca" tabindex="-1" value=""></div>
+</form>
+
+  </div>
+  </div>
+</section>
+
+<footer id="site-footer">
+  <p class="left">&copy; 2016 Tendermint</p>
+  <p class="right">
+    <a href="mailto:hello@tendermint.com">
+      <i class="fa fa-envelope-o"></i>
+      Contact
+    </a>
+  </p>
+</footer>
+
+<script src="scripts/bundle.js"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-51029217-1', 'tendermint.com');
+  ga('send', 'pageview');
+</script>
+
+
+</body>
+</html>
+
+
+</body>
+</html>

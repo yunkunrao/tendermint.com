@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tendermint</title>
-    <link>http://tendermint.com/</link>
+    <link>http://tendermint.com/index.xml</link>
     <description>Recent content on Tendermint</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sat, 17 Sep 2016 00:00:00 +0000</lastBuildDate>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Communities on Tendermint</title>
+    <link>http://tendermint.com/community/</link>
+    <description>Recent content in Communities on Tendermint</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 14 Apr 2016 10:44:16 +0800</lastBuildDate>
+    <atom:link href="http://tendermint.com/community/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>About</title>
+      <link>http://tendermint.com/community/about/</link>
+      <pubDate>Thu, 14 Apr 2016 10:44:16 +0800</pubDate>
+      
+      <guid>http://tendermint.com/community/about/</guid>
+      <description>&lt;section id=&#34;section-top&#34;&gt;
+  &lt;div class=&#34;section-container&#34;&gt;
+    &lt;h1&gt;About&lt;/h1&gt;
+    &lt;p&gt;Our mission: to bring simplicity, security, and speed to the world&amp;rsquo;s blockchains.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section class=&#34;section-default section-portraits&#34;&gt;
+  &lt;div class=&#34;section-container&#34;&gt;
+    &lt;header class=&#34;section-header&#34;&gt;
+      &lt;h2&gt;The Team&lt;/h2&gt;
+    &lt;/header&gt;
+    &lt;div class=&#34;section-content&#34;&gt;
+      &lt;div class=&#34;portrait&#34;&gt;
+        &lt;img src=&#34;http://tendermint.com/images/team/jae-01.jpg&#34; alt=&#34;Jae Kwon&#34;&gt;
+        &lt;div class=&#34;label&#34;&gt;
+          &lt;a class=&#34;twitter&#34; href=&#34;https://twitter.com/jaekwon&#34; target=&#34;_blank&#34;&gt;
+            &lt;div class=&#34;name&#34;&gt;Jae Kwon&lt;/div&gt;
+            &lt;div class=&#34;handle&#34;&gt;@jaekwon&lt;/div&gt;
+          &lt;/a&gt;
+          &lt;div class=&#34;title&#34;&gt;CEO &lt;span class=&#34;amp&#34;&gt;&amp;amp;&lt;/span&gt; Founder&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&#34;portrait&#34;&gt;
+        &lt;img src=&#34;http://tendermint.com/images/team/ethan-01.jpg&#34; alt=&#34;Ethan Buchman&#34;&gt;
+        &lt;div class=&#34;label&#34;&gt;
+          &lt;a class=&#34;twitter&#34; href=&#34;https://twitter.com/buchmanster&#34; target=&#34;_blank&#34;&gt;
+            &lt;div class=&#34;name&#34;&gt;Ethan Buchman&lt;/div&gt;
+            &lt;div class=&#34;handle&#34;&gt;@buchmanster&lt;/div&gt;
+          &lt;/a&gt;
+          &lt;div class=&#34;title&#34;&gt;CTO &lt;span class=&#34;amp&#34;&gt;&amp;amp;&lt;/span&gt; Cofounder&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&#34;portrait&#34;&gt;
+        &lt;img src=&#34;http://tendermint.com/images/team/peng-01.jpg&#34; alt=&#34;Peng Zhong&#34;&gt;
+        &lt;div class=&#34;label&#34;&gt;
+          &lt;a class=&#34;twitter&#34; href=&#34;https://twitter.com/zcpeng&#34;&gt;
+            &lt;div class=&#34;name&#34;&gt;Peng Zhong&lt;/div&gt;
+            &lt;div class=&#34;handle&#34;&gt;@zcpeng&lt;/div&gt;
+          &lt;/a&gt;
+          &lt;div class=&#34;title&#34;&gt;Chief Design Officer&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section class=&#34;section-default section-portraits&#34;&gt;
+  &lt;div class=&#34;section-container&#34;&gt;
+    &lt;header class=&#34;section-header&#34;&gt;
+      &lt;h2&gt;The Advisors&lt;/h2&gt;
+    &lt;/header&gt;
+    &lt;div class=&#34;section-content&#34;&gt;
+      &lt;div class=&#34;portrait&#34;&gt;
+        &lt;img src=&#34;http://tendermint.com/images/advisors/dustin-01.jpg&#34; alt=&#34;Dustin Byington&#34;&gt;
+        &lt;div class=&#34;label&#34;&gt;
+          &lt;a class=&#34;twitter&#34; href=&#34;https://twitter.com/dustin_byington&#34; target=&#34;_blank&#34;&gt;
+            &lt;div class=&#34;name&#34;&gt;Dustin Byington&lt;/div&gt;
+            &lt;div class=&#34;handle&#34;&gt;@dustin_byington&lt;/div&gt;
+          &lt;/a&gt;
+          &lt;div class=&#34;title&#34;&gt;Advisor&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&#34;portrait&#34;&gt;
+        &lt;img src=&#34;http://tendermint.com/images/advisors/pete-harris-01.jpg&#34; alt=&#34;Pete Harris&#34;&gt;
+        &lt;div class=&#34;label&#34;&gt;
+          &lt;a class=&#34;twitter&#34; href=&#34;https://twitter.com/peteharrislp&#34; target=&#34;_blank&#34;&gt;
+            &lt;div class=&#34;name&#34;&gt;Pete Harris&lt;/div&gt;
+            &lt;div class=&#34;handle&#34;&gt;@peteharrislp&lt;/div&gt;
+          &lt;/a&gt;
+          &lt;div class=&#34;title&#34;&gt;Advisor&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&#34;portrait&#34;&gt;
+        &lt;img src=&#34;http://tendermint.com/images/advisors/ryan-singer-01.jpg&#34; alt=&#34;Ryan Singer&#34;&gt;
+        &lt;div class=&#34;label&#34;&gt;
+          &lt;a class=&#34;twitter&#34; href=&#34;https://twitter.com/ryan_singer&#34; target=&#34;_blank&#34;&gt;
+            &lt;div class=&#34;name&#34;&gt;Ryan Singer&lt;/div&gt;
+            &lt;div class=&#34;handle&#34;&gt;@ryan_singer&lt;/div&gt;
+          &lt;/a&gt;
+          &lt;div class=&#34;title&#34;&gt;Advisor&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Live Blockchain Demo</title>
+      <link>http://tendermint.com/community/media/live-blockchain-demo/</link>
+      <pubDate>Wed, 10 Feb 2016 09:00:05 +0800</pubDate>
+      
+      <guid>http://tendermint.com/community/media/live-blockchain-demo/</guid>
+      <description>&lt;iframe class=&#34;youtube&#34; width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/9krAQzN6tbc?start=1952&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Ethan Buchman demos a live Tendermint-powered blockchain, with nodes coming on and offline.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Blockchain Smart Contracts in Any Language with Tendermint TMSP</title>
+      <link>http://tendermint.com/community/media/tendermint-tmsp/</link>
+      <pubDate>Wed, 10 Feb 2016 08:49:40 +0800</pubDate>
+      
+      <guid>http://tendermint.com/community/media/tendermint-tmsp/</guid>
+      <description>&lt;iframe class=&#34;youtube&#34; width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/9krAQzN6tbc&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Jae Kwon and Ethan Buchman discussed how developers can write blockchain smart contracts in any language using TMSP (Tendermint Socket Protocol).&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Blockchains = Trust-As-A-Service</title>
+      <link>http://tendermint.com/community/media/blockchains-trust-as-a-service/</link>
+      <pubDate>Sun, 15 Feb 2015 09:00:45 +0800</pubDate>
+      
+      <guid>http://tendermint.com/community/media/blockchains-trust-as-a-service/</guid>
+      <description>&lt;iframe class=&#34;youtube&#34; width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/MoacpJvCM4A&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Dustin Byington talks with Jeff Frick at the Block Chain Conference in San Francisco.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tendermint.com/community/home/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tendermint.com/community/home/</guid>
+      <description>&lt;p&gt;Social Media List&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/tendermint/tendermint/issues&#34;&gt;Open Issues&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;media&#34;&gt;Media&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;software-ecosystem&#34;&gt;Software Ecosystem&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;about&#34;&gt;About&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
