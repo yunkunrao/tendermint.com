@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Consensus on Tendermint</title>
-    <link>http://tendermint.com/categories/consensus/</link>
-    <description>Recent content in Consensus on Tendermint</description>
+    <title>Tendermint</title>
+    <link>http://tendermint.com/categories/consensus/index.xml</link>
+    <description>Recent content on Tendermint</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 21 Jun 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://tendermint.com/categories/consensus/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
@@ -892,6 +891,21 @@ self-incentivized blockchains.&lt;/p&gt;
 &lt;li&gt;Kroll et al.  The Economics of Bitcoin Mining, or Bitcoin in the Presence of Adversaries. 2013, &lt;a href=&#34;https://www.cs.princeton.edu/~kroll/papers/weis13_bitcoin.pdf&#34;&gt;https://www.cs.princeton.edu/~kroll/papers/weis13_bitcoin.pdf&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Dwork, Lynch, and Stockmeyer.  Consensus in the Presence of Partial Synchrony. 1988, &lt;a href=&#34;http://groups.csail.mit.edu/tds/papers/Lynch/jacm88.pdf&#34;&gt;http://groups.csail.mit.edu/tds/papers/Lynch/jacm88.pdf&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Software Engineer: Networking and Consensus</title>
+      <link>http://tendermint.com/jobs/consensus_engineer/</link>
+      <pubDate>Thu, 20 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://tendermint.com/jobs/consensus_engineer/</guid>
+      <description>&lt;p&gt;Responsibilities:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Improve the implementation of the core Tendermint consensus algorithm&lt;/li&gt;
+&lt;li&gt;Develop a compatible implementation in another programming language&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     

@@ -1,0 +1,25 @@
+{{ partial "header.html" . }}
+
+<body id="body-jobs">
+  {{ partial "site-header.html" . }}
+
+  <section id="section-top">
+    <div class="section-container">
+      <h1><i class="fa fa-rocket"></i> Available Positions</h1>
+      <p>Tendermint is hiring.</p>
+      <p>Golang, Javascript, Security, Distributed Consenus, Bitcoin, Ethereum</p>
+      <p>hello@tendermint.com</p>
+    </div>
+  </section>
+
+  <section class="section-default section-flush">
+    <div class="section-container">
+      <div class="section-content">
+	      {{ range sort .Data.Pages "Weight" }}
+        {{ .Render "summary"}}
+        {{ end }}
+      </div>
+    </div>
+  </section>
+
+{{ partial "site-footer.html" }}
