@@ -1,0 +1,53 @@
+.app-panel
+  display flex
+  flex-flow column
+
+  .app-panel-header
+    flex 0 0 3em
+
+    padding 0 0.75em
+
+    height 3em
+    background c-panel-fg
+    margin-bottom 1px
+
+    display flex
+    justify-content space-between
+
+    .app-panel-title
+      line-height 3
+      font-weight 500
+
+      display flex
+      align-items center
+
+      cursor default
+      user-select none
+
+      .mi
+        font-size 1.5em
+        color light
+
+    .app-panel-menu
+      display flex
+      align-items center
+
+      position relative
+
+      .form-group
+        margin-left 1em
+
+        display flex
+        align-items center
+
+        label
+          margin-right 0.5em
+
+  .app-panel-content
+    flex 1
+    background c-panel-bg
+    overflow hidden
+    overflow-y scroll
+
+.app-panel + .app-panel
+  border-top 1px solid c-site-bc

@@ -1,0 +1,36 @@
+{
+  "name": "tendermint_site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "wcss": "stylus -w -u nib static/styles/screen.styl -o static/styles/",
+    "bcss": "stylus -u nib static/styles/screen.styl -o static/styles/",
+    "wjs": "watchify -e static/scripts/app.js -o static/scripts/bundle.js",
+    "bjs": "browserify static/scripts/app.js | uglifyjs -c > static/scripts/bundle.js",
+    "build": "stylus -u nib -c static/styles/screen.styl -o static/styles/ && browserify static/scripts/app.js | uglifyjs -c > static/scripts/bundle.js",
+    "dev-deploy": "rsync -avzru --delete-excluded --partial --progress ./public/ 91.121.116.55:~/www/tendermint.nylira.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tendermint/tendermint.github.io.git"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/tendermint/tendermint.github.io/issues"
+  },
+  "homepage": "https://github.com/tendermint/tendermint.github.io#readme",
+  "dependencies": {
+    "highlight.js": "^9.3.0",
+    "jquery": "^2.2.3",
+    "uglify-js": "^2.6.2"
+  },
+  "devDependencies": {
+    "browserify": "^13.0.0",
+    "nib": "^1.1.0",
+    "stylus": "^0.54.5",
+    "watchify": "^3.7.0"
+  }
+}

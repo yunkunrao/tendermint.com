@@ -1,0 +1,34 @@
+@require './variables.styl'
+@require './panel.styl'
+// @require './material-icons.styl'
+@require './font-awesome.styl'
+@require './font-awesome-adblock-bypass.styl'
+
+global-reset()
+
+*
+  box-sizing border-box
+
+body
+  df()
+  background c-site-bg
+
+a
+  color link
+  text-decoration none
+
+body, input, button, textarea
+  font-size x
+  line-height 1.5
+  font-family sans
+
+.amp
+  font-style italic
+  font-family Baskerville, 'Goudy Old Style', Palatino, 'Book Antiqua', serif
+  font-weight normal
+
+@require './forms/*'
+@require './partials/section-default.styl'
+@require './partials/section-top.styl'
+@require './partials/panels.styl'
+@require './partials/youtube.styl'

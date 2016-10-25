@@ -1,5 +1,7 @@
-*.swp
 .DS_Store
-npm-debug.log
 node_modules/
-public_master/
+dist/
+npm-debug.log
+test/unit/coverage
+test/e2e/reports
+selenium-debug.log
