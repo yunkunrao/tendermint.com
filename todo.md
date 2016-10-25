@@ -4,8 +4,6 @@
 * Created the new empty Intro, Docs, Community pages
 * Design, font improvements.
 
-It's in the `redesign-vue` branch.
+It's in the `redesign-vue` branch. I'll put up a live demo tomorrow with the new content
 
-Will move all the content from the `redesign` branch into it tomorrow!
-
-
+I'll move all the content from the `redesign` branch into it tomorrow, and put a live version of the site.
