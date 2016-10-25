@@ -3,7 +3,6 @@ date = "2016-04-14T10:44:16+08:00"
 draft = false
 title = "About"
 body = "body-about"
-
 +++
 
 <section id="section-top">
