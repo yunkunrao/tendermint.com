@@ -1,11 +1,11 @@
 <template>
   <div id="article-footer">
     <router-link id="link-blog-index" :to="'blog'">
-      <i class="material-icons">chevron_left</i> Blog Index
+      <i class="fa fa-angle-left"></i> Blog Index
     </router-link>
     <div id="article-footer-share">
       <a :href="facebookUrl" target="_blank"><i class="fa fa-twatter"></i></a>
-      <a :href="twitterUrl" target="_blank"><i class="fa fa-footbook"</a>
+      <a :href="twitterUrl" target="_blank"><i class="fa fa-footbook"></i></a>
     </div><!--article-footer-share-->
   </div><!--article-footer-->
 </template>
@@ -35,8 +35,10 @@ export default {
   &:hover
     color link
     text-decoration none
-  i.material-icons
-    font-size 1rem
+  i.fa
+    font-size 1.5rem
+    width 1.5rem
+    text-align center
 
 #article-footer-share
   flex 1
@@ -47,11 +49,10 @@ export default {
     height 3rem
     padding 0.5rem
 
-    img
-      opacity 0.666
-      width 2rem
-      height 2rem
+    i.fa
+      font-size 1.5rem
+      color light
 
-    &:hover img
-      opacity 1
+    &:hover i.fa
+      color link
 </style>
