@@ -1,8 +1,11 @@
 # 2016-10-26
-* Add the rest of the blog back to the site
-    * Added disqus comments, reduced their page width 
-    * Bug fixes: title escaping
-* Preview version is available at `https://tendermint.nylira.com`
+* Add the rest of the blog content back to the site
+    * markdown to json data script
+    * disqus comments
+    * Bug fixes: title escaping, smart quotes, various other blog bugs
+    * Design updates for the blog
+    * All the URLs will remain the same for SEO/historical purposes.
+* Preview version is available at `https://tendermint.nylira.com/blog`
 
 # 2016-10-25
 * Moved most of the site over to Vue.

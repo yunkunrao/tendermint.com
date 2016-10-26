@@ -2,6 +2,14 @@
 
 > A website for the Tendermint project.
 
+## Editing
+
+Edit blog posts in `./blog/posts`.
+
+Rebuild the blog with `npm run blog`
+
+Build the site with `npm run build`
+
 ## Build Setup
 
 ``` bash

@@ -3,8 +3,8 @@ const state = {
 }
 
 const mutations = {
-   increment (state ) {
-     state.count++
+  increment (state) {
+    state.count++
   }
 }
 
