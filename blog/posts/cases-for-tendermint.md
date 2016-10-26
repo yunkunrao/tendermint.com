@@ -1,7 +1,12 @@
 ---
-title: Cases for Tendermint
-description: Why you should build on Tendermint, and whether to use the EVM
-date: 2015-09-13
+title: "Cases for Tendermint"
+description: "Why you should build on Tendermint, and whether to use the EVM"
+date: "2015-09-13"
+categories: 
+    - "consensus"
+    - "EVM"
+aliases:
+    - /posts/cases-for-tendermint/
 ---
 
 You may have an application that benefits from blockchain technology, and you may be trying to figure out whether to build that on Bitcoin, some meta-coin protocol like Counterparty, with Solidity/Serpent on the Ethereum virtual machine, or on a new blockchain stack altogether.  Actually, you should seriously consider building on Tendermint.

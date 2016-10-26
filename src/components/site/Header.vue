@@ -8,7 +8,7 @@
       <router-link id="nav-docs" :to="'docs'">Docs</router-link>
       <router-link id="nav-community" :to="'community'">Community</router-link>
       <router-link id="nav-blog" :to="'blog'">Blog</router-link>
-      <a id="nav-github" href="https://github.com/tendermint/tendermint">
+      <a id="nav-github" href="https://github.com/tendermint">
         <i class="fa fa-github"></i>
         GitHub
       </a>

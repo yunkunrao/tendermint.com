@@ -30,7 +30,7 @@ module.exports = exports = function (post) {
   f += '  },\n'
   f += '  head: {\n'
   f += '    title: {\n'
-  f += `      inner: '${post.title}'\n`
+  f += `      inner: '${post.title.replace(/'/g, "\\'")}'\n`
   f += '    }\n'
   f += '  }\n'
   f += '}\n'

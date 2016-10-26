@@ -1,6 +1,6 @@
 <template>
   <div id="page-community">
-    <section id="section-top" class="section-top-tall">
+    <section id="section-top">
       <div class="section-container">
         <h1>Community</h1>
         <p>Just a subtitle.</p>

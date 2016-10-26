@@ -1,6 +1,6 @@
 <template>
   <div id="page-intro">
-    <section id="section-top" class="section-top-tall">
+    <section id="section-top">
       <div class="section-container">
         <h1>Intro</h1>
         <p>Just a subtitle.</p>

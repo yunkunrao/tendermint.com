@@ -1,3 +1,8 @@
+# 2016-10-26
+* Add the rest of the blog back to the site
+    * Title escaping
+
+
 # 2016-10-25
 * Moved most of the site over to Vue.
 * Added a Github link to the site header.
