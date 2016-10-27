@@ -11,16 +11,16 @@
         <email-signup></email-signup>
 
         <div class="connections">
-          <a href="http://forum.tendermint.com:3000/">
-            <i class="fa fa-slick"></i></a>
-          <a href="https://github.com/tendermint/tendermint">
-            <i class="fa fa-github"></i></a>
-          <a href="https://twitter.com/tendermint_team">
-            <i class="fa fa-twatter"></i></a>
           <a href="https://www.facebook.com/tendermint">
             <i class="fa fa-footbook"></i></a>
+          <a href="https://github.com/tendermint/tendermint">
+            <i class="fa fa-github"></i></a>
           <a href="https://www.linkedin.com/company/tendermint">
             <i class="fa fa-linkedout"></i></a>
+          <a href="http://forum.tendermint.com:3000/">
+            <i class="fa fa-slick"></i></a>
+          <a href="https://twitter.com/tendermint_team">
+            <i class="fa fa-twatter"></i></a>
         </div><!--connections-->
 
       </div><!--container-->

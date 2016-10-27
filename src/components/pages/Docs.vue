@@ -3,14 +3,18 @@
     <section id="section-top">
       <div class="section-container">
         <h1>Docs</h1>
-        <p>Just a subtitle.</p>
+        <p>The complete documentation for Tendermint.</p>
       </div>
     </section>
 
     <section class="section-default section-flush">
       <div class="section-container">
         <div class="section-content">
-          <p>Just some content.</p>
+          <p>[Tendermint Internals](tendermint-internals)</p>
+          <p>[Tendermint Commands](tendermint-commands)</p>
+          <p>[Guides](guides)</p>
+          <p>[Roadmap](roadmap)</p>
+          <p>[FAQ](faq)</p>
         </div>
       </div>
     </section>

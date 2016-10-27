@@ -41,10 +41,12 @@ export default {
 
     img
       display block
+      width 100%
       max-width 640px
       margin 0 auto
     .text
       max-width 640px
+      width 100%
       margin 0 auto
       text-align center
 </style>

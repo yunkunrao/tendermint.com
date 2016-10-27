@@ -4,8 +4,8 @@
       <i class="fa fa-angle-left"></i> Blog Index
     </router-link>
     <div id="article-footer-share">
-      <a :href="facebookUrl" target="_blank"><i class="fa fa-twatter"></i></a>
-      <a :href="twitterUrl" target="_blank"><i class="fa fa-footbook"></i></a>
+      <a :href="facebookUrl" target="_blank"><i class="fa fa-footbook"></i></a>
+      <a :href="twitterUrl" target="_blank"><i class="fa fa-twatter"></i></a>
     </div><!--article-footer-share-->
   </div><!--article-footer-->
 </template>

@@ -7,26 +7,18 @@
       <div class="section-content">
         <ul class="ul-connections">
           <li>
-            <a href="http://forum.tendermint.com:3000">
-              <h3><i class="fa fa-slick"></i> Slack</h3>
-              <div class="content">
-                <p>Get an invitation to join the discussion on our Slack.</p>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="https://twitter.com/tendermint_team">
-              <h3><i class="fa fa-twatter"></i> Twitter</h3>
-              <div class="content">
-                <p>Follow <strong>@tendermint_team</strong> on Twitter for our latest updates.</p>
-              </div>
-            </a>
-          </li>
-          <li>
             <a href="https://www.facebook.com/tendermint/">
               <h3><i class="fa fa-footbook"></i> Facebook</h3>
               <div class="content">
-                <p>Like and follow Tendermint on Facebook.</p>
+                <p>Like and follow us to get alerts on important news.</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/tendermint/tendermint">
+              <h3><i class="fa fa-github"></i> GitHub</h3>
+              <div class="content">
+                <p>Learn about and contribute to our source code.</p>
               </div>
             </a>
           </li>
@@ -34,7 +26,23 @@
             <a href="https://www.linkedin.com/company/tendermint">
               <h3><i class="fa fa-linkedout"></i> LinkedIn</h3>
               <div class="content">
-                <p>View our profile and connect with us on LinkedIn.</p>
+                <p>View our company profile and connect with us.</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="http://forum.tendermint.com:3000">
+              <h3><i class="fa fa-slick"></i> Slack</h3>
+              <div class="content">
+                <p>Get an instant invitation to join the discussion.</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/tendermint_team">
+              <h3><i class="fa fa-twatter"></i> Twitter</h3>
+              <div class="content">
+                <p>Follow <strong>@tendermint_team</strong> for our latest updates.</p>
               </div>
             </a>
           </li>
@@ -104,7 +112,7 @@ export default {
   #section-connections ul.ul-connections
     flex-flow row wrap
     li
-      flex 1 0 50%
+      flex 0 0 50%
       padding 0.5*x
       a
         padding-top 1.25*x
@@ -113,7 +121,7 @@ export default {
 @media screen and (min-width: 1024px)
   #section-connections ul.ul-connections
     li
-      flex 1 0 25%
+      flex 0 0 20%
       a
         padding-bottom 1.5*x
         h3

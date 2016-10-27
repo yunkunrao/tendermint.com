@@ -8,9 +8,9 @@
       <router-link id="nav-docs" :to="'/docs'">Docs</router-link>
       <router-link id="nav-community" :to="'/community'">Community</router-link>
       <router-link id="nav-blog" :to="'/blog'">Blog</router-link>
-      <a id="nav-github" href="https://github.com/tendermint">
+      <a id="nav-github" href="https://github.com/tendermint/tendermint">
         <i class="fa fa-github"></i>
-        GitHub
+        <span class="label">GitHub</span>
       </a>
     </nav>
   </header>
@@ -79,11 +79,9 @@ highlighted-border-top-color()
 
       margin-top -3px
       line-height 2.4*x - 3px
-      font-size 0.8*x
+      font-size 0.9*x
 
-      .short
-        display inline
-      .long
+      .label
         display none
 
       &:hover
@@ -92,7 +90,6 @@ highlighted-border-top-color()
 
       &.router-link-active
         highlighted-border-top-color()
-
 
 @media screen and (min-height: 400px)
   #site-header
@@ -108,12 +105,12 @@ highlighted-border-top-color()
         default-border-top()
         margin-top -4px
         line-height 3*x - 4px
-        font-size x
 
 @media screen and (min-width: 360px)
   #site-header
     nav
       a
+        font-size x
         &#nav-code
           display block
 
@@ -139,9 +136,13 @@ highlighted-border-top-color()
         border-left 1px solid hsla(0,0,0,0.2)
         padding 0 1.5*x
 
-@media screen and (min-width: 768px)
+@media screen and (min-width: 720px)
   #site-header
     nav
       a
         padding 0 2*x
+        i.fa
+          margin-right 0.25*x
+        .label
+          display inline
 </style>

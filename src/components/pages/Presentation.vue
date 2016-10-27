@@ -3,15 +3,14 @@
     <section id="section-top">
       <div class="section-container">
         <h1>{{ entry.title }} </h1>
-        <p>{{ entry.dateFriendly }} <template v-if="entry.author">by {{ entry.author }}</template></p>
+        <p>Uploaded on {{ entry.date }}</p>
       </div>
     </section>
 
     <section class="section-default">
       <div class="section-container">
         <div class="section-content">
-          <div class="article-body" v-html="entry.body">
-          </div><!--article-body-->
+          <div class="youtube" :id="entry.id"></div>
           <article-footer :facebook-url="facebookUrl" :twitter-url="twitterUrl"></article-footer>
           <comments></comments>
         </div><!--section-content-->
@@ -27,9 +26,10 @@ import ArticleFooter from '../partials/ArticleFooter.vue'
 import Comments from '../partials/Comments.vue'
 
 import { mapGetters } from 'vuex'
+import $ from 'jquery'
 
 export default {
-  name: 'blog-entry',
+  name: 'entry',
   components: {
     ArticleBackBtn,
     ArticleFooter,
@@ -38,8 +38,8 @@ export default {
   computed: {
     entry () {
       let slug = this.$route.params.entry
-      if (this.allPosts) {
-        return this.allPosts.find(p => p.slug === slug)
+      if (this.allPresentations) {
+        return this.allPresentations.find(p => p.slug === slug)
       }
       return {}
     },
@@ -56,8 +56,37 @@ export default {
       return url
     },
     ...mapGetters([
-      'allPosts'
+      'allPresentations'
     ])
+  },
+  mounted () {
+    let self = this
+
+    $('.youtube').each(function () {
+      // Set the BG image from the youtube ID
+      $(this).css('background-image', 'url(//i.ytimg.com/vi/' + this.id + '/hqdefault.jpg)')
+
+      // Click the video div
+      $(document).delegate('#' + this.id, 'click', function () {
+        // Build embed URL
+        let iframeUrl = '//www.youtube.com/embed/' + this.id + '?autoplay=1&autohide=1'
+
+        if (self.entry.start) {
+          iframeUrl += '&start=' + self.entry.start
+        }
+
+        // Grab extra parameters set on div
+        if ($(this).data('params')) {
+          iframeUrl += '&' + $(this).data('params')
+        }
+
+        // Build iframe tag
+        let iframe = $('<iframe/>', { 'allowfullscreen': 'allowfullscreen', 'frameborder': '0', 'src': iframeUrl })
+
+        // Replace the YouTube thumbnail with YouTube HTML5 Player
+        $(this).append(iframe)
+      })
+    })
   }
 }
 </script>
