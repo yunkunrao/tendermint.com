@@ -3,8 +3,8 @@
     <section id="section-top">
       <div class="section-container">
         <div class="article-wrapper" id="blog-index">
-          <h1><i class="fa fa-newspaper-o"></i> Media</h1>
-          <p>Tendermint and Cosmos mentions across global media.</p>
+          <h1><i class="fa fa-newspaper-o"></i> Media Mentions</h1>
+          <p>Tendermint and Cosmos mentioned across media worldwide.</p>
         </div>
       </div>
     </section>

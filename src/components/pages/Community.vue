@@ -10,10 +10,12 @@
     <section class="section-default section-flush">
       <div class="section-container">
         <div class="section-content">
-          <p>[Open Issues](https://github.com/tendermint/tendermint/issues)</p>
-          <p>[Media](media)</p>
-          <p>[Software Ecosystem](software-ecosystem)</p>
-          <p><router-link :to="'/about'">[About](about)</router-link></p>
+          <nav class="nav-blocks">
+            <a class="external" href="https://github.com/tendermint/tendermint/issues">Open Issues (Github)</a>
+            <router-link :to="'/software-ecosystem'">Software Ecosystem</router-link>
+            <router-link :to="'/media'">Media Mentions</router-link>
+            <router-link :to="'/about'">About Tendermint</router-link>
+          </nav>
         </div>
       </div>
     </section>

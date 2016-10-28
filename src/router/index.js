@@ -1,27 +1,33 @@
 import VueRouter from 'vue-router'
-
-import PageIndex from '../components/pages/Index.vue'
-import PageAbout from '../components/pages/About.vue'
-import PageBlogIndex from '../components/pages/BlogIndex.vue'
-import PageBlogPost from '../components/pages/BlogPost.vue'
-import PageCommunity from '../components/pages/Community.vue'
-import PageDocs from '../components/pages/Docs.vue'
-import PageIntro from '../components/pages/Intro.vue'
-import PageMedia from '../components/pages/Media.vue'
-import PagePresentations from '../components/pages/Presentations.vue'
-import PagePresentation from '../components/pages/Presentation.vue'
+function page (filename) { return require('../components/pages/' + filename) }
 
 const routes = [
-  { path: '/', component: PageIndex },
-  { path: '/about', component: PageAbout },
-  { path: '/blog', component: PageBlogIndex },
-  { path: '/blog/:entry', component: PageBlogPost },
-  { path: '/community', component: PageCommunity },
-  { path: '/docs', component: PageDocs },
-  { path: '/intro', component: PageIntro },
-  { path: '/media/', component: PageMedia },
-  { path: '/presentations', component: PagePresentations },
-  { path: '/presentations/:entry', component: PagePresentation }
+  { path: '/', component: page('Index') },
+
+  // Docs Pages
+  { path: '/docs', component: page('Docs') },
+  { path: '/commands', component: page('Commands') },
+  { path: '/guides', component: page('Guides/Index') },
+  { path: '/guides/app-architecture', component: page('Guides/AppArchitecture') },
+  { path: '/guides/app-dev', component: page('Guides/AppDev') },
+  { path: '/internals', component: page('Internals/Index') },
+  { path: '/internals/:entry', component: page('Internals/Entry') },
+  { path: '/roadmap', component: page('Roadmap') },
+
+  // Intro Pages
+  { path: '/intro', component: page('Intro') },
+
+  // Community Pages
+  { path: '/community', component: page('Community') },
+  { path: '/about', component: page('About') },
+  { path: '/media/', component: page('Media') },
+  { path: '/presentations', component: page('Presentations/Index') },
+  { path: '/presentations/:entry', component: page('Presentations/Entry') },
+  { path: '/software-ecosystem', component: page('SoftwareEcosystem') },
+
+  // Blog Pages
+  { path: '/blog', component: page('Blog/Index') },
+  { path: '/blog/:entry', component: page('Blog/Entry') }
 ]
 
 const router = new VueRouter({

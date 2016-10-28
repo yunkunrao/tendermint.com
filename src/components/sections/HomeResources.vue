@@ -12,20 +12,13 @@
         <div class="panel">
           <div class="panel-container">
             <div class="panel-header">
-              <h3><a href="/blog/" class="block">
-                  <i class="fa fa-rss"></i> Blog
-              </a></h3>
+              <div class="panel-title"><router-link :to="'/blog'">Blog</router-link></div>
             </div>
             <div class="panel-body">
-              <ul>
-                <li v-for="post in limitedPosts">
-                  <router-link :to="'/blog/' + post.slug">
-                    <h4>{{ post.title }}</h4>
-                    <!-- <p>{{ post.description }}</p> -->
-                    <p>Posted on {{ post.dateFriendly }}</p>
-                  </router-link>
-                </li>
-              </ul>
+              <router-link :to="'/blog/' + post.slug" v-for="post in limitedPosts">
+                <div class="key">{{ post.title }}</div>
+                <div class="value">{{ post.dateFriendly }}</div>
+              </router-link>
             </div><!--panel-body-->
           </div><!--panel-container-->
         </div><!--panel-->
@@ -33,16 +26,14 @@
         <div class="panel">
           <div class="panel-container">
             <div class="panel-header">
-              <h3><a href="/presentations/" class="block">
-                  <i class="fa fa-video-camera"></i> Presentations
-              </a></h3>
+              <div class="panel-title"><router-link :to="'/presentations'">Presentations</router-link></div>
             </div>
             <div class="panel-body">
               <ul>
                 <li v-for="presentation in limitedPresentations">
                   <router-link :to="'/presentations/' + presentation.slug">
-                    <h4>{{ presentation.title }}</h4>
-                    <p>{{ presentation.description }}</p>
+                    <div class="key">{{ presentation.title }}</div class="key">
+                    <div class="value">{{ presentation.description }}</p>
                   </router-link>
                 </li>
               </ul>
@@ -53,16 +44,14 @@
         <div class="panel panel-external">
           <div class="panel-container">
             <div class="panel-header">
-              <h3><a href="/media/" class="block">
-                  <i class="fa fa-video-camera"></i> In the News
-              </a></h3>
+              <div class="panel-title"><router-link :to="'/media'">Media Mentions</router-link></div>
             </div>
             <div class="panel-body">
               <ul>
                 <li v-for="medium in limitedMedia">
                   <a :href="medium.url">
-                    <h4>{{ medium.title }}</h4>
-                    <p>{{ medium.company}} &ndash; {{ medium.date }}</p>
+                    <div class="key">{{ medium.title }}</div>
+                    <div class="value">{{ medium.company}} &ndash; {{ medium.date }}</div>
                   </a>
                 </li>
               </ul>

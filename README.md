@@ -1,14 +1,16 @@
 # tendermint-site
 
-> A website for the Tendermint project.
+> The website for Tendermint.
 
-## Editing
+## Editing Content
 
-Edit blog posts in `./blog/posts`.
+Edit markdown content content posts in `./src/content`.
+
+Edit json content content in `./src/store/json` or `./src/store/modules`
 
 Rebuild the blog with `npm run blog`
 
-Build the site with `npm run build`
+Build the entire site with `npm run build`
 
 ## Build Setup
 

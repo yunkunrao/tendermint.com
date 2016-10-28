@@ -80,7 +80,6 @@ export default {
     display flex
     a
       padding 0.75*x x
-      border 1px solid dbc
 
       flex 1
       display flex
@@ -90,23 +89,12 @@ export default {
         color lighten(mcolor,85%)
         font-size x
         font-weight 600
+        margin-bottom 0.5*x
         i.fa
           padding-right 0.2em
 
       .content
         flex 1
-
-      &:hover
-        background lighten(mcolor,5%)
-
-@media screen and (min-width: 400px)
-  #section-connections ul.ul-connections
-    li
-      a
-        h3
-          border-bottom 1px dotted lighten(mcolor,15%)
-          padding-bottom 0.5*x
-          margin-bottom 0.5*x
 
 @media screen and (min-width: 640px)
   #section-connections ul.ul-connections
@@ -115,16 +103,14 @@ export default {
       flex 0 0 50%
       padding 0.5*x
       a
-        padding-top 1.25*x
-        padding-bottom 1.25*x
+        padding-top x
+        padding-bottom x
 
 @media screen and (min-width: 1024px)
   #section-connections ul.ul-connections
     li
       flex 0 0 20%
       a
-        padding-bottom 1.5*x
-        h3
-          padding-bottom 0.75*x
-          margin-bottom 0.75*x
+        padding-top 2*x
+        padding-bottom 2*x
 </style>

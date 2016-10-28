@@ -8,7 +8,7 @@ aliases:
     - /posts/tendermint-socket-protocol/
 ---
 
-> After you read this post, don't forget to check out our tutorials!  They also appear at the end of this page.
+> <p>After you read this post, don't forget to check out our tutorials!  They also appear at the end of this page.</p>
 
 
 > 1. [Run your first TMSP application](/tutorials/run-your-first-tmsp-application/)

@@ -9,7 +9,7 @@ let yaml = require('js-yaml')
 
 let blogTitle = 'Tendermint Blog'
 
-let postsDirectory = './blog/posts/'
+let postsDirectory = './src/content/blog/'
 let posts = glob.sync(postsDirectory + '*.md')
 
 let postsJsonFile = './src/store/json/posts.json'

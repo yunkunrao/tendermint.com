@@ -45,6 +45,10 @@ module.exports = {
         loader: 'vue'
       },
       {
+        test: /\.md$/,
+        loader: 'vue-markdown-loader'
+      },
+      {
         test: /\.js$/,
         loader: 'babel',
         include: projectRoot,
@@ -62,7 +66,7 @@ module.exports = {
         }
       },
       {
-        test: /\.pdf/,
+        test: /\.pdf$/,
         loader: 'file',
         query: {
           name: utils.assetsPath('[name].[ext]')

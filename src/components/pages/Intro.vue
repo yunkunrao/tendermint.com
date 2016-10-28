@@ -10,10 +10,12 @@
     <section class="section-default section-flush">
       <div class="section-container">
         <div class="section-content">
-          <p>[What is Tendermint?](what-is-tendermint)</p>
-          <p>[Tendermint vs. other software](tendermint-vs)</p>
-          <p>[Overview of TMSP](what-is-tmsp)</p>
-          <p>[Getting started](getting-started)</p>
+          <div class="nav-blocks">
+            <router-link :to="'/what-is-tendermint'">What is Tendermint?</router-link>
+            <router-link :to="'/tendermint-vs'">Tendermint vs. Other Software</router-link>
+            <router-link :to="'/what-is-tmsp'">TMSP Overview</router-link>
+            <router-link :to="'/getting-started'">Getting Started</router-link>
+          </div>
         </div>
       </div>
     </section>

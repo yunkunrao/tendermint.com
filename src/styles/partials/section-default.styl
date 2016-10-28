@@ -124,6 +124,7 @@
     &.section-columns
       display flex
       justify-content center
+      border-bottom 1px solid bc
 
     &.section-columns .columns
       max-width 1200px + x
@@ -131,10 +132,11 @@
       padding 1.25*x 0
 
       display flex
+      border none
 
       .section-container
         flex 1 0 33.3333%
-        border 1px solid bc
+        border none !important
         margin 0.5*x
 
     &.section-columns.section-dark .columns

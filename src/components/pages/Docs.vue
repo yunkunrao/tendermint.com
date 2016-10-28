@@ -10,11 +10,13 @@
     <section class="section-default section-flush">
       <div class="section-container">
         <div class="section-content">
-          <p>[Tendermint Internals](tendermint-internals)</p>
-          <p>[Tendermint Commands](tendermint-commands)</p>
-          <p>[Guides](guides)</p>
-          <p>[Roadmap](roadmap)</p>
-          <p>[FAQ](faq)</p>
+          <div class="nav-blocks">
+            <router-link :to="'/internals'">Tendermint Internals</router-link>
+            <router-link :to="'/commands'">Tendermint Commands</router-link>
+            <router-link :to="'/guides'">Guides</router-link>
+            <router-link :to="'/roadmap'">Roadmap</router-link>
+            <router-link :to="'/faq'">FAQ</router-link>
+          </div>
         </div>
       </div>
     </section>

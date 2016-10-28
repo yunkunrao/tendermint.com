@@ -1,3 +1,17 @@
+# 2016-10-28
+* General:
+    * All markdown content is now stored in `./src/content/`. Edit the markdown files and the site will be updated with the reflected changes.
+    * Design cleanup - fewer borders and background colors around the site.
+    * Revamped the router to be simpler.
+* Community page
+    * Updated index page
+    * Created the Software Ecosystem sub-page based on https://github.com/tendermint/tendermint/wiki/Users
+* Docs page
+    * Updated index page
+    * Created all sub-pages from the markdown data.
+
+Will work on the Intro page starting next week.
+
 # 2016-10-27
 * General
     * Implemented Presentations and Media Mentions

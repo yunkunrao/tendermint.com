@@ -22,9 +22,9 @@
 </template>
 
 <script>
-import ArticleBackBtn from '../partials/ArticleBackBtn.vue'
-import ArticleFooter from '../partials/ArticleFooter.vue'
-import Comments from '../partials/Comments.vue'
+import ArticleBackBtn from '../../partials/ArticleBackBtn.vue'
+import ArticleFooter from '../../partials/ArticleFooter.vue'
+import Comments from '../../partials/Comments.vue'
 
 import { mapGetters } from 'vuex'
 
