@@ -1,8 +1,8 @@
-# 2016-10-28
+# 2016-10-31
 * General
     * Improved the routing of the pages
     * Fixed some links and headings in the markdown files to better work with the Vue design
-    * Added a sidebar to most documentation pages.
+    * Added a sidebar to the Intro page: https://tendermint.nylira.com/intro/what-is-tendermint
 * Intro Page
     * Added What is Tendermint?
     * Added Tendermint vs. Other Software page.
@@ -10,6 +10,8 @@
     * Added Getting Started pages
 * Docs Page
     * Added the FAQ page.
+
+Tomorrow is implementing the sidebar in the other pages, and design improvements sitewide.
 
 # 2016-10-28
 * General:
