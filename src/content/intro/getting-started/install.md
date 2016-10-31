@@ -1,8 +1,8 @@
-# Install Go
+## Install Go
 
 Make sure you have installed Go and [set the GOPATH](https://github.com/tendermint/tendermint/wiki/Setting-GOPATH).
 
-# Install Tendermint
+## Install Tendermint
 
 You should be able to install the latest with a simple `go get -u github.com/tendermint/tendermint/cmd/tendermint`.
 The `-u` makes sure all dependencies are updated as well. 
@@ -20,7 +20,7 @@ tendermint node --proxy_app=dummy
 
 See the [application developers guide](https://github.com/tendermint/tendermint/wiki/Application-Developers) for more details on building and running applications.
 
-## Reinstall
+### Reinstall
 
 If you already have Tendermint installed, then you can either set a new `$GOPATH` and run the previous `go get` command,
 or else fetch and checkout the latest master branch in `$GOPATH/src/github.com/tendermint/tendermint`,
@@ -30,7 +30,7 @@ and from that directory run
 go install ./cmd/tendermint
 ```
 
-## Vendored dependencies
+### Vendored dependencies
 
 If updated dependencies break builds, install the vendored commits using `glide`.
 
@@ -50,7 +50,7 @@ go install ./cmd/tendermint
 
 The latest Tendermint Core version is now installed. Check by running `tendermint version`.
 
-## Troubleshooting
+### Troubleshooting
 
 If `go get` failing bothers you, fetch the code using `git`:
 

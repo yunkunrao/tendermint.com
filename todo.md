@@ -1,4 +1,17 @@
 # 2016-10-28
+* General
+    * Improved the routing of the pages
+    * Fixed some links and headings in the markdown files to better work with the Vue design
+    * Added a sidebar to most documentation pages.
+* Intro Page
+    * Added What is Tendermint?
+    * Added Tendermint vs. Other Software page.
+    * Added TMSP Overview
+    * Added Getting Started pages
+* Docs Page
+    * Added the FAQ page.
+
+# 2016-10-28
 * General:
     * All markdown content is now stored in `./src/content/`. Edit the markdown files and the site will be updated with the reflected changes.
     * Design cleanup - fewer borders and background colors around the site.

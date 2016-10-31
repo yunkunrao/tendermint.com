@@ -1,7 +1,3 @@
-# Tendermint vs. Other Software
-
-Here is how Tendermint compares to other softwre.
-
 ## Zookeeper, etcd, consul
 
 Zookeeper, etcd, and consul are all implementations of a key-value store atop a classical, 
@@ -37,7 +33,7 @@ So one can take the current Ethereum code base, whether in Rust, or Go, or Haske
 using Tendermint consensus. Indeed, [we did that](github.com/tendermint/geth-tmsp).
 Essentially, TMSP enables smart contracts in any programming language.
 
-Another example of a cryptocurrency application built on Tendermint is [Cosmos](http://comsos.network)
+Another example of a cryptocurrency application built on Tendermint is [Cosmos](http://cosmos.network)
 
 ## Hyperledger, ErisDB
 
@@ -50,4 +46,3 @@ though extending Tendermint to handle non-determinism remains for future work.
 [ErisDB](https://github.com/eris-ltd/eris-db) is an implementation of the Ethereum Virtual Machine and Ethereum transaction mechanics,
 with additional features for a name-registry, permissions, and native contracts, and an alternative blockchain API.
 It uses Tendermint as its consensus engine, and provides a particular application state.
-

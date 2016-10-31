@@ -2,6 +2,11 @@
   .section-container
     padding x
     border-bottom 1px solid bc
+    &:empty
+      display none
+
+    .section-content:empty
+      display none
 
     .section-header
       display flex

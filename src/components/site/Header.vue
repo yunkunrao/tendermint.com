@@ -4,10 +4,10 @@
       <img src="../../assets/images/home/tendermint-logo-88-green.jpg" alt="Tendermint logo"/>
     </router-link>
     <nav>
-      <router-link id="nav-intro" :to="'/intro'" exact>Intro</router-link>
-      <router-link id="nav-docs" :to="'/docs'" exact>Docs</router-link>
-      <router-link id="nav-community" :to="'/community'" exact>Community</router-link>
-      <router-link id="nav-blog" :to="'/blog'" exact>Blog</router-link>
+      <router-link id="nav-intro" :to="'/intro'">Intro</router-link>
+      <router-link id="nav-docs" :to="'/docs'">Docs</router-link>
+      <router-link id="nav-community" :to="'/community'">Community</router-link>
+      <router-link id="nav-blog" :to="'/blog'">Blog</router-link>
       <a id="nav-github" href="https://github.com/tendermint/tendermint">
         <i class="fa fa-github"></i>
         <span class="label">GitHub</span>

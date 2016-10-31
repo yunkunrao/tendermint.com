@@ -1,10 +1,10 @@
-# Introduction to Tendermint
+## Introduction to Tendermint
 
 Welcome to the Tendermint guide!  This is the best place to start if you're new
 to Tendermint.  If you're already familiar with the basics of Tendermint and
-TMSP, find more details in the [documentation](documentation).
+TMSP, find more details in the [documentation](/docs).
 
-# What is Tendermint?
+## What is Tendermint?
 
 Tendermint is a high-performance blockchain consensus engine that enables you to
 run Byzantine fault tolerant applications, written in any programming language,
@@ -25,7 +25,7 @@ ensuring that transactions are run in the same order on each machine.
 In addition to flexibility for application developers, the main benefits of
 using Tendermint (as opposed to using Proof-of-Work systems or other BFT
 consensus engines), are those derrived from the [Tendermint consensus
-algorithm](Byzantine-Consensus-Algorithm):
+algorithm](/docs/internals/byzantine-consensus-algorithm):
 
 * __simplicity__: Tendermint consensus commits blocks continuously commits
 blocks and uses the same mechanism to commit blocks as it does to handle failure, 
@@ -47,7 +47,7 @@ achieve greater horizontal scalability.
 The algorithm can also scale to hundreds or thousands of validators (depending on desired block times), and
 will only get better over time with advances in bandwidth and cpu capacity.
 
-# Next Steps
+## Next Steps
 
 - See how [tendermint compares to other software](tendermint-vs)
 - Continue with the [getting started guide](getting-started) to install and run example tendermint applications
