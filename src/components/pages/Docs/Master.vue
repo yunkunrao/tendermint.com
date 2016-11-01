@@ -24,6 +24,8 @@
 </template>
 
 <script>
+import $ from 'jquery'
+
 export default {
   name: 'docs-master',
   components: {
@@ -35,9 +37,16 @@ export default {
     }
   },
   methods: {
-    setIsActive (value) {
-      this.isActive = value
+    setIsActive (value) { this.isActive = value },
+    toggleSidebar () {
+      let self = this
+      if ($(window).width() >= 720) self.isActive = true
+      else self.isActive = false
     }
+  },
+  mounted () {
+    this.toggleSidebar()
+    $(window).resize(() => this.toggleSidebar())
   }
 }
 </script>
