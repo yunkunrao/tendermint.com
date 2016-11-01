@@ -6,25 +6,14 @@ const routes = [
 
   // Docs
   { path: '/docs', component: page('Docs/Index') },
-  { path: '/docs/commands', component: page('Docs/Commands') },
-  { path: '/docs/faq', component: page('Docs/Faq') },
-  { path: '/docs/guides', component: page('Docs/Guides/Index') },
-  { path: '/docs/guides/app-architecture', component: page('Docs/Guides/AppArchitecture') },
-  { path: '/docs/guides/app-dev', component: page('Docs/Guides/AppDev') },
-  { path: '/docs/internals', component: page('Docs/Internals/Index') },
-  { path: '/docs/internals/:entry', component: page('Docs/Internals/Entry') },
-  { path: '/docs/roadmap', component: page('Docs/Roadmap') },
+  { path: '/docs/:page', component: page('Docs/Page') },
+  { path: '/docs/guides/:page', component: page('Docs/Page') },
+  { path: '/docs/internals/:page', component: page('Docs/Page') },
 
   // Intro
   { path: '/intro', component: page('Intro/Index') },
-  { path: '/intro/getting-started', component: page('Intro/GettingStarted/Index') },
-  { path: '/intro/getting-started/install', component: page('Intro/GettingStarted/Install') },
-  { path: '/intro/getting-started/first-tmsp', component: page('Intro/GettingStarted/FirstTMSP') },
-  { path: '/intro/getting-started/deploy-testnet', component: page('Intro/GettingStarted/DeployTestnet') },
-  { path: '/intro/getting-started/next-steps', component: page('Intro/GettingStarted/NextSteps') },
-  { path: '/intro/tendermint-vs', component: page('Intro/TendermintVs') },
-  { path: '/intro/what-is-tendermint', component: page('Intro/WhatIsTendermint') },
-  { path: '/intro/what-is-tmsp', component: page('Intro/WhatIsTMSP') },
+  { path: '/intro/:page', component: page('Intro/Page') },
+  { path: '/intro/getting-started/:page', component: page('Intro/Page') },
 
   // Community Pages
   { path: '/community', component: page('Community/Index') },

@@ -1,3 +1,5 @@
+# Install Tendermint
+
 ## Install Go
 
 Make sure you have installed Go and [set the GOPATH](https://github.com/tendermint/tendermint/wiki/Setting-GOPATH).

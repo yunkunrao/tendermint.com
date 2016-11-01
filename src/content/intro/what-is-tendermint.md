@@ -1,3 +1,5 @@
+# What is Tendermint?
+
 ## Introduction to Tendermint
 
 Welcome to the Tendermint guide!  This is the best place to start if you're new

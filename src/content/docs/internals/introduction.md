@@ -1,3 +1,5 @@
+# Introduction
+
 TendermintCore is a high-performance blockchain consensus engine that enables you to run Byzantine fault tolerant applications, written in any programming language, on many machines spread across the globe, with strong security guarantees.  Unlike most blockchains, which require you to use an opinionated scripting language or environment, TendermintCore makes no assumptions about the application, giving developers the utmost freedom to express their business logic using the tools right for them. This makes it possible to use any programming language, and even to integrate with existing codebases like Bitcoind, go-ethereum, or otherwise.
 
 To achieve this flexibility, TendermintCore and the application it powers run in separate UNIX processes, and speak to each other via a simple messaging protocol called TMSP. See our [introductory blog post](http://tendermint.com/posts/tendermint-socket-protocol/), and our [application developers guide](https://github.com/tendermint/tendermint/wiki/Application-Developers) for more on TMSP.

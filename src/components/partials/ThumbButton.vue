@@ -6,6 +6,7 @@
 
 <script>
 export default {
+  name: 'thumb-button',
   computed: {
     iconClass () {
       return 'fa fa-' + this.icon
@@ -19,7 +20,7 @@ export default {
 @require '../../styles/variables.styl'
 
 .thumb-button
-  position absolute
+  position fixed
   bottom x
   right x
 
@@ -32,4 +33,6 @@ export default {
   line-height 3*x
 
   background #fff
+
+  cursor pointer
 </style>

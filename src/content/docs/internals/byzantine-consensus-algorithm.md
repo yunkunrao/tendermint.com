@@ -1,3 +1,5 @@
+# Byzantine Consensus Algorithm
+
 _The draft 0.6 whitepaper is outdated. The new algorithm is detailed below.  See [revisions](#revisions)_
 
 ## Terms

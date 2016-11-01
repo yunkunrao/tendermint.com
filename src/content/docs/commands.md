@@ -1,1 +1,3 @@
-Tendermint commands. (WIP)
+# Tendermint Commands
+
+Work in progress.

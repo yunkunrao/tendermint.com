@@ -1,3 +1,5 @@
+# Configuration
+
 TendermintCore can be configured via a TOML file in `$TMROOT/config.toml`.  Some of these parameters can be overridden by command-line flags.
 
 ### Config parameters

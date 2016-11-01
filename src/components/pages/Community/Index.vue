@@ -6,15 +6,15 @@
         <p>Contribute and join our friendly community.</p>
       </div>
     </section>
-    <navigation class="inline"></navigation>
+    <master class="inline"></master>
   </div>
 </template>
 
 <script>
-import Navigation from './Navigation'
+import Master from './Master'
 export default {
   components: {
-    Navigation
+    Master
   }
 }
 </script>

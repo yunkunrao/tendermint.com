@@ -1,3 +1,4 @@
+# Genesis
 
 The genesis.json file in `$TMROOT` defines the initial TendermintCore state upon genesis of the blockchain ([see definition](https://github.com/tendermint/tendermint/blob/master/types/genesis.go)).
 

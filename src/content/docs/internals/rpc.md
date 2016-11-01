@@ -1,3 +1,5 @@
+# RPC
+
 Tendermint supports the following RPC protocols:
 * URI over HTTP
 * JSONRPC over HTTP

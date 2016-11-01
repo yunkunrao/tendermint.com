@@ -1,3 +1,5 @@
+# Application Architecture
+
 ## Overview
 
 A blockchain application is more than the consensus engine and the transaction logic (eg. smart contracts, business logic) as implemented in the TMSP app.  There are also (mobile, web, desktop) clients that will need to connect and make use of the app.  We will assume for now that you have a well designed transactions and database model, but maybe this will be the topic of another article.  This article is more interested in various ways of setting up the "plumbing" and connecting these pieces, and demonstrating some evolving best practices.

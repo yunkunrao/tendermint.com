@@ -1,3 +1,5 @@
+# What is TMSP?
+
 ## Motivation
 
 Thus far, all blockchains "stacks" (such as [Bitcoin](https://github.com/bitcoin/bitcoin)) have had a monolithic design.  That is, each blockchain stack is a single program that handles all the concerns of a decentralized ledger; this includes P2P connectivity, the "mempool" broadcasting of transactions, consensus on the most recent block, account balances, Turing-complete contracts, user-level permissions, etc.

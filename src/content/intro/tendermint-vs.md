@@ -1,3 +1,5 @@
+# Tendermint vs. Other Software
+
 ## Zookeeper, etcd, consul
 
 Zookeeper, etcd, and consul are all implementations of a key-value store atop a classical, 

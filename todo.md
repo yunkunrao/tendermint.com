@@ -1,3 +1,13 @@
+# 2016-11-01
+* General
+    * Sidebar functionality and design improvements for desktop and mobile
+    * New design for Intro/Docs subpages to use the space more efficiently
+    * Overhauled routing code for the Intro/Docs pages to be less repetitive and simpler to update purely with markdown.
+* Docs 
+    * Added the sidebar
+
+Tomrrow is making the toggle sidebar button work, and more design improvements for the homepage.
+
 # 2016-10-31
 * General
     * Improved the routing of the pages

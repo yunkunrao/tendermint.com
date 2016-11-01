@@ -1,3 +1,5 @@
+# Validators
+
 Validators are responsible for committing new blocks in the blockchain.
 These validators participate in the consensus protocol by broadcasting _votes_ which contain cryptographic signatures signed by each validator's public key.
 

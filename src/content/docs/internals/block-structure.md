@@ -1,3 +1,5 @@
+# Block Structure
+
 ### Block
 A `Block` is composed of:
 - [`Header`](#header): basic information about the chain and last state

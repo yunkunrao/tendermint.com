@@ -1,3 +1,5 @@
+# Light Client Protocol
+
 Light clients are an important part of the complete blockchain system for most applications.  Tendermint provides unique speed and security properties for light client applications.
 
 ## Overview

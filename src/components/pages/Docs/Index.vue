@@ -1,20 +1,19 @@
 <template>
-  <div id="page-docs">
+  <div>
     <section id="section-top">
       <div class="section-container">
         <h1>Docs</h1>
         <p>The complete documentation for Tendermint.</p>
       </div>
     </section>
-    <navigation class="inline"></navigation>
+    <master class="inline"></master>
   </div>
 </template>
 
 <script>
-import Navigation from './Navigation'
 export default {
   components: {
-    Navigation
+    Master: require('./Master')
   }
 }
 </script>

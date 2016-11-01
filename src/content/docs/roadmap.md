@@ -1,3 +1,5 @@
+# Roadmap
+
 * Allow applications (through TMSP) to update the ValidatorSet.
 * Use the chain as its own CA for its nodes and validators.
 * Graceful handling/recovery for apps that have non-determinism or fail to halt

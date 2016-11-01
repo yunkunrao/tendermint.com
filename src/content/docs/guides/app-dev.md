@@ -1,3 +1,5 @@
+# Application Development
+
 ## TMSP Design
 
 The purpose of TMSP is to provide a clean interface between state transition machines on one computer and the mechanics of their replication across multiple computers. The former we call 'application logic' and the latter the 'consensus engine'. Application logic validates transactions and optionally executes transactions against some persistent state. A consensus engine ensures all transactions are replicated in the same order on every machine. We call each machine in a consensus engine a 'validator', and each validator runs the same transactions through the same application logic. In particular, we are interested in blockchain-style consensus engines, where transactions are committed in hash-linked blocks.
