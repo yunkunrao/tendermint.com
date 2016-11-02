@@ -1,0 +1,22 @@
+.block
+  padding x
+  .key
+    color mcolor
+    margin 0 0 0.75*x
+    font-weight 500
+    i.fa
+      margin-right 0.5*x
+
+@media screen and (min-width: 720px)
+  .blocks
+    display flex
+    flex-flow row wrap
+    padding-left 2*x
+    padding-right 2*x
+
+  .block
+    flex 0 0 50%
+
+  .block .key
+    font-size 1.25*x
+

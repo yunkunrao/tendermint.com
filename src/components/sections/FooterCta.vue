@@ -2,7 +2,7 @@
   <section id="section-cta" class="section-default section-dark">
     <div class="section-container">
       <header class="section-header">
-        <h2>Stay updated on Tendermint&nbsp;news</h2>
+        <h2>Get Tendermint&nbsp;news</h2>
       </header>
       <div class="section-content">
         <email-signup></email-signup>

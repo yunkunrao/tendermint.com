@@ -1,7 +1,8 @@
 <template>
   <div class="master-detail">
     <master></master>
-    <div class="detail article-body">
+    <div class="detail"><div class="article-body">
+      <index v-if="r()"></index>
       <faq v-if="r('faq')"></faq>
       <roadmap v-if="r('roadmap')"></roadmap>
       <app-dev v-if="r('app-development')"></app-dev>
@@ -15,7 +16,7 @@
       <config v-if="r('configuration')"></config>
       <light-client v-if="r('light-client-protocol')"></light-client>
       <commands v-if="r('commands')"></commands>
-    </div>
+    </div></div>
   </div>
 </template>
 
@@ -24,6 +25,7 @@ export default {
   name: 'intro-page',
   components: {
     Master: require('./Master'),
+    Index: require('../../../content/docs/index.md'),
     Commands: require('../../../content/docs/commands.md'),
     Faq: require('../../../content/docs/faq.md'),
     Roadmap: require('../../../content/docs/roadmap.md'),
@@ -46,9 +48,6 @@ export default {
     r (fragment) {
       return this.$route.params.page === fragment
     }
-  },
-  mounted () {
-    console.log(this.$route.params.page)
   }
 }
 </script>

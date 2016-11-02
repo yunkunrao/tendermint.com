@@ -39,7 +39,6 @@ export default {
   mounted () {
     // better youtube embeds
     $('.youtube').each(function () {
-      console.log($(this))
       // Set the BG image from the youtube ID
       $(this).css('background-image', 'url(//i.ytimg.com/vi/' + this.id + '/hqdefault.jpg)')
 

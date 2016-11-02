@@ -12,6 +12,8 @@ export default {
       return 'fa fa-' + this.icon
     }
   },
+  methods: {
+  },
   props: ['icon']
 }
 </script>
@@ -25,12 +27,13 @@ export default {
   right x
 
   width 3*x
-  height 3*x
-  border 1px solid bc
+  font-size 1.5*x
+  line-height 3*x
   border-radius 1.5*x
 
+  border 1px solid bc
+
   text-align center
-  line-height 3*x
 
   background #fff
 

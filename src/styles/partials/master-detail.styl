@@ -3,52 +3,61 @@
   min-height 100vh
 
 .detail
-  padding 0 x
+  padding 0 x x
   h1
     font-size 2*x
-    line-height 1
+    line-height 1.25
 
-    font-weight bold
+    font-weight 500
 
-    border-bottom 4px solid bc
+    border-bottom 3px solid bc
     margin-bottom 2*x
-    padding 2*x 0 1.5*x
 
-    i.fa
-      margin-right 0.5*x
-      color lighten(mcolor,50%)
+    display flex
+    align-items center
+
+    padding 2*x 0
 
 .master 
+  border-right 1px solid bc
+
   nav
-    display none
+    background hsla(0,50%,100%,90%)
+    position relative
+    height 100vh
+    overflow hidden
 
   &.inline
     border 1px solid bc
     border-top none
     margin 0 auto
     max-width 48em
-
-    nav
-      display block
+    width auto
 
     .thumb-button
       display none
 
-  &:not(.inline).active
-    display block
+  &.mobile-active
+  &.mobile-inactive
     position fixed
     top 0
     left 0
+    width 100vw
+
     z-index 10
 
-    width 100vw
-    height 100vh
-    padding-top 3*x
-
-    background #fff
-    border-right 1px solid bc
     nav
+      padding-top 3*x
+      position relative
+
+    .thumb-button
       display block
+
+  &.mobile-active nav
+    display block
+
+  &.mobile-inactive nav
+    display none
 
   .title
     border-top 1px solid bc
@@ -60,9 +69,10 @@
     padding 0 x
     color txt
     box-shadow inset #fff 0 1px 0
+
   a
     display block
-    padding 0.75*x x
+    padding 0.75*x 3*x 0.75*x x
     border-top 1px solid bc
     position relative
     font-weight 500
@@ -82,34 +92,41 @@
       color lighten(link,50%)
 
     &.router-link-active
-      color txt
+      color #fff
+      background mcolor url('../assets/images/home/gradient.jpg') no-repeat top left
       &:after
-        color txt
+        color #fff
 
 @media screen and (min-height: 400px)
   .master-detail
     padding-top 3*x
 
 @media screen and (min-width: 720px)
-  .thumb-button
-    display none
+  .master
+    &.mobile-active
+    &.mobile-inactive
+      width 240px
+    &.inline
+      margin-top 1.5*x
+      margin-bottom 1.5*x
 
-  .master.inline
-    margin-top 1.5*x
-    margin-bottom 1.5*x
-
-  .master-detail
-    display flex
-
-  .master:not(.inline).active
-    position static
-    flex 0 0 240px
-    padding-top 0
+    .thumb-button
+      display none !important
 
   .detail
-    flex 1
+    margin-left 240px
+    padding-left 2*x
+    padding-right 2*x
+    h1
+      padding 4*x 0 2*x
 
 @media screen and (min-width: 960px)
-  .master:not(.inline).active
-    position static
-    flex 0 0 320px
+  .master
+    &.mobile-active
+    &.mobile-inactive
+      width 320px
+
+  .detail
+    margin-left 320px
+    padding-left 4*x
+    padding-right 4*x

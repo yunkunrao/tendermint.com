@@ -2,7 +2,7 @@
   <section id="section-connections" class="section-default section-dark">
     <div class="section-container">
       <header class="section-header">
-        <h2>Learn more by joining the&nbsp;discussion</h2>
+        <h2>Join the&nbsp;discussion</h2>
       </header>
       <div class="section-content">
         <ul class="ul-connections">
@@ -60,11 +60,6 @@ export default {
 
 <style lang="stylus" scoped>
 @require '../../styles/variables.styl'
-
-#section-connections
-  background mcolor
-  .section-container
-    border-bottom-color darken(mcolor, 10%)
 
 #section-connections ul.ul-connections
   margin -0.25*x

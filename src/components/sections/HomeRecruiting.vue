@@ -1,29 +1,15 @@
 <template>
-  <section class="section-default section-columns section-dark">
-    <div class="columns">
-      <div class="section-container">
-        <header class="section-header">
-          <h2>
-            <span class="short">We&rsquo;re looking for blockchain engineers</span>
-            <span class="long">We&rsquo;re seeking talented blockchain engineers</span>
-          </h2>
-        </header>
-        <div class="section-content">
-          <p>Are you an industry leading blockchain engineer looking to make open-source contributions to a state-of-the-art codebase on the bleeding edge of blockchain tech? If so, we’d love to <a href="mailto:hello@tendermint.com">hear from you</a>. See our <a href="/jobs">jobs page</a> for more details.</p>
-        </div><!--section-content-->
-      </div><!--section-container-->
-      <div class="section-container">
-        <header class="section-header">
-          <h2>
-            <span class="short">We also build custom blockchain apps</span>
-            <span class="long">We also build custom blockchain applications</span>
-          </h2>
-        </header>
-        <div class="section-content">
-          <p>We work directly with a small number of high value clients to help bring their vision to reality. <a href="mailto:hello@tendermint.com">Lets talk.</a></p>
-        </div><!--section-content-->
-      </div><!--section-container-->
-    </div>
+  <section class="section-default section-dark">
+    <div class="section-container blocks">
+      <div class="block">
+        <div class="key">We&rsquo;re recruiting</div>
+        <div class="value">Are you looking to make contributions to an open source codebase on the bleeding edge of blockchain tech? We'd love to have your help. See our <a href="/jobs">Jobs page</a> for more.</div>
+      </div>
+      <div class="block">
+        <div class="key">We build custom blockchains</div>
+        <div class="value">We work directly with a small number of high value clients to help bring their visions to reality. <a href="mailto:hello@tendermint.com">Let's talk.</a></div>
+      </div>
+    </div><!--section-container-->
   </section>
 </template>
 

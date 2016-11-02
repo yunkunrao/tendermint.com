@@ -1,12 +1,26 @@
+# 2016-11-02
+* Sidebar
+    * Added a scrollbar, and scrolling in the sidebar no longer propogates to the page
+    * Fixed the toggle capability for the sidebar.
+    * Improved sidebar design and usability robustness 
+* Home
+    * Work-in-progress design improvements and simplification
+* Intro
+    * Now defaults to the "What is Tendermint" page.
+* Docs
+    * Now defaults to a new "Documentation" index page.
+
+Tomorrow: implement the jobs page, finish updating the homepage design and content
+
 # 2016-11-01
 * General
     * Sidebar functionality and design improvements for desktop and mobile
     * New design for Intro/Docs subpages to use the space more efficiently
     * Overhauled routing code for the Intro/Docs pages to be less repetitive and simpler to update purely with markdown.
 * Docs 
-    * Added the sidebar
+    * Added the sidebar http://tendermint.nylira.com/docs/internals/consensus
 
-Tomrrow is making the toggle sidebar button work, and more design improvements for the homepage.
+Tomorrow is making the toggle sidebar button work, and more design improvements for the homepage.
 
 # 2016-10-31
 * General

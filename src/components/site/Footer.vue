@@ -30,6 +30,9 @@ export default {
 <style lang="stylus" scoped>
 @require '../../styles/variables.styl'
 
+#site-footer-wrapper
+  position relative
+  z-index 11
 #site-footer
   border-top 1px solid lighten(mcolor, 7%)
 

@@ -1,8 +1,8 @@
 <template>
-  <div class="master" v-bind:class="{ active: isActive }">
+  <div class="master" v-bind:class="{ 'mobile-active': isActive, 'mobile-inactive': !isActive }" @click="toggleManual">
     <nav>
       <div class="title">Intro</div>
-      <router-link :to="'/intro/what-is-tendermint'">What is Tendermint?</router-link>
+      <router-link :to="'/intro'" exact>Introduction to Tendermint</router-link>
       <router-link :to="'/intro/tendermint-vs'">Tendermint vs. Other Software</router-link>
       <router-link :to="'/intro/what-is-tmsp'">TMSP Overview</router-link>
       <div class="title">Getting Started</div>
@@ -11,8 +11,8 @@
       <router-link :to="'/intro/getting-started/deploy-testnet'">Deploy Testnet</router-link>
       <router-link :to="'/intro/getting-started/next-steps'">Next Steps</router-link>
     </nav>
-    <thumb-button @click="setIsActive(false)" v-show="isActive" icon="close"></thumb-button>
-    <thumb-button @click="setIsActive(true)" v-show="!isActive" icon="bars"></thumb-button>
+    <thumb-button v-show="isActive" icon="close"></thumb-button>
+    <thumb-button v-show="!isActive" icon="bars"></thumb-button>
   </div><!--master-->
 </template>
 
@@ -30,16 +30,20 @@ export default {
     }
   },
   methods: {
-    setIsActive (value) { this.isActive = value },
-    toggleSidebar () {
+    toggleAutomatic () {
       let self = this
       if ($(window).width() >= 720) self.isActive = true
       else self.isActive = false
+    },
+    toggleManual () {
+      if ($(window).width() < 720) {
+        this.isActive = !this.isActive
+      }
     }
   },
   mounted () {
-    this.toggleSidebar()
-    $(window).resize(() => this.toggleSidebar())
+    this.toggleAutomatic()
+    $(window).resize(() => this.toggleAutomatic())
   }
 }
 </script>

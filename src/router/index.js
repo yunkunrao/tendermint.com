@@ -5,13 +5,13 @@ const routes = [
   { path: '/', component: page('Index') },
 
   // Docs
-  { path: '/docs', component: page('Docs/Index') },
+  { path: '/docs', component: page('Docs/Page') },
   { path: '/docs/:page', component: page('Docs/Page') },
   { path: '/docs/guides/:page', component: page('Docs/Page') },
   { path: '/docs/internals/:page', component: page('Docs/Page') },
 
   // Intro
-  { path: '/intro', component: page('Intro/Index') },
+  { path: '/intro', component: page('Intro/Page') },
   { path: '/intro/:page', component: page('Intro/Page') },
   { path: '/intro/getting-started/:page', component: page('Intro/Page') },
 

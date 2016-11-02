@@ -1,15 +1,15 @@
 <template>
   <div class="master-detail">
     <master></master>
-    <div class="detail article-body">
+    <div class="detail"><div class="article-body">
+      <what-is-tendermint v-if="r()"></what-is-tendermint>
       <tendermint-vs v-if="r('tendermint-vs')"></tendermint-vs>
-      <what-is-tendermint v-if="r('what-is-tendermint')"></what-is-tendermint>
       <what-is-tmsp v-if="r('what-is-tmsp')"></what-is-tmsp>
       <install-tendermint v-if="r('install')"></install-tendermint>
       <first-tmsp v-if="r('first-tmsp')"></first-tmsp>
       <deploy-testnet v-if="r('deploy-testnet')"></deploy-testnet>
       <next-steps v-if="r('next-steps')"></next-steps>
-    </div>
+    </div></div>
   </div>
 </template>
 
