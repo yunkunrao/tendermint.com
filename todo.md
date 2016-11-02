@@ -1,7 +1,7 @@
 # 2016-11-02
 * Sidebar
     * Added a scrollbar, and scrolling in the sidebar no longer propogates to the page
-    * Fixed the toggle capability for the sidebar.
+    * Fixed the toggle capability for the sidebar
     * Improved sidebar design and usability robustness 
 * Home
     * Work-in-progress design improvements and simplification
