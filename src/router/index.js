@@ -17,11 +17,12 @@ const routes = [
 
   // Community Pages
   { path: '/community', component: page('Community/Index') },
-  { path: '/community/about', component: page('Community/About') },
+  { path: '/community/jobs', component: page('Community/Jobs') },
   { path: '/community/media', component: page('Community/Media') },
   { path: '/community/presentations', component: page('Community/Presentations/Index') },
   { path: '/community/presentations/:entry', component: page('Community/Presentations/Entry') },
   { path: '/community/software-ecosystem', component: page('Community/SoftwareEcosystem') },
+  { path: '/community/team', component: page('Community/Team') },
 
   // Blog Pages
   { path: '/blog', component: page('Blog/Index') },

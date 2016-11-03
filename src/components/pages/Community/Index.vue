@@ -3,7 +3,7 @@
     <section id="section-top">
       <div class="section-container">
         <h1>Community</h1>
-        <p>Contribute and join our friendly community.</p>
+        <p>Contribute to and join our friendly community.</p>
       </div>
     </section>
     <master class="inline"></master>

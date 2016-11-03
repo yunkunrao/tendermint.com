@@ -1,42 +1,40 @@
 <template>
-  <div id="home-hero">
-    <section id="section-hero">
-      <div class="section-container">
-        <h1>Tendermint</h1>
-        <p class="tagline">Blockchain Consensus</p>
-        <p class="introduction">
-          Byzantine fault-tolerant replicated state machines in any programming language
-        </p>
+  <section id="section-cover">
+    <div class="section-container">
+      <h1>Tendermint</h1>
+      <p class="tagline">Blockchain Consensus</p>
+      <p class="introduction">
+        Byzantine fault-tolerant replicated state machines in any programming language
+      </p>
 
-        <email-signup></email-signup>
+      <install-tendermint></install-tendermint>
 
-        <div class="connections">
-          <a href="https://www.facebook.com/tendermint">
-            <i class="fa fa-footbook"></i></a>
-          <a href="https://github.com/tendermint/tendermint">
-            <i class="fa fa-github"></i></a>
-          <a href="https://www.linkedin.com/company/tendermint">
-            <i class="fa fa-linkedout"></i></a>
-          <a href="http://forum.tendermint.com:3000/">
-            <i class="fa fa-slick"></i></a>
-          <a href="https://twitter.com/tendermint_team">
-            <i class="fa fa-twatter"></i></a>
-        </div><!--connections-->
+      <div class="connections">
+        <a href="https://www.facebook.com/tendermint">
+          <i class="fa fa-footbook"></i></a>
+        <a href="https://github.com/tendermint/tendermint">
+          <i class="fa fa-github"></i></a>
+        <a href="https://www.linkedin.com/company/tendermint">
+          <i class="fa fa-linkedout"></i></a>
+        <a href="http://forum.tendermint.com:3000/">
+          <i class="fa fa-slick"></i></a>
+        <a href="https://twitter.com/tendermint_team">
+          <i class="fa fa-twatter"></i></a>
+      </div><!--connections-->
 
-      </div><!--container-->
-      <a id="home-arrow-down" @click="scrollDown"><i class="fa fa-angle-down"></i></a>
-    </section>
+    </div><!--container-->
+    <a id="home-arrow-down" @click="scrollDown"><i class="fa fa-angle-down"></i></a>
     <div id="scroll-down-here"></div>
-  </div>
+  </section>
 </template>
 
 <script>
 import $ from 'jquery'
-import EmailSignup from '../partials/EmailSignup'
+import InstallTendermint from '../partials/InstallTendermint.vue'
 
 export default {
   components: {
-    EmailSignup
+    InstallTendermint
   },
   methods: {
     scrollDown (event) {
@@ -52,7 +50,7 @@ export default {
 <style lang="stylus" scoped>
 @require '../../styles/variables.styl'
 
-#section-hero
+#section-cover
   background mcolor url('../../assets/images/home/gradient.jpg') no-repeat center center
   background-size cover
   width 100vw
@@ -119,7 +117,7 @@ export default {
       color lighten(mcolor,80%)
 
 @media screen and (min-height: 400px)
-  #section-hero
+  #section-cover
 
     .tagline, .introduction, form
       margin-bottom 1.25*x
@@ -138,7 +136,7 @@ export default {
       line-height 2*x
 
 @media screen and (min-width: 360px) and (min-height: 480px)
-  #section-hero
+  #section-cover
     h1
       font-size 3.25*x
 
@@ -159,7 +157,7 @@ export default {
         font-size 1.20*x
 
 @media screen and (min-width: 400px) and (min-height: 480px)
-  #section-hero
+  #section-cover
     .section-container
       padding-left 3*x
       padding-right 3*x
@@ -178,7 +176,7 @@ export default {
       line-height 3*x
 
 @media screen and (min-width: 720px) and (min-height: 480px)
-  #section-hero
+  #section-cover
     .introduction
       font-size 1.5*x
 </style>

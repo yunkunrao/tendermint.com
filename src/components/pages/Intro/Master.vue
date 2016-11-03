@@ -5,6 +5,7 @@
       <router-link :to="'/intro'" exact>Introduction to Tendermint</router-link>
       <router-link :to="'/intro/tendermint-vs'">Tendermint vs. Other Software</router-link>
       <router-link :to="'/intro/what-is-tmsp'">TMSP Overview</router-link>
+      <router-link :to="'/intro/technology'">Technology</router-link>
       <div class="title">Getting Started</div>
       <router-link :to="'/intro/getting-started/install'">Install Tendermint</router-link>
       <router-link :to="'/intro/getting-started/first-tmsp'">First TMSP App</router-link>

@@ -1,0 +1,151 @@
+{
+  "tmspApps": [
+    {
+      "name": "Basecoin",
+      "url": "https://github.com/tendermint/basecoin",
+      "language": "Go",
+      "author": "Tendermint",
+      "description": "A prototypical account based crypto currency state machine supporting plugins"
+    },
+    {
+      "name": "Geth-TMSP",
+      "url": "https://github.com/tendermint/geth-tmsp",
+      "language": "Go",
+      "author": "Tendermint",
+      "description": "The go-ethereum state machine run as a TMSP app"
+    },
+    {
+      "name": "Merkle AVL Tree",
+      "url": "https://github.com/tendermint/merkleeyes",
+      "language": "Go",
+      "author": "Tendermint",
+      "description": "Tendermint IAVL tree implemented as tmsp app"
+    },
+    {
+      "name": "ErisDB AVL Tree",
+      "url": "https://github.com/eris-ltd/erisdb",
+      "language": "Go",
+      "author": "Monax Industries",
+      "description": "Ethereum Virtual Machine augmented with native permissioning scheme and global key-value store"
+    },
+    {
+      "name": "Merkle AVL Tree",
+      "url": "https://github.com/eris-ltd/erisdb",
+      "language": "Java",
+      "author": "jTMSP",
+      "description": "Tendermint IAVL tree implemented as tmsp app"
+    },
+    {
+      "name": "TMChat",
+      "url": "https://github.com/wolfposd/TMChat",
+      "language": "Java",
+      "author": "jTMSP",
+      "description": "P2P chat using Tendermint"
+    },
+    {
+      "name": "Comit",
+      "url": "https://github.com/zballs/comit",
+      "language": "Go",
+      "author": "Zach Balder",
+      "description": "Public service reporting and tracking"
+    },
+    {
+      "name": "Passwerk",
+      "url": "https://github.com/rigelrozanski/passwerk",
+      "language": "Go",
+      "author": "Rigel Rozanski",
+      "description": "Encrypted storage web-utility backed by Tendermint"
+    }
+  ],
+  "tmspServers": [
+    {
+      "name": "tmsp",
+      "url": "https://github.com/tendermint/basecoin",
+      "language": "Go",
+      "author": "Tendermint"
+    },
+    {
+      "name": "js-tmsp",
+      "url": "https://github.com/tendermint/js-tmsp",
+      "language": "Javascript",
+      "author": "Tendermint"
+    },
+    {
+      "name": "cpp-tmsp",
+      "url": "https://github.com/mdyring/cpp-tmsp",
+      "language": "C++",
+      "author": "Martin Dyring"
+    },
+    {
+      "name": "jTMSP",
+      "url": "https://github.com/jTMSP/jTMSP",
+      "language": "Java",
+      "author": "jTMSP"
+    },
+    {
+      "name": "Spearmint",
+      "url": "https://github.com/dennismckinnon/spearmint",
+      "language": "Javascript",
+      "author": "Dennis McKinnon"
+    },
+    {
+      "name": "ocaml-tmsp",
+      "url": "https://github.com/zballs/ocaml-tmsp",
+      "language": "Ocaml",
+      "author": "Zach Balder"
+    }
+  ],
+  "deploymentTools": [
+    {
+      "name": "mintnet",
+      "url": "https://github.com/tendermint/mintnet",
+      "technology": "Tendermint",
+      "author": "Tendermint",
+      "description": "Deploy a Tendermint test network on any provider supported by docker-machine"
+    },
+    {
+      "name": "terraform-modules",
+      "url": "https://github.com/tendermint/terraform-modules",
+      "technology": "Terraform",
+      "author": "Tendermint",
+      "description": "Deploy a production Tendermint network with load balancing over multiple AWS availability zones"
+    },
+    {
+      "name": "brooklyn-tendermint",
+      "url": "https://github.com/cloudsoft/brooklyn-tendermint",
+      "technology": "Clocker for Apache Brooklyn ",
+      "author": "Cloudsoft",
+      "description": "Deploy a tendermint test network in docker containers "
+    }
+  ],
+  "competitors": [
+    {
+      "name": "Hyperledger",
+      "url": "https://github.com/hyperledger/fabric",
+      "language": "Go",
+      "author": "Linux Foundation",
+      "description": "PBFT state machine replication for dynamic set of simple dockerized applications"
+    },
+    {
+      "name": "Hyperledger",
+      "url": "https://github.com/HydraChain/hydrachain",
+      "language": "Python",
+      "author": "HydraChain",
+      "description": "Pyethereum adapted to a non-BFT consensus algorithm modelled on Tendermint."
+    },
+    {
+      "name": "Juno",
+      "url": "https://github.com/kadena-io/juno",
+      "language": "Haskell",
+      "author": "Cadena",
+      "description": "Variant of Tangaroa, a BFT version of Raft"
+    },
+    {
+      "name": "HoneyBadgerBFT",
+      "url": "https://github.com/amiller/HoneyBadgerBFT",
+      "language": "Python",
+      "author": "Andrew Miller",
+      "description": "Fully asynchronous and highly optimized BFT using secret-sharing"
+    }
+  ]
+}

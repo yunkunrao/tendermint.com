@@ -3,7 +3,7 @@
     <section id="section-top">
       <div class="section-container">
         <div class="article-wrapper" id="blog-index">
-          <h1><i class="fa fa-team"></i> About Tendermint</h1>
+          <h1><i class="fa fa-team"></i>Tendermint Team</h1>
           <p>Our mission: to bring simplicity, security, and speed to the world&rsquo;s blockchains.</p>
         </div>
       </div>
@@ -86,6 +86,7 @@ export default {
 
 <style lang="stylus" scoped>
 @require '../../../styles/variables.styl'
+
 .section-portraits
   .section-container
     padding-left 0
@@ -93,7 +94,8 @@ export default {
 
   .section-content
     max-width 60*x
-    padding 0 0.5*x
+    margin 0 auto
+    padding 1.5*x 0.5*x 0
 
     display flex
     flex-flow wrap
@@ -127,7 +129,6 @@ export default {
       color light
       font-size 0.75*x
 
-
     &:hover
       .name
         color link
@@ -152,7 +153,8 @@ export default {
   .section-portraits
     .portrait
       flex 0 0 25%
-      max-width 18*x
+      padding-left x
+      padding-right x
 
     a.twitter
       margin 0.25*x 0

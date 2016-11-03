@@ -4,19 +4,19 @@
   box-shadow inset #fff 0 0 x*0.5
 
   margin 0
-  display inline-block
   padding 0 1.5em
 
   height 2em
-  line-height x*2 - 2px
   font-weight 600
-  text-align center
   color txt
   text-shadow #fff 0 -1px 0
 
   cursor pointer
   user-select none
-  vertical-align bottom
+
+  display flex
+  justify-content center
+  align-items center
 
   &:hover
     background linear-gradient(top, #fff, hsl(0,0,95%))
@@ -24,7 +24,7 @@
     color #000
 
   i.fa
-    padding-right 0.2em
+    padding-right 0.5em
 
 .btn-primary
   background linear-gradient(top, lighten(mcolor,10%), darken(mcolor,10%))
@@ -39,31 +39,32 @@
     box-shadow inset 0 1px 0 lighten(mcolor,55%)
     color #fff
 
+alt-top = darken(hsl(98,202,60),15%)
+alt-bot = darken(rgb(31,134,44),15%)
+alt-sh = darken(rgb(79,183,43),15%)
 .btn-alternate
-  background linear-gradient(top, acolor, darken(acolor,20%))
-  border 1px solid darken(acolor,25%)
-  box-shadow inset 0 1px 0 lighten(acolor,50%)
+  background linear-gradient(top, alt-top, alt-bot)
+  border 1px solid darken(alt-bot,10%)
+  box-shadow inset 0 1px 0 alt-sh
 
-  color lighten(acolor,95%)
-  text-shadow 0 -1px 0 darken(acolor,40%)
+  color #fff
+  text-shadow 0 1px 0 alt-sh
 
   &:hover
-    background linear-gradient(top, lighten(acolor,5%), darken(acolor,18%))
-    box-shadow inset 0 1px 0 lighten(acolor,45%)
+    background linear-gradient(top, lighten(alt-top,10%), darken(alt-bot,10%))
+    box-shadow inset 0 1px 0 lighten(alt-sh,10%)
     color #fff
 
 
 .btn-small
   height x*1.5
   font-size x*0.75
-  line-height x*1.5 - 2px
   padding 0 x
 
 .btn-large
   height x*3
-  line-height x*3 - 2px
   font-size 1.25em
-  font-weight normal
+  font-weight 600
 
 .btn-copy
   width x*8
