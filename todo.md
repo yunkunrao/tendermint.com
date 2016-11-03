@@ -1,5 +1,26 @@
+# 2016-11-03
+* General
+    * Added production deployment script, run with `npm run build` and then `npm run prod`
+    * Added the Tendermint: from Then to Now post over.
+    * Fixed: local images in markdown files were broken, fixed it for documentation, still need to fix for blog
+* Footer
+    * Simplified footer
+* Home http://tendermint.nylira.com/community/software-ecosystem
+    * Changed the Subscribe button to Install Tendermint
+    * Removed video
+    * Moved the techy images to a subpage of the Intro http://tendermint.nylira.com/intro/technology
+* Software Ecosystem http://tendermint.nylira.com/community/software-ecosystem
+    * Created new page
+
+The site is not complete yet, but it's ready to be deployed.
+
+Tomorrow:
+    * Add the Jobs section
+    * add sorting/re-ordering the Software Ecosystem
+    * potentially hook up the Github API with that page for stars and latest commit details
+
 # 2016-11-02
-* Sidebar
+* Sidebar updated: https://tendermint.nylira.com/docs
     * Added a scrollbar, and scrolling in the sidebar no longer propogates to the page
     * Fixed the toggle capability for the sidebar
     * Improved sidebar design and usability robustness 

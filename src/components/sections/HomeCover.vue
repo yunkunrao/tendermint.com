@@ -1,42 +1,31 @@
 <template>
-  <div id="home-hero">
-    <section id="section-hero">
-      <div class="section-container">
-        <h1>Tendermint</h1>
-        <p class="tagline">Blockchain Consensus</p>
-        <p class="introduction">
-          Byzantine fault-tolerant replicated state machines in any programming language
-        </p>
+  <section id="section-cover">
+    <div class="section-container">
+      <h1>Tendermint</h1>
+      <p class="tagline">Blockchain Consensus</p>
+      <p class="introduction">
+        Byzantine fault-tolerant replicated state machines in any programming language
+      </p>
 
-        <email-signup></email-signup>
+      <install-tendermint></install-tendermint>
 
-        <div class="connections">
-          <a href="https://www.facebook.com/tendermint">
-            <i class="fa fa-footbook"></i></a>
-          <a href="https://github.com/tendermint/tendermint">
-            <i class="fa fa-github"></i></a>
-          <a href="https://www.linkedin.com/company/tendermint">
-            <i class="fa fa-linkedout"></i></a>
-          <a href="http://forum.tendermint.com:3000/">
-            <i class="fa fa-slick"></i></a>
-          <a href="https://twitter.com/tendermint_team">
-            <i class="fa fa-twatter"></i></a>
-        </div><!--connections-->
+      <connections></connections>
 
-      </div><!--container-->
-      <a id="home-arrow-down" @click="scrollDown"><i class="fa fa-angle-down"></i></a>
-    </section>
+    </div><!--container-->
+    <a id="home-arrow-down" @click="scrollDown"><i class="fa fa-angle-down"></i></a>
     <div id="scroll-down-here"></div>
-  </div>
+  </section>
 </template>
 
 <script>
 import $ from 'jquery'
-import EmailSignup from '../partials/EmailSignup'
+import InstallTendermint from '../partials/InstallTendermint.vue'
+import Connections from '../partials/Connections.vue'
 
 export default {
   components: {
-    EmailSignup
+    InstallTendermint,
+    Connections
   },
   methods: {
     scrollDown (event) {
@@ -52,7 +41,7 @@ export default {
 <style lang="stylus" scoped>
 @require '../../styles/variables.styl'
 
-#section-hero
+#section-cover
   background mcolor url('../../assets/images/home/gradient.jpg') no-repeat center center
   background-size cover
   width 100vw
@@ -111,7 +100,7 @@ export default {
     color lighten(mcolor,50%)
     text-align center
 
-  .connections a, #home-arrow-down
+  #home-arrow-down
     background hsla(mhue,msat,mlit - 20%,0.1)
     transition 0.2s ease all
     &:hover
@@ -119,26 +108,20 @@ export default {
       color lighten(mcolor,80%)
 
 @media screen and (min-height: 400px)
-  #section-hero
+  #section-cover
 
     .tagline, .introduction, form
       margin-bottom 1.25*x
 
     .connections
       display flex
-      a
-        margin x*0.25
-        width 2.5*x
-        line-height 2.5*x
-        color lighten(mcolor,58%)
-        text-align center
 
     #home-arrow-down
       font-size 1.5*x
       line-height 2*x
 
 @media screen and (min-width: 360px) and (min-height: 480px)
-  #section-hero
+  #section-cover
     h1
       font-size 3.25*x
 
@@ -151,15 +134,8 @@ export default {
     .introduction
       font-size 1.25*x
 
-    .connections
-      a
-        margin 0.333*x
-        width 3*x
-        line-height 3*x
-        font-size 1.20*x
-
 @media screen and (min-width: 400px) and (min-height: 480px)
-  #section-hero
+  #section-cover
     .section-container
       padding-left 3*x
       padding-right 3*x
@@ -167,18 +143,12 @@ export default {
     .introduction
       line-height 1.5
 
-    .connections
-      a
-        width 3.5*x
-        line-height 3.5*x
-        font-size 1.5*x
-
     #home-arrow-down
       font-size 2*x
       line-height 3*x
 
 @media screen and (min-width: 720px) and (min-height: 480px)
-  #section-hero
+  #section-cover
     .introduction
       font-size 1.5*x
 </style>

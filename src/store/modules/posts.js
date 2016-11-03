@@ -4,10 +4,6 @@ const state = {
   all: posts
 }
 
-const mutations = {
-}
-
 export default {
-  state,
-  mutations
+  state
 }
