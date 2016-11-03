@@ -9,18 +9,7 @@
 
       <install-tendermint></install-tendermint>
 
-      <div class="connections">
-        <a href="https://www.facebook.com/tendermint">
-          <i class="fa fa-footbook"></i></a>
-        <a href="https://github.com/tendermint/tendermint">
-          <i class="fa fa-github"></i></a>
-        <a href="https://www.linkedin.com/company/tendermint">
-          <i class="fa fa-linkedout"></i></a>
-        <a href="http://forum.tendermint.com:3000/">
-          <i class="fa fa-slick"></i></a>
-        <a href="https://twitter.com/tendermint_team">
-          <i class="fa fa-twatter"></i></a>
-      </div><!--connections-->
+      <connections></connections>
 
     </div><!--container-->
     <a id="home-arrow-down" @click="scrollDown"><i class="fa fa-angle-down"></i></a>
@@ -31,10 +20,12 @@
 <script>
 import $ from 'jquery'
 import InstallTendermint from '../partials/InstallTendermint.vue'
+import Connections from '../partials/Connections.vue'
 
 export default {
   components: {
-    InstallTendermint
+    InstallTendermint,
+    Connections
   },
   methods: {
     scrollDown (event) {
@@ -109,7 +100,7 @@ export default {
     color lighten(mcolor,50%)
     text-align center
 
-  .connections a, #home-arrow-down
+  #home-arrow-down
     background hsla(mhue,msat,mlit - 20%,0.1)
     transition 0.2s ease all
     &:hover
@@ -124,12 +115,6 @@ export default {
 
     .connections
       display flex
-      a
-        margin x*0.25
-        width 2.5*x
-        line-height 2.5*x
-        color lighten(mcolor,58%)
-        text-align center
 
     #home-arrow-down
       font-size 1.5*x
@@ -149,13 +134,6 @@ export default {
     .introduction
       font-size 1.25*x
 
-    .connections
-      a
-        margin 0.333*x
-        width 3*x
-        line-height 3*x
-        font-size 1.20*x
-
 @media screen and (min-width: 400px) and (min-height: 480px)
   #section-cover
     .section-container
@@ -164,12 +142,6 @@ export default {
 
     .introduction
       line-height 1.5
-
-    .connections
-      a
-        width 3.5*x
-        line-height 3.5*x
-        font-size 1.5*x
 
     #home-arrow-down
       font-size 2*x

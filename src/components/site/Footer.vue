@@ -1,7 +1,17 @@
 <template>
   <div id="site-footer-wrapper">
-    <section-footer-social></section-footer-social>
+
+    <section id="section-social" class="section-default section-dark">
+      <div class="section-container">
+        <header class="section-header"><h2>Social</h2></header>
+        <div class="section-content">
+          <connections></connections>
+        </div>
+      </div>
+    </section>
+
     <section-footer-cta></section-footer-cta>
+
     <footer id="site-footer">
       <p class="left">&copy; 2016 Tendermint</p>
       <p class="right">
@@ -15,14 +25,11 @@
 </template>
 
 <script>
-import SectionFooterSocial from '../sections/FooterSocial'
-import SectionFooterCta from '../sections/FooterCta'
-
 export default {
   name: 'site-footer',
   components: {
-    SectionFooterSocial,
-    SectionFooterCta
+    SectionFooterCta: require('../sections/FooterCta'),
+    Connections: require('../partials/Connections')
   }
 }
 </script>
@@ -33,6 +40,7 @@ export default {
 #site-footer-wrapper
   position relative
   z-index 11
+
 #site-footer
   border-top 1px solid lighten(mcolor, 7%)
 

@@ -3,6 +3,8 @@
     * Added production deployment script, run with `npm run build` and then `npm run prod`
     * Added the Tendermint: from Then to Now post over.
     * Fixed: local images in markdown files were broken, fixed it for documentation, still need to fix for blog
+* Footer
+    * Simplified footer
 * Home http://tendermint.nylira.com/community/software-ecosystem
     * Changed the Subscribe button to Install Tendermint
     * Removed video
