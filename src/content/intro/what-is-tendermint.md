@@ -6,62 +6,31 @@ TMSP, find more details in the [documentation](/docs).
 
 ## What is Tendermint?
 
-Tendermint is designed to provide an advanced form of fault tolerance to a large class of applications.
-It consists of two chief technical components: 
+Tendermint is software for securely and consistently replicating an application on many machines.
+By securely, we mean that Tendermint works even if up to 1/3 of machines fail in arbitrary ways.
+By consistently, we mean that every non-faulty machine sees the same transaction log and computes the same state.
+Secure and consistent replication is a fundamental problem in distributed systems; 
+it plays a critical role in the fault tolerance of a broad range of applications, 
+from currencies, to elections, to infrastructure orchestration, and beyond.
 
-1) Consensus Algorithm - enables many instances of the application to exist simultaneously in different locations and yet 
-stay in sync with one another, even if some of them fail in arbitrary ways.
+The ability to tolerate machines failing in arbitrary ways, including becoming malicious, is known as Byzantine fault tolerance (BFT).
+The theory of BFT is decades old, but software implementations have only became popular recently,
+due largely to the success of "blockchain technology" like Bitcoin and Ethereum. 
+Blockchain technology is just a reformalization of BFT in a more modern setting,
+with emphasis on peer-to-peer networking and cryptographic authentication.
+The name derrives from the way transactions are batched in blocks,
+where each block contains a cryptographic hash of the previous one, forming a chain.
+In practice, the blockchain data structure actually optimizes BFT design.
 
-2) Application Interface - an interface which models the application as an arbitrary deterministic state machine, 
-enabling the consensus algorithm to support many different kinds of applications, written in any programming language.
+Tendermint consists of two chief technical components: a blockchain consensus engine and a generic application interface.
+The consensus engine, called Tendermint Core, ensures that the same transactions are recorded on every machine in the same order.
+The application interface, called the Tendermint Socket Protocol (TMSP), enables the transactions to be processed in any programming language.
+Unlike other blockchain and consensus solutions, which come pre-packaged with built in state machines (like a fancy key-value store,
+or a quirky scripting language), developers can use Tendermint for BFT state machine replication of applications written in 
+whatever programming language and development environment is right for them.
 
-In more technical jargon, we say that Tendermint is general purpose software for [Byzantine fault tolerant (BFT)](/docs/definitions#BFT)
-[state machine replication](/docs/definitions#state-machine-replication).
-Given an arbitrary deterministic state machine, written in any programming language, 
-Tendermint ensures that every replica of the state machine sees the same ordered stream of input transactions, and computes the same results,
-even in the face of arbitrary failures. 
-Replicas may crash, get hacked, lie, succumb to radiation damage, or exhibit otherwise Byzantine behaviours;
-so long as less than 1/3 of them are corrupted, correct replicas will agree on the history of transactions and the current state.
-
-Replicas participating in Tendermint consensus are called [validators](/docs/internals/validators).
-They take turns proposing and voting for blocks of transactions to run against the state machine.
-Each block contains a cryptographic commitment to the previous block, yielding a [blockchain](/docs/definitions#blockchain).
-Hence, Tendermint is also known as a blockchain consensus engine.
-
-[Most blockchains and consensus solutions](/intro/tendermint-vs) provide a built-in application,
-typically in the form of an opinionated key-value store, scripting language, or virtual machine design.
-In contrast, Tendermint strives to make a minimal number of assumptions about the application state, 
-giving developers the utmost freedom to express their application logic using the tools right for them. 
-
-To achieve this flexibility, Tendermint and the application it powers run in
-separate UNIX processes, and communicate via a simple messaging protocol
-called the Tendermint Socket Protocol, or TMSP. Tendermint works with any application
-conforming to the TMSP interface, ensuring that transactions are run in the same order for each replica of the application.
-
-In addition to the flexibility provided to application developers, 
-the [Tendermint consensus algorithm](/docs/internals/byzantine-consensus-algorithm) itself
-has many benefits when compared with alternative consensus algorithms, 
-like Proof-of-Work, Raft, PBFT, and so on:
-
-* __simplicity__: Tendermint continuously commits
-blocks and uses the same mechanism to commit blocks as it does to handle failure, 
-making it easy to understand and reason about.
-
-* __speed__: Tendermint blocks can commit to finality in the order of 1 second.
-Tendermint can handle transaction volume at rates of up to 10,000
-transactions per second for 250byte transactions.  The bottleneck is in the
-application.  
-
-* __security__: Tendermint consensus is not just fault tolerant,
-it's optimally Byzantine fault-tolerant, with accountability.  When the
-blockchain forks, there is a way to determine liability and punish those who
-misbehaved.
-
-* __scalability__: Unlike Proof-of-Work, running parallel blockchains does not diminish the speed or
-security of each chain, so it is possible to shard the application state and
-achieve greater horizontal scalability. 
-The algorithm can also scale to hundreds or thousands of validators (depending on desired block times), and
-will only get better over time with advances in bandwidth and cpu capacity.
+Tendermint is designed to be easy-to-use, simple-to-understand, highly performant, and useful
+for a wide variety of distributed applications. [Get started with Tendermint today!](getting-started).
 
 ## Next Steps
 
