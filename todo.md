@@ -1,5 +1,8 @@
+# 2016-11-03
+* Added production deployment script, run with `npm run build` and then `npm run prod`
+
 # 2016-11-02
-* Sidebar
+* Sidebar updated: https://tendermint.nylira.com/docs
     * Added a scrollbar, and scrolling in the sidebar no longer propogates to the page
     * Fixed the toggle capability for the sidebar
     * Improved sidebar design and usability robustness 

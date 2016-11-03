@@ -6,6 +6,7 @@
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
+    "prod": "node build/prod-server.js",
     "blog": "node blog/build.js",
     "build": "node blog/build.js && node build/build.js",
     "unit": "karma start test/unit/karma.conf.js --single-run",

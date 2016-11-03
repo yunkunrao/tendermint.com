@@ -2,6 +2,19 @@
 
 > The website for Tendermint.
 
+## Production Deployment
+
+``` bash
+# install dependencies
+npm install
+
+# build for production with minification
+npm run build
+
+# run the production server
+npm run prod
+```
+
 ## Editing Content
 
 Edit markdown content content posts in `./src/content`.
