@@ -1,3 +1,22 @@
+# 2016-11-04
+* General
+    * Updated the Tendermint README to show how to edit content across the site.
+    * Simplified the footer design
+* Home
+    * Hid the Resources section
+* Intro
+    * Moved the Technology images into TSMP Overview and Consensus Overview
+* Community/Jobs
+    * Created the jobs index page with a filterable tag system
+    * Jobs are sorted by priority levels and then by title
+    * Created individual job pages.
+* Community/SoftwareEcosystem
+    * Added a table view for larger displays
+    * Allows for re-ordering by name, language, tech, and description.
+    * Allows for searching of entries.
+
+Next monday: footer simplification, design improvements, bug fixes
+
 # 2016-11-03
 * General
     * Added production deployment script, run with `npm run build` and then `npm run prod`

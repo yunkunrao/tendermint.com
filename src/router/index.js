@@ -17,7 +17,8 @@ const routes = [
 
   // Community Pages
   { path: '/community', component: page('Community/Index') },
-  { path: '/community/jobs', component: page('Community/Jobs') },
+  { path: '/community/jobs', component: page('Community/Jobs/Index') },
+  { path: '/community/jobs/:entry', component: page('Community/Jobs/Entry') },
   { path: '/community/media', component: page('Community/Media') },
   { path: '/community/presentations', component: page('Community/Presentations/Index') },
   { path: '/community/presentations/:entry', component: page('Community/Presentations/Entry') },

@@ -5,7 +5,7 @@
       <what-is-tendermint v-if="r()"></what-is-tendermint>
       <tendermint-vs v-if="r('tendermint-vs')"></tendermint-vs>
       <what-is-tmsp v-if="r('what-is-tmsp')"></what-is-tmsp>
-      <technology v-if="r('technology')"></technology>
+      <consensus v-if="r('consensus')"></consensus>
       <install-tendermint v-if="r('install')"></install-tendermint>
       <first-tmsp v-if="r('first-tmsp')"></first-tmsp>
       <deploy-testnet v-if="r('deploy-testnet')"></deploy-testnet>
@@ -22,7 +22,7 @@ export default {
     TendermintVs: require('../../../content/intro/tendermint-vs.md'),
     WhatIsTendermint: require('../../../content/intro/what-is-tendermint.md'),
     WhatIsTmsp: require('../../../content/intro/what-is-tmsp.md'),
-    Technology: require('../../../content/intro/technology.md'),
+    Consensus: require('../../../content/intro/consensus.md'),
     InstallTendermint: require('../../../content/intro/getting-started/install.md'),
     FirstTmsp: require('../../../content/intro/getting-started/first-tmsp-app.md'),
     DeployTestnet: require('../../../content/intro/getting-started/deploy-testnet.md'),

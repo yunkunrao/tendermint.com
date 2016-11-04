@@ -1,4 +1,4 @@
-import data from '../json/posts.json'
+import data from '../json/jobs.json'
 
 const state = {
   all: data

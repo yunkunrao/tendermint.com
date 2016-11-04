@@ -1,50 +1,57 @@
-# tendermint-site
+# Tendermint Website
 
 > The website for Tendermint.
 
-## Production Deployment
+## Development
 
 ``` bash
 # install dependencies
 npm install
 
-# build for production with minification
+# serve with hot reload at localhost:8800
+npm run dev
+```
+
+## Editing Content
+
+``` bash
+# Edit Blog > Posts
+./src/content/blog/
+
+# Edit Intro Pages
+./src/content/intro/
+
+# Edit Docs Pages
+./src/content/docs/
+
+# Edit Community > Software Ecosystem
+./src/store/json/software.json
+
+# Edit Community > Team
+./src/store/modules/people.js
+
+# Edit Community > Jobs
+./src/store/json/jobs.json
+
+# Edit Community > Presentations
+./src/store/modules/presentations.js
+
+```
+
+## Production
+
+``` bash
+# install dependencies
+npm install
+
+# build the blog (optional)
+npm run blog
+
+# build everything for production with minification
 npm run build
 
 # run the production server
 npm run prod
 ```
 
-## Editing Content
 
-Edit markdown content content posts in `./src/content`.
-
-Edit json content content in `./src/store/json` or `./src/store/modules`
-
-Rebuild the blog with `npm run blog`
-
-Build the entire site with `npm run build`
-
-## Build Setup
-
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
-```
-
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
