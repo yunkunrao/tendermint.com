@@ -129,8 +129,9 @@ export default {
     tmspApps () {
       let key = this.activeKey
       let query = this.searchQuery
-      if (key === 'tech') { key = 'language' }
-      let results = orderBy(this.software.tmspApps, [key], ['asc'])
+      if (key === 'tech') { key = ['language'] }
+      if (key === 'name') { key = [app => app.name.toLowerCase()] }
+      let results = orderBy(this.software.tmspApps, key, ['asc'])
 
       if (query) {
         let options = {
@@ -145,8 +146,9 @@ export default {
     tmspServers () {
       let key = this.activeKey
       let query = this.searchQuery
-      if (key === 'tech') { key = 'language' }
-      let results = orderBy(this.software.tmspServers, [key], ['asc'])
+      if (key === 'tech') { key = ['language'] }
+      if (key === 'name') { key = [app => app.name.toLowerCase()] }
+      let results = orderBy(this.software.tmspServers, key, ['asc'])
 
       if (query) {
         let options = {
@@ -161,8 +163,9 @@ export default {
     deploymentTools () {
       let key = this.activeKey
       let query = this.searchQuery
-      if (key === 'tech') { key = 'technology' }
-      let results = orderBy(this.software.deploymentTools, [key], ['asc'])
+      if (key === 'tech') { key = ['technology'] }
+      if (key === 'name') { key = [app => app.name.toLowerCase()] }
+      let results = orderBy(this.software.deploymentTools, key, ['asc'])
 
       if (query) {
         let options = {
@@ -177,8 +180,9 @@ export default {
     competitors () {
       let key = this.activeKey
       let query = this.searchQuery
-      if (key === 'tech') { key = 'language' }
-      let results = orderBy(this.software.competitors, [key], ['asc'])
+      if (key === 'tech') { key = ['language'] }
+      if (key === 'name') { key = [app => app.name.toLowerCase()] }
+      let results = orderBy(this.software.competitors, key, ['asc'])
 
       if (query) {
         let options = {
