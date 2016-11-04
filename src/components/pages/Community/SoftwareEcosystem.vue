@@ -135,6 +135,7 @@ export default {
 
       if (query) {
         let options = {
+          threshold: 0.25,
           keys: ['name', 'author', 'language', 'description']
         }
         let fuse = new Fuse(results, options)
@@ -152,6 +153,7 @@ export default {
 
       if (query) {
         let options = {
+          threshold: 0.25,
           keys: ['name', 'author', 'language', 'description']
         }
         let fuse = new Fuse(results, options)
@@ -169,6 +171,7 @@ export default {
 
       if (query) {
         let options = {
+          threshold: 0.25,
           keys: ['name', 'author', 'technology', 'description']
         }
         let fuse = new Fuse(results, options)
@@ -186,6 +189,7 @@ export default {
 
       if (query) {
         let options = {
+          threshold: 0.25,
           keys: ['name', 'author', 'language', 'description']
         }
         let fuse = new Fuse(results, options)
