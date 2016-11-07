@@ -12,6 +12,12 @@ import SectionHomeBenefits from '../sections/HomeBenefits'
 import SectionHomeRecruiting from '../sections/HomeRecruiting'
 
 export default {
+  name: 'page-index',
+  head: {
+    title: {
+      inner: 'Byzantine fault-tolerant replicated state machines in any programming language'
+    }
+  },
   components: {
     SectionHomeCover,
     SectionHomeBenefits,

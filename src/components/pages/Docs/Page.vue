@@ -5,6 +5,7 @@
       <index v-if="r()"></index>
       <faq v-if="r('faq')"></faq>
       <roadmap v-if="r('roadmap')"></roadmap>
+      <definitions v-if="r('definitions')"></definitions>
       <app-dev v-if="r('app-development')"></app-dev>
       <app-arch v-if="r('app-architecture')"></app-arch>
       <introduction v-if="r('introduction')"></introduction>
@@ -29,6 +30,7 @@ export default {
     Commands: require('../../../content/docs/commands.md'),
     Faq: require('../../../content/docs/faq.md'),
     Roadmap: require('../../../content/docs/roadmap.md'),
+    Definitions: require('../../../content/docs/definitions.md'),
 
     // guides
     AppDev: require('../../../content/docs/guides/app-dev.md'),
@@ -47,7 +49,32 @@ export default {
   methods: {
     r (fragment) {
       return this.$route.params.page === fragment
+    },
+    setPageTitle () {
+      let val
+      switch (this.$route.params.page) {
+        case 'faq': val = 'Frequently Asked Questions'; break
+        case 'roadmap': val = 'Roadmap'; break
+        case 'definitions': val = 'Definitions'; break
+        case 'app-architecture': val = 'Application Architecture - Guides'; break
+        case 'app-development': val = 'Application Development - Guides'; break
+        case 'introduction': val = 'Introduction - Internals'; break
+        case 'validators': val = 'Validators - Internals'; break
+        case 'consensus': val = 'Byzantine Consensus Algorithm - Internals'; break
+        case 'block-structure': val = 'Block Structure - Internals'; break
+        case 'rpc': val = 'RPC - Internals'; break
+        case 'genesis': val = 'Genesis - Internals'; break
+        case 'configuration': val = 'Configuration - Internals'; break
+        case 'light-client-protocol': val = 'Light Client Protocol - Internals'; break
+        case 'commands': val = 'Commands - Internals'; break
+        default: val = 'Documentation'; break
+      }
+      document.title = val += ' - Tendermint'
     }
+  },
+  mounted () { this.setPageTitle() },
+  watch: {
+    '$route.params.page' () { this.setPageTitle() }
   }
 }
 </script>

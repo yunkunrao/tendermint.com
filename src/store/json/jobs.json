@@ -4,7 +4,7 @@
     "title": "Software Engineer: Application Developer",
     "subtitle": "Golang, APIs, Distributed Systems",
     "tags": ["golang", "applications"],
-    "priority": 3,
+    "weight": 3,
     "active": true,
     "responsibilities": [
       "Develop and maintain a TMSP application to solve classic distributed systems problems like key-value storage, locking, leader-election, service discovery, etc (ie. a TMSP version of [consul](https://www.consul.io/) or [etcd](https://coreos.com/etcd/)).",
@@ -16,7 +16,7 @@
     "title": "Software Engineer: Application Developer and Dev Outreach",
     "subtitle": "Javascript, Docker",
     "tags": ["javascript", "applications"],
-    "priority": 3,
+    "weight": 3,
     "active": true,
     "responsibilities": [
       "Maintain an implementation of TMSP and some example applications in Javascript",
@@ -29,7 +29,7 @@
     "title": "Software Engineer: Bitcoin",
     "subtitle": "C++, Bitcoin Core",
     "tags": ["c++", "bitcoin"],
-    "priority": 10,
+    "weight": 10,
     "active": true,
     "responsibilities": [
       "Maintain an implementation of TMSP and some example applications in C++",
@@ -43,7 +43,7 @@
     "title": "Software Engineer: Networking and Consensus",
     "subtitle": "Golang, P2P, Distributed Consensus",
     "tags": ["golang", "p2p", "consensus"],
-    "priority": 2,
+    "weight": 2,
     "active": true,
     "responsibilities": [
       "Improve the implementation of the core Tendermint consensus algorithm",
@@ -55,7 +55,7 @@
     "title": "Software Engineer: Developer Tooling",
     "subtitle": "Golang, APIs",
     "tags": ["golang", "tooling"],
-    "priority": 2,
+    "weight": 2,
     "active": true,
     "responsibilities": [
       "Improve and maintain the Tendermint RPC system",
@@ -69,7 +69,7 @@
     "title": "Master of Automation",
     "subtitle": "Continuous Integration, Docker, Cloud, Golang",
     "tags": ["cloud", "automation"],
-    "priority": 1,
+    "weight": 1,
     "active": true,
     "responsibilities": [
       "Automate more elements of building, testing, and deploying the software via Continuous Integration",
@@ -83,7 +83,7 @@
     "title": "Research Scientist",
     "subtitle": "Cryptography, Distributed Consensus, Economics, Formal Verification",
     "tags": ["research"],
-    "priority": 5,
+    "weight": 5,
     "active": true,
     "responsibilities": [
       "Analyze, audit, verify, and improve Tendermint protocols and implementations",
@@ -96,7 +96,7 @@
     "title": "Security Engineer",
     "subtitle": "Cryptography, Hardware/Mobile",
     "tags": ["security", "hardware"],
-    "priority": 4,
+    "weight": 4,
     "active": true,
     "responsibilities": [
       "Develop and maintain hardware-based and/or mobile-based solutions for signing Tendermint votes and application transactions"

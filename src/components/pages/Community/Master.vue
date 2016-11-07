@@ -1,10 +1,12 @@
 <template>
   <div class="master" v-bind:class="{ active: isActive }">
-    <a href="https://github.com/tendermint/tendermint/issues">Open Issues (Github)</a>
-    <router-link :to="'/community/software-ecosystem'">Software Ecosystem</router-link>
-    <router-link :to="'/community/team'">Tendermint Team</router-link>
-    <router-link :to="'/community/jobs'">Tendermint Jobs</router-link>
-    <router-link :to="'/community/media'">Media Mentions</router-link>
+    <nav>
+      <a href="https://github.com/tendermint/tendermint/issues">Open Issues (Github)</a>
+      <router-link :to="'/ecosystem'">Software Ecosystem</router-link>
+      <router-link :to="'/about'">About</router-link>
+      <router-link :to="'/careers'">Careers</router-link>
+      <router-link :to="'/press'">Press &amp; Media Mentions</router-link>
+    </nav>
     <thumb-button @click="setIsActive(false)" v-show="isActive" icon="close"></thumb-button>
     <thumb-button @click="setIsActive(true)" v-show="!isActive" icon="bars"></thumb-button>
   </div><!--nav-blocks-->

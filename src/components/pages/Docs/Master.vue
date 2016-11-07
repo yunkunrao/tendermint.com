@@ -5,6 +5,7 @@
       <router-link :to="'/docs'" exact>Index</router-link>
       <router-link :to="'/docs/faq'">FAQ</router-link>
       <router-link :to="'/docs/roadmap'">Roadmap</router-link>
+      <router-link :to="'/docs/definitions'">Definitions</router-link>
       <div class="title">Guides</div>
       <router-link :to="'/docs/guides/app-development'">App Development</router-link>
       <router-link :to="'/docs/guides/app-architecture'">App Architecture</router-link>
@@ -53,14 +54,13 @@ export default {
   mounted () {
     this.toggleAutomatic()
     $(window).resize(() => this.toggleAutomatic())
-
     let nav = document.querySelector('.master nav')
-    console.log('docs-master-nav', nav)
+    // console.log('docs-master-nav', nav)
     Ps.initialize(nav)
   },
   watch: {
     'isActive' (val) {
-      console.log('isActive changed!', val)
+      // console.log('isActive changed!', val)
     }
   }
 }

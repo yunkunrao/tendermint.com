@@ -59,11 +59,6 @@
 import { mapGetters } from 'vuex'
 
 export default {
-  head: {
-    title: {
-      inner: 'About'
-    }
-  },
   computed: {
     teamMembers () {
       return this.people.filter(p => p.category === 'member')
@@ -77,15 +72,18 @@ export default {
   },
   methods: {
     avatarSrc (slug) {
-      return require('../../../assets/images/people/' + slug + '.jpg')
+      return require('../../assets/images/people/' + slug + '.jpg')
     }
+  },
+  mounted () {
+    document.title = 'About - Tendermint'
   }
 }
 </script>
 
 
 <style lang="stylus" scoped>
-@require '../../../styles/variables.styl'
+@require '../../styles/variables.styl'
 
 .section-portraits
   .section-container

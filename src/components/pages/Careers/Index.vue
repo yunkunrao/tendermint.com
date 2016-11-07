@@ -3,7 +3,7 @@
     <section id="section-top">
       <div class="section-container">
         <div class="article-wrapper">
-          <h1>Tendermint Jobs</h1>
+          <h1>Careers</h1>
           <div class="tags">
             <div id="tag-all" class="tag active" @click="setActiveTag($event)">all</div>
             <div class="tag" v-for="tag in tags" @click="setActiveTag($event,tag)">{{ tag }}</div>
@@ -15,7 +15,7 @@
     <section class="section-default">
       <div class="section-container">
         <div class="section-content jobs">
-          <router-link class="job" v-for="job in filteredJobs" :to="'/community/jobs/' + job.id">
+          <router-link class="job" v-for="job in filteredJobs" :to="'/careers/' + job.id">
             <div class="title">{{ job.title }}</div>
             <div class="subtitle">{{ job.subtitle }}</div>
           </router-link>
@@ -46,7 +46,7 @@ export default {
     },
     filteredJobs () {
       let activeTag = this.activeTag
-      let orderedJobs = orderBy(this.jobs, ['priority'], ['desc'])
+      let orderedJobs = orderBy(this.jobs, ['weight'], ['asc'])
 
       if (activeTag === 'all') {
         return orderedJobs
@@ -75,13 +75,16 @@ export default {
       this.activeTag = 'all'
       return
     }
+  },
+  mounted () {
+    document.title = 'Careers - Tendermint'
   }
 }
 </script>
 
 
 <style lang="stylus" scoped>
-@require '../../../../styles/variables.styl'
+@require '../../../styles/variables.styl'
 
 .tags
   margin-top 1.5*x

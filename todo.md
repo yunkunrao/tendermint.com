@@ -1,16 +1,29 @@
+# 2016-11-07
+* General
+    * Fixed: Markdown pages didn't have approprite HTML titles
+    * Fixed: A lot of broken markdown links, still more to fix
+    * Overall design simplification
+    * Footer design updated
+    * Fixed/improved some routing
+* Community/Jobs
+    * Weighted in the correct order
+    * renamed to /Careers
+* Docs/Definitions
+    * Created this page, no definitions yet
+
 # 2016-11-04
 * General
     * Updated the Tendermint README to show how to edit content across the site.
     * Simplified the footer design
 * Home
     * Hid the Resources section
-* Intro
+* Intro https://tendermint.nylira.com/intro/what-is-tmsp
     * Moved the Technology images into TSMP Overview and Consensus Overview
-* Community/Jobs
+* Community/Jobs https://tendermint.nylira.com/community/jobs
     * Created the jobs index page with a filterable tag system
     * Jobs are sorted by priority levels and then by title
     * Created individual job pages.
-* Community/SoftwareEcosystem
+* Community/SoftwareEcosystem https://tendermint.nylira.com/community/software-ecosystem
     * Added a table view for larger displays
     * Allows for re-ordering by name, language, tech, and description.
     * Allows for searching of entries.

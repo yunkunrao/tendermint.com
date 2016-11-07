@@ -15,6 +15,9 @@ import Master from './Master'
 export default {
   components: {
     Master
+  },
+  mounted () {
+    document.title = 'Community - Tendermint'
   }
 }
 </script>

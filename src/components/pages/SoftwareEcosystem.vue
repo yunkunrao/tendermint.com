@@ -1,5 +1,5 @@
 <template>
-  <div id="page-community">
+  <div class="component">
     <section id="section-top">
       <div class="section-container">
         <h1>Software Ecosystem</h1>
@@ -123,8 +123,7 @@ import $ from 'jquery'
 import Fuse from 'fuse.js'
 
 export default {
-  components: {
-  },
+  name: 'page-software-ecosystem',
   computed: {
     tmspApps () {
       let key = this.activeKey
@@ -215,12 +214,15 @@ export default {
       this.activeKey = key
       // console.log('reordering by', this.activeKey)
     }
+  },
+  mounted () {
+    document.title = 'Software Ecosystem - Tendermint'
   }
 }
 </script>
 
 <style lang="stylus" scoped>
-@require '../../../styles/variables.styl'
+@require '../../styles/variables.styl'
 
 .software-header
   display none

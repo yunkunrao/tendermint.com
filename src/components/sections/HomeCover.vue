@@ -9,7 +9,7 @@
 
       <install-tendermint></install-tendermint>
 
-      <connections></connections>
+      <!--<connections></connections>-->
 
     </div><!--container-->
     <a id="home-arrow-down" @click="scrollDown"><i class="fa fa-angle-down"></i></a>
@@ -43,6 +43,7 @@ export default {
 
 #section-cover
   background mcolor url('../../assets/images/home/gradient.jpg') no-repeat center center
+  background mcolor
   background-size cover
   width 100vw
   height 100vh
@@ -101,10 +102,10 @@ export default {
     text-align center
 
   #home-arrow-down
-    background hsla(mhue,msat,mlit - 20%,0.1)
     transition 0.2s ease all
+    cursor pointer
     &:hover
-      background hsla(mhue,msat,mlit - 20%,0.5)
+      background hsla(0,0,0,0.2)
       color lighten(mcolor,80%)
 
 @media screen and (min-height: 400px)

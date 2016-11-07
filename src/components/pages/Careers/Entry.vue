@@ -49,15 +49,17 @@ export default {
     })
   },
   mounted () {
-    console.log(this.$route.params.entry)
-    console.log(this.jobs)
+    // console.log(this.$route.params.entry)
+    // console.log(this.jobs)
+
+    document.title = this.job.title + ' - Careers - Tendermint'
   }
 }
 </script>
 
 
 <style lang="stylus" scoped>
-@require '../../../../styles/variables.styl'
+@require '../../../styles/variables.styl'
 
 .tags
   margin-top 1.5*x

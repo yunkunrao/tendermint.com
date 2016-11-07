@@ -1,3 +1,3 @@
-# Tendermint Commands
+# Commands
 
 Work in progress.

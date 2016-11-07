@@ -65,5 +65,5 @@ will only get better over time with advances in bandwidth and cpu capacity.
 
 ## Next Steps
 
-- See how [tendermint compares to other software](tendermint-vs)
-- Continue with the [getting started guide](getting-started) to install and run example tendermint applications
+- See how [tendermint compares to other software](/intro/tendermint-vs)
+- Continue with the [getting started guide](/intro/getting-started/install) to install and run example tendermint applications

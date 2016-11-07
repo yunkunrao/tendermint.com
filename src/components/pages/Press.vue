@@ -1,10 +1,10 @@
 <template>
-  <div id="page-blog-index">
+  <div class="component">
     <section id="section-top">
       <div class="section-container">
-        <div class="article-wrapper" id="blog-index">
-          <h1><i class="fa fa-newspaper-o"></i> Media Mentions</h1>
-          <p>Tendermint and Cosmos mentioned across media worldwide.</p>
+        <div class="article-wrapper">
+          <h1>Press Info</h1>
+          <p>Mentions in the news and media resources.</p>
         </div>
       </div>
     </section>
@@ -44,6 +44,9 @@ export default {
     ...mapGetters({
       media: 'allMedia'
     })
+  },
+  mounted () {
+    document.title = 'Press Info - Tendermint'
   }
 }
 </script>

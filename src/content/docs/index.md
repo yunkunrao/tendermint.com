@@ -10,4 +10,4 @@ Get started building your TMSP application or server by reading the [application
 
 To learn about integrating with clients, see the [application architecture guide](/docs/guides/app-architecture).
 
-See [example applications](/community/software-ecosystem) for motivation and inspiration!
+See [example applications](/ecosystem) for motivation and inspiration!

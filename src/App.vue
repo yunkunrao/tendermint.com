@@ -41,7 +41,7 @@ export default {
       { r: 'manifest', h: require('./assets/favicon/manifest.json') }
     ]
   },
-  ready () {
+  mounted () {
     appScript()
   }
 }

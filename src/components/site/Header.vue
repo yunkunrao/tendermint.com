@@ -45,12 +45,13 @@ highlighted-border-top-color()
   z-index 100
 
   background mcolor url('../../assets/images/home/gradient.jpg') no-repeat top right
+  background mcolor
   background-size cover
 
   width 100vw
   display flex
 
-  box-shadow hsla(mhue,msat,mlit - 15%,0.15) 0 0.125*x 0.16*x
+  // box-shadow hsla(mhue,msat,mlit - 15%,0.15) 0 0.125*x 0.16*x
 
   height 2.4*x
 
@@ -132,8 +133,6 @@ highlighted-border-top-color()
   #site-header
     nav
       a
-        border-left 1px solid darken(mcolor,20%)
-        border-left 1px solid hsla(0,0,0,0.2)
         padding 0 1.5*x
 
 @media screen and (min-width: 720px)
