@@ -1,5 +1,12 @@
 # Tendermint vs. Other Software
 
+Tendermint is broadly similar to two classes of software.
+The first class consists of distributed key-value stores, 
+like Zookeeper, etcd, and consul, which use non-BFT consensus.
+The second class is known as "blockchain technology",
+and consists of both cryptocurrencies like Bitcoin and Ethereum, 
+and alternative distributed ledger designs like Hyperledger and ErisDB.
+
 ## Zookeeper, etcd, consul
 
 Zookeeper, etcd, and consul are all implementations of a key-value store atop a classical, 
@@ -25,12 +32,13 @@ The layout of this Tendermint website content is also ripped directly and withou
 ## Bitcoin, Ethereum, etc.
 
 Tendermint emerged in the tradition of blockchains like Bitcoin, Ethereum, etc.
-with the desire to have a more efficient and secure consensus algorithm than Bitcoin's Proof of Work.
+with the goal of providing a more efficient and secure consensus algorithm than Bitcoin's Proof of Work.
 In the early days, Tendermint had a simple currency built in, and to become a validator in the system 
 user's had to "bond" units of the currency into a security deposit which could be revoked if they misbehaved - 
 this is what made Tendermint a Proof-of-Stake algorithm.
 
 Since then, Tendermint has evolved to be a general purpose blockchain consensus engine that can host arbitrary application states.
+That means it can be used as a plug-and-play replacement for the consensus engines of other blockchain software.
 So one can take the current Ethereum code base, whether in Rust, or Go, or Haskell, and run it as a TMSP application
 using Tendermint consensus. Indeed, [we did that](github.com/tendermint/geth-tmsp).
 Essentially, TMSP enables smart contracts in any programming language.
