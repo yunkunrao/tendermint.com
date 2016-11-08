@@ -1,6 +1,6 @@
 # 2016-11-07
 * General
-    * Fixed: Markdown pages didn't have approprite HTML titles
+    * Fixed: Markdown pages didn't have approprite HTML titles, still more to fix
     * Fixed: A lot of broken markdown links, still more to fix
     * Overall design simplification
     * Footer design updated
@@ -10,6 +10,8 @@
     * renamed to /Careers
 * Docs/Definitions
     * Created this page, no definitions yet
+
+Tomorrow: fix more broken links and images in the docs and blog posts, flesh out the Contact page and the Press page
 
 # 2016-11-04
 * General
