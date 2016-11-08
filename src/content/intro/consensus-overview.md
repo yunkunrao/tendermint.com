@@ -1,4 +1,4 @@
-# Tendermint Consensus
+# Consensus Overview
 
 Tendermint is an easy-to-understand, mostly asynchronous, BFT consensus protocol.
 

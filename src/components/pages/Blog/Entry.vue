@@ -58,6 +58,9 @@ export default {
     ...mapGetters([
       'allPosts'
     ])
+  },
+  mounted () {
+    document.title = this.entry.title + ' - Tendermint'
   }
 }
 </script>

@@ -4,8 +4,8 @@
     <div class="detail"><div class="article-body">
       <what-is-tendermint v-if="r()"></what-is-tendermint>
       <tendermint-vs v-if="r('tendermint-vs')"></tendermint-vs>
-      <what-is-tmsp v-if="r('what-is-tmsp')"></what-is-tmsp>
-      <consensus v-if="r('consensus')"></consensus>
+      <tmsp-overview v-if="r('tmsp-overview')"></tmsp-overview>
+      <consensus-overview v-if="r('consensus-overview')"></consensus-overview>
       <install v-if="r('install')"></install>
       <first-tmsp v-if="r('first-tmsp')"></first-tmsp>
       <deploy-testnet v-if="r('deploy-testnet')"></deploy-testnet>
@@ -15,14 +15,15 @@
 </template>
 
 <script>
+import hljs from 'highlight.js'
 export default {
   name: 'intro-page',
   components: {
     Master: require('./Master'),
     TendermintVs: require('../../../content/intro/tendermint-vs.md'),
     WhatIsTendermint: require('../../../content/intro/what-is-tendermint.md'),
-    WhatIsTmsp: require('../../../content/intro/what-is-tmsp.md'),
-    Consensus: require('../../../content/intro/consensus.md'),
+    TmspOverview: require('../../../content/intro/tmsp-overview.md'),
+    ConsensusOverview: require('../../../content/intro/consensus-overview.md'),
     Install: require('../../../content/intro/getting-started/install.md'),
     FirstTmsp: require('../../../content/intro/getting-started/first-tmsp-app.md'),
     DeployTestnet: require('../../../content/intro/getting-started/deploy-testnet.md'),
@@ -33,21 +34,28 @@ export default {
     setPageTitle () {
       let val
       switch (this.$route.params.page) {
+        case undefined: val = 'Introduction to Tendermint'; break
         case 'tendermint-vs': val = 'Tendermint vs. Other Software'; break
-        case 'what-is-tmsp': val = 'What is TMSP?'; break
-        case 'consensus': val = 'Tendermint Consensus'; break
+        case 'tmsp-overview': val = 'TMSP Overview'; break
+        case 'consensus-overview': val = 'Consensus Overview'; break
         case 'install': val = 'Install Tendermint'; break
         case 'first-tmsp': val = 'First TMSP App'; break
         case 'deploy-testnet': val = 'Deploy a Testnet'; break
         case 'next-steps': val = 'Next Steps Consensus'; break
-        default: val = 'Introduction to Tendermint'; break
+        default: this.$router.replace({ path: '/404' }); break
       }
       document.title = val += ' - Tendermint'
+    },
+    onParamChange () {
+      this.setPageTitle()
+      hljs.initHighlightingOnLoad()
     }
   },
-  mounted () { this.setPageTitle() },
+  mounted () {
+    this.onParamChange()
+  },
   watch: {
-    '$route.params.page' () { this.setPageTitle() }
+    '$route.params.page' () { this.onParamChange() }
   }
 }
 </script>

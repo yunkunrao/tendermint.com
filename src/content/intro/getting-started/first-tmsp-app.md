@@ -200,6 +200,6 @@ You should get the same results as for the Go version.
 
 Want to write the counter app in your favorite language?! We'd be happy to accept the pull request!
 
-## Next steps
+## Next Step
 
-In the next tutorial, we will show how to [launch a TMSP testnet](/tutorials/launch-a-tmsp-testnet).
+In the next tutorial, we will show how to [launch a TMSP testnet](/intro/getting-started/deploy-testnet).

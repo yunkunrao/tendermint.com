@@ -22,6 +22,7 @@
 </template>
 
 <script>
+import hljs from 'highlight.js'
 export default {
   name: 'intro-page',
   components: {
@@ -53,6 +54,7 @@ export default {
     setPageTitle () {
       let val
       switch (this.$route.params.page) {
+        case undefined: val = 'Documentation'; break
         case 'faq': val = 'Frequently Asked Questions'; break
         case 'roadmap': val = 'Roadmap'; break
         case 'definitions': val = 'Definitions'; break
@@ -67,14 +69,18 @@ export default {
         case 'configuration': val = 'Configuration - Internals'; break
         case 'light-client-protocol': val = 'Light Client Protocol - Internals'; break
         case 'commands': val = 'Commands - Internals'; break
-        default: val = 'Documentation'; break
+        default: this.$router.replace({ path: '/404' }); break
       }
       document.title = val += ' - Tendermint'
+    },
+    onParamChange () {
+      this.setPageTitle()
+      hljs.initHighlightingOnLoad()
     }
   },
-  mounted () { this.setPageTitle() },
+  mounted () { this.onParamChange() },
   watch: {
-    '$route.params.page' () { this.setPageTitle() }
+    '$route.params.page' () { this.onParamChange() }
   }
 }
 </script>

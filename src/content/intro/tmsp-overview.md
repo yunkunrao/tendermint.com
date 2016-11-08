@@ -63,7 +63,7 @@ While programmers can avoid non-determinism by being careful, it is also possibl
 
 ## Getting Started
 
-See the [getting started guide](/intro) for more!
+See the [getting started guide](/intro/getting-started/install) for more!
 
 ## Contributions
 

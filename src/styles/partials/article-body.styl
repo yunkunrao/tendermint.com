@@ -22,11 +22,12 @@
   pre
     font-size 0.75*x
     background #f0f0f0
-    padding 0.25*x 0.5*x
     overflow-x scroll
     margin-bottom 1.5*x
     margin-left -1*x
     margin-right -1*x
+    code
+      margin 0
 
   /* These are technically the same, but use both */
   overflow-wrap break-word
@@ -35,7 +36,7 @@
   /* Adds a hyphen where the word breaks, if supported (No Blink) */
   hyphens auto
 
-  p, ul, ol, table, blockquote, img
+  p, ul, ol, table, blockquote, img, .btn
     margin-bottom 1.5em
 
   .youtube
@@ -44,8 +45,6 @@
 
   p
     code
-      border-radius 3px
-
       &:before, &:after
         letter-spacing -0.2em
         content "\00a0"

@@ -30,9 +30,9 @@ or a quirky scripting language), developers can use Tendermint for BFT state mac
 whatever programming language and development environment is right for them.
 
 Tendermint is designed to be easy-to-use, simple-to-understand, highly performant, and useful
-for a wide variety of distributed applications. [Get started with Tendermint today!](getting-started).
+for a wide variety of distributed applications. [Get started with Tendermint today!](/intro/getting-started/install)
 
 ## Next Steps
 
-- See how [tendermint compares to other software](/intro/tendermint-vs)
-- Continue with the [getting started guide](/intro/getting-started/install) to install and run example tendermint applications
+- See how [Tendermint compares to other software](/intro/tendermint-vs).
+- Continue with the [getting started guide](/intro/getting-started/install) to install and run example tendermint applications.

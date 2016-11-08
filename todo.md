@@ -1,3 +1,26 @@
+# 2016-11-08
+* general
+    * Fixed: more broken links
+    * Improvement: forced a minimum page height so the footer isn't halfway up the page on large displays
+    * Improvement: sidebar vertical height reduced, lets you see more links on shorter screens
+    * Syntax highlighting is back.
+* /
+    * Hid the Recruiting/Custom Blockchains block
+* /intro
+    * Added 'Next Step' to every page of 'Getting Started' for better flow
+* /community
+    * Added a prominent link to Slack
+    * Fleshed out this page with larger links and more text.
+* /blog
+    * Fixed page titles
+    * Fixed footer link not linking to the right page
+    * Cases for Tendermint - fixed some links
+* /contact
+    * Added a couple lines of descriptive text
+    * Added more contact options: twitter, linkedin, etc.
+* /404
+    * Created this page, should match all broken links including subdirectories
+
 # 2016-11-07
 * General
     * Fixed: Markdown pages didn't have approprite HTML titles, still more to fix

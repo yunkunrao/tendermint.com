@@ -127,3 +127,7 @@ Note you can use the `--machines` flag on any command to specify machines,
 for instance `--machines mach[1-3],mach7` will apply to mach1, mach2, mach3, and mach7.
 
 TODO: Document tutorial on docker-machine ssh mach1, docker ps, etc, or at least link to good Docker tutorials.
+
+## Next Steps
+
+Done deploying? Continue [onwards](/intro/getting-started/next-steps).

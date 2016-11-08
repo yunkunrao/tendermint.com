@@ -9,10 +9,8 @@ aliases:
 ---
 
 > <p>After you read this post, don't forget to check out our tutorials!  They also appear at the end of this page.</p>
-
-
-> 1. [Run your first TMSP application](/tutorials/run-your-first-tmsp-application/)
-> 2. [Launch a TMSP testnet](/tutorials/launch-a-tmsp-testnet/)
+> 1. [Run your first TMSP application](/intro/getting-started/first-tmsp)
+> 2. [Launch a TMSP testnet](/intro/getting-started/deploy-testnet/)
 
 ## Motivation
 
@@ -75,8 +73,8 @@ While programmers can avoid non-determinism by being careful, it is also possibl
 
 Follow these tutorials to quickly get started developing your TMSP application.
 
-* [Run your first TMSP application](/tutorials/run-your-first-tmsp-application/)
-* [Launch a TMSP testnet](/tutorials/launch-a-tmsp-testnet/)
+1. [Run your first TMSP application](/intro/getting-started/first-tmsp)
+2. [Launch a TMSP testnet](/intro/getting-started/deploy-testnet/)
 
 ## Contributions
 

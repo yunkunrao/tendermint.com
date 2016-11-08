@@ -9,6 +9,8 @@
 
       <install-tendermint></install-tendermint>
 
+      <p class="source"><i class="fa fa-github"></i> View source on <a href="https://github.com/tendermint/tendermint">GitHub</a></p>
+
       <!--<connections></connections>-->
 
     </div><!--container-->
@@ -74,12 +76,10 @@ export default {
 
   .tagline
     color lighten(mcolor,50%)
-    font-size 0.75*x
+    font-size 0.85*x
     text-transform uppercase
-    letter-spacing 1px
+    letter-spacing 0.0625em
     font-weight 400
-    i.fa
-      color lighten(mcolor,25%)
 
   .introduction
     color lighten(mcolor,58%)
@@ -87,8 +87,12 @@ export default {
     text-align center
     max-width 20em
 
-  .connections
-    display none
+  .source
+    color lighten(mcolor,58%)
+    font-size 0.85*x
+    a
+      font-weight 500
+      color lighten(mcolor,90%)
 
   #home-arrow-down
     position absolute
@@ -101,7 +105,6 @@ export default {
     color lighten(mcolor,50%)
     text-align center
 
-  #home-arrow-down
     transition 0.2s ease all
     cursor pointer
     &:hover
@@ -129,7 +132,7 @@ export default {
     .tagline, .introduction, form
       margin-bottom 2*x
 
-    .tagline
+    .tagline, .source
       font-size x
 
     .introduction

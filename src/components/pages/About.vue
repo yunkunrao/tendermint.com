@@ -1,10 +1,10 @@
 <template>
-  <div id="page-blog-index">
+  <div class="component">
     <section id="section-top">
       <div class="section-container">
-        <div class="article-wrapper" id="blog-index">
-          <h1><i class="fa fa-team"></i>Tendermint Team</h1>
-          <p>Our mission: to bring simplicity, security, and speed to the world&rsquo;s blockchains.</p>
+        <div class="article-wrapper">
+          <h1></i>About Tendermint</h1>
+          <p>Our mission is to bring simplicity, security, and speed to the world&rsquo;s blockchains.</p>
         </div>
       </div>
     </section>

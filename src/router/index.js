@@ -4,16 +4,16 @@ function page (filename) { return require('../components/pages/' + filename) }
 const routes = [
   { path: '/', component: page('Index') },
 
+  // Intro
+  { path: '/intro', component: page('Intro/Page') },
+  { path: '/intro/:page', component: page('Intro/Page') },
+  { path: '/intro/getting-started/:page', component: page('Intro/Page') },
+
   // Docs
   { path: '/docs', component: page('Docs/Page') },
   { path: '/docs/:page', component: page('Docs/Page') },
   { path: '/docs/guides/:page', component: page('Docs/Page') },
   { path: '/docs/internals/:page', component: page('Docs/Page') },
-
-  // Intro
-  { path: '/intro', component: page('Intro/Page') },
-  { path: '/intro/:page', component: page('Intro/Page') },
-  { path: '/intro/getting-started/:page', component: page('Intro/Page') },
 
   // Community Pages
   { path: '/community', component: page('Community/Index') },
@@ -30,7 +30,10 @@ const routes = [
   { path: '/ecosystem', component: page('SoftwareEcosystem') },
   { path: '/press', component: page('Press') },
   { path: '/careers', component: page('Careers/Index') },
-  { path: '/careers/:entry', component: page('Careers/Entry') }
+  { path: '/careers/:entry', component: page('Careers/Entry') },
+
+  { path: '/404', component: page('404') },
+  { path: '*', component: page('404') }
 ]
 
 const router = new VueRouter({

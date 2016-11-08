@@ -17,7 +17,7 @@ Tendermint is not a fork of Bitcoin, NXT, Ripple, or Ethereum.  Tendermint is it
 
 Tendermint offers:
 
-* Byzantine fault-tolerant consensus with unparalleled speed and security guarantees -- without mining. [(see spec)](https://github.com/tendermint/tendermint/wiki/Byzantine-Consensus-Algorithm)
+* Byzantine fault-tolerant consensus with unparalleled speed and security guarantees -- without mining. [(see spec)](/docs/internals/consensus)
 * A very clean codebase with clear separation of concerns -- no spaghetti, thanks Golang!
 * Throttled/fair P2P stack to handle multiplexed channels of communication.
 * Clear P2P logic with the [reactor pattern](https://en.wikipedia.org/wiki/Reactor_pattern)
@@ -49,7 +49,7 @@ With Bitcoin (and Namecoin), you can verify that "@satoshi" was registered with 
 
 With Tendermint, all you need is the most recent blockhash signed by more than 2/3 of the validators, and a Merkle proof that proves the current value associated with the name "@satoshi".  You don't even need to wait for a single commit.  If you're interested, see [this link](https://github.com/tendermint/tendermint/wiki/Merkle-Trees#iavl-tree) for more information on our balanced binary Merkle tree implementation.
 
-In future posts I'll go into detail about the consensus algorithm and how it can provide these unique speed & security guarantees without proof-of-work mining.  For now, you can check the most recent Tendermint spec on the github wiki [here](https://github.com/tendermint/tendermint/).
+In future posts I'll go into detail about the consensus algorithm and how it can provide these unique speed & security guarantees without proof-of-work mining.  For now, you can check the most recent Tendermint spec on the [Documentation](/docs) page.
 
 
 ## Tendermint architecture
@@ -75,7 +75,6 @@ For other applications where the former exceptions don't apply, you probably wan
 
 ## Fin
 
-* Go to http://tendermint.com and sign up for the newsletter.
-* Check out the [Tendermint wiki](https://github.com/tendermint/tendermint/wiki).
-* Develop on Tendermint.
-* Email us at hello@tendermint.com with your full name to join our Slack channel.
+* Check out the [Tendermint documentation](/docs).
+* Start developing on Tendermint with the [Getting Started](/intro/getting-started/install) guide.
+* Join our Slack channel by clicking on [this link](http://forum.tendermint.com:3000/).

@@ -104,5 +104,9 @@ module.exports = {
   stylus: {
     use: [require('nib')()],
     import: ['~nib/lib/nib/index.styl']
+  },
+  vueMarkdown: {
+    html: true,
+    typographer: true
   }
 }

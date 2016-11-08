@@ -1,12 +1,10 @@
 ---
-title: "Tendermint: from Then to Now"
+title: "Tendermint: From Then to Now"
 description: "The history of Tendermint, and information on the latest release and more"
 date: "2016-09-17"
 categories: 
     - "Tendermint"
 ---
-
-## Tendermint: from Then to Now
 
 Some of you have asked about the history of [Tendermint](http://tendermint.com/), so here it is. Back in the day, we had some serious concerns about Bitcoin as a global currency, mainly because it is incredibly [energy intensive](http://motherboard.vice.com/read/bitcoin-could-consume-as-much-electricity-as-denmark-by-2020). So we started Tendermint to develop a more environmentally friendly cryptocurrency. 
 

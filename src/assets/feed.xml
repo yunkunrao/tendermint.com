@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Tendermint Blog]]></title><description><![CDATA[Byzantine fault-tolerant replicated state machines in any programming language]]></description><link>https://tendermint.com</link><image><url>https://tendermint.com/static/favicon.png</url><title>Tendermint Blog</title><link>https://tendermint.com</link></image><generator>RSS for Node</generator><lastBuildDate>Fri, 04 Nov 2016 03:38:02 GMT</lastBuildDate><atom:link href="https://tendermint.com/static/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Fri, 04 Nov 2016 03:38:02 GMT</pubDate><copyright><![CDATA[2016 Tendermint]]></copyright><language><![CDATA[en]]></language><managingEditor><![CDATA[Tendermint]]></managingEditor><webMaster><![CDATA[Tendermint ]]></webMaster><ttl>60</ttl><item><title><![CDATA[Tendermint: from Then to Now]]></title><description><![CDATA[<h2>Tendermint: from Then to Now</h2>
-<p>Some of you have asked about the history of <a href="http://tendermint.com/">Tendermint</a>, so here it is. Back in the day, we had some serious concerns about Bitcoin as a global currency, mainly because it is incredibly <a href="http://motherboard.vice.com/read/bitcoin-could-consume-as-much-electricity-as-denmark-by-2020">energy intensive</a>. So we started Tendermint to develop a more environmentally friendly cryptocurrency.</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Tendermint Blog]]></title><description><![CDATA[Byzantine fault-tolerant replicated state machines in any programming language]]></description><link>https://tendermint.com</link><image><url>https://tendermint.com/static/favicon.png</url><title>Tendermint Blog</title><link>https://tendermint.com</link></image><generator>RSS for Node</generator><lastBuildDate>Tue, 08 Nov 2016 03:54:05 GMT</lastBuildDate><atom:link href="https://tendermint.com/static/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Tue, 08 Nov 2016 03:54:05 GMT</pubDate><copyright><![CDATA[2016 Tendermint]]></copyright><language><![CDATA[en]]></language><managingEditor><![CDATA[Tendermint]]></managingEditor><webMaster><![CDATA[Tendermint ]]></webMaster><ttl>60</ttl><item><title><![CDATA[Tendermint: From Then to Now]]></title><description><![CDATA[<p>Some of you have asked about the history of <a href="http://tendermint.com/">Tendermint</a>, so here it is. Back in the day, we had some serious concerns about Bitcoin as a global currency, mainly because it is incredibly <a href="http://motherboard.vice.com/read/bitcoin-could-consume-as-much-electricity-as-denmark-by-2020">energy intensive</a>. So we started Tendermint to develop a more environmentally friendly cryptocurrency.</p>
 <p>But what started as a simple cryptocurrency based on an adaptation of a <a href="http://groups.csail.mit.edu/tds/papers/Lynch/jacm88.pdf">1980’s consensus algorithm called DLS</a> eventually evolved into what it is today: a general purpose Byzantine fault tolerant (BFT) consensus algorithm for running replicated state machines over the internet in possibly adversarial conditions.</p>
 <p>Replicated state machines are a staple of modern Internet technology. They permit a consistent and fault-tolerant view of some set of data. Popular open-source implementations of replicated state machines include <a href="http://bookkeeper.apache.org/">Apache ZooKeeper</a>, <a href="https://coreos.com/etcd/">CoreOS’ etcd</a>, and <a href="https://www.consul.io/">Hashicorp’s Consul</a>.</p>
 <p>In each of these, the state machine is a simple key-value store, and the underlying consensus algorithm is either Paxos or <a href="https://raft.github.io/">Raft</a>. Neither of these algorithms tolerate even a single malicious node in the system. You can see an animation of the Paxos algorithm <a href="http://harry.me/blog/2014/12/27/neat-algorithms-paxos/">here</a>.</p>
@@ -513,12 +512,8 @@ strategy is chosen. In other words, I think we just need to experiment with
 self-incentivized blockchains.</p>
 ]]></description><link>http://tendermint.com/blog/a-critique-of-merkle-s-dao-democracy-making-it-reliable</link><guid isPermaLink="true">http://tendermint.com/blog/a-critique-of-merkle-s-dao-democracy-making-it-reliable</guid></item><item><title><![CDATA[TMSP: The Tendermint Socket Protocol]]></title><description><![CDATA[<blockquote>
 <p>After you read this post, don't forget to check out our tutorials!  They also appear at the end of this page.</p>
-</blockquote>
-<blockquote>
-<ol>
-<li><a href="/tutorials/run-your-first-tmsp-application/">Run your first TMSP application</a></li>
-<li><a href="/tutorials/launch-a-tmsp-testnet/">Launch a TMSP testnet</a></li>
-</ol>
+1. [Run your first TMSP application](/intro/getting-started/first-tmsp)
+2. [Launch a TMSP testnet](/intro/getting-started/deploy-testnet/)
 </blockquote>
 <h2>Motivation</h2>
 <p>Thus far, all blockchains “stacks” (such as <a href="https://github.com/bitcoin/bitcoin">Bitcoin</a>) have had a monolithic design.  That is, each blockchain stack is a single program that handles all the concerns of a decentralized ledger; this includes P2P connectivity, the “mempool” broadcasting of transactions, consensus on the most recent block, account balances, Turing-complete contracts, user-level permissions, etc.</p>
@@ -561,10 +556,10 @@ self-incentivized blockchains.</p>
 <p>While programmers can avoid non-determinism by being careful, it is also possible to create a special linter or static analyzer for each language to check for determinism.  In the future we may work with partners to create such tools.</p>
 <h2>Tutorials</h2>
 <p>Follow these tutorials to quickly get started developing your TMSP application.</p>
-<ul>
-<li><a href="/tutorials/run-your-first-tmsp-application/">Run your first TMSP application</a></li>
-<li><a href="/tutorials/launch-a-tmsp-testnet/">Launch a TMSP testnet</a></li>
-</ul>
+<ol>
+<li><a href="/intro/getting-started/first-tmsp">Run your first TMSP application</a></li>
+<li><a href="/intro/getting-started/deploy-testnet/">Launch a TMSP testnet</a></li>
+</ol>
 <h2>Contributions</h2>
 <p><em>Many thanks to Zaki Manian for providing the “Intro to TMSP” section</em></p>
 ]]></description><link>http://tendermint.com/blog/tmsp-the-tendermint-socket-protocol</link><guid isPermaLink="true">http://tendermint.com/blog/tmsp-the-tendermint-socket-protocol</guid></item><item><title><![CDATA[Tendermint for Fast Settlement]]></title><description><![CDATA[<p>Some experts in the nascent blockchain industry have said the following:</p>
@@ -598,7 +593,7 @@ self-incentivized blockchains.</p>
 <p>Tendermint is not a fork of Bitcoin, NXT, Ripple, or Ethereum.  Tendermint is its own blockchain stack written from the ground up.  It was built to be the base blockchain stack from which to fork off of for a wide variety of decentralized applications.  It started back in 2014 as an ambitious project to solve the Bitcoin mining problem and bring real Byzantine fault-tolerant consensus to cryptocurrencies.  First we adapted an existing BGA consensus algorithm to make it suitable for blockchains.  For the actual implementation we considered forking Bitcoin, NXT, BitShares, and other projects, but none could easily accommodate the desired project architecture.  So, a brand spanking new blockchain stack was born.</p>
 <p>Tendermint offers:</p>
 <ul>
-<li>Byzantine fault-tolerant consensus with unparalleled speed and security guarantees – without mining. <a href="https://github.com/tendermint/tendermint/wiki/Byzantine-Consensus-Algorithm">(see spec)</a></li>
+<li>Byzantine fault-tolerant consensus with unparalleled speed and security guarantees – without mining. <a href="/docs/internals/consensus">(see spec)</a></li>
 <li>A very clean codebase with clear separation of concerns – no spaghetti, thanks Golang!</li>
 <li>Throttled/fair P2P stack to handle multiplexed channels of communication.</li>
 <li>Clear P2P logic with the <a href="https://en.wikipedia.org/wiki/Reactor_pattern">reactor pattern</a></li>
@@ -619,7 +614,7 @@ self-incentivized blockchains.</p>
 <p>Similar to case 1, but instead of verifying a payment, you need to verify Satoshi’s public key as registered under the name “@satoshi” on a name-registry blockchain.  The difference here as compared to case 1 is that instead of verifying a new transaction, you’re verifying the current value of a pre-registered key that may have been changed by other transactions.</p>
 <p>With Bitcoin (and Namecoin), you can verify that “@satoshi” was registered with a particular public key at some point in the past, but you wouldn’t know whether the public key had since been updated without downloading the whole blockchain.  This is because the presence of a name-registration transaction in the blockchain does not imply that later transactions hadn’t updated the value for that key.  In order for you to efficiently check for the current value of a name, the blockchain should support a balanced Merkle tree on the most recent name-registry state.  Even if Bitcoin/Namecoin did support such a data structure, you would still have to download and verify all the blockchain hashes and headers, and if the value might have been updated recently you’re still vulnerable to a fork-censorship attack.</p>
 <p>With Tendermint, all you need is the most recent blockhash signed by more than 2/3 of the validators, and a Merkle proof that proves the current value associated with the name “@satoshi”.  You don’t even need to wait for a single commit.  If you’re interested, see <a href="https://github.com/tendermint/tendermint/wiki/Merkle-Trees#iavl-tree">this link</a> for more information on our balanced binary Merkle tree implementation.</p>
-<p>In future posts I’ll go into detail about the consensus algorithm and how it can provide these unique speed &amp; security guarantees without proof-of-work mining.  For now, you can check the most recent Tendermint spec on the github wiki <a href="https://github.com/tendermint/tendermint/">here</a>.</p>
+<p>In future posts I’ll go into detail about the consensus algorithm and how it can provide these unique speed &amp; security guarantees without proof-of-work mining.  For now, you can check the most recent Tendermint spec on the <a href="/docs">Documentation</a> page.</p>
 <h2>Tendermint architecture</h2>
 <img src="~assets/images/tm_architecture.png">
 <p>The diagram above is meant to show that:</p>
@@ -636,10 +631,9 @@ self-incentivized blockchains.</p>
 <p>For other applications where the former exceptions don’t apply, you probably want to write native code on Tendermint for a variety of reasons – Golang’s language tooling is better so debugging is easier, it’s computationally more efficient by far, and it removes two complex layers (one for the bytecode compiled language, and one for the VM itself).  If you want full control over your Merkle-ized data structures (e.g. without the 32-by-32-byte restriction of the EVM’s Patricia-trie) then you have to write your contract logic at the native level.  Tendermint provides you with the right tools to make this as easy as possible.</p>
 <h2>Fin</h2>
 <ul>
-<li>Go to <a href="http://tendermint.com">http://tendermint.com</a> and sign up for the newsletter.</li>
-<li>Check out the <a href="https://github.com/tendermint/tendermint/wiki">Tendermint wiki</a>.</li>
-<li>Develop on Tendermint.</li>
-<li>Email us at <a href="mailto:hello@tendermint.com">hello@tendermint.com</a> with your full name to join our Slack channel.</li>
+<li>Check out the <a href="/docs">Tendermint documentation</a>.</li>
+<li>Start developing on Tendermint with the <a href="/intro/getting-started/install">Getting Started</a> guide.</li>
+<li>Join our Slack channel by clicking on <a href="http://forum.tendermint.com:3000/">this link</a>.</li>
 </ul>
 ]]></description><link>http://tendermint.com/blog/cases-for-tendermint</link><guid isPermaLink="true">http://tendermint.com/blog/cases-for-tendermint</guid></item><item><title><![CDATA[Sidechains without Pegging]]></title><description><![CDATA[<p>There is an interesting debate happening between Bitcoin maximalists and the rest of the cryptocurrency community.</p>
 <p>First, BlockStream published Bitcoin maximalist paper on <a href="http://www.blockstream.com/sidechains.pdf">sidechains</a>.

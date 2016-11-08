@@ -60,3 +60,7 @@ If `go get` failing bothers you, fetch the code using `git`:
 mkdir -p $GOPATH/src/github.com/tendermint
 git clone https://github.com/tendermint/tendermint $GOPATH/src/github.com/tendermint/tendermint
 ```
+
+## Next Step
+
+Learn how to [create your first TMSP app](/intro/getting-started/first-tmsp).

@@ -3,7 +3,7 @@
     <section id="section-top">
       <div class="section-container">
         <div class="article-wrapper" id="blog-index">
-          <h1><i class="fa fa-rss"></i> Tendermint Blog</h1>
+          <h1>Tendermint Blog</h1>
           <p>Learn about what we&rsquo;re working on, right this moment. <a href="/static/feed.xml">Subscribe via RSS</a></p>
         </div>
       </div>
@@ -33,13 +33,11 @@
 import { mapGetters } from 'vuex'
 
 export default {
-  head: {
-    title: {
-      inner: 'Blog'
-    }
-  },
   computed: mapGetters({
     posts: 'allPosts'
-  })
+  }),
+  mounted () {
+    document.title = 'Blog - Tendermint'
+  }
 }
 </script>
