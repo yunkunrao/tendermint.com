@@ -1,4 +1,4 @@
----
+~~~
 title: "Sidechains without Pegging"
 description: "Sidechains is more than one-way or two-way pegging, and beyond Bitcoin Maximalism."
 date: "2014-11-25"
@@ -7,7 +7,7 @@ categories:
     - "pegging"
 aliases:
     - /posts/sidechains-without-pegging/
----
+~~~
 
 There is an interesting debate happening between Bitcoin maximalists and the rest of the cryptocurrency community.
 

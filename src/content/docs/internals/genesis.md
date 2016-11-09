@@ -58,4 +58,3 @@ This example is from the Basecoin mintnet example ([link to file](https://github
   "app_hash": "15005165891224E721CB664D15CB972240F5703F"
 }
 ```
-

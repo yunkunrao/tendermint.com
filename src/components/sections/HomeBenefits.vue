@@ -1,6 +1,7 @@
 <template>
   <section class="section-default">
-    <div class="section-container blocks">
+    <div class="section-container">
+      <div class="blocks">
       <div class="block">
         <div class="key"><i class="fa fa-server"></i> Byzantine Fault Tolerant</div>
         <div class="value">Tolerate up to 1/3 of machines failing arbitrarily, including explicitly malicious behaviour.</div>
@@ -26,6 +27,7 @@
         <div class="value">All our code is licensed Apache2.0 and available on <a
   href="https://github.com/tendermint">GitHub</a></div>
       </div><!--block-->
+      </div><!--blocks-->
     </div>
   </section>
 </template>

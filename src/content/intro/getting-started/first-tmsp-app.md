@@ -202,4 +202,4 @@ Want to write the counter app in your favorite language?! We'd be happy to accep
 
 ## Next Step
 
-In the next tutorial, we will show how to [launch a TMSP testnet](/intro/getting-started/deploy-testnet).
+In the next tutorial, we will show how to <router-link to="/intro/getting-started/deploy-testnet">deploy a TMSP testnet</router-link>.

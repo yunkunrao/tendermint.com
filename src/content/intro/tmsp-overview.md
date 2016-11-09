@@ -34,7 +34,7 @@ Tendermint is able to decompose the blockchain design by offering a very simple 
 
 The API consists of 3 primary message types that get delivered from the core to the application.  The application replies with corresponding response messages.
 
-The messages are specified here: https://github.com/tendermint/tmsp#message-types
+The messages are specified here: [TMSP Message Types](https://github.com/tendermint/tmsp#message-types)
 
 The `AppendTx` message is the work horse of the application.  Each transaction in the blockchain is delivered with this message. The application needs to validate each transactions received with the `AppendTx` message against the current state, application protocol, and the cryptographic credentials of the transaction. A validated transaction then needs to update the application state — by binding a value into a key values store, or by updating the UTXO database.
 
@@ -63,8 +63,8 @@ While programmers can avoid non-determinism by being careful, it is also possibl
 
 ## Getting Started
 
-See the [getting started guide](/intro/getting-started/install) for more!
+See the <router-link to="/intro/getting-started/install">Getting Started</router-link> guide for more!
 
 ## Contributions
 
-_Many thanks to Zaki Manian for providing the "Intro to TMSP" section_
+_Many thanks to Zaki Manian for providing the "Intro to TMSP" section._

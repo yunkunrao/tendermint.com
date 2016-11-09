@@ -18,7 +18,7 @@ There was also a suggestion on slack from @jhon about compiling everything toget
 
 ### Tendermint Core RPC
 
-I believe this was the original design from @ebuchman.  The concept is that the TMSP app is completely hidden from the outside world and only communicated through a tested and secured [interface exposed by the tendermint core](/docs/internals/rpc).  This interface exposes a lot of data on the block header and consensus process, which is quite useful for externally verifying the system.  It also includes 3(!) methods to broadcast a transaction (propose it for the blockchain, and possibly await a response).  And one method to query app-specific data from the TMSP application.
+I believe this was the original design from @ebuchman.  The concept is that the TMSP app is completely hidden from the outside world and only communicated through a tested and secured <router-link to="/docs/internals/rpc">interface exposed by the tendermint core</router-link>. This interface exposes a lot of data on the block header and consensus process, which is quite useful for externally verifying the system.  It also includes 3(!) methods to broadcast a transaction (propose it for the blockchain, and possibly await a response).  And one method to query app-specific data from the TMSP application.
 
 Pros:
 * Server code already written
@@ -32,7 +32,7 @@ Cons:
 
 This was proposed by @wolfposd on slack and demonstrated by [TMChat](https://github.com/wolfposd/TMChat), a sample app. The concept is to write a custom server for your app (with typical REST API/websockets/etc for easy use by a mobile app). This custom server is in the same binary as the TMSP app and data store, so can easily react to complex events there that involve understanding the data format (send a message if my balance drops below 500). All "writes" sent to this server are proxied via websocket/JSON-RPC to tendermint core.  When they come back as append_tx over TMSP, they will be written to the data store. For "reads", we can do any queries we wish that are supported by our architecture, using any web technology that is useful. The general architecture is shown in the following diagram:
 
-[[https://github.com/wolfposd/tutorials/blob/master/images/tendermint/TMApplicationExample.png|alt=applicationarchitecture]]
+![Application Architecture](https://raw.githubusercontent.com/wolfposd/tutorials/master/images/tendermint/TMApplicationExample.png)
 
 Pros:
 * Separates application logic from blockchain logic
@@ -43,8 +43,6 @@ Cons:
 * Access to TMSP app can be dangerous (be VERY careful not to write unless it comes from the validator node)
 * No direct access to the blockchain headers to verify tx
 * You must write your own API (but maybe that's a pro...)
-
-
 
 ### Hybrid solutions
 
@@ -68,6 +66,5 @@ Read replica using non-validating nodes?  They could forward transactions to the
 TODO: more!
 
 ## Contributions
-
 
 Many thanks to Ethan Frey for writing this page.

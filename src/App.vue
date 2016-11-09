@@ -9,7 +9,6 @@
 <script>
 import SiteHeader from './components/site/Header'
 import SiteFooter from './components/site/Footer'
-import appScript from './scripts/app.js'
 
 export default {
   name: 'app',
@@ -40,9 +39,6 @@ export default {
       { r: 'icon', t: 'image/png', sz: '16x16', h: require('./assets/favicon/favicon-16x16.png') },
       { r: 'manifest', h: require('./assets/favicon/manifest.json') }
     ]
-  },
-  mounted () {
-    appScript()
   }
 }
 </script>

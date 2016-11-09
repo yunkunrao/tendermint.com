@@ -71,8 +71,11 @@ export default {
     letter-spacing -0.025em
     font-size 2.5*x
 
-  .tagline, .introduction, form
+  .tagline, .introduction
     margin-bottom x
+
+  form
+    margin-bottom 0.75*x
 
   .tagline
     color lighten(mcolor,50%)
@@ -88,11 +91,10 @@ export default {
     max-width 20em
 
   .source
-    color lighten(mcolor,58%)
-    font-size 0.85*x
+    color lighten(mcolor,40%)
+    font-size 0.75*x
     a
-      font-weight 500
-      color lighten(mcolor,90%)
+      color lighten(mcolor,60%)
 
   #home-arrow-down
     position absolute
@@ -114,7 +116,7 @@ export default {
 @media screen and (min-height: 400px)
   #section-cover
 
-    .tagline, .introduction, form
+    .tagline, .introduction
       margin-bottom 1.25*x
 
     .connections
@@ -129,7 +131,7 @@ export default {
     h1
       font-size 3.25*x
 
-    .tagline, .introduction, form
+    .tagline, .introduction
       margin-bottom 2*x
 
     .tagline, .source

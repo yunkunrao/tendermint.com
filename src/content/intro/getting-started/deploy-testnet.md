@@ -22,7 +22,7 @@ Now,
 tendermint node
 ```
 
-Tendermint will try to connect to a tmsp appliction by default on `127.0.0.1:46658`, 
+Tendermint will try to connect to a tmsp appliction by default on [127.0.0.1:46658](127.0.0.1:46658), 
 but you probably don't have one running yet.
 
 So in another window, lets start the `dummy` app,
@@ -53,14 +53,14 @@ and the `latest_app_hash` in particular:
 curl http://localhost:46657/status |  jsonpp | grep app_hash
 ```
 
-visit http://localhost:46657 in your browser to see the other endpoints.
+visit [http://localhost:46657](http://localhost:46657) in your browser to see the other endpoints.
 
 ## Deploy a Tendermint Testnet
 
 Now that we've run a single Tendermint node with one validator and a couple applications, 
 let's deploy a testnet to run our application with four validators.
 
-For this part of the tutorial, we assume you have an account at digital ocean and are willing to 
+For this part of the tutorial, we assume you have an account at [DigitalOcean](https://www.digitalocean.com/) and are willing to 
 pay to start some new droplets to run your nodes. You can of course stop and destroy them at any time.
 
 First, install [`docker-machine`](https://docs.docker.com/machine/install-machine/) and get a DigitalOcean account and access token.
@@ -130,4 +130,4 @@ TODO: Document tutorial on docker-machine ssh mach1, docker ps, etc, or at least
 
 ## Next Steps
 
-Done deploying? Continue [onwards](/intro/getting-started/next-steps).
+Done trying out the testnet? Continue <router-link to="/intro/getting-started/next-steps">onwards</router-link>.

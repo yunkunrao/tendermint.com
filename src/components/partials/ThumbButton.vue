@@ -27,8 +27,9 @@ export default {
   right x
 
   width 3*x
-  font-size 1.5*x
-  line-height 3*x
+  height 3*x
+  font-size x
+  line-height 3*x - 2px
   border-radius 1.5*x
 
   border 1px solid bc
@@ -38,4 +39,6 @@ export default {
   background #fff
 
   cursor pointer
+
+  z-index 1000
 </style>

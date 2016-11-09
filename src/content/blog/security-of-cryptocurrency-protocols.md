@@ -1,4 +1,4 @@
----
+~~~
 title: "The Security of Cryptocurrency Protocols"
 description: "Security analysis of cryptocurrency protocols is complicated by incentive-alignment and extrinsic factors.  A look at more robust security guarantees"
 date: "2014-11-19"
@@ -7,7 +7,7 @@ categories:
     - "security"
 aliases:
     - /posts/security-of-cryptocurrency-protocols/
----
+~~~
 
 Many solutions to the consensus problem for cryptocurrencies have been proposed.  Since the innovation of Bitcoin’s proof-of-work based consensus algorithm--where miners compete in an energy intensive game to determine the order of transactions--several proof-of-stake algorithms have been proposed to make consensus faster while removing the reliance on energy expenditure.  The common objective of these protocols is to maintain a live decentralized transaction ledger while defending against double-spend attacks from malicious Byzantine actors deviating from the protocol.  Considering the financial nature of these protocols, we should strive to support a protocol that has well defined and robust security guarantees.
 

@@ -11,7 +11,7 @@ The `-u` makes sure all dependencies are updated as well.
 
 See `tendermint version` and `tendermint --help` for more.
 
-If it does not work, see below.
+If it does not work, see Troubleshooting below.
 
 To start a one-node blockchain with a simple in-process application: 
 
@@ -20,7 +20,7 @@ tendermint init
 tendermint node --proxy_app=dummy
 ```
 
-See the [application developers guide](https://github.com/tendermint/tendermint/wiki/Application-Developers) for more details on building and running applications.
+See the <router-link to="/docs/guides/app-development">App Development</router-link> guide for more details on building and running applications.
 
 ### Reinstall
 
@@ -63,4 +63,4 @@ git clone https://github.com/tendermint/tendermint $GOPATH/src/github.com/tender
 
 ## Next Step
 
-Learn how to [create your first TMSP app](/intro/getting-started/first-tmsp).
+Learn how to <router-link to="/intro/getting-started/first-tmsp">create your first TMSP app</router-link>.

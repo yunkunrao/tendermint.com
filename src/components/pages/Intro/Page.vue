@@ -15,7 +15,6 @@
 </template>
 
 <script>
-import hljs from 'highlight.js'
 export default {
   name: 'intro-page',
   components: {
@@ -48,15 +47,10 @@ export default {
     },
     onParamChange () {
       this.setPageTitle()
-      hljs.initHighlightingOnLoad()
     }
   },
-  mounted () {
-    this.onParamChange()
-  },
-  watch: {
-    '$route.params.page' () { this.onParamChange() }
-  }
+  mounted () { this.onParamChange() },
+  watch: { '$route.params.page' () { this.onParamChange() } }
 }
 </script>
 

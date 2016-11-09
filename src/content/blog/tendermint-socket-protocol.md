@@ -1,4 +1,4 @@
----
+~~~
 title: "TMSP: The Tendermint Socket Protocol"
 description: "TMSP lets you create blockchain application easily in any languge.  This post describes the motivation behind TMSP and links to tutorials."
 date: "2015-12-19"
@@ -6,11 +6,11 @@ categories:
     - "TMSP"
 aliases:
     - /posts/tendermint-socket-protocol/
----
+~~~
 
-> <p>After you read this post, don't forget to check out our tutorials!  They also appear at the end of this page.</p>
-> 1. [Run your first TMSP application](/intro/getting-started/first-tmsp)
-> 2. [Launch a TMSP testnet](/intro/getting-started/deploy-testnet/)
+> After you read this post, don't forget to check out our tutorials!  They also appear at the end of this page.
+1. [Run your first TMSP application](/intro/getting-started/first-tmsp)
+2. [Launch a TMSP testnet](/intro/getting-started/deploy-testnet/)
 
 ## Motivation
 

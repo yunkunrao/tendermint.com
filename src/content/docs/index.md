@@ -1,13 +1,13 @@
 # Documentation
 
-Start at the [Tendermint Internals Introduction](/docs/internals/introduction) if you're new.
+Start at the <router-link to="/docs/internals/introduction">Tendermint Internals Introduction</router-link> if you're new.
 
 Otherwise, find more goodies on this page!
 
 ## How-To Guides
 
-Get started building your TMSP application or server by reading the [application developer's guide](/docs/guides/app-development).
+Get started building your TMSP application or server by reading the <router-link to="/docs/guides/app-development">App Development</router-link> guide. 
 
-To learn about integrating with clients, see the [application architecture guide](/docs/guides/app-architecture).
+To learn about integrating with clients, see the <router-link to="/docs/guides/app-architecture">App Architecure</router-link> guide.
 
-See [example applications](/ecosystem) for motivation and inspiration!
+See Tendermint's <router-link to="/ecosystem">Software Ecosystem</router-link> for motivation and inspiration!

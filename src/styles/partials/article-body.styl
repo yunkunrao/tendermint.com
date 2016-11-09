@@ -1,6 +1,5 @@
 .article-body
   font-size x
-  padding-top 0.5*x
   padding-bottom 1.5*x
 
   a
@@ -15,19 +14,20 @@
 
   code
     font-family Consolas, 'Deja Vu Sans Mono', 'Andale Sans Mono', monospace
-    line-height 1.25
     background #f0f0f0
     margin 0 0 1.5*x
 
   pre
-    font-size 0.75*x
     background #f0f0f0
     overflow-x scroll
     margin-bottom 1.5*x
     margin-left -1*x
     margin-right -1*x
+    padding 0.375*x 0.5*x
+    font-size 0.875*x
+    line-height 1.25
     code
-      margin 0
+      margin-bottom 0
 
   /* These are technically the same, but use both */
   overflow-wrap break-word
@@ -46,7 +46,7 @@
   p
     code
       &:before, &:after
-        letter-spacing -0.2em
+        letter-spacing -0.375em
         content "\00a0"
    img
       margin 0
@@ -66,29 +66,26 @@
 
   h1, h2, h3, h4, h5, h6
     font-family sans
-    color mcolor
+    color txt
+    font-weight 500
+
+  h1
+    font-size 2*x
+    padding 2*x 0
+    margin x 0 0
 
   h2
-    margin-bottom x
-    border-bottom 1px solid bc
-    padding x 0
-
     font-size 1.5*x
-    line-height 1.25
-    font-weight 600
+    margin 2*x 0 x
 
   h3
     font-size 1.25*x
-    line-height 1.25
-    font-weight 600
-    margin 1.5*x 0 0.5*x
+    margin x 0
 
   h4
-    font-size 1.2*x
-    line-height 1.25
-    font-weight 500
+    font-size 1.125*x
     font-style italic
-    margin 1.3*x 0 0.5*x
+    margin x 0
 
   ul, ol
     padding-left 1.5em
@@ -142,6 +139,10 @@
   .article-body
     max-width 48em
     margin 0 auto
+
+    h1
+      padding 2*x 0
+      margin 3*x 0 0
 
     iframe.iframe-video
       max-width 48em

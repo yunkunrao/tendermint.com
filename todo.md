@@ -1,7 +1,22 @@
+# 2016-11-09
+I started reading through the documentation and fixed links and added them where appropriate (e.g., localhost)
+* general
+    * design updates
+    * fix more broken links
+    * disabled syntax higlightning for now because automatic language detection for smaller snippets was way off
+* /intro, /docs
+    * fixed a serious issue where clicking on local links in Markdown files reloaded the entire web app - only solution was to change the standard markdown links e.g. `[intro](/intro)` to vue-style `<router-link to="/intro">Intro</router-link>`
+* /docs/app-architecture http://localhost:8800/docs/guides/app-architecture
+    * Fixed the https://raw.githubusercontent.com/wolfposd/tutorials/master/images/tendermint/TMApplicationExample.png image link
+* /blog
+    * fixed image links
+    * fixed the rendering of the "Tendermint vs PBFT" page
+
+Merkle Trees page in Docs -- should we move this over from the Wiki? There's a link to it on the Light Client Protocol page.
+
 # 2016-11-08
 * general
     * Fixed: more broken links
-    * Improvement: forced a minimum page height so the footer isn't halfway up the page on large displays
     * Improvement: sidebar vertical height reduced, lets you see more links on shorter screens
     * Syntax highlighting is back.
 * /
@@ -20,6 +35,8 @@
     * Added more contact options: twitter, linkedin, etc.
 * /404
     * Created this page, should match all broken links including subdirectories
+
+Tomorrow: add minimum page height for larger displays so the footer isn't halfway up the page, better markdown processing for the blog to support images
 
 # 2016-11-07
 * General

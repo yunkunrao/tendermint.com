@@ -30,8 +30,8 @@ function markdownToObject (files) {
     let post = {title: '', slug: '', author: '', date: '', body: ''}
 
     let data = fs.readFileSync(files[i], 'utf8')
-    let metaData = yaml.load(data.split('---')[1])
-    let markdownData = data.split('---')[2]
+    let metaData = yaml.load(data.split('~~~')[1])
+    let markdownData = data.split('~~~')[2]
 
     // set the post metadata
     post.title = metaData.title

@@ -1,4 +1,4 @@
----
+~~~
 title: "Tendermint for Fast Settlement"
 description: "Blockchains provide new opportunities in fast settlement"
 date: "2015-10-03"
@@ -8,7 +8,7 @@ categories:
     - "settlement"
 aliases:
     - /posts/tendermint-for-fast-settlement/
----
+~~~
 
 Some experts in the nascent blockchain industry have said the following:
 

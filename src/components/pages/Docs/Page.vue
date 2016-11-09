@@ -22,9 +22,8 @@
 </template>
 
 <script>
-import hljs from 'highlight.js'
 export default {
-  name: 'intro-page',
+  name: 'docs-page',
   components: {
     Master: require('./Master'),
     Index: require('../../../content/docs/index.md'),
@@ -75,13 +74,10 @@ export default {
     },
     onParamChange () {
       this.setPageTitle()
-      hljs.initHighlightingOnLoad()
     }
   },
   mounted () { this.onParamChange() },
-  watch: {
-    '$route.params.page' () { this.onParamChange() }
-  }
+  watch: { '$route.params.page' () { this.onParamChange() } }
 }
 </script>
 

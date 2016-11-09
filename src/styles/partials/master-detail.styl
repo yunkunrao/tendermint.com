@@ -4,25 +4,12 @@
 
 .detail
   padding 0 x x
-  h1
-    font-size 2*x
-    line-height 1.25
-
-    font-weight 500
-
-    border-bottom 3px solid bc
-    margin-bottom 2*x
-
-    display flex
-    align-items center
-
-    padding 2*x 0
 
 .master 
-
   nav
     background #fff
-    border-right 1px solid bc
+    background hsl(0,0,97%)
+    padding-bottom x*0.75
 
   &.inline
     margin 0 auto
@@ -42,13 +29,14 @@
     left 0
     width 100vw
 
-    z-index 10
 
     nav
       padding-top 3*x
       position relative
       height 100vh
       overflow hidden
+
+      z-index 10
 
     .thumb-button
       display block
@@ -60,7 +48,6 @@
     display none
 
   .title
-    border-top 1px solid bc
     padding 0 x
 
     color light
@@ -70,6 +57,7 @@
     text-transform uppercase
     letter-spacing 0.0625em
     line-height 2*x
+    padding-top x*0.75
 
   a + .title
     margin-top 0.75*x
@@ -79,7 +67,7 @@
     position relative
     font-weight 500
     color link
-    border-left 0.25*x solid #fff
+    border-left 0.25*x solid transparent
 
     &:after
       content '\f105'
@@ -123,8 +111,6 @@
     margin-left 240px
     padding-left 2*x
     padding-right 2*x
-    h1
-      padding 4*x 0 2*x
 
 @media screen and (min-width: 960px)
   .master
@@ -136,3 +122,4 @@
     margin-left 320px
     padding-left 4*x
     padding-right 4*x
+    padding-bottom 4*x
