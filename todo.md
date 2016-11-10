@@ -11,7 +11,10 @@
 * /companies - added this page showcasing companies using Tendermint (no content yet)
 * /presentations - added this page with video content from the old site
 
-The new pages can be reached from the Community page https://tendermint.nylira.com/community
+The new pages:
+https://tendermint.nylira.com/about
+https://tendermint.nylira.com/companies
+https://tendermint.nylira.com/presentations
 
 @jae do you have the data for companies on Tendermint I can put up?
 @jae @ebuchman go ahead and suggest changes for the About text - I yanked the current version from http://bitcoinist.net/tendermint-unveil-ui-demo-first-blockchain-apps/
