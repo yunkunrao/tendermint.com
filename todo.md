@@ -7,9 +7,11 @@
       * /media -> /presentations
       * /code -> /docs
       * /guide -> /docs
-* /about - design overhaul
+* /about - design overhaul (added more content)
 * /companies - added this page showcasing companies using Tendermint (no content yet)
 * /presentations - added this page with video content from the old site
+
+The new pages can be reached from the Community page https://tendermint.nylira.com/community
 
 @jae do you have the data for companies on Tendermint I can put up?
 @jae @ebuchman go ahead and suggest changes for the About text - I yanked the current version from http://bitcoinist.net/tendermint-unveil-ui-demo-first-blockchain-apps/
