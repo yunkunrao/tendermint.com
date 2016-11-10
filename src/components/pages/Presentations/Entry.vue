@@ -11,7 +11,7 @@
       <div class="section-container">
         <div class="section-content">
           <div class="youtube" :id="entry.id"></div>
-          <article-footer :facebook-url="facebookUrl" :twitter-url="twitterUrl"></article-footer>
+          <presentation-footer :facebook-url="facebookUrl" :twitter-url="twitterUrl"></presentation-footer>
           <comments></comments>
         </div><!--section-content-->
       </div><!--section-container-->
@@ -22,7 +22,7 @@
 
 <script>
 import ArticleBackBtn from '../../partials/ArticleBackBtn.vue'
-import ArticleFooter from '../../partials/ArticleFooter.vue'
+import PresentationFooter from '../../partials/PresentationFooter.vue'
 import Comments from '../../partials/Comments.vue'
 
 import { mapGetters } from 'vuex'
@@ -32,7 +32,7 @@ export default {
   name: 'entry',
   components: {
     ArticleBackBtn,
-    ArticleFooter,
+    PresentationFooter,
     Comments
   },
   computed: {
@@ -60,6 +60,8 @@ export default {
     ])
   },
   mounted () {
+    document.title = this.entry.title + ' - Presentations - Tendermint'
+
     let self = this
 
     $('.youtube').each(function () {

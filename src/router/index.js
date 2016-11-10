@@ -29,10 +29,11 @@ const routes = [
   { path: '/press', component: page('Press') },
   { path: '/careers', component: page('Careers/Index') },
   { path: '/careers/:entry', component: page('Careers/Entry') },
+  { path: '/companies', component: page('Companies') },
   { path: '/presentations', component: page('Presentations/Index') },
   { path: '/presentations/:entry', component: page('Presentations/Entry') },
 
-  // redirects from older versions of the site
+  // redirects
   { path: '/code', redirect: '/docs' },
   { path: '/guide', redirect: '/docs' },
   { path: '/jobs', redirect: '/careers' },

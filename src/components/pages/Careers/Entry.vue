@@ -3,8 +3,8 @@
     <section id="section-top">
       <div class="section-container">
         <div class="article-wrapper">
-          <h1>{{ job.title }}</h1>
-          <p>{{ job.subtitle }}
+          <h1>{{ career.title }}</h1>
+          <p>{{ career.subtitle }}
         </div>
       </div>
     </section>
@@ -14,7 +14,7 @@
         <div class="section-content article-body">
           <h2>Responsibilities</h2>
           <ul class="responsibilities">
-            <li v-for="r in job.responsibilities">{{ r }}</li>
+            <li v-for="r in career.responsibilities">{{ r }}</li>
           </ul>
           <h2>Apply for this role</h2>
           <p>Send an email with your cover letter and resume:</p>
@@ -35,9 +35,9 @@ export default {
     }
   },
   computed: {
-    job () {
-      if (this.jobs) {
-        return this.jobs.find(j => j.id === this.$route.params.entry)
+    career () {
+      if (this.careers) {
+        return this.careers.find(j => j.id === this.$route.params.entry)
       }
       return {
         title: 'Loading...',
@@ -45,14 +45,14 @@ export default {
       }
     },
     ...mapGetters({
-      jobs: 'allJobs'
+      careers: 'allCareers'
     })
   },
   mounted () {
     // console.log(this.$route.params.entry)
-    // console.log(this.jobs)
+    // console.log(this.careers)
 
-    document.title = this.job.title + ' - Careers - Tendermint'
+    document.title = this.career.title + ' - Careers - Tendermint'
   }
 }
 </script>

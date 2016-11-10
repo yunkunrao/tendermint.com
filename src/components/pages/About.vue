@@ -26,7 +26,7 @@
           <h2>The Advisors</h2>
         </header>
         <div class="section-content">
-          <person v-for="person in teamMembers" :person="person"></person>
+          <person v-for="person in advisors" :person="person"></person>
         </div>
       </div>
     </section>
@@ -53,11 +53,6 @@ export default {
       people: 'allPeople'
     })
   },
-  methods: {
-    avatarSrc (slug) {
-      return require('../../assets/images/people/' + slug + '.jpg')
-    }
-  },
   mounted () {
     document.title = 'About - Tendermint'
   }
@@ -67,9 +62,4 @@ export default {
 
 <style lang="stylus" scoped>
 @require '../../styles/variables.styl'
-
-.section-team-portraits
-  .section-content
-    display flex
-    flex-flow column nowrap
 </style>

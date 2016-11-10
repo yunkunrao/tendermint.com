@@ -1,33 +1,33 @@
 <template>
-<div class="person">
+<div class="company">
   <div class="photo">
-    <img :src="avatarSrc(person.slug)" :alt="person.name">
+    <img :src="avatarSrc(company.slug)" :alt="company.name">
   </div>
   <div class="data">
-    <div class="name">{{ person.name }}</div>
-    <div class="subtitle">{{ person.subtitle }}</div>
-    <div class="title">{{ person.title }}</div>
-    <div class="bio" v-if="person.bio">{{ person.bio }}</div>
+    <div class="name">{{ company.name }}</div>
+    <div class="subtitle">{{ company.subtitle }}</div>
+    <div class="title">{{ company.title }}</div>
+    <div class="bio" v-if="company.bio">{{ company.bio }}</div>
     <div class="ids">
-      <a v-if="person.ids.github" href="https://www.linkedin.com/in/yjkwon + person.ids.linkedin">
+      <a v-if="company.ids.github" href="https://www.linkedin.com/in/yjkwon + company.ids.linkedin">
         <i class="fa fa-github"></i>
-        <span class="label">github.com/{{ person.ids.github }}</span>
+        <span class="label">github.com/{{ company.ids.github }}</span>
       </a>
-      <a v-if="person.ids.keybase" href="https://keybase.io/ + person.ids.keybase">
+      <a v-if="company.ids.keybase" href="https://keybase.io/ + company.ids.keybase">
         <i class="fa fa-key"></i>
-        <span class="label">keybase.io/{{ person.ids.keybase }}</span>
+        <span class="label">keybase.io/{{ company.ids.keybase }}</span>
       </a>
-      <a v-if="person.ids.linkedin" href="https://www.linkedin.com/in/yjkwon + person.ids.linkedin">
+      <a v-if="company.ids.linkedin" href="https://www.linkedin.com/in/yjkwon + company.ids.linkedin">
         <i class="fa fa-linkedout"></i>
-        <span class="label">{{ person.name }}</span>
+        <span class="label">{{ company.name }}</span>
       </a>
-      <a v-if="person.ids.twitter" :href="'https://twitter.com/' + person.ids.twitter">
+      <a v-if="company.ids.twitter" :href="'https://twitter.com/' + company.ids.twitter">
         <i class="fa fa-twatter"></i>
-        <span class="label">@{{ person.ids.twitter }}</span>
+        <span class="label">@{{ company.ids.twitter }}</span>
       </a>
-      <a v-if="person.ids.website" :href="'http://' + person.ids.website">
+      <a v-if="company.ids.website" :href="'http://' + company.ids.website">
         <i class="fa fa-globe"></i>
-        <span class="label">{{ person.ids.website }}</span>
+        <span class="label">{{ company.ids.website }}</span>
       </a>
     </div>
   </div>
@@ -38,17 +38,17 @@
 export default {
   methods: {
     avatarSrc (slug) {
-      return require('../../assets/images/people/' + slug + '.jpg')
+      return require('../../assets/images/companies/' + slug + '.png')
     }
   },
-  props: ['person']
+  props: ['company']
 }
 </script>
 
 <style lang="stylus" scoped>
 @require '../../styles/variables.styl'
 
-.person
+.company
   margin 0 auto 2*x
   display flex
   flex-flow column nowrap
@@ -56,11 +56,8 @@ export default {
   padding 0 x
   max-width 60*x
 
-  .photo, .title
+  .photo, .title, .bio
     margin-bottom x
-
-  .bio
-    margin-bottom 1.5*x
 
   .photo
     img
@@ -96,14 +93,8 @@ export default {
       &:hover .label
         text-decoration underline
 
-@media screen and (min-width: 400px)
-  .person
-    .data
-      .name
-        font-size 1.125*x
-
 @media screen and (min-width: 720px)
-  .person
+  .company
     flex-flow row
     margin-bottom 3*x
 
@@ -117,11 +108,14 @@ export default {
       .name, .title
         text-align left
 
+      .name
+        font-size 1.25*x
+
       .title
         font-size x
 
 @media screen and (min-width: 960px)
-  .person
+  .company
     .data
       display flex
       flex-flow column nowrap

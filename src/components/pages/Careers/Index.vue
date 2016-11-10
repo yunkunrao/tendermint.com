@@ -14,10 +14,10 @@
 
     <section class="section-default">
       <div class="section-container">
-        <div class="section-content jobs">
-          <router-link class="job" v-for="job in filteredJobs" :to="'/careers/' + job.id">
-            <div class="title">{{ job.title }}</div>
-            <div class="subtitle">{{ job.subtitle }}</div>
+        <div class="section-content careers">
+          <router-link class="career" v-for="career in filteredCareers" :to="'/careers/' + career.id">
+            <div class="title">{{ career.title }}</div>
+            <div class="subtitle">{{ career.subtitle }}</div>
           </router-link>
         </div>
       </div>
@@ -39,23 +39,23 @@ export default {
   computed: {
     tags () {
       let tags = []
-      this.jobs.map(function (job) {
-        tags = union(tags, job.tags)
+      this.careers.map(function (career) {
+        tags = union(tags, career.tags)
       })
       return tags
     },
-    filteredJobs () {
+    filteredCareers () {
       let activeTag = this.activeTag
-      let orderedJobs = orderBy(this.jobs, ['weight'], ['asc'])
+      let orderedCareers = orderBy(this.careers, ['weight'], ['asc'])
 
       if (activeTag === 'all') {
-        return orderedJobs
+        return orderedCareers
       } else {
-        return orderedJobs.filter(job => job.tags.includes(activeTag))
+        return orderedCareers.filter(career => career.tags.includes(activeTag))
       }
     },
     ...mapGetters({
-      jobs: 'allJobs'
+      careers: 'allCareers'
     })
   },
   data () {
@@ -109,11 +109,11 @@ export default {
   &.active
     background darken(acolor,25%)
 
-.jobs
+.careers
   max-width 48em
   margin 0 auto
 
-.job
+.career
   border 1px solid bc
   padding 0.75*x x
   display block
@@ -139,7 +139,7 @@ export default {
 
   .tag
     font-size x
-  .job
+  .career
     .title
       font-size 1.25*x
     .subtitle

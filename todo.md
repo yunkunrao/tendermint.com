@@ -7,13 +7,11 @@
       * /media -> /presentations
       * /code -> /docs
       * /guide -> /docs
-* /about
-    * Design overhaul for team members
-    * Fleshed out team members with more links and a bio
+* /about - design overhaul
 * /companies - added this page showcasing companies using Tendermint (no content yet)
 * /presentations - added this page with video content from the old site
 
-@jae do you have the data for companies using TM?
+@jae do you have the data for companies on Tendermint I can put up?
 @jae @ebuchman go ahead and suggest changes for the About text - I yanked the current version from http://bitcoinist.net/tendermint-unveil-ui-demo-first-blockchain-apps/
 
 # 2016-11-09

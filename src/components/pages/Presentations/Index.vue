@@ -14,7 +14,7 @@
         <div class="section-content">
 
           <div class="li-article" v-for="presentation in orderedPresentations">
-            <router-link class="li-article-link" :to="'/blog/' + presentation.slug">
+            <router-link class="li-article-link" :to="'/presentations/' + presentation.slug">
               <header class="li-article-header"><h2>{{ presentation.title }}</h2></header>
               <div class="li-article-content">{{ presentation.description }}</div>
             </router-link>
@@ -39,6 +39,9 @@ export default {
     ...mapGetters({
       presentations: 'allPresentations'
     })
+  },
+  mounted () {
+    document.title = 'Presentations - Tendermint'
   }
 }
 </script>
