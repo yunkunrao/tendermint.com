@@ -4,49 +4,69 @@ const state = {
       slug: 'kwon-jae',
       name: 'Jae Kwon',
       title: 'CEO & Founder',
-      subtitle: '@jaekwon',
-      url: 'https://twitter.com/jaekwon',
+      bio: 'Jae Kwon created Tendermint to save the world from needlessly wasting electricity to secure distributed ledgers. Along the way he realized that using quorums and cryptography instead of energy and hashing affords many advantages such as speed and scalability.',
+      ids: {
+        github: 'jaekwon',
+        keybase: 'jaekwon',
+        linkedin: 'yjkwon',
+        twitter: 'jaekwon'
+      },
       category: 'member'
     },
     {
       slug: 'buchman-ethan',
       name: 'Ethan Buchman',
       title: 'CTO & Cofounder',
-      subtitle: '@buchmanster',
-      url: 'https://twitter.com/buchmanster',
+      bio: 'Ethan sees consensus algorithms as a 21st century means of binding humanity; driven to empower humans with new ways to coordinate and reach agreement at scale.',
+      ids: {
+        github: 'ebuchman',
+        keybase: 'ebuchman',
+        linkedin: 'ethan-buchman-10b34944',
+        twitter: 'buchmanster'
+      },
       category: 'member'
     },
     {
       name: 'Peng Zhong',
       title: 'Chief Design Officer',
       slug: 'zhong-peng',
-      subtitle: '@zcpeng',
-      url: 'https://twitter.com/zcpeng',
+      bio: 'Peng aims to dramatically increase blockchain adoption through better usability design. He hopes to to turning cutting-edge technology into mundane things that everyone can use.',
+      ids: {
+        github: 'nylira',
+        keybase: 'peng',
+        linkedin: 'nylira',
+        twitter: 'zcpeng'
+      },
       category: 'member'
     },
     {
       slug: 'byington-dustin',
       name: 'Dustin Byington',
       title: 'Advisor',
-      subtitle: '@dustin_byington',
-      url: 'https://twitter.com/dustin_byington',
-      category: 'advisor'
+      category: 'advisor',
+      ids: {
+        linkedin: 'dbyington',
+        twitter: 'dustin_byington'
+      }
     },
     {
       slug: 'singer-ryan',
       name: 'Ryan Singer',
       title: 'Advisor',
-      subtitle: '@ryan_singer',
-      url: 'https://twitter.com/ryan_singer',
-      category: 'advisor'
+      category: 'advisor',
+      ids: {
+        linkedin: 'ryans',
+        twitter: 'ryan_singer'
+      }
     },
     {
       slug: 'han-henny',
       name: 'Henny Han',
       title: 'Advisor',
-      subtitle: 'seunghwanhan.com',
-      url: 'http://www.seunghwanhan.com/',
-      category: 'advisor'
+      category: 'advisor',
+      ids: {
+        website: 'seunghwanhan.com'
+      }
     }
   ]
 }

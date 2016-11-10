@@ -10,15 +10,15 @@ const state = {
     {
       slug: 'live-blockchain-demo',
       title: 'Live Blockchain Demo',
-      date: '2015-02-10',
+      date: '2016-02-10',
       description: 'Ethan Buchman demos a live Tendermint-powered blockchain, with nodes coming on and offline.',
       id: '9krAQzN6tbc',
       start: 1952
     },
     {
-      slug: 'blockchain-smart-contracts-in-any-language-with-tendermint-tmsp',
+      slug: 'tendermint-tmsp',
       title: 'Blockchain Smart Contracts in Any Language with Tendermint TMSP',
-      date: '2015-02-10',
+      date: '2016-02-10',
       description: 'Jae Kwon and Ethan Buchman discussed how developers can write blockchain smart contracts in any language using TMSP (Tendermint Socket Protocol).',
       id: '9krAQzN6tbc'
     }

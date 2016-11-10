@@ -17,8 +17,6 @@ const routes = [
 
   // Community Pages
   { path: '/community', component: page('Community/Index') },
-  { path: '/community/presentations', component: page('Community/Presentations/Index') },
-  { path: '/community/presentations/:entry', component: page('Community/Presentations/Entry') },
 
   // Blog Pages
   { path: '/blog', component: page('Blog/Index') },
@@ -31,7 +29,20 @@ const routes = [
   { path: '/press', component: page('Press') },
   { path: '/careers', component: page('Careers/Index') },
   { path: '/careers/:entry', component: page('Careers/Entry') },
+  { path: '/presentations', component: page('Presentations/Index') },
+  { path: '/presentations/:entry', component: page('Presentations/Entry') },
 
+  // redirects from older versions of the site
+  { path: '/code', redirect: '/docs' },
+  { path: '/guide', redirect: '/docs' },
+  { path: '/jobs', redirect: '/careers' },
+  { path: '/jobs/:entry', redirect: '/careers/:entry' },
+  { path: '/media', redirect: '/presentations' },
+  { path: '/media/:entry', redirect: '/presentations/:entry' },
+  { path: '/posts', redirect: '/blog' },
+  { path: '/posts/:entry', redirect: '/blog/:entry' },
+
+  // wildcards
   { path: '/404', component: page('404') },
   { path: '*', component: page('404') }
 ]

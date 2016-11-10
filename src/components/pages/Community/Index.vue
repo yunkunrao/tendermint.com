@@ -39,7 +39,7 @@
 
     <section class="section-default">
       <div class="section-container">
-        <header class="section-header"><h2>People</h2></header>
+        <header class="section-header"><h2>Team</h2></header>
         <div class="section-content">
 
           <div class="li-article">
@@ -53,6 +53,13 @@
             <router-link class="li-article-link" :to="'/careers'">
               <header class="li-article-header"><h2>Careers</h2></header>
               <div class="li-article-content">Interested in working at Tendermint? Check out what roles we're currently hiring.</div>
+            </router-link>
+          </div>
+          
+          <div class="li-article">
+            <router-link class="li-article-link" :to="'/presentations'">
+              <header class="li-article-header"><h2>Presentations</h2></header>
+              <div class="li-article-content">Video and slides from presentations we've given about Tendermint.</div>
             </router-link>
           </div>
 

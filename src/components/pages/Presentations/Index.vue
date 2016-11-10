@@ -3,7 +3,7 @@
     <section id="section-top">
       <div class="section-container">
         <div class="article-wrapper" id="blog-index">
-          <h1><i class="fa fa-video-camera"></i> Presentations</h1>
+          <h1>Presentations</h1>
           <p>Watch presentations and other videos about and by the Tendermint team.</p>
         </div>
       </div>
@@ -34,11 +34,6 @@ import { mapGetters } from 'vuex'
 import { orderBy } from 'lodash'
 
 export default {
-  head: {
-    title: {
-      inner: 'Blog'
-    }
-  },
   computed: {
     orderedPresentations () { return orderBy(this.presentations, ['date'], ['desc']) },
     ...mapGetters({

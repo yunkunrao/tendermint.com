@@ -5,8 +5,6 @@ date: "2015-10-03"
 categories: 
     - "consensus"
     - "pbft"
-aliases:
-    - /posts/tendermint-vs-pbft/
 ~~~
 
 Tendermint was originally inspired by the DLS algorithm ([link](http://groups.csail.mit.edu/tds/papers/Lynch/jacm88.pdf)).  After several iterations to improve efficiency, (namely, making it more asynchronous), it has become quite similar to the PBFT algorithm ([link](http://www.pmg.lcs.mit.edu/papers/osdi99.pdf)).  This document serves to illustrate the similarities and differences between Tendermint and PBFT.
