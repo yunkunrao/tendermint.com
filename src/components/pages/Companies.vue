@@ -16,17 +16,14 @@
         </div>
       </div>
     </section>
-
   </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
-import Company from '../partials/Company.vue'
-
 export default {
   components: {
-    Company
+    Company: require('../partials/Company.vue')
   },
   computed: {
     ...mapGetters({

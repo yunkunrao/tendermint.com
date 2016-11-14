@@ -33,6 +33,7 @@
 import { mapGetters } from 'vuex'
 
 export default {
+  name: 'blog-index',
   computed: mapGetters({
     posts: 'allPosts'
   }),

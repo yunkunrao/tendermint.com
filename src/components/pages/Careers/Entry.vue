@@ -29,11 +29,6 @@
 import { mapGetters } from 'vuex'
 
 export default {
-  head: {
-    title: {
-      inner: 'About'
-    }
-  },
   computed: {
     career () {
       if (this.careers) {
@@ -49,9 +44,6 @@ export default {
     })
   },
   mounted () {
-    // console.log(this.$route.params.entry)
-    // console.log(this.careers)
-
     document.title = this.career.title + ' - Careers - Tendermint'
   }
 }

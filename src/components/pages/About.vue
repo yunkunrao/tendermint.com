@@ -30,17 +30,14 @@
         </div>
       </div>
     </section>
-
   </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
-import Person from '../partials/Person.vue'
-
 export default {
   components: {
-    Person
+    Person: require('../partials/Person')
   },
   computed: {
     teamMembers () {

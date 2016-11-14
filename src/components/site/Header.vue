@@ -30,10 +30,10 @@ export default {
 @require '../../styles/variables.styl'
 
 default-border-top-sm()
-  border-top 3px solid darken(mcolor, 33%)
+  border-top 3px solid c-site-bg
 
 default-border-top()
-  border-top 4px solid darken(mcolor, 33%)
+  border-top 4px solid c-site-bg
 
 highlighted-border-top-color()
   border-top-color lighten(mcolor, 33%) !important
@@ -139,7 +139,6 @@ highlighted-border-top-color()
   #site-header
     nav
       a
-        padding 0 2*x
         i.fa
           margin-right 0.25*x
         .label

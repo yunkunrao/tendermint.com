@@ -31,11 +31,7 @@ import { union, orderBy } from 'lodash'
 import $ from 'jquery'
 
 export default {
-  head: {
-    title: {
-      inner: 'About'
-    }
-  },
+  name: 'careers-index',
   computed: {
     tags () {
       let tags = []

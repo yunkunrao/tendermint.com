@@ -16,24 +16,18 @@
         </div><!--section-content-->
       </div><!--section-container-->
     </section>
-
   </article>
 </template>
 
 <script>
-import ArticleBackBtn from '../../partials/ArticleBackBtn.vue'
-import PresentationFooter from '../../partials/PresentationFooter.vue'
-import Comments from '../../partials/Comments.vue'
-
 import { mapGetters } from 'vuex'
 import $ from 'jquery'
-
 export default {
-  name: 'entry',
+  name: 'presentations-entry',
   components: {
-    ArticleBackBtn,
-    PresentationFooter,
-    Comments
+    ArticleBackBtn: require('../../partials/ArticleBackBtn.vue'),
+    PresentationFooter: require('../../partials/PresentationFooter.vue'),
+    Comments: require('../../partials/Comments.vue')
   },
   computed: {
     entry () {

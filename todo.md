@@ -1,3 +1,13 @@
+# 2016-11-11
+* General
+    * Layout improvements: phones and tablet design
+    * Usability improvement: Sidebar now overlaps the Footer, which makes more sense for readability
+    * Added a "Get Tendermint" button to the bottom of most pages
+* Home
+    * Improved the design of the Benefits on the homepage
+* Blog
+    * fixed the issue with images not loading properly
+
 # 2016-11-10
 * general
     * redirects: to prevent link rot, I'm redirecting (from the old site):

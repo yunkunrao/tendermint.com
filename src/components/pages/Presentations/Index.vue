@@ -23,7 +23,6 @@
             </div>
           </div>
         </div>
-
       </div>
     </section>
   </div>
@@ -32,8 +31,8 @@
 <script>
 import { mapGetters } from 'vuex'
 import { orderBy } from 'lodash'
-
 export default {
+  name: 'presentations-index',
   computed: {
     orderedPresentations () { return orderBy(this.presentations, ['date'], ['desc']) },
     ...mapGetters({

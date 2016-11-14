@@ -26,17 +26,15 @@ export default {
   bottom x
   right x
 
-  width 3*x
-  height 3*x
-  font-size x
-  line-height 3*x - 2px
   border-radius 1.5*x
 
-  border 1px solid bc
+  width 3*x
+  line-height 3*x
 
   text-align center
 
-  background #fff
+  background hsla(0,0,0,0.8)
+  color #fff
 
   cursor pointer
 

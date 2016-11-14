@@ -12,7 +12,7 @@
 @require '../../styles/variables.styl'
 
 #install-tendermint
-  max-width 20*x
+  max-width 18*x
   width 100%
 
   background hsla(0,0,0,.25)
@@ -23,7 +23,6 @@
   flex-flow column no-wrap
 
   .input-group
-    margin 0.25*x
     flex 1
 
     .btn
@@ -33,5 +32,5 @@
 @media screen and (min-width: 480px) and (max-height: 480px)
   #install-tendermint
     flex-flow row no-wrap
-    max-width 30*x
+    max-width 24*x
 </style>

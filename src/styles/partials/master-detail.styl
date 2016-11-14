@@ -1,15 +1,18 @@
 .master-detail
   padding-top 2.4*x
   min-height 100vh
+  background c-site-fg
+
+.master-detail + #site-bottom #section-install
+  display none
 
 .detail
   padding 0 x x
 
 .master 
   nav
-    background #fff
-    background hsl(0,0,97%)
     padding-bottom x*0.75
+    border-bottom 4px solid hsl(0,0,75%)
 
   &.inline
     margin 0 auto
@@ -29,7 +32,6 @@
     left 0
     width 100vw
 
-
     nav
       padding-top 3*x
       position relative
@@ -48,50 +50,34 @@
     display none
 
   .title
-    padding 0 x
-
     color light
-
     font-size 0.75*x
     font-weight bold
     text-transform uppercase
     letter-spacing 0.0625em
-    line-height 2*x
-    padding-top x*0.75
+    line-height 2
+    padding x x*1.5 x*0.25
 
   a + .title
     margin-top 0.75*x
   a
     display block
-    padding 0.25*x 3*x 0.25*x 0.75*x
+    padding 0.25*x x*1.5
+    padding-left 1.25*x
     position relative
-    font-weight 500
-    color link
+    color txt
     border-left 0.25*x solid transparent
 
-    &:after
-      content '\f105'
-      font-family FontAwesome
-      line-height 1.5
-      text-align center
-      display block
-      line-height 3*x
-      width 3*x
-      position absolute
-      top 0
-      right 0
-      color lighten(link,50%)
-      display none
-
     &.router-link-active
-      border-left-color mcolor
-      color txt
+      border-left-color link
+      color link
       &:after
         display none
 
-@media screen and (min-height: 400px)
-  .master-detail
-    padding-top 3*x
+@media screen and (min-width: 360px)
+  .detail
+    padding-left 1.5*x
+    padding-right 1.5*x
 
 @media screen and (min-width: 720px)
   .master
@@ -103,6 +89,8 @@
       margin-bottom 1.5*x
       nav
         margin 0 x
+    nav
+      background hsl(0,0,98%)
 
     .thumb-button
       display none !important
@@ -111,6 +99,12 @@
     margin-left 240px
     padding-left 2*x
     padding-right 2*x
+
+  .master-detail + #site-bottom #site-footer
+    .sections
+      padding-left 240px + 2*x !important
+    section
+      flex 0 0 50% !important
 
 @media screen and (min-width: 960px)
   .master
@@ -122,4 +116,11 @@
     margin-left 320px
     padding-left 4*x
     padding-right 4*x
-    padding-bottom 4*x
+    padding-bottom 2*x
+
+  .master-detail + #site-bottom #site-footer
+    .sections
+      padding-left 320px + x !important
+      padding-right x !important
+    section
+      flex 0 0 25% !important

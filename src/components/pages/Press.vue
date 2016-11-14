@@ -34,11 +34,6 @@ import { mapGetters } from 'vuex'
 import { orderBy } from 'lodash'
 
 export default {
-  head: {
-    title: {
-      inner: 'Blog'
-    }
-  },
   computed: {
     orderedMedia () { return orderBy(this.media, ['date'], ['desc']) },
     ...mapGetters({

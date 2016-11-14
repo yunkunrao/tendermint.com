@@ -1,5 +1,7 @@
 <template>
-  <footer id="site-footer" class="component">
+  <div id="site-bottom" class="component">
+  <section-install></section-install>
+  <footer id="site-footer">
     <div class="sections">
       <section>
         <img src="../../assets/images/tendermint-logo-blue-160.png" id="footer-logo">
@@ -33,13 +35,14 @@
       </section>
     </section>
   </div>
+  </div>
 </template>
 
 <script>
 export default {
   name: 'site-footer',
   components: {
-    SectionFooterCta: require('../sections/FooterCta'),
+    SectionInstall: require('../sections/Install.vue'),
     Connections: require('../partials/Connections')
   }
 }
@@ -49,9 +52,8 @@ export default {
 @require '../../styles/variables.styl'
 
 #site-footer
-  position relative
-  z-index 11
   background mcolor
+  border-bottom 4px solid c-site-bg
 
   #footer-logo
     width 80px
@@ -60,11 +62,14 @@ export default {
   .sections
     padding x 0
     color #fff
-    max-width 640px
     margin 0 auto
 
+    display flex
+    flex-flow row wrap
+
   section
-    padding 0.5*x 0.5*x
+    flex 0 0 50%
+    padding x 0.5*x
 
     header
       padding 0.25*x 0.5*x
@@ -89,16 +94,19 @@ export default {
 @media screen and (min-width: 360px)
   #site-footer
     .sections
-      display flex
-      flex-flow row wrap
-    section
-      flex 0 0 50%
-      padding x 0.5*x
+      padding x x*0.5
+    .section
+      padding x
+
+@media screen and (min-width: 400px)
+  #site-footer
+    .sections
+      padding x
 
 @media screen and (min-width: 720px)
   #site-footer
     .sections
-      padding 2*x 0
+      padding 2*x
     section
       flex 0 0 25%
       header

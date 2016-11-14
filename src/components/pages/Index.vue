@@ -7,16 +7,12 @@
 </template>
 
 <script>
-import SectionHomeCover from '../sections/HomeCover'
-import SectionHomeBenefits from '../sections/HomeBenefits'
-import SectionHomeRecruiting from '../sections/HomeRecruiting'
-
 export default {
   name: 'page-index',
   components: {
-    SectionHomeCover,
-    SectionHomeBenefits,
-    SectionHomeRecruiting
+    SectionHomeCover: require('../sections/HomeCover'),
+    SectionHomeBenefits: require('../sections/HomeBenefits.vue'),
+    SectionHomeRecruiting: require('../sections/HomeRecruiting.vue')
   }
 }
 </script>

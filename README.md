@@ -2,6 +2,19 @@
 
 > The website for Tendermint.
 
+## Production
+
+``` bash
+# install dependencies
+npm install
+
+# build everything for production with minification
+npm run build
+
+# run the production server
+npm run prod
+```
+
 ## Development
 
 ``` bash
@@ -17,6 +30,9 @@ npm run dev
 ``` bash
 # Edit Blog > Posts
 ./src/content/blog/
+
+# Build the edited blog posts
+npm run blog
 
 # Edit Intro Pages
 ./src/content/intro/
@@ -36,22 +52,6 @@ npm run dev
 # Edit Community > Presentations
 ./src/store/modules/presentations.js
 
-```
-
-## Production
-
-``` bash
-# install dependencies
-npm install
-
-# build the blog (optional)
-npm run blog
-
-# build everything for production with minification
-npm run build
-
-# run the production server
-npm run prod
 ```
 
 
