@@ -1,5 +1,5 @@
 <template>
-  <section class="section-default">
+  <section class="section-default section-dark">
     <div class="section-container">
       <div class="blocks">
       <div class="block">
@@ -26,7 +26,7 @@
       <div class="block">
         <i class="fa fa-fighter-jet"></i>
         <div class="text">
-          <div class="key">Lighting fast</div>
+          <div class="key">Lightning fast</div>
           <div class="value">Tendermint supports thousands of transaction per second at 1000ms latencies.</div>
         </div>
       </div>

@@ -32,12 +32,14 @@
             </router-link>
           </div>
 
+          <!--
           <div class="li-article">
             <router-link class="li-article-link" :to="'/companies'">
               <header class="li-article-header"><h2>Companies Using Tendermint</h2></header>
               <div class="li-article-content">These companies are building upon Tendermint to achieve their core business goals.</div>
             </router-link>
           </div>
+          -->
 
         </div>
       </div>

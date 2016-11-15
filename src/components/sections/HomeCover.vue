@@ -51,6 +51,8 @@ export default {
   height 100vh
   max-height 178vw
   position relative
+  border-bottom 1px solid lighten(mcolor, 10%)
+
 
   .section-container
     width 100vw
@@ -104,14 +106,11 @@ export default {
 
     font-size x
     line-height 1.5*x
-    color lighten(mcolor,50%)
+    color lighten(mcolor,25%)
     text-align center
 
     transition 0.2s ease all
     cursor pointer
-    &:hover
-      background hsla(0,0,0,0.2)
-      color lighten(mcolor,80%)
 
 @media screen and (min-height: 400px)
   #section-cover

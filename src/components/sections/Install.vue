@@ -20,7 +20,7 @@ export default {
 
 #section-install
   background mcolor
-  border-bottom 1px solid darken(mcolor, 20%)
+  border-bottom 1px solid lighten(mcolor, 10%)
   padding 2*x x
   h2
     color lighten(mcolor, 75%)

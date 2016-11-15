@@ -45,8 +45,9 @@ highlighted-border-top-color()
   z-index 100
 
   background mcolor url('../../assets/images/home/gradient.jpg') no-repeat top right
-  background mcolor
   background-size cover
+
+  background mcolor
 
   width 100vw
   display flex

@@ -52,7 +52,7 @@ In future posts I'll go into detail about the consensus algorithm and how it can
 
 ## Tendermint architecture
 
-<img src="~assets/images/tm_architecture.png">
+<img src="../static/images/tm_architecture.png">
 
 The diagram above is meant to show that:
 
