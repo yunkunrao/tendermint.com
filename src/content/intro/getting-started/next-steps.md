@@ -6,9 +6,10 @@ and on a remote Tendermint cluster.
 To learn more about building TMSP applications and integrating with Tendermint, see the <router-link to="/docs/guides/app-development">Developer Guides</router-link>.
 
 To learn more about Tendermint's various pieces, checkout the <router-link to="/docs">Documentation</router-link>.
+For a deeper dive, see [this thesis](https://atrium.lib.uoguelph.ca/xmlui/handle/10214/9769).
 
-For examples and inspiration, see Tendermint's <router-link to="/ecosystem">Software Ecosystem</router-link>.
+The Tendermint <router-link to="/ecosystem">Software Ecosystem</router-link> contains many example applications and related software built by the Tendermint team and others. Check it out for some inspiration!
 
-Collaborate with other developers working with Tendermint on the <router-link to="/community">Community</router-link> page.
+See our <router-link to="/community">Community</router-link> page for more ways to collaborate.
 
 You can also <router-link to="/contact">get in touch with the team</router-link>.

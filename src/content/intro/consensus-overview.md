@@ -47,5 +47,4 @@ This adds an economic element to the security of the protocol, allowing one to q
 
 ## Next Steps
 
-- Read more about Tendermint in the <router-link to="/docs">docs</router-link> or in [this Master's thesis](https://atrium.lib.uoguelph.ca/xmlui/handle/10214/9769)
 - Continue with the <router-link to="/intro/getting-started/install">Getting Started</router-link> guide to install and run example tendermint applications.
