@@ -1,41 +1,22 @@
 <template>
   <section id="section-cover">
     <div class="section-container">
+      <img src="../../assets/images/transparent-logo.png" id="home-logo">
       <h1>Tendermint</h1>
       <p class="tagline">Blockchain Consensus</p>
-      <p class="introduction">
-        Byzantine fault-tolerant replicated state machines in any programming language
-      </p>
-
+      <p class="introduction">Byzantine fault-tolerant replicated state machines in any programming language</p>
       <install-tendermint></install-tendermint>
-
       <p class="source"><i class="fa fa-github"></i> View source on <a href="https://github.com/tendermint/tendermint">GitHub</a></p>
-
-      <!--<connections></connections>-->
-
     </div><!--container-->
-    <a id="home-arrow-down" @click="scrollDown"><i class="fa fa-angle-down"></i></a>
-    <div id="scroll-down-here"></div>
   </section>
 </template>
 
 <script>
-import $ from 'jquery'
 import InstallTendermint from '../partials/InstallTendermint.vue'
-import Connections from '../partials/Connections.vue'
 
 export default {
   components: {
-    InstallTendermint,
-    Connections
-  },
-  methods: {
-    scrollDown (event) {
-      event.preventDefault()
-      $('html, body').animate({
-        scrollTop: $('#scroll-down-here').offset().top - 48
-      }, 1000)
-    }
+    InstallTendermint
   }
 }
 </script>
@@ -47,113 +28,116 @@ export default {
   background mcolor url('../../assets/images/home/gradient.jpg') no-repeat center center
   background mcolor
   background-size cover
-  width 100vw
-  height 100vh
-  max-height 178vw
   position relative
   border-bottom 1px solid lighten(mcolor, 10%)
 
-
   .section-container
-    width 100vw
-    height 100vh
-    max-height 178vw
-
-    display flex
-    flex-flow column no-wrap
-    align-items center
-    justify-content center
-    padding 1.5*x 1.5*x 0
+    margin-top 2.4*x
+    padding 4*x 1.5*x
 
   h1
     color lighten(mcolor,90%)
-    font-weight 500
+    font-weight 400
     line-height 1
-    margin 0 0 0.5*x
-    letter-spacing -0.025em
-    font-size 2.5*x
-
-  .tagline, .introduction
-    margin-bottom x
-
-  form
-    margin-bottom 0.75*x
+    font-size 2.75*x
+    margin-bottom 0.5*x
 
   .tagline
     color lighten(mcolor,50%)
-    font-size 0.85*x
+    font-size x
     text-transform uppercase
-    letter-spacing 0.0625em
-    font-weight 400
+    letter-spacing 0.05em
+    font-weight 500
+    margin-bottom 2*x
 
   .introduction
-    color lighten(mcolor,58%)
-    line-height 1.25
-    text-align center
-    max-width 20em
+    color lighten(mcolor,70%)
+    max-width 20*x
+    font-size 1.25*x
+    margin-bottom 3*x
+
+  .btn
+    margin-bottom x
 
   .source
-    color lighten(mcolor,40%)
-    font-size 0.75*x
+    color lighten(mcolor,50%)
     a
-      color lighten(mcolor,60%)
+      color lighten(mcolor,70%)
 
-  #home-arrow-down
-    position absolute
-    bottom 0
-    left 0
-    width 100vw
-
-    font-size x
-    line-height 1.5*x
-    color lighten(mcolor,25%)
-    text-align center
-
-    transition 0.2s ease all
-    cursor pointer
+#home-logo
+  display none
 
 @media screen and (min-height: 400px)
-  #section-cover
+  #section-cover .section-container
+    margin-top 3*x
 
-    .tagline, .introduction
-      margin-bottom 1.25*x
+@media screen and (min-width: 360px)
+  #section-cover .section-container
+    padding 4*x 1.75*x
 
-    .connections
-      display flex
+@media screen and (min-width: 400px)
+  #section-cover .section-container
+    padding 5*x 2.25*x
 
-    #home-arrow-down
-      font-size 1.5*x
-      line-height 2*x
-
-@media screen and (min-width: 360px) and (min-height: 480px)
-  #section-cover
     h1
-      font-size 3.25*x
+      font-size 3*x
+    .tagline
+      font-size 1.095*x
 
-    .tagline, .introduction
-      margin-bottom 2*x
-
-    .tagline, .source
-      font-size x
+@media screen and (min-width: 720px)
+  #section-cover .section-container
+    padding 5*x 2*x
+    max-width 640px
+    margin-left auto
+    margin-right auto
 
     .introduction
+      font-size 1.5*x
+      max-width 28*x
+
+    .btn
+      margin-bottom 1.5*x
+    .source
       font-size 1.25*x
 
-@media screen and (min-width: 400px) and (min-height: 480px)
   #section-cover
-    .section-container
-      padding-left 3*x
-      padding-right 3*x
+    overflow hidden
+    
+  #home-logo
+    display block
+    width 80vw
+    height 80vw
+    position absolute
+    top -2.5vw
+    right -20vw
+    opacity 0.05
 
+@media screen and (min-width: 960px)
+  #section-cover .section-container
+    padding 6.5*x 2*x
+    max-width 900px
+    .tagline
+      margin-bottom 3*x
     .introduction
-      line-height 1.5
+      margin-bottom 4*x
 
-    #home-arrow-down
-      font-size 2*x
-      line-height 3*x
+  #home-logo
+    top -7.5vw
+    right -20vw
 
-@media screen and (min-width: 720px) and (min-height: 480px)
-  #section-cover
-    .introduction
-      font-size 1.5*x
+@media screen and (min-width: 1200px)
+  #section-cover .section-container
+    padding 8*x 2*x
+    max-width 1080px
+
+  #home-logo
+    width 70vw
+    height 70vw
+
+@media screen and (min-width: 1800px)
+  #home-logo
+    top -15vw
+    right -15vw
+
+
 </style>

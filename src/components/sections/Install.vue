@@ -1,6 +1,6 @@
 <template>
   <section id="section-install">
-    <h2>Get Tendermint</h2>
+    <h2>Get Started</h2>
     <install-tendermint></install-tendermint>
   </section>
 </template>
@@ -27,5 +27,15 @@ export default {
     font-weight 500
     font-size 1.25*x
     text-align center
-    margin 0 0 x
+    line-height 1
+    margin-bottom 1.5*x
+  .install-tendermint
+    margin 0 auto
+
+
+@media screen and (min-width: 720px)
+  #section-install
+    padding 3*x x
+    h2
+      font-size 1.5*x
 </style>
