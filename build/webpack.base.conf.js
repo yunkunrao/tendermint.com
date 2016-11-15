@@ -106,7 +106,7 @@ module.exports = {
     import: ['~nib/lib/nib/index.styl']
   },
   vueMarkdown: {
-    html: false,
+    html: true,
     linkify: true,
     typographer: true,
     use: [

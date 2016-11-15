@@ -7,7 +7,7 @@ To learn more about building TMSP applications and integrating with Tendermint, 
 
 To learn more about Tendermint's various pieces, checkout the <router-link to="/docs">Documentation</router-link>.
 For a deeper dive, see [this thesis](https://atrium.lib.uoguelph.ca/xmlui/handle/10214/9769). 
-There is also the [original whitepaper](~assets/docs/tendermint.pdf), though it is now quite outdated.
+There is also the [original whitepaper](/static/docs/tendermint.pdf), though it is now quite outdated.
 
 The Tendermint <router-link to="/ecosystem">Software Ecosystem</router-link> contains many example applications and related software built by the Tendermint team and others. Check it out for some inspiration!
 
