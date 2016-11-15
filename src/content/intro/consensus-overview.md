@@ -42,8 +42,12 @@ Thus, we are not so much interested in one-third or two-thirds of the validators
 which may not be uniformly distributed across individual validators.
 
 Since Tendermint can replicate arbitrary applications, it is possible to define a currency, and denominate the voting power in that currency.
-Validators can be forced to "bond" their currency holdings in a security deposit that can be destroyed if they're found to misbehave in the consensus protocol.
-This adds an economic element to the security of the protocol, allowing one to quantify the cost of violating the assumption that less than one-third of voting power is Byzantine.
+When voting power is denominated in a native currency, the system is often referred to as Proof-of-Stake.
+Validators can be forced, by logic in the application, 
+to "bond" their currency holdings in a security deposit that can be destroyed if they're found to misbehave in the consensus protocol.
+This adds an economic element to the security of the protocol, allowing one to quantify the cost of violating the assumption that less than one-third of voting power is Byzantine. 
+
+The [Cosmos Network](http://cosmos.network) is designed to use this Proof-of-Stake mechanism across an array of cryptocurrencies implemented as TMSP applications.
 
 ## Next Steps
 
