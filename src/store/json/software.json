@@ -22,7 +22,7 @@
       "description": "Tendermint IAVL tree implemented as tmsp app"
     },
     {
-      "name": "ErisDB AVL Tree",
+      "name": "ErisDB",
       "url": "https://github.com/eris-ltd/erisdb",
       "language": "Go",
       "author": "Monax Industries",
@@ -30,7 +30,7 @@
     },
     {
       "name": "Merkle AVL Tree",
-      "url": "https://github.com/eris-ltd/erisdb",
+      "url": "https://github.com/jTMSP/MerkleTree",
       "language": "Java",
       "author": "jTMSP",
       "description": "Tendermint IAVL tree implemented as tmsp app"
@@ -60,7 +60,7 @@
   "tmspServers": [
     {
       "name": "tmsp",
-      "url": "https://github.com/tendermint/basecoin",
+      "url": "https://github.com/tendermint/tmsp",
       "language": "Go",
       "author": "Tendermint"
     },
