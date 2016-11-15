@@ -35,5 +35,4 @@ for a wide variety of distributed applications. <router-link to="/intro/getting-
 ## Next Steps
 
 - See how <router-link to="/intro/tendermint-vs">Tendermint compares to other software</router-link>.
-- See who is <router-link to="/ecosystem">building on Tendermint</router-link>.
 - Continue with the <router-link to="/intro/getting-started/install">Getting Started</router-link> guide to install and run example tendermint applications.
