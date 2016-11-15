@@ -3,9 +3,9 @@
     Docs/FAQ, Docs/Definitions, and Community/Companies have no content, so I'm hiding them for now.
 * Home
     * 3x2 design for the Features section
-    * Design updates
+    * Design updates for the homepage
 * Blog
-    * Fix issue with images not working on the blog.
+    * Fix issue with images not working on the blog
 
 # 2016-11-11
 * General

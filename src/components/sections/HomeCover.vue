@@ -1,7 +1,7 @@
 <template>
   <section id="section-cover">
     <div class="section-container">
-      <img src="../../assets/images/transparent-logo.png" id="home-logo">
+      <img src="../../assets/images/transparent-logo-2048.png" id="home-logo">
       <h1>Tendermint</h1>
       <p class="tagline">Blockchain Consensus</p>
       <p class="introduction">Byzantine fault-tolerant replicated state machines in any programming language</p>
@@ -110,7 +110,7 @@ export default {
     position absolute
     top -2.5vw
     right -20vw
-    opacity 0.05
+    opacity 0.15
 
 @media screen and (min-width: 960px)
   #section-cover .section-container
