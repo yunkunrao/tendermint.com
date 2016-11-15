@@ -31,9 +31,9 @@ The layout of this Tendermint website content is also ripped directly and withou
 
 ## Bitcoin, Ethereum, etc.
 
-Tendermint emerged in the tradition of blockchains like Bitcoin, Ethereum, etc.
+Tendermint emerged in the tradition of cryptocurrencies like Bitcoin, Ethereum, etc.
 with the goal of providing a more efficient and secure consensus algorithm than Bitcoin's Proof of Work.
-In the early days, Tendermint had a simple currency built in, and to become a validator in the system 
+In the early days, Tendermint had a simple currency built in, and to participate in consensus 
 user's had to "bond" units of the currency into a security deposit which could be revoked if they misbehaved - 
 this is what made Tendermint a Proof-of-Stake algorithm.
 
@@ -41,7 +41,7 @@ Since then, Tendermint has evolved to be a general purpose blockchain consensus 
 That means it can be used as a plug-and-play replacement for the consensus engines of other blockchain software.
 So one can take the current Ethereum code base, whether in Rust, or Go, or Haskell, and run it as a TMSP application
 using Tendermint consensus. Indeed, [we did that](https://github.com/tendermint/geth-tmsp).
-Essentially, TMSP enables smart contracts in any programming language.
+And we plan to do the same for Bitcoin, ZCash, and various other deterministic applications as well.
 
 Another example of a cryptocurrency application built on Tendermint is [Cosmos](http://cosmos.network)
 
@@ -49,10 +49,17 @@ Another example of a cryptocurrency application built on Tendermint is [Cosmos](
 
 [Hyperledger](https://github.com/hyperledger/fabric), takes a similar approach to Tendermint, but is more opinionated about how the state is managed,
 and requires that all application behaviour runs in potentially many docker containers, modules it calls "chaincode". 
-It uses an implementation of PBFT from a team at IBM that is [augmented to handle potentially non-deterministic chaincode](https://www.zurich.ibm.com/~cca/papers/sieve.pdf)
+It uses an implementation of [PBFT](http://pmg.csail.mit.edu/papers/osdi99.pdf) 
+from a team at IBM that is 
+[augmented to handle potentially non-deterministic chaincode](https://www.zurich.ibm.com/~cca/papers/sieve.pdf)
 It is possible to implement this docker-based behaviour as a TMSP app in Tendermint, 
 though extending Tendermint to handle non-determinism remains for future work.
 
 [ErisDB](https://github.com/eris-ltd/eris-db) is an implementation of the Ethereum Virtual Machine and Ethereum transaction mechanics,
 with additional features for a name-registry, permissions, and native contracts, and an alternative blockchain API.
 It uses Tendermint as its consensus engine, and provides a particular application state.
+
+## Next Steps
+
+- Read an overview of the motivation and design behind the <router-link to="/intro/tmsp-overview">Tendermint Socket Protocol</router-link>.
+- Continue with the <router-link to="/intro/getting-started/install">Getting Started</router-link> guide to install and run example tendermint applications.
