@@ -8,8 +8,8 @@
       "description": "A prototypical account based crypto currency state machine supporting plugins"
     },
     {
-      "name": "Geth-TMSP",
-      "url": "https://github.com/tendermint/geth-tmsp",
+      "name": "Ethermint",
+      "url": "https://github.com/tendermint/ethermint",
       "language": "Go",
       "author": "Tendermint",
       "description": "The go-ethereum state machine run as a TMSP app"
@@ -127,7 +127,7 @@
       "description": "PBFT state machine replication for dynamic set of simple dockerized applications"
     },
     {
-      "name": "Hyperledger",
+      "name": "Hydrachain",
       "url": "https://github.com/HydraChain/hydrachain",
       "language": "Python",
       "author": "HydraChain",
