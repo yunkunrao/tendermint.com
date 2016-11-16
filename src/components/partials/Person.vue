@@ -55,6 +55,8 @@ export default {
   align-items stretch
   padding 0 x
   max-width 60*x
+  &:last-of-type
+    margin-bottom 0
 
   .photo, .title
     margin-bottom x
@@ -79,8 +81,9 @@ export default {
 
   .title
     text-transform uppercase
-    font-size 0.75*x
-    letter-spacing 0.0625em
+    font-size 0.75em
+    font-weight 500
+    line-height 2
     color light
 
   .ids
@@ -116,9 +119,6 @@ export default {
 
       .name, .title
         text-align left
-
-      .title
-        font-size x
 
 @media screen and (min-width: 960px)
   .person

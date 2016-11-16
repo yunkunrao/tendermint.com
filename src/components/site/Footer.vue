@@ -4,7 +4,7 @@
   <footer id="site-footer">
     <div class="sections">
       <section>
-        <img src="../../assets/images/tendermint-logo-blue-160.png" id="footer-logo">
+        <img src="../../assets/images/tendermint-logo-footer.png" id="footer-logo">
         <span>&copy; 2016 Tendermint</span>
       </section>
       <section>

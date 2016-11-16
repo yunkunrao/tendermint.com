@@ -1,11 +1,9 @@
 <template>
-  <article>
-    <section id="section-top">
-      <div class="section-container">
-        <h1>{{ entry.title }} </h1>
-        <p>{{ entry.dateFriendly }} <template v-if="entry.author">by {{ entry.author }}</template></p>
-      </div>
-    </section>
+  <div class="component">
+    <div class="page-header page-header-wide">
+      <h1>{{ entry.title }} </h1>
+      <p>{{ entry.dateFriendly }} <template v-if="entry.author">by {{ entry.author }}</template></p>
+    </div>
 
     <section class="section-default">
       <div class="section-container">
@@ -17,7 +15,7 @@
       </div><!--section-container-->
     </section>
 
-  </article>
+  </div>
 </template>
 
 <script>

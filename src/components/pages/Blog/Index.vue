@@ -1,29 +1,19 @@
 <template>
-  <div id="page-blog-index">
-    <section id="section-top">
-      <div class="section-container">
-        <div class="article-wrapper" id="blog-index">
-          <h1>Tendermint Blog</h1>
-          <p>Learn about what we&rsquo;re working on, right this moment. <a href="/static/feed.xml">Subscribe via RSS</a></p>
-        </div>
-      </div>
-    </section>
+  <div class="split-page">
+    <div class="page-header">
+      <h1>Blog</h1>
+      <p>Learn about what we&rsquo;re working on, right this moment. <a href="/static/feed.xml">Subscribe</a></p>
+    </div>
 
-    <section class="section-default section-flush">
+    <section class="section-default page-content">
       <div class="section-container">
         <div class="section-content">
 
-          <div class="li-article" v-for="post in posts">
-            <router-link class="li-article-link" :to="'/blog/' + post.slug">
-              <header class="li-article-header"><h2>{{ post.title }}</h2></header>
-              <div class="li-article-content">{{ post.description }}</div>
-            </router-link>
-            <div class="li-article-meta">
-              <div class="date">Posted on {{ post.dateFriendly }}</div>
-            </div>
-          </div>
-        </div>
+          <post :title="post.title" :desc="post.description" :url="'/blog/' + post.slug"
+            :meta="post.dateFriendly" v-for="post in posts">
+          </post>
 
+        </div>
       </div>
     </section>
   </div>
@@ -34,6 +24,9 @@ import { mapGetters } from 'vuex'
 
 export default {
   name: 'blog-index',
+  components: {
+    Post: require('../../partials/Post')
+  },
   computed: mapGetters({
     posts: 'allPosts'
   }),
@@ -42,3 +35,8 @@ export default {
   }
 }
 </script>
+
+<style lang="stylus" scoped>
+@require '../../../styles/variables.styl'
+</style>
+

@@ -1,24 +1,22 @@
 <template>
   <div class="component">
-    <section id="section-top">
-      <div class="section-container">
-        <div class="article-wrapper">
-          <h1>{{ career.title }}</h1>
-          <p>{{ career.subtitle }}
-        </div>
-      </div>
-    </section>
+    <div class="page-header page-header-wide">
+      <h1>{{ career.title }}</h1>
+      <p>{{ career.subtitle }}</p>
+    </div>
 
     <section class="section-default">
       <div class="section-container">
-        <div class="section-content article-body">
-          <h2>Responsibilities</h2>
-          <ul class="responsibilities">
-            <li v-for="r in career.responsibilities">{{ r }}</li>
-          </ul>
-          <h2>Apply for this role</h2>
-          <p>Send an email with your cover letter and resume:</p>
-          <a class="btn btn-primary btn-large" href="mailto:hello@tendermint.com">hello@tendermint.com</a>
+        <div class="section-content">
+          <div class="article-body">
+            <h2>Responsibilities</h2>
+            <ul class="responsibilities">
+              <li v-for="r in career.responsibilities">{{ r }}</li>
+            </ul>
+            <h2>Apply for this role</h2>
+            <p>Send an email with your cover letter and resume:</p>
+            <a class="btn btn-primary btn-large" href="mailto:hello@tendermint.com">hello@tendermint.com</a>
+          </div>
         </div>
       </div>
     </section>
@@ -75,6 +73,10 @@ export default {
   color #fff
   &.active
     background darken(acolor,25%)
+
+a.btn
+  width 18*x
+  text-decoration none
 
 @media screen and (min-width: 720px)
   .tags

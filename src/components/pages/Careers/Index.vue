@@ -1,24 +1,20 @@
 <template>
-  <div class="component">
-    <section id="section-top">
-      <div class="section-container">
-        <div class="article-wrapper">
-          <h1>Careers</h1>
-          <div class="tags">
-            <div id="tag-all" class="tag active" @click="setActiveTag($event)">all</div>
-            <div class="tag" v-for="tag in tags" @click="setActiveTag($event,tag)">{{ tag }}</div>
-          </div>
-        </div>
+  <div class="component split-page">
+    <div class="page-header">
+      <h1>Careers</h1>
+      <p>Work with us to improve Tendermint.</p>
+      <div class="tags">
+        <div id="tag-all" class="tag active" @click="setActiveTag($event)">all</div>
+        <div class="tag" v-for="tag in tags" @click="setActiveTag($event,tag)">{{ tag }}</div>
       </div>
-    </section>
+    </div>
 
-    <section class="section-default">
+    <section class="section-default page-content">
       <div class="section-container">
-        <div class="section-content careers">
-          <router-link class="career" v-for="career in filteredCareers" :to="'/careers/' + career.id">
-            <div class="title">{{ career.title }}</div>
-            <div class="subtitle">{{ career.subtitle }}</div>
-          </router-link>
+        <div class="section-content">
+          <post v-for="career in filteredCareers" :url="'/careers/' + career.id"
+            :title="career.title" :desc="career.subtitle" :meta="career.tags">
+          </post>
         </div>
       </div>
     </section>
@@ -32,6 +28,9 @@ import $ from 'jquery'
 
 export default {
   name: 'careers-index',
+  components: {
+    Post: require('../../partials/Post')
+  },
   computed: {
     tags () {
       let tags = []
@@ -105,39 +104,14 @@ export default {
   &.active
     background darken(acolor,25%)
 
-.careers
-  max-width 48em
-  margin 0 auto
-
-.career
-  border 1px solid bc
-  padding 0.75*x x
-  display block
-  margin-bottom x
-  max-width 48em
-
-  .title
-    color link
-    font-weight 500
-
-  .subtitle
-    color dim
-    font-size 0.75*x
-
-  &:last-of-type
-    margin-bottom 0
-  &:hover
-    border-color link
-
 @media screen and (min-width: 720px)
   .tags
     margin-top 2*x
 
   .tag
     font-size x
-  .career
-    .title
-      font-size 1.25*x
-    .subtitle
-      font-size x
+    
+@media screen and (min-width: 960px)
+  .tags
+    justify-content flex-start
 </style>

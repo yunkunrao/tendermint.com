@@ -1,11 +1,9 @@
 <template>
-  <article>
-    <section id="section-top">
-      <div class="section-container">
-        <h1>{{ entry.title }} </h1>
-        <p>Uploaded on {{ entry.date }}</p>
-      </div>
-    </section>
+  <div class="component">
+    <div class="page-header page-header-wide">
+      <h1>{{ entry.title }}</h1>
+      <p>Uploaded on {{ entry.date }}</p>
+    </div>
 
     <section class="section-default">
       <div class="section-container">
@@ -16,7 +14,7 @@
         </div><!--section-content-->
       </div><!--section-container-->
     </section>
-  </article>
+  </div>
 </template>
 
 <script>

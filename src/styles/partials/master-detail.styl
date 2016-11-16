@@ -10,38 +10,22 @@
   padding 0 x x
 
 .master 
+  position fixed
+  top 0
+  left 0
+  width 100vw
+
   nav
+    padding-top 3*x
     padding-bottom x*0.75
-    border-bottom 4px solid hsl(0,0,75%)
+    position relative
+    height 100vh
+    overflow hidden
 
-  &.inline
-    margin 0 auto
-    max-width 48em
-    width auto
+    z-index 10
 
-    nav
-      border 1px solid bc
-      border-top none
-    .thumb-button
-      display none
-
-  &.mobile-active
-  &.mobile-inactive
-    position fixed
-    top 0
-    left 0
-    width 100vw
-
-    nav
-      padding-top 3*x
-      position relative
-      height 100vh
-      overflow hidden
-
-      z-index 10
-
-    .thumb-button
-      display block
+  .thumb-button
+    display block
 
   &.mobile-active nav
     display block
@@ -79,24 +63,33 @@
     padding-left 1.5*x
     padding-right 1.5*x
 
+@media screen and (min-height: 400px)
+  .master-detail
+    padding-top 3*x
+
 @media screen and (min-width: 720px)
   .master
-    &.mobile-active
-    &.mobile-inactive
-      width 240px
-    &.inline
-      margin-top 1.5*x
-      margin-bottom 1.5*x
-      nav
-        margin 0 x
+    width 33.3vw
+
     nav
-      background hsl(0,0,98%)
+      background c-site-bg
+      padding-top 3.5*x
+
+    .title
+      color lighten(mcolor, 40%)
+    a
+      color lighten(mcolor,75%)
+      &:hover
+        color lighten(mcolor,90%)
+        border-left-color link
+      &.router-link-active
+        color lighten(mcolor,75%)
 
     .thumb-button
       display none !important
 
   .detail
-    margin-left 240px
+    margin-left 33.3vw
     padding-left 2*x
     padding-right 2*x
 
@@ -107,16 +100,9 @@
       flex 0 0 50% !important
 
 @media screen and (min-width: 960px)
-  .master
-    &.mobile-active
-    &.mobile-inactive
-      width 320px
-
   .detail
-    margin-left 320px
     padding-left 4*x
     padding-right 4*x
-    padding-bottom 2*x
 
   .master-detail + #site-bottom #site-footer
     .sections
@@ -124,3 +110,11 @@
       padding-right x !important
     section
       flex 0 0 25% !important
+
+@media screen and (min-width: 1200px)
+  .master
+    width 25vw
+  .detail
+    margin-left 25vw
+    padding-bottom 2*x
+    padding-top 2*x

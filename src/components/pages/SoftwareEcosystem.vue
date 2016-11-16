@@ -1,15 +1,12 @@
 <template>
-  <div class="component">
-    <section id="section-top">
-      <div class="section-container">
-        <h1>Software Ecosystem</h1>
-        <form class="form-default form-dark">
-          <div class="input-group">
-            <input type="text" placeholder="Search..." v-model="searchQuery">
-          </div>
-        <form>
-      </div>
-    </section>
+  <div class="component split-page">
+    <div class="page-header">
+      <h1>Ecosystem</h1>
+      <p>Explore Tendermint's software ecosystem.</p>
+      <input type="text" placeholder="Search..." v-model="searchQuery">
+    </div>
+
+    <div class="page-content">
 
     <section class="section-default" v-show="tmspApps.length > 0">
       <div class="section-container">
@@ -112,6 +109,9 @@
         </div>
       </div>
     </section>
+
+    </div>
+
   </div>
 </template>
 
@@ -222,6 +222,10 @@ export default {
 
 <style lang="stylus" scoped>
 @require '../../styles/variables.styl'
+
+.page-header
+  p
+    margin-bottom 1.5*x
 
 .software-header
   display none

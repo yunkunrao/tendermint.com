@@ -16,7 +16,7 @@ const routes = [
   { path: '/docs/internals/:page', component: page('Docs/Page') },
 
   // Community Pages
-  { path: '/community', component: page('Community/Index') },
+  { path: '/community', component: page('Community') },
 
   // Blog Pages
   { path: '/blog', component: page('Blog/Index') },

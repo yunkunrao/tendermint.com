@@ -1,3 +1,10 @@
+# 2016-11-16
+* Design improvements across the site.
+* Examples: 
+    http://tendermint.nylira.com/blog
+    http://tendermint.nylira.com/careers
+    http://tendermint.nylira.com/docs/internals/validators
+
 # 2016-11-15
 * Hiding pages
     Docs/FAQ, Docs/Definitions, and Community/Companies have no content, so I'm hiding them for now.
@@ -46,7 +53,7 @@ I started reading through the documentation and fixed links and added them where
     * disabled syntax higlightning for now because automatic language detection for smaller snippets was way off
 * /intro, /docs
     * fixed a serious issue where clicking on local links in Markdown files reloaded the entire web app - only solution was to change the standard markdown links e.g. `[intro](/intro)` to vue-style `<router-link to="/intro">Intro</router-link>`
-* /docs/app-architecture http://localhost:8800/docs/guides/app-architecture
+* /docs/app-architecture http://tendermint.nylira.com/docs/guides/app-architecture
     * Fixed the https://raw.githubusercontent.com/wolfposd/tutorials/master/images/tendermint/TMApplicationExample.png image link
 * /blog
     * fixed image links

@@ -1,19 +1,13 @@
 <template>
-  <div class="component">
-    <section id="section-top">
-      <div class="section-container">
-        <div class="article-wrapper">
-          <h1></i>About Tendermint</h1>
-          <p>Our mission is to bring simplicity, security, and speed to the world&rsquo;s blockchains.</p>
-        </div>
-      </div>
-    </section>
+  <div class="component split-page">
+    <div class="page-header">
+      <h1>About</h1>
+      <p>Tendermint's mission: to bring simplicity, security, and speed to the world&rsquo;s blockchains.</p>
+    </div>
 
+    <div class="page-content">
     <section class="section-default section-team-portraits">
       <div class="section-container">
-        <header class="section-header">
-          <h2>The Team</h2>
-        </header>
         <div class="section-content">
           <person v-for="person in teamMembers" :person="person"></person>
         </div>
@@ -22,14 +16,12 @@
 
     <section class="section-default section-portraits">
       <div class="section-container">
-        <header class="section-header">
-          <h2>The Advisors</h2>
-        </header>
         <div class="section-content">
           <person v-for="person in advisors" :person="person"></person>
         </div>
       </div>
     </section>
+    </div>
   </div>
 </template>
 

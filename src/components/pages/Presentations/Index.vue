@@ -1,27 +1,18 @@
 <template>
-  <div id="page-blog-index">
-    <section id="section-top">
-      <div class="section-container">
-        <div class="article-wrapper" id="blog-index">
-          <h1>Presentations</h1>
-          <p>Watch presentations and other videos about and by the Tendermint team.</p>
-        </div>
-      </div>
-    </section>
+  <div class="split-page">
+    <div class="page-header">
+      <h1>Presentations</h1>
+      <p>Watch presentations and other videos about and by the Tendermint team.</p>
+    </div>
 
-    <section class="section-default section-flush">
+    <section class="section-default page-content">
       <div class="section-container">
         <div class="section-content">
 
-          <div class="li-article" v-for="presentation in orderedPresentations">
-            <router-link class="li-article-link" :to="'/presentations/' + presentation.slug">
-              <header class="li-article-header"><h2>{{ presentation.title }}</h2></header>
-              <div class="li-article-content">{{ presentation.description }}</div>
-            </router-link>
-            <div class="li-article-meta">
-              <div class="date">Posted on {{ presentation.date }}</div>
-            </div>
-          </div>
+          <post v-for="pres in orderedPresentations" :url="'/presentations/' + pres.slug"
+            :title="pres.title" :desc="pres.description" :meta="pres.date">
+          </post>
+
         </div>
       </div>
     </section>
@@ -33,6 +24,9 @@ import { mapGetters } from 'vuex'
 import { orderBy } from 'lodash'
 export default {
   name: 'presentations-index',
+  components: {
+    Post: require('../../partials/Post')
+  },
   computed: {
     orderedPresentations () { return orderBy(this.presentations, ['date'], ['desc']) },
     ...mapGetters({
