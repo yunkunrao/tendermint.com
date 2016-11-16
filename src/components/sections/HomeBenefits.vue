@@ -6,7 +6,7 @@
         <i class="fa fa-server"></i> 
         <div class="text">
           <div class="key">Byzantine Fault-Tolerant</div>
-          <div class="value">Tendermint tolerates up to a 1/3 of your machines failing arbitrarily. This includes explicitly malicious behaviour.</div>
+          <div class="value">Tendermint tolerates up to one third of your machines failing arbitrarily. This includes explicitly malicious behaviour.</div>
         </div>
       </div>
       <div class="block">

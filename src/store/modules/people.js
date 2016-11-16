@@ -17,7 +17,7 @@ const state = {
       slug: 'buchman-ethan',
       name: 'Ethan Buchman',
       title: 'CTO & Cofounder',
-      bio: 'Ethan sees consensus algorithms as a 21st century means of binding humanity; driven to empower humans with new ways to coordinate and reach agreement at scale.',
+      bio: 'Ethan sees consensus algorithms as a 21st century means for promoting social cohesion. He is driven to empower humans with new ways to coordinate and reach agreement at scale.'
       ids: {
         github: 'ebuchman',
         keybase: 'ebuchman',
