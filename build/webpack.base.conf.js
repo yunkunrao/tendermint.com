@@ -108,9 +108,6 @@ module.exports = {
   vueMarkdown: {
     html: true,
     linkify: true,
-    typographer: true,
-    use: [
-      require('markdown-it-anchor')
-    ]
+    typographer: true
   }
 }

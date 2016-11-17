@@ -9,15 +9,15 @@
     <div class="title">{{ person.title }}</div>
     <div class="bio" v-if="person.bio">{{ person.bio }}</div>
     <div class="ids">
-      <a v-if="person.ids.github" href="https://www.linkedin.com/in/yjkwon + person.ids.linkedin">
+      <a v-if="person.ids.github" :href="'https://github.com/' + person.ids.github">
         <i class="fa fa-github"></i>
         <span class="label">github.com/{{ person.ids.github }}</span>
       </a>
-      <a v-if="person.ids.keybase" href="https://keybase.io/ + person.ids.keybase">
+      <a v-if="person.ids.keybase" :href="'https://keybase.io/' + person.ids.keybase">
         <i class="fa fa-key"></i>
         <span class="label">keybase.io/{{ person.ids.keybase }}</span>
       </a>
-      <a v-if="person.ids.linkedin" href="https://www.linkedin.com/in/yjkwon + person.ids.linkedin">
+      <a v-if="person.ids.linkedin" :href="'https://www.linkedin.com/in/' + person.ids.linkedin">
         <i class="fa fa-linkedout"></i>
         <span class="label">{{ person.name }}</span>
       </a>
@@ -120,6 +120,8 @@ export default {
       .name, .title
         text-align left
 
+      .name
+        font-size 1.25*x
 @media screen and (min-width: 960px)
   .person
     .data

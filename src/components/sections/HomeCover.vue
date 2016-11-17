@@ -1,7 +1,7 @@
 <template>
   <section id="section-cover">
     <div class="section-container">
-      <img src="../../assets/images/transparent-logo-2048.png" id="home-logo">
+      <img src="../../assets/images/logo-blue-alpha-2048.png"l id="home-logo">
       <h1>Tendermint</h1>
       <p class="tagline">Blockchain Consensus</p>
       <p class="introduction">Byzantine fault-tolerant replicated state machines in any programming language</p>
@@ -25,9 +25,7 @@ export default {
 @require '../../styles/variables.styl'
 
 #section-cover
-  background mcolor url('../../assets/images/home/gradient.jpg') no-repeat center center
   background mcolor
-  background-size cover
   position relative
   border-bottom 1px solid lighten(mcolor, 10%)
 
@@ -56,7 +54,7 @@ export default {
     font-size 1.25*x
     margin-bottom 3*x
 
-  .btn
+  .install-tendermint
     margin-bottom x
 
   .source
@@ -95,8 +93,9 @@ export default {
       font-size 1.5*x
       max-width 28*x
 
-    .btn
+    .install-tendermint
       margin-bottom 1.5*x
+
     .source
       font-size 1.25*x
 

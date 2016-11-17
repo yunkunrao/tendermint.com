@@ -1,7 +1,7 @@
 <template>
   <header id="site-header">
     <router-link to="/" id="nav-home" exact>
-      <img src="../../assets/images/home/tendermint-logo-88-green.jpg" alt="Tendermint logo"/>
+      <img src="../../assets/images/logo-green-88.jpg" alt="Tendermint logo"/>
     </router-link>
     <nav>
       <router-link id="nav-intro" :to="'/intro'">Intro</router-link>
@@ -43,16 +43,9 @@ highlighted-border-top-color()
   top 0
   left 0
   z-index 100
-
-  background mcolor url('../../assets/images/home/gradient.jpg') no-repeat top right
-  background-size cover
-
   background mcolor
-
   width 100vw
   display flex
-
-  // box-shadow hsla(mhue,msat,mlit - 15%,0.15) 0 0.125*x 0.16*x
 
   height 2.4*x
 
@@ -71,7 +64,6 @@ highlighted-border-top-color()
     display flex
     justify-content flex-end
     default-border-top-sm()
-    box-shadow inset lighten(mcolor,10%) 1px 0 0
     padding-right 0.5*x
     a
       display block

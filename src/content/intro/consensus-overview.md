@@ -3,7 +3,7 @@
 Tendermint is an easy-to-understand, mostly asynchronous, BFT consensus protocol.
 The protocol follows a simple state machine that looks like this:
 
-<img src="~assets/images/home/consensus_logic.png">
+<img src="~assets/images/consensus_logic.png">
 
 Participants in the protocol are called "validators";
 they take turns proposing blocks of transactions and voting on them.

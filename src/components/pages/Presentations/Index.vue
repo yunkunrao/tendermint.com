@@ -4,15 +4,12 @@
       <h1>Presentations</h1>
       <p>Watch presentations and other videos about and by the Tendermint team.</p>
     </div>
-
     <section class="section-default page-content">
       <div class="section-container">
         <div class="section-content">
-
-          <post v-for="pres in orderedPresentations" :url="'/presentations/' + pres.slug"
-            :title="pres.title" :desc="pres.description" :meta="pres.date">
+          <post v-for="p in presentations" :url="'/presentations/' + p.slug"
+            :title="p.title" :desc="p.description" :meta="p.date">
           </post>
-
         </div>
       </div>
     </section>
@@ -28,9 +25,9 @@ export default {
     Post: require('../../partials/Post')
   },
   computed: {
-    orderedPresentations () { return orderBy(this.presentations, ['date'], ['desc']) },
+    presentations () { return orderBy(this.allPresentations, ['date'], ['desc']) },
     ...mapGetters({
-      presentations: 'allPresentations'
+      allPresentations: 'allPresentations'
     })
   },
   mounted () {

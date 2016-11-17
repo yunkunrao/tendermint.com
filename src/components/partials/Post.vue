@@ -1,15 +1,19 @@
 <template>
   <div class="post-item">
-
     <template v-if="url.substr(0,4) === 'http'">
-      <a class="title" :href="url">{{ title }}</a>
+      <a :href="url">
+        <div class="title">{{ title }}</div>
+        <div class="meta">{{ meta }}</div>
+        <div class="desc">{{ desc }}</div>
+      </a>
     </template>
     <template v-else>
-      <router-link class="title" :to="url">{{ title }}</router-link>
+      <router-link :to="url">
+        <div class="title">{{ title }}</div>
+        <div class="meta">{{ meta }}</div>
+        <div class="desc">{{ desc }}</div>
+      </router-link>
     </template>
-
-    <div class="meta">{{ meta }}</div>
-    <div class="desc">{{ desc }}</div>
   </div>
 </template>
 
@@ -24,20 +28,18 @@ export default {
 @require '../../styles/variables.styl'
 
 .post-item
-  padding-bottom 1.5em
   border-bottom 1px dotted bc
-  margin 0 auto 1.5em
+  margin 0 auto
 
+  &:first-of-type
+    margin-top -1.5*x
   &:last-of-type
     border-bottom none
-    margin-bottom 0
-    padding-bottom 0
-  a.title
+
+  .title
     font-weight 500
     line-height 1.25
     color txt
-    &:hover
-      color link
   .meta
     text-transform uppercase
     font-size 0.75em
@@ -47,9 +49,16 @@ export default {
   .desc
     max-width 40em
 
+  a
+    padding 1.5*x 0
+    display block
+    color txt
+    &:hover .title
+      color link
+
 @media screen and (min-width: 360px)
   .post-item
-    a.title
+    .title
       font-size 1.125em
     .meta
       font-size 0.85em
@@ -57,6 +66,6 @@ export default {
 @media screen and (min-width: 720px)
   .post-item
     font-size 1.125*x
-    padding-bottom 2em
-    margin-bottom 2em
+    a
+      padding 2*x 0
 </style>

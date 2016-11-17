@@ -10,7 +10,7 @@
         <div class="section-content">
 
           <post v-for="media in orderedMedia" :url="media.url"
-            :title="media.title" :meta="media.date" :desc="'By ' + media.company">
+            :title="media.title"  :desc="media.date + ' - '+ media.company">
           </post>
 
         </div>

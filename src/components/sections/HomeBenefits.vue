@@ -24,23 +24,23 @@
         </div>
       </div>
       <div class="block">
-        <i class="fa fa-fighter-jet"></i>
+        <i class="fa fa-bolt"></i>
         <div class="text">
-          <div class="key">Lightning fast</div>
+          <div class="key">Lightning Fast</div>
           <div class="value">Tendermint supports thousands of transaction per second at 1000ms latencies.</div>
         </div>
       </div>
       <div class="block">
         <i class="fa fa-cloud-upload"></i>
         <div class="text">
-          <div class="key">Easy to deploy</div>
+          <div class="key">Easy to Deploy</div>
           <div class="value">Use mintnet to deploy your app to any cloud provider supported by docker-machine.</div>
         </div>
       </div>
       <div class="block">
         <i class="fa fa-code"></i>
         <div class="text">
-          <div class="key">100% open source</div>
+          <div class="key">100% Open Source</div>
           <div class="value">All of Tendermint's source code is licensed under Apache 2.0. Check it out on <a  href="https://github.com/tendermint">GitHub</a>.</div>
         </div>
       </div>

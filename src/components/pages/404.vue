@@ -1,18 +1,14 @@
 <template>
-  <div id="page-blog-index">
-    <section id="section-top">
-      <div class="section-container">
-        <div class="article-wrapper" id="blog-index">
-          <h1><i class="fa fa-exclamation-circle"></i>Error 404</h1>
-          <p>Page Not Found</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-default section-portraits">
+  <div class="split-page">
+    <div class="page-header">
+      <h1>Error 404</h1>
+      <p>Page Not Found</p>
+    </div>
+    <section class="section-default page-content">
       <div class="section-container">
         <div class="section-content article-body">
-          <p>Whoops! The page you visited either does not exist or has been deleted in a website reshuffle. We're sorry for the inconvenience. Try visiting one of these pages below:</p>
+          <h2>Whoops!</h2>
+          <p>The page you visited either does not exist or has been deleted in a website reshuffle. We're sorry for the inconvenience. Try visiting one of these pages below:</p>
           <ul>
             <li><router-link :to="'/'">Home</router-link></li>
             <li><router-link :to="'/intro'">Intro</router-link></li>

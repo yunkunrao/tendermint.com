@@ -1,7 +1,7 @@
 <template>
 <div class="company">
   <div class="photo">
-    <img :src="avatarSrc(company.slug)" :alt="company.name">
+    <!--<img src="avatarSrc" :alt="company.name">-->
   </div>
   <div class="data">
     <div class="name">{{ company.name }}</div>
@@ -38,7 +38,7 @@
 export default {
   methods: {
     avatarSrc (slug) {
-      return require('../../assets/images/companies/' + slug + '.png')
+      // return require('../../assets/images/companies/' + slug + '.png')
     }
   },
   props: ['company']

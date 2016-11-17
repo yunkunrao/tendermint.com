@@ -46,7 +46,7 @@ export default {
       else self.isActive = false
     },
     toggleManual () {
-      console.log('toggling sidebar!')
+      // console.log('toggling sidebar!')
       if ($(window).width() < 720) {
         this.isActive = !this.isActive
       }

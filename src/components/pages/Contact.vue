@@ -1,14 +1,11 @@
 <template>
-  <div id="page-blog-index">
-    <section id="section-top">
-      <div class="section-container">
-        <div class="article-wrapper">
-          <h1>Contact</h1>
-        </div>
-      </div>
-    </section>
+  <div class="split-page">
+    <div class="page-header">
+      <h1>Contact</h1>
+      <p>Get in touch with us.</p>
+    </div>
 
-    <section class="section-default">
+    <section class="section-default page-content">
       <div class="section-container">
         <div class="section-content article-body">
           <h2>Email</h2>
@@ -26,7 +23,6 @@
         </div>
       </div>
     </section>
-
   </div>
 </template>
 

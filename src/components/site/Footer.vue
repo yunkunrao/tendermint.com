@@ -4,7 +4,7 @@
   <footer id="site-footer">
     <div class="sections">
       <section>
-        <img src="../../assets/images/tendermint-logo-footer.png" id="footer-logo">
+        <img src="../../assets/images/logo-white-alpha-160.png" id="footer-logo">
         <span>&copy; 2016 Tendermint</span>
       </section>
       <section>
@@ -42,8 +42,7 @@
 export default {
   name: 'site-footer',
   components: {
-    SectionInstall: require('../sections/Install.vue'),
-    Connections: require('../partials/Connections')
+    SectionInstall: require('../sections/Install.vue')
   }
 }
 </script>
