@@ -24,6 +24,8 @@
 
     z-index 10
 
+    background c-site-bg
+
   .thumb-button
     display block
 
@@ -34,13 +36,14 @@
     display none
 
   .title
-    color light
     font-size 0.75*x
     font-weight bold
     text-transform uppercase
     letter-spacing 0.0625em
     line-height 2
     padding x x*1.5 x*0.25
+
+    color lighten(mcolor, 40%)
 
   a + .title
     margin-top 0.75*x
@@ -52,11 +55,14 @@
     color txt
     border-left 0.25*x solid transparent
 
-    &.router-link-active
+    color lighten(mcolor,75%)
+
+    &:hover
+      color lighten(mcolor,90%)
       border-left-color link
-      color link
-      &:after
-        display none
+    &.router-link-active
+      color lighten(mcolor,75%)
+      border-left-color link
 
 @media screen and (min-width: 360px)
   .detail
@@ -72,18 +78,7 @@
     width 33.3vw
 
     nav
-      background c-site-bg
       padding-top 3.5*x
-
-    .title
-      color lighten(mcolor, 40%)
-    a
-      color lighten(mcolor,75%)
-      &:hover
-        color lighten(mcolor,90%)
-        border-left-color link
-      &.router-link-active
-        color lighten(mcolor,75%)
 
     .thumb-button
       display none !important
