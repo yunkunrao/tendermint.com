@@ -1,3 +1,6 @@
+# 2016-11-17
+* enable gzipping on build
+
 # 2016-11-16
 * Design improvements across the site.
 * Examples: 

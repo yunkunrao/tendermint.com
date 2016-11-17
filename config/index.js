@@ -13,8 +13,8 @@ module.exports = {
     // Surge or Netlify already gzip all static assets for you.
     // Before setting to `true`, make sure to:
     // npm install --save-dev compression-webpack-plugin
-    productionGzip: false,
-    productionGzipExtensions: ['js', 'css']
+    productionGzip: true,
+    productionGzipExtensions: ['js', 'css', 'png', 'ttf', 'eot', 'woff', 'woff2', 'xml', 'svg']
   },
   dev: {
     env: require('./dev.env'),
@@ -27,6 +27,14 @@ module.exports = {
     // (https://github.com/webpack/css-loader#sourcemaps)
     // In our experience, they generally work as expected,
     // just be aware of this issue when enabling this option.
+    cssSourceMap: false
+  },
+  prod: {
+    env: require('./prod.env'),
+    port: 8080,
+    assetsSubDirectory: 'static',
+    assetsPublicPath: '/',
+    proxyTable: {},
     cssSourceMap: false
   }
 }

@@ -17,7 +17,7 @@ const state = {
       slug: 'buchman-ethan',
       name: 'Ethan Buchman',
       title: 'CTO & Cofounder',
-      bio: 'Ethan sees consensus algorithms as a 21st century means for promoting social cohesion. He is driven to empower humans with new ways to coordinate and reach agreement at scale.'
+      bio: 'Ethan sees consensus algorithms as a 21st century means for promoting social cohesion. He is driven to empower humans with new ways to coordinate and reach agreement at scale.',
       ids: {
         github: 'ebuchman',
         keybase: 'ebuchman',
@@ -27,9 +27,9 @@ const state = {
       category: 'member'
     },
     {
+      slug: 'zhong-peng',
       name: 'Peng Zhong',
       title: 'Chief Design Officer',
-      slug: 'zhong-peng',
       bio: 'Peng aims to dramatically increase blockchain adoption through better usability design. He hopes to to turning cutting-edge technology into mundane things that everyone can use.',
       ids: {
         github: 'nylira',
