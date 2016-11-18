@@ -15,7 +15,7 @@
             </ul>
             <h2>Apply for this role</h2>
             <p>Send an email with your cover letter and resume:</p>
-            <btn href="mailto:hello@tendermint.com" btn-size="large" btn-text="hello@tendermint.com"></btn>
+            <a href="mailto:hello@tendermint.com" class="btn btn-large">hello@tendermint.com</a>
           </div>
         </div>
       </div>
@@ -27,9 +27,6 @@
 import { mapGetters } from 'vuex'
 
 export default {
-  components: {
-    Btn: require('../../partials/Btn')
-  },
   computed: {
     career () {
       if (this.careers) {

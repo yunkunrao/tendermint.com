@@ -1,16 +1,15 @@
 <template>
   <section id="section-install">
     <h2>Get Started</h2>
-    <install-tendermint></install-tendermint>
+    <router-link to="/intro/getting-started/install" class="btn btn-large">
+      <i class="fa fa-cloud-download"></i>Install Tendermint
+    </router-link>
   </section>
 </template>
 
 <script>
 export default {
-  name: 'section-footer-install',
-  components: {
-    InstallTendermint: require('../partials/InstallTendermint')
-  }
+  name: 'section-footer-install'
 }
 </script>
 
@@ -29,9 +28,9 @@ export default {
     text-align center
     line-height 1
     margin-bottom 1.5*x
-  .install-tendermint
+  .btn
     margin 0 auto
-
+    max-width 16*x
 
 @media screen and (min-width: 720px)
   #section-install

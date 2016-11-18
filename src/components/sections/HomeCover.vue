@@ -1,23 +1,25 @@
 <template>
   <section id="section-cover">
+    <img src="../../assets/images/logo-blue-alpha-2048.png"l id="home-logo">
     <div class="section-container">
-      <img src="../../assets/images/logo-blue-alpha-2048.png"l id="home-logo">
       <h1>Tendermint</h1>
       <p class="tagline">Blockchain Consensus</p>
       <p class="introduction">Byzantine fault-tolerant replicated state machines in any programming language</p>
-      <install-tendermint></install-tendermint>
+      <div class="btns">
+        <router-link to="/intro/getting-started/install" class="btn btn-large">
+          <i class="fa fa-cloud-download"></i>Install Tendermint
+        </router-link>
+        <router-link to="/intro" class="btn btn-large btn-alpha-black">
+          <i class="fa fa-question"></i>Learn More
+        </router-link>
+      </div>
       <p class="source"><i class="fa fa-github"></i> View source on <a href="https://github.com/tendermint/tendermint">GitHub</a></p>
     </div><!--container-->
   </section>
 </template>
 
 <script>
-import InstallTendermint from '../partials/InstallTendermint.vue'
-
 export default {
-  components: {
-    InstallTendermint
-  }
 }
 </script>
 
@@ -32,6 +34,8 @@ export default {
   .section-container
     margin-top 2.4*x
     padding 4*x 1.5*x
+    position relative
+    z-index 5
 
   h1
     color lighten(mcolor,90%)
@@ -54,8 +58,11 @@ export default {
     font-size 1.25*x
     margin-bottom 3*x
 
-  .install-tendermint
+  .btns
     margin-bottom x
+    .btn
+      margin-bottom 0.5*x
+      max-width 16*x
 
   .source
     color lighten(mcolor,50%)
@@ -93,8 +100,14 @@ export default {
       font-size 1.5*x
       max-width 28*x
 
-    .install-tendermint
+    .btns
       margin-bottom 1.5*x
+      display flex
+      flex-flow row nowrap
+      max-width 32*x
+      .btn
+        margin 0
+        margin-right x
 
     .source
       font-size 1.25*x

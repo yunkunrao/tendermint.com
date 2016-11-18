@@ -1,0 +1,41 @@
+.btn
+  -webkit-appearance none
+  background lighten(mcolor, 20%)
+
+  cursor pointer
+  user-select none
+
+  display flex
+  justify-content center
+  align-items center
+
+  font-weight 500
+  color #fff
+
+  padding 0 1.5*x
+  height 2*x
+
+  &:hover
+    background lighten(mcolor, 25%)
+
+  &:active
+    background darken(mcolor, 10%)
+    color lighten(mcolor, 75%)
+
+  i.fa
+    padding-right 0.5em
+
+  &.btn-alpha-black
+    background hsla(0,0,0,0.2)
+    &:hover
+      background hsla(0,0,0,0.3)
+
+  &.btn-small
+    height x*1.5
+    font-size x*0.75
+    padding 0 x
+
+  &.btn-large
+    height x*3
+    font-size 1.25*x
+
