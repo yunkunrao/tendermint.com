@@ -11,21 +11,13 @@
       display none
 
     .section-header
-      display flex
-      align-items center
-      justify-content center
-      text-align center
-      padding x x 0
-
-      i.fa
-        font-size 1.25*x
-        margin-right 0.5*x
-        color link
+      padding x 0
 
       h2
-        font-weight 600
-        color mcolor
-        max-width 44*x
+        font-weight 500
+        color light
+        font-size 1.25*x
+        text-align center
 
     .section-content
       padding x
@@ -46,23 +38,23 @@
 @media screen and (min-width: 360px)
   .section-default
     .section-container
-      .section-header
       .section-content
         padding-left 1.5*x
         padding-right 1.5*x
 
-@media screen and (min-width: 400px)
-  .section-default
-    .section-container
-      .section-header
-        h2
-          font-size 1.25*x
-
 @media screen and (min-width: 720px)
   .section-default
     .section-container
-      padding 2*x 0
       .section-header
-        padding-bottom 2*x
         h2
           font-size 1.5*x
+      .section-content
+        padding-left 2*x
+        padding-right 2*x
+
+@media screen and (min-width: 960px)
+  .section-default
+    .section-container
+      .section-header
+        h2
+          text-align left

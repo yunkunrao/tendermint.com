@@ -1,7 +1,7 @@
 [
   {
-    "id": "tmsp_server",
-    "title": "TMSP Server and Counter Application in Language of Chocie",
+    "id": "tmsp-server",
+    "title": "TMSP Server and Counter Application in Language of Choice",
     "subtitle": "Any programming language",
     "tags": ["tmsp"],
     "active": true,
@@ -13,7 +13,7 @@
     "reward": "1 BTC"
   },
   {
-    "id": "bitcoin_tmsp",
+    "id": "bitcoin-tmsp",
     "title": "Bitcoin as a TMSP Application",
     "subtitle": "Bitcoin, C++",
     "tags": ["bitcoin", "tmsp"],
@@ -26,7 +26,7 @@
     "reward": "2 BTC"
   },
   {
-    "id": "tmsp_app_grant",
+    "id": "tmsp-app-grant",
     "title": "Application Grant",
     "subtitle": "Something interesting",
     "tags": ["tmsp"],

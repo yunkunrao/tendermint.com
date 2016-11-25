@@ -74,7 +74,7 @@ export default {
     header
       padding 0.25*x 0.5*x
 
-      color lighten(mcolor,70%)
+      color lighten(mcolor, 55%)
 
       font-size 0.75*x
       font-weight bold
@@ -82,7 +82,7 @@ export default {
       letter-spacing 0.0625em
 
     a, span
-      color #fff
+      color lighten(mcolor,90%)
       display block
       padding 0.25*x 0.5*x
       i.fa

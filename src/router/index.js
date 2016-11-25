@@ -24,7 +24,8 @@ const routes = [
 
   // Other Pages
   { path: '/about', component: page('About') },
-  { path: '/bounties', component: page('Bounties') },
+  { path: '/bounties', component: page('BountiesIndex') },
+  { path: '/bounties/:entry', component: page('BountiesEntry') },
   { path: '/contact', component: page('Contact') },
   { path: '/careers', component: page('CareersIndex') },
   { path: '/careers/:entry', component: page('CareersEntry') },

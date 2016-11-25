@@ -227,6 +227,18 @@ export default {
   .page-header
     p
       margin-bottom 1.5*x
+    input
+      border 1px solid link
+      padding 0 0.5*x
+      line-height 1
+      height 2*x
+      background c-app-bg
+      color lighten(mcolor, 75%)
+    ::-webkit-input-placeholder
+    ::-moz-placeholder
+    :-ms-input-placeholder
+    :-moz-placeholder
+      color mcolor
 
   .software-header
     display none
