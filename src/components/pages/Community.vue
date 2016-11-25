@@ -39,6 +39,12 @@ export default {
           desc: 'View the features and improvements we\'re working right now.'
         },
         {
+          url: '/bounties',
+          internal: true,
+          title: 'Bounties',
+          desc: 'Get paid in BTC by working on Tendermint-based projects.'
+        },
+        {
           url: '/ecosystem',
           internal: true,
           title: 'Ecosystem',

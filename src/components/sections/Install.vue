@@ -13,7 +13,6 @@ export default {
 }
 </script>
 
-
 <style lang="stylus" scoped>
 @require '../../styles/variables.styl'
 

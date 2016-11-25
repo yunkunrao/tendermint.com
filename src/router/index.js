@@ -24,14 +24,15 @@ const routes = [
 
   // Other Pages
   { path: '/about', component: page('About') },
+  { path: '/bounties', component: page('Bounties') },
   { path: '/contact', component: page('Contact') },
-  { path: '/ecosystem', component: page('SoftwareEcosystem') },
-  { path: '/press', component: page('Press') },
   { path: '/careers', component: page('Careers/Index') },
   { path: '/careers/:entry', component: page('Careers/Entry') },
   { path: '/companies', component: page('Companies') },
+  { path: '/ecosystem', component: page('SoftwareEcosystem') },
   { path: '/presentations', component: page('Presentations/Index') },
   { path: '/presentations/:entry', component: page('Presentations/Entry') },
+  { path: '/press', component: page('Press') },
 
   // redirects
   { path: '/code', redirect: '/docs' },
