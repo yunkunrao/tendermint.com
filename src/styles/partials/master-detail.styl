@@ -1,9 +1,9 @@
 .master-detail
   padding-top 2.4*x
   min-height 100vh
-  background c-site-fg
+  background c-app-fg
 
-.master-detail + #site-bottom #section-install
+.master-detail + .app-bottom .section-install
   display none
 
 .detail
@@ -24,9 +24,9 @@
 
     z-index 10
 
-    background c-site-bg
+    background c-app-bg
 
-  .thumb-button
+  .btn-thumb
     display block
 
   &.mobile-active nav
@@ -80,7 +80,7 @@
     nav
       padding-top 3.5*x
 
-    .thumb-button
+    .btn-thumb
       display none !important
 
   .detail
@@ -88,7 +88,7 @@
     padding-left 2*x
     padding-right 2*x
 
-  .master-detail + #site-bottom #site-footer
+  .master-detail + .app-bottom .app-footer
     .sections
       padding-left 240px + 2*x !important
     section
@@ -99,7 +99,7 @@
     padding-left 4*x
     padding-right 4*x
 
-  .master-detail + #site-bottom #site-footer
+  .master-detail + .app-bottom .app-footer
     .sections
       padding-left 320px + x !important
       padding-right x !important

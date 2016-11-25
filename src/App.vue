@@ -1,20 +1,20 @@
 <template>
   <div id="app">
-    <site-header></site-header>
+    <app-header></app-header>
     <router-view></router-view>
-    <site-footer></site-footer>
+    <app-footer></app-footer>
   </div>
 </template>
 
 <script>
-import SiteHeader from './components/site/Header'
-import SiteFooter from './components/site/Footer'
+import AppHeader from './components/AppHeader'
+import AppFooter from './components/AppFooter'
 
 export default {
   name: 'app',
   components: {
-    SiteHeader,
-    SiteFooter
+    AppHeader,
+    AppFooter
   },
   head: {
     meta: [

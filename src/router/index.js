@@ -1,37 +1,37 @@
 import VueRouter from 'vue-router'
-function page (filename) { return require('../components/pages/' + filename) }
+function page (filename) { return require('../components/Page' + filename) }
 
 const routes = [
   { path: '/', component: page('Index') },
 
   // Intro
-  { path: '/intro', component: page('Intro/Page') },
-  { path: '/intro/:page', component: page('Intro/Page') },
-  { path: '/intro/getting-started/:page', component: page('Intro/Page') },
+  { path: '/intro', component: page('IntroEntry') },
+  { path: '/intro/:page', component: page('IntroEntry') },
+  { path: '/intro/getting-started/:page', component: page('IntroEntry') },
 
   // Docs
-  { path: '/docs', component: page('Docs/Page') },
-  { path: '/docs/:page', component: page('Docs/Page') },
-  { path: '/docs/guides/:page', component: page('Docs/Page') },
-  { path: '/docs/internals/:page', component: page('Docs/Page') },
+  { path: '/docs', component: page('DocsEntry') },
+  { path: '/docs/:page', component: page('DocsEntry') },
+  { path: '/docs/guides/:page', component: page('DocsEntry') },
+  { path: '/docs/internals/:page', component: page('DocsEntry') },
 
   // Community Pages
   { path: '/community', component: page('Community') },
 
   // Blog Pages
-  { path: '/blog', component: page('Blog/Index') },
-  { path: '/blog/:entry', component: page('Blog/Entry') },
+  { path: '/blog', component: page('BlogIndex') },
+  { path: '/blog/:entry', component: page('BlogEntry') },
 
   // Other Pages
   { path: '/about', component: page('About') },
   { path: '/bounties', component: page('Bounties') },
   { path: '/contact', component: page('Contact') },
-  { path: '/careers', component: page('Careers/Index') },
-  { path: '/careers/:entry', component: page('Careers/Entry') },
+  { path: '/careers', component: page('CareersIndex') },
+  { path: '/careers/:entry', component: page('CareersEntry') },
   { path: '/companies', component: page('Companies') },
   { path: '/ecosystem', component: page('SoftwareEcosystem') },
-  { path: '/presentations', component: page('Presentations/Index') },
-  { path: '/presentations/:entry', component: page('Presentations/Entry') },
+  { path: '/presentations', component: page('PresentationsIndex') },
+  { path: '/presentations/:entry', component: page('PresentationsEntry') },
   { path: '/press', component: page('Press') },
 
   // redirects

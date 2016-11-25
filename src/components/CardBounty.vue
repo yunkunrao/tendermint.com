@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <router-link class="card-bounty" to="/bounty">
     Bounty!
   </div>
 </template>
@@ -9,3 +9,10 @@ export default {
   props: 'bounty'
 }
 </script>
+
+<style lang="stylus">
+@require '../styles/variables.styl'
+
+.card-bounty
+  display block
+</style>
