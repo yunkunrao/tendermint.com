@@ -61,8 +61,9 @@ const state = {
     },
     {
       slug: 'han-henny',
-      name: 'Henny Han',
+      name: 'Ash Han',
       title: 'Advisor',
+      bio: 'Ash Han is a founder of Finector, a leading research/consulting firm specialized in distributed ledger technology. He is an advisor of Tendermint & Chronobank.io and also an author of multiple books and papers on blockchain.',
       category: 'advisor',
       ids: {
         website: 'seunghwanhan.com'
