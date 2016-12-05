@@ -1,6 +1,6 @@
 <template>
   <section class="section-home-cover">
-    <img src="../assets/images/logo-blue-alpha-2048.png"l class="section-home-logo">
+    <img class="section-home-logo" src="../assets/images/logo-blue-alpha-2048.png">
     <div class="section-container">
       <h1>Tendermint</h1>
       <p class="tagline">Blockchain Consensus</p>
