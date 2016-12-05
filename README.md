@@ -1,18 +1,21 @@
 # Tendermint Website
 
-> The website for Tendermint.
+> The one and only website for Tendermint.
 
 ## Production
 
+Please ask the team for deployment privileges.
+
 ``` bash
-# install dependencies
-npm install
+# add the production server if you haven't already
+git remote add production ubuntu@cosmos.network:~/tendermint.git
+```
 
-# build everything for production with minification
-npm run build
-
-# run the production server
-npm run prod
+``` bash
+# deploy it!
+git checkout master
+git merge develop
+git push production master
 ```
 
 ## Development
@@ -25,7 +28,7 @@ npm install
 npm run dev
 ```
 
-## Editing Content
+## Content Editing
 
 ``` bash
 # Edit Blog > Posts
@@ -51,7 +54,4 @@ npm run blog
 
 # Edit Community > Presentations
 ./src/store/modules/presentations.js
-
 ```
-
-
