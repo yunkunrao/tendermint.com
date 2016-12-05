@@ -8,6 +8,13 @@
       "description": "A prototypical account based crypto currency state machine supporting plugins"
     },
     {
+      "name": "Clearchain",
+      "url": "https://github.com/tendermint/clearchain",
+      "language": "Go",
+      "author": "Alessio Treglia",
+      "description": "Application to manage a distributed ledger for money transfers that support multi-currency accounts."
+    },
+    {
       "name": "Ethermint",
       "url": "https://github.com/tendermint/ethermint",
       "language": "Go",
