@@ -13,7 +13,7 @@
           <i class="fa fa-question"></i>Learn More
         </router-link>
       </div>
-      <p class="source"><i class="fa fa-github"></i> View source on <a href="https://github.com/tendermint/tendermint">GitHub</a></p>
+      <p class="source"><i class="fa fa-github"></i> View source code on <a href="https://github.com/tendermint/tendermint">GitHub</a></p>
     </div><!--container-->
   </section>
 </template>
