@@ -2,6 +2,7 @@
   <section class="section-home-cover">
     <img class="section-home-logo" src="../assets/images/logo-blue-alpha-2048.png">
     <div class="section-container">
+      <section-home-cover-alert></section-home-cover-alert>
       <h1>Tendermint</h1>
       <p class="tagline">Blockchain Consensus</p>
       <p class="introduction">Byzantine fault-tolerant replicated state machines in any programming language</p>
@@ -19,7 +20,12 @@
 </template>
 
 <script>
-export default {}
+import SectionHomeCoverAlert from './SectionHomeCoverAlert.vue'
+export default {
+  components: {
+    SectionHomeCoverAlert
+  }
+}
 </script>
 
 <style lang="stylus">
@@ -31,8 +37,8 @@ export default {}
   border-bottom 1px solid lighten(mcolor, 10%)
 
   .section-container
-    margin-top 2.4*x
-    padding 4*x 1.5*x
+    margin-top 3rem
+    padding 2*x 1.5*x
     position relative
     z-index 5
 
@@ -65,23 +71,21 @@ export default {}
 
   .source
     color lighten(mcolor,50%)
+    i.fa
+      padding-right 0.25rem
     a
       color lighten(mcolor,70%)
 
 .section-home-logo
   display none
 
-@media screen and (min-height: 400px)
-  .section-home-cover .section-container
-    margin-top 3*x
-
 @media screen and (min-width: 360px)
   .section-home-cover .section-container
-    padding 4*x 1.75*x
+    padding 3*x 1.75*x
 
 @media screen and (min-width: 400px)
   .section-home-cover .section-container
-    padding 5*x 2.25*x
+    padding 3*x 2.25*x
 
     h1
       font-size 3*x
@@ -90,7 +94,7 @@ export default {}
 
 @media screen and (min-width: 720px)
   .section-home-cover .section-container
-    padding 5*x 2*x
+    padding 4*x 2*x
     max-width 640px
     margin-left auto
     margin-right auto
@@ -108,9 +112,6 @@ export default {}
         margin 0
         margin-right x
 
-    .source
-      font-size 1.25*x
-
   .section-home-cover
     overflow hidden
     
@@ -125,7 +126,7 @@ export default {}
 
 @media screen and (min-width: 960px)
   .section-home-cover .section-container
-    padding 6.5*x 2*x
+    padding 5*x 2*x
     max-width 900px
     .tagline
       margin-bottom 3*x
@@ -138,7 +139,7 @@ export default {}
 
 @media screen and (min-width: 1200px)
   .section-home-cover .section-container
-    padding 8*x 2*x
+    padding 6*x 2*x
     max-width 1080px
 
   .section-home-logo
