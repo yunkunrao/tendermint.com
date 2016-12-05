@@ -14,13 +14,12 @@
         </router-link>
       </div>
       <p class="source"><i class="fa fa-github"></i> View source code on <a href="https://github.com/tendermint/tendermint">GitHub</a></p>
-    </div><!--container-->
+    </div>
   </section>
 </template>
 
 <script>
-export default {
-}
+export default {}
 </script>
 
 <style lang="stylus">
