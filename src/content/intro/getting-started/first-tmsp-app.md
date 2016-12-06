@@ -75,36 +75,36 @@ Try running these commands:
 
 ```
 > echo hello
--> data: {hello}
+-> data: hello
 
 > info 
--> data: {size:0}
+-> data: {"size":0}
 
 > commit 
+-> data: 0x
 
 > append_tx abc
 -> code: OK
 
 > info 
--> data: {size:1}
+-> data: {"size":1}
 
 > commit 
--> data: {750502FC7E84BBD788ED589624F06CFA871845D1}
+-> data: 0x750502FC7E84BBD788ED589624F06CFA871845D1
 
 > query abc
 -> code: OK
--> data: {Index=0 value=abc exists=true}
+-> data: {"index":0,"value":"abc","exists":true}
 
 > append_tx def=xyz
 -> code: OK
 
 > commit 
--> data: {76393B8A182E450286B0694C629ECB51B286EFD5}
+-> data: 0x76393B8A182E450286B0694C629ECB51B286EFD5
 
 > query def
 -> code: OK
--> data: {Index=1 value=xyz exists=true}
-
+-> data: {"index":1,"value":"xyz","exists":true}
 ```
 
 Note that if we do `append_tx abc` it will store `(abc, abc)`, 
@@ -155,7 +155,7 @@ In another window, start the `tmsp-cli console`:
 
 ```
 > set_option serial on
--> data: {serial=on}
+-> data: serial=on
 
 > check_tx 0x00
 -> code: OK
@@ -178,7 +178,7 @@ In another window, start the `tmsp-cli console`:
 -> log: Invalid nonce. Expected 2, got 4
 
 > info 
--> data: {hashes:0, txs:2}
+-> data: {"hashes":0,"txs":2}
 ```
 
 This is a very simple application, but between `counter` and `dummy`, its easy to see how you can build out arbitrary application states on top of the TMSP.
