@@ -1,6 +1,6 @@
 var path = require('path')
 var express = require('express')
-var gzipStatic = require('connect-gzip-static')
+var expressStaticGzip = require('express-static-gzip')
 var config = require('../config')
 
 // default port where prod server listens for incoming traffic
@@ -12,8 +12,8 @@ app.use(require('connect-history-api-fallback')())
 
 // serve pure static assets
 var staticPath = path.posix.join(config.prod.assetsPublicPath, config.prod.assetsSubDirectory)
-app.use(staticPath, gzipStatic('./static'))
-app.use(gzipStatic('dist'))
+app.use(staticPath, expressStaticGzip('./static'))
+app.use(expressStaticGzip('dist'));
 
 module.exports = app.listen(port, 'localhost', function (err) {
   if (err) {
