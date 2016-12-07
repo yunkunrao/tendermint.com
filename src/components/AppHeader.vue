@@ -46,7 +46,6 @@ highlighted-border-top-color()
   background mcolor
   width 100vw
   display flex
-
   height 2.4*x
 
   a.nav-home
