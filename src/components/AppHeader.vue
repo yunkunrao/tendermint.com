@@ -69,7 +69,6 @@ highlighted-border-top-color()
       padding 0 0.5*x
       color lighten(mcolor,75%)
       default-border-top-sm()
-
       margin-top -3px
       line-height 2.4*x - 3px
       font-size 0.9*x
