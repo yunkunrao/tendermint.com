@@ -87,14 +87,14 @@ if (config.build.productionGzip) {
   webpackConfig.plugins.push(
     new CompressionWebpackPlugin({
       asset: '[path].gz[query]',
-      algorithm: 'gzip',
+      algorithm: 'zopfli',
       test: new RegExp(
         '\\.(' +
         config.build.productionGzipExtensions.join('|') +
         ')$'
       ),
-      threshold: 10240,
-      minRatio: 0.8
+      threshold: 0,
+      minRatio: 0.9
     })
   )
 }
