@@ -18,11 +18,7 @@
 
 <script>
 export default {
-  name: 'app-header',
-  data () {
-    return {
-    }
-  }
+  name: 'app-header'
 }
 </script>
 
