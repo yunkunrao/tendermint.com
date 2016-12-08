@@ -126,7 +126,6 @@ export default {
 
 @media screen and (min-width: 960px)
   .section-home-cover .section-container
-    padding 5*x 2*x
     max-width 900px
     .tagline
       margin-bottom 3*x
@@ -139,7 +138,7 @@ export default {
 
 @media screen and (min-width: 1200px)
   .section-home-cover .section-container
-    padding 6*x 2*x
+    padding 5*x 2*x 6*x
     max-width 1080px
 
   .section-home-logo

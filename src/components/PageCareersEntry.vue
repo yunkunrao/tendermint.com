@@ -4,14 +4,13 @@
       <h1>{{ career.title }}</h1>
       <p>{{ career.subtitle }}</p>
     </div>
-
     <section class="section-default">
       <div class="section-container">
         <div class="section-content">
           <div class="article-body">
             <h2>Responsibilities</h2>
             <ul class="responsibilities">
-              <li v-for="r in career.responsibilities">{{ r }}</li>
+              <li v-for="r in career.responsibilities" v-html="markdown(r)"></li>
             </ul>
             <h2>Apply for this role</h2>
             <p>Send an email with your cover letter and resume:</p>
@@ -25,6 +24,9 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import MarkdownIt from 'markdown-it'
+let md = new MarkdownIt()
+
 export default {
   name: 'page-career-entry',
   computed: {
@@ -40,6 +42,11 @@ export default {
     ...mapGetters({
       careers: 'allCareers'
     })
+  },
+  methods: {
+    markdown (text) {
+      return md.render(text)
+    }
   },
   mounted () {
     document.title = this.career.title + ' - Careers - Tendermint'
@@ -78,6 +85,10 @@ export default {
   a.btn
     width 18*x
     text-decoration none
+  .article-body
+    li
+      p
+        margin 0
 
 @media screen and (min-width: 720px)
   .page-career-entry

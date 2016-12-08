@@ -23,7 +23,7 @@
   i.fa
     display block
     position absolute
-    bottom 0.375rem
+    bottom -0.25rem
     right 0.25rem
     font-size 3rem
     line-height 1
@@ -45,9 +45,7 @@
 @media screen and (min-width:400px)
   .cover-alert
     font-size 1rem
-
-@media screen and (min-width:960px)
+@media screen and (min-width:1200px)
   .cover-alert
-    margin-bottom 4rem
-</style>
+    margin-bottom 3rem
 </style>
