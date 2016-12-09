@@ -9,8 +9,9 @@
       <div class="title">Guides</div>
       <router-link :to="'/docs/guides/app-development'">App Development</router-link>
       <router-link :to="'/docs/guides/app-architecture'">App Architecture</router-link>
+      <router-link :to="'/docs/guides/contributing'">Contributing</router-link>
       <div class="title">Tendermint Internals</div>
-      <router-link :to="'/docs/internals/introduction'">Introduction</router-link>
+      <router-link :to="'/docs/internals/merkle'">Merkle</router-link>
       <router-link :to="'/docs/internals/validators'">Validators</router-link>
       <router-link :to="'/docs/internals/consensus'">Byzantine Consensus Algorithm</router-link>
       <router-link :to="'/docs/internals/block-structure'">Block Structure</router-link>
@@ -18,7 +19,9 @@
       <router-link :to="'/docs/internals/genesis'">Genesis</router-link>
       <router-link :to="'/docs/internals/configuration'">Configuration</router-link>
       <router-link :to="'/docs/internals/light-client-protocol'">Light Client Protocol</router-link>
-      <router-link class="block" :to="'/docs/commands'">Tendermint Commands</router-link>
+      <router-link :to="'/docs/commands'">Tendermint Commands</router-link>
+      <router-link :to="'/docs/internals/secure-p2p'">Secure P2P</router-link>
+      <router-link :to="'/docs/internals/fast-sync'">Fast Sync</router-link>
     </nav>
     <btn-thumb v-show="isActive" icon="close"></btn-thumb>
     <btn-thumb v-show="!isActive" icon="bars"></btn-thumb>
@@ -59,11 +62,6 @@ export default {
     let nav = document.querySelector('.master nav')
     // console.log('docs-master-nav', nav)
     Ps.initialize(nav)
-  },
-  watch: {
-    'isActive' (val) {
-      // console.log('isActive changed!', val)
-    }
   }
 }
 </script>

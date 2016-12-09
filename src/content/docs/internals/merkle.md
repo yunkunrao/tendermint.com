@@ -1,3 +1,5 @@
+# Merkle
+
 For an overview of Merkle trees, see [wikipedia](https://en.wikipedia.org/wiki/Merkle_tree).
 
 There are two types of Merkle trees used in Tendermint.

@@ -8,7 +8,8 @@
       <definitions v-if="r('definitions')"></definitions>
       <app-dev v-if="r('app-development')"></app-dev>
       <app-arch v-if="r('app-architecture')"></app-arch>
-      <introduction v-if="r('introduction')"></introduction>
+      <contributing v-if="r('contributing')"></contributing>
+      <merkle v-if="r('merkle')"></merkle>
       <validators v-if="r('validators')"></validators>
       <consensus v-if="r('consensus')"></consensus>
       <block-structure v-if="r('block-structure')"></block-structure>
@@ -17,6 +18,8 @@
       <config v-if="r('configuration')"></config>
       <light-client v-if="r('light-client-protocol')"></light-client>
       <commands v-if="r('commands')"></commands>
+      <secure-peer-to-peer v-if="r('secure-p2p')"></secure-peer-to-peer>
+      <fast-sync v-if="r('fast-sync')"></fast-sync>
     </div></div>
   </div>
 </template>
@@ -32,9 +35,10 @@ import Definitions from '../content/docs/definitions.md'
 // guides
 import AppDev from '../content/docs/guides/app-dev.md'
 import AppArch from '../content/docs/guides/app-architecture.md'
+import Contributing from '../content/docs/guides/contributing.md'
 
 // internals
-import Introduction from '../content/docs/internals/introduction.md'
+import Merkle from '../content/docs/internals/merkle.md'
 import Validators from '../content/docs/internals/validators.md'
 import Consensus from '../content/docs/internals/byzantine-consensus-algorithm.md'
 import BlockStructure from '../content/docs/internals/block-structure.md'
@@ -42,6 +46,8 @@ import Rpc from '../content/docs/internals/rpc.md'
 import Genesis from '../content/docs/internals/genesis.md'
 import Config from '../content/docs/internals/configuration.md'
 import LightClient from '../content/docs/internals/light-client-protocol.md'
+import SecurePeerToPeer from '../content/docs/internals/secure_p2p.md'
+import FastSync from '../content/docs/internals/fast_sync.md'
 
 export default {
   name: 'page-docs-entry',
@@ -56,16 +62,19 @@ export default {
     // guides
     AppDev,
     AppArch,
+    Contributing,
 
     // internals
-    Introduction,
+    Merkle,
     Validators,
     Consensus,
     BlockStructure,
     Rpc,
     Genesis,
     Config,
-    LightClient
+    LightClient,
+    SecurePeerToPeer,
+    FastSync
   },
   methods: {
     r (fragment) {
@@ -80,7 +89,8 @@ export default {
         case 'definitions': val = 'Definitions'; break
         case 'app-architecture': val = 'Application Architecture - Guides'; break
         case 'app-development': val = 'Application Development - Guides'; break
-        case 'introduction': val = 'Introduction - Internals'; break
+        case 'contributing': val = 'Contributing - Guides'; break
+        case 'merkle': val = 'Merkle - Internals'; break
         case 'validators': val = 'Validators - Internals'; break
         case 'consensus': val = 'Byzantine Consensus Algorithm - Internals'; break
         case 'block-structure': val = 'Block Structure - Internals'; break
@@ -89,6 +99,8 @@ export default {
         case 'configuration': val = 'Configuration - Internals'; break
         case 'light-client-protocol': val = 'Light Client Protocol - Internals'; break
         case 'commands': val = 'Commands - Internals'; break
+        case 'secure-p2p': val = 'Secure P2P - Internals'; break
+        case 'fast-sync': val = 'Fast Sync - Internals'; break
         default: this.$router.replace({ path: '/404' }); break
       }
       document.title = val += ' - Tendermint'

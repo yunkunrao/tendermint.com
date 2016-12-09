@@ -1,6 +1,6 @@
 # Documentation
 
-Start at the <router-link to="/docs/internals/introduction">Tendermint Internals Introduction</router-link> if you're new.
+Start at the <router-link to="/docs/internals/merkle">Tendermint Internals Merkle</router-link> if you're new.
 
 Otherwise, find more goodies on this page!
 
