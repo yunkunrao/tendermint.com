@@ -7,6 +7,7 @@
       <router-link :to="'/docs/roadmap'">Roadmap</router-link>
       <!--<router-link :to="'/docs/definitions'">Definitions</router-link>-->
       <div class="title">Guides</div>
+      <router-link :to="'/docs/guides/using-tendermint'">Using Tendermint</router-link>
       <router-link :to="'/docs/guides/app-development'">App Development</router-link>
       <router-link :to="'/docs/guides/app-architecture'">App Architecture</router-link>
       <router-link :to="'/docs/guides/contributing'">Contributing</router-link>
@@ -19,7 +20,6 @@
       <router-link :to="'/docs/internals/genesis'">Genesis</router-link>
       <router-link :to="'/docs/internals/configuration'">Configuration</router-link>
       <router-link :to="'/docs/internals/light-client-protocol'">Light Client Protocol</router-link>
-      <router-link :to="'/docs/commands'">Tendermint Commands</router-link>
       <router-link :to="'/docs/internals/secure-p2p'">Secure P2P</router-link>
       <router-link :to="'/docs/internals/fast-sync'">Fast Sync</router-link>
     </nav>

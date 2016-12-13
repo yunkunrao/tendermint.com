@@ -6,6 +6,7 @@
       <faq v-if="r('faq')"></faq>
       <roadmap v-if="r('roadmap')"></roadmap>
       <definitions v-if="r('definitions')"></definitions>
+      <using-tendermint v-if="r('using-tendermint')"></using-tendermint>
       <app-dev v-if="r('app-development')"></app-dev>
       <app-arch v-if="r('app-architecture')"></app-arch>
       <contributing v-if="r('contributing')"></contributing>
@@ -17,7 +18,6 @@
       <genesis v-if="r('genesis')"></genesis>
       <config v-if="r('configuration')"></config>
       <light-client v-if="r('light-client-protocol')"></light-client>
-      <commands v-if="r('commands')"></commands>
       <secure-peer-to-peer v-if="r('secure-p2p')"></secure-peer-to-peer>
       <fast-sync v-if="r('fast-sync')"></fast-sync>
     </div></div>
@@ -27,12 +27,12 @@
 <script>
 import Master from './PageDocsMaster'
 import Index from '../content/docs/index.md'
-import Commands from '../content/docs/commands.md'
 import Faq from '../content/docs/faq.md'
 import Roadmap from '../content/docs/roadmap.md'
 import Definitions from '../content/docs/definitions.md'
 
 // guides
+import UsingTendermint from '../content/docs/guides/using-tendermint.md'
 import AppDev from '../content/docs/guides/app-dev.md'
 import AppArch from '../content/docs/guides/app-architecture.md'
 import Contributing from '../content/docs/guides/contributing.md'
@@ -54,12 +54,12 @@ export default {
   components: {
     Master,
     Index,
-    Commands,
     Faq,
     Roadmap,
     Definitions,
 
     // guides
+    UsingTendermint,
     AppDev,
     AppArch,
     Contributing,
@@ -87,6 +87,7 @@ export default {
         case 'faq': val = 'Frequently Asked Questions'; break
         case 'roadmap': val = 'Roadmap'; break
         case 'definitions': val = 'Definitions'; break
+        case 'using-tendermint': val = 'Using Tendermint - Guides'; break
         case 'app-architecture': val = 'Application Architecture - Guides'; break
         case 'app-development': val = 'Application Development - Guides'; break
         case 'contributing': val = 'Contributing - Guides'; break
@@ -98,7 +99,6 @@ export default {
         case 'genesis': val = 'Genesis - Internals'; break
         case 'configuration': val = 'Configuration - Internals'; break
         case 'light-client-protocol': val = 'Light Client Protocol - Internals'; break
-        case 'commands': val = 'Commands - Internals'; break
         case 'secure-p2p': val = 'Secure P2P - Internals'; break
         case 'fast-sync': val = 'Fast Sync - Internals'; break
         default: this.$router.replace({ path: '/404' }); break

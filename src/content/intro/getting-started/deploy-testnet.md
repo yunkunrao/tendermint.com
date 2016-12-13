@@ -55,6 +55,8 @@ curl http://localhost:46657/status |  jsonpp | grep app_hash
 
 visit [http://localhost:46657](http://localhost:46657) in your browser to see the other endpoints.
 
+For more details, see the <router-link to="/docs/guides/using-tendermint">Using Tendermint Guide</router-link>.
+
 ## Deploy a Tendermint Testnet
 
 Now that we've run a single Tendermint node with one validator and a couple applications, 
