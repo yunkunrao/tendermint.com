@@ -1,13 +1,5 @@
 # Tendermint CLI
 
-Some notes on using the command line `tendermint` tool. 
-
-The help menu is available at `tendermint --help` and the version number at `tendermint version`.
-
-## Directory Root
-
-The default directory for blockchain data is `~/.tendermint`. Override this with the `TMROOT` environment variable.
-
 ## Initialize
 
 `tendermint init` will initialize the `~/.tendermint` (or `$TMROOT`) directory with a new private key (`priv_validator.json`), and a `genesis.json` containing the associated public key.
