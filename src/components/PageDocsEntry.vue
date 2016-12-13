@@ -18,7 +18,6 @@
       <genesis v-if="r('genesis')"></genesis>
       <config v-if="r('configuration')"></config>
       <light-client v-if="r('light-client-protocol')"></light-client>
-      <commands v-if="r('commands')"></commands>
       <secure-peer-to-peer v-if="r('secure-p2p')"></secure-peer-to-peer>
       <fast-sync v-if="r('fast-sync')"></fast-sync>
     </div></div>
@@ -28,7 +27,6 @@
 <script>
 import Master from './PageDocsMaster'
 import Index from '../content/docs/index.md'
-import Commands from '../content/docs/commands.md'
 import Faq from '../content/docs/faq.md'
 import Roadmap from '../content/docs/roadmap.md'
 import Definitions from '../content/docs/definitions.md'
@@ -56,7 +54,6 @@ export default {
   components: {
     Master,
     Index,
-    Commands,
     Faq,
     Roadmap,
     Definitions,
@@ -102,7 +99,6 @@ export default {
         case 'genesis': val = 'Genesis - Internals'; break
         case 'configuration': val = 'Configuration - Internals'; break
         case 'light-client-protocol': val = 'Light Client Protocol - Internals'; break
-        case 'commands': val = 'Commands - Internals'; break
         case 'secure-p2p': val = 'Secure P2P - Internals'; break
         case 'fast-sync': val = 'Fast Sync - Internals'; break
         default: this.$router.replace({ path: '/404' }); break
