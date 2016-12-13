@@ -4,6 +4,7 @@ By now you've seen how to run a simple example TMSP application on a local Tende
 and on a remote Tendermint cluster. 
 
 To learn more about building TMSP applications and integrating with Tendermint, see the <router-link to="/docs/guides/app-development">Developer Guides</router-link>.
+To learn more about running the Tendermint software, see the <router-link to="/docs/guides/using-tendermint">Using Tendermint Guide</router-link>.
 
 To learn more about Tendermint's various pieces, checkout the <router-link to="/docs">Documentation</router-link>.
 For a deeper dive, see [this thesis](https://atrium.lib.uoguelph.ca/xmlui/handle/10214/9769). 

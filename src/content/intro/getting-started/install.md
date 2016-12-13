@@ -20,7 +20,12 @@ tendermint init
 tendermint node --proxy_app=dummy
 ```
 
-See the <router-link to="/docs/guides/app-development">App Development</router-link> guide for more details on building and running applications.
+See the 
+<router-link to="/docs/guides/app-development">App Development</router-link>
+guide for more details on building applications,
+and the 
+<router-link to="/docs/guides/using-tendermint">Using Tendermint</router-link> 
+guide for more details about using the `tendermint` program.
 
 ### Reinstall
 
