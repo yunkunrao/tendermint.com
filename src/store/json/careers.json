@@ -1,34 +1,9 @@
 [
   {
-    "id": "application_developer_go",
-    "title": "Software Engineer: Application Developer",
-    "subtitle": "Golang, APIs, Distributed Systems",
-    "tags": ["golang", "applications"],
-    "weight": 3,
-    "active": true,
-    "responsibilities": [
-      "Develop and maintain a TMSP application to solve classic distributed systems problems like key-value storage, locking, leader-election, service discovery, etc (ie. a TMSP version of [consul](https://www.consul.io/) or [etcd](https://coreos.com/etcd/)).",
-      "Contribute to a cryptocurrency application"
-    ]
-  },
-  {
-    "id": "application_developer_js",
-    "title": "Software Engineer: Application Developer and Dev Outreach",
-    "subtitle": "Javascript, Docker",
-    "tags": ["javascript", "applications"],
-    "weight": 3,
-    "active": true,
-    "responsibilities": [
-      "Maintain an implementation of TMSP and some example applications in Javascript",
-      "Develop and maintain a framework for smart contracts in javascript (eg. https://deterministic.js.org/)",
-      "Developer Outreach, tutorials, and onboarding new developers"
-    ]
-  },
-  {
     "id": "bitcoin_engineer",
     "title": "Software Engineer: Bitcoin",
     "subtitle": "C++, Bitcoin Core",
-    "tags": ["c++", "bitcoin"],
+    "tags": ["c++", "bitcoin", "cryptocurrency"],
     "weight": 10,
     "active": true,
     "responsibilities": [
@@ -39,6 +14,31 @@
     ]
   },
   {
+    "id": "ethereum_engineer",
+    "title": "Software Engineer: Ethereum",
+    "subtitle": "Go, Ethereum",
+    "tags": ["go", "ethereum", "cryptocurrency"],
+    "weight": 3,
+    "active": true,
+    "responsibilities": [
+      "Develop and maintain Ethermint (https://github.com/tendermint/ethermint)",
+      "Contribute to Go-Ethereum",
+      "Develop a peg to Ethereum"
+    ]
+  },
+  {
+    "id": "cryptocurrency_engineer",
+    "title": "Software Engineer: Cryptocurrencies",
+    "subtitle": "Go, Cryptocurrency",
+    "tags": ["go", "cryptocurrency"],
+    "weight": 2,
+    "active": true,
+    "responsibilities": [
+      "Develop modules for building cryptocurrencies on Tendermint in Go",
+      "Develop a cryptocurrency using those modules for use in the Cosmos Network"
+    ]
+  },
+  {
     "id": "consensus_engineer",
     "title": "Software Engineer: Networking and Consensus",
     "subtitle": "Golang, P2P, Distributed Consensus",
@@ -46,7 +46,7 @@
     "weight": 2,
     "active": true,
     "responsibilities": [
-      "Improve the implementation of the core Tendermint consensus algorithm",
+      "Improve the implementation of the core Tendermint consensus algorithm and p2p network",
       "Develop a compatible implementation in another programming language"
     ]
   },
@@ -65,17 +65,15 @@
     ]
   },
   {
-    "id": "master_of_automation",
-    "title": "Master of Automation",
-    "subtitle": "Continuous Integration, Docker, Cloud, Golang",
-    "tags": ["cloud", "automation"],
+    "id": "devops_ninja",
+    "title": "DevOps Ninja",
+    "subtitle": "DevOps, Continuous Integration, Cloud, Docker, Golang",
+    "tags": ["devops", "cloud", "automation"],
     "weight": 1,
     "active": true,
     "responsibilities": [
-      "Automate more elements of building, testing, and deploying the software via Continuous Integration",
-      "Implement infrastructure-as-code policies and manage infrastructure",
-      "Quality Assurance",
-      "Improve Go unit-test coverage across repositories"
+      "Automate more elements of building, testing, and releasing the software via Continuous Integration",
+      "Architect strategies and implement solutions for deploying and managing blockchain networks using the Infrastructure-As-Code paradigm"
     ]
   },
   {
@@ -99,7 +97,8 @@
     "weight": 4,
     "active": true,
     "responsibilities": [
-      "Develop and maintain hardware-based and/or mobile-based solutions for signing Tendermint votes and application transactions"
+      "Develop and maintain hardware-based and/or mobile-based solutions for signing Tendermint votes and application transactions",
+      "Audit and oversee security throughout the stack"
     ]
   }
 ]
