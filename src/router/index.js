@@ -1,39 +1,39 @@
 import VueRouter from 'vue-router'
-function page (filename) { return require('../components/Page' + filename) }
+function r (filename) { return require('../components/Page' + filename) }
 
 const routes = [
-  { path: '/', component: page('Index') },
+  { path: '/', component: r('Index') },
 
   // Intro
-  { path: '/intro', component: page('IntroEntry') },
-  { path: '/intro/:page', component: page('IntroEntry') },
-  { path: '/intro/getting-started/:page', component: page('IntroEntry') },
+  { path: '/intro', component: r('IntroEntry') },
+  { path: '/intro/:r', component: r('IntroEntry') },
+  { path: '/intro/getting-started/:r', component: r('IntroEntry') },
 
   // Docs
-  { path: '/docs', component: page('DocsEntry') },
-  { path: '/docs/:page', component: page('DocsEntry') },
-  { path: '/docs/guides/:page', component: page('DocsEntry') },
-  { path: '/docs/internals/:page', component: page('DocsEntry') },
+  { path: '/docs', component: r('DocsEntry') },
+  { path: '/docs/:r', component: r('DocsEntry') },
+  { path: '/docs/guides/:r', component: r('DocsEntry') },
+  { path: '/docs/internals/:r', component: r('DocsEntry') },
 
   // Community Pages
-  { path: '/community', component: page('Community') },
+  { path: '/community', component: r('Community') },
 
   // Blog Pages
-  { path: '/blog', component: page('BlogIndex') },
-  { path: '/blog/:entry', component: page('BlogEntry') },
+  { path: '/blog', component: r('BlogIndex') },
+  { path: '/blog/:entry', component: r('BlogEntry') },
 
   // Other Pages
-  { path: '/about', component: page('About') },
-  { path: '/bounties', component: page('BountiesIndex') },
-  { path: '/bounties/:entry', component: page('BountiesEntry') },
-  { path: '/contact', component: page('Contact') },
-  { path: '/careers', component: page('CareersIndex') },
-  { path: '/careers/:entry', component: page('CareersEntry') },
-  { path: '/companies', component: page('Companies') },
-  { path: '/ecosystem', component: page('SoftwareEcosystem') },
-  { path: '/presentations', component: page('PresentationsIndex') },
-  { path: '/presentations/:entry', component: page('PresentationsEntry') },
-  { path: '/press', component: page('Press') },
+  { path: '/about', component: r('About') },
+  { path: '/bounties', component: r('BountiesIndex') },
+  { path: '/bounties/:entry', component: r('BountiesEntry') },
+  { path: '/contact', component: r('Contact') },
+  { path: '/careers', component: r('CareersIndex') },
+  { path: '/careers/:entry', component: r('CareersEntry') },
+  { path: '/companies', component: r('Companies') },
+  { path: '/ecosystem', component: r('SoftwareEcosystem') },
+  { path: '/presentations', component: r('PresentationsIndex') },
+  { path: '/presentations/:entry', component: r('PresentationsEntry') },
+  { path: '/press', component: r('Press') },
 
   // redirects
   { path: '/code', redirect: '/docs' },
@@ -46,8 +46,8 @@ const routes = [
   { path: '/posts/:entry', redirect: '/blog/:entry' },
 
   // wildcards
-  { path: '/404', component: page('404') },
-  { path: '*', component: page('404') }
+  { path: '/404', component: r('404') },
+  { path: '*', component: r('404') }
 ]
 
 const router = new VueRouter({
