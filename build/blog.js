@@ -9,13 +9,13 @@ let yaml = require('js-yaml')
 
 let blogTitle = 'Tendermint Blog'
 
-let postsDirectory = './src/content/blog/'
+let postsDirectory = './content/blog/'
 let posts = glob.sync(postsDirectory + '*.md')
 
 let postsJsonFile = './src/store/json/posts.json'
 let blogRssFile = './src/assets/feed.xml'
 
-let rssTemplate = require('./rssTemplate.js')
+let rssTemplate = require('./blog-rss.js')
 
 // set markdown-it settings
 let md = require('markdown-it')({

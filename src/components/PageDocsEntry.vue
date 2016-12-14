@@ -26,28 +26,28 @@
 
 <script>
 import Master from './PageDocsMaster'
-import Index from '../content/docs/index.md'
-import Faq from '../content/docs/faq.md'
-import Roadmap from '../content/docs/roadmap.md'
-import Definitions from '../content/docs/definitions.md'
+import Index from '../content/docs/index.vue'
+import Faq from '../content/docs/faq.vue'
+import Roadmap from '../content/docs/roadmap.vue'
+import Definitions from '../content/docs/definitions.vue'
 
 // guides
-import UsingTendermint from '../content/docs/guides/using-tendermint.md'
-import AppDev from '../content/docs/guides/app-dev.md'
-import AppArch from '../content/docs/guides/app-architecture.md'
-import Contributing from '../content/docs/guides/contributing.md'
+import UsingTendermint from '../content/docs/guides/using-tendermint.vue'
+import AppDev from '../content/docs/guides/app-dev.vue'
+import AppArch from '../content/docs/guides/app-architecture.vue'
+import Contributing from '../content/docs/guides/contributing.vue'
 
 // internals
-import Merkle from '../content/docs/internals/merkle.md'
-import Validators from '../content/docs/internals/validators.md'
-import Consensus from '../content/docs/internals/byzantine-consensus-algorithm.md'
-import BlockStructure from '../content/docs/internals/block-structure.md'
-import Rpc from '../content/docs/internals/rpc.md'
-import Genesis from '../content/docs/internals/genesis.md'
-import Config from '../content/docs/internals/configuration.md'
-import LightClient from '../content/docs/internals/light-client-protocol.md'
-import SecurePeerToPeer from '../content/docs/internals/secure_p2p.md'
-import FastSync from '../content/docs/internals/fast_sync.md'
+import Merkle from '../content/docs/internals/merkle.vue'
+import Validators from '../content/docs/internals/validators.vue'
+import Consensus from '../content/docs/internals/byzantine-consensus-algorithm.vue'
+import BlockStructure from '../content/docs/internals/block-structure.vue'
+import Rpc from '../content/docs/internals/rpc.vue'
+import Genesis from '../content/docs/internals/genesis.vue'
+import Config from '../content/docs/internals/configuration.vue'
+import LightClient from '../content/docs/internals/light-client-protocol.vue'
+import SecurePeerToPeer from '../content/docs/internals/secure_p2p.vue'
+import FastSync from '../content/docs/internals/fast_sync.vue'
 
 export default {
   name: 'page-docs-entry',

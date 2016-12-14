@@ -61,5 +61,5 @@ It uses Tendermint as its consensus engine, and provides a particular applicatio
 
 ## Next Steps
 
-- Read an overview of the motivation and design behind the <router-link to="/intro/tmsp-overview">Tendermint Socket Protocol</router-link>.
-- Continue with the <router-link to="/intro/getting-started/install">Getting Started</router-link> guide to install and run example tendermint applications.
+- Read an overview of the motivation and design behind the [Tendermint Socket Protocol](/intro/tmsp-overview).
+- Continue with the [Getting Started](/intro/getting-started/install) guide to install and run example tendermint applications.

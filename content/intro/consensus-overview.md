@@ -51,4 +51,4 @@ The [Cosmos Network](http://cosmos.network) is designed to use this Proof-of-Sta
 
 ## Next Steps
 
-- Continue with the <router-link to="/intro/getting-started/install">Getting Started</router-link> guide to install and run example tendermint applications.
+- Continue with the [Getting Started](/intro/getting-started/install) guide to install and run example tendermint applications.

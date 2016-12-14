@@ -21,10 +21,10 @@ tendermint node --proxy_app=dummy
 ```
 
 See the 
-<router-link to="/docs/guides/app-development">App Development</router-link>
+[App Development](/docs/guides/app-development)
 guide for more details on building applications,
 and the 
-<router-link to="/docs/guides/using-tendermint">Using Tendermint</router-link> 
+[Using Tendermint](/docs/guides/using-tendermint) 
 guide for more details about using the `tendermint` program.
 
 ### Reinstall
@@ -68,4 +68,4 @@ git clone https://github.com/tendermint/tendermint $GOPATH/src/github.com/tender
 
 ## Next Step
 
-Learn how to <router-link to="/intro/getting-started/first-tmsp">create your first TMSP app</router-link>.
+Learn how to [create your first TMSP app](/intro/getting-started/first-tmsp).

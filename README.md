@@ -36,17 +36,15 @@ npm run dev
 ## Content Editing
 
 ``` bash
-# Edit Blog > Posts
-./src/content/blog/
 
-# Build the edited blog posts
+# Edit Blog > Posts
+./content/blog/
 npm run blog
 
-# Edit Intro Pages
-./src/content/intro/
-
-# Edit Docs Pages
-./src/content/docs/
+# Edit Intro or Docs Pages
+./content/intro/
+./content/docs/
+npm run docs
 
 # Edit Community > Software Ecosystem
 ./src/store/json/software.json

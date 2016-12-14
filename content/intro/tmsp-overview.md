@@ -66,8 +66,8 @@ While programmers can avoid non-determinism by being careful, it is also possibl
 
 ## Next Steps
 
-- Read an overview of <router-link to="/intro/consensus-overview">how the consensus algorithm works</router-link>.
-- Continue with the <router-link to="/intro/getting-started/install">Getting Started</router-link> guide to install and run example tendermint applications.
+- Read an overview of [how the consensus algorithm works](/intro/consensus-overview).
+- Continue with the [Getting Started](/intro/getting-started/install) guide to install and run example tendermint applications.
 
 ## Contributions
 

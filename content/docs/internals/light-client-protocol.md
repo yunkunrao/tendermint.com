@@ -4,7 +4,7 @@ Light clients are an important part of the complete blockchain system for most a
 
 ## Overview
 
-The objective of the light client protocol is to get a <router-link to="/docs/internals/validators#committing-a-block">commit</router-link> for a recent <router-link to="/docs/internals/block-strcuture#block-hash">block hash</router-link> where the commit includes a majority of signatures from the last known validator set.  From there, all the application state is verifiable with <router-link to="/docs/internals/merkle-trees#iavl-tree">merkle proofs</router-link>.
+The objective of the light client protocol is to get a [commit](/docs/internals/validators#committing-a-block) for a recent [block hash](/docs/internals/block-structure#block-hash) where the commit includes a majority of signatures from the last known validator set.  From there, all the application state is verifiable with [merkle proofs](/docs/internals/merkle-trees#iavl-tree).
 
 ### Syncing the Validator Set
 TODO

@@ -311,5 +311,5 @@ otherwise Tendermint's p2p library will deny making connections to peers with th
 
 Got a couple nodes talking to eachother using the dummy app? 
 Try a more sophisticated app like [Ethermint](https://github.com/tendermint/etheremint),
-or learn more about building your own in the [Application Developer's Guide](docs/guides/app-development).
+or learn more about building your own in the [Application Developer's Guide](/docs/guides/app-development).
 

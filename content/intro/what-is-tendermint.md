@@ -2,7 +2,7 @@
 
 Welcome to the Tendermint guide!  This is the best place to start if you're new
 to Tendermint.  If you're already familiar with the basics of Tendermint and
-TMSP, find more details in the <router-link to="/docs">documentation</router-link>.
+TMSP, find more details in the [documentation](/docs).
 
 ## What is Tendermint?
 
@@ -30,9 +30,9 @@ or a quirky scripting language), developers can use Tendermint for BFT state mac
 whatever programming language and development environment is right for them.
 
 Tendermint is designed to be easy-to-use, simple-to-understand, highly performant, and useful
-for a wide variety of distributed applications. <router-link to="/intro/getting-started/install">Get started with Tendermint</router-link> today!
+for a wide variety of distributed applications. [Get started with Tendermint](/intro/getting-started/install) today!
 
 ## Next Steps
 
-- See how <router-link to="/intro/tendermint-vs">Tendermint compares to other software</router-link>.
-- Continue with the <router-link to="/intro/getting-started/install">Getting Started</router-link> guide to install and run example tendermint applications.
+- See how [Tendermint compares to other software](/intro/tendermint-vs).
+- Continue with the [Getting Started](/intro/getting-started/install) guide to install and run example tendermint applications.

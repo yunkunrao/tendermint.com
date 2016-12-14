@@ -55,7 +55,7 @@ curl http://localhost:46657/status |  jsonpp | grep app_hash
 
 visit [http://localhost:46657](http://localhost:46657) in your browser to see the other endpoints.
 
-For more details, see the <router-link to="/docs/guides/using-tendermint">Using Tendermint Guide</router-link>.
+For more details, see the [Using Tendermint Guide](/docs/guides/using-tendermint).
 
 ## Deploy a Tendermint Testnet
 
@@ -132,4 +132,4 @@ TODO: Document tutorial on docker-machine ssh mach1, docker ps, etc, or at least
 
 ## Next Steps
 
-Done trying out the testnet? Continue <router-link to="/intro/getting-started/next-steps">onwards</router-link>.
+Done trying out the testnet? Continue [onwards](/intro/getting-started/next-steps).

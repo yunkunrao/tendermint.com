@@ -1,5 +1,5 @@
 <template>
-  <section class="section-connections" class="section-default section-dark">
+  <section class="section-connections section-default section-dark">
     <div class="section-container">
       <header class="section-header">
         <h2>Join the&nbsp;discussion</h2>

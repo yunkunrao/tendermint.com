@@ -16,14 +16,14 @@
 
 <script>
 import Master from './PageIntroMaster'
-import TendermintVs from '../content/intro/tendermint-vs.md'
-import WhatIsTendermint from '../content/intro/what-is-tendermint.md'
-import TmspOverview from '../content/intro/tmsp-overview.md'
-import ConsensusOverview from '../content/intro/consensus-overview.md'
-import Install from '../content/intro/getting-started/install.md'
-import FirstTmsp from '../content/intro/getting-started/first-tmsp-app.md'
-import DeployTestnet from '../content/intro/getting-started/deploy-testnet.md'
-import NextSteps from '../content/intro/getting-started/next-steps.md'
+import TendermintVs from '../content/intro/tendermint-vs.vue'
+import WhatIsTendermint from '../content/intro/what-is-tendermint.vue'
+import TmspOverview from '../content/intro/tmsp-overview.vue'
+import ConsensusOverview from '../content/intro/consensus-overview.vue'
+import Install from '../content/intro/getting-started/install.vue'
+import FirstTmsp from '../content/intro/getting-started/first-tmsp-app.vue'
+import DeployTestnet from '../content/intro/getting-started/deploy-testnet.vue'
+import NextSteps from '../content/intro/getting-started/next-steps.vue'
 export default {
   name: 'page-intro-entry',
   components: {
