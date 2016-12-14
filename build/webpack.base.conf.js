@@ -45,10 +45,6 @@ module.exports = {
         loader: 'vue'
       },
       {
-        test: /\.md$/,
-        loader: 'vue-markdown-loader'
-      },
-      {
         test: /\.js$/,
         loader: 'babel',
         include: projectRoot,
@@ -104,10 +100,5 @@ module.exports = {
   stylus: {
     use: [require('nib')()],
     import: ['~nib/lib/nib/index.styl']
-  },
-  vueMarkdown: {
-    html: true,
-    linkify: true,
-    typographer: true
   }
 }
