@@ -51,20 +51,30 @@ That is, these repos should be well versioned, and any merge to master requires 
 Libraries need not follow the model strictly, but would be wise to,
 especially `go-p2p` and `go-rpc`, as their versions are referenced in tendermint core.
 
-Release Checklist:
+### Development Procedure:
+- the latest state of development is on `develop`
+- `develop` must never fail `make test`
+- no --force onto `develop` (except when reverting a broken commit, which should seldom happen)
+- create a development branch either on github.com/tendermint/tendermint, or your fork (using `git add origin`)
+- before submitting a pull request, begin `git rebase` on top of `develop`
 
-- development accumulates on `develop`
-- use `--no-ff` for all merges 
+### Pull Merge Procedure:
+- ensure pull branch is rebased on develop
+- run `make test` to ensure that all tests pass
+- merge pull request
+- the `unstable` branch may be used to aggregate pull merges before testing once
+- push master may request that pull requests be rebased on top of `unstable`
+
+### Release Procedure:
+- start on `develop`
+- run integration tests (see `test_integrations` in Makefile)
 - prepare changelog/release issue
-- create `release-x.x.x` branch; ensure version is correct 
-- push release branch, integration tests run (see `test_integrations` in Makefile).
-- make PR to master; link changelog
-- when tests pass, MERGE to master
-- tag the release and push to github or open the tag/release directly on github
-- bump version on develop
-- remove release branch
+- bump versions
+- tag new `develop` as `release-vX.X.X`
+- reset `master` to same commit
 
-Automation TODOs
+### Automation TODOs
+
 - Push builds: docker, AMIs
 - Update github.com/tendermint/tendermint-stable with latest master and vendored deps for debian releases
 
