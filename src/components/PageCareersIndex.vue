@@ -12,7 +12,7 @@
       <div class="section-container">
         <div class="section-content">
           <card-post v-for="career in filteredCareers" :url="'/careers/' + career.id"
-            :title="career.title" :desc="career.subtitle" :meta="career.tags">
+            :title="career.title" :desc="career.subtitle">
           </card-post>
         </div>
       </div>
@@ -111,7 +111,7 @@ export default {
 
     .tag
       font-size x
-    
+
 @media screen and (min-width: 960px)
   .page-career-index
     .tags
