@@ -29,7 +29,7 @@
 export default {
   name: 'page-contact',
   mounted () {
-    document.title = 'Companies Using Tendermint - Tendermint'
+    document.title = 'Contact - Tendermint'
   }
 }
 </script>
