@@ -22,6 +22,7 @@
       <router-link :to="'/docs/internals/light-client-protocol'">Light Client Protocol</router-link>
       <router-link :to="'/docs/internals/secure-p2p'">Secure P2P</router-link>
       <router-link :to="'/docs/internals/fast-sync'">Fast Sync</router-link>
+      <router-link :to="'/docs/internals/wire-protocol'">Wire Protocol</router-link>
     </nav>
     <btn-thumb v-show="isActive" icon="close"></btn-thumb>
     <btn-thumb v-show="!isActive" icon="bars"></btn-thumb>
