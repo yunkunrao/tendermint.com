@@ -65,8 +65,8 @@
     ]
   },
   {
-    "id": "devops_ninja",
-    "title": "DevOps Ninja",
+    "id": "devops_engineer",
+    "title": "DevOps Engineer",
     "subtitle": "DevOps, Continuous Integration, Cloud, Docker, Golang",
     "tags": ["devops", "cloud", "automation"],
     "weight": 1,
