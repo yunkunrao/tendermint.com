@@ -1,19 +1,5 @@
 [
   {
-    "id": "bitcoin_engineer",
-    "title": "Software Engineer: Bitcoin",
-    "subtitle": "C++, Bitcoin Core",
-    "tags": ["c++", "bitcoin", "cryptocurrency"],
-    "weight": 10,
-    "active": true,
-    "responsibilities": [
-      "Maintain an implementation of TMSP and some example applications in C++",
-      "Develop and maintain Bitcoin-TMSP",
-      "Contribute to Bitcoin Core",
-      "Develop a peg to Bitcoin"
-    ]
-  },
-  {
     "id": "ethereum_engineer",
     "title": "Software Engineer: Ethereum",
     "subtitle": "Go, Ethereum",
@@ -66,7 +52,7 @@
   },
   {
     "id": "devops_engineer",
-    "title": "DevOps Engineer",
+    "title": "DevOps/SysOps Engineer",
     "subtitle": "DevOps, Continuous Integration, Cloud, Docker, Golang",
     "tags": ["devops", "cloud", "automation"],
     "weight": 1,
@@ -85,20 +71,8 @@
     "active": true,
     "responsibilities": [
       "Analyze, audit, verify, and improve Tendermint protocols and implementations",
-      "General purpose research in cryptoeconomics and related fields",
+      "Research in cryptoeconomics and related fields such as BFT consensus algorithms and game theory",
       "Publish blog posts and papers on findings"
-    ]
-  },
-  {
-    "id": "security_engineer",
-    "title": "Security Engineer",
-    "subtitle": "Cryptography, Hardware/Mobile",
-    "tags": ["security", "hardware"],
-    "weight": 4,
-    "active": true,
-    "responsibilities": [
-      "Develop and maintain hardware-based and/or mobile-based solutions for signing Tendermint votes and application transactions",
-      "Audit and oversee security throughout the stack"
     ]
   }
 ]
