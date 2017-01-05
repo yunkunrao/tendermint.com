@@ -36,7 +36,7 @@ After a few seconds you should see blocks start streaming in!
 Now you can send transactions through the Tendermint RPC server with curl requests, or from your browser:
 
 ```
-curl http://localhost:46657/broadcast_tx?tx=\"abcd\"
+curl http://localhost:46657/broadcast_tx_sync?tx=\"abcd\"
 ```
 
 For handling responses, we recommend you [install the `jsonpp` tool](http://jmhodges.github.io/jsonpp/) to pretty print the JSON
