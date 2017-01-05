@@ -20,6 +20,7 @@
       <light-client v-if="r('light-client-protocol')"></light-client>
       <secure-peer-to-peer v-if="r('secure-p2p')"></secure-peer-to-peer>
       <fast-sync v-if="r('fast-sync')"></fast-sync>
+      <wire-protocol v-if="r('wire-protocol')"></wire-protocol>
     </div></div>
   </div>
 </template>
@@ -48,6 +49,7 @@ import Config from '../content/docs/internals/configuration.vue'
 import LightClient from '../content/docs/internals/light-client-protocol.vue'
 import SecurePeerToPeer from '../content/docs/internals/secure_p2p.vue'
 import FastSync from '../content/docs/internals/fast_sync.vue'
+import WireProtocol from '../content/docs/internals/wire-protocol.vue'
 
 export default {
   name: 'page-docs-entry',
@@ -74,7 +76,8 @@ export default {
     Config,
     LightClient,
     SecurePeerToPeer,
-    FastSync
+    FastSync,
+    WireProtocol
   },
   methods: {
     r (fragment) {
@@ -101,6 +104,7 @@ export default {
         case 'light-client-protocol': val = 'Light Client Protocol - Internals'; break
         case 'secure-p2p': val = 'Secure P2P - Internals'; break
         case 'fast-sync': val = 'Fast Sync - Internals'; break
+        case 'wire-protocol': val = 'Wire Protocol - Internals'; break
         default: this.$router.replace({ path: '/404' }); break
       }
       document.title = val += ' - Tendermint'

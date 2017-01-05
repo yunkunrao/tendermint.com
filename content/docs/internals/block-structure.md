@@ -11,7 +11,7 @@ The block `Header` is composed of:
 - `ChainId (string)`: name of the blockchain, e.g. "tendermint"
 - `Height (int)`: sequential block number starting with 1
 - `Time (time)`: local time of the proposer who proposed this block
-- `LastBlockHash ([]byte)`: [`block hash`](#block-hash) of the previous block at height `Height-1` 
+- `LastBlockHash ([]byte)`: [`block hash`](#block-hash) of the previous block at height `Height-1`
 - `LastBlockParts (PartSetHeader)`: [`partset header`](#partset-header) of the previous block
 - `StateHash ([]byte)`: [`state hash`](#state-hash) of the state after processing this block
 
@@ -33,7 +33,7 @@ A `Vote` is composed of:
 - `Signature (Signature)`: The signature of this `Vote`'s [`sign-bytes`](#vote-sign-bytes)
 
 #### Vote Sign Bytes
-The `sign-bytes` of a transaction is produced by taking a [`stable-json`](https://github.com/substack/json-stable-stringify)-like deterministic JSON [`wire`](Wire-Protocol) encoding of the vote (excluding the `Signature` field), and wrapping it with `{"chain_id":"tendermint","vote":...}`.
+The `sign-bytes` of a transaction is produced by taking a [`stable-json`](https://github.com/substack/json-stable-stringify)-like deterministic JSON [`wire`](/docs/internals/wire-protocol) encoding of the vote (excluding the `Signature` field), and wrapping it with `{"chain_id":"tendermint","vote":...}`.
 
 For example, a precommit vote might have the following `sign-bytes`:
 
