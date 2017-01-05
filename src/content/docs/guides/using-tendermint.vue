@@ -213,7 +213,7 @@ so that the listening addresses of the various sockets don&#x2019;t conflict.
 Additionally, you must set <code>addrbook_strict=false</code> in the <code>config.toml</code>,
 otherwise Tendermint&#x2019;s p2p library will deny making connections to peers with the same IP address.</p>
 <h2>More</h2>
-<p>Got a couple nodes talking to eachother using the dummy app?
-Try a more sophisticated app like <a href=https://github.com/tendermint/etheremint>Ethermint</a>,
+<p>Got a couple nodes talking to each other using the dummy app?
+Try a more sophisticated app like <a href=https://github.com/tendermint/ethermint>Ethermint</a>,
 or learn more about building your own in the <router-link to=/docs/guides/app-development>Application Developer&#x2019;s Guide</router-link>.</p>
 </div></template>

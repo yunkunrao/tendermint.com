@@ -30,20 +30,32 @@ If they have <code>.go</code> files in the root directory, they will be automati
 That is, these repos should be well versioned, and any merge to master requires a version bump and tagged release.</p>
 <p>Libraries need not follow the model strictly, but would be wise to,
 especially <code>go-p2p</code> and <code>go-rpc</code>, as their versions are referenced in tendermint core.</p>
-<p>Release Checklist:</p>
+<h3>Development Procedure:</h3>
 <ul>
-<li>development accumulates on <code>develop</code></li>
-<li>use <code>--no-ff</code> for all merges</li>
-<li>prepare changelog/release issue</li>
-<li>create <code>release-x.x.x</code> branch; ensure version is correct</li>
-<li>push release branch, integration tests run (see <code>test_integrations</code> in Makefile).</li>
-<li>make PR to master; link changelog</li>
-<li>when tests pass, MERGE to master</li>
-<li>tag the release and push to github or open the tag/release directly on github</li>
-<li>bump version on develop</li>
-<li>remove release branch</li>
+<li>the latest state of development is on <code>develop</code></li>
+<li><code>develop</code> must never fail <code>make test</code></li>
+<li>no --force onto <code>develop</code> (except when reverting a broken commit, which should seldom happen)</li>
+<li>create a development branch either on <a href=http://github.com/tendermint/tendermint>github.com/tendermint/tendermint</a>, or your fork (using <code>git add origin</code>)</li>
+<li>before submitting a pull request, begin <code>git rebase</code> on top of <code>develop</code></li>
 </ul>
-<p>Automation TODOs</p>
+<h3>Pull Merge Procedure:</h3>
+<ul>
+<li>ensure pull branch is rebased on develop</li>
+<li>run <code>make test</code> to ensure that all tests pass</li>
+<li>merge pull request</li>
+<li>the <code>unstable</code> branch may be used to aggregate pull merges before testing once</li>
+<li>push master may request that pull requests be rebased on top of <code>unstable</code></li>
+</ul>
+<h3>Release Procedure:</h3>
+<ul>
+<li>start on <code>develop</code></li>
+<li>run integration tests (see <code>test_integrations</code> in Makefile)</li>
+<li>prepare changelog/release issue</li>
+<li>bump versions</li>
+<li>tag new <code>develop</code> as <code>release-vX.X.X</code></li>
+<li>reset <code>master</code> to same commit</li>
+</ul>
+<h3>Automation TODOs</h3>
 <ul>
 <li>Push builds: docker, AMIs</li>
 <li>Update <a href=http://github.com/tendermint/tendermint-stable>github.com/tendermint/tendermint-stable</a> with latest master and vendored deps for debian releases</li>

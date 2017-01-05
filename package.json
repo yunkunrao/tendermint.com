@@ -16,10 +16,10 @@
     "build": "node build/blog.js && node build/docs.js && node build/build.js"
   },
   "dependencies": {
-    "vue": "^2.1.6"
+    "vue": "^2.1.8"
   },
   "devDependencies": {
-    "autoprefixer": "^6.5.4",
+    "autoprefixer": "^6.6.1",
     "babel-core": "^6.21.0",
     "babel-eslint": "^7.1.1",
     "babel-loader": "^6.2.10",
@@ -36,7 +36,7 @@
     "css-loader": "^0.26.1",
     "eslint": "^3.12.2",
     "eslint-config-standard": "^6.2.1",
-    "eslint-friendly-formatter": "^2.0.6",
+    "eslint-friendly-formatter": "^2.0.7",
     "eslint-loader": "^1.6.1",
     "eslint-plugin-html": "^1.7.0",
     "eslint-plugin-promise": "^3.4.0",
@@ -51,7 +51,7 @@
     "glob": "^7.1.1",
     "highlight.js": "^9.9.0",
     "html-minifier": "^3.2.3",
-    "html-webpack-plugin": "^2.24.1",
+    "html-webpack-plugin": "^2.26.0",
     "http-proxy-middleware": "^0.17.3",
     "inject-loader": "^3.0.0-beta2",
     "isparta-loader": "^2.0.0",
@@ -65,14 +65,14 @@
     "karma-sinon-chai": "^1.2.4",
     "karma-sourcemap-loader": "^0.3.7",
     "karma-spec-reporter": "0.0.26",
-    "karma-webpack": "^1.8.0",
-    "lodash": "^4.17.2",
+    "karma-webpack": "^1.8.1",
+    "lodash": "^4.17.4",
     "lolex": "^1.5.2",
     "markdown-it": "^8.2.2",
     "mocha": "^3.2.0",
     "moment": "^2.17.1",
     "nib": "^1.1.2",
-    "nightwatch": "^0.9.11",
+    "nightwatch": "^0.9.12",
     "opn": "^4.0.2",
     "ora": "^0.4.0",
     "path": "^0.12.7",
@@ -81,7 +81,7 @@
     "rss": "^1.2.1",
     "selenium-server": "3.0.1",
     "shelljs": "^0.7.5",
-    "sinon": "^1.17.6",
+    "sinon": "^1.17.7",
     "sinon-chai": "^2.8.0",
     "stylus": "^0.54.5",
     "stylus-loader": "^2.4.0",
@@ -93,13 +93,13 @@
     "vue-loader": "^10.0.2",
     "vue-router": "^2.1.1",
     "vue-style-loader": "^1.0.0",
-    "vue-template-compiler": "^2.1.6",
-    "vue-ua": "1.1.2",
+    "vue-template-compiler": "^2.1.8",
+    "vue-ua": "<1.2.0",
     "vuex": "^2.1.1",
-    "vuex-router-sync": "^4.0.1",
+    "vuex-router-sync": "^4.1.0",
     "webpack": "^1.14.0",
     "webpack-dev-middleware": "^1.9.0",
-    "webpack-hot-middleware": "^2.13.2",
-    "webpack-merge": "^1.1.2"
+    "webpack-hot-middleware": "^2.15.0",
+    "webpack-merge": "^2.0.0"
   }
 }

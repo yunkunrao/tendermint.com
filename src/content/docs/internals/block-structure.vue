@@ -37,7 +37,7 @@
 <li><code>Signature (Signature)</code>: The signature of this <code>Vote</code>&apos;s <a href=#vote-sign-bytes><code>sign-bytes</code></a></li>
 </ul>
 <h4>Vote Sign Bytes</h4>
-<p>The <code>sign-bytes</code> of a transaction is produced by taking a <a href=https://github.com/substack/json-stable-stringify><code>stable-json</code></a>-like deterministic JSON <a href=Wire-Protocol><code>wire</code></a> encoding of the vote (excluding the <code>Signature</code> field), and wrapping it with <code>{&quot;chain_id&quot;:&quot;tendermint&quot;,&quot;vote&quot;:...}</code>.</p>
+<p>The <code>sign-bytes</code> of a transaction is produced by taking a <a href=https://github.com/substack/json-stable-stringify><code>stable-json</code></a>-like deterministic JSON <router-link to=/docs/internals/wire-protocol><code>wire</code></router-link> encoding of the vote (excluding the <code>Signature</code> field), and wrapping it with <code>{&quot;chain_id&quot;:&quot;tendermint&quot;,&quot;vote&quot;:...}</code>.</p>
 <p>For example, a precommit vote might have the following <code>sign-bytes</code>:</p>
 <pre><code class=language-json>{&quot;chain_id&quot;:&quot;tendermint&quot;,&quot;vote&quot;:{&quot;block_hash&quot;:&quot;611801F57B4CE378DF1A3FFF1216656E89209A99&quot;,&quot;block_parts_header&quot;:{&quot;hash&quot;:&quot;B46697379DBE0774CC2C3B656083F07CA7E0F9CE&quot;,&quot;total&quot;:123},&quot;height&quot;:1234,&quot;round&quot;:1,&quot;type&quot;:2}}
 </code></pre>

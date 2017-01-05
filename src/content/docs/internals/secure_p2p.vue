@@ -10,10 +10,10 @@
 <p>The peers are now authenticated.</p>
 <p>All future communications can now be encrypted using the shared secret and the generated nonces, where each nonce is incremented by one each time it is used. The communications maintain Perfect Forward Secrecy, as the persistent key pair was not used for generating secrets - only for authenticating.</p>
 <h2>Caveat</h2>
-<p>This system is still vulnerable to a Man-In-The-Middle attack if the persistent public key of the remote node is not known in advance. The only way to mitigate this is with a public key authentication system, such as the Web-of-Trust or Certificate Authorities. In our case, we can use the blockchain itself as a certificate authority to ensure that we are connected to at least one validator <a href=Future-Work>TODO</a>.</p>
+<p>This system is still vulnerable to a Man-In-The-Middle attack if the persistent public key of the remote node is not known in advance. The only way to mitigate this is with a public key authentication system, such as the Web-of-Trust or Certificate Authorities. In our case, we can use the blockchain itself as a certificate authority to ensure that we are connected to at least one validator.</p>
 <h2>Links</h2>
 <ul>
-<li>[Implementation](<a href=https://github.com/tendermint/tendermint/blob/develop/p2p/secret_connection.go#L49>https://github.com/tendermint/tendermint/blob/develop/p2p/secret_connection.go#L49</a> for implementation)</li>
+<li><a href=https://github.com/tendermint/go-p2p/blob/master/secret_connection.go#L49>Implementation</a></li>
 <li><a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.216.6107&amp;rep=rep1&amp;type=pdf">Original STS paper by Whitfield Diffie, Paul C. van Oorschot and Michael J. Wiener</a></li>
 <li><a href=https://dominictarr.github.io/secret-handshake-paper/shs.pdf>Further work on secret handshakes</a></li>
 </ul>
