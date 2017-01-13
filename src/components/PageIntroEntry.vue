@@ -18,10 +18,10 @@
 import Master from './PageIntroMaster'
 import TendermintVs from '../content/intro/tendermint-vs.vue'
 import WhatIsTendermint from '../content/intro/what-is-tendermint.vue'
-import TmspOverview from '../content/intro/abci-overview.vue'
+import AbciOverview from '../content/intro/abci-overview.vue'
 import ConsensusOverview from '../content/intro/consensus-overview.vue'
 import Install from '../content/intro/getting-started/install.vue'
-import FirstTmsp from '../content/intro/getting-started/first-abci-app.vue'
+import FirstAbci from '../content/intro/getting-started/first-abci-app.vue'
 import DeployTestnet from '../content/intro/getting-started/deploy-testnet.vue'
 import NextSteps from '../content/intro/getting-started/next-steps.vue'
 export default {
@@ -30,10 +30,10 @@ export default {
     Master,
     TendermintVs,
     WhatIsTendermint,
-    TmspOverview,
+    AbciOverview,
     ConsensusOverview,
     Install,
-    FirstTmsp,
+    FirstAbci,
     DeployTestnet,
     NextSteps
   },
