@@ -1,6 +1,6 @@
 # What is ABCI?
 
-The Tendermint Socket Protocol (ABCI) allows for Byzantine Fault Tolerant replication of applications written in any programming language.
+The Application BlockChain Interface (ABCI) allows for Byzantine Fault Tolerant replication of applications written in any programming language.
 
 ## Motivation
 
@@ -13,11 +13,14 @@ This is especially true when the codebase is not modular in design and suffers f
 Another problem with monolithic design is that it limits you to the language of the blockchain stack (or vice versa).  In the case of Ethereum which supports a Turing-complete bytecode virtual-machine, it limits you to languages that compile down to that bytecode; today, those are Serpent and Solidity.
 
 In contrast, our approach is to decouple the consensus engine and P2P layers from the details of the application state of the particular blockchain application.
-We do this by abstracting away the details of the application to an interface, which is implemented as a socket protocol; namely, the Tendermint Socket Protocol (ABCI).
+We do this by abstracting away the details of the application to an interface, which is implemented as a socket protocol.
+
+Thus we have an interface, the Application BlockChain Interface (ABCI), and its primary implementation, the Tendermint Socket Protocol (TSP, or Teaspoon).
 
 ## Intro to ABCI
 
-[Tendermint Core](https://github.com/tendermint/tendermint) (the "consensus engine") communicates with the application via a socket protocol called [ABCI](https://github.com/tendermint/abci). 
+[Tendermint Core](https://github.com/tendermint/tendermint) (the "consensus engine") communicates with the application via a socket protocol that 
+satisfies the [ABCI](https://github.com/tendermint/abci). 
 
 To draw an analogy, lets talk about a well-known cryptocurrency, Bitcoin.  Bitcoin is a cryptocurrency blockchain where each node maintains a fully audited Unspent Transaction Output (UTXO) database. If one wanted to create a Bitcoin-like system on top of ABCI, Tendermint Core would be responsible for 
 
@@ -31,9 +34,9 @@ The application will be responsible for
 - Preventing transactions from spending non-existent transactions
 - Allowing clients to query the UTXO database.
 
-Tendermint is able to decompose the blockchain design by offering a very simple API between the application process and consensus process.
+Tendermint is able to decompose the blockchain design by offering a very simple API (ie. the ABCI) between the application process and consensus process.
 
-The API consists of 3 primary message types that get delivered from the core to the application.  The application replies with corresponding response messages.
+The ABCI consists of 3 primary message types that get delivered from the core to the application.  The application replies with corresponding response messages.
 
 The messages are specified here: [ABCI Message Types](https://github.com/tendermint/abci#message-types)
 
