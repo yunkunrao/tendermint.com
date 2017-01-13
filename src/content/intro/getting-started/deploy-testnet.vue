@@ -1,8 +1,8 @@
 <template><div><h1>Deploy a Testnet</h1>
 <h2>Tendermint Core</h2>
-<p>Now that we&#x2019;ve seen how TMSP works, and even played with a few applications using the <code>tmsp-cli</code> tool,
+<p>Now that we&#x2019;ve seen how ABCI works, and even played with a few applications using the <code>abci-cli</code> tool,
 let&#x2019;s run an actual Tendermint node.</p>
-<p>When running a live application, a Tendermint node takes the place of the <code>tmsp-cli</code> tool by sending TMSP requests
+<p>When running a live application, a Tendermint node takes the place of the <code>abci-cli</code> tool by sending ABCI requests
 to the application: many <code>append_tx</code> msgs to run transactions followed by a <code>commit</code> to get the application Merkle root hash, and so on.</p>
 <p>First, we need to initialize a genesis file and a validator key in <code>~/.tendermint</code>:</p>
 <pre><code>tendermint init
@@ -11,7 +11,7 @@ to the application: many <code>append_tx</code> msgs to run transactions followe
 <p>Now,</p>
 <pre><code>tendermint node
 </code></pre>
-<p>Tendermint will try to connect to a tmsp appliction by default on <a href=127.0.0.1:46658>127.0.0.1:46658</a>,
+<p>Tendermint will try to connect to a abci appliction by default on <a href=127.0.0.1:46658>127.0.0.1:46658</a>,
 but you probably don&#x2019;t have one running yet.</p>
 <p>So in another window, lets start the <code>dummy</code> app,</p>
 <pre><code>dummy
@@ -57,8 +57,8 @@ pay to start some new droplets to run your nodes. You can of course stop and des
   mach3 # Configuration directory for the Tendermint core daemon on machine 3
   mach4 # Configuration directory for the Tendermint core daemon on machine 4
 </code></pre>
-<p>You can change the files in the app folder to change which TMSP application run on your testnet.
-The default script app/init.sh gets run on each node to install the TMSP application straight from Github.
+<p>You can change the files in the app folder to change which ABCI application run on your testnet.
+The default script app/init.sh gets run on each node to install the ABCI application straight from Github.
 Edit core/init.sh to change the Tendermint version being run.</p>
 <p>Now start the testnet service.</p>
 <pre><code>mintnet start mytest mytest_dir/

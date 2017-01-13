@@ -1,7 +1,7 @@
 <template><div><h1>Introduction to Tendermint</h1>
 <p>Welcome to the Tendermint guide!  This is the best place to start if you&#x2019;re new
 to Tendermint.  If you&#x2019;re already familiar with the basics of Tendermint and
-TMSP, find more details in the <router-link to=/docs>documentation</router-link>.</p>
+ABCI, find more details in the <router-link to=/docs>documentation</router-link>.</p>
 <h2>What is Tendermint?</h2>
 <p>Tendermint is software for securely and consistently replicating an application on many machines.
 By securely, we mean that Tendermint works even if up to 1/3 of machines fail in arbitrary ways.
@@ -19,7 +19,7 @@ where each block contains a cryptographic hash of the previous one, forming a ch
 In practice, the blockchain data structure actually optimizes BFT design.</p>
 <p>Tendermint consists of two chief technical components: a blockchain consensus engine and a generic application interface.
 The consensus engine, called Tendermint Core, ensures that the same transactions are recorded on every machine in the same order.
-The application interface, called the Tendermint Socket Protocol (TMSP), enables the transactions to be processed in any programming language.
+The application interface, called the Tendermint Socket Protocol (ABCI), enables the transactions to be processed in any programming language.
 Unlike other blockchain and consensus solutions, which come pre-packaged with built in state machines (like a fancy key-value store,
 or a quirky scripting language), developers can use Tendermint for BFT state machine replication of applications written in
 whatever programming language and development environment is right for them.</p>

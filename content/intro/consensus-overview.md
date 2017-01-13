@@ -47,7 +47,7 @@ Validators can be forced, by logic in the application,
 to "bond" their currency holdings in a security deposit that can be destroyed if they're found to misbehave in the consensus protocol.
 This adds an economic element to the security of the protocol, allowing one to quantify the cost of violating the assumption that less than one-third of voting power is Byzantine. 
 
-The [Cosmos Network](http://cosmos.network) is designed to use this Proof-of-Stake mechanism across an array of cryptocurrencies implemented as TMSP applications.
+The [Cosmos Network](http://cosmos.network) is designed to use this Proof-of-Stake mechanism across an array of cryptocurrencies implemented as ABCI applications.
 
 ## Next Steps
 

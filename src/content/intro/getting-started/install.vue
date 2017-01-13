@@ -39,5 +39,5 @@ go install ./cmd/tendermint
 git clone https://github.com/tendermint/tendermint $GOPATH/src/github.com/tendermint/tendermint
 </code></pre>
 <h2>Next Step</h2>
-<p>Learn how to <router-link to=/intro/getting-started/first-tmsp>create your first TMSP app</router-link>.</p>
+<p>Learn how to <router-link to=/intro/getting-started/first-abci>create your first ABCI app</router-link>.</p>
 </div></template>

@@ -1,9 +1,9 @@
 # Next Steps
 
-By now you've seen how to run a simple example TMSP application on a local Tendermint node
+By now you've seen how to run a simple example ABCI application on a local Tendermint node
 and on a remote Tendermint cluster. 
 
-To learn more about building TMSP applications and integrating with Tendermint, see the [Developer Guides](/docs/guides/app-development).
+To learn more about building ABCI applications and integrating with Tendermint, see the [Developer Guides](/docs/guides/app-development).
 To learn more about running the Tendermint software, see the [Using Tendermint Guide](/docs/guides/using-tendermint).
 
 To learn more about Tendermint's various pieces, checkout the [Documentation](/docs).

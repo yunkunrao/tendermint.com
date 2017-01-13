@@ -1,7 +1,7 @@
 <template><div><h1>Using Tendermint</h1>
 <p>This is a guide to using the <code>tendermint</code> program from the command line.
 It assumes only that you <router-link to=/intro/getting-started/install>have tendermint installed</router-link> and have some rudimentary idea
-of what Tendermint and TMSP are.</p>
+of what Tendermint and ABCI are.</p>
 <p>You can see the help menu with <code>tendermint --help</code>, and the version number with <code>tendermint version</code>.</p>
 <h2>Directory Root</h2>
 <p>The default directory for blockchain data is <code>~/.tendermint</code>. Override this by setting the <code>TMROOT</code> environment variable.</p>
@@ -16,19 +16,19 @@ This is all that&#x2019;s necessary to run a local testnet with one validator.</
 <p>To run a tendermint node, use</p>
 <pre><code>tendermint node 
 </code></pre>
-<p>By default, Tendermint will try to connect to a tmsp appliction on <a href=127.0.0.1:46658>127.0.0.1:46658</a>.
-If you have the <code>dummy</code> TMSP app installed, run it in another window.
+<p>By default, Tendermint will try to connect to a abci appliction on <a href=127.0.0.1:46658>127.0.0.1:46658</a>.
+If you have the <code>dummy</code> ABCI app installed, run it in another window.
 If you don&#x2019;t, kill tendermint and run an in-process version with</p>
 <pre><code>tendermint node --proxy_app=dummy
 </code></pre>
 <p>After a few seconds you should see blocks start streaming in.
 Note that blocks are produced regularly, even if there are no transactions.
 Hopefully we will change this.</p>
-<p>Tendermint supports in-process versions of the dummy, counter, and nil apps that ship as examples in the <a href=https://github.com/tendermint/tmsp>TMSP repository</a>.
+<p>Tendermint supports in-process versions of the dummy, counter, and nil apps that ship as examples in the <a href=https://github.com/tendermint/abci>ABCI repository</a>.
 It&#x2019;s easy to compile your own app in-process with tendermint if it&#x2019;s written in Go.
 If your app is not written in Go, simply run it in another process,
 and use the <code>--proxy_app</code> flag to specify the address of the socket it is listening on, for instance</p>
-<pre><code>tendermint node --proxy_app=/var/run/tmsp.sock
+<pre><code>tendermint node --proxy_app=/var/run/abci.sock
 </code></pre>
 <h2>Transactions</h2>
 <p>To send a transaction, use <code>curl</code> to make requests to the Tendermint RPC server:</p>
@@ -75,7 +75,7 @@ while <code>broadcast_tx_sync</code> will return with the result of running the 
 Using <code>broadcast_tx_commit</code> will wait until the transaction is committed in a block or until some timeout is reached,
 but will return right away if the transaction does not pass <code>CheckTx</code>.
 The return value for <code>broadcast_tx_commit</code> includes two fields, <code>check_tx</code> and <code>append_tx</code>, pertaining to the result of running
-the transaction through those TMSP messages.</p>
+the transaction through those ABCI messages.</p>
 <p>The benefit of using <code>broadcast_tx_commit</code> is that the request returns after the transaction is committed (ie. included in a block),
 but that can take on the order of a second.
 For a quick result, use <code>broadcast_tx_sync</code>,

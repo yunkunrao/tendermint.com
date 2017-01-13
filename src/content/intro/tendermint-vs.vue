@@ -32,8 +32,8 @@ user&#x2019;s had to &#x201C;bond&#x201D; units of the currency into a security 
 this is what made Tendermint a Proof-of-Stake algorithm.</p>
 <p>Since then, Tendermint has evolved to be a general purpose blockchain consensus engine that can host arbitrary application states.
 That means it can be used as a plug-and-play replacement for the consensus engines of other blockchain software.
-So one can take the current Ethereum code base, whether in Rust, or Go, or Haskell, and run it as a TMSP application
-using Tendermint consensus. Indeed, <a href=https://github.com/tendermint/geth-tmsp>we did that</a>.
+So one can take the current Ethereum code base, whether in Rust, or Go, or Haskell, and run it as a ABCI application
+using Tendermint consensus. Indeed, <a href=https://github.com/tendermint/geth-abci>we did that</a>.
 And we plan to do the same for Bitcoin, ZCash, and various other deterministic applications as well.</p>
 <p>Another example of a cryptocurrency application built on Tendermint is <a href=http://cosmos.network>Cosmos</a></p>
 <h2>Hyperledger, ErisDB</h2>
@@ -42,14 +42,14 @@ and requires that all application behaviour runs in potentially many docker cont
 It uses an implementation of <a href=http://pmg.csail.mit.edu/papers/osdi99.pdf>PBFT</a>
 from a team at IBM that is
 <a href=https://www.zurich.ibm.com/~cca/papers/sieve.pdf>augmented to handle potentially non-deterministic chaincode</a>
-It is possible to implement this docker-based behaviour as a TMSP app in Tendermint,
+It is possible to implement this docker-based behaviour as a ABCI app in Tendermint,
 though extending Tendermint to handle non-determinism remains for future work.</p>
 <p><a href=https://github.com/eris-ltd/eris-db>ErisDB</a> is an implementation of the Ethereum Virtual Machine and Ethereum transaction mechanics,
 with additional features for a name-registry, permissions, and native contracts, and an alternative blockchain API.
 It uses Tendermint as its consensus engine, and provides a particular application state.</p>
 <h2>Next Steps</h2>
 <ul>
-<li>Read an overview of the motivation and design behind the <router-link to=/intro/tmsp-overview>Tendermint Socket Protocol</router-link>.</li>
+<li>Read an overview of the motivation and design behind the <router-link to=/intro/abci-overview>Tendermint Socket Protocol</router-link>.</li>
 <li>Continue with the <router-link to=/intro/getting-started/install>Getting Started</router-link> guide to install and run example tendermint applications.</li>
 </ul>
 </div></template>

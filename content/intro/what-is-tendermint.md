@@ -2,7 +2,7 @@
 
 Welcome to the Tendermint guide!  This is the best place to start if you're new
 to Tendermint.  If you're already familiar with the basics of Tendermint and
-TMSP, find more details in the [documentation](/docs).
+ABCI, find more details in the [documentation](/docs).
 
 ## What is Tendermint?
 
@@ -24,7 +24,7 @@ In practice, the blockchain data structure actually optimizes BFT design.
 
 Tendermint consists of two chief technical components: a blockchain consensus engine and a generic application interface.
 The consensus engine, called Tendermint Core, ensures that the same transactions are recorded on every machine in the same order.
-The application interface, called the Tendermint Socket Protocol (TMSP), enables the transactions to be processed in any programming language.
+The application interface, called the Tendermint Socket Protocol (ABCI), enables the transactions to be processed in any programming language.
 Unlike other blockchain and consensus solutions, which come pre-packaged with built in state machines (like a fancy key-value store,
 or a quirky scripting language), developers can use Tendermint for BFT state machine replication of applications written in 
 whatever programming language and development environment is right for them.

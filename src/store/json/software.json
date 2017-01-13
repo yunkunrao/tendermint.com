@@ -1,5 +1,5 @@
 {
-  "tmspApps": [
+  "abciApps": [
     {
       "name": "Basecoin",
       "url": "https://github.com/tendermint/basecoin",
@@ -19,14 +19,14 @@
       "url": "https://github.com/tendermint/ethermint",
       "language": "Go",
       "author": "Tendermint",
-      "description": "The go-ethereum state machine run as a TMSP app"
+      "description": "The go-ethereum state machine run as a ABCI app"
     },
     {
       "name": "Merkle AVL Tree",
       "url": "https://github.com/tendermint/merkleeyes",
       "language": "Go",
       "author": "Tendermint",
-      "description": "Tendermint IAVL tree implemented as tmsp app"
+      "description": "Tendermint IAVL tree implemented as abci app"
     },
     {
       "name": "ErisDB",
@@ -37,16 +37,16 @@
     },
     {
       "name": "Merkle AVL Tree",
-      "url": "https://github.com/jTMSP/MerkleTree",
+      "url": "https://github.com/jABCI/MerkleTree",
       "language": "Java",
-      "author": "jTMSP",
-      "description": "Tendermint IAVL tree implemented as tmsp app"
+      "author": "jABCI",
+      "description": "Tendermint IAVL tree implemented as abci app"
     },
     {
       "name": "TMChat",
       "url": "https://github.com/wolfposd/TMChat",
       "language": "Java",
-      "author": "jTMSP",
+      "author": "jABCI",
       "description": "P2P chat using Tendermint"
     },
     {
@@ -64,30 +64,30 @@
       "description": "Encrypted storage web-utility backed by Tendermint"
     }
   ],
-  "tmspServers": [
+  "abciServers": [
     {
-      "name": "tmsp",
-      "url": "https://github.com/tendermint/tmsp",
+      "name": "abci",
+      "url": "https://github.com/tendermint/abci",
       "language": "Go",
       "author": "Tendermint"
     },
     {
-      "name": "js-tmsp",
-      "url": "https://github.com/tendermint/js-tmsp",
+      "name": "js-abci",
+      "url": "https://github.com/tendermint/js-abci",
       "language": "Javascript",
       "author": "Tendermint"
     },
     {
-      "name": "cpp-tmsp",
-      "url": "https://github.com/mdyring/cpp-tmsp",
+      "name": "cpp-abci",
+      "url": "https://github.com/mdyring/cpp-abci",
       "language": "C++",
       "author": "Martin Dyring"
     },
     {
-      "name": "jTMSP",
-      "url": "https://github.com/jTMSP/jTMSP",
+      "name": "jABCI",
+      "url": "https://github.com/jABCI/jABCI",
       "language": "Java",
-      "author": "jTMSP"
+      "author": "jABCI"
     },
     {
       "name": "Spearmint",
@@ -96,8 +96,8 @@
       "author": "Dennis McKinnon"
     },
     {
-      "name": "ocaml-tmsp",
-      "url": "https://github.com/zballs/ocaml-tmsp",
+      "name": "ocaml-abci",
+      "url": "https://github.com/zballs/ocaml-abci",
       "language": "Ocaml",
       "author": "Zach Balder"
     }

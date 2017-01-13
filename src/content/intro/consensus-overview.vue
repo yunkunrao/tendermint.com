@@ -37,7 +37,7 @@ When voting power is denominated in a native currency, the system is often refer
 Validators can be forced, by logic in the application,
 to &#x201C;bond&#x201D; their currency holdings in a security deposit that can be destroyed if they&#x2019;re found to misbehave in the consensus protocol.
 This adds an economic element to the security of the protocol, allowing one to quantify the cost of violating the assumption that less than one-third of voting power is Byzantine.</p>
-<p>The <a href=http://cosmos.network>Cosmos Network</a> is designed to use this Proof-of-Stake mechanism across an array of cryptocurrencies implemented as TMSP applications.</p>
+<p>The <a href=http://cosmos.network>Cosmos Network</a> is designed to use this Proof-of-Stake mechanism across an array of cryptocurrencies implemented as ABCI applications.</p>
 <h2>Next Steps</h2>
 <ul>
 <li>Continue with the <router-link to=/intro/getting-started/install>Getting Started</router-link> guide to install and run example tendermint applications.</li>

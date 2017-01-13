@@ -46,7 +46,7 @@
 <h3>State Hash</h3>
 <p>The state hash is the <a href=Merkle-Trees#simple-tree-with-dictionaries>Simple Tree hash</a> of the state&#x2019;s fields (e.g. <code>BondedValidators</code>, <code>UnbondingValidators</code>, <code>Accounts</code>, <code>ValidatorInfos</code>, and <code>NameRegistry</code>) encoded as a list of <code>KVPair</code>s.  This state hash is recursively included in the block <code>Header</code> and thus the <a href=#block-hash>block hash</a> indirectly.</p>
 <h3>Transaction</h3>
-<p>A transaction is any sequence of bytes.  It is up to your <a href=https://github.com/tendermint/tmsp>TMSP</a> application to accept or reject transactions.</p>
+<p>A transaction is any sequence of bytes.  It is up to your <a href=https://github.com/tendermint/abci>ABCI</a> application to accept or reject transactions.</p>
 <h3>PartSet</h3>
 <p>PartSet is used to split a byteslice of data into parts (pieces) for transmission.
 By splitting data into smaller parts and computing a Merkle root hash on the list,

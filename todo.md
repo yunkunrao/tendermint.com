@@ -106,7 +106,7 @@ Tomorrow: fix more broken links and images in the docs and blog posts, flesh out
     * Simplified the footer design
 * Home
     * Hid the Resources section
-* Intro https://tendermint.nylira.com/intro/what-is-tmsp
+* Intro https://tendermint.nylira.com/intro/what-is-abci
     * Moved the Technology images into TSMP Overview and Consensus Overview
 * Community/Jobs https://tendermint.nylira.com/community/jobs
     * Created the jobs index page with a filterable tag system
@@ -172,7 +172,7 @@ Tomorrow is making the toggle sidebar button work, and more design improvements 
 * Intro Page
     * Added What is Tendermint?
     * Added Tendermint vs. Other Software page.
-    * Added TMSP Overview
+    * Added ABCI Overview
     * Added Getting Started pages
 * Docs Page
     * Added the FAQ page.

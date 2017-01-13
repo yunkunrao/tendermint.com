@@ -31,8 +31,8 @@ body = &#x201C;body-code&#x201D;
                   <h4>Tendermint Core</h4>
                   <p>Tendermint Core</p>
                 </a></li>
-                <li><a href=https://github.com/tendermint/tmsp>
-                  <h4>TMSP</h4>
+                <li><a href=https://github.com/tendermint/abci>
+                  <h4>ABCI</h4>
                   <p>Tendermint socket protocol for blockchain applications</p>
                 </a></li>
                 <li><a href=https://github.com/tendermint/mintnet>

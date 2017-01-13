@@ -12,7 +12,7 @@
 <li><code>name</code>: Name of the validator (optional).</li>
 </ul>
 </li>
-<li><code>app_hash</code>: The expected application hash (as returned by the <code>Commit</code> TMSP message) upon genesis.  If the app&#x2019;s hash does not match, a warning message is printed.</li>
+<li><code>app_hash</code>: The expected application hash (as returned by the <code>Commit</code> ABCI message) upon genesis.  If the app&#x2019;s hash does not match, a warning message is printed.</li>
 </ul>
 <h3>Sample genesis.json</h3>
 <p>This example is from the Basecoin mintnet example (<a href=https://github.com/tendermint/mintnet/blob/master/examples/basecoin/mach1/core/genesis.json>link to file</a>).</p>

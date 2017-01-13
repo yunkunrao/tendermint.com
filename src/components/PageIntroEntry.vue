@@ -4,10 +4,10 @@
     <div class="detail"><div class="article-body">
       <what-is-tendermint v-if="r()"></what-is-tendermint>
       <tendermint-vs v-if="r('tendermint-vs')"></tendermint-vs>
-      <tmsp-overview v-if="r('tmsp-overview')"></tmsp-overview>
+      <abci-overview v-if="r('abci-overview')"></abci-overview>
       <consensus-overview v-if="r('consensus-overview')"></consensus-overview>
       <install v-if="r('install')"></install>
-      <first-tmsp v-if="r('first-tmsp')"></first-tmsp>
+      <first-abci v-if="r('first-abci')"></first-abci>
       <deploy-testnet v-if="r('deploy-testnet')"></deploy-testnet>
       <next-steps v-if="r('next-steps')"></next-steps>
     </div></div>
@@ -18,10 +18,10 @@
 import Master from './PageIntroMaster'
 import TendermintVs from '../content/intro/tendermint-vs.vue'
 import WhatIsTendermint from '../content/intro/what-is-tendermint.vue'
-import TmspOverview from '../content/intro/tmsp-overview.vue'
+import TmspOverview from '../content/intro/abci-overview.vue'
 import ConsensusOverview from '../content/intro/consensus-overview.vue'
 import Install from '../content/intro/getting-started/install.vue'
-import FirstTmsp from '../content/intro/getting-started/first-tmsp-app.vue'
+import FirstTmsp from '../content/intro/getting-started/first-abci-app.vue'
 import DeployTestnet from '../content/intro/getting-started/deploy-testnet.vue'
 import NextSteps from '../content/intro/getting-started/next-steps.vue'
 export default {
@@ -44,10 +44,10 @@ export default {
       switch (this.$route.params.page) {
         case undefined: val = 'Introduction to Tendermint'; break
         case 'tendermint-vs': val = 'Tendermint vs. Other Software'; break
-        case 'tmsp-overview': val = 'TMSP Overview'; break
+        case 'abci-overview': val = 'ABCI Overview'; break
         case 'consensus-overview': val = 'Consensus Overview'; break
         case 'install': val = 'Install Tendermint'; break
-        case 'first-tmsp': val = 'First TMSP App'; break
+        case 'first-abci': val = 'First ABCI App'; break
         case 'deploy-testnet': val = 'Deploy a Testnet'; break
         case 'next-steps': val = 'Next Steps Consensus'; break
         default: this.$router.replace({ path: '/404' }); break

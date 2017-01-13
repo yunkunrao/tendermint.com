@@ -12,7 +12,7 @@ NOTE: This does not (yet) specify the application state (e.g. initial distributi
   * `pub_key`: The first element specifies the pub_key type. 1 == Ed25519.  The second element are the pubkey bytes.
   * `amount`: The validator's voting power.
   * `name`: Name of the validator (optional).
-* `app_hash`: The expected application hash (as returned by the `Commit` TMSP message) upon genesis.  If the app's hash does not match, a warning message is printed.
+* `app_hash`: The expected application hash (as returned by the `Commit` ABCI message) upon genesis.  If the app's hash does not match, a warning message is printed.
 
 ### Sample genesis.json
 

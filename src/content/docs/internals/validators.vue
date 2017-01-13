@@ -7,7 +7,7 @@ These validators participate in the consensus protocol by broadcasting <em>votes
 <p>There are two ways to become validator.</p>
 <ol>
 <li>They can be pre-established in the <router-link to=/docs/internals/genesis>genesis state</router-link></li>
-<li>The <a href=https://github.com/tendermint/tmsp>TMSP app responds to the EndBlock message</a> with changes to the existing validator set.</li>
+<li>The <a href=https://github.com/tendermint/abci>ABCI app responds to the EndBlock message</a> with changes to the existing validator set.</li>
 </ol>
 <h2>Committing a Block</h2>
 <p><em>+2/3 is short for &#x201C;more than 2/3&#x201D;</em></p>

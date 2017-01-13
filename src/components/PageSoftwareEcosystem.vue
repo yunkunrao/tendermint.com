@@ -8,9 +8,9 @@
 
     <div class="page-content">
 
-    <section class="section-default" v-show="tmspApps.length > 0">
+    <section class="section-default" v-show="abciApps.length > 0">
       <div class="section-container">
-        <div class="section-header"><h2>TMSP Apps</h2></div>
+        <div class="section-header"><h2>ABCI Apps</h2></div>
         <div class="section-content">
           <div class="software-header">
             <div class="name active" @click="reorderBy('name')">Title</div>
@@ -19,7 +19,7 @@
             <div class="description" @click="reorderBy('description')">Description</div>
           </div>
           <div class="software-list">
-            <div class="software" v-for="entry in tmspApps"><a :href="entry.url">
+            <div class="software" v-for="entry in abciApps"><a :href="entry.url">
               <div class="name">{{ entry.name }}</div>
               <div class="author">
                 <span class="key">Author:</span><span class="value">{{ entry.author }}</span>
@@ -34,9 +34,9 @@
       </div>
     </section>
 
-    <section class="section-default" v-show="tmspServers.length > 0">
+    <section class="section-default" v-show="abciServers.length > 0">
       <div class="section-container">
-        <div class="section-header"><h2>TMSP Servers</h2></div>
+        <div class="section-header"><h2>ABCI Servers</h2></div>
         <div class="section-content">
           <div class="software-header">
             <div class="name active" @click="reorderBy('name')">Title</div>
@@ -44,7 +44,7 @@
             <div class="tech" @click="reorderBy('tech')">Language</div>
           </div>
           <div class="software-list">
-            <div class="software" v-for="entry in tmspServers"><a :href="entry.url">
+            <div class="software" v-for="entry in abciServers"><a :href="entry.url">
               <div class="name">{{ entry.name }}</div>
               <div class="author">
                 <span class="key">Author:</span><span class="value">{{ entry.author }}</span>
@@ -124,12 +124,12 @@ import Fuse from 'fuse.js'
 export default {
   name: 'page-software-ecosystem',
   computed: {
-    tmspApps () {
+    abciApps () {
       let key = this.activeKey
       let query = this.searchQuery
       if (key === 'tech') { key = ['language'] }
       if (key === 'name') { key = [app => app.name.toLowerCase()] }
-      let results = orderBy(this.software.tmspApps, key, ['asc'])
+      let results = orderBy(this.software.abciApps, key, ['asc'])
 
       if (query) {
         let options = {
@@ -142,12 +142,12 @@ export default {
 
       return results
     },
-    tmspServers () {
+    abciServers () {
       let key = this.activeKey
       let query = this.searchQuery
       if (key === 'tech') { key = ['language'] }
       if (key === 'name') { key = [app => app.name.toLowerCase()] }
-      let results = orderBy(this.software.tmspServers, key, ['asc'])
+      let results = orderBy(this.software.abciServers, key, ['asc'])
 
       if (query) {
         let options = {

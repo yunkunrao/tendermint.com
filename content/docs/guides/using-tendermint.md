@@ -2,7 +2,7 @@
 
 This is a guide to using the `tendermint` program from the command line.
 It assumes only that you [have tendermint installed](/intro/getting-started/install) and have some rudimentary idea
-of what Tendermint and TMSP are.
+of what Tendermint and ABCI are.
 
 You can see the help menu with `tendermint --help`, and the version number with `tendermint version`.
 
@@ -32,8 +32,8 @@ To run a tendermint node, use
 tendermint node 
 ```
 
-By default, Tendermint will try to connect to a tmsp appliction on [127.0.0.1:46658](127.0.0.1:46658).
-If you have the `dummy` TMSP app installed, run it in another window.
+By default, Tendermint will try to connect to a abci appliction on [127.0.0.1:46658](127.0.0.1:46658).
+If you have the `dummy` ABCI app installed, run it in another window.
 If you don't, kill tendermint and run an in-process version with 
 
 ```
@@ -44,14 +44,14 @@ After a few seconds you should see blocks start streaming in.
 Note that blocks are produced regularly, even if there are no transactions.
 Hopefully we will change this.
 
-Tendermint supports in-process versions of the dummy, counter, and nil apps that ship as examples in the [TMSP repository](https://github.com/tendermint/tmsp).
+Tendermint supports in-process versions of the dummy, counter, and nil apps that ship as examples in the [ABCI repository](https://github.com/tendermint/abci).
 It's easy to compile your own app in-process with tendermint if it's written in Go.
 If your app is not written in Go, simply run it in another process,
 and use the `--proxy_app` flag to specify the address of the socket it is listening on, for instance
 
 
 ```
-tendermint node --proxy_app=/var/run/tmsp.sock
+tendermint node --proxy_app=/var/run/abci.sock
 ```
 
 
@@ -127,7 +127,7 @@ while `broadcast_tx_sync` will return with the result of running the transaction
 Using `broadcast_tx_commit` will wait until the transaction is committed in a block or until some timeout is reached,
 but will return right away if the transaction does not pass `CheckTx`.
 The return value for `broadcast_tx_commit` includes two fields, `check_tx` and `append_tx`, pertaining to the result of running
-the transaction through those TMSP messages.
+the transaction through those ABCI messages.
 
 The benefit of using `broadcast_tx_commit` is that the request returns after the transaction is committed (ie. included in a block),
 but that can take on the order of a second. 

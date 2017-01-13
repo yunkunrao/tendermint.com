@@ -51,7 +51,7 @@ The state hash is the [Simple Tree hash](Merkle-Trees#simple-tree-with-dictionar
 
 ### Transaction
 
-A transaction is any sequence of bytes.  It is up to your [TMSP](https://github.com/tendermint/tmsp) application to accept or reject transactions.
+A transaction is any sequence of bytes.  It is up to your [ABCI](https://github.com/tendermint/abci) application to accept or reject transactions.
 
 ### PartSet
 

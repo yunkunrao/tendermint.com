@@ -1,7 +1,7 @@
 <template><div><h1>Application Development Guide</h1>
-<h2>TMSP Design</h2>
-<p>The purpose of TMSP is to provide a clean interface between state transition machines on one computer and the mechanics of their replication across multiple computers. The former we call &#x2018;application logic&#x2019; and the latter the &#x2018;consensus engine&#x2019;. Application logic validates transactions and optionally executes transactions against some persistent state. A consensus engine ensures all transactions are replicated in the same order on every machine. We call each machine in a consensus engine a &#x2018;validator&#x2019;, and each validator runs the same transactions through the same application logic. In particular, we are interested in blockchain-style consensus engines, where transactions are committed in hash-linked blocks.</p>
-<p>The TMSP design has a few distinct components:</p>
+<h2>ABCI Design</h2>
+<p>The purpose of ABCI is to provide a clean interface between state transition machines on one computer and the mechanics of their replication across multiple computers. The former we call &#x2018;application logic&#x2019; and the latter the &#x2018;consensus engine&#x2019;. Application logic validates transactions and optionally executes transactions against some persistent state. A consensus engine ensures all transactions are replicated in the same order on every machine. We call each machine in a consensus engine a &#x2018;validator&#x2019;, and each validator runs the same transactions through the same application logic. In particular, we are interested in blockchain-style consensus engines, where transactions are committed in hash-linked blocks.</p>
+<p>The ABCI design has a few distinct components:</p>
 <ul>
 <li>message protocol
 <ul>
@@ -24,7 +24,7 @@
 </li>
 <li>blockchain protocol
 <ul>
-<li>tmsp is connection oriented</li>
+<li>abci is connection oriented</li>
 <li>Tendermint Core maintains three connections:
 <ul>
 <li><a href=#mempool-connection>mempool connection</a>: for checking if transactions should be relayed before they are committed. only uses <code>CheckTx</code></li>
@@ -35,45 +35,45 @@
 </ul>
 </li>
 </ul>
-<img src=https://github.com/ebuchman/thesis/raw/master/figures/diagrams/tmsp.png width=600>
-<p>The mempool and consensus logic act as clients, and each maintains an open TMSP connection with the application, which hosts a TMSP server. Shown are the request and response types sent on each connection.</p>
+<img src=https://github.com/ebuchman/thesis/raw/master/figures/diagrams/abci.png width=600>
+<p>The mempool and consensus logic act as clients, and each maintains an open ABCI connection with the application, which hosts a ABCI server. Shown are the request and response types sent on each connection.</p>
 <h2>Message Protocol</h2>
-<p>The message protocol consists of pairs of requests and responses. Some messages have no fields, while others may include byte-arrays, strings, or integers. See the <code>message Request</code> and <code>message Response</code> definitions in <a href=https://github.com/tendermint/tmsp/blob/master/types/types.proto>the protobuf definition file</a>, and the <a href=https://developers.google.com/protocol-buffers/docs/overview>protobuf documentation</a> for more details.</p>
+<p>The message protocol consists of pairs of requests and responses. Some messages have no fields, while others may include byte-arrays, strings, or integers. See the <code>message Request</code> and <code>message Response</code> definitions in <a href=https://github.com/tendermint/abci/blob/master/types/types.proto>the protobuf definition file</a>, and the <a href=https://developers.google.com/protocol-buffers/docs/overview>protobuf documentation</a> for more details.</p>
 <p>For each request, a server should respond with the corresponding response, where order of requests is preserved in the order of responses.</p>
 <h2>Server</h2>
-<p>To use TMSP in your programming language of choice, there must be a TMSP server in that language.
+<p>To use ABCI in your programming language of choice, there must be a ABCI server in that language.
 Tendermint supports two kinds of implementation of the server:</p>
 <ul>
 <li>Asynchronous, raw socket server</li>
 <li>GRPC</li>
 </ul>
-<p>Both can be tested using the <code>tmsp-cli</code> by setting the <code>--tmsp</code> flag appropriately (ie. to <code>socket</code> or <code>grpc</code>).</p>
-<p>See examples, in various stages of maintenance, in <a href=https://github.com/tendermint/tmsp/tree/master/server>go</a>, <a href=https://github.com/tendermint/js-tmsp>javascript</a>, <a href=https://github.com/tendermint/tmsp/tree/master/example/python3/tmsp>python</a>, <a href=https://github.com/mdyring/cpp-tmsp>c++</a>, and <a href=https://github.com/jTMSP/jTMSP>java</a>.</p>
+<p>Both can be tested using the <code>abci-cli</code> by setting the <code>--abci</code> flag appropriately (ie. to <code>socket</code> or <code>grpc</code>).</p>
+<p>See examples, in various stages of maintenance, in <a href=https://github.com/tendermint/abci/tree/master/server>go</a>, <a href=https://github.com/tendermint/js-abci>javascript</a>, <a href=https://github.com/tendermint/abci/tree/master/example/python3/abci>python</a>, <a href=https://github.com/mdyring/cpp-abci>c++</a>, and <a href=https://github.com/jABCI/jABCI>java</a>.</p>
 <h3>GRPC</h3>
 <p>If GRPC is available in your language, this is the easiest approach,
 though it will have significant performance overhead.</p>
-<p>To get started with GRPC, copy in the <a href=https://github.com/tendermint/tmsp/blob/master/types/types.proto>protobuf file</a> and compile it using the GRPC plugin for your language.
-For instance, for golang, the command is <code>protoc --go_out=plugins=grpc:. types.proto</code>. See the <a href=http://www.grpc.io/docs/ >grpc documentation for more details</a>. <code>protoc</code> will autogenerate all the necessary code for TMSP client and server in your language, including whatever interface your application must satisfy to be used by the TMSP server for handling requests.</p>
+<p>To get started with GRPC, copy in the <a href=https://github.com/tendermint/abci/blob/master/types/types.proto>protobuf file</a> and compile it using the GRPC plugin for your language.
+For instance, for golang, the command is <code>protoc --go_out=plugins=grpc:. types.proto</code>. See the <a href=http://www.grpc.io/docs/ >grpc documentation for more details</a>. <code>protoc</code> will autogenerate all the necessary code for ABCI client and server in your language, including whatever interface your application must satisfy to be used by the ABCI server for handling requests.</p>
 <h3>Async Raw</h3>
-<p>If GRPC is not available in your language, or you require higher performance, or otherwise enjoy programming, you may implement your own TMSP server.
+<p>If GRPC is not available in your language, or you require higher performance, or otherwise enjoy programming, you may implement your own ABCI server.
 The first step is still to auto-generate the relevant data types and codec in your language using <code>protoc</code>.
 Messages coming over the socket are Protobuf3 encoded, but additionally length-prefixed to facilitate use as a streaming protocol. Protobuf3 doesn&#x2019;t have an official length-prefix standard, so we use our own. The first byte in the prefix represents the length of the Big Endian encoded length. The remaining bytes in the prefix are the Big Endian encoded length.</p>
-<p>For example, if the Protobuf3 encoded TMSP message is 0xDEADBEEF (4 bytes), the length-prefixed message is 0x0104DEADBEEF. If the Protobuf3 encoded TMSP message is 65535 bytes long, the length-prefixed message would be like 0x02FFFF&#x2026;</p>
+<p>For example, if the Protobuf3 encoded ABCI message is 0xDEADBEEF (4 bytes), the length-prefixed message is 0x0104DEADBEEF. If the Protobuf3 encoded ABCI message is 65535 bytes long, the length-prefixed message would be like 0x02FFFF&#x2026;</p>
 <p>Note this prefixing does not apply for grpc.</p>
-<p>A TMSP server must also be able to support multiple connections, as Tendermint uses three connections.</p>
+<p>A ABCI server must also be able to support multiple connections, as Tendermint uses three connections.</p>
 <h2>Client</h2>
-<p>There are currently two use-cases for a TMSP client.
-One is a testing tool, as in the <code>tmsp-cli</code>, which allows TMSP requests to be sent via command line.
+<p>There are currently two use-cases for a ABCI client.
+One is a testing tool, as in the <code>abci-cli</code>, which allows ABCI requests to be sent via command line.
 The other is a consensus engine, such as Tendermint Core, which makes requests to the application every time a new transaction is received or a block is committed.</p>
-<p>It is unlikely that you will need to implement a client. For details of our client, see <a href=https://github.com/tendermint/tmsp/tree/master/client>here</a>.</p>
+<p>It is unlikely that you will need to implement a client. For details of our client, see <a href=https://github.com/tendermint/abci/tree/master/client>here</a>.</p>
 <h2>Blockchain Protocol</h2>
-<p>In TMSP, a transaction is simply an arbitrary length byte-array.
+<p>In ABCI, a transaction is simply an arbitrary length byte-array.
 It is the application&#x2019;s responsibility to define the transaction codec as they please,
 and to use it for both CheckTx and AppendTx.</p>
 <p>Note that there are two distinct means for running transactions, corresponding to stages of &apos;awareness&#x2019;
 of the transaction in the network. The first stage is when a transaction is received by a validator from a client into the so-called mempool or transaction pool - this is where we use CheckTx. The second is when the transaction is successfully committed on more than 2/3 of validators - where we use AppendTx. In the former case, it may not be necessary to run all the state transitions associated with the transaction, as the transaction may not ultimately be committed until some much later time, when the result of its execution will be different.
-For instance, an Ethereum TMSP app would check signatures and amounts in CheckTx, but would not actually execute any contract code until the AppendTx, so as to avoid executing state transitions that have not been finalized.</p>
-<p>To formalize the distinction further, two explicit TMSP connections are made between Tendermint Core and the application: the mempool connection and the consensus connection. We also make a third connection, the query connection, to query the local state of the app.</p>
+For instance, an Ethereum ABCI app would check signatures and amounts in CheckTx, but would not actually execute any contract code until the AppendTx, so as to avoid executing state transitions that have not been finalized.</p>
+<p>To formalize the distinction further, two explicit ABCI connections are made between Tendermint Core and the application: the mempool connection and the consensus connection. We also make a third connection, the query connection, to query the local state of the app.</p>
 <h3>Mempool Connection</h3>
 <p>The mempool connection is used <em>only</em> for CheckTx requests.
 Transactions are run using CheckTx in the same order they were received by the validator.
@@ -87,7 +87,7 @@ That is, when a block is committed in the consensus, we send a list of AppendTx 
 <h4>AppendTx</h4>
 <p>AppendTx is the workhorse of the blockchain. Tendermint sends the AppendTx requests asynchronously but in order,
 and relies on the underlying socket protocol (ie. TCP) to ensure they are received by the app in order. They have already been ordered in the global consensus by the Tendermint protocol.</p>
-<p>AppendTx returns a tmsp.Result, which includes a Code, Data, and Log. The code may be non-zero (non-OK), meaning the corresponding transaction should have been rejected by the mempool,
+<p>AppendTx returns a abci.Result, which includes a Code, Data, and Log. The code may be non-zero (non-OK), meaning the corresponding transaction should have been rejected by the mempool,
 but may have been included in a block by a Byzantine proposer.</p>
 <p>The block header will be updated (TODO) to include some commitment to the results of AppendTx, be it a bitarray of non-OK transactions, or a merkle root of the data returned by the AppendTx requests, or both.</p>
 <h4>Commit</h4>
@@ -102,12 +102,12 @@ for a response. While the mempool may run concurrently with block processing (th
 <p>The EndBlock request can be used to run some code at the end of every block. Additionally, the response may contain a list of validators, which can be used to update the validator set. To add a new validator or update an existing one, simply include them in the list returned in the EndBlock response. To remove one, include it in the list with a <code>power</code> equal to <code>0</code>. Tendermint core will take care of updating the validator set (TODO).</p>
 <h3>Query Connection</h3>
 <p>This connection is used to query the application without engaging consensus. It&#x2019;s exposed over the tendermint core rpc, so clients can query the app without exposing a server on the app itself, but they must serialize each query as a single byte array. Additionally, certain &#x201C;standardized&#x201D; queries may be used to inform local decisions, for instance about which peers to connect to.</p>
-<p>Tendermint Core currently uses the Query connection to filter peers upon connecting, according to IP address or public key. For instance, returning non-OK TMSP response to either of the following queries will cause Tendermint to not connect to the corresponding peer:</p>
+<p>Tendermint Core currently uses the Query connection to filter peers upon connecting, according to IP address or public key. For instance, returning non-OK ABCI response to either of the following queries will cause Tendermint to not connect to the corresponding peer:</p>
 <ul>
 <li><code>p2p/filter/addr/&lt;addr&gt;</code>, where <code>&lt;addr&gt;</code> is an IP address.</li>
 <li><code>p2p/filter/pubkey/&lt;pubkey&gt;</code>, where <code>&lt;pubkey&gt;</code> is the hex-encoded ED25519 key of the node (not it&#x2019;s validator key)</li>
 </ul>
 <p>Note: these query formats are subject to change!</p>
 <h3>Handshake</h3>
-<p>The tmsp handshake and related improvements are <a href=https://github.com/tendermint/tendermint/issues/300>upcoming in v0.8.0</a></p>
+<p>The abci handshake and related improvements are <a href=https://github.com/tendermint/tendermint/issues/300>upcoming in v0.8.0</a></p>
 </div></template>

@@ -12,7 +12,7 @@ Validators have a cryptographic key-pair and an associated amount of "voting pow
 There are two ways to become validator.
 
 1. They can be pre-established in the [genesis state](/docs/internals/genesis)
-2. The [TMSP app responds to the EndBlock message](https://github.com/tendermint/tmsp) with changes to the existing validator set.
+2. The [ABCI app responds to the EndBlock message](https://github.com/tendermint/abci) with changes to the existing validator set.
 
 ## Committing a Block
 

@@ -4,7 +4,7 @@
 <p>The main config parameters are defined <a href=https://github.com/tendermint/tendermint/blob/master/config/tendermint/config.go>here</a>.</p>
 <ul>
 <li><code>genesis_file</code>: The location of the genesis file.  <em>Default</em>: <code>&quot;$TMROOT/genesis.json&quot;</code></li>
-<li><code>proxy_app</code>: The TMSP app endpoint.  <em>Default</em>: <code>&quot;tcp://127.0.0.1:46658&quot;</code></li>
+<li><code>proxy_app</code>: The ABCI app endpoint.  <em>Default</em>: <code>&quot;tcp://127.0.0.1:46658&quot;</code></li>
 <li><code>moniker</code>: Name of this node.  <em>Default</em>: <code>&quot;anonymous&quot;</code></li>
 <li><code>node_laddr</code>: TendermintCore listen address.  <em>Default</em>: <code>&quot;0.0.0.0:46656&quot;</code></li>
 <li><code>fast_sync</code>: Whether to sync faster from the block pool.  <em>Default</em>: <code>true</code></li>

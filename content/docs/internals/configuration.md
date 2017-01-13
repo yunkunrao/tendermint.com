@@ -7,7 +7,7 @@ TendermintCore can be configured via a TOML file in `$TMROOT/config.toml`.  Some
 The main config parameters are defined [here](https://github.com/tendermint/tendermint/blob/master/config/tendermint/config.go).
 
 * `genesis_file`: The location of the genesis file.  _Default_: `"$TMROOT/genesis.json"`
-* `proxy_app`: The TMSP app endpoint.  _Default_: `"tcp://127.0.0.1:46658"`
+* `proxy_app`: The ABCI app endpoint.  _Default_: `"tcp://127.0.0.1:46658"`
 * `moniker`: Name of this node.  _Default_: `"anonymous"`
 * `node_laddr`: TendermintCore listen address.  _Default_: `"0.0.0.0:46656"`
 * `fast_sync`: Whether to sync faster from the block pool.  _Default_: `true`

@@ -16,10 +16,10 @@ const state = {
       start: 1952
     },
     {
-      slug: 'tendermint-tmsp',
-      title: 'Blockchain Smart Contracts in Any Language with Tendermint TMSP',
+      slug: 'tendermint-abci',
+      title: 'Blockchain Smart Contracts in Any Language with Tendermint ABCI',
       date: '2016-02-10',
-      description: 'Jae Kwon and Ethan Buchman discussed how developers can write blockchain smart contracts in any language using TMSP (Tendermint Socket Protocol).',
+      description: 'Jae Kwon and Ethan Buchman discussed how developers can write blockchain smart contracts in any language using ABCI (Tendermint Socket Protocol).',
       id: '9krAQzN6tbc'
     }
   ]

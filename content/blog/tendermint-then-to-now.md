@@ -22,7 +22,7 @@ It’s been an exciting journey, and over the past few months people have been p
 
 Probably the most complicated implementation of Tendermint so far is by Eris Industries. Eris is using Tendermint to power its [eris:db](https://erisindustries.com/components/erisdb/) blockchain client. Eris:db includes a fully compatible Ethereum virtual machine and other features that make it a full-fledged blockchain. 
 
-But there are other implementations. [CloudSoft](http://www.cloudsoft.io/) published a [deployment strategy](http://www.cloudsoft.io/tendermint-and-clocker/) for Apache Brooklyn that uses Tendermint and Clocker. Martin Dyring wrote an [implementation of Tendermint TMSP in C++](https://github.com/mdyring/cpp-tmsp), and wolfposd wrote a [chatroom app in Java](https://github.com/wolfposd/TMChat) that uses Tendermint to broadcast messages from one user to another. Yes, that’s right, a chatroom. 
+But there are other implementations. [CloudSoft](http://www.cloudsoft.io/) published a [deployment strategy](http://www.cloudsoft.io/tendermint-and-clocker/) for Apache Brooklyn that uses Tendermint and Clocker. Martin Dyring wrote an [implementation of Tendermint ABCI in C++](https://github.com/mdyring/cpp-abci), and wolfposd wrote a [chatroom app in Java](https://github.com/wolfposd/TMChat) that uses Tendermint to broadcast messages from one user to another. Yes, that’s right, a chatroom. 
 
 While it might sound crazy to run a chat application on a blockchain, this is simply an example of the flexibility of Tendermint. This sort of implementation might even come in handy in instances where you have several actors who are malicious and maintaining the total order of the system matters, for instance, in p2p gaming.
 

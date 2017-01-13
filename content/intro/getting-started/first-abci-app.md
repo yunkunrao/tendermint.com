@@ -1,20 +1,20 @@
-# First TMSP App
+# First ABCI App
 
 ## A First Example
 
 Make sure you [have Go installed](https://golang.org/doc/install) and [put `$GOPATH/bin` in your `$PATH`](https://github.com/tendermint/tendermint/wiki/Setting-GOPATH).
 
-Next, install the `tmsp-cli` tool and example applications:
+Next, install the `abci-cli` tool and example applications:
 
 ```
-go get -u github.com/tendermint/tmsp/cmd/...
+go get -u github.com/tendermint/abci/cmd/...
 ```
 
-Now run `tmsp-cli --help` to see the list of commands:
+Now run `abci-cli --help` to see the list of commands:
 
 ```
 COMMANDS:
-   batch        Run a batch of TMSP commands against an application
+   batch        Run a batch of ABCI commands against an application
    console      Start an interactive console for multiple commands
    echo         Have the application echo a message
    info         Get some info about the application
@@ -30,7 +30,7 @@ GLOBAL OPTIONS:
    --version, -v                        print the version
 ```
 
-The `tmsp-cli` tool lets us send TMSP messages to our application, to help build and debug them.
+The `abci-cli` tool lets us send ABCI messages to our application, to help build and debug them.
 
 The most important messages are `append_tx`, `check_tx`, and `commit`,
 but there are others for convenience, configuration, and information purposes.
@@ -44,32 +44,32 @@ dummy
 In another terminal, run
 
 ```
-tmsp-cli echo hello
-tmsp-cli info
+abci-cli echo hello
+abci-cli info
 ```
 
 The application should echo `hello` and give you some information about itself.
 
-A TMSP application must provide two things:
+A ABCI application must provide two things:
 
   - a socket server
-  - a handler for TMSP messages
+  - a handler for ABCI messages
 
-When we run the `tmsp-cli` tool we open a new connection to the application's socket server,
-send the given TMSP message, and wait for a response.
+When we run the `abci-cli` tool we open a new connection to the application's socket server,
+send the given ABCI message, and wait for a response.
 
-The server may be generic for a particular language, and we provide one for Go in `tmsp/server`.
-There is one for Python in `example/python/tmsp/server.py`, and one for Node JS in `github.com/tendermint/js-tmsp`.
+The server may be generic for a particular language, and we provide one for Go in `abci/server`.
+There is one for Python in `example/python/abci/server.py`, and one for Node JS in `github.com/tendermint/js-abci`.
 
 The handler is specific to the application, and may be arbitrary,
-so long as it is deterministic and conforms to the TMSP interface specification.
+so long as it is deterministic and conforms to the ABCI interface specification.
 
-So when we run `tmsp-cli info`, we open a new connection to the TMSP server, which calls the `Info()` method on the application, which tells us the number of transactions in our Merkle tree.
+So when we run `abci-cli info`, we open a new connection to the ABCI server, which calls the `Info()` method on the application, which tells us the number of transactions in our Merkle tree.
 
-Now, since every command opens a new connection, we provide the `tmsp-cli console` and `tmsp-cli batch` commands,
-to allow multiple TMSP messages to be sent over a single connection.
+Now, since every command opens a new connection, we provide the `abci-cli console` and `abci-cli batch` commands,
+to allow multiple ABCI messages to be sent over a single connection.
 
-Running `tmsp-cli console` should drop you in an interactive console for speaking TMSP messages to your application.
+Running `abci-cli console` should drop you in an interactive console for speaking ABCI messages to your application.
 
 Try running these commands:
 
@@ -110,7 +110,7 @@ Try running these commands:
 Note that if we do `append_tx "abc"` it will store `(abc, abc)`,
 but if we do `append_tx "abc=efg"` it will store `(abc, efg)`.
 
-Similarly, you could put the commands in a file and run `tmsp-cli --verbose batch < myfile`.
+Similarly, you could put the commands in a file and run `abci-cli --verbose batch < myfile`.
 
 
 ## Another Example
@@ -126,12 +126,12 @@ When `serial=on`, transactions must be a big-endian encoded incrementing integer
 
 If `serial=off`, there are no restrictions on transactions.
 
-We can toggle the value of `serial` using the `set_option` TMSP message.
+We can toggle the value of `serial` using the `set_option` ABCI message.
 
 When `serial=on`, some transactions are invalid.
 In a live blockchain, transactions collect in memory before they are committed into blocks.
 To avoid wasting resources on invalid transactions,
-TMSP provides the `check_tx` message,
+ABCI provides the `check_tx` message,
 which application developers can use to accept or reject messages,
 before they are stored in memory or gossipped to other peers.
 
@@ -149,9 +149,9 @@ Again, the code is just
 server.StartListener("tcp://0.0.0.0:46658", example.NewCounterApplication())
 ```
 
-where the CounterApplication is defined in `example/golang/counter.go`, and implements the TMSP application interface.
+where the CounterApplication is defined in `example/golang/counter.go`, and implements the ABCI application interface.
 
-In another window, start the `tmsp-cli console`:
+In another window, start the `abci-cli console`:
 
 ```
 > set_option serial on
@@ -181,8 +181,8 @@ In another window, start the `tmsp-cli console`:
 -> data: {"hashes":0,"txs":2}
 ```
 
-This is a very simple application, but between `counter` and `dummy`, its easy to see how you can build out arbitrary application states on top of the TMSP.
-In the near future, `erisdb` of Eris Industries will also run atop TMSP, bringing with it Ethereum-like accounts, the Ethereum virtual-machine, Eris's permissioning scheme, and native contracts extensions.
+This is a very simple application, but between `counter` and `dummy`, its easy to see how you can build out arbitrary application states on top of the ABCI.
+In the near future, `erisdb` of Eris Industries will also run atop ABCI, bringing with it Ethereum-like accounts, the Ethereum virtual-machine, Eris's permissioning scheme, and native contracts extensions.
 
 But the ultimate flexibility comes from being able to write the application easily in any language.
 
@@ -195,11 +195,11 @@ node app.js
 ```
 
 (you'll have to kill the other counter application process).
-In another window, run the console and those previous TMSP commands.
+In another window, run the console and those previous ABCI commands.
 You should get the same results as for the Go version.
 
 Want to write the counter app in your favorite language?! We'd be happy to accept the pull request!
 
 ## Next Step
 
-In the next tutorial, we will show how to [deploy a TMSP testnet](/intro/getting-started/deploy-testnet).
+In the next tutorial, we will show how to [deploy a ABCI testnet](/intro/getting-started/deploy-testnet).

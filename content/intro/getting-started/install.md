@@ -68,4 +68,4 @@ git clone https://github.com/tendermint/tendermint $GOPATH/src/github.com/tender
 
 ## Next Step
 
-Learn how to [create your first TMSP app](/intro/getting-started/first-tmsp).
+Learn how to [create your first ABCI app](/intro/getting-started/first-abci).

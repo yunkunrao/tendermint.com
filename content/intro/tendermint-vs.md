@@ -39,8 +39,8 @@ this is what made Tendermint a Proof-of-Stake algorithm.
 
 Since then, Tendermint has evolved to be a general purpose blockchain consensus engine that can host arbitrary application states.
 That means it can be used as a plug-and-play replacement for the consensus engines of other blockchain software.
-So one can take the current Ethereum code base, whether in Rust, or Go, or Haskell, and run it as a TMSP application
-using Tendermint consensus. Indeed, [we did that](https://github.com/tendermint/geth-tmsp).
+So one can take the current Ethereum code base, whether in Rust, or Go, or Haskell, and run it as a ABCI application
+using Tendermint consensus. Indeed, [we did that](https://github.com/tendermint/geth-abci).
 And we plan to do the same for Bitcoin, ZCash, and various other deterministic applications as well.
 
 Another example of a cryptocurrency application built on Tendermint is [Cosmos](http://cosmos.network)
@@ -52,7 +52,7 @@ and requires that all application behaviour runs in potentially many docker cont
 It uses an implementation of [PBFT](http://pmg.csail.mit.edu/papers/osdi99.pdf) 
 from a team at IBM that is 
 [augmented to handle potentially non-deterministic chaincode](https://www.zurich.ibm.com/~cca/papers/sieve.pdf)
-It is possible to implement this docker-based behaviour as a TMSP app in Tendermint, 
+It is possible to implement this docker-based behaviour as a ABCI app in Tendermint, 
 though extending Tendermint to handle non-determinism remains for future work.
 
 [ErisDB](https://github.com/eris-ltd/eris-db) is an implementation of the Ethereum Virtual Machine and Ethereum transaction mechanics,
@@ -61,5 +61,5 @@ It uses Tendermint as its consensus engine, and provides a particular applicatio
 
 ## Next Steps
 
-- Read an overview of the motivation and design behind the [Tendermint Socket Protocol](/intro/tmsp-overview).
+- Read an overview of the motivation and design behind the [Tendermint Socket Protocol](/intro/abci-overview).
 - Continue with the [Getting Started](/intro/getting-started/install) guide to install and run example tendermint applications.

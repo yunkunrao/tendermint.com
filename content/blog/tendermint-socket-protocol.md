@@ -1,14 +1,14 @@
 ~~~
-title: "TMSP: The Tendermint Socket Protocol"
-description: "TMSP lets you create blockchain application easily in any languge.  This post describes the motivation behind TMSP and links to tutorials."
+title: "ABCI: The Tendermint Socket Protocol"
+description: "ABCI lets you create blockchain application easily in any languge.  This post describes the motivation behind ABCI and links to tutorials."
 date: "2015-12-19"
 categories: 
-    - "TMSP"
+    - "ABCI"
 ~~~
 
 > After you read this post, don't forget to check out our tutorials!  They also appear at the end of this page.
-1. [Run your first TMSP application](/intro/getting-started/first-tmsp)
-2. [Launch a TMSP testnet](/intro/getting-started/deploy-testnet/)
+1. [Run your first ABCI application](/intro/getting-started/first-abci)
+2. [Launch a ABCI testnet](/intro/getting-started/deploy-testnet/)
 
 ## Motivation
 
@@ -20,11 +20,11 @@ Another problem with this approach is that it limits you to the language of the 
 
 In contrast, our approach is to decouple the consensus engine and P2P layers from the details of the application state of the particular blockchain application.
 
-## Intro to TMSP
+## Intro to ABCI
 
-[Tendermint Core](https://github.com/tendermint/tendermint) (the "consensus engine") speaks to the application via a socket protocol called [TMSP](https://github.com/tendermint/tmsp). 
+[Tendermint Core](https://github.com/tendermint/tendermint) (the "consensus engine") speaks to the application via a socket protocol called [ABCI](https://github.com/tendermint/abci). 
 
-To draw an analogy, lets talk about a well-known cryptocurrency, Bitcoin.  Bitcoin is a cryptocurrency blockchain where each node maintains a fully audited Unspent Transaction Output (UTXO) database. If one wanted to create a Bitcoin-like system on top of TMSP, Tendermint Core would be responsible for 
+To draw an analogy, lets talk about a well-known cryptocurrency, Bitcoin.  Bitcoin is a cryptocurrency blockchain where each node maintains a fully audited Unspent Transaction Output (UTXO) database. If one wanted to create a Bitcoin-like system on top of ABCI, Tendermint Core would be responsible for 
 
 - Sharing blocks and transactions between nodes
 - Establishing a canonical/immutable order of transactions (the blockchain)
@@ -40,7 +40,7 @@ Tendermint is able to decompose the blockchain design by offering a very simple 
 
 The API consists of 3 primary message types that get delivered from the core to the application.  The application replies with corresponding response messages.
 
-The messages are specified here: https://github.com/tendermint/tmsp#message-types
+The messages are specified here: https://github.com/tendermint/abci#message-types
 
 The `AppendTx` message is the work horse of the application.  Each transaction in the blockchain is delivered with this message. The application needs to validate each transactions received with the `AppendTx` message against the current state, application protocol, and the cryptographic credentials of the transaction. A validated transaction then needs to update the application state — by binding a value into a key values store, or by updating the UTXO database.
 
@@ -48,7 +48,7 @@ The `CheckTx` message is similar to `AppendTx`, but it's only for validating tra
 
 The `Commit` message is used to compute a cryptographic commitment to the current application state, to be placed into the next block header. This has some handy properties. Inconsistencies in updating that state will now appear as blockchain forks which catches a whole class of programming errors. This also simplifies the development of secure lightweight clients, as Merkle-hash proofs can be verified by checking against the block hash, and the block hash is signed by a quorum of validators.
 
-There can be multiple TMSP socket connections to an application.  Tendermint Core creates two TMSP connections to the application; one for the validation of transactions when broadcasting in the mempool, and another for the consensus engine to run block proposals.
+There can be multiple ABCI socket connections to an application.  Tendermint Core creates two ABCI connections to the application; one for the validation of transactions when broadcasting in the mempool, and another for the consensus engine to run block proposals.
 
 It's probably evident that applications designers need to very carefully design their message handlers to create a blockchain that does anything useful but this architecture provides a place to start.
 
@@ -69,11 +69,11 @@ While programmers can avoid non-determinism by being careful, it is also possibl
 
 ## Tutorials
 
-Follow these tutorials to quickly get started developing your TMSP application.
+Follow these tutorials to quickly get started developing your ABCI application.
 
-1. [Run your first TMSP application](/intro/getting-started/first-tmsp)
-2. [Launch a TMSP testnet](/intro/getting-started/deploy-testnet/)
+1. [Run your first ABCI application](/intro/getting-started/first-abci)
+2. [Launch a ABCI testnet](/intro/getting-started/deploy-testnet/)
 
 ## Contributions
 
-_Many thanks to Zaki Manian for providing the "Intro to TMSP" section_
+_Many thanks to Zaki Manian for providing the "Intro to ABCI" section_

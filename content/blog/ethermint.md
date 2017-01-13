@@ -4,7 +4,7 @@ description: "GoEthereum powered by Tendermint BFT consensus"
 date: "2016-11-16"
 categories: 
     - "ethereum"
-    - "tmsp"
+    - "abci"
 ~~~
 
 ## Announcing Ethermint - GoEthereum powered by Tendermint

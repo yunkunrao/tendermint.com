@@ -2,10 +2,10 @@
 
 ## Tendermint Core
 
-Now that we've seen how TMSP works, and even played with a few applications using the `tmsp-cli` tool,
+Now that we've seen how ABCI works, and even played with a few applications using the `abci-cli` tool,
 let's run an actual Tendermint node.
 
-When running a live application, a Tendermint node takes the place of the `tmsp-cli` tool by sending TMSP requests
+When running a live application, a Tendermint node takes the place of the `abci-cli` tool by sending ABCI requests
 to the application: many `append_tx` msgs to run transactions followed by a `commit` to get the application Merkle root hash, and so on.
 
 First, we need to initialize a genesis file and a validator key in `~/.tendermint`:
@@ -22,7 +22,7 @@ Now,
 tendermint node
 ```
 
-Tendermint will try to connect to a tmsp appliction by default on [127.0.0.1:46658](127.0.0.1:46658), 
+Tendermint will try to connect to a abci appliction by default on [127.0.0.1:46658](127.0.0.1:46658), 
 but you probably don't have one running yet.
 
 So in another window, lets start the `dummy` app,
@@ -103,8 +103,8 @@ ls mytest_dir/
   mach4 # Configuration directory for the Tendermint core daemon on machine 4
 ```
 
-You can change the files in the app folder to change which TMSP application run on your testnet.
-The default script app/init.sh gets run on each node to install the TMSP application straight from Github.
+You can change the files in the app folder to change which ABCI application run on your testnet.
+The default script app/init.sh gets run on each node to install the ABCI application straight from Github.
 Edit core/init.sh to change the Tendermint version being run.
 
 Now start the testnet service.
