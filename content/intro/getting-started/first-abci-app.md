@@ -19,7 +19,7 @@ COMMANDS:
    echo         Have the application echo a message
    info         Get some info about the application
    set_option   Set an option on the application
-   append_tx    Append a new tx to application
+   deliver_tx    Append a new tx to application
    check_tx     Validate a tx
    commit       Get application Merkle root hash
    help, h      Shows a list of commands or help for one command
@@ -32,7 +32,7 @@ GLOBAL OPTIONS:
 
 The `abci-cli` tool lets us send ABCI messages to our application, to help build and debug them.
 
-The most important messages are `append_tx`, `check_tx`, and `commit`,
+The most important messages are `deliver_tx`, `check_tx`, and `commit`,
 but there are others for convenience, configuration, and information purposes.
 
 Let's start a dummy application. The dummy just stores transactions in a merkle tree:
@@ -83,7 +83,7 @@ Try running these commands:
 > commit
 -> data: 0x
 
-> append_tx "abc"
+> deliver_tx "abc"
 -> code: OK
 
 > info
@@ -96,7 +96,7 @@ Try running these commands:
 -> code: OK
 -> data: {"index":0,"value":"abc","exists":true}
 
-> append_tx "def=xyz"
+> deliver_tx "def=xyz"
 -> code: OK
 
 > commit
@@ -107,8 +107,8 @@ Try running these commands:
 -> data: {"index":1,"value":"xyz","exists":true}
 ```
 
-Note that if we do `append_tx "abc"` it will store `(abc, abc)`,
-but if we do `append_tx "abc=efg"` it will store `(abc, efg)`.
+Note that if we do `deliver_tx "abc"` it will store `(abc, abc)`,
+but if we do `deliver_tx "abc=efg"` it will store `(abc, efg)`.
 
 Similarly, you could put the commands in a file and run `abci-cli --verbose batch < myfile`.
 
@@ -163,17 +163,17 @@ In another window, start the `abci-cli console`:
 > check_tx 0xff
 -> code: OK
 
-> append_tx 0x00
+> deliver_tx 0x00
 -> code: OK
 
 > check_tx 0x00
 -> code: BadNonce
 -> log: Invalid nonce. Expected >= 1, got 0
 
-> append_tx 0x01
+> deliver_tx 0x01
 -> code: OK
 
-> append_tx 0x04
+> deliver_tx 0x04
 -> code: BadNonce
 -> log: Invalid nonce. Expected 2, got 4
 

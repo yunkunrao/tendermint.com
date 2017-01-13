@@ -42,9 +42,9 @@ The API consists of 3 primary message types that get delivered from the core to 
 
 The messages are specified here: https://github.com/tendermint/abci#message-types
 
-The `AppendTx` message is the work horse of the application.  Each transaction in the blockchain is delivered with this message. The application needs to validate each transactions received with the `AppendTx` message against the current state, application protocol, and the cryptographic credentials of the transaction. A validated transaction then needs to update the application state — by binding a value into a key values store, or by updating the UTXO database.
+The `DeliverTx` message is the work horse of the application.  Each transaction in the blockchain is delivered with this message. The application needs to validate each transactions received with the `DeliverTx` message against the current state, application protocol, and the cryptographic credentials of the transaction. A validated transaction then needs to update the application state — by binding a value into a key values store, or by updating the UTXO database.
 
-The `CheckTx` message is similar to `AppendTx`, but it's only for validating transactions.  Tendermint Core's mempool first checks the validity of a transaction with `CheckTx`, and only relays valid transactions to its peers.  Applications may check an incrementing nonce in the transaction and return an error upon `CheckTx` if the nonce is old.
+The `CheckTx` message is similar to `DeliverTx`, but it's only for validating transactions.  Tendermint Core's mempool first checks the validity of a transaction with `CheckTx`, and only relays valid transactions to its peers.  Applications may check an incrementing nonce in the transaction and return an error upon `CheckTx` if the nonce is old.
 
 The `Commit` message is used to compute a cryptographic commitment to the current application state, to be placed into the next block header. This has some handy properties. Inconsistencies in updating that state will now appear as blockchain forks which catches a whole class of programming errors. This also simplifies the development of secure lightweight clients, as Merkle-hash proofs can be verified by checking against the block hash, and the block hash is signed by a quorum of validators.
 

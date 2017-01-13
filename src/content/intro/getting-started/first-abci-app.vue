@@ -11,18 +11,18 @@
    echo         Have the application echo a message
    info         Get some info about the application
    set_option   Set an option on the application
-   append_tx    Append a new tx to application
+   deliver_tx    Append a new tx to application
    check_tx     Validate a tx
    commit       Get application Merkle root hash
    help, h      Shows a list of commands or help for one command
-   
+
 GLOBAL OPTIONS:
    --address &quot;tcp://127.0.0.1:46658&quot;    address of application socket
    --help, -h                           show help
    --version, -v                        print the version
 </code></pre>
 <p>The <code>abci-cli</code> tool lets us send ABCI messages to our application, to help build and debug them.</p>
-<p>The most important messages are <code>append_tx</code>, <code>check_tx</code>, and <code>commit</code>,
+<p>The most important messages are <code>deliver_tx</code>, <code>check_tx</code>, and <code>commit</code>,
 but there are others for convenience, configuration, and information purposes.</p>
 <p>Let&#x2019;s start a dummy application. The dummy just stores transactions in a merkle tree:</p>
 <pre><code>dummy
@@ -51,37 +51,37 @@ to allow multiple ABCI messages to be sent over a single connection.</p>
 <pre><code>&gt; echo hello
 -&gt; data: hello
 
-&gt; info 
+&gt; info
 -&gt; data: {&quot;size&quot;:0}
 
-&gt; commit 
+&gt; commit
 -&gt; data: 0x
 
-&gt; append_tx abc
+&gt; deliver_tx &quot;abc&quot;
 -&gt; code: OK
 
-&gt; info 
+&gt; info
 -&gt; data: {&quot;size&quot;:1}
 
-&gt; commit 
+&gt; commit
 -&gt; data: 0x750502FC7E84BBD788ED589624F06CFA871845D1
 
-&gt; query abc
+&gt; query &quot;abc&quot;
 -&gt; code: OK
 -&gt; data: {&quot;index&quot;:0,&quot;value&quot;:&quot;abc&quot;,&quot;exists&quot;:true}
 
-&gt; append_tx def=xyz
+&gt; deliver_tx &quot;def=xyz&quot;
 -&gt; code: OK
 
-&gt; commit 
+&gt; commit
 -&gt; data: 0x76393B8A182E450286B0694C629ECB51B286EFD5
 
-&gt; query def
+&gt; query &quot;def&quot;
 -&gt; code: OK
 -&gt; data: {&quot;index&quot;:1,&quot;value&quot;:&quot;xyz&quot;,&quot;exists&quot;:true}
 </code></pre>
-<p>Note that if we do <code>append_tx abc</code> it will store <code>(abc, abc)</code>,
-but if we do <code>append_tx abc=efg</code> it will store <code>(abc, efg)</code>.</p>
+<p>Note that if we do <code>deliver_tx &quot;abc&quot;</code> it will store <code>(abc, abc)</code>,
+but if we do <code>deliver_tx &quot;abc=efg&quot;</code> it will store <code>(abc, efg)</code>.</p>
 <p>Similarly, you could put the commands in a file and run <code>abci-cli --verbose batch &lt; myfile</code>.</p>
 <h2>Another Example</h2>
 <p>Now that we&#x2019;ve got the hang of it, let&#x2019;s try another application, the &#x201C;counter&#x201D; app.</p>
@@ -115,21 +115,21 @@ before they are stored in memory or gossipped to other peers.</p>
 &gt; check_tx 0xff
 -&gt; code: OK
 
-&gt; append_tx 0x00
+&gt; deliver_tx 0x00
 -&gt; code: OK
 
 &gt; check_tx 0x00
 -&gt; code: BadNonce
 -&gt; log: Invalid nonce. Expected &gt;= 1, got 0
 
-&gt; append_tx 0x01
+&gt; deliver_tx 0x01
 -&gt; code: OK
 
-&gt; append_tx 0x04
+&gt; deliver_tx 0x04
 -&gt; code: BadNonce
 -&gt; log: Invalid nonce. Expected 2, got 4
 
-&gt; info 
+&gt; info
 -&gt; data: {&quot;hashes&quot;:0,&quot;txs&quot;:2}
 </code></pre>
 <p>This is a very simple application, but between <code>counter</code> and <code>dummy</code>, its easy to see how you can build out arbitrary application states on top of the ABCI.

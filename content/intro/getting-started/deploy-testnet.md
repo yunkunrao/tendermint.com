@@ -6,7 +6,7 @@ Now that we've seen how ABCI works, and even played with a few applications usin
 let's run an actual Tendermint node.
 
 When running a live application, a Tendermint node takes the place of the `abci-cli` tool by sending ABCI requests
-to the application: many `append_tx` msgs to run transactions followed by a `commit` to get the application Merkle root hash, and so on.
+to the application: many `deliver_tx` msgs to run transactions followed by a `commit` to get the application Merkle root hash, and so on.
 
 First, we need to initialize a genesis file and a validator key in `~/.tendermint`:
 

@@ -3,7 +3,7 @@
 <p>Now that we&#x2019;ve seen how ABCI works, and even played with a few applications using the <code>abci-cli</code> tool,
 let&#x2019;s run an actual Tendermint node.</p>
 <p>When running a live application, a Tendermint node takes the place of the <code>abci-cli</code> tool by sending ABCI requests
-to the application: many <code>append_tx</code> msgs to run transactions followed by a <code>commit</code> to get the application Merkle root hash, and so on.</p>
+to the application: many <code>deliver_tx</code> msgs to run transactions followed by a <code>commit</code> to get the application Merkle root hash, and so on.</p>
 <p>First, we need to initialize a genesis file and a validator key in <code>~/.tendermint</code>:</p>
 <pre><code>tendermint init
 </code></pre>
@@ -18,7 +18,7 @@ but you probably don&#x2019;t have one running yet.</p>
 </code></pre>
 <p>After a few seconds you should see blocks start streaming in!</p>
 <p>Now you can send transactions through the Tendermint RPC server with curl requests, or from your browser:</p>
-<pre><code>curl http://localhost:46657/broadcast_tx?tx=\&quot;abcd\&quot;
+<pre><code>curl http://localhost:46657/broadcast_tx_sync?tx=\&quot;abcd\&quot;
 </code></pre>
 <p>For handling responses, we recommend you <a href=http://jmhodges.github.io/jsonpp/ >install the <code>jsonpp</code> tool</a> to pretty print the JSON</p>
 <p>We can see the chain&#x2019;s status at the <code>/status</code> end-point:</p>

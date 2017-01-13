@@ -74,7 +74,7 @@ That is, <code>broadcast_tx_async</code>, will return right away without waiting
 while <code>broadcast_tx_sync</code> will return with the result of running the transaction through <code>CheckTx</code>.
 Using <code>broadcast_tx_commit</code> will wait until the transaction is committed in a block or until some timeout is reached,
 but will return right away if the transaction does not pass <code>CheckTx</code>.
-The return value for <code>broadcast_tx_commit</code> includes two fields, <code>check_tx</code> and <code>append_tx</code>, pertaining to the result of running
+The return value for <code>broadcast_tx_commit</code> includes two fields, <code>check_tx</code> and <code>deliver_tx</code>, pertaining to the result of running
 the transaction through those ABCI messages.</p>
 <p>The benefit of using <code>broadcast_tx_commit</code> is that the request returns after the transaction is committed (ie. included in a block),
 but that can take on the order of a second.

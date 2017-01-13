@@ -28,7 +28,7 @@
 <li>Tendermint Core maintains three connections:
 <ul>
 <li><a href=#mempool-connection>mempool connection</a>: for checking if transactions should be relayed before they are committed. only uses <code>CheckTx</code></li>
-<li><a href=#consensus-connection>consensus connection</a>: for executing transactions that have been committed. Message sequence is, for every block, <code>BeginBlock, [AppendTx, ...], EndBlock, Commit</code></li>
+<li><a href=#consensus-connection>consensus connection</a>: for executing transactions that have been committed. Message sequence is, for every block, <code>BeginBlock, [DeliverTx, ...], EndBlock, Commit</code></li>
 <li><a href=#query-connection>query connection</a>: for querying the application state.  only uses Query and Info</li>
 </ul>
 </li>
@@ -69,10 +69,10 @@ The other is a consensus engine, such as Tendermint Core, which makes requests t
 <h2>Blockchain Protocol</h2>
 <p>In ABCI, a transaction is simply an arbitrary length byte-array.
 It is the application&#x2019;s responsibility to define the transaction codec as they please,
-and to use it for both CheckTx and AppendTx.</p>
+and to use it for both CheckTx and DeliverTx.</p>
 <p>Note that there are two distinct means for running transactions, corresponding to stages of &apos;awareness&#x2019;
-of the transaction in the network. The first stage is when a transaction is received by a validator from a client into the so-called mempool or transaction pool - this is where we use CheckTx. The second is when the transaction is successfully committed on more than 2/3 of validators - where we use AppendTx. In the former case, it may not be necessary to run all the state transitions associated with the transaction, as the transaction may not ultimately be committed until some much later time, when the result of its execution will be different.
-For instance, an Ethereum ABCI app would check signatures and amounts in CheckTx, but would not actually execute any contract code until the AppendTx, so as to avoid executing state transitions that have not been finalized.</p>
+of the transaction in the network. The first stage is when a transaction is received by a validator from a client into the so-called mempool or transaction pool - this is where we use CheckTx. The second is when the transaction is successfully committed on more than 2/3 of validators - where we use DeliverTx. In the former case, it may not be necessary to run all the state transitions associated with the transaction, as the transaction may not ultimately be committed until some much later time, when the result of its execution will be different.
+For instance, an Ethereum ABCI app would check signatures and amounts in CheckTx, but would not actually execute any contract code until the DeliverTx, so as to avoid executing state transitions that have not been finalized.</p>
 <p>To formalize the distinction further, two explicit ABCI connections are made between Tendermint Core and the application: the mempool connection and the consensus connection. We also make a third connection, the query connection, to query the local state of the app.</p>
 <h3>Mempool Connection</h3>
 <p>The mempool connection is used <em>only</em> for CheckTx requests.
@@ -82,17 +82,17 @@ If the CheckTx returns <code>OK</code>, the transaction is kept in memory and re
 so they should run against a copy of the main application state which is reset after every block.
 This copy is necessary to track transitions made by a sequence of CheckTx requests before they are included in a block. When a block is committed, the application must ensure to reset the mempool state to the latest committed state. Tendermint Core will then filter through all transactions in the mempool, removing any that were included in the block, and re-run the rest using CheckTx against the post-Commit mempool state.</p>
 <h3>Consensus Connection</h3>
-<p>The consensus connection is used only when a new block is committed, and communicates all information from the block in a series of requests:  <code>BeginBlock, [AppendTx, ...], EndBlock, Commit</code>.
-That is, when a block is committed in the consensus, we send a list of AppendTx requests (one for each transaction) sandwiched by BeginBlock and EndBlock requests, and followed by a Commit.</p>
-<h4>AppendTx</h4>
-<p>AppendTx is the workhorse of the blockchain. Tendermint sends the AppendTx requests asynchronously but in order,
+<p>The consensus connection is used only when a new block is committed, and communicates all information from the block in a series of requests:  <code>BeginBlock, [DeliverTx, ...], EndBlock, Commit</code>.
+That is, when a block is committed in the consensus, we send a list of DeliverTx requests (one for each transaction) sandwiched by BeginBlock and EndBlock requests, and followed by a Commit.</p>
+<h4>DeliverTx</h4>
+<p>DeliverTx is the workhorse of the blockchain. Tendermint sends the DeliverTx requests asynchronously but in order,
 and relies on the underlying socket protocol (ie. TCP) to ensure they are received by the app in order. They have already been ordered in the global consensus by the Tendermint protocol.</p>
-<p>AppendTx returns a abci.Result, which includes a Code, Data, and Log. The code may be non-zero (non-OK), meaning the corresponding transaction should have been rejected by the mempool,
+<p>DeliverTx returns a abci.Result, which includes a Code, Data, and Log. The code may be non-zero (non-OK), meaning the corresponding transaction should have been rejected by the mempool,
 but may have been included in a block by a Byzantine proposer.</p>
-<p>The block header will be updated (TODO) to include some commitment to the results of AppendTx, be it a bitarray of non-OK transactions, or a merkle root of the data returned by the AppendTx requests, or both.</p>
+<p>The block header will be updated (TODO) to include some commitment to the results of DeliverTx, be it a bitarray of non-OK transactions, or a merkle root of the data returned by the DeliverTx requests, or both.</p>
 <h4>Commit</h4>
 <p>Once all processing of the block is complete, Tendermint sends the Commit request and blocks waiting
-for a response. While the mempool may run concurrently with block processing (the BeginBlock, AppendTxs, and EndBlock), it is locked for the Commit request so that its state can be safely reset during Commit. This means the app <em>MUST NOT</em> do any blocking communication with the mempool (ie. broadcast_tx) during Commit, or there will be deadlock. Note also that all remaining transactions in the mempool are replayed on the mempool connection (CheckTx) following a commit.</p>
+for a response. While the mempool may run concurrently with block processing (the BeginBlock, DeliverTxs, and EndBlock), it is locked for the Commit request so that its state can be safely reset during Commit. This means the app <em>MUST NOT</em> do any blocking communication with the mempool (ie. broadcast_tx) during Commit, or there will be deadlock. Note also that all remaining transactions in the mempool are replayed on the mempool connection (CheckTx) following a commit.</p>
 <p>The Commit response includes a byte array, which is the deterministic state root of the application. It is included in the header of the next block. It can be used to provide easily verified Merkle-proofs of the state of the application.</p>
 <p>It is expected that the app will persist state to disk on Commit. The option to have all transactions replayed from some previous block is the job of the <a href=#handshake>Handshake</a>.</p>
 <h4>BeginBlock</h4>
