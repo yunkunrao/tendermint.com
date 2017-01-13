@@ -23,7 +23,7 @@ export default {
       { name: 'theme-color', content: '#ffffff' }
     ],
     link: [
-      // { r: 'alternate', t: 'application/rss+xml', h: require('./assets/feed.xml') },
+      { r: 'alternate', t: 'application/rss+xml', h: require('./assets/feed.xml') },
       { r: 'apple-touch-icon', sz: '57x57', h: require('./assets/images/favicon/apple-icon-57x57.png') },
       { r: 'apple-touch-icon', sz: '60x60', h: require('./assets/images/favicon/apple-icon-60x60.png') },
       { r: 'apple-touch-icon', sz: '72x72', h: require('./assets/images/favicon/apple-icon-72x72.png') },
