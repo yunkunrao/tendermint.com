@@ -296,8 +296,7 @@ They should start making blocks, and will only continue to do so so long as both
 
 To make a Tendermint network that can tolerate one of the validators failing, you need at least four validator nodes.
 
-Updating validators in a live network is not supported in v0.7, but is in v0.8, 
-though it must be explicitly enabled by the application developer.
+Updating validators in a live network is supported as of v0.8, but it must be explicitly programmed by the application developer.
 See the [application developers guide](/docs/guides/app-development#Handshake) for more details.
 
 ### Local Network

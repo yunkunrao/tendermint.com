@@ -9,12 +9,15 @@ Tendermint supports the following RPC protocols:
 
 Set the `rpc_laddr` config parameter in the $TMROOT/config.toml file or the `--rpc-laddr` command-line flag to the desired listener:port setting.  Default: `0.0.0.0:46657`.
 
+### Arguments
+
+Arguments which expect strings or byte arrays may be passed as quoted strings, like `"abc"` or as `0x`-prefixed strings, like `0x616263`
+
 ### URI/HTTP
 
 Example request:
 ```bash
-TXBYTES="<HEXBYTES>"
-curl "http://localhost:46657/broadcast_tx_sync?tx=%22$TXBYTES%22" | jq
+curl 'http://localhost:46657/broadcast_tx_sync?tx="abc"' | jq 
 ```
 
 Response:
@@ -22,7 +25,7 @@ Response:
 {"jsonrpc":"2.0","id":"","result":[96,{"code":0,"data":"","log":""}],"error":""}
 
 ```
-The first entry in the result-array (96) is the method this response correlates with. 96 refers to "ResultTypeBroadcastTx", see [responses.go](https://github.com/tendermint/tendermint/blob/master/rpc/core/types/responses.go) for a complete overview. 
+The first entry in the result-array (`96`) is the method this response correlates with. `96` refers to "ResultTypeBroadcastTx", see [responses.go](https://github.com/tendermint/tendermint/blob/master/rpc/core/types/responses.go) for a complete overview. 
 
 
 ### JSONRPC/HTTP
@@ -34,7 +37,7 @@ Example request:
 {
   "method": "broadcast_tx_sync",
   "jsonrpc": "2.0",
-  "params": [ "<HEXBYTES>" ],
+  "params": [ "abc" ],
   "id": "dontcare"
 }
 ```
