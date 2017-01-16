@@ -26,7 +26,7 @@
       "url": "https://github.com/tendermint/merkleeyes",
       "language": "Go",
       "author": "Tendermint",
-      "description": "Tendermint IAVL tree implemented as abci app"
+      "description": "Tendermint IAVL tree implemented as an abci app"
     },
     {
       "name": "ErisDB",
@@ -37,16 +37,16 @@
     },
     {
       "name": "Merkle AVL Tree",
-      "url": "https://github.com/jABCI/MerkleTree",
+      "url": "https://github.com/jTMSP/MerkleTree",
       "language": "Java",
-      "author": "jABCI",
-      "description": "Tendermint IAVL tree implemented as abci app"
+      "author": "jTMSP",
+      "description": "Tendermint IAVL tree implemented as an abci app"
     },
     {
       "name": "TMChat",
       "url": "https://github.com/wolfposd/TMChat",
       "language": "Java",
-      "author": "jABCI",
+      "author": "jTMSP",
       "description": "P2P chat using Tendermint"
     },
     {
@@ -72,22 +72,22 @@
       "author": "Tendermint"
     },
     {
-      "name": "js-abci",
-      "url": "https://github.com/tendermint/js-abci",
+      "name": "js-tmsp",
+      "url": "https://github.com/tendermint/js-tmsp",
       "language": "Javascript",
       "author": "Tendermint"
     },
     {
-      "name": "cpp-abci",
-      "url": "https://github.com/mdyring/cpp-abci",
+      "name": "cpp-tmsp",
+      "url": "https://github.com/mdyring/cpp-tmsp",
       "language": "C++",
       "author": "Martin Dyring"
     },
     {
-      "name": "jABCI",
-      "url": "https://github.com/jABCI/jABCI",
+      "name": "jTMSP",
+      "url": "https://github.com/jTMSP/jTMSP",
       "language": "Java",
-      "author": "jABCI"
+      "author": "jTMSP"
     },
     {
       "name": "Spearmint",
@@ -96,8 +96,8 @@
       "author": "Dennis McKinnon"
     },
     {
-      "name": "ocaml-abci",
-      "url": "https://github.com/zballs/ocaml-abci",
+      "name": "ocaml-tmsp",
+      "url": "https://github.com/zballs/ocaml-tmsp",
       "language": "Ocaml",
       "author": "Zach Balder"
     }
@@ -144,7 +144,7 @@
       "name": "Juno",
       "url": "https://github.com/kadena-io/juno",
       "language": "Haskell",
-      "author": "Cadena",
+      "author": "Kadena",
       "description": "Variant of Tangaroa, a BFT version of Raft"
     },
     {

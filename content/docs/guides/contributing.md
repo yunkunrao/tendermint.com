@@ -70,8 +70,10 @@ especially `go-p2p` and `go-rpc`, as their versions are referenced in tendermint
 - run integration tests (see `test_integrations` in Makefile)
 - prepare changelog/release issue
 - bump versions
-- tag new `develop` as `release-vX.X.X`
-- reset `master` to same commit
+- push to release-vX.X.X to run the extended integration tests on the CI
+- merge to master
+- merge master back to develop
+
 
 ### Automation TODOs
 
