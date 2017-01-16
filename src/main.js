@@ -16,7 +16,7 @@ sync(store, router)
 Vue.use(VueHead)
 Vue.use(VueRouter)
 Vue.use(VueAnalytics, {
-  appName: 'Tendermint Website',
+  appName: 'tendermint.com',
   appVersion: '1.0',
   trackingId: 'UA-51029217-1',
   debug: false,
