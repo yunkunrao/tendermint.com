@@ -6,6 +6,7 @@ const state = {
       title: 'CEO & Founder',
       bio: 'Jae Kwon created Tendermint to save the world from needlessly wasting electricity to secure distributed ledgers. Along the way he realized that using quorums and cryptography instead of energy and hashing affords many advantages such as speed and scalability.',
       ids: {
+        email: 'jae',
         github: 'jaekwon',
         keybase: 'jaekwon',
         linkedin: 'yjkwon',
@@ -19,6 +20,7 @@ const state = {
       title: 'CTO & Cofounder',
       bio: 'Ethan sees consensus algorithms as a 21st century means for promoting social cohesion. He is driven to empower humans with new ways to coordinate and reach agreement at scale.',
       ids: {
+        email: 'ethan',
         github: 'ebuchman',
         keybase: 'ebuchman',
         linkedin: 'ethan-buchman-10b34944',
@@ -32,10 +34,25 @@ const state = {
       title: 'Chief Design Officer',
       bio: 'Peng aims to dramatically increase blockchain adoption through better usability design. He hopes to to turning cutting-edge technology into mundane things that everyone can use.',
       ids: {
+        email: 'peng',
         github: 'nylira',
         keybase: 'peng',
         linkedin: 'nylira',
         twitter: 'zcpeng'
+      },
+      category: 'member'
+    },
+    {
+      slug: 'crain-brian',
+      name: 'Brian Fabian Crain',
+      title: 'Chief Operating Officer',
+      bio: 'Co-Host Epicenter Bitcoin. Founder & Organizer Blockchain Meetup Berlin - Berlin, Germany',
+      ids: {
+        email: 'brian',
+        github: 'crainbf',
+        keybase: 'crainbf',
+        linkedin: 'bfcrain',
+        twitter: 'crainbf'
       },
       category: 'member'
     },
