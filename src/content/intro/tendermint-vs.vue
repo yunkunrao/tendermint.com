@@ -49,7 +49,7 @@ with additional features for a name-registry, permissions, and native contracts,
 It uses Tendermint as its consensus engine, and provides a particular application state.</p>
 <h2>Next Steps</h2>
 <ul>
-<li>Read an overview of the motivation and design behind the <router-link to=/intro/abci-overview>Tendermint Socket Protocol</router-link>.</li>
+<li>Read an overview of the motivation and design behind the <router-link to=/intro/abci-overview>Application BlockChain Interface</router-link>.</li>
 <li>Continue with the <router-link to=/intro/getting-started/install>Getting Started</router-link> guide to install and run example tendermint applications.</li>
 </ul>
 </div></template>

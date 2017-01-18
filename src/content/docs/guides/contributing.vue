@@ -52,8 +52,9 @@ especially <code>go-p2p</code> and <code>go-rpc</code>, as their versions are re
 <li>run integration tests (see <code>test_integrations</code> in Makefile)</li>
 <li>prepare changelog/release issue</li>
 <li>bump versions</li>
-<li>tag new <code>develop</code> as <code>release-vX.X.X</code></li>
-<li>reset <code>master</code> to same commit</li>
+<li>push to release-vX.X.X to run the extended integration tests on the CI</li>
+<li>merge to master</li>
+<li>merge master back to develop</li>
 </ul>
 <h3>Automation TODOs</h3>
 <ul>

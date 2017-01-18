@@ -7,23 +7,24 @@
 </ul>
 <h3>Configuration</h3>
 <p>Set the <code>rpc_laddr</code> config parameter in the $TMROOT/config.toml file or the <code>--rpc-laddr</code> command-line flag to the desired listener:port setting.  Default: <code>0.0.0.0:46657</code>.</p>
+<h3>Arguments</h3>
+<p>Arguments which expect strings or byte arrays may be passed as quoted strings, like <code>&quot;abc&quot;</code> or as <code>0x</code>-prefixed strings, like <code>0x616263</code></p>
 <h3>URI/HTTP</h3>
 <p>Example request:</p>
-<pre><code class=language-bash>TXBYTES=&quot;&lt;HEXBYTES&gt;&quot;
-curl &quot;http://localhost:46657/broadcast_tx_sync?tx=%22$TXBYTES%22&quot; | jq
+<pre><code class=language-bash>curl &apos;http://localhost:46657/broadcast_tx_sync?tx=&quot;abc&quot;&apos; | jq 
 </code></pre>
 <p>Response:</p>
 <pre><code class=language-json>{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;&quot;,&quot;result&quot;:[96,{&quot;code&quot;:0,&quot;data&quot;:&quot;&quot;,&quot;log&quot;:&quot;&quot;}],&quot;error&quot;:&quot;&quot;}
 
 </code></pre>
-<p>The first entry in the result-array (96) is the method this response correlates with. 96 refers to &#x201C;ResultTypeBroadcastTx&#x201D;, see <a href=https://github.com/tendermint/tendermint/blob/master/rpc/core/types/responses.go>responses.go</a> for a complete overview.</p>
+<p>The first entry in the result-array (<code>96</code>) is the method this response correlates with. <code>96</code> refers to &#x201C;ResultTypeBroadcastTx&#x201D;, see <a href=https://github.com/tendermint/tendermint/blob/master/rpc/core/types/responses.go>responses.go</a> for a complete overview.</p>
 <h3>JSONRPC/HTTP</h3>
 <p>JSONRPC requests can be POST&#x2019;d to the root RPC endpoint via HTTP (e.g. <code>http://localhost:46657/</code>).</p>
 <p>Example request:</p>
 <pre><code class=language-json>{
   &quot;method&quot;: &quot;broadcast_tx_sync&quot;,
   &quot;jsonrpc&quot;: &quot;2.0&quot;,
-  &quot;params&quot;: [ &quot;&lt;HEXBYTES&gt;&quot; ],
+  &quot;params&quot;: [ &quot;abc&quot; ],
   &quot;id&quot;: &quot;dontcare&quot;
 }
 </code></pre>

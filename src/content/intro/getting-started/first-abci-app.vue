@@ -32,7 +32,7 @@ but there are others for convenience, configuration, and information purposes.</
 abci-cli info
 </code></pre>
 <p>The application should echo <code>hello</code> and give you some information about itself.</p>
-<p>A ABCI application must provide two things:</p>
+<p>An ABCI application must provide two things:</p>
 <ul>
 <li>a socket server</li>
 <li>a handler for ABCI messages</li>
@@ -95,16 +95,12 @@ asked for a hash, or committed the state. The result of <code>commit</code> is j
 In a live blockchain, transactions collect in memory before they are committed into blocks.
 To avoid wasting resources on invalid transactions,
 ABCI provides the <code>check_tx</code> message,
-which application developers can use to accept or reject messages,
+which application developers can use to accept or reject transactions,
 before they are stored in memory or gossipped to other peers.</p>
 <p>In this instance of the counter app, <code>check_tx</code> only allows transactions whose integer is greater than the last committed one.</p>
 <p>Let&#x2019;s kill the console and the dummy application, and start the counter app:</p>
 <pre><code>counter
 </code></pre>
-<p>Again, the code is just</p>
-<pre><code class=language-go>server.StartListener(&quot;tcp://0.0.0.0:46658&quot;, example.NewCounterApplication())
-</code></pre>
-<p>where the CounterApplication is defined in <code>example/golang/counter.go</code>, and implements the ABCI application interface.</p>
 <p>In another window, start the <code>abci-cli console</code>:</p>
 <pre><code>&gt; set_option serial on
 -&gt; data: serial=on

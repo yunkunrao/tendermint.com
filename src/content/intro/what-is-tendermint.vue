@@ -19,7 +19,7 @@ where each block contains a cryptographic hash of the previous one, forming a ch
 In practice, the blockchain data structure actually optimizes BFT design.</p>
 <p>Tendermint consists of two chief technical components: a blockchain consensus engine and a generic application interface.
 The consensus engine, called Tendermint Core, ensures that the same transactions are recorded on every machine in the same order.
-The application interface, called the Tendermint Socket Protocol (ABCI), enables the transactions to be processed in any programming language.
+The application interface, called the Application BlockChain Interface (ABCI), enables the transactions to be processed in any programming language.
 Unlike other blockchain and consensus solutions, which come pre-packaged with built in state machines (like a fancy key-value store,
 or a quirky scripting language), developers can use Tendermint for BFT state machine replication of applications written in
 whatever programming language and development environment is right for them.</p>

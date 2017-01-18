@@ -204,8 +204,7 @@ to the <code>~/.tendermint</code> on a new machine.</p>
 <p>Now run <code>tendermint node</code> on both machines, and use either <code>--seeds</code> or the <code>/dial_seeds</code> to get them to peer up.
 They should start making blocks, and will only continue to do so so long as both of them are online.</p>
 <p>To make a Tendermint network that can tolerate one of the validators failing, you need at least four validator nodes.</p>
-<p>Updating validators in a live network is not supported in v0.7, but is in v0.8,
-though it must be explicitly enabled by the application developer.
+<p>Updating validators in a live network is supported as of v0.8, but it must be explicitly programmed by the application developer.
 See the <router-link to=/docs/guides/app-development#Handshake>application developers guide</router-link> for more details.</p>
 <h3>Local Network</h3>
 <p>To run a network locally, say on a single machine, you must change the <code>_laddr</code> fields in the <code>config.toml</code> (or using the flags)

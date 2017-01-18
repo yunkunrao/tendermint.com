@@ -44,7 +44,7 @@
 <p>To use ABCI in your programming language of choice, there must be a ABCI server in that language.
 Tendermint supports two kinds of implementation of the server:</p>
 <ul>
-<li>Asynchronous, raw socket server</li>
+<li>Asynchronous, raw socket server (Tendermint Socket Protocol, also known as TSP or Teaspoon)</li>
 <li>GRPC</li>
 </ul>
 <p>Both can be tested using the <code>abci-cli</code> by setting the <code>--abci</code> flag appropriately (ie. to <code>socket</code> or <code>grpc</code>).</p>
@@ -54,15 +54,16 @@ Tendermint supports two kinds of implementation of the server:</p>
 though it will have significant performance overhead.</p>
 <p>To get started with GRPC, copy in the <a href=https://github.com/tendermint/abci/blob/master/types/types.proto>protobuf file</a> and compile it using the GRPC plugin for your language.
 For instance, for golang, the command is <code>protoc --go_out=plugins=grpc:. types.proto</code>. See the <a href=http://www.grpc.io/docs/ >grpc documentation for more details</a>. <code>protoc</code> will autogenerate all the necessary code for ABCI client and server in your language, including whatever interface your application must satisfy to be used by the ABCI server for handling requests.</p>
-<h3>Async Raw</h3>
-<p>If GRPC is not available in your language, or you require higher performance, or otherwise enjoy programming, you may implement your own ABCI server.
+<h3>TSP</h3>
+<p>If GRPC is not available in your language, or you require higher performance, or otherwise enjoy programming, you may implement your own ABCI server
+using the Tendermint Socket Protocol, known affectionaltely as Teaspoon.
 The first step is still to auto-generate the relevant data types and codec in your language using <code>protoc</code>.
 Messages coming over the socket are Protobuf3 encoded, but additionally length-prefixed to facilitate use as a streaming protocol. Protobuf3 doesn&#x2019;t have an official length-prefix standard, so we use our own. The first byte in the prefix represents the length of the Big Endian encoded length. The remaining bytes in the prefix are the Big Endian encoded length.</p>
 <p>For example, if the Protobuf3 encoded ABCI message is 0xDEADBEEF (4 bytes), the length-prefixed message is 0x0104DEADBEEF. If the Protobuf3 encoded ABCI message is 65535 bytes long, the length-prefixed message would be like 0x02FFFF&#x2026;</p>
 <p>Note this prefixing does not apply for grpc.</p>
-<p>A ABCI server must also be able to support multiple connections, as Tendermint uses three connections.</p>
+<p>An ABCI server must also be able to support multiple connections, as Tendermint uses three connections.</p>
 <h2>Client</h2>
-<p>There are currently two use-cases for a ABCI client.
+<p>There are currently two use-cases for an ABCI client.
 One is a testing tool, as in the <code>abci-cli</code>, which allows ABCI requests to be sent via command line.
 The other is a consensus engine, such as Tendermint Core, which makes requests to the application every time a new transaction is received or a block is committed.</p>
 <p>It is unlikely that you will need to implement a client. For details of our client, see <a href=https://github.com/tendermint/abci/tree/master/client>here</a>.</p>
@@ -97,9 +98,9 @@ for a response. While the mempool may run concurrently with block processing (th
 <p>It is expected that the app will persist state to disk on Commit. The option to have all transactions replayed from some previous block is the job of the <a href=#handshake>Handshake</a>.</p>
 <h4>BeginBlock</h4>
 <p>The BeginBlock request can be used to run some code at the beginning of every block. It also allows Tendermint to send the current block hash and header to the application, before it sends any of the transactions.</p>
-<p>The app should remember the latest height and header (ie. from which it has run a successful Commit) so that it can tell Tendermint where to pick up from when it restarts. See <a href=#handshake>Handshake</a>.</p>
+<p>The app should remember the latest height and header (ie. from which it has run a successful Commit) so that it can tell Tendermint where to pick up from when it restarts. See information on the Handshake, below.</p>
 <h4>EndBlock</h4>
-<p>The EndBlock request can be used to run some code at the end of every block. Additionally, the response may contain a list of validators, which can be used to update the validator set. To add a new validator or update an existing one, simply include them in the list returned in the EndBlock response. To remove one, include it in the list with a <code>power</code> equal to <code>0</code>. Tendermint core will take care of updating the validator set (TODO).</p>
+<p>The EndBlock request can be used to run some code at the end of every block. Additionally, the response may contain a list of validators, which can be used to update the validator set. To add a new validator or update an existing one, simply include them in the list returned in the EndBlock response. To remove one, include it in the list with a <code>power</code> equal to <code>0</code>. Tendermint core will take care of updating the validator set. Note validator set changes are only available in v0.8.0 and up.</p>
 <h3>Query Connection</h3>
 <p>This connection is used to query the application without engaging consensus. It&#x2019;s exposed over the tendermint core rpc, so clients can query the app without exposing a server on the app itself, but they must serialize each query as a single byte array. Additionally, certain &#x201C;standardized&#x201D; queries may be used to inform local decisions, for instance about which peers to connect to.</p>
 <p>Tendermint Core currently uses the Query connection to filter peers upon connecting, according to IP address or public key. For instance, returning non-OK ABCI response to either of the following queries will cause Tendermint to not connect to the corresponding peer:</p>
@@ -109,5 +110,15 @@ for a response. While the mempool may run concurrently with block processing (th
 </ul>
 <p>Note: these query formats are subject to change!</p>
 <h3>Handshake</h3>
-<p>The abci handshake and related improvements are <a href=https://github.com/tendermint/tendermint/issues/300>upcoming in v0.8.0</a></p>
+<p>When the app or tendermint restarts, they need to sync to a common height.
+When an ABCI connection is first established, Tendermint will call <code>Info</code> on the Query connection.
+The response should contain the LastBlockHeight and LastBlockAppHash</p>
+<ul>
+<li>the former is the last block for the which the app ran Commit successfully,
+the latter is the response from that Commit.</li>
+</ul>
+<p>Using this information, Tendermint will determine what needs to be replayed, if anything, against the app,
+to ensure both Tendermint and the app are synced to the latest block height.</p>
+<p>If the app returns a LastBlockHeight of 0, Tendermint will just replay all blocks.</p>
+<p>Note this functionality is only available in v0.8.0 and up.</p>
 </div></template>
