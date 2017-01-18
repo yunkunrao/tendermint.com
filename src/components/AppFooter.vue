@@ -1,6 +1,6 @@
 <template>
   <div class="app-bottom">
-    <section-install></section-install>
+    <section-bottom></section-bottom>
     <footer class="app-footer">
       <div class="sections">
         <section>
@@ -49,11 +49,11 @@
 </template>
 
 <script>
-import SectionInstall from './SectionInstall'
+import SectionBottom from './SectionBottom'
 export default {
   name: 'app-footer',
   components: {
-    SectionInstall
+    SectionBottom
   }
 }
 </script>
