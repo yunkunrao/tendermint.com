@@ -1,14 +1,14 @@
 ~~~
-title: "ABCI: The Tendermint Socket Protocol"
+title: "ABCI: The Application BlockChain Interface"
 description: "ABCI lets you create blockchain application easily in any languge.  This post describes the motivation behind ABCI and links to tutorials."
 date: "2015-12-19"
 categories: 
     - "ABCI"
 ~~~
 
-> After you read this post, don't forget to check out our tutorials!  They also appear at the end of this page.
+> After you read this post, don't forget to check out our tutorials and guides!  They also appear at the end of this page.
 1. [Run your first ABCI application](/intro/getting-started/first-abci)
-2. [Launch a ABCI testnet](/intro/getting-started/deploy-testnet/)
+2. [Learn more about the ABCI](/docs/guides/app-development)
 
 ## Motivation
 
@@ -22,7 +22,7 @@ In contrast, our approach is to decouple the consensus engine and P2P layers fro
 
 ## Intro to ABCI
 
-[Tendermint Core](https://github.com/tendermint/tendermint) (the "consensus engine") speaks to the application via a socket protocol called [ABCI](https://github.com/tendermint/abci). 
+[Tendermint Core](https://github.com/tendermint/tendermint) (the "consensus engine") speaks to the application via an interface called [ABCI](https://github.com/tendermint/abci). 
 
 To draw an analogy, lets talk about a well-known cryptocurrency, Bitcoin.  Bitcoin is a cryptocurrency blockchain where each node maintains a fully audited Unspent Transaction Output (UTXO) database. If one wanted to create a Bitcoin-like system on top of ABCI, Tendermint Core would be responsible for 
 
@@ -38,7 +38,7 @@ The application will be responsible for
 
 Tendermint is able to decompose the blockchain design by offering a very simple API between the application process and consensus process.
 
-The API consists of 3 primary message types that get delivered from the core to the application.  The application replies with corresponding response messages.
+The ABCI consists of 3 primary message types that get delivered from the core to the application.  The application replies with corresponding response messages.
 
 The messages are specified here: https://github.com/tendermint/abci#message-types
 
@@ -48,7 +48,10 @@ The `CheckTx` message is similar to `DeliverTx`, but it's only for validating tr
 
 The `Commit` message is used to compute a cryptographic commitment to the current application state, to be placed into the next block header. This has some handy properties. Inconsistencies in updating that state will now appear as blockchain forks which catches a whole class of programming errors. This also simplifies the development of secure lightweight clients, as Merkle-hash proofs can be verified by checking against the block hash, and the block hash is signed by a quorum of validators.
 
-There can be multiple ABCI socket connections to an application.  Tendermint Core creates two ABCI connections to the application; one for the validation of transactions when broadcasting in the mempool, and another for the consensus engine to run block proposals.
+There are may ways the ABCI can be implemented, including with in-process functions, a binary socket protocol, or even JSON over HTTP.
+We recommend a binary socket protocol, known as the Tendermint Socket Protocol (TMSP) for connecting Tendermint to an application running
+in another process.
+There can be multiple ABCI connections to an application.  Tendermint Core creates three ABCI connections to the application; one for the validation of transactions when broadcasting in the mempool, one for the consensus engine to run block proposals, and one for querying information from the app.
 
 It's probably evident that applications designers need to very carefully design their message handlers to create a blockchain that does anything useful but this architecture provides a place to start.
 
@@ -72,7 +75,7 @@ While programmers can avoid non-determinism by being careful, it is also possibl
 Follow these tutorials to quickly get started developing your ABCI application.
 
 1. [Run your first ABCI application](/intro/getting-started/first-abci)
-2. [Launch a ABCI testnet](/intro/getting-started/deploy-testnet/)
+2. [Learn more about the ABCI](/docs/guides/app-development)
 
 ## Contributions
 
