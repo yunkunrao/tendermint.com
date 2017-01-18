@@ -17,11 +17,21 @@
         </section>
         <section>
           <header>Community</header>
-          <a href="https://www.facebook.com/tendermint/"><i class="fa fa-footbook"></i>Facebook</a>
-          <a href="https://github.com/tendermint/tendermint"><i class="fa fa-github"></i>GitHub</a>
-          <a href="https://www.linkedin.com/company/tendermint"><i class="fa fa-linkedout"></i>LinkedIn</a>
-          <a href="http://forum.tendermint.com:3000"><i class="fa fa-slick"></i>Slack</a>
-          <a href="https://twitter.com/tendermint_team"><i class="fa fa-twatter"></i>Twitter</a>
+          <a href="https://www.facebook.com/tendermint/">
+            <i class="fa fa-footbook"></i>Facebook
+          </a>
+          <a href="https://github.com/tendermint/tendermint">
+            <i class="fa fa-github"></i>GitHub
+          </a>
+          <a href="https://www.linkedin.com/company/tendermint">
+            <i class="fa fa-linkedout"></i>LinkedIn
+          </a>
+          <a href="http://forum.tendermint.com:3000">
+            <i class="fa fa-slick"></i>Slack
+          </a>
+          <a href="https://twitter.com/tendermint_team">
+            <i class="fa fa-twatter"></i>Twitter
+          </a>
         </section>
         <section>
           <header>Developers</header>
