@@ -6,6 +6,8 @@ const routes = [
 
   // Intro
   { path: '/intro', component: page('PageIntroEntry') },
+  { path: '/intro/tmsp-overview', redirect: '/intro/abci-overview' },
+  { path: '/intro/first-tmsp', redirect: '/intro/first-abci' },
   { path: '/intro/:page', component: page('PageIntroEntry') },
   { path: '/intro/getting-started/:page', component: page('PageIntroEntry') },
 

@@ -2,9 +2,14 @@
   <div class="section-bottom-container">
     <section class="section-bottom">
       <h2>Get Started</h2>
-      <router-link to="/intro/getting-started/install" class="btn btn-large">
-        <i class="fa fa-cloud-download"></i>Install Tendermint
-      </router-link>
+      <vue-button
+        id="download-button"
+        @click.native="go('/intro/getting-started/install')"
+        btn-size="large"
+        btn-icon="cloud-download"
+        btn-style="tendermint"
+        btn-value="Install Tendermint">
+      </vue-button>
     </section>
     <section class="section-bottom">
       <h2>Get Newsletter</h2>
@@ -15,10 +20,15 @@
 
 <script>
 import FormEmailSignup from './FormEmailSignup'
+import VueButton from '@nylira/vue-button'
 export default {
   name: 'section-bottom',
   components: {
-    FormEmailSignup
+    FormEmailSignup,
+    VueButton
+  },
+  methods: {
+    go (destination) { this.$router.push(destination) }
   }
 }
 </script>
@@ -28,10 +38,10 @@ export default {
 
 .section-bottom-container
   background mcolor
-  border-bottom 1px solid lighten(mcolor, 10%)
 
 .section-bottom
   padding 2rem 1rem
+  border-bottom 1px solid lighten(mcolor, 10%)
   h2
     color lighten(mcolor, 75%)
     font-weight 500
@@ -39,9 +49,13 @@ export default {
     text-align center
     line-height 1
     margin-bottom 1.5rem
-  .btn, form
+  
+  #download-button, form
     margin 0 auto
     max-width 18rem
+
+  #download-button
+    width 100%
 
 @media screen and (min-width: 720px)
   .section-bottom-container

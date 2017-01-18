@@ -7,12 +7,20 @@
       <p class="tagline">Blockchain Consensus</p>
       <p class="introduction">Byzantine fault-tolerant replicated state machines in any programming language</p>
       <div class="btns">
-        <router-link to="/intro/getting-started/install" class="btn btn-large">
-          <i class="fa fa-cloud-download"></i>Install Tendermint
-        </router-link>
-        <router-link to="/intro" class="btn btn-large btn-alpha-black">
-          <i class="fa fa-question"></i>Learn More
-        </router-link>
+        <vue-button
+          @click.native="go('/intro/getting-started/install')"
+          btn-size="large"
+          btn-icon="cloud-download"
+          btn-style="tendermint"
+          btn-value="Install Tendermint">
+        </vue-button>
+        <vue-button
+          @click.native="go('/intro')"
+          btn-size="large"
+          btn-icon="question"
+          btn-style="alpha-black"
+          btn-value="Learn More">
+        </vue-button>
       </div>
       <p class="source"><i class="fa fa-github"></i> View source code on <a href="https://github.com/tendermint/tendermint">GitHub</a></p>
     </div>
@@ -21,9 +29,14 @@
 
 <script>
 import SectionHomeCoverAlert from './SectionHomeCoverAlert.vue'
+import VueButton from '@nylira/vue-button'
 export default {
   components: {
-    SectionHomeCoverAlert
+    SectionHomeCoverAlert,
+    VueButton
+  },
+  methods: {
+    go (destination) { this.$router.push(destination) }
   }
 }
 </script>
@@ -65,7 +78,8 @@ export default {
 
   .btns
     margin-bottom x
-    .btn
+    .pz-button
+      width 100%
       margin-bottom 0.5*x
       max-width 16*x
 
@@ -108,7 +122,7 @@ export default {
       display flex
       flex-flow row nowrap
       max-width 32*x
-      .btn
+      .pz-button
         margin 0
         margin-right x
 
