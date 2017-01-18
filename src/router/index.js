@@ -20,6 +20,7 @@ const routes = [
 
   // Blog Pages
   { path: '/blog', component: page('PageBlogIndex') },
+  { path: '/blog/tendermint-socket-protocol', redirect: '/blog/abci-the-application-blockchain-interface' },
   { path: '/blog/:entry', component: page('PageBlogEntry') },
 
   // Other Pages
