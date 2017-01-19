@@ -6,7 +6,7 @@
     </div>
     <section class="section-default page-content">
       <div class="section-container">
-        <div class="section-content article-body">
+        <vue-article-body>
           <h2>Email</h2>
           <p>Questions or comments for the Tendermint team? Email us at <a href="mailto:hello@tendermint.com">hello@tendermint.com</a> and we'll get back to you promptly.</p>
           <h2>Slack</h2>
@@ -19,15 +19,19 @@
             <li><a href="https://www.linkedin.com/company/tendermint">LinkedIn</a>
             <li><a href="https://twitter.com/tendermint_team">Twitter</a>
           </ul>
-        </div>
+        </vue-article-body>
       </div>
     </section>
   </div>
 </template>
 
 <script>
+import VueArticleBody from '@nylira/vue-article-body'
 export default {
   name: 'page-contact',
+  components: {
+    VueArticleBody
+  },
   mounted () {
     document.title = 'Contact - Tendermint'
   }

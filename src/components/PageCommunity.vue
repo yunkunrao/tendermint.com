@@ -48,13 +48,13 @@ export default {
           url: 'http://forum.tendermint.com:3000/',
           internal: false,
           title: 'Chat',
-          desc: 'Talk on Slack with people interested in Tendermint. (External Link)'
+          desc: 'Talk on Slack with people interested in Tendermint. (External)'
         },
         {
           url: 'https://github.com/tendermint/tendermint/issues',
           internal: false,
           title: 'Issues',
-          desc: 'View the features we\'re working on right now. (External Link)'
+          desc: 'View the features we\'re working on right now. (External)'
         },
         {
           url: '/bounties',

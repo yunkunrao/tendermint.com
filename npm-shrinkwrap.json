@@ -2,6 +2,11 @@
   "name": "tendermint-site",
   "version": "1.0.0",
   "dependencies": {
+    "@nylira/vue-article-body": {
+      "version": "1.1.2",
+      "from": "@nylira/vue-article-body@1.1.2",
+      "resolved": "https://registry.npmjs.org/@nylira/vue-article-body/-/vue-article-body-1.1.2.tgz"
+    },
     "@nylira/vue-button": {
       "version": "1.4.1",
       "from": "@nylira/vue-button@1.4.1",

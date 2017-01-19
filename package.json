@@ -16,6 +16,7 @@
     "build": "node build/blog.js && node build/docs.js && node build/build.js"
   },
   "dependencies": {
+    "@nylira/vue-article-body": "^1.1.2",
     "@nylira/vue-button": "^1.4.1",
     "@nylira/vue-input": "^1.2.5",
     "autoprefixer": "^6.6.1",

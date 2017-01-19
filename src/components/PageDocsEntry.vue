@@ -2,32 +2,36 @@
   <div class="master-detail page-docs-entry">
     <master></master>
     <div class="detail"><div class="article-body">
-      <index v-if="r()"></index>
-      <faq v-if="r('faq')"></faq>
-      <roadmap v-if="r('roadmap')"></roadmap>
-      <definitions v-if="r('definitions')"></definitions>
-      <using-tendermint v-if="r('using-tendermint')"></using-tendermint>
-      <app-dev v-if="r('app-development')"></app-dev>
-      <app-arch v-if="r('app-architecture')"></app-arch>
-      <contributing v-if="r('contributing')"></contributing>
-      <merkle v-if="r('merkle')"></merkle>
-      <validators v-if="r('validators')"></validators>
-      <consensus v-if="r('consensus')"></consensus>
-      <block-structure v-if="r('block-structure')"></block-structure>
-      <rpc v-if="r('rpc')"></rpc>
-      <genesis v-if="r('genesis')"></genesis>
-      <config v-if="r('configuration')"></config>
-      <light-client v-if="r('light-client-protocol')"></light-client>
-      <secure-peer-to-peer v-if="r('secure-p2p')"></secure-peer-to-peer>
-      <fast-sync v-if="r('fast-sync')"></fast-sync>
-      <wire-protocol v-if="r('wire-protocol')"></wire-protocol>
-    </div></div>
+      <vue-article-body>
+        <index v-if="r()"></index>
+        <faq v-if="r('faq')"></faq>
+        <roadmap v-if="r('roadmap')"></roadmap>
+        <definitions v-if="r('definitions')"></definitions>
+        <using-tendermint v-if="r('using-tendermint')"></using-tendermint>
+        <app-dev v-if="r('app-development')"></app-dev>
+        <app-arch v-if="r('app-architecture')"></app-arch>
+        <contributing v-if="r('contributing')"></contributing>
+        <merkle v-if="r('merkle')"></merkle>
+        <validators v-if="r('validators')"></validators>
+        <consensus v-if="r('consensus')"></consensus>
+        <block-structure v-if="r('block-structure')"></block-structure>
+        <rpc v-if="r('rpc')"></rpc>
+        <genesis v-if="r('genesis')"></genesis>
+        <config v-if="r('configuration')"></config>
+        <light-client v-if="r('light-client-protocol')"></light-client>
+        <secure-peer-to-peer v-if="r('secure-p2p')"></secure-peer-to-peer>
+        <fast-sync v-if="r('fast-sync')"></fast-sync>
+        <wire-protocol v-if="r('wire-protocol')"></wire-protocol>
+      </vue-article-body>
+    </div>
   </div>
 </template>
 
 <script>
 import Master from './PageDocsMaster'
 import Index from '../content/docs/index.vue'
+import VueArticleBody from '@nylira/vue-article-body'
+
 import Faq from '../content/docs/faq.vue'
 import Roadmap from '../content/docs/roadmap.vue'
 import Definitions from '../content/docs/definitions.vue'
@@ -55,6 +59,8 @@ export default {
   name: 'page-docs-entry',
   components: {
     Master,
+    VueArticleBody,
+
     Index,
     Faq,
     Roadmap,

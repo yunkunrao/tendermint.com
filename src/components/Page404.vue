@@ -6,7 +6,7 @@
     </div>
     <section class="section-default page-content">
       <div class="section-container">
-        <div class="section-content article-body">
+        <vue-article-body>
           <h2>Whoops!</h2>
           <p>The page you visited either does not exist or has been deleted in a website reshuffle. We're sorry for the inconvenience. Try visiting one of these pages below:</p>
           <ul>
@@ -17,15 +17,19 @@
             <li><router-link :to="'/blog'">Blog</router-link></li>
           </ul>
           <p>Please notify us at <a href="mailto:hello@tendermint.com">hello@tendermint.com</a> and we will fix this error as soon as we can. Thank you for your patience.</p>
-        </div>
+        </vue-article-body>
       </div>
     </section>
   </div>
 </template>
 
 <script>
+import VueArticleBody from '@nylira/vue-article-body'
 export default {
   name: 'page-404',
+  components: {
+    VueArticleBody
+  },
   mounted () {
     document.title = '404 - Tendermint'
   }

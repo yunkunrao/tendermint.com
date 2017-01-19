@@ -7,13 +7,13 @@
     <section class="section-default">
       <div class="section-container">
         <div class="section-content">
-          <div class="article-body">
+          <vue-article-body>
             <p>This job can be full-time or part-time. We welcome people who are interested in working remotely as well as onsite in San Francisco or Toronto.</p>
             <h2>Responsibilities</h2>
             <ul class="responsibilities">
               <li v-for="r in career.responsibilities" v-html="markdown(r)"></li>
             </ul>
-            <h2>About this job</h2>
+            <!--<h2>About this job</h2>-->
             <h2>Benefits</h2>
               <ul>
                 <li>Work from anywhere in the world</li>
@@ -27,7 +27,7 @@
             <h2>Apply for this role</h2>
             <p>Send us an email with your cover letter and resume:</p>
             <a href="mailto:hello@tendermint.com" class="btn btn-large">hello@tendermint.com</a>
-          </div>
+          </vue-article-body>
         </div>
       </div>
     </section>
@@ -35,12 +35,16 @@
 </template>
 
 <script>
+import VueArticleBody from '@nylira/vue-article-body'
 import { mapGetters } from 'vuex'
 import MarkdownIt from 'markdown-it'
 let md = new MarkdownIt()
 
 export default {
   name: 'page-career-entry',
+  components: {
+    VueArticleBody
+  },
   computed: {
     career () {
       if (this.careers) {
@@ -57,7 +61,7 @@ export default {
   },
   methods: {
     markdown (text) {
-      return md.render(text)
+      return md.renderInline(text)
     }
   },
   mounted () {

@@ -10,4 +10,4 @@ Get started building your ABCI application or server by reading the [App Develop
 
 To learn about integrating with clients, see the [App Architecture](/docs/guides/app-architecture) guide.
 
-See Tendermint's [Software Ecosystem](/ecosystem)for motivation and inspiration!
+See Tendermint's [Software Ecosystem](/ecosystem) for motivation and inspiration!

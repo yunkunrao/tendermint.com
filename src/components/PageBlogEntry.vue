@@ -8,7 +8,7 @@
     <section class="section-default">
       <div class="section-container">
         <div class="section-content">
-          <div class="article-body" v-html="entry.body"></div>
+          <vue-article-body v-html="entry.body"></vue-article-body>
           <article-footer :facebook-url="facebookUrl" :twitter-url="twitterUrl"></article-footer>
           <section-comments></section-comments>
         </div><!--section-content-->
@@ -18,6 +18,7 @@
 </template>
 
 <script>
+import VueArticleBody from '@nylira/vue-article-body'
 import ArticleFooter from './ArticleFooter'
 import SectionComments from './SectionComments'
 
@@ -26,6 +27,7 @@ import { mapGetters } from 'vuex'
 export default {
   name: 'page-blog-entry',
   components: {
+    VueArticleBody,
     ArticleFooter,
     SectionComments
   },

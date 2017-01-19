@@ -1,21 +1,25 @@
 <template>
   <div class="master-detail page-intro-entry">
     <master></master>
-    <div class="detail"><div class="article-body">
-      <what-is-tendermint v-if="r()"></what-is-tendermint>
-      <tendermint-vs v-if="r('tendermint-vs')"></tendermint-vs>
-      <abci-overview v-if="r('abci-overview')"></abci-overview>
-      <consensus-overview v-if="r('consensus-overview')"></consensus-overview>
-      <install v-if="r('install')"></install>
-      <first-abci v-if="r('first-abci')"></first-abci>
-      <deploy-testnet v-if="r('deploy-testnet')"></deploy-testnet>
-      <next-steps v-if="r('next-steps')"></next-steps>
-    </div></div>
+    <div class="detail">
+      <vue-article-body>
+        <what-is-tendermint v-if="r()"></what-is-tendermint>
+        <tendermint-vs v-if="r('tendermint-vs')"></tendermint-vs>
+        <abci-overview v-if="r('abci-overview')"></abci-overview>
+        <consensus-overview v-if="r('consensus-overview')"></consensus-overview>
+        <install v-if="r('install')"></install>
+        <first-abci v-if="r('first-abci')"></first-abci>
+        <deploy-testnet v-if="r('deploy-testnet')"></deploy-testnet>
+        <next-steps v-if="r('next-steps')"></next-steps>
+      </vue-article-body>
+    </div>
   </div>
 </template>
 
 <script>
 import Master from './PageIntroMaster'
+import VueArticleBody from '@nylira/vue-article-body'
+
 import TendermintVs from '../content/intro/tendermint-vs.vue'
 import WhatIsTendermint from '../content/intro/what-is-tendermint.vue'
 import AbciOverview from '../content/intro/abci-overview.vue'
@@ -28,6 +32,7 @@ export default {
   name: 'page-intro-entry',
   components: {
     Master,
+    VueArticleBody,
     TendermintVs,
     WhatIsTendermint,
     AbciOverview,
