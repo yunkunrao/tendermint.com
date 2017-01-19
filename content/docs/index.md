@@ -1,6 +1,6 @@
 # Documentation
 
-Start at the [Tendermint Internals Merkle](/docs/internals/merkle) if you're new.
+If you're new here, start with the [Tendermint Intro](/intro).
 
 Otherwise, find more goodies on this page!
 
