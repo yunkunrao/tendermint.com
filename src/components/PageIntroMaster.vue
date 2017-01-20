@@ -7,7 +7,7 @@
       <router-link :to="'/intro/abci-overview'">ABCI Overview</router-link>
       <router-link :to="'/intro/consensus-overview'">Consensus Overview</router-link>
       <div class="title">Getting Started</div>
-      <router-link :to="'/intro/getting-started/install'">Install Tendermint</router-link>
+      <router-link :to="'/intro/getting-started/download'">Download Tendermint</router-link>
       <router-link :to="'/intro/getting-started/first-abci'">First ABCI App</router-link>
       <router-link :to="'/intro/getting-started/deploy-testnet'">Deploy Testnet</router-link>
       <router-link :to="'/intro/getting-started/next-steps'">Next Steps</router-link>

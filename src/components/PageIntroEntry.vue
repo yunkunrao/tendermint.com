@@ -7,7 +7,7 @@
         <tendermint-vs v-if="r('tendermint-vs')"></tendermint-vs>
         <abci-overview v-if="r('abci-overview')"></abci-overview>
         <consensus-overview v-if="r('consensus-overview')"></consensus-overview>
-        <install v-if="r('install')"></install>
+        <download v-if="r('download')"></download>
         <first-abci v-if="r('first-abci')"></first-abci>
         <deploy-testnet v-if="r('deploy-testnet')"></deploy-testnet>
         <next-steps v-if="r('next-steps')"></next-steps>
@@ -24,7 +24,7 @@ import TendermintVs from '../content/intro/tendermint-vs.vue'
 import WhatIsTendermint from '../content/intro/what-is-tendermint.vue'
 import AbciOverview from '../content/intro/abci-overview.vue'
 import ConsensusOverview from '../content/intro/consensus-overview.vue'
-import Install from '../content/intro/getting-started/install.vue'
+import Download from '../content/intro/getting-started/download.vue'
 import FirstAbci from '../content/intro/getting-started/first-abci-app.vue'
 import DeployTestnet from '../content/intro/getting-started/deploy-testnet.vue'
 import NextSteps from '../content/intro/getting-started/next-steps.vue'
@@ -37,7 +37,7 @@ export default {
     WhatIsTendermint,
     AbciOverview,
     ConsensusOverview,
-    Install,
+    Download,
     FirstAbci,
     DeployTestnet,
     NextSteps
@@ -51,7 +51,7 @@ export default {
         case 'tendermint-vs': val = 'Tendermint vs. Other Software'; break
         case 'abci-overview': val = 'ABCI Overview'; break
         case 'consensus-overview': val = 'Consensus Overview'; break
-        case 'install': val = 'Install Tendermint'; break
+        case 'download': val = 'Download Tendermint'; break
         case 'first-abci': val = 'First ABCI App'; break
         case 'deploy-testnet': val = 'Deploy a Testnet'; break
         case 'next-steps': val = 'Next Steps Consensus'; break

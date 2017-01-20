@@ -7,6 +7,7 @@
         <faq v-if="r('faq')"></faq>
         <roadmap v-if="r('roadmap')"></roadmap>
         <definitions v-if="r('definitions')"></definitions>
+        <install v-if="r('install')"></install>
         <using-tendermint v-if="r('using-tendermint')"></using-tendermint>
         <app-dev v-if="r('app-development')"></app-dev>
         <app-arch v-if="r('app-architecture')"></app-arch>
@@ -37,6 +38,7 @@ import Roadmap from '../content/docs/roadmap.vue'
 import Definitions from '../content/docs/definitions.vue'
 
 // guides
+import Install from '../content/docs/guides/install.vue'
 import UsingTendermint from '../content/docs/guides/using-tendermint.vue'
 import AppDev from '../content/docs/guides/app-dev.vue'
 import AppArch from '../content/docs/guides/app-architecture.vue'
@@ -67,6 +69,7 @@ export default {
     Definitions,
 
     // guides
+    Install,
     UsingTendermint,
     AppDev,
     AppArch,
@@ -96,6 +99,7 @@ export default {
         case 'faq': val = 'Frequently Asked Questions'; break
         case 'roadmap': val = 'Roadmap'; break
         case 'definitions': val = 'Definitions'; break
+        case 'install': val = 'Install from Source - Guides'; break
         case 'using-tendermint': val = 'Using Tendermint - Guides'; break
         case 'app-architecture': val = 'Application Architecture - Guides'; break
         case 'app-development': val = 'Application Development - Guides'; break
