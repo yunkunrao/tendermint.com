@@ -57,7 +57,7 @@ export default {
 
   h1
     color lighten(mcolor,90%)
-    font-weight 400
+    font-weight 700
     line-height 1
     font-size 2.75*x
     margin-bottom 0.5*x
@@ -66,7 +66,7 @@ export default {
     color lighten(mcolor,50%)
     font-size x
     text-transform uppercase
-    letter-spacing 0.05em
+    letter-spacing 0.075em
     font-weight 500
     margin-bottom 2*x
 

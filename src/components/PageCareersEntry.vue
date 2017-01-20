@@ -1,9 +1,11 @@
 <template>
   <div class="page-career-entry">
-    <div class="page-header page-header-wide">
-      <h1>{{ career.title }}</h1>
-      <p>{{ career.subtitle }}</p>
-    </div>
+    <vue-page-header
+      :title="career.title"
+      :subtitle="career.subtitle"
+      header-style="tendermint">
+    </vue-page-header>
+
     <section class="section-default">
       <div class="section-container">
         <div class="section-content">
@@ -35,14 +37,15 @@
 </template>
 
 <script>
+import VuePageHeader from '@nylira/vue-page-header'
 import VueArticleBody from '@nylira/vue-article-body'
 import { mapGetters } from 'vuex'
 import MarkdownIt from 'markdown-it'
 let md = new MarkdownIt()
-
 export default {
   name: 'page-career-entry',
   components: {
+    VuePageHeader,
     VueArticleBody
   },
   computed: {

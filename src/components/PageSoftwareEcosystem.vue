@@ -1,15 +1,18 @@
 <template>
-  <div class="page-software-ecosystem split-page">
-    <div class="page-header">
-      <h1>Ecosystem</h1>
-      <p>Explore Tendermint's software ecosystem.</p>
+  <div class="page-split page-software-ecosystem">
+    <vue-page-header
+      title="Ecosystem"
+      subtitle="Explore Tendermint's software ecosystem."
+      type="split"
+      header-style="tendermint">
       <vue-input
         input-type="text"
         input-placeholder="Search..."
         input-style="tendermint"
+        input-size="large"
         v-model="searchQuery">
       </vue-input>
-    </div>
+    </vue-page-header>
 
     <div class="page-content">
 
@@ -135,6 +138,7 @@
 </template>
 
 <script>
+import VuePageHeader from '@nylira/vue-page-header'
 import { mapGetters } from 'vuex'
 import { orderBy } from 'lodash'
 import $ from 'jquery'
@@ -144,6 +148,7 @@ import VueInput from '@nylira/vue-input'
 export default {
   name: 'page-software-ecosystem',
   components: {
+    VuePageHeader,
     VueInput
   },
   computed: {
@@ -247,10 +252,9 @@ export default {
 @require '../styles/variables.styl'
 
 .page-software-ecosystem
-  .page-header
-    p
-      margin-bottom 1.5*x
+  .pz-page-header
     .pz-input
+      margin-top 1rem
       max-width 20rem
 
   .software-header

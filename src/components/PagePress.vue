@@ -1,9 +1,11 @@
 <template>
-  <div class="page-press split-page">
-    <div class="page-header">
-      <h1>Press Info</h1>
-      <p>Mentions in the news and media resources.</p>
-    </div>
+  <div class="page-split page-press">
+    <vue-page-header
+      title="Press Info"
+      subtitle="Mentions in the news and media resources."
+      type="split"
+      header-style="tendermint">
+    </vue-page-header>
 
     <section class="section-default page-content">
       <div class="section-container">
@@ -20,6 +22,7 @@
 </template>
 
 <script>
+import VuePageHeader from '@nylira/vue-page-header'
 import { mapGetters } from 'vuex'
 import { orderBy } from 'lodash'
 import CardPost from './CardPost'
@@ -27,6 +30,7 @@ import CardPost from './CardPost'
 export default {
   name: 'page-press',
   components: {
+    VuePageHeader,
     CardPost
   },
   computed: {

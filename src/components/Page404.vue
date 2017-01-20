@@ -1,14 +1,15 @@
 <template>
-  <div class="split-page page-404">
-    <div class="page-header">
-      <h1>Error 404</h1>
-      <p>Page Not Found</p>
-    </div>
+  <div class="page-split page-404">
+    <vue-page-header
+      title="Error 404"
+      subtitle="Page Not Found"
+      type="split"
+      header-style="tendermint">
+    </vue-page-header>
     <section class="section-default page-content">
       <div class="section-container">
         <vue-article-body>
-          <h2>Whoops!</h2>
-          <p>The page you visited either does not exist or has been deleted in a website reshuffle. We're sorry for the inconvenience. Try visiting one of these pages below:</p>
+          <p><strong>Whoops!</strong> The page you visited either does not exist or has been deleted in a website reshuffle. We're sorry for the inconvenience. Try visiting one of these pages below:</p>
           <ul>
             <li><router-link :to="'/'">Home</router-link></li>
             <li><router-link :to="'/intro'">Intro</router-link></li>
@@ -24,10 +25,12 @@
 </template>
 
 <script>
+import VuePageHeader from '@nylira/vue-page-header'
 import VueArticleBody from '@nylira/vue-article-body'
 export default {
   name: 'page-404',
   components: {
+    VuePageHeader,
     VueArticleBody
   },
   mounted () {

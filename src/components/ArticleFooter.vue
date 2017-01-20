@@ -23,8 +23,9 @@ export default {
 .article-footer
   border-top 4px solid bc
   display flex
-  margin-top 3rem
-  padding 1.5rem 0
+  margin 0 auto
+  padding 1rem 1.25rem 3rem
+  max-width 60rem
 
   .index
     display flex

@@ -1,13 +1,18 @@
 <template>
-  <div class="page-bounties-index split-page">
-    <div class="page-header">
-      <h1>Bounties</h1>
-      <p>Get paid in BTC by working on Tendermint-based projects.</p>
+  <div class="page-split page-bounties-index">
+    <vue-page-header
+      title="Bounties"
+      subtitle="Get paid in BTC by working on Tendermint-based projects."
+      type="split"
+      header-style="tendermint">
       <div class="tags">
         <div id="tag-all" class="tag active" @click="setActiveTag($event)">all</div>
-        <div class="tag" v-for="tag in tags" @click="setActiveTag($event,tag)">{{ tag }}</div>
+        <div class="tag" v-for="tag in tags" @click="setActiveTag($event,tag)">
+          {{ tag }}
+        </div>
       </div>
-    </div>
+    </vue-page-header>
+
     <section class="section-default page-content">
       <div class="section-container">
         <div class="section-content">
@@ -19,6 +24,7 @@
 </template>
 
 <script>
+import VuePageHeader from '@nylira/vue-page-header'
 import { mapGetters } from 'vuex'
 import { union, orderBy } from 'lodash'
 import $ from 'jquery'
@@ -26,6 +32,7 @@ import CardBounty from './CardBounty'
 export default {
   name: 'page-bounties-index',
   components: {
+    VuePageHeader,
     CardBounty
   },
   computed: {
@@ -103,7 +110,7 @@ export default {
       background darken(acolor,25%)
 
 @media screen and (min-width: 720px)
-  .page-career-index
+  .page-bounties-index
     .tags
       margin-top 2*x
 
@@ -111,7 +118,7 @@ export default {
       font-size x
     
 @media screen and (min-width: 960px)
-  .page-career-index
+  .page-bounties-index
     .tags
       justify-content flex-start
 </style>

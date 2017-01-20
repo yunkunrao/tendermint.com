@@ -1,9 +1,11 @@
 <template>
-  <div class="page-about split-page">
-    <div class="page-header">
-      <h1>About</h1>
-      <p>Tendermint's mission: to bring simplicity, security, and speed to the world&rsquo;s blockchains.</p>
-    </div>
+  <div class="page-split page-about">
+    <vue-page-header
+      title="About"
+      subtitle="Tendermint's mission: to bring simplicity, security, and speed to the world&rsquo;s blockchains."
+      type="split"
+      header-style="tendermint">
+    </vue-page-header>
 
     <div class="page-content">
     <section class="section-default section-team-portraits">
@@ -26,11 +28,13 @@
 </template>
 
 <script>
+import VuePageHeader from '@nylira/vue-page-header'
 import { mapGetters } from 'vuex'
 import CardPerson from './CardPerson'
 export default {
   name: 'page-about',
   components: {
+    VuePageHeader,
     CardPerson
   },
   computed: {

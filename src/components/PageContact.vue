@@ -1,9 +1,11 @@
 <template>
-  <div class="split-page page-contact">
-    <div class="page-header">
-      <h1>Contact</h1>
-      <p>Get in touch with us.</p>
-    </div>
+  <div class="page-split page-contact">
+    <vue-page-header
+      title="Contact"
+      subtitle="Get in touch with us"
+      type="split"
+      header-style="tendermint">
+    </vue-page-header>
     <section class="section-default page-content">
       <div class="section-container">
         <vue-article-body>
@@ -26,10 +28,12 @@
 </template>
 
 <script>
+import VuePageHeader from '@nylira/vue-page-header'
 import VueArticleBody from '@nylira/vue-article-body'
 export default {
   name: 'page-contact',
   components: {
+    VuePageHeader,
     VueArticleBody
   },
   mounted () {

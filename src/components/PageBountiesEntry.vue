@@ -1,9 +1,10 @@
 <template>
   <div class="page-bounties-entry">
-    <div class="page-header page-header-wide">
-      <h1>{{ bounty.title }}</h1>
-      <p>{{ bounty.subtitle }}</p>
-    </div>
+    <vue-page-header
+      :title="bounty.title"
+      :subtitle="bounty.subtitle"
+      header-style="tendermint">
+    </vue-page-header>
     <section class="section-default">
       <div class="section-container">
         <div class="section-content">
@@ -26,11 +27,13 @@
 
 <script>
 import VueArticleBody from '@nylira/vue-article-body'
+import VuePageHeader from '@nylira/vue-page-header'
 import { mapGetters } from 'vuex'
 export default {
   name: 'page-bounties-entry',
   components: {
-    VueArticleBody
+    VueArticleBody,
+    VuePageHeader
   },
   computed: {
     bounty () {
