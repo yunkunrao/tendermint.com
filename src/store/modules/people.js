@@ -46,7 +46,7 @@ const state = {
       slug: 'crain-brian',
       name: 'Brian Fabian Crain',
       title: 'Chief Operating Officer',
-      bio: 'Co-Host Epicenter Bitcoin. Founder & Organizer Blockchain Meetup Berlin - Berlin, Germany',
+      bio: 'For Brian distributed ledger combined interests in economics, game theory, technology and visions of a radically different future. In Tendermint, he wants to walk the tightrope between pragmatism and idealism.',
       ids: {
         email: 'brian',
         github: 'crainbf',
