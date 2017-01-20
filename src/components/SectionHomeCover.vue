@@ -48,6 +48,7 @@ export default {
   background mcolor
   position relative
   border-bottom 1px solid lighten(mcolor, 10%)
+  margin-top -3rem
 
   .section-container
     margin-top 3rem
