@@ -9,6 +9,11 @@
     <div class="title">{{ person.title }}</div>
     <div class="bio" v-if="person.bio">{{ person.bio }}</div>
     <div class="ids">
+      <a v-if="person.ids.email"
+        :href="'mailto:' + person.ids.email + '@tendermint.com'">
+        <i class="fa fa-envelope"></i>
+        <span class="label">{{ person.ids.email }}@tendermint.com</span>
+      </a>
       <a v-if="person.ids.github" :href="'https://github.com/' + person.ids.github">
         <i class="fa fa-github"></i>
         <span class="label">github.com/{{ person.ids.github }}</span>
