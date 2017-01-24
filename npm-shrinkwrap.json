@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "dependencies": {
     "@nylira/vue-article-body": {
-      "version": "1.2.0",
-      "from": "@nylira/vue-article-body@latest",
-      "resolved": "https://registry.npmjs.org/@nylira/vue-article-body/-/vue-article-body-1.2.0.tgz"
+      "version": "1.2.1",
+      "from": "@nylira/vue-article-body@1.2.1",
+      "resolved": "https://registry.npmjs.org/@nylira/vue-article-body/-/vue-article-body-1.2.1.tgz"
     },
     "@nylira/vue-button": {
       "version": "1.4.1",
