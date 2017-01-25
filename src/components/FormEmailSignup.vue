@@ -4,6 +4,7 @@
     <div class="input-group">
       <vue-input
         id="mce-EMAIL"
+        name="EMAIL"
         input-type="email"
         input-size="large"
         input-placeholder="name@example.com"
