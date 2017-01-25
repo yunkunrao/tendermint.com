@@ -83,6 +83,7 @@ const state = {
       bio: 'Ash Han is a founder of Finector, a leading research/consulting firm specialized in distributed ledger technology. He is an advisor of various blockchain-related startups such as Tendermint and Chronobank.io and also an author of multiple books and papers on blockchain.',
       category: 'advisor',
       ids: {
+        email: 'ashhan',
         website: 'seunghwanhan.com'
       }
     }
