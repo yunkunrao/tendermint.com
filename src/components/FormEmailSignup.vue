@@ -1,5 +1,5 @@
 <template>
-  <form action="//tendermint.us8.list-manage1.com/subscribe/post?u=89d5a312be95ee3f0c9cf7ecd&amp;id=4af1217bca" method="post" name="mc-embedded-subscribe-form" class="form-email-signup validate form" target="_blank" novalidate>
+  <form action="//tendermint.us8.list-manage.com/subscribe/post?u=89d5a312be95ee3f0c9cf7ecd&amp;id=4af1217bca" method="post" name="mc-embedded-subscribe-form" class="form-email-signup validate form" target="_blank" novalidate>
 
     <div class="input-group">
       <vue-input
