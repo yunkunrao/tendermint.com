@@ -53,7 +53,7 @@ initial proof-of-concepts, or applications that don’t require high transaction
 throughput.
 
 For more details, see our [guide on app development and the
-ABCI](https://tendermint.com/docs/guides/app-development).
+ABCI](/docs/guides/app-development).
 
 **Persistence and Handshakes**
 
@@ -111,12 +111,3 @@ To find out more, check out [our GitHub
 issues](https://github.com/tendermint/tendermint/issues), follow us on
 [Twitter](http://twitter.com/tendermint_team), or ask us questions directly on
 [our Slack](http://forum.tendermint.com:3000/).
-
-### [Jae Kwon](https://hackernoon.com/@jaekwon)
-
-Tendermint
-
-### [Hacker Noon](https://hackernoon.com/?source=footer_card)
-
-how hackers start their afternoons.
-
