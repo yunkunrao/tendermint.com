@@ -34,7 +34,7 @@ export default {
     entrySubtitle () {
       let value = this.entry.dateFriendly
       if (this.entry.author) {
-        value += ` by ${this.entry.author} - <a href="#comments">Comments</a>`
+        value += ` by ${this.entry.author}`
       }
       return value
     },
