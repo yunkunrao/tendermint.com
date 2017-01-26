@@ -1,17 +1,15 @@
 ~~~
 title: "Tendermint 0.8 Release"
-description: "Tendermint 0.8.0 is the culmination of four months of work, providing many new
-features and vastly improved stability for network deployments both big and
-small.
-"
+description: "Tendermint 0.8.0 is the culmination of four months of work, providing many new features and vastly improved stability for network deployments both big and small."
 date: "2017-01-25"
+author: "Jae Kwon"
 ~~~
 
 
 > *Credits to our [team](https://tendermint.com/about),
 > [community](http://forum.tendermint.com:3000/), and especially [Ethan
 > Buchman](https://twitter.com/buchmanster) for the hard work in making this
-release possible (and most of this post, to be honest).
+> release possible (and most of this post, to be honest).
 > View blog post on [Medium](https://hackernoon.com/tendermint-0-8-release-eff1d308b583#.vwmgic4s5).*
 
 Tendermint 0.8.0 is the culmination of four months of work, providing many new
