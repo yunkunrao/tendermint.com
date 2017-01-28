@@ -3,7 +3,7 @@
 import Vue from 'vue'
 import VueHead from 'vue-head'
 import VueRouter from 'vue-router'
-import VueAnalytics from 'vue-ua'
+import VueAnalytics from 'vue-analytics'
 
 import App from './App'
 
@@ -15,13 +15,7 @@ sync(store, router)
 
 Vue.use(VueHead)
 Vue.use(VueRouter)
-Vue.use(VueAnalytics, {
-  appName: 'tendermint.com',
-  appVersion: '1.0',
-  trackingId: 'UA-51029217-1',
-  debug: false,
-  vueRouter: router
-})
+Vue.use(VueAnalytics, {id: 'UA-51029217-1', router: router})
 
 /* eslint no-unused-vars: 0 */
 const app = new Vue({
