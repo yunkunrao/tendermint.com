@@ -7,6 +7,7 @@
       <router-link :to="'/docs/roadmap'">Roadmap</router-link>
       <!--<router-link :to="'/docs/definitions'">Definitions</router-link>-->
       <div class="title">Guides</div>
+      <router-link :to="'/docs/guides/install'">Install from Source</router-link>
       <router-link :to="'/docs/guides/using-tendermint'">Using Tendermint</router-link>
       <router-link :to="'/docs/guides/app-development'">App Development</router-link>
       <router-link :to="'/docs/guides/app-architecture'">App Architecture</router-link>

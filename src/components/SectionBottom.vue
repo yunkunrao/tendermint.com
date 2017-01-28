@@ -4,11 +4,11 @@
       <h2>Get Started</h2>
       <vue-button
         id="download-button"
-        @click.native="go('/intro/getting-started/install')"
+        @click.native="go('/intro/getting-started/downoad')"
         btn-size="large"
         btn-icon="cloud-download"
         btn-style="tendermint"
-        btn-value="Install Tendermint">
+        btn-value="Download">
       </vue-button>
     </section>
     <section class="section-bottom">

@@ -8,11 +8,11 @@
       <p class="introduction">Byzantine fault-tolerant replicated state machines in any programming language</p>
       <div class="btns">
         <vue-button
-          @click.native="go('/intro/getting-started/install')"
+          @click.native="go('/intro/getting-started/download')"
           btn-size="large"
           btn-icon="cloud-download"
           btn-style="tendermint"
-          btn-value="Install Tendermint">
+          btn-value="Download">
         </vue-button>
         <vue-button
           @click.native="go('/intro')"

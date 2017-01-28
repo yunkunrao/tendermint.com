@@ -40,7 +40,7 @@ this is what made Tendermint a Proof-of-Stake algorithm.
 Since then, Tendermint has evolved to be a general purpose blockchain consensus engine that can host arbitrary application states.
 That means it can be used as a plug-and-play replacement for the consensus engines of other blockchain software.
 So one can take the current Ethereum code base, whether in Rust, or Go, or Haskell, and run it as a ABCI application
-using Tendermint consensus. Indeed, [we did that](https://github.com/tendermint/geth-abci).
+using Tendermint consensus. Indeed, [we did that](https://github.com/tendermint/ethermint).
 And we plan to do the same for Bitcoin, ZCash, and various other deterministic applications as well.
 
 Another example of a cryptocurrency application built on Tendermint is [Cosmos](http://cosmos.network)

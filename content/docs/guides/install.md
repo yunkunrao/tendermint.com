@@ -1,4 +1,4 @@
-# Install Tendermint
+# Install From Source
 
 ## Install Go
 
