@@ -1,3 +1,4 @@
 # Download Tendermint
 
-Work in progress!
+Work in progress! For now, please [install from source](/docs/guides/install).
+
