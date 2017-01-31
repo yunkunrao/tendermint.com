@@ -1,0 +1,46 @@
+.download-matrix
+  font-family sans
+  font-size 1rem
+  margin-bottom 1.58rem
+
+  .os
+    display flex
+    flex-flow column
+    border 1px solid bc
+    margin-bottom 0.79rem
+
+    &.os-mac .os-title:before
+      content '\f179'
+    &.os-linux .os-title:before
+      content '\f17c'
+    &.os-win .os-title:before
+      content '\f17a'
+
+    .os-title
+      background c-app-fg
+      border-bottom 1px solid bc
+
+      font-weight bold
+      line-height 2rem
+      padding 0 0.5rem
+      background lighten(bc,75%)
+      &:before
+        font-family FontAwesome
+        display inline
+        margin-right 0.5rem
+        color txt
+
+    .bin
+      display flex
+      height 2rem
+      align-items center
+      .key, .value
+        padding 0 0.5rem
+      .key
+        flex 2
+      .value
+        flex 3
+        color light
+        a
+          color link
+          border-color link

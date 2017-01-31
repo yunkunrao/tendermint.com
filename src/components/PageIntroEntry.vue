@@ -19,7 +19,6 @@
 <script>
 import Master from './PageIntroMaster'
 import VueArticleBody from '@nylira/vue-article-body'
-
 import TendermintVs from '../content/intro/tendermint-vs.vue'
 import WhatIsTendermint from '../content/intro/what-is-tendermint.vue'
 import AbciOverview from '../content/intro/abci-overview.vue'

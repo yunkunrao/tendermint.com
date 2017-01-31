@@ -1,19 +1,16 @@
 .master-detail
-  padding-top 2.4rem
-  min-height 100vh
   background c-app-fg
+  min-height 100vh
 
 .master-detail + .app-bottom .section-bottom
   display none
-
-.detail
-  padding 0 1rem 1rem
 
 .master 
   position fixed
   top 0
   left 0
   width 100vw
+  z-index 1
 
   nav
     padding-top 3*x
@@ -64,18 +61,9 @@
       color lighten(mcolor,75%)
       border-left-color link
 
-@media screen and (min-width: 360px)
-  .detail
-    padding-left 1.5*x
-    padding-right 1.5*x
-
-@media screen and (min-height: 400px)
-  .master-detail
-    padding-top 3*x
-
 @media screen and (min-width: 720px)
   .master
-    width 33.3vw
+    width 30vw
 
     nav
       padding-top 3.5*x
@@ -84,21 +72,17 @@
       display none !important
 
   .detail
-    margin-left 33.3vw
-    padding-left 2*x
-    padding-right 2*x
+    margin-left 30vw
+    padding-left 0.5rem
+    padding-right 0.5rem
 
   .master-detail + .app-bottom .app-footer
     .sections
-      padding-left 240px + 2*x !important
+      padding-left 216px + 3*x !important
     section
       flex 0 0 50% !important
 
 @media screen and (min-width: 960px)
-  .detail
-    padding-left 4*x
-    padding-right 4*x
-
   .master-detail + .app-bottom .app-footer
     .sections
       padding-left 320px + x !important
@@ -106,10 +90,12 @@
     section
       flex 0 0 25% !important
 
+  .detail
+    padding-left 1.75rem
+    padding-right 1.75rem
+
 @media screen and (min-width: 1200px)
   .master
     width 25vw
   .detail
     margin-left 25vw
-    padding-bottom 6rem
-    padding-top 2rem

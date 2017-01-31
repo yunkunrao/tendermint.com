@@ -1,7 +1,7 @@
 <template>
   <div class="master-detail page-docs-entry">
     <master></master>
-    <div class="detail"><div class="article-body">
+    <div class="detail">
       <vue-article-body>
         <index v-if="r()"></index>
         <faq v-if="r('faq')"></faq>
