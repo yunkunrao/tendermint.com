@@ -18,7 +18,7 @@
   "dependencies": {
     "@nylira/vue-article-body": "^1.2.1",
     "@nylira/vue-button": "^1.4.1",
-    "@nylira/vue-input": "^1.3.0",
+    "@nylira/vue-input": "^1.4.0",
     "@nylira/vue-page-header": "^1.3.5",
     "autoprefixer": "^6.6.1",
     "babel-core": "^6.21.0",
