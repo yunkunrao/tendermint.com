@@ -86,6 +86,16 @@ const state = {
         email: 'ashhan',
         website: 'seunghwanhan.com'
       }
+    },
+    {
+      slug: 'yang-jim',
+      name: 'Jim Yang',
+      title: 'Advisor',
+      bio: 'Jim Yang co-founded Identyx, where he served as CEO until its acquisition by Red Hat. Identyx developed an open source enterprise identity management software.',
+      category: 'advisor',
+      ids: {
+        linkedin: 'jimyang'
+      }
     }
   ]
 }
