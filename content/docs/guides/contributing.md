@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for considering making contributions to Tendermint!
+Thanks for considering making contributions to Tendermint and related repositories (Basecoin, Merkleeyes, etc.)!
 
 Please follow standard github best practices: fork the repo, branch from the tip of develop, make some commits, and submit a pull request to develop. See the [open issues](https://github.com/tendermint/tendermint/issues) for things we need help with!
 
@@ -8,27 +8,29 @@ Please make sure to use `gofmt` before every commit - the easiest way to do this
 
 ## Forking
 
-Please note that Go requires absolute paths. So to work on a fork of tendermint, you have to still work in `$GOPATH/src/github.com/tendermint/tendermint`. But you can check out a branch from your fork in that directory. For instance, to work on a branch from my fork, I would:
+Please note that Go requires code to live under absolute paths, which complicates forking. 
+While my fork lives at `https://github.com/ebuchman/tendermint`, 
+the code should never exist at  `$GOPATH/src/github.com/ebuchman/tendermint`. 
+Instead, we use `git remote` to add the fork as a new remote for the original repo,
+`$GOPATH/src/github.com/tendermint/tendermint `, and do all the work there.
 
-```
-cd $GOPATH/src/github.com/tendermint/tendermint
-git remote add ebuchman https://github.com/ebuchman/tendermint
-git fetch -a ebuchman
-git checkout -b mybranch ebuchman/mybranch
-```
+For instance, to create a fork and work on a branch of it, I would:
 
-Now I will have the branch `mybranch` from my fork at `github.com/ebuchman/tendermint` checked out, but locally it's in `$GOPATH/src/github.com/tendermint/tendermint`, rather than `$GOPATH/src/github.com/ebuchman/tendermint`, which should actually never exist. 
+  * Create the fork on github, using the fork button.
+  * Go to the original repo checked out locally (ie. `$GOPATH/src/github.com/tendermint/tendermint`)
+  * `git remote rename origin upstream`
+  * `git remote add origin git@github.com:ebuchman/basecoin.git`
 
-Now I can make changes, commit, and push to my fork:
+Now `origin` refers to my fork and `upstream` refers to the tendermint version.
+So I can `git push -u origin master` to update my fork, and make pull requests to tendermint from there.
+Of course, replace `ebuchman` with your git handle.
 
-```
-< make some changes >
-git add -u
-git commit -m "... changes ..."
-git push ebuchman mybranch
-```
+To pull in updates from the origin repo, run
 
-Then I can submit pull requests from my fork!
+    * `git fetch upstream`
+    * `git rebase upstream/master` (or whatever branch you want)
+
+Please don't make Pull Requests to `master`.
 
 ## Dependencies
 
