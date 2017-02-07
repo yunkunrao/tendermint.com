@@ -10,6 +10,7 @@ const routes = [
   { path: '/intro/first-tmsp', redirect: '/intro/first-abci' },
   { path: '/intro/install', redirect: '/intro/download' },
   { path: '/intro/:page', component: page('PageIntroEntry') },
+  { path: '/intro/getting-started/install', redirect: '/docs/guides/install' },
   { path: '/intro/getting-started/:page', component: page('PageIntroEntry') },
 
   // Docs
@@ -48,6 +49,7 @@ const routes = [
   { path: '/media/:entry', redirect: '/presentations/:entry' },
   { path: '/posts', redirect: '/blog' },
   { path: '/posts/:entry', redirect: '/blog/:entry' },
+  { path: '/guides/contributing', redirect: '/docs/guides/contributing' },
 
   // wildcards
   { path: '/404', component: page('Page404') },
