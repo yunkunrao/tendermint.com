@@ -1,8 +1,8 @@
 # Block Structure
 
 The tendermint consensus engine records all agreements by a supermajority of
-nodes into a blockchain, which is replicated among all node.  This blockchain
-is accessible via various rpc endpoint, mainly `/block?height=` to get the full
+nodes into a blockchain, which is replicated among all nodes.  This blockchain
+is accessible via various rpc endpoints, mainly `/block?height=` to get the full
 block, as well as `/blockchain?minHeight=_&maxHeight=_` to get a list of headers.
 But what exactly is stored in these blocks?
 
@@ -17,21 +17,20 @@ A [Block](./tendermint-types.md#Block) contains:
 The first thing we notice here is that the signatures returned along with block `H`,
 are those validating block `H-1`.  This can be a little confusing, but we must also
 consider that the [Header](./tendermint-types.md#Header) also contains the `LastCommitHash`.
-It would be impossible for the Header to maintain the hash for the commits that
-were signing the same Header (infinite loop here). But when we get block `H`, we
+It would be impossible for a Header to include the commits that sign it (infinite loop here). But when we get block `H`, we
 find `Header.LastCommitHash`, which must match the hash of `LastCommit`.
 
 ### Header
 
 The [Header](./tendermint-types.md#Header) contains lots of information (the link
-has the up-to-date info).  Notably, it maintains a the `Height`, the `LastBlockID`
+has the up-to-date info).  Notably, it maintains the `Height`, the `LastBlockID`
 (to make it a chain), and hashes of the data, the app state, and the validator set.
 This is important, as the only item that is signed by the validators is the `Header`,
 and all other data must be validated against one of the merkle hashes in the `Header`.
 
 The `DataHash` can provide a nice check on the [Data](./tendermint-types.md#Data)
-returned in this same block. If you streaming blocks and reacting on the data,
-you should at least validate the `DataHash` in valid, if not waiting for the
+returned in this same block. If you are streaming blocks and reacting on the data,
+you should at least validate the `DataHash` is valid, if not waiting for the
 `LastCommit` from the next block to make sure it was properly signed.
 
 The `ValidatorHash` contains a hash of the current
@@ -64,15 +63,15 @@ and verifying the votes is extremely important.
 As mentioned above, in order to find the `precommit votes` for block header `H`,
 we need to query block `H+1`.  Then we need to check the votes, make sure they
 really are for that block, and properly formatted. Much of this code is implemented
-in go in the [light-client](https://github.com/tendermint/light-client) package,
+in Go in the [light-client](https://github.com/tendermint/light-client) package,
 especially [Node.SignedHeader](https://github.com/tendermint/light-client/blob/develop/rpc/node.go#L117).
 If you look at the code, you will notice that we need to provide the `chainID`
 of the blockchain in order to properly calculate the votes.  This is to protect
 anyone from swapping votes between chains to fake (or frame) a validator.
-Also note that this `chainID` is in the `config.toml` from the tendermint app,
-not the `genesis.json` from the basecoin app (that is a different chainID...).
+Also note that this `chainID` is in the `genesis.json` from _Tendermint_,
+not the `genesis.json` from the basecoin app ([that is a different chainID...](https://github.com/tendermint/basecoin/issues/32).
 
-Once we have those votes, and checked they are all pointing to the same block,
+Once we have those votes,
 and we calculated the proper [sign bytes](./tendermint-types.md#Vote.WriteSignBytes)
 using the chainID and a [nice helper function](./tendermint-types.md#SignBytes),
 we can verify them.  The light client is responsible for maintaining a set of
@@ -81,8 +80,8 @@ as the `Signature`. Assuming we have a local copy of the trusted validator set,
 we can look up the `Public Key` of the validator given its `Address`, then
 verify that the `Signature` matches the `SignBytes` and `Public Key`.
 Then we sum up the total voting power of all validators, whose votes fulfilled
-all these stringent requirements. If the total number of valid votes is greater
-than 2/3 of the total of all validator votes, then we can finally trust the
+all these stringent requirements. If the total number of voting power for a single block is greater
+than 2/3 of all voting power, then we can finally trust the
 block header, the AppHash, and the proof we got from the ABCI application.
 
 To make this a bit more concrete, you can take a look at a
@@ -93,12 +92,12 @@ proxy server [proof call](https://github.com/tendermint/light-client/blob/develo
 or the [test code for auditing](https://github.com/tendermint/light-client/blob/develop/rpc/tests/node_test.go#L102).
 
 #### Vote Sign Bytes
-The `sign-bytes` of a vote is produced by taking a [`stable-json`](https://github.com/substack/json-stable-stringify)-like deterministic JSON [`wire`](/docs/internals/wire-protocol) encoding of the vote (excluding the `Signature` field), and wrapping it with `{"chain_id":"tendermint","vote":...}`.
+The `sign-bytes` of a vote is produced by taking a [`stable-json`](https://github.com/substack/json-stable-stringify)-like deterministic JSON [`wire`](/docs/internals/wire-protocol) encoding of the vote (excluding the `Signature` field), and wrapping it with `{"chain_id":"my_chain","vote":...}`.
 
 For example, a precommit vote might have the following `sign-bytes`:
 
 ```json
-{"chain_id":"tendermint","vote":{"block_hash":"611801F57B4CE378DF1A3FFF1216656E89209A99","block_parts_header":{"hash":"B46697379DBE0774CC2C3B656083F07CA7E0F9CE","total":123},"height":1234,"round":1,"type":2}}
+{"chain_id":"my_chain","vote":{"block_hash":"611801F57B4CE378DF1A3FFF1216656E89209A99","block_parts_header":{"hash":"B46697379DBE0774CC2C3B656083F07CA7E0F9CE","total":123},"height":1234,"round":1,"type":2}}
 ```
 
 ### Block Hash
@@ -113,7 +112,7 @@ A transaction is any sequence of bytes.  It is up to your [ABCI](https://github.
 
 Many of these data structures refer to the [BlockID](./tendermint-types.md#BlockID),
 which is the `BlockHash` (hash of the block header, also referred to by the next block)
-along with the `PartSet`.  The `PartSet` is explained below and is used internally
+along with the `PartSetHeader`.  The `PartSetHeader` is explained below and is used internally
 to orchestrate the p2p propogation.  For clients, it is basically opaque bytes,
 but they must match for all votes.
 
@@ -123,7 +122,7 @@ PartSet is used to split a byteslice of data into parts (pieces) for transmissio
 By splitting data into smaller parts and computing a Merkle root hash on the list,
 you can verify that a part is legitimately part of the complete data, and the
 part can be forwarded to other peers before all the parts are known.  In short,
-it's a fast way to propagate a large file over a gossip network.
+it's a fast way to securely propagate a large chunk of data (like a block) over a gossip network.
 
 PartSet was inspired by the LibSwift project.
 
