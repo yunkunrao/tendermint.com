@@ -69,7 +69,7 @@ If you look at the code, you will notice that we need to provide the `chainID`
 of the blockchain in order to properly calculate the votes.  This is to protect
 anyone from swapping votes between chains to fake (or frame) a validator.
 Also note that this `chainID` is in the `genesis.json` from _Tendermint_,
-not the `genesis.json` from the basecoin app ([that is a different chainID...](https://github.com/tendermint/basecoin/issues/32).
+not the `genesis.json` from the basecoin app ([that is a different chainID...](https://github.com/tendermint/basecoin/issues/32)).
 
 Once we have those votes,
 and we calculated the proper [sign bytes](./tendermint-types.md#Vote.WriteSignBytes)
@@ -115,6 +115,10 @@ which is the `BlockHash` (hash of the block header, also referred to by the next
 along with the `PartSetHeader`.  The `PartSetHeader` is explained below and is used internally
 to orchestrate the p2p propogation.  For clients, it is basically opaque bytes,
 but they must match for all votes.
+
+### PartSetHeader
+
+The [PartSetHeader](./tendermint-types.md#PartSetHeader) contains the total number of pieces in a [PartSet](./tendermint-types.md#PartSet), and the Merkle root hash of those pieces.
 
 ### PartSet
 
