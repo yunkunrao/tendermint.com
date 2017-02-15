@@ -1,7 +1,10 @@
 <template>
 <div class="card-person">
-  <div class="photo">
-    <img :src="avatarSrc(person.slug)" :alt="person.name">
+  <div class="avatar-container">
+    <div class="avatar">
+      <img v-if="person.slug !==''" :src="avatarSrc(person.slug)" :alt="person.name">
+      <i v-else class="fa fa-user"></i>
+    </div>
   </div>
   <div class="data">
     <div class="name">{{ person.name }}</div>
@@ -55,29 +58,49 @@ export default {
 @require '../styles/variables.styl'
 
 .card-person
-  margin 0 auto 2*x
+  margin 0 auto 2rem
+
   display flex
   flex-flow column nowrap
-  align-items stretch
+  align-items justify
+
   padding 0 x
   max-width 60*x
   &:last-of-type
     margin-bottom 0
 
-  .photo, .title
+  .avatar-container, .title
     margin-bottom x
 
   .bio
     margin-bottom 1.5*x
 
-  .photo
-    img
-      border 1px solid bc
-      padding 0.25*x
+  .avatar-container
+    display flex
+    justify-content center
+
+  .avatar
+    border 1px solid bc
+    padding 0.25rem
+    height 10rem
+    width 10rem
+
+    display flex
+
+    img, i.fa
+      flex 1
+      width 100%
+      height auto
       display block
-      max-width 14*x
-      max-height 14*x
-      margin 0 auto
+
+    i.fa
+      font-size 4rem
+      color link
+      background bc
+      display flex
+      align-items center
+      justify-content center
+      color link
 
   .name, .title
     text-align center
@@ -116,7 +139,7 @@ export default {
     flex-flow row
     margin-bottom 3*x
 
-    .photo
+    .avatar-container
       margin-bottom 0
 
     .data
