@@ -31,7 +31,7 @@ const state = {
     {
       slug: 'peng-zhong',
       name: 'Peng Zhong',
-      title: 'Chief Design Officer',
+      title: 'CDO',
       bio: 'Peng aims to dramatically increase blockchain adoption through better usability design. He hopes to to turning cutting-edge technology into mundane things that everyone can use.',
       ids: {
         email: 'peng',
@@ -45,7 +45,7 @@ const state = {
     {
       slug: 'brian-crain',
       name: 'Brian Fabian Crain',
-      title: 'Chief Operating Officer',
+      title: 'COO',
       bio: 'For Brian distributed ledger combined interests in economics, game theory, technology and visions of a radically different future. In Tendermint, he wants to walk the tightrope between pragmatism and idealism.',
       ids: {
         email: 'brian',
@@ -59,7 +59,7 @@ const state = {
     {
       slug: 'anton-kaliaev',
       name: 'Anton Kaliaev',
-      title: 'Software Developer',
+      title: 'Software Engineer',
       bio: '',
       ids: {
         email: 'anton',
@@ -73,7 +73,7 @@ const state = {
     {
       slug: 'ethan-frey',
       name: 'Ethan Frey',
-      title: 'Software Developer',
+      title: 'Software Engineer',
       bio: '',
       ids: {
         email: 'ethanfrey',
@@ -98,7 +98,7 @@ const state = {
     {
       slug: 'matt-bell',
       name: 'Matt Bell',
-      title: 'Software Developer',
+      title: 'Software Engineer',
       bio: '',
       ids: {
         email: 'matt',
@@ -112,7 +112,7 @@ const state = {
     {
       slug: 'rigel-rozanski',
       name: 'Rigel Rozanski',
-      title: 'Software Developer',
+      title: 'Software Engineer',
       bio: '',
       ids: {
         email: 'rigel',
@@ -125,7 +125,7 @@ const state = {
     {
       slug: 'paul-homer',
       name: 'Paul Homer',
-      title: 'Software Developer',
+      title: 'Software Engineer',
       bio: '',
       ids: {
         email: 'paul',
