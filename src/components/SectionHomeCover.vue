@@ -7,20 +7,20 @@
       <p class="tagline">Blockchain Consensus</p>
       <p class="introduction">Byzantine fault-tolerant replicated state machines in any programming language</p>
       <div class="btns">
-        <vue-button
+        <btn
           @click.native="go('/intro/getting-started/download')"
-          btn-size="large"
-          btn-icon="cloud-download"
-          btn-style="tendermint"
-          btn-value="Download">
-        </vue-button>
-        <vue-button
+          size="lg"
+          icon="cloud-download"
+          theme="tendermint"
+          value="Download">
+        </btn>
+        <btn
           @click.native="go('/intro')"
-          btn-size="large"
-          btn-icon="question"
-          btn-style="alpha-black"
-          btn-value="Learn More">
-        </vue-button>
+          size="lg"
+          icon="question"
+          theme="alpha-black"
+          value="Learn More">
+        </btn>
       </div>
       <p class="source"><i class="fa fa-github"></i> View source code on <a href="https://github.com/tendermint/tendermint">GitHub</a></p>
     </div>
@@ -29,11 +29,11 @@
 
 <script>
 import SectionHomeCoverAlert from './SectionHomeCoverAlert.vue'
-import VueButton from '@nylira/vue-button'
+import Btn from '@nylira/vue-button'
 export default {
   components: {
     SectionHomeCoverAlert,
-    VueButton
+    Btn
   },
   methods: {
     go (destination) { this.$router.push(destination) }
@@ -79,7 +79,7 @@ export default {
 
   .btns
     margin-bottom x
-    .pz-button
+    .ni-btn-wrapper
       width 100%
       margin-bottom 0.5*x
       max-width 16*x
@@ -123,7 +123,7 @@ export default {
       display flex
       flex-flow row nowrap
       max-width 32*x
-      .pz-button
+      .ni-btn-wrapper
         margin 0
         margin-right x
 

@@ -50,7 +50,7 @@ function vueify (file) {
     removeEmptyElements: true
   })
 
-  var final = `<template><div>${minified}</div></template>`
+  var final = `<template><div>${minified}</div></template>\n`
   return final
 }
 

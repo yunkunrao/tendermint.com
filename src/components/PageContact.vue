@@ -1,14 +1,14 @@
 <template>
   <div class="page-split page-contact">
-    <vue-page-header
+    <page-header
       title="Contact"
       subtitle="Get in touch with us"
       type="split"
-      header-style="tendermint">
-    </vue-page-header>
+      theme="tendermint">
+    </page-header>
     <section class="section-default page-content">
       <div class="section-container">
-        <vue-article-body>
+        <article-body>
           <h2>Email</h2>
           <p>Questions or comments for the Tendermint team? Email us at <a href="mailto:hello@tendermint.com">hello@tendermint.com</a> and we'll get back to you promptly.</p>
           <h2>Slack</h2>
@@ -21,20 +21,20 @@
             <li><a href="https://www.linkedin.com/company/tendermint">LinkedIn</a>
             <li><a href="https://twitter.com/tendermint_team">Twitter</a>
           </ul>
-        </vue-article-body>
+        </article-body>
       </div>
     </section>
   </div>
 </template>
 
 <script>
-import VuePageHeader from '@nylira/vue-page-header'
-import VueArticleBody from '@nylira/vue-article-body'
+import PageHeader from '@nylira/vue-page-header'
+import ArticleBody from '@nylira/vue-article-body'
 export default {
   name: 'page-contact',
   components: {
-    VuePageHeader,
-    VueArticleBody
+    PageHeader,
+    ArticleBody
   },
   mounted () {
     document.title = 'Contact - Tendermint'

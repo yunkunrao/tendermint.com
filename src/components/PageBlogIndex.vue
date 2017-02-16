@@ -1,11 +1,11 @@
 <template>
   <div class="page-split page-blog-index">
-    <vue-page-header
+    <page-header
       title="Blog"
       subtitle="Learn about what we&rsquo;re working on, right this moment. <a href='/static/feed.xml'>Subscribe</a>"
       type="split"
-      header-style="tendermint">
-    </vue-page-header>
+      theme="tendermint">
+    </page-header>
 
     <section class="section-default page-content">
       <div class="section-container">
@@ -22,14 +22,14 @@
 </template>
 
 <script>
-import VuePageHeader from '@nylira/vue-page-header'
+import PageHeader from '@nylira/vue-page-header'
 import { mapGetters } from 'vuex'
 import CardPost from './CardPost'
 
 export default {
   name: 'page-blog-index',
   components: {
-    VuePageHeader,
+    PageHeader,
     CardPost
   },
   computed: mapGetters({

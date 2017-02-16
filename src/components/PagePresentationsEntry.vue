@@ -1,11 +1,11 @@
 <template>
   <div class="page-presentations-entry">
-    <vue-page-header
+    <page-header
       :title="entry.title"
       :subtitle="'Uploaded on ' + entry.date"
       type="center"
-      header-style="tendermint">
-    </vue-page-header>
+      theme="tendermint">
+    </page-header>
 
     <section class="section-default">
       <div class="section-container">
@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import VuePageHeader from '@nylira/vue-page-header'
+import PageHeader from '@nylira/vue-page-header'
 import { mapGetters } from 'vuex'
 import $ from 'jquery'
 import SectionComments from './SectionComments'
@@ -28,7 +28,7 @@ import PagePresentationsFooter from './PagePresentationsFooter'
 export default {
   name: 'page-presentations-entry',
   components: {
-    VuePageHeader,
+    PageHeader,
     PagePresentationsFooter,
     SectionComments
   },

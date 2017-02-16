@@ -1,22 +1,28 @@
 <template><div><h1>Contributing</h1>
-<p>Thanks for considering making contributions to Tendermint!</p>
+<p>Thanks for considering making contributions to Tendermint and related repositories (Basecoin, Merkleeyes, etc.)!</p>
 <p>Please follow standard github best practices: fork the repo, branch from the tip of develop, make some commits, and submit a pull request to develop. See the <a href=https://github.com/tendermint/tendermint/issues>open issues</a> for things we need help with!</p>
 <p>Please make sure to use <code>gofmt</code> before every commit - the easiest way to do this is have your editor run it for you upon saving a file.</p>
 <h2>Forking</h2>
-<p>Please note that Go requires absolute paths. So to work on a fork of tendermint, you have to still work in <code>$GOPATH/src/github.com/tendermint/tendermint</code>. But you can check out a branch from your fork in that directory. For instance, to work on a branch from my fork, I would:</p>
-<pre><code>cd $GOPATH/src/github.com/tendermint/tendermint
-git remote add ebuchman https://github.com/ebuchman/tendermint
-git fetch -a ebuchman
-git checkout -b mybranch ebuchman/mybranch
+<p>Please note that Go requires code to live under absolute paths, which complicates forking.
+While my fork lives at <code>https://github.com/ebuchman/tendermint</code>,
+the code should never exist at  <code>$GOPATH/src/github.com/ebuchman/tendermint</code>.
+Instead, we use <code>git remote</code> to add the fork as a new remote for the original repo,
+<code>$GOPATH/src/github.com/tendermint/tendermint</code>, and do all the work there.</p>
+<p>For instance, to create a fork and work on a branch of it, I would:</p>
+<ul>
+<li>Create the fork on github, using the fork button.</li>
+<li>Go to the original repo checked out locally (ie. <code>$GOPATH/src/github.com/tendermint/tendermint</code>)</li>
+<li><code>git remote rename origin upstream</code></li>
+<li><code>git remote add origin git@github.com:ebuchman/basecoin.git</code></li>
+</ul>
+<p>Now <code>origin</code> refers to my fork and <code>upstream</code> refers to the tendermint version.
+So I can <code>git push -u origin master</code> to update my fork, and make pull requests to tendermint from there.
+Of course, replace <code>ebuchman</code> with your git handle.</p>
+<p>To pull in updates from the origin repo, run</p>
+<pre><code>* `git fetch upstream`
+* `git rebase upstream/master` (or whatever branch you want)
 </code></pre>
-<p>Now I will have the branch <code>mybranch</code> from my fork at <code>github.com/ebuchman/tendermint</code> checked out, but locally it&#x2019;s in <code>$GOPATH/src/github.com/tendermint/tendermint</code>, rather than <code>$GOPATH/src/github.com/ebuchman/tendermint</code>, which should actually never exist.</p>
-<p>Now I can make changes, commit, and push to my fork:</p>
-<pre><code>&lt; make some changes &gt;
-git add -u
-git commit -m &quot;... changes ...&quot;
-git push ebuchman mybranch
-</code></pre>
-<p>Then I can submit pull requests from my fork!</p>
+<p>Please don&#x2019;t make Pull Requests to <code>master</code>.</p>
 <h2>Dependencies</h2>
 <p>We use <a href=https://github.com/masterminds/glide>glide</a> to manage dependencies.
 That said, the master branch of every Tendermint repository should just build with <code>go get</code>, which means they should be kept up-to-date with their dependencies so we can get away with telling people they can just <code>go get</code> our software.

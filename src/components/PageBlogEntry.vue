@@ -1,12 +1,12 @@
 <template>
   <div class="page-blog-entry">
-    <vue-page-header
+    <page-header
       :title="entry.title"
       :subtitle="entrySubtitle"
-      header-style="tendermint">
-    </vue-page-header>
+      theme="tendermint">
+    </page-header>
     <div class="page-blog-content">
-      <vue-article-body v-html="entry.body"></vue-article-body>
+      <article-body v-html="entry.body"></article-body>
       <article-footer :facebook-url="facebookUrl" :twitter-url="twitterUrl">
       </article-footer>
       <section-comments></section-comments>
@@ -15,8 +15,8 @@
 </template>
 
 <script>
-import VuePageHeader from '@nylira/vue-page-header'
-import VueArticleBody from '@nylira/vue-article-body'
+import PageHeader from '@nylira/vue-page-header'
+import ArticleBody from '@nylira/vue-article-body'
 import ArticleFooter from './ArticleFooter'
 import SectionComments from './SectionComments'
 
@@ -25,8 +25,8 @@ import { mapGetters } from 'vuex'
 export default {
   name: 'page-blog-entry',
   components: {
-    VuePageHeader,
-    VueArticleBody,
+    PageHeader,
+    ArticleBody,
     ArticleFooter,
     SectionComments
   },

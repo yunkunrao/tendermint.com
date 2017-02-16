@@ -1,11 +1,11 @@
 <template>
   <div class="page-split page-presentations-index">
-    <vue-page-header
+    <page-header
       title="Presentations"
       subtitle="Watch presentations and other videos about and by the Tendermint team."
       type="split"
-      header-style="tendermint">
-    </vue-page-header>
+      theme="tendermint">
+    </page-header>
 
     <section class="section-default page-content">
       <div class="section-container">
@@ -20,14 +20,14 @@
 </template>
 
 <script>
-import VuePageHeader from '@nylira/vue-page-header'
+import PageHeader from '@nylira/vue-page-header'
 import { mapGetters } from 'vuex'
 import { orderBy } from 'lodash'
 import CardPost from './CardPost'
 export default {
   name: 'page-presentations-index',
   components: {
-    VuePageHeader,
+    PageHeader,
     CardPost
   },
   computed: {

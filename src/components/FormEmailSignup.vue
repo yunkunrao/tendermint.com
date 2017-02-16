@@ -2,21 +2,21 @@
   <form action="//tendermint.us8.list-manage.com/subscribe/post?u=89d5a312be95ee3f0c9cf7ecd&amp;id=4af1217bca" method="post" name="mc-embedded-subscribe-form" class="form-email-signup validate form" target="_blank" novalidate>
 
     <div class="input-group">
-      <vue-input
+      <field
         id="mce-EMAIL"
         name="EMAIL"
-        input-type="email"
-        input-size="large"
-        input-placeholder="name@example.com"
-        input-style="tendermint">
-      </vue-input>
-      <vue-button
-        btn-type="submit"
-        btn-value="Alert"
-        btn-size="large"
-        btn-style="tendermint"
+        type="email"
+        size="lg"
+        placeholder="name@example.com"
+        theme="tendermint">
+      </field>
+      <btn
+        type="submit"
+        value="Alert"
+        size="lg"
+        theme="tendermint"
         id="mc-embedded-subscribe">
-      </vue-button>
+      </btn>
     </div>
 
     <!-- anti-bot signups-->
@@ -27,13 +27,13 @@
 </template>
 
 <script>
-import VueInput from '@nylira/vue-input'
-import VueButton from '@nylira/vue-button'
+import Field from '@nylira/vue-input'
+import Btn from '@nylira/vue-button'
 export default {
   name: 'form-email-signup',
   components: {
-    VueButton,
-    VueInput
+    Btn,
+    Field
   }
 }
 </script>

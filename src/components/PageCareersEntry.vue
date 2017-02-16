@@ -1,15 +1,15 @@
 <template>
   <div class="page-career-entry">
-    <vue-page-header
+    <page-header
       :title="career.title"
       :subtitle="career.subtitle"
-      header-style="tendermint">
-    </vue-page-header>
+      theme="tendermint">
+    </page-header>
 
     <section class="section-default">
       <div class="section-container">
         <div class="section-content">
-          <vue-article-body>
+          <article-body>
             <p>This job can be full-time or part-time. We welcome people who are interested in working remotely as well as onsite in San Francisco or Toronto.</p>
             <h2>Responsibilities</h2>
             <ul class="responsibilities">
@@ -29,7 +29,7 @@
             <h2>Apply for this role</h2>
             <p>Send us an email with your cover letter and resume:</p>
             <a href="mailto:hello@tendermint.com" class="btn btn-large">hello@tendermint.com</a>
-          </vue-article-body>
+          </article-body>
         </div>
       </div>
     </section>
@@ -37,16 +37,16 @@
 </template>
 
 <script>
-import VuePageHeader from '@nylira/vue-page-header'
-import VueArticleBody from '@nylira/vue-article-body'
+import PageHeader from '@nylira/vue-page-header'
+import ArticleBody from '@nylira/vue-article-body'
 import { mapGetters } from 'vuex'
 import MarkdownIt from 'markdown-it'
 let md = new MarkdownIt()
 export default {
   name: 'page-career-entry',
   components: {
-    VuePageHeader,
-    VueArticleBody
+    PageHeader,
+    ArticleBody
   },
   computed: {
     career () {

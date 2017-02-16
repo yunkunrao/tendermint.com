@@ -1,17 +1,17 @@
 <template>
   <div class="page-split page-bounties-index">
-    <vue-page-header
+    <page-header
       title="Bounties"
       subtitle="Get paid in BTC by working on Tendermint-based projects."
       type="split"
-      header-style="tendermint">
+      theme="tendermint">
       <div class="tags">
         <div id="tag-all" class="tag active" @click="setActiveTag($event)">all</div>
         <div class="tag" v-for="tag in tags" @click="setActiveTag($event,tag)">
           {{ tag }}
         </div>
       </div>
-    </vue-page-header>
+    </page-header>
 
     <section class="section-default page-content">
       <div class="section-container">
@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import VuePageHeader from '@nylira/vue-page-header'
+import PageHeader from '@nylira/vue-page-header'
 import { mapGetters } from 'vuex'
 import { union, orderBy } from 'lodash'
 import $ from 'jquery'
@@ -32,7 +32,7 @@ import CardBounty from './CardBounty'
 export default {
   name: 'page-bounties-index',
   components: {
-    VuePageHeader,
+    PageHeader,
     CardBounty
   },
   computed: {

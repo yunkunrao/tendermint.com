@@ -1,11 +1,11 @@
 <template>
   <div class="page-split page-community">
-    <vue-page-header
+    <page-header
       title="Community"
       subtitle="Discover the vibrant ecosystem around Tendermint."
       type="split"
-      header-style="tendermint">
-    </vue-page-header>
+      theme="tendermint">
+    </page-header>
     <div class="page-content">
       <section class="section-default">
         <div class="section-container">
@@ -36,12 +36,12 @@
 </template>
 
 <script>
-import VuePageHeader from '@nylira/vue-page-header'
+import PageHeader from '@nylira/vue-page-header'
 import CardPost from './CardPost'
 export default {
   name: 'page-community',
   components: {
-    VuePageHeader,
+    PageHeader,
     CardPost
   },
   data () {

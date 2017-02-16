@@ -1,14 +1,14 @@
 <template>
   <div class="page-bounties-entry">
-    <vue-page-header
+    <page-header
       :title="bounty.title"
       :subtitle="bounty.subtitle"
-      header-style="tendermint">
-    </vue-page-header>
+      theme="tendermint">
+    </page-header>
     <section class="section-default">
       <div class="section-container">
         <div class="section-content">
-          <vue-article-body>
+          <article-body>
             <h2>Requirements</h2>
             <ul class="requirements">
               <li v-for="r in bounty.requirements">{{ r }}</li>
@@ -18,7 +18,7 @@
             <h2>Deliver the bounty</h2>
             <p>Email us with the name of the bounty, a link to your source code, and your BTC deposit address:</p>
             <a href="mailto:hello@tendermint.com" class="btn btn-large">hello@tendermint.com</a>
-          </vue-article-body>
+          </article-body>
         </div>
       </div>
     </section>
@@ -26,14 +26,14 @@
 </template>
 
 <script>
-import VueArticleBody from '@nylira/vue-article-body'
-import VuePageHeader from '@nylira/vue-page-header'
+import ArticleBody from '@nylira/vue-article-body'
+import PageHeader from '@nylira/vue-page-header'
 import { mapGetters } from 'vuex'
 export default {
   name: 'page-bounties-entry',
   components: {
-    VueArticleBody,
-    VuePageHeader
+    ArticleBody,
+    PageHeader
   },
   computed: {
     bounty () {

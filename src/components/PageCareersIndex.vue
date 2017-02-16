@@ -1,15 +1,15 @@
 <template>
   <div class="page-split page-career-index">
-    <vue-page-header
+    <page-header
       title="Careers"
       subtitle="Work with us to improve Tendermint."
       type="split"
-      header-style="tendermint">
+      theme="tendermint">
       <div class="tags">
         <div id="tag-all" class="tag active" @click="setActiveTag($event)">all</div>
         <div class="tag" v-for="tag in tags" @click="setActiveTag($event,tag)">{{ tag }}</div>
       </div>
-    </vue-page-header>
+    </page-header>
 
     <section class="section-default page-content">
       <div class="section-container">
@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import VuePageHeader from '@nylira/vue-page-header'
+import PageHeader from '@nylira/vue-page-header'
 import { mapGetters } from 'vuex'
 import { union, orderBy } from 'lodash'
 import $ from 'jquery'
@@ -32,7 +32,7 @@ import CardPost from './CardPost'
 export default {
   name: 'page-career-index',
   components: {
-    VuePageHeader,
+    PageHeader,
     CardPost
   },
   computed: {

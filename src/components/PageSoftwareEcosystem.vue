@@ -1,18 +1,18 @@
 <template>
   <div class="page-split page-software-ecosystem">
-    <vue-page-header
+    <page-header
       title="Ecosystem"
       subtitle="Explore Tendermint's software ecosystem."
       type="split"
-      header-style="tendermint">
-      <vue-input
-        input-type="text"
-        input-placeholder="Search..."
-        input-style="tendermint"
-        input-size="large"
+      theme="tendermint">
+      <field
+        type="text"
+        placeholder="Search..."
+        theme="tendermint"
+        size="large"
         v-model="searchQuery">
-      </vue-input>
-    </vue-page-header>
+      </field>
+    </page-header>
 
     <div class="page-content">
 
@@ -138,18 +138,18 @@
 </template>
 
 <script>
-import VuePageHeader from '@nylira/vue-page-header'
+import PageHeader from '@nylira/vue-page-header'
 import { mapGetters } from 'vuex'
 import { orderBy } from 'lodash'
 import $ from 'jquery'
 import Fuse from 'fuse.js'
-import VueInput from '@nylira/vue-input'
+import Field from '@nylira/vue-input'
 
 export default {
   name: 'page-software-ecosystem',
   components: {
-    VuePageHeader,
-    VueInput
+    PageHeader,
+    Field
   },
   computed: {
     abciApps () {
@@ -252,8 +252,8 @@ export default {
 @require '../styles/variables.styl'
 
 .page-software-ecosystem
-  .pz-page-header
-    .pz-input
+  .ni-page-header
+    .ni-field
       margin-top 1rem
       max-width 20rem
 
