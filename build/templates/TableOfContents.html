@@ -1,17 +1,6 @@
 <template>
 <div class="master" v-bind:class="{ 'mobile-active': isActive, 'mobile-inactive': !isActive }" @click="toggleManual">
-  <nav>
-  <div class="title">Index</div>
-  <router-link :to="'/intro'" exact>Index</router-link>
-  <router-link :to="'/intro/abci-overview'">ABCI Overview</router-link>
-  <router-link :to="'/intro/consensus-overview'">Consensus Overview</router-link>
-  <router-link :to="'/intro/tendermint-vs'">Tendermint Versus X</router-link>
-  <div class="title">Getting Started</div>
-  <router-link :to="'/intro/getting-started/deploy-testnet'">Deploy Testnet</router-link>
-  <router-link :to="'/intro/getting-started/download'">Download</router-link>
-  <router-link :to="'/intro/getting-started/first-abci-app'">First ABCI App</router-link>
-  <router-link :to="'/intro/getting-started/next-steps'">Next Steps</router-link>
-</nav>
+  <nav>${data}</nav>
   <btn-thumb v-show="isActive" icon="close"></btn-thumb>
   <btn-thumb v-show="!isActive" icon="bars"></btn-thumb>
 </div><!--master-->

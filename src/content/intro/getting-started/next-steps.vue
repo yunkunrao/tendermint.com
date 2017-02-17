@@ -1,4 +1,5 @@
-<template><div><h1>Next Steps</h1>
+<template>
+  <div><h1 id=next-steps>Next Steps</h1>
 <p>By now you&#x2019;ve seen how to run a simple example ABCI application on a local Tendermint node
 and on a remote Tendermint cluster.</p>
 <p>To learn more about building ABCI applications and integrating with Tendermint, see the <router-link to=/docs/guides/app-development>Developer Guides</router-link>.
@@ -9,4 +10,13 @@ There is also the <router-link to=/static/docs/tendermint.pdf>original whitepape
 <p>The Tendermint <router-link to=/ecosystem>Software Ecosystem</router-link> contains many example applications and related software built by the Tendermint team and others. Check it out for some inspiration!</p>
 <p>See our <router-link to=/community>Community</router-link> page for more ways to collaborate.</p>
 <p>You can also <router-link to=/contact>get in touch with the team</router-link>.</p>
-</div></template>
+</div>
+</template>
+
+<script>
+export default {
+  mounted () {
+    document.title = 'Next Steps - Documentation - Tendermint'
+  }
+}
+</script>

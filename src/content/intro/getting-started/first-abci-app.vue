@@ -1,5 +1,6 @@
-<template><div><h1>First ABCI App</h1>
-<h2>A First Example</h2>
+<template>
+  <div><h1 id=first-abci-app>First ABCI App</h1>
+<h2 id=a-first-example>A First Example</h2>
 <p>Make sure you <a href=https://golang.org/doc/install>have Go installed</a> and <a href=https://github.com/tendermint/tendermint/wiki/Setting-GOPATH>put <code>$GOPATH/bin</code> in your <code>$PATH</code></a>.</p>
 <p>Next, install the <code>abci-cli</code> tool and example applications:</p>
 <pre><code>go get -u github.com/tendermint/abci/cmd/...
@@ -83,7 +84,7 @@ to allow multiple ABCI messages to be sent over a single connection.</p>
 <p>Note that if we do <code>deliver_tx &quot;abc&quot;</code> it will store <code>(abc, abc)</code>,
 but if we do <code>deliver_tx &quot;abc=efg&quot;</code> it will store <code>(abc, efg)</code>.</p>
 <p>Similarly, you could put the commands in a file and run <code>abci-cli --verbose batch &lt; myfile</code>.</p>
-<h2>Another Example</h2>
+<h2 id=another-example>Another Example</h2>
 <p>Now that we&#x2019;ve got the hang of it, let&#x2019;s try another application, the &#x201C;counter&#x201D; app.</p>
 <p>The counter app doesn&#x2019;t use a Merkle tree, it just counts how many times we&#x2019;ve sent a transaction,
 asked for a hash, or committed the state. The result of <code>commit</code> is just the number of transactions sent.</p>
@@ -139,6 +140,15 @@ In the near future, <code>erisdb</code> of Eris Industries will also run atop AB
 In another window, run the console and those previous ABCI commands.
 You should get the same results as for the Go version.</p>
 <p>Want to write the counter app in your favorite language?! We&#x2019;d be happy to accept the pull request!</p>
-<h2>Next Step</h2>
+<h2 id=next-step>Next Step</h2>
 <p>In the next tutorial, we will show how to <router-link to=/intro/getting-started/deploy-testnet>deploy a ABCI testnet</router-link>.</p>
-</div></template>
+</div>
+</template>
+
+<script>
+export default {
+  mounted () {
+    document.title = 'First Abci App - Documentation - Tendermint'
+  }
+}
+</script>

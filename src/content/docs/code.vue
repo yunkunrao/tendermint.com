@@ -1,4 +1,5 @@
-<template><div><p>+++
+<template>
+  <div><p>+++
 date = &quot;2016-03-03T11:59:27+08:00&quot;
 draft = false
 title = &quot;Source Code&quot;
@@ -59,4 +60,13 @@ body = &#x201C;body-code&#x201D;
     </div>
   </div>
 </section>
-</div></template>
+</div>
+</template>
+
+<script>
+export default {
+  mounted () {
+    document.title = 'Code - Documentation - Tendermint'
+  }
+}
+</script>

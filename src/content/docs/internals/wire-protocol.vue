@@ -1,6 +1,7 @@
-<template><div><h1>Wire Protocol</h1>
+<template>
+  <div><h1 id=wire-protocol>Wire Protocol</h1>
 <p>The <a href=https://github.com/tendermint/tendermint/tree/master/wire>Tendermint wire protocol</a> encodes data in <a href=#binary>c-style binary</a> and <a href=#json>JSON</a> form.</p>
-<h2>Supported types</h2>
+<h2 id=supported-types>Supported types</h2>
 <ul>
 <li>Primitive types
 <ul>
@@ -21,7 +22,7 @@
 </ul>
 </li>
 </ul>
-<h2>Binary</h2>
+<h2 id=binary>Binary</h2>
 <p><strong>Fixed-length primitive types</strong> are encoded with 1,2,3, or 4 big-endian bytes.</p>
 <ul>
 <li><code>uint8</code> (aka <code>byte</code>), <code>uint16</code>, <code>uint32</code>, <code>uint64</code>: takes 1,2,3, and 4 bytes respectively</li>
@@ -149,11 +150,20 @@ var animal Animal = Dog(02)
 </code></pre>
 <p><strong>Pointers</strong> are encoded with a single leading byte <code>x00</code> for <code>nil</code> pointers, otherwise encoded with a leading byte <code>x01</code> followed by the binary encoding of the value pointed to.</p>
 <p>NOTE: It&#x2019;s easy to convert pointer types into interface types, since the <code>type byte</code> <code>x00</code> is always <code>nil</code>.</p>
-<h2>JSON</h2>
+<h2 id=json>JSON</h2>
 <p>The JSON codec is compatible with the <a href=#binary><code>binary</code></a> codec, and is fairly intuitive if you&#x2019;re already familiar with golang&#x2019;s JSON encoding.  Some quirks are noted below:</p>
 <ul>
 <li>variable-length and fixed-length bytes are encoded as uppercase hexadecimal strings</li>
 <li>interface values are encoded as an array of two items: <code>[type_byte, concrete_value]</code></li>
 <li>times are encoded as rfc2822 strings</li>
 </ul>
-</div></template>
+</div>
+</template>
+
+<script>
+export default {
+  mounted () {
+    document.title = 'Wire Protocol - Documentation - Tendermint'
+  }
+}
+</script>

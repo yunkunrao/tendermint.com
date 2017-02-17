@@ -1,6 +1,7 @@
-<template><div><h1>What is ABCI?</h1>
+<template>
+  <div><h1 id=what-is-abci>What is ABCI?</h1>
 <p>The Application BlockChain Interface (ABCI) allows for Byzantine Fault Tolerant replication of applications written in any programming language.</p>
-<h2>Motivation</h2>
+<h2 id=motivation>Motivation</h2>
 <p>Thus far, all blockchains &#x201C;stacks&#x201D; (such as <a href=https://github.com/bitcoin/bitcoin>Bitcoin</a>) have had a monolithic design.  That is, each blockchain stack is a single program that handles all the concerns of a decentralized ledger; this includes P2P connectivity, the &#x201C;mempool&#x201D; broadcasting of transactions, consensus on the most recent block, account balances, Turing-complete contracts, user-level permissions, etc.</p>
 <p>Using a monolithic architecture is typically bad practice in computer science.
 It makes it difficult to reuse components of the code, and attempts to do so result in complex maintanence procedures for forks of the codebase.
@@ -9,7 +10,7 @@ This is especially true when the codebase is not modular in design and suffers f
 <p>In contrast, our approach is to decouple the consensus engine and P2P layers from the details of the application state of the particular blockchain application.
 We do this by abstracting away the details of the application to an interface, which is implemented as a socket protocol.</p>
 <p>Thus we have an interface, the Application BlockChain Interface (ABCI), and its primary implementation, the Tendermint Socket Protocol (TSP, or Teaspoon).</p>
-<h2>Intro to ABCI</h2>
+<h2 id=intro-to-abci>Intro to ABCI</h2>
 <p><a href=https://github.com/tendermint/tendermint>Tendermint Core</a> (the &#x201C;consensus engine&#x201D;) communicates with the application via a socket protocol that
 satisfies the <a href=https://github.com/tendermint/abci>ABCI</a>.</p>
 <p>To draw an analogy, lets talk about a well-known cryptocurrency, Bitcoin.  Bitcoin is a cryptocurrency blockchain where each node maintains a fully audited Unspent Transaction Output (UTXO) database. If one wanted to create a Bitcoin-like system on top of ABCI, Tendermint Core would be responsible for</p>
@@ -33,7 +34,7 @@ satisfies the <a href=https://github.com/tendermint/abci>ABCI</a>.</p>
 <p>There can be multiple ABCI socket connections to an application.  Tendermint Core creates three ABCI connections to the application; one for the validation of transactions when broadcasting in the mempool, one for the consensus engine to run block proposals, and one more for querying the application state.</p>
 <p>It&#x2019;s probably evident that applications designers need to very carefully design their message handlers to create a blockchain that does anything useful but this architecture provides a place to start. The diagram below illustrates the flow of messages via ABCI.</p>
 <img src=~assets/images/abci.png>
-<h2>A Note on Determinism</h2>
+<h2 id=a-note-on-determinism>A Note on Determinism</h2>
 <p>The logic for blockchain transaction processing must be deterministic.  If the application logic weren&#x2019;t deterministic, consensus would not be reached among the Tendermint Core replica nodes.</p>
 <p>Solidity on Ethereum is a great language of choice for blockchain applications because, among other reasons, it is a completely deterministic programming language.  However, it&#x2019;s also possible to create deterministic applications using existing popular languages like Java, C++, Python, or Go.  Game programmers and blockchain developers are already familiar with creating deterministic programs by avoiding sources of non-determinism such as:</p>
 <ul>
@@ -45,11 +46,20 @@ satisfies the <a href=https://github.com/tendermint/abci>ABCI</a>.</p>
 <li>language features that are random (e.g. map iteration in Go)</li>
 </ul>
 <p>While programmers can avoid non-determinism by being careful, it is also possible to create a special linter or static analyzer for each language to check for determinism.  In the future we may work with partners to create such tools.</p>
-<h2>Next Steps</h2>
+<h2 id=next-steps>Next Steps</h2>
 <ul>
 <li>Read an overview of <router-link to=/intro/consensus-overview>how the consensus algorithm works</router-link>.</li>
 <li>Continue with the <router-link to=/intro/getting-started/install>Getting Started</router-link> guide to install and run example tendermint applications.</li>
 </ul>
-<h2>Contributions</h2>
+<h2 id=contributions>Contributions</h2>
 <p><em>Many thanks to Zaki Manian for providing the &#x201C;Intro to ABCI&#x201D; section.</em></p>
-</div></template>
+</div>
+</template>
+
+<script>
+export default {
+  mounted () {
+    document.title = 'Abci Overview - Documentation - Tendermint'
+  }
+}
+</script>

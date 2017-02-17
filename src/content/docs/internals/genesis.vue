@@ -1,7 +1,8 @@
-<template><div><h1>Genesis</h1>
+<template>
+  <div><h1 id=genesis>Genesis</h1>
 <p>The genesis.json file in <code>$TMROOT</code> defines the initial TendermintCore state upon genesis of the blockchain (<a href=https://github.com/tendermint/tendermint/blob/master/types/genesis.go>see definition</a>).</p>
 <p>NOTE: This does not (yet) specify the application state (e.g. initial distribution of tokens). Currently we leave it up to the application to load the initial application genesis state.  In the future, we may include genesis SetOption messages that get passed from TendermintCore to the app upon genesis.</p>
-<h3>Fields</h3>
+<h3 id=fields>Fields</h3>
 <ul>
 <li><code>genesis_time</code>: Official time of blockchain start.</li>
 <li><code>chain_id</code>: ID of the blockchain.  This must be unique for every blockchain.  If your testnet blockchains do not have unique chain IDs, you will have a bad time.</li>
@@ -14,7 +15,7 @@
 </li>
 <li><code>app_hash</code>: The expected application hash (as returned by the <code>Commit</code> ABCI message) upon genesis.  If the app&#x2019;s hash does not match, a warning message is printed.</li>
 </ul>
-<h3>Sample genesis.json</h3>
+<h3 id=sample-genesisjson>Sample genesis.json</h3>
 <p>This example is from the Basecoin mintnet example (<a href=https://github.com/tendermint/mintnet/blob/master/examples/basecoin/mach1/core/genesis.json>link to file</a>).</p>
 <pre><code class=language-json>{
   &quot;genesis_time&quot;: &quot;2016-02-05T06:02:31.526Z&quot;,
@@ -56,4 +57,13 @@
   &quot;app_hash&quot;: &quot;15005165891224E721CB664D15CB972240F5703F&quot;
 }
 </code></pre>
-</div></template>
+</div>
+</template>
+
+<script>
+export default {
+  mounted () {
+    document.title = 'Genesis - Documentation - Tendermint'
+  }
+}
+</script>

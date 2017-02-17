@@ -1,4 +1,5 @@
-<template><div><h1>Consensus Overview</h1>
+<template>
+  <div><h1 id=consensus-overview>Consensus Overview</h1>
 <p>Tendermint is an easy-to-understand, mostly asynchronous, BFT consensus protocol.
 The protocol follows a simple state machine that looks like this:</p>
 <img src=~assets/images/consensus_logic.png>
@@ -28,7 +29,7 @@ Then,</p>
 <li>it must prevote for the block it is locked on</li>
 <li>it can only unlock, and precommit for a new block, if there is a polka for that block in a later round</li>
 </ol>
-<h1>Stake</h1>
+<h1 id=stake>Stake</h1>
 <p>In many systems, not all validators will have the same &#x201C;weight&#x201D; in the consensus protocol.
 Thus, we are not so much interested in one-third or two-thirds of the validators, but in those proportions of the total voting power,
 which may not be uniformly distributed across individual validators.</p>
@@ -38,8 +39,17 @@ Validators can be forced, by logic in the application,
 to &#x201C;bond&#x201D; their currency holdings in a security deposit that can be destroyed if they&#x2019;re found to misbehave in the consensus protocol.
 This adds an economic element to the security of the protocol, allowing one to quantify the cost of violating the assumption that less than one-third of voting power is Byzantine.</p>
 <p>The <a href=http://cosmos.network>Cosmos Network</a> is designed to use this Proof-of-Stake mechanism across an array of cryptocurrencies implemented as ABCI applications.</p>
-<h2>Next Steps</h2>
+<h2 id=next-steps>Next Steps</h2>
 <ul>
 <li>Continue with the <router-link to=/intro/getting-started/install>Getting Started</router-link> guide to install and run example tendermint applications.</li>
 </ul>
-</div></template>
+</div>
+</template>
+
+<script>
+export default {
+  mounted () {
+    document.title = 'Consensus Overview - Documentation - Tendermint'
+  }
+}
+</script>

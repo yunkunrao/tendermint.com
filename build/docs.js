@@ -4,14 +4,23 @@ var fs = require('fs')
 var glob = require('glob')
 var cheerio = require('cheerio')
 var minify = require('html-minifier').minify
-var md = require('markdown-it')({
-  html: true,
-  linkify: true,
-  typographer: true
-})
+
+// markdown-it settings
+let md = require('markdown-it')
+  ({
+    html: true,
+    linkify: true,
+    typographer: true
+  })
+  .use(require('markdown-it-anchor'))
 
 var docs = './content/docs/**/*.md'
 var intro = './content/intro/**/*.md'
+
+// templating
+var entryTemplate = fs.readFileSync('./build/templates/Entry.html', 'utf8')
+var template = require('es6-template-strings')
+var toTitleCase = require('to-title-case')
 
 // functions
 function vuename(file) {
@@ -30,14 +39,15 @@ function vueify (file) {
   var internalLinks = $('a[href^=\'/\']')
 
   $(internalLinks).each(function () {
-    var href = $(this).attr('href')
+    var route = JSON.parse(JSON.stringify($(this).attr('href')))
+    route = route.replace('.md', '') // remove .md extension
     var innerHtml = $(this).html()
-    $(this).replaceWith(`<router-link to="${href}">${innerHtml}</router-link>`)
+    $(this).replaceWith(`<router-link to="${route}">${innerHtml}</router-link>`)
   })
 
   var cleaned = $.html()
 
-  var minified = minify(cleaned, {
+  var pageData = minify(cleaned, {
     removeComments: true,
     removeCommentsFromCDATA: true,
     removeAttributeQuotes: true,
@@ -50,8 +60,9 @@ function vueify (file) {
     removeEmptyElements: true
   })
 
-  var final = `<template><div>${minified}</div></template>\n`
-  return final
+  var pageTitle = toTitleCase(path.basename(file, '.md'))
+
+  return template(entryTemplate, { data: pageData, title: pageTitle })
 }
 
 function build (file) {

@@ -1,4 +1,5 @@
-<template><div><h1>Download Tendermint</h1>
+<template>
+  <div><h1 id=download-tendermint>Download Tendermint</h1>
 <p>Tendermint 0.8 has been released. Read <router-link to=/blog/tendermint-0-8-release>what&#x2019;s new</router-link>.</p>
 <div class=download-matrix>
   <div class="os os-mac">
@@ -59,7 +60,7 @@
     </div>
   </div>
 </div>
-<h2>SHA256 Checksums</h2>
+<h2 id=sha256-checksums>SHA256 Checksums</h2>
 <p>Verify your download with these checksums below.</p>
 <pre><code>./tendermint_darwin_amd64.zip
 470e62b484a13ca6f357846b3d822c7b1d0f75b70e9f2ad033824c961291ec0e
@@ -70,8 +71,17 @@
 ./tendermint_windows_amd64.zip
 e35762c65f9fe0125308e0e3081d82bd9a98fa9da3d2711bcb246661f024d9d6
 </code></pre>
-<h2>Install From Source</h2>
+<h2 id=install-from-source>Install From Source</h2>
 <p>If you prefer, you can also install Tendermint <router-link to=/docs/guides/install>from source</router-link>.</p>
-<h2>Next Step</h2>
+<h2 id=next-step>Next Step</h2>
 <p>Once you&#x2019;ve installed Tendermint onto your computer, get started by creating your first <router-link to=/intro/getting-started/first-abci>ABCI app</router-link>.</p>
-</div></template>
+</div>
+</template>
+
+<script>
+export default {
+  mounted () {
+    document.title = 'Download - Documentation - Tendermint'
+  }
+}
+</script>

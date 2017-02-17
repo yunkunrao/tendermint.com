@@ -1,9 +1,9 @@
 <template>
-  <div><h1>Introduction to Tendermint</h1>
+  <div><h1 id=introduction-to-tendermint>Introduction to Tendermint</h1>
 <p>Welcome to the Tendermint guide!  This is the best place to start if you&#x2019;re new
 to Tendermint.  If you&#x2019;re already familiar with the basics of Tendermint and
 ABCI, find more details in the <router-link to=/docs>documentation</router-link>.</p>
-<h2>What is Tendermint?</h2>
+<h2 id=what-is-tendermint>What is Tendermint?</h2>
 <p>Tendermint is software for securely and consistently replicating an application on many machines.
 By securely, we mean that Tendermint works even if up to 1/3 of machines fail in arbitrary ways.
 By consistently, we mean that every non-faulty machine sees the same transaction log and computes the same state.
@@ -26,7 +26,7 @@ or a quirky scripting language), developers can use Tendermint for BFT state mac
 whatever programming language and development environment is right for them.</p>
 <p>Tendermint is designed to be easy-to-use, simple-to-understand, highly performant, and useful
 for a wide variety of distributed applications. <router-link to=/intro/getting-started/install>Get started with Tendermint</router-link> today!</p>
-<h2>Next Steps</h2>
+<h2 id=next-steps>Next Steps</h2>
 <ul>
 <li>See how <router-link to=/intro/tendermint-vs>Tendermint compares to other software</router-link>.</li>
 <li>Continue with the <router-link to=/intro/getting-started/install>Getting Started</router-link> guide to install and run example tendermint applications.</li>
@@ -37,7 +37,7 @@ for a wide variety of distributed applications. <router-link to=/intro/getting-s
 <script>
 export default {
   mounted () {
-    document.title = 'What Is Tendermint - Documentation - Tendermint'
+    document.title = 'Index - Documentation - Tendermint'
   }
 }
 </script>

@@ -58,3 +58,25 @@ npm run docs
 # Edit Community > Presentations
 ./src/store/modules/presentations.js
 ```
+
+## Content Editing Tips
+
+## Markdown Links
+If you want to link to internal pages in Markdown, use the full path. For example:
+
+    # won't work
+    [block hash](./tendermint-types#block-hash)
+
+    # will work
+    [block hash](/docs/internals/tendermint-types#block-hash)
+
+## Markdown Link to Hash
+HTML IDs are automatically generated for Markdown pages. They use the slug case format.
+
+    # won't work
+    [block hash](./tendermint-types#Block.Hash)
+
+    # will work
+    [block hash](/docs/internals/tendermint-types#block-hash)
+
+

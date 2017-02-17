@@ -1,11 +1,12 @@
-<template><div><h1>Tendermint vs. Other Software</h1>
+<template>
+  <div><h1 id=tendermint-vs-other-software>Tendermint vs. Other Software</h1>
 <p>Tendermint is broadly similar to two classes of software.
 The first class consists of distributed key-value stores,
 like Zookeeper, etcd, and consul, which use non-BFT consensus.
 The second class is known as &#x201C;blockchain technology&#x201D;,
 and consists of both cryptocurrencies like Bitcoin and Ethereum,
 and alternative distributed ledger designs like Hyperledger and ErisDB.</p>
-<h2>Zookeeper, etcd, consul</h2>
+<h2 id=zookeeper-etcd-consul>Zookeeper, etcd, consul</h2>
 <p>Zookeeper, etcd, and consul are all implementations of a key-value store atop a classical,
 non-BFT consensus algorithm. Zookeeper uses a version of Paxos called Zookeeper Atomic Broadcast,
 while etcd and consul use the Raft consensus algorithm, which is much younger and simpler.
@@ -24,7 +25,7 @@ that&#x2019;s right for them, from key-value store to cryptocurrency to e-voting
 </ul>
 <p>The layout of this Tendermint website content is also ripped directly and without shame from
 <a href=https://www.consul.io/ >consul.io</a> and the other <a href=https://www.hashicorp.com/#tools>Hashicorp sites</a>.</p>
-<h2>Bitcoin, Ethereum, etc.</h2>
+<h2 id=bitcoin-ethereum-etc>Bitcoin, Ethereum, etc.</h2>
 <p>Tendermint emerged in the tradition of cryptocurrencies like Bitcoin, Ethereum, etc.
 with the goal of providing a more efficient and secure consensus algorithm than Bitcoin&#x2019;s Proof of Work.
 In the early days, Tendermint had a simple currency built in, and to participate in consensus
@@ -36,7 +37,7 @@ So one can take the current Ethereum code base, whether in Rust, or Go, or Haske
 using Tendermint consensus. Indeed, <a href=https://github.com/tendermint/ethermint>we did that</a>.
 And we plan to do the same for Bitcoin, ZCash, and various other deterministic applications as well.</p>
 <p>Another example of a cryptocurrency application built on Tendermint is <a href=http://cosmos.network>Cosmos</a></p>
-<h2>Hyperledger, ErisDB</h2>
+<h2 id=hyperledger-erisdb>Hyperledger, ErisDB</h2>
 <p><a href=https://github.com/hyperledger/fabric>Hyperledger</a>, takes a similar approach to Tendermint, but is more opinionated about how the state is managed,
 and requires that all application behaviour runs in potentially many docker containers, modules it calls &#x201C;chaincode&#x201D;.
 It uses an implementation of <a href=http://pmg.csail.mit.edu/papers/osdi99.pdf>PBFT</a>
@@ -47,9 +48,18 @@ though extending Tendermint to handle non-determinism remains for future work.</
 <p><a href=https://github.com/eris-ltd/eris-db>ErisDB</a> is an implementation of the Ethereum Virtual Machine and Ethereum transaction mechanics,
 with additional features for a name-registry, permissions, and native contracts, and an alternative blockchain API.
 It uses Tendermint as its consensus engine, and provides a particular application state.</p>
-<h2>Next Steps</h2>
+<h2 id=next-steps>Next Steps</h2>
 <ul>
 <li>Read an overview of the motivation and design behind the <router-link to=/intro/abci-overview>Application BlockChain Interface</router-link>.</li>
 <li>Continue with the <router-link to=/intro/getting-started/install>Getting Started</router-link> guide to install and run example tendermint applications.</li>
 </ul>
-</div></template>
+</div>
+</template>
+
+<script>
+export default {
+  mounted () {
+    document.title = 'Tendermint vs - Documentation - Tendermint'
+  }
+}
+</script>
