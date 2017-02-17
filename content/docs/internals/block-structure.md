@@ -30,9 +30,9 @@ This is important as the only item that is signed by the validators is the `Head
 and all other data must be validated against one of the merkle hashes in the `Header`.
 
 The `DataHash` can provide a nice check on the [Data](/docs/internals/tendermint-types#Data)
-returned in this same block. If you are streaming blocks and reacting on the data,
-you should at least validate that the `DataHash` is valid, if you are not waiting
-for the `LastCommit` from the next block to make sure it was properly signed.
+returned in this same block. If you are subscribed to new blocks, via tendermint RPC, in order to display or process the new transactions
+you should at least validate that the `DataHash` is valid.
+If it is important to verify autheniticity, you must wait for the `LastCommit` from the next block to make sure the block header (including `DataHash`) was properly signed.
 
 The `ValidatorHash` contains a hash of the current
 [Validators](/docs/internals/tendermint-types#Validator). Tracking all changes in the
@@ -46,11 +46,15 @@ the state of the actual application, rather that the state of the blockchain
 itself. This means it's necessary in order to perform any business logic,
 such as verifying and account balance.
 
-**Note** The `AppHash` returned for the header at height `H` is the root hash of
-the merkle tree maintaining the state after all transactions from block `H-1`
-are applied.  Like the `LastCommit` issue, this is a requirement of the
+**Note** After the transactions are committed to a block, they still need to
+be processed in a separate step, which happens between the blocks. If you
+find a given transaction in the block at height `H`, the effects of running
+that transaction will be first visible in the `AppHash` from the block
+header at height `H+1`.
+
+Like the `LastCommit` issue, this is a requirement of the
 immutability of the block chain, as the application only applies transactions
-*after* they are commited to the chain, recording the results in the next block.
+*after* they are commited to the chain.
 
 ### Commit
 
