@@ -10,40 +10,41 @@ But what exactly is stored in these blocks?
 
 A [Block](/docs/internals/tendermint-types#Block) contains:
 
-* a [Header](#header), which contains merkle hashes for various chain state
-* the [Data](/docs/internals/tendermint-types#Data), which is all transactions which are to be processed, and
+* a [Header](#header) contains merkle hashes for various chain states
+* the [Data]((/docs/internals/tendermint-types#Data) is all transactions which are to be processed
 * the [LastCommit](#commit) > 2/3 signatures for the last block
 
-The first thing we notice here is that the signatures returned along with block `H`,
-are those validating block `H-1`.  This can be a little confusing, but we must also
-consider that the [Header](/docs/internals/tendermint-types#Header) also contains the `LastCommitHash`.
-It would be impossible for a Header to include the commits that sign it (infinite loop here). But when we get block `H`, we
-find `Header.LastCommitHash`, which must match the hash of `LastCommit`.
+The signatures returned along with block `H` are those validating block `H-1`.
+This can be a little confusing, but we must also consider that the
+[Header](/docs/internals/tendermint-types#Header) also contains the `LastCommitHash`.
+It would be impossible for a Header to include the commits that sign it, as it
+would cause an infinite loop here. But when we get block `H`, we find
+`Header.LastCommitHash`, which must match the hash of `LastCommit`.
 
 ### Header
 
-The [Header](/docs/internals/tendermint-types#Header) contains lots of information (the link
-has the up-to-date info).  Notably, it maintains the `Height`, the `LastBlockID`
+The [Header](/docs/internals/tendermint-types#Header) contains lots of information (follow
+link for up-to-date info).  Notably, it maintains the `Height`, the `LastBlockID`
 (to make it a chain), and hashes of the data, the app state, and the validator set.
-This is important, as the only item that is signed by the validators is the `Header`,
+This is important as the only item that is signed by the validators is the `Header`,
 and all other data must be validated against one of the merkle hashes in the `Header`.
 
 The `DataHash` can provide a nice check on the [Data](/docs/internals/tendermint-types#Data)
 returned in this same block. If you are streaming blocks and reacting on the data,
-you should at least validate the `DataHash` is valid, if not waiting for the
-`LastCommit` from the next block to make sure it was properly signed.
+you should at least validate that the `DataHash` is valid, if you are not waiting
+for the `LastCommit` from the next block to make sure it was properly signed.
 
 The `ValidatorHash` contains a hash of the current
 [Validators](/docs/internals/tendermint-types#Validator). Tracking all changes in the
-validator set is a complex theme, but a client can quickly compare this hash
+validator set is complex, but a client can quickly compare this hash
 with the [hash of the currently known validators](/docs/internals/tendermint-types#ValidatorSet.Hash)
 to see if there have been changes.
 
-Most interesting to most clients is the `AppHash`, as this serves as the basis for
-validating any merkle proofs that come from the [ABCI application](https://github.com/tendermint/abci),
-and represents the state of the actual application, rather that the state of the
-blockchain itself. This makes it key to perform any business logic, such as
-verifying and account balance.
+The `AppHash` serves as the basis for validating any merkle proofs that come
+from the [ABCI application](https://github.com/tendermint/abci). It represents
+the state of the actual application, rather that the state of the blockchain
+itself. This means it's necessary in order to perform any business logic,
+such as verifying and account balance.
 
 **Note** The `AppHash` returned for the header at height `H` is the root hash of
 the merkle tree maintaining the state after all transactions from block `H-1`
@@ -159,7 +160,7 @@ for !partSet2.IsComplete() {
     part := receivePartFromGossipNetwork()
     added, err := partSet2.AddPart(part)
     if err != nil {
-		// A wrong part,
+    // A wrong part,
         // the merkle trail does not hash to partSet2.Hash()
     } else if !added {
         // A duplicate part already received
