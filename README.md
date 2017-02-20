@@ -69,8 +69,7 @@ By default, pages are ordered alphabetically based on filename. If you want to h
     ▾ getting-started/
         #01-download-tendermint.md
         #02-first-abci-app.md
-        #03-deploy-testnet.md
-        #04-next-steps.md
+        #03-deploy-testnet.md #04-next-steps.md
 
 ### Creating a New Section
 To add a new section to documentation, add a new directory under `.content/docs/`.
@@ -92,7 +91,6 @@ HTML IDs are automatically generated for headings. You can link to them, but ple
 
     # will work
     [block hash](/docs/internals/tendermint-types#block-hash)
-
 
 ### Building for Production
 

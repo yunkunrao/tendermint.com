@@ -8,3 +8,4 @@ selenium-debug.log
 src/assets/feed.xml
 src/store/json/posts.json
 public/
+src/content/
