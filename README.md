@@ -33,7 +33,7 @@ npm run build
 npm run dev
 ```
 
-## Content Editing
+## 5-Second Editing Guide
 
 ``` bash
 
@@ -59,7 +59,7 @@ npm run docs
 ./src/store/modules/presentations.js
 ```
 
-## Documentation Editing Guide
+## Documentation Editing (Detailed Guide)
 
 ### Creating a New Page
 To add a new page, create a markdown file in `./content/docs/` or './content/intro/. The title of the page is based on its filename. For example, 'this-is-awesome.md' will have a title of 'This is Awesome'.
