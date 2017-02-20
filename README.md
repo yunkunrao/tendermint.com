@@ -62,9 +62,9 @@ npm run docs
 ## Documentation Editing Guide
 
 ### Creating a New Page
-To add a new page to documentation, add a markdown file to `.content/docs/`. The title of the page on the website is based on it's source markdown filename. For example, 'this-is-awesome.md' will have a title of 'This is Awesome'.
+To add a new page, create a markdown file in `./content/docs/` or './content/intro/. The title of the page is based on its filename. For example, 'this-is-awesome.md' will have a title of 'This is Awesome'.
 
-Pages are ordered alphabetically based on filename. If you want to have a custom order for your documentation, label the files with numbers. Like this:
+By default, pages are ordered alphabetically based on filename. If you want to have a custom order for your documentation, label the files with numbers. Like this:
 
     ▾ getting-started/
         #01-download-tendermint.md
