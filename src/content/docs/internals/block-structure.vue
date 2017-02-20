@@ -8,40 +8,44 @@ But what exactly is stored in these blocks?</p>
 <h3 id=block>Block</h3>
 <p>A <router-link to=/docs/internals/tendermint-types#Block>Block</router-link> contains:</p>
 <ul>
-<li>a <a href=#header>Header</a>, which contains merkle hashes for various chain state</li>
-<li>the <router-link to=/docs/internals/tendermint-types#Data>Data</router-link>, which is all transactions which are to be processed, and</li>
+<li>a <a href=#header>Header</a> contains merkle hashes for various chain states</li>
+<li>the [Data]((/docs/internals/tendermint-types#Data) is all transactions which are to be processed</li>
 <li>the <a href=#commit>LastCommit</a> &gt; 2/3 signatures for the last block</li>
 </ul>
-<p>The first thing we notice here is that the signatures returned along with block <code>H</code>,
-are those validating block <code>H-1</code>.  This can be a little confusing, but we must also
-consider that the <router-link to=/docs/internals/tendermint-types#Header>Header</router-link> also contains the <code>LastCommitHash</code>.
-It would be impossible for a Header to include the commits that sign it (infinite loop here). But when we get block <code>H</code>, we
-find <code>Header.LastCommitHash</code>, which must match the hash of <code>LastCommit</code>.</p>
+<p>The signatures returned along with block <code>H</code> are those validating block <code>H-1</code>.
+This can be a little confusing, but we must also consider that the
+<router-link to=/docs/internals/tendermint-types#Header>Header</router-link> also contains the <code>LastCommitHash</code>.
+It would be impossible for a Header to include the commits that sign it, as it
+would cause an infinite loop here. But when we get block <code>H</code>, we find
+<code>Header.LastCommitHash</code>, which must match the hash of <code>LastCommit</code>.</p>
 <h3 id=header>Header</h3>
-<p>The <router-link to=/docs/internals/tendermint-types#Header>Header</router-link> contains lots of information (the link
-has the up-to-date info).  Notably, it maintains the <code>Height</code>, the <code>LastBlockID</code>
+<p>The <router-link to=/docs/internals/tendermint-types#Header>Header</router-link> contains lots of information (follow
+link for up-to-date info).  Notably, it maintains the <code>Height</code>, the <code>LastBlockID</code>
 (to make it a chain), and hashes of the data, the app state, and the validator set.
-This is important, as the only item that is signed by the validators is the <code>Header</code>,
+This is important as the only item that is signed by the validators is the <code>Header</code>,
 and all other data must be validated against one of the merkle hashes in the <code>Header</code>.</p>
 <p>The <code>DataHash</code> can provide a nice check on the <router-link to=/docs/internals/tendermint-types#Data>Data</router-link>
-returned in this same block. If you are streaming blocks and reacting on the data,
-you should at least validate the <code>DataHash</code> is valid, if not waiting for the
-<code>LastCommit</code> from the next block to make sure it was properly signed.</p>
+returned in this same block. If you are subscribed to new blocks, via tendermint RPC, in order to display or process the new transactions
+you should at least validate that the <code>DataHash</code> is valid.
+If it is important to verify autheniticity, you must wait for the <code>LastCommit</code> from the next block to make sure the block header (including <code>DataHash</code>) was properly signed.</p>
 <p>The <code>ValidatorHash</code> contains a hash of the current
 <router-link to=/docs/internals/tendermint-types#Validator>Validators</router-link>. Tracking all changes in the
-validator set is a complex theme, but a client can quickly compare this hash
+validator set is complex, but a client can quickly compare this hash
 with the <router-link to=/docs/internals/tendermint-types#ValidatorSet.Hash>hash of the currently known validators</router-link>
 to see if there have been changes.</p>
-<p>Most interesting to most clients is the <code>AppHash</code>, as this serves as the basis for
-validating any merkle proofs that come from the <a href=https://github.com/tendermint/abci>ABCI application</a>,
-and represents the state of the actual application, rather that the state of the
-blockchain itself. This makes it key to perform any business logic, such as
-verifying and account balance.</p>
-<p><strong>Note</strong> The <code>AppHash</code> returned for the header at height <code>H</code> is the root hash of
-the merkle tree maintaining the state after all transactions from block <code>H-1</code>
-are applied.  Like the <code>LastCommit</code> issue, this is a requirement of the
+<p>The <code>AppHash</code> serves as the basis for validating any merkle proofs that come
+from the <a href=https://github.com/tendermint/abci>ABCI application</a>. It represents
+the state of the actual application, rather that the state of the blockchain
+itself. This means it&#x2019;s necessary in order to perform any business logic,
+such as verifying and account balance.</p>
+<p><strong>Note</strong> After the transactions are committed to a block, they still need to
+be processed in a separate step, which happens between the blocks. If you
+find a given transaction in the block at height <code>H</code>, the effects of running
+that transaction will be first visible in the <code>AppHash</code> from the block
+header at height <code>H+1</code>.</p>
+<p>Like the <code>LastCommit</code> issue, this is a requirement of the
 immutability of the block chain, as the application only applies transactions
-<em>after</em> they are commited to the chain, recording the results in the next block.</p>
+<em>after</em> they are commited to the chain.</p>
 <h3 id=commit>Commit</h3>
 <p>The <router-link to=/docs/internals/tendermint-types#Commit>Commit</router-link> contains a set of
 <router-link to=/docs/internals/tendermint-types#Vote>Votes</router-link> that were made by the validator set to
@@ -128,7 +132,7 @@ for !partSet2.IsComplete() {
     part := receivePartFromGossipNetwork()
     added, err := partSet2.AddPart(part)
     if err != nil {
-		// A wrong part,
+    // A wrong part,
         // the merkle trail does not hash to partSet2.Hash()
     } else if !added {
         // A duplicate part already received
