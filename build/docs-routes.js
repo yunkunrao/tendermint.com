@@ -58,5 +58,5 @@ function build (wildcard, filename) {
   })
 }
 
-build(docs, './src/components/PageDocsEntryBody.vue')
-build(intro, './src/components/PageIntroEntryBody.vue')
+build(docs, './src/components/PageDocsEntries.vue')
+build(intro, './src/components/PageIntroEntries.vue')

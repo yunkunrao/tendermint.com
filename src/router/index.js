@@ -5,13 +5,16 @@ const routes = [
 
   // Redirects take priority over everything else
   { path: '/intro/tmsp-overview', redirect: '/intro/abci-overview' },
+  { path: '/intro/tendermint-vs', redirect: '/intro/tendermint-vs-x' },
   { path: '/intro/first-tmsp', redirect: '/intro/first-abci' },
-  { path: '/intro/install', redirect: '/intro/download' },
+  { path: '/intro/install', redirect: '/intro/download-tendermint' },
+  { path: '/intro/download', redirect: '/intro/download-tendermint' },
   { path: '/intro/getting-started/install', redirect: '/docs/guides/install' },
   { path: '/docs/internals/consensus',
     redirect: '/docs/internals/byzantine-consensus-algorithm' },
   { path: '/blog/tendermint-socket-protocol',
     redirect: '/blog/abci-the-application-blockchain-interface' },
+  { path: '/docs/guides/install', redirect: '/docs/guides/install-from-source' },
   { path: '/code', redirect: '/docs' },
   { path: '/guide', redirect: '/docs' },
   { path: '/jobs', redirect: '/careers' },

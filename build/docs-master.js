@@ -22,10 +22,10 @@ function writeLinks (linkObject, filename) {
     value += '  <div class="title">Index</div>\n'
 
     if (filename === './src/components/PageDocsMaster.vue') {
-      value += `  <router-link :to="'/docs'" exact>Index</router-link>\n`
+      value += `  <router-link :to="'/docs'" exact>Documentation</router-link>\n`
     }
     if (filename === './src/components/PageIntroMaster.vue') {
-      value += `  <router-link :to="'/intro'" exact>Index</router-link>\n`
+      value += `  <router-link :to="'/intro'" exact>Introduction</router-link>\n`
     }
 
     for (var i = 0; i < links.length; i++) {
@@ -49,7 +49,10 @@ function writeLinks (linkObject, filename) {
     let links = internals
     value += '  <div class="title">Internals</div>\n'
     for (var k = 0; k < links.length; k++) {
-      value += `  <router-link :to="'${links[k].url}'">${links[k].title}</router-link>\n`
+      if (links[k].title !== 'Tendermint Types') {
+        value +=
+          `  <router-link :to="'${links[k].url}'">${links[k].title}</router-link>\n`
+      }
     }
   }
 

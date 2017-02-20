@@ -3,7 +3,7 @@
     <master></master>
     <div class="detail">
       <article-body>
-        <entry-body></entry-body>
+        <entries></entries>
       </article-body>
     </div>
   </div>
@@ -12,13 +12,13 @@
 <script>
 import Master from './PageDocsMaster'
 import ArticleBody from '@nylira/vue-article-body'
-import EntryBody from './PageDocsEntryBody'
+import Entries from './PageDocsEntries'
 export default {
   name: 'page-docs-entry',
   components: {
     Master,
     ArticleBody,
-    EntryBody
+    Entries
   }
 }
 </script>

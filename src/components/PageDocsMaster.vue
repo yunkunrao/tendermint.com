@@ -2,7 +2,7 @@
 <div class="master" v-bind:class="{ 'mobile-active': isActive, 'mobile-inactive': !isActive }" @click="toggleManual">
   <nav>
   <div class="title">Index</div>
-  <router-link :to="'/docs'" exact>Index</router-link>
+  <router-link :to="'/docs'" exact>Documentation</router-link>
   <router-link :to="'/docs/roadmap'">Roadmap</router-link>
   <router-link :to="'/docs/source-code'">Source Code</router-link>
   <div class="title">Guides</div>
@@ -21,7 +21,6 @@
   <router-link :to="'/docs/internals/merkle'">Merkle</router-link>
   <router-link :to="'/docs/internals/rpc'">RPC</router-link>
   <router-link :to="'/docs/internals/secure-p2p'">Secure P2P</router-link>
-  <router-link :to="'/docs/internals/tendermint-types'">Tendermint Types</router-link>
   <router-link :to="'/docs/internals/validators'">Validators</router-link>
   <router-link :to="'/docs/internals/wire-protocol'">Wire Protocol</router-link>
 </nav>

@@ -2,10 +2,10 @@
 <div>
   <abci-overview v-if="r('abci-overview')"></abci-overview>
   <consensus-overview v-if="r('consensus-overview')"></consensus-overview>
-  <num-01-download-tendermint v-if="r('01-download-tendermint')"></num-01-download-tendermint>
-  <num-02-first-abci-app v-if="r('02-first-abci-app')"></num-02-first-abci-app>
-  <num-03-deploy-testnet v-if="r('03-deploy-testnet')"></num-03-deploy-testnet>
-  <num-04-next-steps v-if="r('04-next-steps')"></num-04-next-steps>
+  <num-01-download-tendermint v-if="r('download-tendermint')"></num-01-download-tendermint>
+  <num-02-first-abci-app v-if="r('first-abci-app')"></num-02-first-abci-app>
+  <num-03-deploy-testnet v-if="r('deploy-testnet')"></num-03-deploy-testnet>
+  <num-04-next-steps v-if="r('next-steps')"></num-04-next-steps>
   <index v-if="r()"></index>
   <tendermint-vs-x v-if="r('tendermint-vs-x')"></tendermint-vs-x>
 </div>

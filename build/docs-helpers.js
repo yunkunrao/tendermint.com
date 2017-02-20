@@ -1,4 +1,3 @@
-// libs
 var numeral = require('numeral')
 var path = require('path')
 var toPascal = require('to-pascal-case')
@@ -10,8 +9,12 @@ function filesToArray (files) {
     let file = files[i]
     let baseName = path.basename(file, '.md')
     let elementName = baseName.replace(/^(#)/, 'num-')
-    let routeName = baseName.replace(/^(#)/, '')
     let pascalName = toPascal(elementName)
+
+    let routeName = baseName
+    if (routeName.substring(0, 1) === '#') {
+      routeName = routeName.substring(4)
+    }
 
     data.push({
       mdFilename: file,
@@ -64,7 +67,7 @@ function urlify (file) {
   // filter out '^#' from filename
   let filename = markdownFile.name
   if (filename.substring(0, 1) === '#') {
-    filename = filename.substring(1)
+    filename = filename.substring(4)
   }
 
   return `${directory}/${filename}`
