@@ -59,7 +59,7 @@ It uses Tendermint as its consensus engine, and provides a particular applicatio
 <script>
 export default {
   mounted () {
-    document.title = 'Tendermint vs - Documentation - Tendermint'
+    document.title = 'Tendermint vs X - Documentation - Tendermint'
   }
 }
 </script>

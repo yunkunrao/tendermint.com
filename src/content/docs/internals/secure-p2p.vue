@@ -1,5 +1,5 @@
 <template>
-  <div><h1>Secure P2P</h1>
+  <div><h1 id=secure-p2p>Secure P2P</h1>
 <p>The Tendermint p2p protocol uses an authenticated encryption scheme based on the <a href=https://en.wikipedia.org/wiki/Station-to-Station_protocol>Station-to-Station Protocol</a>. The implementation uses <a href=https://godoc.org/golang.org/x/crypto/nacl/box>golang&#x2019;s</a> <a href=http://nacl.cr.yp.to/box.html>nacl box</a> for the actual authenticated encryption algorithm.</p>
 <p>Each peer generates an ED25519 key-pair to use as a persistent (long-term) id.</p>
 <p>When two peers establish a TCP connection, they first each generate an ephemeral ED25519 key-pair to use for this session, and send each other their respective ephemeral public keys. This happens in the clear.</p>
@@ -10,9 +10,9 @@
 <p>Each peer signs the challenge with their persistent private key, and sends the other peer an AuthSigMsg, containing their persistent public key and the signature. On receiving an AuthSigMsg, the peer verifies the signature.</p>
 <p>The peers are now authenticated.</p>
 <p>All future communications can now be encrypted using the shared secret and the generated nonces, where each nonce is incremented by one each time it is used. The communications maintain Perfect Forward Secrecy, as the persistent key pair was not used for generating secrets - only for authenticating.</p>
-<h2>Caveat</h2>
+<h2 id=caveat>Caveat</h2>
 <p>This system is still vulnerable to a Man-In-The-Middle attack if the persistent public key of the remote node is not known in advance. The only way to mitigate this is with a public key authentication system, such as the Web-of-Trust or Certificate Authorities. In our case, we can use the blockchain itself as a certificate authority to ensure that we are connected to at least one validator.</p>
-<h2>Links</h2>
+<h2 id=links>Links</h2>
 <ul>
 <li><a href=https://github.com/tendermint/go-p2p/blob/master/secret_connection.go#L49>Implementation</a></li>
 <li><a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.216.6107&amp;rep=rep1&amp;type=pdf">Original STS paper by Whitfield Diffie, Paul C. van Oorschot and Michael J. Wiener</a></li>
@@ -24,7 +24,7 @@
 <script>
 export default {
   mounted () {
-    document.title = 'Secure P2p - Documentation - Tendermint'
+    document.title = 'Secure P2P - Documentation - Tendermint'
   }
 }
 </script>

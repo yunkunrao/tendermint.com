@@ -1,5 +1,6 @@
-<template><div><h1>Deploy a Testnet</h1>
-<h2>Tendermint Core</h2>
+<template>
+  <div><h1 id=deploy-a-testnet>Deploy a Testnet</h1>
+<h2 id=tendermint-core>Tendermint Core</h2>
 <p>Now that we&#x2019;ve seen how ABCI works, and even played with a few applications using the <code>abci-cli</code> tool,
 let&#x2019;s run an actual Tendermint node.</p>
 <p>When running a live application, a Tendermint node takes the place of the <code>abci-cli</code> tool by sending ABCI requests
@@ -29,7 +30,7 @@ but you probably don&#x2019;t have one running yet.</p>
 </code></pre>
 <p>visit <a href=http://localhost:46657>http://localhost:46657</a> in your browser to see the other endpoints.</p>
 <p>For more details, see the <router-link to=/docs/guides/using-tendermint>Using Tendermint Guide</router-link>.</p>
-<h2>Deploy a Tendermint Testnet</h2>
+<h2 id=deploy-a-tendermint-testnet>Deploy a Tendermint Testnet</h2>
 <p>Now that we&#x2019;ve run a single Tendermint node with one validator and a couple applications,
 let&#x2019;s deploy a testnet to run our application with four validators.</p>
 <p>For this part of the tutorial, we assume you have an account at <a href=https://www.digitalocean.com/ >DigitalOcean</a> and are willing to
@@ -72,6 +73,15 @@ Edit core/init.sh to change the Tendermint version being run.</p>
 <p>Note you can use the <code>--machines</code> flag on any command to specify machines,
 for instance <code>--machines mach[1-3],mach7</code> will apply to mach1, mach2, mach3, and mach7.</p>
 <p>TODO: Document tutorial on docker-machine ssh mach1, docker ps, etc, or at least link to good Docker tutorials.</p>
-<h2>Next Steps</h2>
+<h2 id=next-steps>Next Steps</h2>
 <p>Done trying out the testnet? Continue <router-link to=/intro/getting-started/next-steps>onwards</router-link>.</p>
-</div></template>
+</div>
+</template>
+
+<script>
+export default {
+  mounted () {
+    document.title = '3. Deploy Testnet - Documentation - Tendermint'
+  }
+}
+</script>

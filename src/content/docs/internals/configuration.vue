@@ -1,6 +1,7 @@
-<template><div><h1>Configuration</h1>
+<template>
+  <div><h1 id=configuration>Configuration</h1>
 <p>TendermintCore can be configured via a TOML file in <code>$TMROOT/config.toml</code>.  Some of these parameters can be overridden by command-line flags.</p>
-<h3>Config parameters</h3>
+<h3 id=config-parameters>Config parameters</h3>
 <p>The main config parameters are defined <a href=https://github.com/tendermint/tendermint/blob/master/config/tendermint/config.go>here</a>.</p>
 <ul>
 <li><code>genesis_file</code>: The location of the genesis file.  <em>Default</em>: <code>&quot;$TMROOT/genesis.json&quot;</code></li>
@@ -26,4 +27,13 @@
 <li><code>mempool_*</code>: Various mempool parameters <strong>TODO</strong></li>
 </ul>
 <p><strong>TODO</strong> Document command-line flag parameters from <a href=https://github.com/tendermint/tendermint/blob/master/cmd/tendermint/flags.go>here</a></p>
-</div></template>
+</div>
+</template>
+
+<script>
+export default {
+  mounted () {
+    document.title = 'Configuration - Documentation - Tendermint'
+  }
+}
+</script>

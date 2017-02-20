@@ -17,12 +17,14 @@ let blogRssFile = './src/assets/feed.xml'
 
 let rssTemplate = require('./blog-rss.js')
 
-// set markdown-it settings
-let md = require('markdown-it')({
-  html: true,
-  linkify: true,
-  typographer: true
-})
+// markdown-it settings
+let md = require('markdown-it')
+  ({
+    html: true,
+    linkify: true,
+    typographer: true
+  })
+  .use(require('markdown-it-anchor'))
 
 function markdownToObject (files) {
   let posts = []
