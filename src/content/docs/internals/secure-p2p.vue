@@ -24,7 +24,7 @@
 <script>
 export default {
   mounted () {
-    document.title = 'Secure P2p - Documentation - Tendermint'
+    document.title = 'Secure P2P - Documentation - Tendermint'
   }
 }
 </script>

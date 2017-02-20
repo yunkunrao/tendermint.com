@@ -12,8 +12,7 @@
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs",
     "prod": "node build/prod-server.js",
     "blog": "node build/blog.js",
-    "docs": "node build/docs.js && node build/docs-routes.js",
-    "doct": "node build/docs-toc.js",
+    "docs": "node build/docs-entries.js && node build/docs-routes.js && node build/docs-master.js",
     "build": "node build/blog.js && node build/docs.js && node build/build.js"
   },
   "dependencies": {
@@ -77,6 +76,7 @@
     "moment": "2.17.1",
     "nib": "1.1.2",
     "nightwatch": "0.9.12",
+    "numeral": "^2.0.4",
     "opn": "4.0.2",
     "ora": "1.1.0",
     "path": "0.12.7",

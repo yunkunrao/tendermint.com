@@ -5,12 +5,12 @@
   <router-link :to="'/intro'" exact>Index</router-link>
   <router-link :to="'/intro/abci-overview'">ABCI Overview</router-link>
   <router-link :to="'/intro/consensus-overview'">Consensus Overview</router-link>
-  <router-link :to="'/intro/tendermint-vs'">Tendermint Versus X</router-link>
+  <router-link :to="'/intro/tendermint-vs-x'">Tendermint vs X</router-link>
   <div class="title">Getting Started</div>
-  <router-link :to="'/intro/getting-started/deploy-testnet'">Deploy Testnet</router-link>
-  <router-link :to="'/intro/getting-started/download'">Download</router-link>
-  <router-link :to="'/intro/getting-started/first-abci-app'">First ABCI App</router-link>
-  <router-link :to="'/intro/getting-started/next-steps'">Next Steps</router-link>
+  <router-link :to="'/intro/getting-started/01-download-tendermint'">1. Download Tendermint</router-link>
+  <router-link :to="'/intro/getting-started/02-first-abci-app'">2. First ABCI App</router-link>
+  <router-link :to="'/intro/getting-started/03-deploy-testnet'">3. Deploy Testnet</router-link>
+  <router-link :to="'/intro/getting-started/04-next-steps'">4. Next Steps</router-link>
 </nav>
   <btn-thumb v-show="isActive" icon="close"></btn-thumb>
   <btn-thumb v-show="!isActive" icon="bars"></btn-thumb>

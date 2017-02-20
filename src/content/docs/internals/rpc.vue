@@ -63,7 +63,7 @@ http://localhost:46657/unsubscribe?event=_
 <script>
 export default {
   mounted () {
-    document.title = 'Rpc - Documentation - Tendermint'
+    document.title = 'RPC - Documentation - Tendermint'
   }
 }
 </script>

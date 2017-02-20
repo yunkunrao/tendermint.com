@@ -59,7 +59,7 @@ satisfies the <a href=https://github.com/tendermint/abci>ABCI</a>.</p>
 <script>
 export default {
   mounted () {
-    document.title = 'Abci Overview - Documentation - Tendermint'
+    document.title = 'ABCI Overview - Documentation - Tendermint'
   }
 }
 </script>

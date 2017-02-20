@@ -148,7 +148,7 @@ You should get the same results as for the Go version.</p>
 <script>
 export default {
   mounted () {
-    document.title = 'First Abci App - Documentation - Tendermint'
+    document.title = '2. First ABCI App - Documentation - Tendermint'
   }
 }
 </script>

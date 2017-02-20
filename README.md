@@ -41,7 +41,7 @@ npm run dev
 ./content/blog/
 npm run blog
 
-# Edit Intro or Docs Pages
+# Edit Documenation
 ./content/intro/
 ./content/docs/
 npm run docs
@@ -59,10 +59,24 @@ npm run docs
 ./src/store/modules/presentations.js
 ```
 
-## Content Editing Tips
+## Documentation Editing Guide
 
-## Markdown Links
-If you want to link to internal pages in Markdown, use the full path. For example:
+### Creating a New Page
+To add a new page to documentation, add a markdown file to `.content/docs/`. The title of the page on the website is based on it's source markdown filename. For example, 'this-is-awesome.md' will have a title of 'This is Awesome'.
+
+Pages are ordered alphabetically based on filename. If you want to have a custom order for your documentation, label the files with numbers. Like this:
+
+    ▾ getting-started/
+        #01-download-tendermint.md
+        #02-first-abci-app.md
+        #03-deploy-testnet.md
+        #04-next-steps.md
+
+### Creating a New Section
+To add a new section to documentation, add a new directory under `.content/docs/`.
+
+### Markdown Links
+If you want to link to other pages in the Tendermint site, please use the full path. This will prevent the user's browser from reloading the entire website. For example:
 
     # won't work
     [block hash](./tendermint-types#block-hash)
@@ -70,8 +84,8 @@ If you want to link to internal pages in Markdown, use the full path. For exampl
     # will work
     [block hash](/docs/internals/tendermint-types#block-hash)
 
-## Markdown Link to Hash
-HTML IDs are automatically generated for Markdown pages. They use the slug case format.
+### Markdown Link to Hash
+HTML IDs are automatically generated for headings. You can link to them, but please remember to use the slug case format. 'this-is-slug-case'
 
     # won't work
     [block hash](./tendermint-types#Block.Hash)
@@ -80,3 +94,8 @@ HTML IDs are automatically generated for Markdown pages. They use the slug case 
     [block hash](/docs/internals/tendermint-types#block-hash)
 
 
+### Building for Production
+
+Please run the following command to build all documentation.
+
+    npm run docs

@@ -9,7 +9,7 @@
   <router-link :to="'/docs/guides/app-architecture'">App Architecture</router-link>
   <router-link :to="'/docs/guides/app-development'">App Development</router-link>
   <router-link :to="'/docs/guides/contributing'">Contributing</router-link>
-  <router-link :to="'/docs/guides/install'">Install</router-link>
+  <router-link :to="'/docs/guides/install-from-source'">Install from Source</router-link>
   <router-link :to="'/docs/guides/using-tendermint'">Using Tendermint</router-link>
   <div class="title">Internals</div>
   <router-link :to="'/docs/internals/block-structure'">Block Structure</router-link>

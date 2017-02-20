@@ -3,7 +3,7 @@
   <app-architecture v-if="r('app-architecture')"></app-architecture>
   <app-development v-if="r('app-development')"></app-development>
   <contributing v-if="r('contributing')"></contributing>
-  <install v-if="r('install')"></install>
+  <install-from-source v-if="r('install-from-source')"></install-from-source>
   <using-tendermint v-if="r('using-tendermint')"></using-tendermint>
   <index v-if="r()"></index>
   <block-structure v-if="r('block-structure')"></block-structure>
@@ -30,7 +30,7 @@ export default {
     AppArchitecture: require('../content/docs/guides/app-architecture.vue'),
     AppDevelopment: require('../content/docs/guides/app-development.vue'),
     Contributing: require('../content/docs/guides/contributing.vue'),
-    Install: require('../content/docs/guides/install.vue'),
+    InstallFromSource: require('../content/docs/guides/install-from-source.vue'),
     UsingTendermint: require('../content/docs/guides/using-tendermint.vue'),
     Index: require('../content/docs/index.vue'),
     BlockStructure: require('../content/docs/internals/block-structure.vue'),

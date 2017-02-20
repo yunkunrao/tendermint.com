@@ -4,15 +4,14 @@ var fs = require('fs')
 var glob = require('glob')
 var cheerio = require('cheerio')
 var minify = require('html-minifier').minify
+var lib = require('./docs-helpers.js')
 
 // markdown-it settings
-let md = require('markdown-it')
-  ({
-    html: true,
-    linkify: true,
-    typographer: true
-  })
-  .use(require('markdown-it-anchor'))
+let md = require('markdown-it')({
+  html: true,
+  linkify: true,
+  typographer: true
+}).use(require('markdown-it-anchor'))
 
 var docs = './content/docs/**/*.md'
 var intro = './content/intro/**/*.md'
@@ -20,16 +19,8 @@ var intro = './content/intro/**/*.md'
 // templating
 var entryTemplate = fs.readFileSync('./build/templates/Entry.html', 'utf8')
 var template = require('es6-template-strings')
-var toTitleCase = require('to-title-case')
 
 // functions
-function vuename(file) {
-  var markdownFile = path.parse(file)
-  var directory = markdownFile.dir.substring(2) // remove './' from directory
-  var vueFile = `./src/${directory}/${markdownFile.name}.vue`
-  return vueFile
-}
-
 function vueify (file) {
   var mdData = fs.readFileSync(file, 'utf8')
   var htmlData = md.render(mdData)
@@ -60,13 +51,13 @@ function vueify (file) {
     removeEmptyElements: true
   })
 
-  var pageTitle = toTitleCase(path.basename(file, '.md'))
+  var pageTitle = lib.titlify(path.basename(file, '.md'))
 
   return template(entryTemplate, { data: pageData, title: pageTitle })
 }
 
 function build (file) {
-  let filename = vuename(file)
+  let filename = './src/' + lib.vueName(file)
   fs.writeFileSync(filename, vueify(file), 'utf8')
   console.log(`  ✓ ${filename}`)
 }
