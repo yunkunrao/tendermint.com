@@ -1,7 +1,7 @@
 # Using Tendermint
 
 This is a guide to using the `tendermint` program from the command line.
-It assumes only that you [have tendermint installed](/intro/getting-started/install) and have some rudimentary idea
+It assumes only that you [have tendermint installed](/intro/getting-started/download-tendermint) and have some rudimentary idea
 of what Tendermint and ABCI are.
 
 You can see the help menu with `tendermint --help`, and the version number with `tendermint version`.
