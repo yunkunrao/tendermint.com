@@ -64,6 +64,7 @@
       "description": "Encrypted storage web-utility backed by Tendermint"
     }
   ],
+
   "abciServers": [
     {
       "name": "abci",
@@ -72,8 +73,8 @@
       "author": "Tendermint"
     },
     {
-      "name": "js-tmsp",
-      "url": "https://github.com/tendermint/js-tmsp",
+      "name": "js-abci",
+      "url": "https://github.com/tendermint/js-abci",
       "language": "Javascript",
       "author": "Tendermint"
     },
@@ -84,10 +85,10 @@
       "author": "Martin Dyring"
     },
     {
-      "name": "jTMSP",
-      "url": "https://github.com/jTMSP/jTMSP",
+      "name": "jabci",
+      "url": "https://github.com/jTendermint/jabci",
       "language": "Java",
-      "author": "jTMSP"
+      "author": "jTendermint"
     },
     {
       "name": "Spearmint",
@@ -102,13 +103,21 @@
       "author": "Zach Balder"
     }
   ],
+
   "deploymentTools": [
     {
       "name": "mintnet",
       "url": "https://github.com/tendermint/mintnet",
-      "technology": "Tendermint",
+      "technology": "Docker and DockerMachine",
       "author": "Tendermint",
       "description": "Deploy a Tendermint test network on any provider supported by docker-machine"
+    },
+    {
+      "name": "mintnet-kubernetes",
+      "url": "https://github.com/tendermint/mintnet-kubernetes",
+      "technology": "Docker and Kubernetes",
+      "author": "Tendermint",
+      "description": "Deploy a Tendermint test network using Google's kubernetes"
     },
     {
       "name": "terraform-modules",
@@ -125,6 +134,7 @@
       "description": "Deploy a tendermint test network in docker containers "
     }
   ],
+
   "competitors": [
     {
       "name": "Hyperledger",

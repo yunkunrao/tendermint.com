@@ -1,5 +1,6 @@
 <template>
 <div>
+  <abci-cli v-if="r('abci-cli')"></abci-cli>
   <app-architecture v-if="r('app-architecture')"></app-architecture>
   <app-development v-if="r('app-development')"></app-development>
   <contributing v-if="r('contributing')"></contributing>
@@ -27,6 +28,7 @@
 export default {
   name: 'page-entry-body',
   components: {
+    AbciCli: require('../content/docs/guides/abci-cli.vue'),
     AppArchitecture: require('../content/docs/guides/app-architecture.vue'),
     AppDevelopment: require('../content/docs/guides/app-development.vue'),
     Contributing: require('../content/docs/guides/contributing.vue'),
