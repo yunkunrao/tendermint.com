@@ -1,6 +1,6 @@
 var fs = require('fs')
 var glob = require('glob')
-var lib = require('./docs-helpers.js')
+var lib = require('./helpers.js')
 
 var docs = './content/docs/**/*.md'
 var intro = './content/intro/**/*.md'
@@ -94,7 +94,9 @@ function buildAll (wildcard, filename) {
   })
 }
 
-module.exports = function () {
+function build () {
   buildAll(docs, './src/components/PageDocsMaster.vue')
   buildAll(intro, './src/components/PageIntroMaster.vue')
 }
+
+exports.default = build

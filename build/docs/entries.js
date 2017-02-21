@@ -70,7 +70,9 @@ function buildAll (wildcard) {
   })
 }
 
-module.exports = function () {
+function build () {
   buildAll(docs)
   buildAll(intro)
 }
+
+export.default = build

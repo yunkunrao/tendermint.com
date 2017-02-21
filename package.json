@@ -12,7 +12,7 @@
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs",
     "prod": "node build/prod-server.js",
     "blog": "node build/blog.js",
-    "docs": "node build/docs-entries.js && node build/docs-routes.js && node build/docs-master.js",
+    "docs": "node build/docs.js",
     "build": "node build/blog.js && node build/docs.js && node build/build.js"
   },
   "dependencies": {

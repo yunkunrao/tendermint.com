@@ -48,7 +48,7 @@ function writeTemplate (data, filename) {
   console.log(`  ✓ ${filename}`)
 }
 
-function buildAll (wildcard, filename) {
+function build (wildcard, filename) {
   let filenames
   glob(wildcard, function (err, files) {
     if (err) console.log(err)
@@ -58,7 +58,5 @@ function buildAll (wildcard, filename) {
   })
 }
 
-module.exports = function () {
-  buildAll(docs, './src/components/PageDocsEntries.vue')
-  buildAll(intro, './src/components/PageIntroEntries.vue')
-}
+build(docs, './src/components/PageDocsEntries.vue')
+build(intro, './src/components/PageIntroEntries.vue')
