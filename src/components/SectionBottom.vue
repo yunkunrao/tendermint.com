@@ -53,7 +53,7 @@ export default {
     line-height 1
     margin-bottom 1.5rem
   
-  #download-button, form
+  #download-button .ni-btn, form
     margin 0 auto
     max-width 18rem
 
