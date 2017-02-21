@@ -8,7 +8,7 @@ const routes = [
   { path: '/intro/tendermint-vs', redirect: '/intro/tendermint-vs-x' },
   { path: '/intro/first-tmsp', redirect: '/intro/first-abci' },
   { path: '/intro/install', redirect: '/intro/download-tendermint' },
-  { path: '/intro/download', redirect: '/intro/download-tendermint' },
+  { path: '/intro/getting-started/download', redirect: '/intro/download-tendermint' },
   { path: '/intro/getting-started/install', redirect: '/docs/guides/install' },
   { path: '/docs/internals/consensus',
     redirect: '/docs/internals/byzantine-consensus-algorithm' },
