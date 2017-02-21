@@ -1,124 +1,133 @@
-# First ABCI App
+# First Tendermint App
 
-## A First Example
+As a general purpose blockchain engine, Tendermint is agnostic to the application you want to run.
+So, to run a complete blockchain that does something useful, you must start two programs:
+one is Tendermint Core, the other is your application, which can be written in any programming language.
+Recall from [the intro to ABCI](/intro/abci-overview) that Tendermint Core handles all the p2p and consensus stuff,
+and just forwards transactions to the application when they need to be validated, or when they're ready to be committed to a block.
 
-Make sure you [have Go installed](https://golang.org/doc/install) and [put `$GOPATH/bin` in your `$PATH`](https://github.com/tendermint/tendermint/wiki/Setting-GOPATH).
+In this guide, we show you some examples of how to run an application using Tendermint.
 
-Next, install the `abci-cli` tool and example applications:
+## Install
+
+First, make sure you have [installed Tendermint](/intro/getting-started/download-tendermint).
+The first apps we will work with are written in Go. 
+To install them, you need to [install Go](https://golang.org/doc/install) and 
+[put `$GOPATH/bin` in your `$PATH`](https://github.com/tendermint/tendermint/wiki/Setting-GOPATH). 
+
+Then run
 
 ```
 go get -u github.com/tendermint/abci/cmd/...
 ```
 
-Now run `abci-cli --help` to see the list of commands:
+If there is an error, download the `glide` tool to pin the dependencies:
 
 ```
-COMMANDS:
-   batch        Run a batch of ABCI commands against an application
-   console      Start an interactive console for multiple commands
-   echo         Have the application echo a message
-   info         Get some info about the application
-   set_option   Set an option on the application
-   deliver_tx    Append a new tx to application
-   check_tx     Validate a tx
-   commit       Get application Merkle root hash
-   help, h      Shows a list of commands or help for one command
-
-GLOBAL OPTIONS:
-   --address "tcp://127.0.0.1:46658"    address of application socket
-   --help, -h                           show help
-   --version, -v                        print the version
+go get github.com/Masterminds/glide
+cd $GOPATH/src/github.com/tendermint/abci
+glide install
+go install ./cmd/...
 ```
 
-The `abci-cli` tool lets us send ABCI messages to our application, to help build and debug them.
+Now you should have two apps installed: 
 
-The most important messages are `deliver_tx`, `check_tx`, and `commit`,
-but there are others for convenience, configuration, and information purposes.
+```
+dummy --help
+counter --help
+```
 
-Let's start a dummy application. The dummy just stores transactions in a merkle tree:
+Both of these applications are in Go. 
+But we also want to run an application in another language - 
+in this case, we'll run a Javascript version of the `counter`.
+To run it, you'll need to [install node](https://nodejs.org/en/download/).
+
+You'll also need to fetch the relevant repository, from https://github.com/tendermint/js-abci.
+Since I keep all my code under the `$GOPATH`, I just `go get github.com/tendermint/js-abci &> /dev/null`
+
+Now, let's run some apps!
+
+## A First Example - Dummy
+
+The dummy app is a Merkle tree that just stores all transactions.
+If the transaction contains an `=`, eg. `key=value`, 
+then the `value` is stored under the `key` in the Merkle tree.
+Otherwise, the full transaction bytes are stored as the key and the value.
+
+Let's start a dummy application. 
 
 ```
 dummy
 ```
 
-In another terminal, run
+In another terminal, we can start Tendermint.
+If you have never run Tendermint before, use:
 
 ```
-abci-cli echo hello
-abci-cli info
+tendermint init 
+tendermint node
 ```
 
-The application should echo `hello` and give you some information about itself.
+If you have used Tendermint, you may want to reset the data for a new blockchain by running `tendermint unsafe_reset_all`.
+Then you can run `tendermint node` to start Tendermint, and connect to the app.
+For more details, see [the guide on using Tendermint](/docs/guides/using-tendermint).
 
-An ABCI application must provide two things:
-
-  - a socket server
-  - a handler for ABCI messages
-
-When we run the `abci-cli` tool we open a new connection to the application's socket server,
-send the given ABCI message, and wait for a response.
-
-The server may be generic for a particular language, and we provide one for Go in `abci/server`.
-There is one for Python in `example/python/abci/server.py`, and one for Node JS in `github.com/tendermint/js-abci`.
-
-The handler is specific to the application, and may be arbitrary,
-so long as it is deterministic and conforms to the ABCI interface specification.
-
-So when we run `abci-cli info`, we open a new connection to the ABCI server, which calls the `Info()` method on the application, which tells us the number of transactions in our Merkle tree.
-
-Now, since every command opens a new connection, we provide the `abci-cli console` and `abci-cli batch` commands,
-to allow multiple ABCI messages to be sent over a single connection.
-
-Running `abci-cli console` should drop you in an interactive console for speaking ABCI messages to your application.
-
-Try running these commands:
+You should see Tendermint making blocks! 
+We can get the status of our Tendermint node as follows:
 
 ```
-> echo hello
--> data: hello
-
-> info
--> data: {"size":0}
-
-> commit
--> data: 0x
-
-> deliver_tx "abc"
--> code: OK
-
-> info
--> data: {"size":1}
-
-> commit
--> data: 0x750502FC7E84BBD788ED589624F06CFA871845D1
-
-> query "abc"
--> code: OK
--> data: {"index":0,"value":"abc","exists":true}
-
-> deliver_tx "def=xyz"
--> code: OK
-
-> commit
--> data: 0x76393B8A182E450286B0694C629ECB51B286EFD5
-
-> query "def"
--> code: OK
--> data: {"index":1,"value":"xyz","exists":true}
+curl -s localhost:46657/status
 ```
 
-Note that if we do `deliver_tx "abc"` it will store `(abc, abc)`,
-but if we do `deliver_tx "abc=efg"` it will store `(abc, efg)`.
+The `-s` just silences `curl`. For nicer output, download pipe the result into a tool like [jq](https://stedolan.github.io/jq/) 
+or [jsonpp](https://github.com/jmhodges/jsonpp).
 
-Similarly, you could put the commands in a file and run `abci-cli --verbose batch < myfile`.
+Now let's send some transactions to the dummy.
 
+```
+curl -s 'localhost:46657/broadcast_tx_commit?tx="abcd"'
+```
 
-## Another Example
+Note the single quote, `'` around the url, to ensure the double quotes, `"`, are not escaped by bash.
+This command sent a transaction with bytes `abcd`, so `abcd` will be stored as both the key and the value in the Merkle tree.
+The response should look something like:
+
+```
+{"jsonrpc":"2.0","id":"","result":[98,{"check_tx":{},"deliver_tx":{}}],"error":""}
+```
+
+The `98` is a type-byte, and can be ignored (it's useful for serializing and deserializing arbitrary json).
+Otherwise, this result is empty - there's nothing to report on and everything is OK.
+
+We can confirm that are transaction worked and the value got stored by querying the app:
+
+```
+curl -s 'localhost:46657/abci_query?data="abcd"&path=""&prove=false'
+```
+
+Note the `value` in the result. It should say `61626364`, which is the hex-encoding of the ASCII of `abcd`.
+You can verify in a python shell by running `"61626364".decode('hex')`.
+
+Now let's try setting a different key and value:
+
+```
+curl -s 'localhost:46657/broadcast_tx_commit?tx="name=satoshi"'
+```
+
+Now if we query for `name`, we should get `satoshi`:
+
+```
+curl -s 'localhost:46657/abci_query?data="name"&path=""&prove=false'
+```
+
+Try some other transactions and queries to make sure everything is working.
+
+## Another Example - Counter
 
 Now that we've got the hang of it, let's try another application, the "counter" app.
 
 The counter app doesn't use a Merkle tree, it just counts how many times we've sent a transaction,
-asked for a hash, or committed the state. The result of `commit` is just the number of transactions sent.
+or committed the state. 
 
 This application has two modes: `serial=off` and `serial=on`.
 
@@ -126,72 +135,67 @@ When `serial=on`, transactions must be a big-endian encoded incrementing integer
 
 If `serial=off`, there are no restrictions on transactions.
 
-We can toggle the value of `serial` using the `set_option` ABCI message.
+Start the counter with `serial=on` by using the flag:
+
+```
+counter --serial
+```
 
 When `serial=on`, some transactions are invalid.
 In a live blockchain, transactions collect in memory before they are committed into blocks.
 To avoid wasting resources on invalid transactions,
-ABCI provides the `check_tx` message,
+ABCI provides the `CheckTx` message,
 which application developers can use to accept or reject transactions,
 before they are stored in memory or gossipped to other peers.
 
-In this instance of the counter app, `check_tx` only allows transactions whose integer is greater than the last committed one.
+In this instance of the counter app, `CheckTx` only allows transactions whose integer is greater than the last committed one.
 
-Let's kill the console and the dummy application, and start the counter app:
-
-```
-counter
-```
-
-In another window, start the `abci-cli console`:
+Let's kill the console and the dummy application, and start the counter app.
+We can enable `serial=on` with a flag:
 
 ```
-> set_option serial on
--> data: serial=on
-
-> check_tx 0x00
--> code: OK
-
-> check_tx 0xff
--> code: OK
-
-> deliver_tx 0x00
--> code: OK
-
-> check_tx 0x00
--> code: BadNonce
--> log: Invalid nonce. Expected >= 1, got 0
-
-> deliver_tx 0x01
--> code: OK
-
-> deliver_tx 0x04
--> code: BadNonce
--> log: Invalid nonce. Expected 2, got 4
-
-> info
--> data: {"hashes":0,"txs":2}
+counter --serial
 ```
 
-This is a very simple application, but between `counter` and `dummy`, its easy to see how you can build out arbitrary application states on top of the ABCI.
-In the near future, `erisdb` of Eris Industries will also run atop ABCI, bringing with it Ethereum-like accounts, the Ethereum virtual-machine, Eris's permissioning scheme, and native contracts extensions.
-
-But the ultimate flexibility comes from being able to write the application easily in any language.
-
-We have implemented the counter in a number of languages (see the example directory).
-
-To run the Node JS version, `cd` to `example/js` and run
+In another window, reset and start Tendermint:
 
 ```
-node app.js
+tendermint unsafe_reset_all
+tendermint node
 ```
 
-(you'll have to kill the other counter application process).
-In another window, run the console and those previous ABCI commands.
-You should get the same results as for the Go version.
+Once again, you can see the blocks streaming by. Let's send some transactions.
 
-Want to write the counter app in your favorite language?! We'd be happy to accept the pull request!
+// TODO
+
+## Example in Another Language - CounterJS
+
+The ultimate flexibility in Tendermint comes from being able to easily write the application in any language.
+While we already used the implementation written in Go, 
+let's now try the Counter application written in Javascript!
+
+Kill the previous `counter` and `tendermint` processes.
+Change directory to the location of the `github.com/tendermint/abci-js`.
+If you fetched the repository with `go get`, it would be 
+
+```
+cd $GOPATH/src/github.com/tendermint/js-abci
+```
+
+Now run the app:
+
+```
+node example/app.js
+```
+
+// TODO
+
 
 ## Next Step
 
-In the next tutorial, we will show how to [deploy a ABCI testnet](/intro/getting-started/deploy-testnet).
+In this tutorial you learned how to run applications using Tendermint on a single node.
+You saw how applications could be written in different languages, 
+and how to send transactions and query for the latest state.
+But the true power of Tendermint comes from its ability to securely and efficiently run an application 
+across a distributed network of nodes, while keeping them all in sync using its state-of-the-art consensus protocol.
+This is the subject of the next tutorial, where we show you [how to deploy Tendermint networks](/intro/getting-started/deploy-testnet).
