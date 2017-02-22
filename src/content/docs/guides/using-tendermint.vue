@@ -221,6 +221,7 @@ or learn more about building your own in the <router-link to=/docs/guides/app-de
 
 <script>
 export default {
+  name: 'page-docs-entry',
   mounted () {
     document.title = 'Using Tendermint - Documentation - Tendermint'
   }

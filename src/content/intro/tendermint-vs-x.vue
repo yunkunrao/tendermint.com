@@ -58,6 +58,7 @@ It uses Tendermint as its consensus engine, and provides a particular applicatio
 
 <script>
 export default {
+  name: 'page-docs-entry',
   mounted () {
     document.title = 'Tendermint vs X - Documentation - Tendermint'
   }

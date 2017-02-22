@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: 'page-entry-body',
+  name: 'page-docs-entries',
   components: {
     AbciOverview: require('../content/intro/abci-overview.vue'),
     ConsensusOverview: require('../content/intro/consensus-overview.vue'),

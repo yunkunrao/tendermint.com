@@ -76,6 +76,7 @@ especially <code>go-p2p</code> and <code>go-rpc</code>, as their versions are re
 
 <script>
 export default {
+  name: 'page-docs-entry',
   mounted () {
     document.title = 'Contributing - Documentation - Tendermint'
   }

@@ -62,6 +62,7 @@
 
 <script>
 export default {
+  name: 'page-docs-entry',
   mounted () {
     document.title = 'Genesis - Documentation - Tendermint'
   }

@@ -147,6 +147,7 @@ bytes.Equal(data, data2) // true
 
 <script>
 export default {
+  name: 'page-docs-entry',
   mounted () {
     document.title = 'Block Structure - Documentation - Tendermint'
   }

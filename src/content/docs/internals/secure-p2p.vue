@@ -23,6 +23,7 @@
 
 <script>
 export default {
+  name: 'page-docs-entry',
   mounted () {
     document.title = 'Secure P2P - Documentation - Tendermint'
   }

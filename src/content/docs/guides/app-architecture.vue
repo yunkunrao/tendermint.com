@@ -60,6 +60,7 @@
 
 <script>
 export default {
+  name: 'page-docs-entry',
   mounted () {
     document.title = 'App Architecture - Documentation - Tendermint'
   }

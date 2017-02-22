@@ -58,6 +58,7 @@ satisfies the <a href=https://github.com/tendermint/abci>ABCI</a>.</p>
 
 <script>
 export default {
+  name: 'page-docs-entry',
   mounted () {
     document.title = 'ABCI Overview - Documentation - Tendermint'
   }

@@ -54,6 +54,7 @@ function titlify (basename) {
 
   // fix some abbreviations
   value = value.replace('Abci', 'ABCI')
+  value = value.replace('Cli', 'CLI')
   value = value.replace('Rpc', 'RPC')
   value = value.replace('P2p', 'P2P')
 

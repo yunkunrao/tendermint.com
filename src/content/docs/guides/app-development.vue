@@ -127,6 +127,7 @@ to ensure both Tendermint and the app are synced to the latest block height.</p>
 
 <script>
 export default {
+  name: 'page-docs-entry',
   mounted () {
     document.title = 'App Development - Documentation - Tendermint'
   }

@@ -16,6 +16,7 @@
 
 <script>
 export default {
+  name: 'page-docs-entry',
   mounted () {
     document.title = 'Light Client Protocol - Documentation - Tendermint'
   }

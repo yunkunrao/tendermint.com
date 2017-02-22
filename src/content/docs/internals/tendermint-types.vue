@@ -1319,6 +1319,7 @@ If there exists no such majority, returns (nil, PartSetHeader{}, false).</p>
 
 <script>
 export default {
+  name: 'page-docs-entry',
   mounted () {
     document.title = 'Tendermint Types - Documentation - Tendermint'
   }

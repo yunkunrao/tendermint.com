@@ -48,6 +48,7 @@ This adds an economic element to the security of the protocol, allowing one to q
 
 <script>
 export default {
+  name: 'page-docs-entry',
   mounted () {
     document.title = 'Consensus Overview - Documentation - Tendermint'
   }

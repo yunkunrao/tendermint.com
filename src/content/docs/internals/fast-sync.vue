@@ -11,6 +11,7 @@
 
 <script>
 export default {
+  name: 'page-docs-entry',
   mounted () {
     document.title = 'Fast Sync - Documentation - Tendermint'
   }

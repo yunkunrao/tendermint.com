@@ -46,6 +46,7 @@ git clone https://github.com/tendermint/tendermint $GOPATH/src/github.com/tender
 
 <script>
 export default {
+  name: 'page-docs-entry',
   mounted () {
     document.title = 'Install from Source - Documentation - Tendermint'
   }

@@ -36,6 +36,7 @@ for a wide variety of distributed applications. <router-link to=/intro/getting-s
 
 <script>
 export default {
+  name: 'page-docs-entry',
   mounted () {
     document.title = 'Index - Documentation - Tendermint'
   }

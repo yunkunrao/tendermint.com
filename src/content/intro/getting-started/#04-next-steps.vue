@@ -15,6 +15,7 @@ There is also the <router-link to=/static/docs/tendermint.pdf>original whitepape
 
 <script>
 export default {
+  name: 'page-docs-entry',
   mounted () {
     document.title = '4. Next Steps - Documentation - Tendermint'
   }

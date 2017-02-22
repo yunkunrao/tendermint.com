@@ -147,6 +147,7 @@ You should get the same results as for the Go version.</p>
 
 <script>
 export default {
+  name: 'page-docs-entry',
   mounted () {
     document.title = '2. First ABCI App - Documentation - Tendermint'
   }

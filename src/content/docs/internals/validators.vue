@@ -18,6 +18,7 @@ These validators participate in the consensus protocol by broadcasting <em>votes
 
 <script>
 export default {
+  name: 'page-docs-entry',
   mounted () {
     document.title = 'Validators - Documentation - Tendermint'
   }

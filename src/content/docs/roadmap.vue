@@ -10,6 +10,7 @@
 
 <script>
 export default {
+  name: 'page-docs-entry',
   mounted () {
     document.title = 'Roadmap - Documentation - Tendermint'
   }

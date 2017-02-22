@@ -80,6 +80,7 @@ e35762c65f9fe0125308e0e3081d82bd9a98fa9da3d2711bcb246661f024d9d6
 
 <script>
 export default {
+  name: 'page-docs-entry',
   mounted () {
     document.title = '1. Download Tendermint - Documentation - Tendermint'
   }

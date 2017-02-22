@@ -80,6 +80,7 @@ for instance <code>--machines mach[1-3],mach7</code> will apply to mach1, mach2,
 
 <script>
 export default {
+  name: 'page-docs-entry',
   mounted () {
     document.title = '3. Deploy Testnet - Documentation - Tendermint'
   }

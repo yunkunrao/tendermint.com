@@ -162,6 +162,7 @@ var animal Animal = Dog(02)
 
 <script>
 export default {
+  name: 'page-docs-entry',
   mounted () {
     document.title = 'Wire Protocol - Documentation - Tendermint'
   }

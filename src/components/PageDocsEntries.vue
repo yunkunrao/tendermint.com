@@ -26,7 +26,7 @@
 
 <script>
 export default {
-  name: 'page-entry-body',
+  name: 'page-docs-entries',
   components: {
     AbciCli: require('../content/docs/guides/abci-cli.vue'),
     AppArchitecture: require('../content/docs/guides/app-architecture.vue'),

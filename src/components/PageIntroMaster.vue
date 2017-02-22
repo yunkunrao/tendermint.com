@@ -22,7 +22,7 @@ import $ from 'jquery'
 import BtnThumb from './BtnThumb'
 
 export default {
-  name: 'page-master',
+  name: 'page-docs-master',
   components: {
     BtnThumb
   },

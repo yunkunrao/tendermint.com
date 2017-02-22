@@ -175,6 +175,7 @@ conflicting reorg-proposals are signed.</p>
 
 <script>
 export default {
+  name: 'page-docs-entry',
   mounted () {
     document.title = 'Byzantine Consensus Algorithm - Documentation - Tendermint'
   }
