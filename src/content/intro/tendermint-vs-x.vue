@@ -51,7 +51,7 @@ It uses Tendermint as its consensus engine, and provides a particular applicatio
 <h2 id=next-steps>Next Steps</h2>
 <ul>
 <li>Read an overview of the motivation and design behind the <router-link to=/intro/abci-overview>Application BlockChain Interface</router-link>.</li>
-<li>Continue with the <router-link to=/intro/getting-started/install>Getting Started</router-link> guide to install and run example tendermint applications.</li>
+<li>Continue with the <router-link to=/intro/getting-started/download-tendermint>Getting Started</router-link> guide to install and run example tendermint applications.</li>
 </ul>
 </div>
 </template>

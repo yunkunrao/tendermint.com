@@ -1,7 +1,7 @@
 <template>
   <div><h1 id=using-tendermint>Using Tendermint</h1>
 <p>This is a guide to using the <code>tendermint</code> program from the command line.
-It assumes only that you <router-link to=/intro/getting-started/install>have tendermint installed</router-link> and have some rudimentary idea
+It assumes only that you <router-link to=/intro/getting-started/download-tendermint>have tendermint installed</router-link> and have some rudimentary idea
 of what Tendermint and ABCI are.</p>
 <p>You can see the help menu with <code>tendermint --help</code>, and the version number with <code>tendermint version</code>.</p>
 <h2 id=directory-root>Directory Root</h2>

@@ -25,11 +25,11 @@ Unlike other blockchain and consensus solutions, which come pre-packaged with bu
 or a quirky scripting language), developers can use Tendermint for BFT state machine replication of applications written in
 whatever programming language and development environment is right for them.</p>
 <p>Tendermint is designed to be easy-to-use, simple-to-understand, highly performant, and useful
-for a wide variety of distributed applications. <router-link to=/intro/getting-started/install>Get started with Tendermint</router-link> today!</p>
+for a wide variety of distributed applications. <router-link to=/intro/getting-started/download-tendermint>Get started with Tendermint</router-link> today!</p>
 <h2 id=next-steps>Next Steps</h2>
 <ul>
 <li>See how <router-link to=/intro/tendermint-vs>Tendermint compares to other software</router-link>.</li>
-<li>Continue with the <router-link to=/intro/getting-started/install>Getting Started</router-link> guide to install and run example tendermint applications.</li>
+<li>Continue with the <router-link to=/intro/getting-started/download-tendermint>Getting Started</router-link> guide to install and run example tendermint applications.</li>
 </ul>
 </div>
 </template>

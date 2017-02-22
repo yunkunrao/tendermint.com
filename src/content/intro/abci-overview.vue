@@ -49,7 +49,7 @@ satisfies the <a href=https://github.com/tendermint/abci>ABCI</a>.</p>
 <h2 id=next-steps>Next Steps</h2>
 <ul>
 <li>Read an overview of <router-link to=/intro/consensus-overview>how the consensus algorithm works</router-link>.</li>
-<li>Continue with the <router-link to=/intro/getting-started/install>Getting Started</router-link> guide to install and run example tendermint applications.</li>
+<li>Continue with the <router-link to=/intro/getting-started/download-tendermint>Getting Started</router-link> guide to install and run example tendermint applications.</li>
 </ul>
 <h2 id=contributions>Contributions</h2>
 <p><em>Many thanks to Zaki Manian for providing the &#x201C;Intro to ABCI&#x201D; section.</em></p>

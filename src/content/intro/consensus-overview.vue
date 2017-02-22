@@ -41,7 +41,7 @@ This adds an economic element to the security of the protocol, allowing one to q
 <p>The <a href=http://cosmos.network>Cosmos Network</a> is designed to use this Proof-of-Stake mechanism across an array of cryptocurrencies implemented as ABCI applications.</p>
 <h2 id=next-steps>Next Steps</h2>
 <ul>
-<li>Continue with the <router-link to=/intro/getting-started/install>Getting Started</router-link> guide to install and run example tendermint applications.</li>
+<li>Continue with the <router-link to=/intro/getting-started/download-tendermint>Getting Started</router-link> guide to install and run example tendermint applications.</li>
 </ul>
 </div>
 </template>
