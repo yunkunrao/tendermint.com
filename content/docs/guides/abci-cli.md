@@ -213,7 +213,8 @@ Want to write the counter app in your favorite language?! We'd be happy to add y
 The `abci-cli` is designed strictly for testing and debugging. 
 In a real deployment, the role of sending messages is taken by Tendermint,
 which connects to the app using three separate connections, 
-each with its own pattern of messages.
+each with its own pattern of messages. 
 
-For more information, see the [application developers guide](/docs/guides/app-development)
+For more information, see the [application developers guide](/docs/guides/app-development).
+For examples of running an ABCI app with Tendermint, see the [introductory guide](/intro/getting-started/first-abci-app).
 
