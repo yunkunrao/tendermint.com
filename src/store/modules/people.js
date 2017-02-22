@@ -60,7 +60,7 @@ const state = {
       slug: 'anton-kaliaev',
       name: 'Anton Kaliaev',
       title: 'Software Engineer',
-      bio: '',
+      bio: 'Anton is a software engineer with more than 6 years of experience. He has worked in web, video processing, and telecom industries and has extensive knowledge, which he hopes will help him make Tendermint better. Always passionate about learning. Loves occasional traveling and enjoys writing his own blog.',
       ids: {
         email: 'anton',
         github: 'melekes',
@@ -113,7 +113,7 @@ const state = {
       slug: 'rigel-rozanski',
       name: 'Rigel Rozanski',
       title: 'Software Engineer',
-      bio: '',
+      bio: 'Rigel is inspired by blockchain as a means of reducing entropy as the interactions of technology grow to manifold complexities. His interests lie in the crossroads between blockchain and the geospatial realm.',
       ids: {
         email: 'rigel',
         github: 'rigelrozanski',
