@@ -11,21 +11,21 @@
 <li>A vote <em>at</em> <code>(H,R)</code> is a vote signed with the bytes for <code>H</code> and <code>R</code> included in its <router-link to=/docs/internals/block-structure#vote-sign-bytes><code>sign-bytes</code></router-link>.</li>
 <li><em>+2/3</em> is short for &#x201C;more than 2/3&#x201D;</li>
 <li><em>1/3+</em> is short for &#x201C;1/3 or more&#x201D;</li>
-<li>A set of +2/3 of prevotes for a particular block or <code>&lt;nil&gt;</code> at <code>(H,R)</code> is called a <em>proof-of-lock-change</em> or <em>PoLC</em> for short.</li>
+<li>A set of +2/3 of prevotes for a particular block or <code>&amp;lt;nil&amp;gt;</code> at <code>(H,R)</code> is called a <em>proof-of-lock-change</em> or <em>PoLC</em> for short.</li>
 </ul>
 <h2 id=state-machine-overview>State Machine Overview</h2>
 <p>At each height of the blockchain a round-based protocol is run to determine
 the next block. Each round is composed of three <em>steps</em> (<code>Propose</code>, <code>Prevote</code>, and
 <code>Precommit</code>), along with two special steps <code>Commit</code> and <code>NewHeight</code>.</p>
 <p>In the optimal scenario, the order of steps is:</p>
-<pre><code>NewHeight -&gt; (Propose -&gt; Prevote -&gt; Precommit)+ -&gt; Commit -&gt; NewHeight -&gt;...
+<pre><code>NewHeight -&amp;gt; (Propose -&amp;gt; Prevote -&amp;gt; Precommit)+ -&amp;gt; Commit -&amp;gt; NewHeight -&amp;gt;...
 </code></pre>
-<p>The sequence <code>(Propose -&gt; Prevote -&gt; Precommit)</code> is called a <em>round</em>. There may be more than one round required to commit a block at a given height.  Examples for why more rounds may be required include:</p>
+<p>The sequence <code>(Propose -&amp;gt; Prevote -&amp;gt; Precommit)</code> is called a <em>round</em>. There may be more than one round required to commit a block at a given height.  Examples for why more rounds may be required include:</p>
 <ul>
 <li>The designated proposer was not online.</li>
 <li>The block proposed by the designated proposer was not valid.</li>
 <li>The block proposed by the designated proposer did not propagate in time.</li>
-<li>The block proposed was valid, but +2/3 of prevotes for the proposed block were not received in time for enough validator nodes by the time they reached the <code>Precommit</code> step.  Even though +2/3 of prevotes are necessary to progress to the next step, at least one validator may have voted <code>&lt;nil&gt;</code> or maliciously voted for something else.</li>
+<li>The block proposed was valid, but +2/3 of prevotes for the proposed block were not received in time for enough validator nodes by the time they reached the <code>Precommit</code> step.  Even though +2/3 of prevotes are necessary to progress to the next step, at least one validator may have voted <code>&amp;lt;nil&amp;gt;</code> or maliciously voted for something else.</li>
 <li>The block proposed was valid, and +2/3 of prevotes were received for enough nodes, but +2/3 of precommits for the proposed block were not received for enough validator nodes.</li>
 </ul>
 <p>Some of these problems are resolved by moving onto the next round &amp; proposer.  Others are resolved by increasing certain round timeout parameters over each successive round.</p>
@@ -33,12 +33,12 @@ the next block. Each round is composed of three <em>steps</em> (<code>Propose</c
 <pre><code>                            +-------------------------------------+
                             v                                     |(Wait til `CommmitTime+timeoutCommit`)
                       +-----------+                         +-----+-----+
-         +----------&gt; |  Propose  +--------------+          | NewHeight |
+         +----------&amp;gt; |  Propose  +--------------+          | NewHeight |
          |            +-----------+              |          +-----------+
          |                                       |                ^
          |(Else, after timeoutPrecommit)         v                |
    +-----+-----+                           +-----------+          |
-   | Precommit |  &lt;------------------------+  Prevote  |          |
+   | Precommit |  &amp;lt;------------------------+  Prevote  |          |
    +-----+-----+                           +-----------+          |
          |(When +2/3 Precommits for block found)                  |
          v                                                        |
@@ -63,7 +63,7 @@ the next block. Each round is composed of three <em>steps</em> (<code>Propose</c
 <p>There&#x2019;s more, but let&#x2019;s not get ahead of ourselves here.</p>
 <h2 id=proposals>Proposals</h2>
 <p>A proposal is signed and published by the designated proposer at each round.  The proposer is chosen by a deterministic and non-choking round robin selection algorithm that selects proposers in proportion to their voting power. (see <a href=https://github.com/tendermint/tendermint/blob/develop/types/validator_set.go#L49>implementation</a>)</p>
-<p>A proposal at <code>(H,R)</code> is composed of a block and an optional latest <code>PoLC-Round &lt; R</code> which is included iff the proposer knows of one.  This hints the network to allow nodes to unlock (when safe) to ensure the liveness property.</p>
+<p>A proposal at <code>(H,R)</code> is composed of a block and an optional latest <code>PoLC-Round &amp;lt; R</code> which is included iff the proposer knows of one.  This hints the network to allow nodes to unlock (when safe) to ensure the liveness property.</p>
 <h2 id=state-machine-spec>State Machine Spec</h2>
 <h3 id=propose-step-heighthroundr>Propose Step (height:H,round:R)</h3>
 <p>Upon entering <code>Propose</code>:</p>
@@ -79,14 +79,14 @@ the next block. Each round is composed of three <em>steps</em> (<code>Propose</c
 <h3 id=prevote-step-heighthroundr>Prevote Step (height:H,round:R)</h3>
 <p>Upon entering <code>Prevote</code>, each validator broadcasts its prevote vote.</p>
 <ul>
-<li>First, if the validator is locked on a block since <code>LastLockRound</code> but now has a PoLC for something else at round <code>PoLC-Round</code> where <code>LastLockRound &lt; PoLC-Round &lt; R</code>, then it unlocks.</li>
+<li>First, if the validator is locked on a block since <code>LastLockRound</code> but now has a PoLC for something else at round <code>PoLC-Round</code> where <code>LastLockRound &amp;lt; PoLC-Round &amp;lt; R</code>, then it unlocks.</li>
 <li>If the validator is still locked on a block, it prevotes that.</li>
 <li>Else, if the proposed block from <code>Propose(H,R)</code> is good, it prevotes that.</li>
-<li>Else, if the proposal is invalid or wasn&#x2019;t received on time, it prevotes <code>&lt;nil&gt;</code>.</li>
+<li>Else, if the proposal is invalid or wasn&#x2019;t received on time, it prevotes <code>&amp;lt;nil&amp;gt;</code>.</li>
 </ul>
 <p>The <code>Prevote</code> step ends:</p>
 <ul>
-<li>After +2/3 prevotes for a particular block or <code>&lt;nil&gt;</code>.           --&gt; goto <code>Precommit(H,R)</code></li>
+<li>After +2/3 prevotes for a particular block or <code>&amp;lt;nil&amp;gt;</code>.           --&gt; goto <code>Precommit(H,R)</code></li>
 <li>After <code>timeoutPrevote</code> after receiving any +2/3 prevotes.        --&gt; goto <code>Precommit(H,R)</code></li>
 <li>After <a href=#common-exit-conditions>common exit conditions</a></li>
 </ul>
@@ -94,13 +94,13 @@ the next block. Each round is composed of three <em>steps</em> (<code>Propose</c
 <p>Upon entering <code>Precommit</code>, each validator broadcasts its precommit vote.</p>
 <ul>
 <li>If the validator has a PoLC at <code>(H,R)</code> for a particular block <code>B</code>, it (re)locks (or changes lock to) and precommits <code>B</code> and sets <code>LastLockRound = R</code>.</li>
-<li>Else, if the validator has a PoLC at <code>(H,R)</code> for <code>&lt;nil&gt;</code>, it unlocks and precommits <code>&lt;nil&gt;</code>.</li>
-<li>Else, it keeps the lock unchanged and precommits <code>&lt;nil&gt;</code>.</li>
+<li>Else, if the validator has a PoLC at <code>(H,R)</code> for <code>&amp;lt;nil&amp;gt;</code>, it unlocks and precommits <code>&amp;lt;nil&amp;gt;</code>.</li>
+<li>Else, it keeps the lock unchanged and precommits <code>&amp;lt;nil&amp;gt;</code>.</li>
 </ul>
-<p>A precommit for <code>&lt;nil&gt;</code> means &#x201C;I didn&#x2019;t see a PoLC for this round, but I did get +2/3 prevotes and waited a bit&#x201D;.</p>
+<p>A precommit for <code>&amp;lt;nil&amp;gt;</code> means &#x201C;I didn&#x2019;t see a PoLC for this round, but I did get +2/3 prevotes and waited a bit&#x201D;.</p>
 <p>The Precommit step ends:</p>
 <ul>
-<li>After +2/3 precommits for <code>&lt;nil&gt;</code>.                               --&gt; goto <code>Propose(H,R+1)</code></li>
+<li>After +2/3 precommits for <code>&amp;lt;nil&amp;gt;</code>.                               --&gt; goto <code>Propose(H,R+1)</code></li>
 <li>After <code>timeoutPrecommit</code> after receiving any +2/3 precommits.    --&gt; goto <code>Propose(H,R+1)</code></li>
 <li>After <a href=#common-exit-conditions>common exit conditions</a></li>
 </ul>
@@ -123,11 +123,11 @@ the next block. Each round is composed of three <em>steps</em> (<code>Propose</c
 </ul>
 <h2 id=proofs>Proofs</h2>
 <h3 id=proof-of-safety>Proof of Safety</h3>
-<p>Assume that at most -1/3 of the voting power of validators is byzantine.  If a validator commits block <code>B</code> at round <code>R</code>, it&#x2019;s because it saw +2/3 of precommits at round <code>R</code>. This implies that 1/3+ of honest nodes are still locked at round <code>R&apos; &gt; R</code>.  These locked validators will remain locked until they see a PoLC at <code>R&apos; &gt; R</code>, but this won&#x2019;t happen because 1/3+ are locked and honest, so at most -2/3 are available to vote for anything other than <code>B</code>.</p>
+<p>Assume that at most -1/3 of the voting power of validators is byzantine.  If a validator commits block <code>B</code> at round <code>R</code>, it&#x2019;s because it saw +2/3 of precommits at round <code>R</code>. This implies that 1/3+ of honest nodes are still locked at round <code>R&apos; &amp;gt; R</code>.  These locked validators will remain locked until they see a PoLC at <code>R&apos; &amp;gt; R</code>, but this won&#x2019;t happen because 1/3+ are locked and honest, so at most -2/3 are available to vote for anything other than <code>B</code>.</p>
 <h3 id=proof-of-liveness>Proof of Liveness</h3>
 <p>If 1/3+ honest validators are locked on two different blocks from different rounds, a proposers&#x2019; <code>PoLC-Round</code> will eventually cause nodes locked from the earlier round to unlock.  Eventually, the designated proposer will be one that is aware of a PoLC at the later round.  Also, <code>timeoutProposalR</code> increments with round <code>R</code>, while the size of a proposal are capped, so eventually the network is able to &#x201C;fully gossip&#x201D; the whole proposal (e.g. the block &amp; PoLC).</p>
 <h3 id=proof-of-fork-accountability>Proof of Fork Accountability</h3>
-<p>Define the JSet (justification-vote-set) at height <code>H</code> of a validator <code>V1</code> to be all the votes signed by the validator at <code>H</code> along with justification PoLC prevotes for each lock change.  For example, if <code>V1</code> signed the following precommits: <code>Precommit(B1 @ round 0)</code>, <code>Precommit(&lt;nil&gt; @ round 1)</code>, <code>Precommit(B2 @ round 4)</code> (note that no precommits were signed for rounds 2 and 3, and that&#x2019;s ok), <code>Precommit(B1 @ round 0)</code> must be justified by a PoLC at round 0, and <code>Precommit(B2 @ round 4)</code> must be justified by a PoLC at round 4; but the precommit for <code>&lt;nil&gt;</code> at round 1 is not a lock-change by definition so the JSet for <code>V1</code> need not include any prevotes at round 1, 2, or 3 (unless <code>V1</code> happened to have prevoted for those rounds).</p>
+<p>Define the JSet (justification-vote-set) at height <code>H</code> of a validator <code>V1</code> to be all the votes signed by the validator at <code>H</code> along with justification PoLC prevotes for each lock change.  For example, if <code>V1</code> signed the following precommits: <code>Precommit(B1 @ round 0)</code>, <code>Precommit(&amp;lt;nil&amp;gt; @ round 1)</code>, <code>Precommit(B2 @ round 4)</code> (note that no precommits were signed for rounds 2 and 3, and that&#x2019;s ok), <code>Precommit(B1 @ round 0)</code> must be justified by a PoLC at round 0, and <code>Precommit(B2 @ round 4)</code> must be justified by a PoLC at round 4; but the precommit for <code>&amp;lt;nil&amp;gt;</code> at round 1 is not a lock-change by definition so the JSet for <code>V1</code> need not include any prevotes at round 1, 2, or 3 (unless <code>V1</code> happened to have prevoted for those rounds).</p>
 <p>Further, define the JSet at height <code>H</code> of a set of validators <code>VSet</code> to be the union of the JSets for each validator in <code>VSet</code>.  For a given commit by honest validators at round <code>R</code> for block <code>B</code> we can construct a JSet to justify the commit for <code>B</code> at <code>R</code>.
 We say that a JSet <em>justifies</em> a commit at <code>(H,R)</code> if all the committers (validators in the commit-set) are each justified in the JSet with no duplicitous vote signatures (by the committers).</p>
 <ul>
@@ -136,7 +136,7 @@ We say that a JSet <em>justifies</em> a commit at <code>(H,R)</code> if all the 
 <p>As a corollary, when there is a fork, an external process can determine the blame by requiring each validator to justify all of its round votes.  Either we will find 1/3+ who cannot justify at least one of their votes, and/or, we will find 1/3+ who had double-signed.</p>
 <h3 id=alternative-algorithm>Alternative algorithm</h3>
 <p>Alternatively, we can take the JSet of a commit to be the &#x201C;full commit&#x201D;.  That is, if light clients and validators do not consider a block to be committed unless the JSet of the commit is also known, then we get the desirable property that if there ever is a fork (e.g. there are two conflicting &#x201C;full commits&#x201D;), then 1/3+ of the validators are immediately punishable for double-signing.</p>
-<p>There are many ways to ensure that the gossip network efficiently share the JSet of a commit.  One solution is to add a new message type that tells peers that this node has (or does not have) a +2/3 majority for B (or <nil>) at (H,R), and a bitarray of which votes contributed towards that majority.  Peers can react by responding with appropriate votes.</nil></p>
+<p>There are many ways to ensure that the gossip network efficiently share the JSet of a commit.  One solution is to add a new message type that tells peers that this node has (or does not have) a +2/3 majority for B (or &lt;nil&gt;) at (H,R), and a bitarray of which votes contributed towards that majority.  Peers can react by responding with appropriate votes.</p>
 <p>We will implement such an algorithm for the next iteration of the Tendermint consensus protocol.</p>
 <p>Other potential improvements include adding more data in votes such as the last known PoLC round that caused a lock change, and the last voted round/step (or, we may require that validators not skip any votes).  This may make JSet verification/gossip logic easier to implement.</p>
 <h3 id=censorship-attacks>Censorship Attacks</h3>
