@@ -44,6 +44,13 @@ To run it, you'll need to [install node](https://nodejs.org/en/download/).
 
 You'll also need to fetch the relevant repository, from https://github.com/tendermint/js-abci.
 Since I keep all my code under the `$GOPATH`, I just `go get github.com/tendermint/js-abci &> /dev/null`
+Then `cd` into the `example` directory within that repository and run `npm install`.
+For instance, if you used `go get`, 
+
+```
+cd $GOPATH/src/github.com/tendermint/js-abci/example
+npm install
+```
 
 Now, let's run some apps!
 
@@ -79,7 +86,7 @@ We can get the status of our Tendermint node as follows:
 curl -s localhost:46657/status
 ```
 
-The `-s` just silences `curl`. For nicer output, download pipe the result into a tool like [jq](https://stedolan.github.io/jq/) 
+The `-s` just silences `curl`. For nicer output, pipe the result into a tool like [jq](https://stedolan.github.io/jq/) 
 or [jsonpp](https://github.com/jmhodges/jsonpp).
 
 Now let's send some transactions to the dummy.
@@ -88,7 +95,7 @@ Now let's send some transactions to the dummy.
 curl -s 'localhost:46657/broadcast_tx_commit?tx="abcd"'
 ```
 
-Note the single quote, `'` around the url, to ensure the double quotes, `"`, are not escaped by bash.
+Note the single quote, `'`, around the url, to ensure the double quotes, `"`, are not escaped by bash.
 This command sent a transaction with bytes `abcd`, so `abcd` will be stored as both the key and the value in the Merkle tree.
 The response should look something like:
 
@@ -99,14 +106,16 @@ The response should look something like:
 The `98` is a type-byte, and can be ignored (it's useful for serializing and deserializing arbitrary json).
 Otherwise, this result is empty - there's nothing to report on and everything is OK.
 
-We can confirm that are transaction worked and the value got stored by querying the app:
+We can confirm that our transaction worked and the value got stored by querying the app:
 
 ```
 curl -s 'localhost:46657/abci_query?data="abcd"&path=""&prove=false'
 ```
 
+The `path` and `prove` arguments can be ignored for now, and in a future release can be left out.
 Note the `value` in the result. It should say `61626364`, which is the hex-encoding of the ASCII of `abcd`.
-You can verify in a python shell by running `"61626364".decode('hex')`.
+You can verify this in a python shell by running `"61626364".decode('hex')`.
+Stay tuned for a future release that makes this output more human-readable ;). 
 
 Now let's try setting a different key and value:
 
@@ -120,7 +129,7 @@ Now if we query for `name`, we should get `satoshi`:
 curl -s 'localhost:46657/abci_query?data="name"&path=""&prove=false'
 ```
 
-Try some other transactions and queries to make sure everything is working.
+Try some other transactions and queries to make sure everything is working!
 
 ## Another Example - Counter
 
@@ -135,20 +144,13 @@ When `serial=on`, transactions must be a big-endian encoded incrementing integer
 
 If `serial=off`, there are no restrictions on transactions.
 
-Start the counter with `serial=on` by using the flag:
-
-```
-counter --serial
-```
-
-When `serial=on`, some transactions are invalid.
 In a live blockchain, transactions collect in memory before they are committed into blocks.
 To avoid wasting resources on invalid transactions,
 ABCI provides the `CheckTx` message,
 which application developers can use to accept or reject transactions,
 before they are stored in memory or gossipped to other peers.
 
-In this instance of the counter app, `CheckTx` only allows transactions whose integer is greater than the last committed one.
+In this instance of the counter app, with `serial=on`, `CheckTx` only allows transactions whose integer is greater than the last committed one.
 
 Let's kill the console and the dummy application, and start the counter app.
 We can enable `serial=on` with a flag:
@@ -165,8 +167,29 @@ tendermint node
 ```
 
 Once again, you can see the blocks streaming by. Let's send some transactions.
+Since we have set `serial=on`, the first transaction must be the number `0`:
 
-// TODO
+```
+curl localhost:46657/broadcast_tx_commit?tx=0x00
+```
+
+Note the empty, hence successful, response.
+The next transaction must be the number `1`. If instead, we try to send a `5`, we get an error:
+
+```
+> curl localhost:46657/broadcast_tx_commit?tx=0x05
+{"jsonrpc":"2.0","id":"","result":[98,{"check_tx":{},"deliver_tx":{"code":3,"log":"Invalid nonce. Expected 1, got 5"}}],"error":""}
+```
+
+But if we send a `1`, it works again:
+
+```
+> curl localhost:46657/broadcast_tx_commit?tx=0x01
+{"jsonrpc":"2.0","id":"","result":[98,{"check_tx":{},"deliver_tx":{}}],"error":""}
+```
+
+For more details on the `broadcast_tx` API, 
+see [the guide on using Tendermint](/docs/guides/using-tendermint).
 
 ## Example in Another Language - CounterJS
 
@@ -188,7 +211,32 @@ Now run the app:
 node example/app.js
 ```
 
-// TODO
+In another window, reset and start `tendermint`:
+
+```
+tendermint unsafe_reset_all
+tendermint node
+```
+
+Once again, you should see blocks streaming by - but now, our application is written in javascript!
+Try sending some transasctions, like before - the results should be the same:
+
+```
+curl localhost:46657/broadcast_tx_commit?tx=0x00 # ok
+curl localhost:46657/broadcast_tx_commit?tx=0x05 # invalid nonce
+curl localhost:46657/broadcast_tx_commit?tx=0x01 # ok
+```
+
+Neat, eh?
+
+## A More Interesting Example - Basecoin
+
+Before concluding, we'd like to introduce you to our star application, [Basecoin](https://github.com/tendermint/basecoin).
+Unlike the `dummy` and `counter`, which are strictly for example purposes, 
+`basecoin` is designed to be actually useful - it's a general purpose framework for building cryptocurrencies.
+
+The default `basecoin` application is a multi-asset cryptocurrency that supports inter-blockchain communication.
+For more details on how basecoin works and how to use it, see our [basecoin guide](https://github.com/tendermint/basecoin/blob/develop/docs/guide/basecoin-basics.md)
 
 
 ## Next Step
