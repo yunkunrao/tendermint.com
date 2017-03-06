@@ -1,5 +1,39 @@
-# Roadmap
+# Tendermint Roadmap
 
-* Use the chain as its own CA for its nodes and validators.
-* Graceful handling/recovery for apps that have non-determinism or fail to halt
-* Consensus version 0.8: Update so `Commit` is not just +2/3 precommits for a block, but the entire `JSet`.  While the commit size may grow unbounded in size, it makes a fork immediately slash a +1/3 Byzantine subset of validators.
+This is an estimate of what we will be working on in Tendermint over the coming months.
+It is in the same style as our [CHANGELOG](https://github.com/tendermint/tendermint/blob/master/CHANGELOG.md).
+How these changes will be rolled out in terms of versions and releases can be better [tracked on Github](https://github.com/tendermint/tendermint/issues)
+
+BREAKING CHANGES:
+
+- Add more fields to the Header: NextValidatorSet, ResultsHash, EvidenceHash
+- Pass evidence/voteInfo through ABCI
+- Use a more advanced logging system
+- Upgrade the consensus to make more real-time use of evidence during voting;
+instead of +2/3 precommits for a block, a Commit becomes the entire `JSet`.  
+While the commit size may grow unbounded in size, it makes a fork immediately slash a +1/3 Byzantine subset of validators.
+- Avoid exposing empty blocks as a first-class citizen of the blockchain
+
+FEATURES:
+
+- Use the chain as its own CA for nodes and validators
+- Tooling to run multiple blockchains/apps, possibly in a single process
+- State syncing (without transaction replay)
+- Transaction indexing and improved support for querying history and state
+
+IMPROVEMENTS:
+
+- Better Tendermint CLI
+- Improve subtleties around mempool caching and logic
+- Consensus optimizations: 
+	- cache block parts for faster agreement after round changes
+- Better testing of the consensus state machine (ie. use a DSL)
+- Auto compiled serialization/deserialization code instead of go-wire reflection
+
+BUG FIXES:
+
+- Graceful handling/recovery for apps that have non-determinism or fail to halt
+- Graceful handling/recovery for violations of safety, or liveness
+
+
+
