@@ -1,12 +1,12 @@
 <template>
   <div><h1 id=download-tendermint>Download Tendermint</h1>
-<p>Tendermint 0.8 has been released. Read <router-link to=/blog/tendermint-0-8-release>what&#x2019;s new</router-link>.</p>
+<p>Tendermint 0.9 has been released.</p>
 <div class=download-matrix>
   <div class="os os-mac">
     <div class=os-title>macOS</div>
     <div class=bin>
-      <div class=key>Tendermint 0.8</div>
-      <div class=value><a href=https://s3-us-west-2.amazonaws.com/tendermint/0.8.0/tendermint_darwin_amd64.zip>Download (64-bit)</a></div>
+      <div class=key>Tendermint 0.9</div>
+      <div class=value><a href=https://s3-us-west-2.amazonaws.com/tendermint/0.9.0/tendermint_darwin_amd64.zip>Download (64-bit)</a></div>
     </div>
     <div class=bin>
       <div class=key>abci-cli</div>
@@ -24,8 +24,8 @@
   <div class="os os-linux">
     <div class=os-title>Linux</div>
     <div class=bin>
-      <div class=key>Tendermint 0.8</div>
-      <div class=value><a href=https://s3-us-west-2.amazonaws.com/tendermint/0.8.0/tendermint_linux_amd64.zip>Download (64-bit)</a></div>
+      <div class=key>Tendermint 0.9</div>
+      <div class=value><a href=https://s3-us-west-2.amazonaws.com/tendermint/0.9.0/tendermint_0.9.0_linux_amd64.zip>Download (64-bit)</a></div>
     </div>
     <div class=bin>
       <div class=key>abci-cli</div>
@@ -43,8 +43,8 @@
   <div class="os os-win">
     <div class=os-title>Windows</div>
     <div class=bin>
-      <div class=key>Tendermint 0.8</div>
-      <div class=value><a href=https://s3-us-west-2.amazonaws.com/tendermint/0.8.0/tendermint_windows_amd64.zip>Download (64-bit)</a></div>
+      <div class=key>Tendermint 0.9</div>
+      <div class=value><a href=https://s3-us-west-2.amazonaws.com/tendermint/0.9.0/tendermint_0.9.0_windows_amd64.zip>Download (64-bit)</a></div>
     </div>
     <div class=bin>
       <div class=key>abci-cli</div>

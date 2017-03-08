@@ -17,8 +17,8 @@
   },
   "dependencies": {
     "@nylira/vue-article-body": "2.0.1",
-    "@nylira/vue-button": "2.0.2",
-    "@nylira/vue-input": "2.0.2",
+    "@nylira/vue-button": "2.0.4",
+    "@nylira/vue-input": "2.1.1",
     "@nylira/vue-page-header": "2.0.0",
     "autoprefixer": "6.7.3",
     "babel-core": "6.23.1",
