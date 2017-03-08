@@ -6,7 +6,7 @@
     <div class=os-title>macOS</div>
     <div class=bin>
       <div class=key>Tendermint 0.9</div>
-      <div class=value><a href=https://s3-us-west-2.amazonaws.com/tendermint/0.9.0/tendermint_darwin_amd64.zip>Download (64-bit)</a></div>
+      <div class=value><a href=https://s3-us-west-2.amazonaws.com/tendermint/0.9.0/tendermint_0.9.0_darwin_amd64.zip>Download (64-bit)</a></div>
     </div>
     <div class=bin>
       <div class=key>abci-cli</div>
