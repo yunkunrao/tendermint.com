@@ -3,9 +3,9 @@
   <nav>
   <div class="title">Index</div>
   <router-link :to="'/intro'" exact>Introduction</router-link>
+  <router-link :to="'/intro/tendermint-vs-x'">Tendermint vs X</router-link>
   <router-link :to="'/intro/abci-overview'">ABCI Overview</router-link>
   <router-link :to="'/intro/consensus-overview'">Consensus Overview</router-link>
-  <router-link :to="'/intro/tendermint-vs-x'">Tendermint vs X</router-link>
   <div class="title">Getting Started</div>
   <router-link :to="'/intro/getting-started/download-tendermint'">1. Download Tendermint</router-link>
   <router-link :to="'/intro/getting-started/first-abci-app'">2. First ABCI App</router-link>
