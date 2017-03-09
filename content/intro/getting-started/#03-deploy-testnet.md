@@ -1,134 +1,40 @@
 # Deploy a Testnet
 
-## Tendermint Core
+Now that we've seen how ABCI works, and even played with a few applications on a single validator node,
+it's time to deploy a test network to four validator nodes. 
+For this deployment, we'll use the `basecoin` application.
 
-Now that we've seen how ABCI works, and even played with a few applications using the `abci-cli` tool,
-let's run an actual Tendermint node.
+## Manual Deployments
 
-When running a live application, a Tendermint node takes the place of the `abci-cli` tool by sending ABCI requests
-to the application: many `deliver_tx` msgs to run transactions followed by a `commit` to get the application Merkle root hash, and so on.
+It's relatively easy to setup a Tendermint cluster manually.
+The only requirements for a particular Tendermint node are a private key for the validator,
+stored as `priv_validator.json`, and a list of the public keys of all validators, stored as `genesis.json`.
+These files should be stored in `~/.tendermint`, or wherever the `$TMROOT` variable might be set to.
 
-First, we need to initialize a genesis file and a validator key in `~/.tendermint`:
+Here are the steps to setting up a testnet manually:
 
-```
-tendermint init
-```
+1) Provision nodes on your cloud provider of choice
+2) Install Tendermint and the application of interest on all nodes
+3) Generate a private key for each validator using `tendermint gen_validator`
+4) Compile a list of public keys for each validator into a `genesis.json` file.
+5) Run `tendermint node --seeds=< seed addresses >` on each node, where `< seed addresses >` is a 
+comma separated list of the IP:PORT combination for each node. The default port for Tendermint is `46656`.
+Thus, if the IP addresses of your nodes were `192.168.0.1, 192.168.0.2, 192.168.0.3, 192.168.0.4`, 
+the command would look like: `tendermint node --seeds=192.168.0.1:46656,192.168.0.2:46656,192.168.0.3:46656,192.168.0.4:46656`.
 
-You can change the directory by setting the `$TMROOT` environment variable.
+After a few seconds, all the nodes should connect to eachother and start making blocks!
+For more information, see the Tendermint Networks section of [the guide to using Tendermint](/docs/guides/using-tendermint).
 
-Now,
+## Automated Deployments
 
-```
-tendermint node
-```
+While the manual deployment is easy enough, an automated deployment is always better.
+For this, we have the [mintnet-kubernetes tool](https://github.com/tendermint/mintnet-kubernetes),
+which allows us to automate the deployment of a Tendermint network on an already provisioned kubernetes cluster.
 
-Tendermint will try to connect to a abci appliction by default on [127.0.0.1:46658](127.0.0.1:46658), 
-but you probably don't have one running yet.
+For more details, see the [mintnet-kubernetes repo](https://github.com/tendermint/mintnet-kubernetes),
+and check out [Google Cloud Platform](https://cloud.google.com/) for simple provisioning of kubernetes clusters.
 
-So in another window, lets start the `dummy` app,
-
-```
-dummy
-```
-
-After a few seconds you should see blocks start streaming in!
-
-Now you can send transactions through the Tendermint RPC server with curl requests, or from your browser:
-
-```
-curl http://localhost:46657/broadcast_tx_sync?tx=\"abcd\"
-```
-
-For handling responses, we recommend you [install the `jsonpp` tool](http://jmhodges.github.io/jsonpp/) to pretty print the JSON
-
-We can see the chain's status at the `/status` end-point:
-
-```
-curl http://localhost:46657/status |  jsonpp
-```
-
-and the `latest_app_hash` in particular:
-
-```
-curl http://localhost:46657/status |  jsonpp | grep app_hash
-```
-
-visit [http://localhost:46657](http://localhost:46657) in your browser to see the other endpoints.
-
-For more details, see the [Using Tendermint Guide](/docs/guides/using-tendermint).
-
-## Deploy a Tendermint Testnet
-
-Now that we've run a single Tendermint node with one validator and a couple applications, 
-let's deploy a testnet to run our application with four validators.
-
-For this part of the tutorial, we assume you have an account at [DigitalOcean](https://www.digitalocean.com/) and are willing to 
-pay to start some new droplets to run your nodes. You can of course stop and destroy them at any time.
-
-First, install [`docker-machine`](https://docs.docker.com/machine/install-machine/) and get a DigitalOcean account and access token.
-
-Then, install `mintnet`.
-
-```
-go get github.com/tendermint/mintnet
-```
-
-To provision machines on DigitalOcean:
-
-```
-mintnet create -- --driver=digitalocean --digitalocean-image=docker --digitalocean-access-token=YOUR_ACCCESS_TOKEN
-```
-
-You can leave out the `--digitalocean-access-token` flag if you set your `DIGITALOCEAN_ACCESS_TOKEN` environment variable.
-
-By default this creates 4 new machines.  Check the help messages for more info, e.g. `mintnet create --help`.
-
-Next, create the testnet configuration folders.
-
-```
-mintnet init chain mytest_dir/
-```
-
-This creates directories in `mytest` for the application.
-
-```
-ls mytest_dir/
-  chain_config.json # list of validator pubkeys and ip:ports
-  app   # Common configuration directory for your blockchain applicaiton
-  core  # Common configuration directory for Tendermint core
-  data  # Common configuration directory for the Merkleyes key-value store
-  mach1 # Configuration directory for the Tendermint core daemon on machine 1
-  mach2 # Configuration directory for the Tendermint core daemon on machine 2
-  mach3 # Configuration directory for the Tendermint core daemon on machine 3
-  mach4 # Configuration directory for the Tendermint core daemon on machine 4
-```
-
-You can change the files in the app folder to change which ABCI application run on your testnet.
-The default script app/init.sh gets run on each node to install the ABCI application straight from Github.
-Edit core/init.sh to change the Tendermint version being run.
-
-Now start the testnet service.
-
-```
-mintnet start mytest mytest_dir/
-```
-
-You can stop and remove the application as well.
-
-```
-mintnet stop mytest; mintnet rm mytest
-```
-
-Don't forget to destroy your provisioned machines!
-
-```
-mintnet destroy --machines="mach1,mach2,mach3,mach4"
-```
-
-Note you can use the `--machines` flag on any command to specify machines,
-for instance `--machines mach[1-3],mach7` will apply to mach1, mach2, mach3, and mach7.
-
-TODO: Document tutorial on docker-machine ssh mach1, docker ps, etc, or at least link to good Docker tutorials.
+TODO: a better tutorial here, and Ansible/Terraform.
 
 ## Next Steps
 

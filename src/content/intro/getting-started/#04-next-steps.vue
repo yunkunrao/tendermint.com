@@ -8,8 +8,10 @@ To learn more about running the Tendermint software, see the <router-link to=/do
 For a deeper dive, see <a href=https://atrium.lib.uoguelph.ca/xmlui/handle/10214/9769>this thesis</a>.
 There is also the <router-link to=/static/docs/tendermint.pdf>original whitepaper</router-link>, though it is now quite outdated.</p>
 <p>The Tendermint <router-link to=/ecosystem>Software Ecosystem</router-link> contains many example applications and related software built by the Tendermint team and others. Check it out for some inspiration!</p>
+<p>For details on how the software has changed, and what changes are in store, see the <router-link to=/docs/changelog>Changelog</router-link> and the <router-link to=/docs/roadmap>Roadmap</router-link>.</p>
 <p>See our <router-link to=/community>Community</router-link> page for more ways to collaborate.</p>
 <p>You can also <router-link to=/contact>get in touch with the team</router-link>.</p>
+<p>Most importantly, enjoy!</p>
 </div>
 </template>
 

@@ -1,6 +1,7 @@
 <template>
   <div><h1 id=light-client-protocol>Light Client Protocol</h1>
 <p>Light clients are an important part of the complete blockchain system for most applications.  Tendermint provides unique speed and security properties for light client applications.</p>
+<p>See our developing <a href=github.com/tendermint/light-client>light-client repository</a>.</p>
 <h2 id=overview>Overview</h2>
 <p>The objective of the light client protocol is to get a <router-link to=/docs/internals/validators#committing-a-block>commit</router-link> for a recent <router-link to=/docs/internals/block-structure#block-hash>block hash</router-link> where the commit includes a majority of signatures from the last known validator set.  From there, all the application state is verifiable with <router-link to=/docs/internals/merkle-trees#iavl-tree>merkle proofs</router-link>.</p>
 <h3 id=syncing-the-validator-set>Syncing the Validator Set</h3>

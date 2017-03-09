@@ -1,6 +1,6 @@
 # Wire Protocol
 
-The [Tendermint wire protocol](https://github.com/tendermint/tendermint/tree/master/wire) encodes data in [c-style binary](#binary) and [JSON](#json) form.
+The [Tendermint wire protocol](https://github.com/tendermint/go-wire) encodes data in [c-style binary](#binary) and [JSON](#json) form.
 
 ## Supported types
 

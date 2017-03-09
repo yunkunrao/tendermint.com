@@ -1,6 +1,6 @@
 <template>
   <div><h1 id=wire-protocol>Wire Protocol</h1>
-<p>The <a href=https://github.com/tendermint/tendermint/tree/master/wire>Tendermint wire protocol</a> encodes data in <a href=#binary>c-style binary</a> and <a href=#json>JSON</a> form.</p>
+<p>The <a href=https://github.com/tendermint/go-wire>Tendermint wire protocol</a> encodes data in <a href=#binary>c-style binary</a> and <a href=#json>JSON</a> form.</p>
 <h2 id=supported-types>Supported types</h2>
 <ul>
 <li>Primitive types
