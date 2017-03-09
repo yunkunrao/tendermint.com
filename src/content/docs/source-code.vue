@@ -14,8 +14,8 @@
     <h4>ABCI</h4>
     <p>Tendermint socket protocol for blockchain applications</p>
   </a></li>
-  <li><a href=https://github.com/tendermint/mintnet>
-    <h4>Mintnet</h4>
+  <li><a href=https://github.com/tendermint/mintnet-kubernetes>
+    <h4>Mintnet-Kubernetes</h4>
     <p>Developer tool for deploying a Tendermint testnet</p>
   </a></li>
   <li><a href=https://github.com/tendermint/go-p2p>

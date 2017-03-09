@@ -31,7 +31,7 @@ Since some dependencies are not under our control, a third party may break our b
 <p>Run <code>bash scripts/glide/status.sh</code> to get a list of vendored dependencies that may not be up-to-date.</p>
 <h2 id=testing>Testing</h2>
 <p>All repos should be hooked up to circle.
-If they have <code>.go</code> files in the root directory, they will be automatically tested by circle using <code>go test -v -race ./...</code>. If not, they will need a <code>circle.yml</code>. Ideally, every repo has a <code>Makefile</code> that defines <code>make test</code> and includes its continuous integration status using a badge in the <a href=http://README.md>README.md</a>.</p>
+If they have <code>.go</code> files in the root directory, they will be automatically tested by circle using <code>go test -v -race ./...</code>. If not, they will need a <code>circle.yml</code>. Ideally, every repo has a <code>Makefile</code> that defines <code>make test</code> and includes its continuous integration status using a badge in the <code>README.md</code>.</p>
 <h2 id=branching-model-and-release>Branching Model and Release</h2>
 <p>User-facing repos should adhere to the branching model: <a href=http://nvie.com/posts/a-successful-git-branching-model/ >http://nvie.com/posts/a-successful-git-branching-model/</a>.
 That is, these repos should be well versioned, and any merge to master requires a version bump and tagged release.</p>
@@ -70,7 +70,8 @@ especially <code>go-p2p</code> and <code>go-rpc</code>, as their versions are re
 </ul>
 <p>TODO: sign releases</p>
 <h2 id=docker>Docker</h2>
-<p>We have loose dependencies on docker. The mintnet tool uses the <code>tendermint/tmbase</code> docker image, which is really just a fluffy Go image. The mintnet tooling runs an <code>init.sh</code> script in the container which clones the repo from github and installs it at run time, rather than building it into the image, for faster dev cycles.</p>
+<p>We provide docker images for <code>tendermint/tendermint</code> and others. See the <a href=https://github.com/tendermint/mintnet-kubernetes>mintnet-kubernetes</a> repo for deploying Tendermint in containers with kubernetes.
+Additionally, we use docker for local testnets as part of our <a href=https://github.com/tendermint/tendermint/tree/master/test/p2p>test suite</a>.</p>
 </div>
 </template>
 

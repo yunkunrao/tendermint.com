@@ -1,17 +1,20 @@
 <template>
   <div><h1 id=tendermint-roadmap>Tendermint Roadmap</h1>
 <p>This is an estimate of what we will be working on in Tendermint over the coming months.
-It is in the same style as our <a href=https://github.com/tendermint/tendermint/blob/master/CHANGELOG.md>CHANGELOG</a>.
+It is in the same style as our <router-link to=/docs/changelog>CHANGELOG</router-link>
 How these changes will be rolled out in terms of versions and releases can be better <a href=https://github.com/tendermint/tendermint/issues>tracked on Github</a></p>
+<p>Please note that Tendermint is not yet production ready;
+it is pre-v1.0.0 and we make backwards incompatible changes with each minor version release.
+If you require more stability in the near term, please <router-link to=/contact>get in touch</router-link>.</p>
 <p>BREAKING CHANGES:</p>
 <ul>
 <li>Add more fields to the Header: NextValidatorSet, ResultsHash, EvidenceHash</li>
 <li>Pass evidence/voteInfo through ABCI</li>
-<li>Use a more advanced logging system</li>
 <li>Upgrade the consensus to make more real-time use of evidence during voting;
 instead of +2/3 precommits for a block, a Commit becomes the entire <code>JSet</code>.<br>
 While the commit size may grow unbounded in size, it makes a fork immediately slash a +1/3 Byzantine subset of validators.</li>
 <li>Avoid exposing empty blocks as a first-class citizen of the blockchain</li>
+<li>Use a more advanced logging system</li>
 </ul>
 <p>FEATURES:</p>
 <ul>

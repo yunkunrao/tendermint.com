@@ -29,7 +29,7 @@ But we also want to run an application in another language -
 in this case, we&#x2019;ll run a Javascript version of the <code>counter</code>.
 To run it, you&#x2019;ll need to <a href=https://nodejs.org/en/download/ >install node</a>.</p>
 <p>You&#x2019;ll also need to fetch the relevant repository, from <a href=https://github.com/tendermint/js-abci>https://github.com/tendermint/js-abci</a>.
-Since I keep all my code under the <code>$GOPATH</code>, I just <code>go get github.com/tendermint/js-abci &amp;&gt; /dev/null</code>
+Since I keep all my code under the <code>$GOPATH</code>, I just <code>go get github.com/tendermint/js-abci &amp;&gt; /dev/null</code>.
 Then <code>cd</code> into the <code>example</code> directory within that repository and run <code>npm install</code>.
 For instance, if you used <code>go get</code>,</p>
 <pre><code>cd $GOPATH/src/github.com/tendermint/js-abci/example
@@ -37,7 +37,7 @@ npm install
 </code></pre>
 <p>Now, let&#x2019;s run some apps!</p>
 <h2 id=a-first-example-dummy>A First Example - Dummy</h2>
-<p>The dummy app is a Merkle tree that just stores all transactions.
+<p>The dummy app is a <a href=https://en.wikipedia.org/wiki/Merkle_tree>Merkle tree</a> that just stores all transactions.
 If the transaction contains an <code>=</code>, eg. <code>key=value</code>,
 then the <code>value</code> is stored under the <code>key</code> in the Merkle tree.
 Otherwise, the full transaction bytes are stored as the key and the value.</p>
@@ -61,7 +61,7 @@ or <a href=https://github.com/jmhodges/jsonpp>jsonpp</a>.</p>
 <p>Now let&#x2019;s send some transactions to the dummy.</p>
 <pre><code>curl -s &apos;localhost:46657/broadcast_tx_commit?tx=&quot;abcd&quot;&apos;
 </code></pre>
-<p>Note the single quote, <code>&apos;</code>, around the url, to ensure the double quotes, <code>&quot;</code>, are not escaped by bash.
+<p>Note the single quote (<code>&apos;</code>) around the url, which ensures that the double quotes (<code>&quot;</code>) are not escaped by bash.
 This command sent a transaction with bytes <code>abcd</code>, so <code>abcd</code> will be stored as both the key and the value in the Merkle tree.
 The response should look something like:</p>
 <pre><code>{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;&quot;,&quot;result&quot;:[98,{&quot;check_tx&quot;:{},&quot;deliver_tx&quot;:{}}],&quot;error&quot;:&quot;&quot;}
@@ -72,13 +72,16 @@ Otherwise, this result is empty - there&#x2019;s nothing to report on and everyt
 <pre><code>curl -s &apos;localhost:46657/abci_query?data=&quot;abcd&quot;&amp;path=&quot;&quot;&amp;prove=false&apos;
 </code></pre>
 <p>The <code>path</code> and <code>prove</code> arguments can be ignored for now, and in a future release can be left out.
-Note the <code>value</code> in the result. It should say <code>61626364</code>, which is the hex-encoding of the ASCII of <code>abcd</code>.
+The result should look like:</p>
+<pre><code>{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;&quot;,&quot;result&quot;:[112,{&quot;response&quot;:{&quot;value&quot;:&quot;61626364&quot;,&quot;log&quot;:&quot;exists&quot;}}],&quot;error&quot;:&quot;&quot;}
+</code></pre>
+<p>Again, the <code>112</code> is the type-byte. Note the <code>value</code> in the result (<code>61626364</code>); this is the hex-encoding of the ASCII of <code>abcd</code>.
 You can verify this in a python shell by running <code>&quot;61626364&quot;.decode(&apos;hex&apos;)</code>.
 Stay tuned for a future release that makes this output more human-readable ;).</p>
 <p>Now let&#x2019;s try setting a different key and value:</p>
 <pre><code>curl -s &apos;localhost:46657/broadcast_tx_commit?tx=&quot;name=satoshi&quot;&apos;
 </code></pre>
-<p>Now if we query for <code>name</code>, we should get <code>satoshi</code>:</p>
+<p>Now if we query for <code>name</code>, we should get <code>satoshi</code>, or <code>7361746F736869</code> in hex:</p>
 <pre><code>curl -s &apos;localhost:46657/abci_query?data=&quot;name&quot;&amp;path=&quot;&quot;&amp;prove=false&apos;
 </code></pre>
 <p>Try some other transactions and queries to make sure everything is working!</p>
@@ -95,7 +98,7 @@ ABCI provides the <code>CheckTx</code> message,
 which application developers can use to accept or reject transactions,
 before they are stored in memory or gossipped to other peers.</p>
 <p>In this instance of the counter app, with <code>serial=on</code>, <code>CheckTx</code> only allows transactions whose integer is greater than the last committed one.</p>
-<p>Let&#x2019;s kill the console and the dummy application, and start the counter app.
+<p>Let&#x2019;s kill the previous instance of tendermint and the dummy application, and start the counter app.
 We can enable <code>serial=on</code> with a flag:</p>
 <pre><code>counter --serial
 </code></pre>

@@ -1,5 +1,6 @@
 <template>
 <div>
+  <changelog v-if="r('changelog')"></changelog>
   <abci-cli v-if="r('abci-cli')"></abci-cli>
   <app-architecture v-if="r('app-architecture')"></app-architecture>
   <app-development v-if="r('app-development')"></app-development>
@@ -28,6 +29,7 @@
 export default {
   name: 'page-docs-entries',
   components: {
+    Changelog: require('../content/docs/changelog.vue'),
     AbciCli: require('../content/docs/guides/abci-cli.vue'),
     AppArchitecture: require('../content/docs/guides/app-architecture.vue'),
     AppDevelopment: require('../content/docs/guides/app-development.vue'),

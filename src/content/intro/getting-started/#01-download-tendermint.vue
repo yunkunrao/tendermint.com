@@ -62,14 +62,14 @@
 </div>
 <h2 id=sha256-checksums>SHA256 Checksums</h2>
 <p>Verify your download with these checksums below.</p>
-<pre><code>./tendermint_darwin_amd64.zip
-470e62b484a13ca6f357846b3d822c7b1d0f75b70e9f2ad033824c961291ec0e
+<pre><code>./tendermint_0.9.0_darwin_amd64.zip
+ee785fed8186e13e741988affc4e90faac278fe6c26245517f1af8a5589278f1
 
-./tendermint_linux_amd64.zip
-83f6bd52055ebc93434a68263c6666a4de41e0e543d0b5a06ad461262c460f4c
+./tendermint_0.9.0_linux_amd64.zip
+697033ea0f34f8b34a8a2b74c4dd730b47dd4efcfce65e53e953bdae8eb14364
 
-./tendermint_windows_amd64.zip
-e35762c65f9fe0125308e0e3081d82bd9a98fa9da3d2711bcb246661f024d9d6
+./tendermint_0.9.0_windows_amd64.zip
+97cbd7d134a22e808effcc9549efaa8294372149e27ce0d2cb25d9eb4dc8e74a
 </code></pre>
 <h2 id=install-from-source>Install From Source</h2>
 <p>If you prefer, you can also install Tendermint <router-link to=/docs/guides/install>from source</router-link>.</p>
