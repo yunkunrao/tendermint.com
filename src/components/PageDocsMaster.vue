@@ -3,6 +3,7 @@
   <nav>
   <div class="title">Index</div>
   <router-link :to="'/docs'" exact>Documentation</router-link>
+  <router-link :to="'/docs/changelog'">Changelog</router-link>
   <router-link :to="'/docs/roadmap'">Roadmap</router-link>
   <router-link :to="'/docs/source-code'">Source Code</router-link>
   <div class="title">Guides</div>
