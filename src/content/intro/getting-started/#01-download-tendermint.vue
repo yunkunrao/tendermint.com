@@ -74,7 +74,7 @@ ee785fed8186e13e741988affc4e90faac278fe6c26245517f1af8a5589278f1
 <h2 id=install-from-source>Install From Source</h2>
 <p>If you prefer, you can also install Tendermint <router-link to=/docs/guides/install>from source</router-link>.</p>
 <h2 id=next-step>Next Step</h2>
-<p>Once you&#x2019;ve installed Tendermint onto your computer, get started by creating your first <router-link to=/intro/getting-started/first-abci>ABCI app</router-link>.</p>
+<p>Once you&#x2019;ve installed Tendermint onto your computer, get started by creating your first <router-link to=/intro/getting-started/first-abci-app>ABCI app</router-link>.</p>
 </div>
 </template>
 

@@ -77,4 +77,4 @@ Verify your download with these checksums below.
 If you prefer, you can also install Tendermint [from source](/docs/guides/install).
 
 ## Next Step
-Once you've installed Tendermint onto your computer, get started by creating your first [ABCI app](/intro/getting-started/first-abci).
+Once you've installed Tendermint onto your computer, get started by creating your first [ABCI app](/intro/getting-started/first-abci-app).
