@@ -43,7 +43,7 @@ Run `bash scripts/glide/status.sh` to get a list of vendored dependencies that m
 ## Testing
 
 All repos should be hooked up to circle. 
-If they have `.go` files in the root directory, they will be automatically tested by circle using `go test -v -race ./...`. If not, they will need a `circle.yml`. Ideally, every repo has a `Makefile` that defines `make test` and includes its continuous integration status using a badge in the README.md.
+If they have `.go` files in the root directory, they will be automatically tested by circle using `go test -v -race ./...`. If not, they will need a `circle.yml`. Ideally, every repo has a `Makefile` that defines `make test` and includes its continuous integration status using a badge in the `README.md`.
 
 ## Branching Model and Release
 
@@ -86,4 +86,5 @@ TODO: sign releases
 
 ## Docker
 
-We have loose dependencies on docker. The mintnet tool uses the `tendermint/tmbase` docker image, which is really just a fluffy Go image. The mintnet tooling runs an `init.sh` script in the container which clones the repo from github and installs it at run time, rather than building it into the image, for faster dev cycles.
+We provide docker images for `tendermint/tendermint` and others. See the [mintnet-kubernetes](https://github.com/tendermint/mintnet-kubernetes) repo for deploying Tendermint in containers with kubernetes.
+Additionally, we use docker for local testnets as part of our [test suite](https://github.com/tendermint/tendermint/tree/master/test/p2p).
