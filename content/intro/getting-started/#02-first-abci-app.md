@@ -43,7 +43,7 @@ in this case, we'll run a Javascript version of the `counter`.
 To run it, you'll need to [install node](https://nodejs.org/en/download/).
 
 You'll also need to fetch the relevant repository, from https://github.com/tendermint/js-abci.
-Since I keep all my code under the `$GOPATH`, I just `go get github.com/tendermint/js-abci &> /dev/null`
+Since I keep all my code under the `$GOPATH`, I just `go get github.com/tendermint/js-abci &> /dev/null`.
 Then `cd` into the `example` directory within that repository and run `npm install`.
 For instance, if you used `go get`, 
 
@@ -56,7 +56,7 @@ Now, let's run some apps!
 
 ## A First Example - Dummy
 
-The dummy app is a Merkle tree that just stores all transactions.
+The dummy app is a [Merkle tree](https://en.wikipedia.org/wiki/Merkle_tree) that just stores all transactions.
 If the transaction contains an `=`, eg. `key=value`, 
 then the `value` is stored under the `key` in the Merkle tree.
 Otherwise, the full transaction bytes are stored as the key and the value.
@@ -95,7 +95,7 @@ Now let's send some transactions to the dummy.
 curl -s 'localhost:46657/broadcast_tx_commit?tx="abcd"'
 ```
 
-Note the single quote, `'`, around the url, to ensure the double quotes, `"`, are not escaped by bash.
+Note the single quote (`'`) around the url, which ensures that the double quotes (`"`) are not escaped by bash.
 This command sent a transaction with bytes `abcd`, so `abcd` will be stored as both the key and the value in the Merkle tree.
 The response should look something like:
 
@@ -113,7 +113,14 @@ curl -s 'localhost:46657/abci_query?data="abcd"&path=""&prove=false'
 ```
 
 The `path` and `prove` arguments can be ignored for now, and in a future release can be left out.
-Note the `value` in the result. It should say `61626364`, which is the hex-encoding of the ASCII of `abcd`.
+The result should look like:
+
+
+```
+{"jsonrpc":"2.0","id":"","result":[112,{"response":{"value":"61626364","log":"exists"}}],"error":""}
+```
+
+Again, the `112` is the type-byte. Note the `value` in the result (`61626364`); this is the hex-encoding of the ASCII of `abcd`.
 You can verify this in a python shell by running `"61626364".decode('hex')`.
 Stay tuned for a future release that makes this output more human-readable ;). 
 
@@ -123,7 +130,7 @@ Now let's try setting a different key and value:
 curl -s 'localhost:46657/broadcast_tx_commit?tx="name=satoshi"'
 ```
 
-Now if we query for `name`, we should get `satoshi`:
+Now if we query for `name`, we should get `satoshi`, or `7361746F736869` in hex:
 
 ```
 curl -s 'localhost:46657/abci_query?data="name"&path=""&prove=false'
@@ -152,7 +159,7 @@ before they are stored in memory or gossipped to other peers.
 
 In this instance of the counter app, with `serial=on`, `CheckTx` only allows transactions whose integer is greater than the last committed one.
 
-Let's kill the console and the dummy application, and start the counter app.
+Let's kill the previous instance of tendermint and the dummy application, and start the counter app.
 We can enable `serial=on` with a flag:
 
 ```

@@ -12,6 +12,10 @@ There is also the [original whitepaper](/static/docs/tendermint.pdf), though it 
 
 The Tendermint [Software Ecosystem](/ecosystem) contains many example applications and related software built by the Tendermint team and others. Check it out for some inspiration!
 
+For details on how the software has changed, and what changes are in store, see the [Changelog](/docs/changelog) and the [Roadmap](/docs/roadmap).
+
 See our [Community](/community) page for more ways to collaborate.
 
 You can also [get in touch with the team](/contact).
+
+Most importantly, enjoy!
