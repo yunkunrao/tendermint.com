@@ -1,5 +1,7 @@
 <template>
   <div><h1 id=install-from-source>Install From Source</h1>
+<p>This page provides instructions on installing Tendermint from source.
+To download pre-built binaries, see the <a href=intro/getting-started/download-tendermint>downloads page</a>.</p>
 <h2 id=install-go>Install Go</h2>
 <p>Make sure you have installed Go and <a href=https://github.com/tendermint/tendermint/wiki/Setting-GOPATH>set the GOPATH</a>.</p>
 <h2 id=install-tendermint>Install Tendermint</h2>
@@ -59,7 +61,7 @@ and the
 <router-link to=/docs/guides/using-tendermint>Using Tendermint</router-link>
 guide for more details about using the <code>tendermint</code> program.</p>
 <h2 id=next-step>Next Step</h2>
-<p>Learn how to <router-link to=/intro/getting-started/first-abci>create your first ABCI app</router-link>.</p>
+<p>Learn how to <router-link to=/intro/getting-started/first-abci-app>create your first ABCI app</router-link>.</p>
 </div>
 </template>
 

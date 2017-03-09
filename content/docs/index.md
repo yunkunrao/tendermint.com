@@ -11,6 +11,8 @@ To learn more about running the Tendermint software, see the [Using Tendermint G
 To learn more about Tendermint's various pieces, checkout the [Documentation](/docs).
 For a deeper dive, see [this thesis](https://atrium.lib.uoguelph.ca/xmlui/handle/10214/9769). 
 There is also the [original whitepaper](/static/docs/tendermint.pdf), though it is now quite outdated.
+You might also be interested in the [Cosmos Whitepaper](https://cosmos.network/whitepaper),
+which describes Tendermint, ABCI, and how to build a scalable, heterogeneous, cryptocurrency network.
 
 For details on how the software has changed, and what changes are in store, see the [Changelog](/docs/changelog) and the [Roadmap](/docs/roadmap).
 
