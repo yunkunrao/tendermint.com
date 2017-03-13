@@ -12,8 +12,6 @@ export default {
       return 'fa fa-' + this.icon
     }
   },
-  methods: {
-  },
   props: ['icon']
 }
 </script>
@@ -23,15 +21,16 @@ export default {
 
 .btn-thumb
   position fixed
-  bottom x
-  right x
+  bottom 1rem
+  right 1rem
 
-  border-radius 1.5*x
+  width 3rem
+  height 3rem
+  border-radius 1.5rem
 
-  width 3*x
-  line-height 3*x
-
-  text-align center
+  display flex
+  justify-content center
+  align-items center
 
   background hsla(0,0,0,0.8)
   color #fff

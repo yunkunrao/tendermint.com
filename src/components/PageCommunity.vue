@@ -6,96 +6,79 @@
       type="split"
       theme="tendermint">
     </page-header>
-    <div class="page-content">
-      <section class="section-default">
+
+    <div class="page-content page-community-content">
+      <div class="section section-default">
         <div class="section-container">
-          <div class="section-header">
-            <h2>Collaborate</h2>
-          </div>
-          <div class="section-content">
-            <card-post :title="link.title" :desc="link.desc"
-              :url="link.url" v-for="link in communityLinks">
-            </card-post>
-          </div>
+          <card-title>Collaborate</card-title>
+          <card-community v-for="link in communityLinks" :link="link"></card-community>
         </div>
-      </section>
-      <section class="section-default">
+      </div>
+      <div class="section section-default">
         <div class="section-container">
-          <div class="section-header">
-            <h2>Company</h2>
-          </div>
-          <div class="section-content">
-            <card-post :title="link.title" :desc="link.desc"
-              :url="link.url" v-for="link in companyLinks">
-            </card-post>
-          </div>
+          <card-title>Company</card-title>
+          <card-community v-for="link in companyLinks" :link="link"></card-community>
         </div>
-      </section>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 import PageHeader from '@nylira/vue-page-header'
-import CardPost from './CardPost'
+import CardCommunity from './CardCommunity'
+import CardTitle from './CardTitle'
 export default {
   name: 'page-community',
   components: {
     PageHeader,
-    CardPost
+    CardCommunity,
+    CardTitle
   },
   data () {
     return {
       communityLinks: [
         {
           url: 'http://forum.tendermint.com:3000/',
-          internal: false,
-          title: 'Chat',
-          desc: 'Talk on Slack with people interested in Tendermint. (External)'
+          title: 'Slack Chat',
+          icon: 'slick'
         },
         {
           url: 'https://github.com/tendermint/tendermint/issues',
-          internal: false,
-          title: 'Issues',
-          desc: 'View the features we\'re working on right now. (External)'
+          title: 'Github Issues',
+          icon: 'github-alt'
         },
         {
-          url: '/bounties',
-          internal: true,
-          title: 'Bounties',
-          desc: 'Get paid in BTC by working on Tendermint-based projects.'
+          route: '/bounties',
+          title: 'Code Bounties',
+          icon: 'btc'
         },
         {
-          url: '/ecosystem',
-          internal: true,
-          title: 'Ecosystem',
-          desc: 'View the software developers are building upon Tendermint.'
+          route: '/ecosystem',
+          title: 'Software Ecosystem',
+          icon: 'code'
         }
       ],
       companyLinks: [
         {
-          url: '/about',
-          internal: true,
-          title: 'About',
-          desc: 'Learn more about Tendermint\'s team.'
+          route: '/about',
+          title: 'About Tendermint',
+          icon: 'users'
         },
         {
-          url: '/careers',
-          internal: true,
+          route: '/careers',
           title: 'Careers',
-          desc: 'Interested in working at Tendermint? We\'re hiring.'
+          icon: 'user'
         },
         {
-          url: '/presentations',
-          internal: true,
+          route: '/presentations',
           title: 'Presentations',
-          desc: 'Check out the talks we\'ve given about Tendermint.'
+          icon: 'video-camera'
         },
         {
-          url: '/press',
-          internal: true,
-          title: 'Press',
-          desc: 'Tendermint mentioned across global media.'
+          route: '/press',
+          title: 'Press Mentions',
+          icon: 'newspaper-o'
         }
       ]
     }
@@ -109,19 +92,6 @@ export default {
 <style lang="stylus">
 @require '../styles/variables.styl'
 
-@media screen and (min-width:720px)
-  .page-community .section-default .section-container
-    .section-content
-      padding-top 0
-      display flex
-      flex-flow row wrap
-      margin-left -1*x !important
-      margin-right -1*x !important
-      .card-post
-        flex 1 0 50%
-        border none
-        &:first-of-type
-          margin-top 0
-        a
-          padding 1.5*x x
+.page-community-content
+  background #fff
 </style>

@@ -11,22 +11,23 @@
       </article-footer>
       <section-comments></section-comments>
     </div>
+    <btn-thumb icon="chevron-left" @click.native="gotoBlog"></btn-thumb>
   </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import PageHeader from '@nylira/vue-page-header'
 import ArticleBody from '@nylira/vue-article-body'
 import ArticleFooter from './ArticleFooter'
+import BtnThumb from './BtnThumb'
 import SectionComments from './SectionComments'
-
-import { mapGetters } from 'vuex'
-
 export default {
   name: 'page-blog-entry',
   components: {
     PageHeader,
     ArticleBody,
+    BtnThumb,
     ArticleFooter,
     SectionComments
   },
@@ -61,9 +62,13 @@ export default {
       'allPosts'
     ])
   },
+  methods: {
+    gotoBlog () {
+      this.$router.push('/blog')
+    }
+  },
   mounted () {
     document.title = this.entry.title + ' - Tendermint'
-    console.log('entry', this.entry)
   }
 }
 </script>

@@ -18,7 +18,7 @@
 
       <section class="section-default" v-show="abciApps.length > 0">
         <div class="section-container">
-          <div class="section-header"><h2>ABCI Apps</h2></div>
+          <card-title>ABCI Apps</card-title>
           <div class="section-content">
             <div class="software-header">
               <div class="name active" @click="reorderBy('name')">Title</div>
@@ -48,7 +48,7 @@
 
       <section class="section-default" v-show="abciServers.length > 0">
         <div class="section-container">
-          <div class="section-header"><h2>ABCI Servers</h2></div>
+          <card-title>ABCI Servers</card-title>
           <div class="section-content">
             <div class="software-header">
               <div class="name active" @click="reorderBy('name')">Title</div>
@@ -76,7 +76,7 @@
 
       <section class="section-default" v-show="deploymentTools.length > 0">
         <div class="section-container">
-          <div class="section-header"><h2>Deployment Tools</h2></div>
+          <card-title>Deployment Tools</card-title>
           <div class="section-content">
             <div class="software-header">
               <div class="name active" @click="reorderBy('name')">Title</div>
@@ -106,7 +106,7 @@
 
       <section class="section-default" v-show="competitors.length > 0">
         <div class="section-container">
-          <div class="section-header"><h2>Competition (Potential Collaborators!)</h2></div>
+          <card-title>Competition (Collaborators?)</card-title>
           <div class="section-content">
             <div class="software-header">
               <div class="name active" @click="reorderBy('name')">Title</div>
@@ -144,12 +144,14 @@ import { orderBy } from 'lodash'
 import $ from 'jquery'
 import Fuse from 'fuse.js'
 import Field from '@nylira/vue-input'
+import CardTitle from './CardTitle'
 
 export default {
   name: 'page-software-ecosystem',
   components: {
     PageHeader,
-    Field
+    Field,
+    CardTitle
   },
   computed: {
     abciApps () {
@@ -252,6 +254,9 @@ export default {
 @require '../styles/variables.styl'
 
 .page-software-ecosystem
+  .section-default .section-container .section-content
+    padding 0.5rem 1rem
+
   .ni-page-header
     .ni-field
       margin-top 1rem
@@ -262,13 +267,11 @@ export default {
     flex-flow row nowrap
 
     div
-      padding x 0.5*x
+      padding 0.5rem 1rem
       color light
-      font-weight bold
       cursor pointer
 
       &.active
-        font-weight bold
         color txt
 
     .name
@@ -290,7 +293,7 @@ export default {
 
     a
       flex 1
-      padding 0.75*x x
+      padding 0.5*x x
       border 1px solid bc
       color txt
 
@@ -316,6 +319,10 @@ export default {
 
 @media screen and (min-width: 720px)
   .page-software-ecosystem
+
+    .section-default .section-container .section-content
+      padding 0
+
     .software-header
       display flex
 
@@ -326,16 +333,15 @@ export default {
         a
           display flex
           flex-flow row nowrap
-          border-bottom none
-          border-left none
-          border-right none
+          border none
+          border-top 1px solid bc
           padding 0
           &:hover
             border-color bc
             background lighten(mcolor, 97%)
 
           .name, .author, .language, .technology, .description
-            padding x 0.5*x
+            padding 0.5rem 1rem
             margin 0
 
           .name

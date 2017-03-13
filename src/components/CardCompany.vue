@@ -79,7 +79,7 @@ export default {
   .ids
     a
       display block
-      border-top 1px dotted bc
+      border-top 1px solid bc
       padding 0.25*x
       width 100%
       i.fa

@@ -21,7 +21,7 @@ export default {
 @require '../styles/variables.styl'
 
 .card-bounty
-  border-bottom 1px dotted bc
+  border-bottom 1px solid bc
   margin 0 auto
 
   &:first-of-type
