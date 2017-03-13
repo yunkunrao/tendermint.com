@@ -6,6 +6,7 @@
   <app-development v-if="r('app-development')"></app-development>
   <contributing v-if="r('contributing')"></contributing>
   <install-from-source v-if="r('install-from-source')"></install-from-source>
+  <install-go v-if="r('install-go')"></install-go>
   <using-tendermint v-if="r('using-tendermint')"></using-tendermint>
   <index v-if="r()"></index>
   <block-structure v-if="r('block-structure')"></block-structure>
@@ -35,6 +36,7 @@ export default {
     AppDevelopment: require('../content/docs/guides/app-development.vue'),
     Contributing: require('../content/docs/guides/contributing.vue'),
     InstallFromSource: require('../content/docs/guides/install-from-source.vue'),
+    InstallGo: require('../content/docs/guides/install-go.vue'),
     UsingTendermint: require('../content/docs/guides/using-tendermint.vue'),
     Index: require('../content/docs/index.vue'),
     BlockStructure: require('../content/docs/internals/block-structure.vue'),
