@@ -17,11 +17,12 @@ var docs = './content/docs/**/*.md'
 var intro = './content/intro/**/*.md'
 
 // templating
-var entryTemplate = fs.readFileSync('./build/templates/Entry.html', 'utf8')
+var docsTemplate = fs.readFileSync('./build/templates/DocsEntry.html', 'utf8')
+var introTemplate = fs.readFileSync('./build/templates/IntroEntry.html', 'utf8')
 var template = require('es6-template-strings')
 
 // functions
-function vueify (file) {
+function vueify (file, tmpl) {
   var mdData = fs.readFileSync(file, 'utf8')
   var htmlData = md.render(mdData)
 
@@ -53,24 +54,24 @@ function vueify (file) {
 
   var pageTitle = lib.titlify(path.basename(file, '.md'))
 
-  return template(entryTemplate, { data: pageData, title: pageTitle })
+  return template(tmpl, { data: pageData, title: pageTitle })
 }
 
-function build (file) {
-  let filename = './src/' + lib.vueName(file)
-  fs.writeFileSync(filename, vueify(file), 'utf8')
+function build (file, tmpl) {
+  let filename = './src/' + lib.vueFilename(file)
+  fs.writeFileSync(filename, vueify(file, tmpl), 'utf8')
   console.log(`  ✓ ${filename}`)
 }
 
-function buildAll (wildcard) {
+function buildAll (wildcard, tmpl) {
   glob(wildcard, function (er, files) {
     for (var i = 0; i < files.length; i++) {
-      build(files[i])
+      build(files[i], tmpl)
     }
   })
 }
 
 module.exports = function () {
-  buildAll(docs)
-  buildAll(intro)
+  buildAll(docs, docsTemplate)
+  buildAll(intro, introTemplate)
 }

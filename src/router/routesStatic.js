@@ -24,7 +24,6 @@ export default [
   { path: '/press', component: r('Press') },
 
   // Wildcards
-  { path: '/blog/*', component: r('404') },
   { path: '/404', component: r('404') },
   { path: '*', component: r('404') }
 ]

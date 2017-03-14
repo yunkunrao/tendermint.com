@@ -16,20 +16,28 @@ function filesToArray (files) {
       routeName = routeName.substring(4)
     }
 
-    let pathname
+    let routePath
     if (parentDir(file) === 'intro' || parentDir(file) === 'docs') {
-      pathname = routeName
+      routePath = routeName
     } else {
-      pathname = parentDir(file) + '/' + baseName
+      routePath = parentDir(file) + '/' + routeName
+    }
+
+    let vuePath
+    if (parentDir(file) === 'intro' || parentDir(file) === 'docs') {
+      vuePath = baseName
+    } else {
+      vuePath = parentDir(file) + '-' + baseName
     }
 
     data.push({
       mdFilename: file,
-      vueFilename: '../' + vueName(file),
+      vueFilename: vueFilename(file),
       elementName: elementName,
       routeName: routeName,
       pascalName: pascalName,
-      pathname: pathname,
+      routePath: routePath,
+      vuePath: vuePath,
       title: titlify(baseName),
       section: titlify(parentDir(file)),
       url: urlify(file)
@@ -82,11 +90,13 @@ function urlify (file) {
   return `${directory}/${filename}`
 }
 
-function vueName (file) {
+function vueFilename (file) {
   var markdownFile = path.parse(file)
-  var directory = markdownFile.dir.substring(2) // remove './' from directory
-  var vueFile = `${directory}/${markdownFile.name}.vue`
-  return vueFile
+  var directory = markdownFile.dir.substring(10) // remove './' from directory
+  directory = directory.split('/').join('-')
+  var filename = `content/${directory}-${markdownFile.name}.vue`
+  // console.log('vueFile', vueFile)
+  return filename
 }
 
 module.exports = {
@@ -94,5 +104,5 @@ module.exports = {
   titlify: titlify,
   parentDir: parentDir,
   urlify: urlify,
-  vueName: vueName
+  vueFilename: vueFilename
 }
