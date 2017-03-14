@@ -1,5 +1,11 @@
+</script>
 <template>
-  <div><h1 id=rpc>RPC</h1>
+  <div class="master-detail page-intro-entry">
+    <master></master>
+    <div class="detail">
+      <article-body>
+        <entries></entries>
+        <h1 id=rpc>RPC</h1>
 <p>Tendermint supports the following RPC protocols:</p>
 <ul>
 <li>URI over HTTP</li>
@@ -57,12 +63,23 @@ http://localhost:46657/unsubscribe?event=_
 </code></pre>
 <h3 id=more-examples>More Examples</h3>
 <p>See the various bash tests using curl in <code>test/</code>, and examples using the <code>Go</code> API in <code>rpc/test/</code>. Tendermint uses the <a href=https://github.com/tendermint/go-rpc>go-rpc</a> library, with docs at <a href=https://godoc.org/github.com./tendermint/go-rpc/client>https://godoc.org/github.com./tendermint/go-rpc/client</a>.</p>
-</div>
+
+      </article-body>
+    </div>
+  </div>
 </template>
 
 <script>
+import Master from './PageIntroMaster'
+import ArticleBody from '@nylira/vue-article-body'
+import Entries from './PageIntroEntries'
 export default {
   name: 'page-docs-entry',
+  components: {
+    Master,
+    ArticleBody,
+    Entries
+  },
   mounted () {
     document.title = 'RPC - Documentation - Tendermint'
   }

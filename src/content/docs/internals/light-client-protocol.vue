@@ -1,5 +1,11 @@
+</script>
 <template>
-  <div><h1 id=light-client-protocol>Light Client Protocol</h1>
+  <div class="master-detail page-intro-entry">
+    <master></master>
+    <div class="detail">
+      <article-body>
+        <entries></entries>
+        <h1 id=light-client-protocol>Light Client Protocol</h1>
 <p>Light clients are an important part of the complete blockchain system for most applications.  Tendermint provides unique speed and security properties for light client applications.</p>
 <p>See our developing <a href=github.com/tendermint/light-client>light-client repository</a>.</p>
 <h2 id=overview>Overview</h2>
@@ -12,12 +18,23 @@
 <li>You get the full speed benefits of Tendermint;  Transactions commit instantly.</li>
 <li>You can get the most recent version of the application state non-interactively (without committing anything to the blockchain).  For example, this means that you can get the most recent value of a name from the name-registry without worrying about fork censorship attacks, without posting a commit and waiting for confirmations.  It&#x2019;s fast, secure, and free!</li>
 </ul>
-</div>
+
+      </article-body>
+    </div>
+  </div>
 </template>
 
 <script>
+import Master from './PageIntroMaster'
+import ArticleBody from '@nylira/vue-article-body'
+import Entries from './PageIntroEntries'
 export default {
   name: 'page-docs-entry',
+  components: {
+    Master,
+    ArticleBody,
+    Entries
+  },
   mounted () {
     document.title = 'Light Client Protocol - Documentation - Tendermint'
   }

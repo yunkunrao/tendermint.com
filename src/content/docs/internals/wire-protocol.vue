@@ -1,5 +1,11 @@
+</script>
 <template>
-  <div><h1 id=wire-protocol>Wire Protocol</h1>
+  <div class="master-detail page-intro-entry">
+    <master></master>
+    <div class="detail">
+      <article-body>
+        <entries></entries>
+        <h1 id=wire-protocol>Wire Protocol</h1>
 <p>The <a href=https://github.com/tendermint/go-wire>Tendermint wire protocol</a> encodes data in <a href=#binary>c-style binary</a> and <a href=#json>JSON</a> form.</p>
 <h2 id=supported-types>Supported types</h2>
 <ul>
@@ -157,12 +163,23 @@ var animal Animal = Dog(02)
 <li>interface values are encoded as an array of two items: <code>[type_byte, concrete_value]</code></li>
 <li>times are encoded as rfc2822 strings</li>
 </ul>
-</div>
+
+      </article-body>
+    </div>
+  </div>
 </template>
 
 <script>
+import Master from './PageIntroMaster'
+import ArticleBody from '@nylira/vue-article-body'
+import Entries from './PageIntroEntries'
 export default {
   name: 'page-docs-entry',
+  components: {
+    Master,
+    ArticleBody,
+    Entries
+  },
   mounted () {
     document.title = 'Wire Protocol - Documentation - Tendermint'
   }

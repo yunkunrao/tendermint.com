@@ -1,10 +1,25 @@
+</script>
 <template>
-  <div>${data}</div>
+  <div class="master-detail page-intro-entry">
+    <master></master>
+    <div class="detail">
+      <article-body>
+        <entries></entries>
+        ${data}
+      </article-body>
+    </div>
+  </div>
 </template>
 
 <script>
+import Master from '../components/PageIntroMaster'
+import ArticleBody from '@nylira/vue-article-body'
 export default {
   name: 'page-docs-entry',
+  components: {
+    Master,
+    ArticleBody
+  },
   mounted () {
     document.title = '${title} - Documentation - Tendermint'
   }

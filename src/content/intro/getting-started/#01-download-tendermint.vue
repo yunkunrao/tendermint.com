@@ -1,5 +1,11 @@
+</script>
 <template>
-  <div><h1 id=download-tendermint>Download Tendermint</h1>
+  <div class="master-detail page-intro-entry">
+    <master></master>
+    <div class="detail">
+      <article-body>
+        <entries></entries>
+        <h1 id=download-tendermint>Download Tendermint</h1>
 <p>Tendermint 0.9 has been released.</p>
 <div class=download-matrix>
   <div class="os os-mac">
@@ -75,12 +81,23 @@ ee785fed8186e13e741988affc4e90faac278fe6c26245517f1af8a5589278f1
 <p>If you prefer, you can also install Tendermint <router-link to=/docs/guides/install>from source</router-link>.</p>
 <h2 id=next-step>Next Step</h2>
 <p>Once you&#x2019;ve installed Tendermint onto your computer, get started by creating your first <router-link to=/intro/getting-started/first-abci-app>ABCI app</router-link>.</p>
-</div>
+
+      </article-body>
+    </div>
+  </div>
 </template>
 
 <script>
+import Master from './PageIntroMaster'
+import ArticleBody from '@nylira/vue-article-body'
+import Entries from './PageIntroEntries'
 export default {
   name: 'page-docs-entry',
+  components: {
+    Master,
+    ArticleBody,
+    Entries
+  },
   mounted () {
     document.title = '1. Download Tendermint - Documentation - Tendermint'
   }

@@ -1,5 +1,11 @@
+</script>
 <template>
-  <div><h1 id=install-from-source>Install from Source</h1>
+  <div class="master-detail page-intro-entry">
+    <master></master>
+    <div class="detail">
+      <article-body>
+        <entries></entries>
+        <h1 id=install-from-source>Install from Source</h1>
 <p>This page provides instructions on installing Tendermint from source.
 To download pre-built binaries, see the <router-link to=/intro/getting-started/download-tendermint>downloads page</router-link>.</p>
 <h2 id=install-go>Install Go</h2>
@@ -62,12 +68,23 @@ and the
 guide for more details about using the <code>tendermint</code> program.</p>
 <h2 id=next-step>Next Step</h2>
 <p>Learn how to <router-link to=/intro/getting-started/first-abci-app>create your first ABCI app</router-link>.</p>
-</div>
+
+      </article-body>
+    </div>
+  </div>
 </template>
 
 <script>
+import Master from './PageIntroMaster'
+import ArticleBody from '@nylira/vue-article-body'
+import Entries from './PageIntroEntries'
 export default {
   name: 'page-docs-entry',
+  components: {
+    Master,
+    ArticleBody,
+    Entries
+  },
   mounted () {
     document.title = 'Install from Source - Documentation - Tendermint'
   }

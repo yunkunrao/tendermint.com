@@ -1,5 +1,11 @@
+</script>
 <template>
-  <div><h1 id=tendermint-roadmap>Tendermint Roadmap</h1>
+  <div class="master-detail page-intro-entry">
+    <master></master>
+    <div class="detail">
+      <article-body>
+        <entries></entries>
+        <h1 id=tendermint-roadmap>Tendermint Roadmap</h1>
 <p>This is an estimate of what we will be working on in Tendermint over the coming months.
 It is in the same style as our <router-link to=/docs/changelog>CHANGELOG</router-link>
 How these changes will be rolled out in terms of versions and releases can be better <a href=https://github.com/tendermint/tendermint/issues>tracked on Github</a></p>
@@ -41,12 +47,23 @@ While the commit size may grow unbounded in size, it makes a fork immediately sl
 <li>Graceful handling/recovery for apps that have non-determinism or fail to halt</li>
 <li>Graceful handling/recovery for violations of safety, or liveness</li>
 </ul>
-</div>
+
+      </article-body>
+    </div>
+  </div>
 </template>
 
 <script>
+import Master from './PageIntroMaster'
+import ArticleBody from '@nylira/vue-article-body'
+import Entries from './PageIntroEntries'
 export default {
   name: 'page-docs-entry',
+  components: {
+    Master,
+    ArticleBody,
+    Entries
+  },
   mounted () {
     document.title = 'Roadmap - Documentation - Tendermint'
   }

@@ -1,5 +1,11 @@
+</script>
 <template>
-  <div><h1 id=documentation>Documentation</h1>
+  <div class="master-detail page-intro-entry">
+    <master></master>
+    <div class="detail">
+      <article-body>
+        <entries></entries>
+        <h1 id=documentation>Documentation</h1>
 <p>If you&#x2019;re new here, start with the <router-link to=/intro>Tendermint Intro</router-link>.</p>
 <p>To start building an ABCI application and integrating with Tendermint,
 see the <router-link to=/docs/guides/app-development>App Development</router-link>
@@ -17,12 +23,23 @@ Check it out for some motivation and inspiration!</p>
 <p>See our <router-link to=/community>Community</router-link> page for more ways to collaborate.</p>
 <p>You can also <router-link to=/contact>get in touch with the team</router-link>.</p>
 <p>Most importantly, enjoy!</p>
-</div>
+
+      </article-body>
+    </div>
+  </div>
 </template>
 
 <script>
+import Master from './PageIntroMaster'
+import ArticleBody from '@nylira/vue-article-body'
+import Entries from './PageIntroEntries'
 export default {
   name: 'page-docs-entry',
+  components: {
+    Master,
+    ArticleBody,
+    Entries
+  },
   mounted () {
     document.title = 'Index - Documentation - Tendermint'
   }

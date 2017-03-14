@@ -1,5 +1,11 @@
+</script>
 <template>
-  <div><h1 id=genesis>Genesis</h1>
+  <div class="master-detail page-intro-entry">
+    <master></master>
+    <div class="detail">
+      <article-body>
+        <entries></entries>
+        <h1 id=genesis>Genesis</h1>
 <p>The genesis.json file in <code>$TMROOT</code> defines the initial TendermintCore state upon genesis of the blockchain (<a href=https://github.com/tendermint/tendermint/blob/master/types/genesis.go>see definition</a>).</p>
 <p>NOTE: This does not (yet) specify the application state (e.g. initial distribution of tokens). Currently we leave it up to the application to load the initial application genesis state.  In the future, we may include genesis SetOption messages that get passed from TendermintCore to the app upon genesis.</p>
 <h3 id=fields>Fields</h3>
@@ -57,12 +63,23 @@
   &quot;app_hash&quot;: &quot;15005165891224E721CB664D15CB972240F5703F&quot;
 }
 </code></pre>
-</div>
+
+      </article-body>
+    </div>
+  </div>
 </template>
 
 <script>
+import Master from './PageIntroMaster'
+import ArticleBody from '@nylira/vue-article-body'
+import Entries from './PageIntroEntries'
 export default {
   name: 'page-docs-entry',
+  components: {
+    Master,
+    ArticleBody,
+    Entries
+  },
   mounted () {
     document.title = 'Genesis - Documentation - Tendermint'
   }

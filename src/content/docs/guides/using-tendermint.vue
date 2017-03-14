@@ -1,5 +1,11 @@
+</script>
 <template>
-  <div><h1 id=using-tendermint>Using Tendermint</h1>
+  <div class="master-detail page-intro-entry">
+    <master></master>
+    <div class="detail">
+      <article-body>
+        <entries></entries>
+        <h1 id=using-tendermint>Using Tendermint</h1>
 <p>This is a guide to using the <code>tendermint</code> program from the command line.
 It assumes only that you <router-link to=/intro/getting-started/download-tendermint>have tendermint installed</router-link> and have some rudimentary idea
 of what Tendermint and ABCI are.</p>
@@ -216,12 +222,23 @@ otherwise Tendermint&#x2019;s p2p library will deny making connections to peers 
 <p>Got a couple nodes talking to each other using the dummy app?
 Try a more sophisticated app like <a href=https://github.com/tendermint/ethermint>Ethermint</a>,
 or learn more about building your own in the <router-link to=/docs/guides/app-development>Application Developer&#x2019;s Guide</router-link>.</p>
-</div>
+
+      </article-body>
+    </div>
+  </div>
 </template>
 
 <script>
+import Master from './PageIntroMaster'
+import ArticleBody from '@nylira/vue-article-body'
+import Entries from './PageIntroEntries'
 export default {
   name: 'page-docs-entry',
+  components: {
+    Master,
+    ArticleBody,
+    Entries
+  },
   mounted () {
     document.title = 'Using Tendermint - Documentation - Tendermint'
   }

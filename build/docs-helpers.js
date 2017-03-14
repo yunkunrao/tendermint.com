@@ -16,12 +16,20 @@ function filesToArray (files) {
       routeName = routeName.substring(4)
     }
 
+    let pathname
+    if (parentDir(file) === 'intro' || parentDir(file) === 'docs') {
+      pathname = routeName
+    } else {
+      pathname = parentDir(file) + '/' + baseName
+    }
+
     data.push({
       mdFilename: file,
       vueFilename: '../' + vueName(file),
       elementName: elementName,
       routeName: routeName,
       pascalName: pascalName,
+      pathname: pathname,
       title: titlify(baseName),
       section: titlify(parentDir(file)),
       url: urlify(file)

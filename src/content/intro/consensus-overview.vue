@@ -1,5 +1,11 @@
+</script>
 <template>
-  <div><h1 id=consensus-overview>Consensus Overview</h1>
+  <div class="master-detail page-intro-entry">
+    <master></master>
+    <div class="detail">
+      <article-body>
+        <entries></entries>
+        <h1 id=consensus-overview>Consensus Overview</h1>
 <p>Tendermint is an easy-to-understand, mostly asynchronous, BFT consensus protocol.
 The protocol follows a simple state machine that looks like this:</p>
 <img src=~assets/images/consensus_logic.png>
@@ -43,12 +49,23 @@ This adds an economic element to the security of the protocol, allowing one to q
 <ul>
 <li>Continue with the <router-link to=/intro/getting-started/download-tendermint>Getting Started</router-link> guide to install and run example tendermint applications.</li>
 </ul>
-</div>
+
+      </article-body>
+    </div>
+  </div>
 </template>
 
 <script>
+import Master from './PageIntroMaster'
+import ArticleBody from '@nylira/vue-article-body'
+import Entries from './PageIntroEntries'
 export default {
   name: 'page-docs-entry',
+  components: {
+    Master,
+    ArticleBody,
+    Entries
+  },
   mounted () {
     document.title = 'Consensus Overview - Documentation - Tendermint'
   }

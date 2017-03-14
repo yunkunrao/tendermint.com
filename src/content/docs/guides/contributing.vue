@@ -1,5 +1,11 @@
+</script>
 <template>
-  <div><h1 id=contributing>Contributing</h1>
+  <div class="master-detail page-intro-entry">
+    <master></master>
+    <div class="detail">
+      <article-body>
+        <entries></entries>
+        <h1 id=contributing>Contributing</h1>
 <p>Thanks for considering making contributions to Tendermint and related repositories (Basecoin, Merkleeyes, etc.)!</p>
 <p>Please follow standard github best practices: fork the repo, branch from the tip of develop, make some commits, and submit a pull request to develop. See the <a href=https://github.com/tendermint/tendermint/issues>open issues</a> for things we need help with!</p>
 <p>Please make sure to use <code>gofmt</code> before every commit - the easiest way to do this is have your editor run it for you upon saving a file.</p>
@@ -72,12 +78,23 @@ especially <code>go-p2p</code> and <code>go-rpc</code>, as their versions are re
 <h2 id=docker>Docker</h2>
 <p>We provide docker images for <code>tendermint/tendermint</code> and others. See the <a href=https://github.com/tendermint/mintnet-kubernetes>mintnet-kubernetes</a> repo for deploying Tendermint in containers with kubernetes.
 Additionally, we use docker for local testnets as part of our <a href=https://github.com/tendermint/tendermint/tree/master/test/p2p>test suite</a>.</p>
-</div>
+
+      </article-body>
+    </div>
+  </div>
 </template>
 
 <script>
+import Master from './PageIntroMaster'
+import ArticleBody from '@nylira/vue-article-body'
+import Entries from './PageIntroEntries'
 export default {
   name: 'page-docs-entry',
+  components: {
+    Master,
+    ArticleBody,
+    Entries
+  },
   mounted () {
     document.title = 'Contributing - Documentation - Tendermint'
   }

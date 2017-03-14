@@ -1,5 +1,11 @@
+</script>
 <template>
-  <div><h1 id=secure-p2p>Secure P2P</h1>
+  <div class="master-detail page-intro-entry">
+    <master></master>
+    <div class="detail">
+      <article-body>
+        <entries></entries>
+        <h1 id=secure-p2p>Secure P2P</h1>
 <p>The Tendermint p2p protocol uses an authenticated encryption scheme based on the <a href=https://en.wikipedia.org/wiki/Station-to-Station_protocol>Station-to-Station Protocol</a>. The implementation uses <a href=https://godoc.org/golang.org/x/crypto/nacl/box>golang&#x2019;s</a> <a href=http://nacl.cr.yp.to/box.html>nacl box</a> for the actual authenticated encryption algorithm.</p>
 <p>Each peer generates an ED25519 key-pair to use as a persistent (long-term) id.</p>
 <p>When two peers establish a TCP connection, they first each generate an ephemeral ED25519 key-pair to use for this session, and send each other their respective ephemeral public keys. This happens in the clear.</p>
@@ -18,12 +24,23 @@
 <li><a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.216.6107&amp;rep=rep1&amp;type=pdf">Original STS paper by Whitfield Diffie, Paul C. van Oorschot and Michael J. Wiener</a></li>
 <li><a href=https://dominictarr.github.io/secret-handshake-paper/shs.pdf>Further work on secret handshakes</a></li>
 </ul>
-</div>
+
+      </article-body>
+    </div>
+  </div>
 </template>
 
 <script>
+import Master from './PageIntroMaster'
+import ArticleBody from '@nylira/vue-article-body'
+import Entries from './PageIntroEntries'
 export default {
   name: 'page-docs-entry',
+  components: {
+    Master,
+    ArticleBody,
+    Entries
+  },
   mounted () {
     document.title = 'Secure P2P - Documentation - Tendermint'
   }

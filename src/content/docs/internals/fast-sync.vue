@@ -1,17 +1,34 @@
+</script>
 <template>
-  <div><h1 id=fast-sync>Fast Sync</h1>
+  <div class="master-detail page-intro-entry">
+    <master></master>
+    <div class="detail">
+      <article-body>
+        <entries></entries>
+        <h1 id=fast-sync>Fast Sync</h1>
 <h2 id=background>Background</h2>
 <p>In a proof of work blockchain, syncing with the chain is the same process as staying up-to-date with the consensus: download blocks, and look for the one with the most total work. In proof-of-stake, the consensus process is more complex, as it involves rounds of communication between the nodes to determine what block should be committed next. Using this process to sync up with the blockchain from scratch can take a very long time. It&#x2019;s much faster to just download blocks and check the merkle tree of validators than to run the real-time consensus gossip protocol.</p>
 <h2 id=fast-sync-2>Fast Sync</h2>
 <p>To support faster syncing, tendermint offers a <code>fast-sync</code> mode, which is enabled by default, and can be toggled in the <code>config.toml</code> or via <code>--fast_sync=false</code>.</p>
 <p>In this mode, the tendermint daemon will sync hundreds of times faster than if it used the real-time consensus process. Once caught up, the daemon will switch out of fast sync and into the normal consensus mode. After running for some time, the node is considered <code>caught up</code> if it has at least one peer and it&#x2019;s height is at least as high as the max reported peer height. See <a href=https://github.com/tendermint/tendermint/blob/master/blockchain/pool.go#L128>the IsCaughtUp method</a>.</p>
 <p>If we&#x2019;re lagging sufficiently, we should go back to fast syncing, but this is an open issue: <a href=https://github.com/tendermint/tendermint/issues/129>https://github.com/tendermint/tendermint/issues/129</a></p>
-</div>
+
+      </article-body>
+    </div>
+  </div>
 </template>
 
 <script>
+import Master from './PageIntroMaster'
+import ArticleBody from '@nylira/vue-article-body'
+import Entries from './PageIntroEntries'
 export default {
   name: 'page-docs-entry',
+  components: {
+    Master,
+    ArticleBody,
+    Entries
+  },
   mounted () {
     document.title = 'Fast Sync - Documentation - Tendermint'
   }

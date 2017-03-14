@@ -13,6 +13,7 @@
     "prod": "node build/prod-server.js",
     "blog": "node build/blog.js",
     "docs": "node build/docs.js",
+    "routes": "node build/docs-routes.js",
     "build": "node build/blog.js && node build/docs.js && node build/build.js"
   },
   "dependencies": {

@@ -1,5 +1,11 @@
+</script>
 <template>
-  <div><h1 id=deploy-a-testnet>Deploy a Testnet</h1>
+  <div class="master-detail page-intro-entry">
+    <master></master>
+    <div class="detail">
+      <article-body>
+        <entries></entries>
+        <h1 id=deploy-a-testnet>Deploy a Testnet</h1>
 <p>Now that we&#x2019;ve seen how ABCI works, and even played with a few applications on a single validator node,
 it&#x2019;s time to deploy a test network to four validator nodes.
 For this deployment, we&#x2019;ll use the <code>basecoin</code> application.</p>
@@ -30,12 +36,23 @@ and check out <a href=https://cloud.google.com/ >Google Cloud Platform</a> for s
 <p>TODO: a better tutorial here, and Ansible/Terraform.</p>
 <h2 id=next-steps>Next Steps</h2>
 <p>Done trying out the testnet? Continue <router-link to=/intro/getting-started/next-steps>onwards</router-link>.</p>
-</div>
+
+      </article-body>
+    </div>
+  </div>
 </template>
 
 <script>
+import Master from './PageIntroMaster'
+import ArticleBody from '@nylira/vue-article-body'
+import Entries from './PageIntroEntries'
 export default {
   name: 'page-docs-entry',
+  components: {
+    Master,
+    ArticleBody,
+    Entries
+  },
   mounted () {
     document.title = '3. Deploy Testnet - Documentation - Tendermint'
   }

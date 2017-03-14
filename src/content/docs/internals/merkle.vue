@@ -1,5 +1,11 @@
+</script>
 <template>
-  <div><h1 id=merkle>Merkle</h1>
+  <div class="master-detail page-intro-entry">
+    <master></master>
+    <div class="detail">
+      <article-body>
+        <entries></entries>
+        <h1 id=merkle>Merkle</h1>
 <p>For an overview of Merkle trees, see <a href=https://en.wikipedia.org/wiki/Merkle_tree>wikipedia</a>.</p>
 <p>There are two types of Merkle trees used in Tendermint.</p>
 <ul>
@@ -31,12 +37,23 @@
 </code></pre>
 <h3 id=simple-tree-with-dictionaries>Simple Tree with Dictionaries</h3>
 <p>The Simple Tree is used to merkelize a list of items, so to merkelize a (short) dictionary of key-value pairs, encode the dictionary as an ordered list of <code>KVPair</code> structs.  The block hash is such a hash derived from all the fields of the block <code>Header</code>.  The state hash is similarly derived.</p>
-</div>
+
+      </article-body>
+    </div>
+  </div>
 </template>
 
 <script>
+import Master from './PageIntroMaster'
+import ArticleBody from '@nylira/vue-article-body'
+import Entries from './PageIntroEntries'
 export default {
   name: 'page-docs-entry',
+  components: {
+    Master,
+    ArticleBody,
+    Entries
+  },
   mounted () {
     document.title = 'Merkle - Documentation - Tendermint'
   }

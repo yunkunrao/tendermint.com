@@ -1,5 +1,11 @@
+</script>
 <template>
-  <div><h1 id=application-architecture-guide>Application Architecture Guide</h1>
+  <div class="master-detail page-intro-entry">
+    <master></master>
+    <div class="detail">
+      <article-body>
+        <entries></entries>
+        <h1 id=application-architecture-guide>Application Architecture Guide</h1>
 <h2 id=overview>Overview</h2>
 <p>A blockchain application is more than the consensus engine and the transaction logic (eg. smart contracts, business logic) as implemented in the ABCI app.  There are also (mobile, web, desktop) clients that will need to connect and make use of the app.  We will assume for now that you have a well designed transactions and database model, but maybe this will be the topic of another article.  This article is more interested in various ways of setting up the &#x201C;plumbing&#x201D; and connecting these pieces, and demonstrating some evolving best practices.</p>
 <h2 id=security>Security</h2>
@@ -55,12 +61,23 @@
 <p>TODO: more!</p>
 <h2 id=contributions>Contributions</h2>
 <p>Many thanks to Ethan Frey for writing this page.</p>
-</div>
+
+      </article-body>
+    </div>
+  </div>
 </template>
 
 <script>
+import Master from './PageIntroMaster'
+import ArticleBody from '@nylira/vue-article-body'
+import Entries from './PageIntroEntries'
 export default {
   name: 'page-docs-entry',
+  components: {
+    Master,
+    ArticleBody,
+    Entries
+  },
   mounted () {
     document.title = 'App Architecture - Documentation - Tendermint'
   }

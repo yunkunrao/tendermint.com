@@ -1,5 +1,11 @@
+</script>
 <template>
-  <div><h1 id=what-is-abci>What is ABCI?</h1>
+  <div class="master-detail page-intro-entry">
+    <master></master>
+    <div class="detail">
+      <article-body>
+        <entries></entries>
+        <h1 id=what-is-abci>What is ABCI?</h1>
 <p>The Application BlockChain Interface (ABCI) allows for Byzantine Fault Tolerant replication of applications written in any programming language.</p>
 <h2 id=motivation>Motivation</h2>
 <p>Thus far, all blockchains &#x201C;stacks&#x201D; (such as <a href=https://github.com/bitcoin/bitcoin>Bitcoin</a>) have had a monolithic design.  That is, each blockchain stack is a single program that handles all the concerns of a decentralized ledger; this includes P2P connectivity, the &#x201C;mempool&#x201D; broadcasting of transactions, consensus on the most recent block, account balances, Turing-complete contracts, user-level permissions, etc.</p>
@@ -53,12 +59,23 @@ satisfies the <a href=https://github.com/tendermint/abci>ABCI</a>.</p>
 </ul>
 <h2 id=contributions>Contributions</h2>
 <p><em>Many thanks to Zaki Manian for providing the &#x201C;Intro to ABCI&#x201D; section.</em></p>
-</div>
+
+      </article-body>
+    </div>
+  </div>
 </template>
 
 <script>
+import Master from './PageIntroMaster'
+import ArticleBody from '@nylira/vue-article-body'
+import Entries from './PageIntroEntries'
 export default {
   name: 'page-docs-entry',
+  components: {
+    Master,
+    ArticleBody,
+    Entries
+  },
   mounted () {
     document.title = 'ABCI Overview - Documentation - Tendermint'
   }

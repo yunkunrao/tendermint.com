@@ -1,5 +1,11 @@
+</script>
 <template>
-  <div><h1 id=source-code>Source Code</h1>
+  <div class="master-detail page-intro-entry">
+    <master></master>
+    <div class="detail">
+      <article-body>
+        <entries></entries>
+        <h1 id=source-code>Source Code</h1>
 <p>Develop on Tendermint&#x2019;s open source platform. Start learning with <router-link to=/docs/guides/app-development>the guide</router-link></p>
 <ul>
   <li><a href=http://github.com/tendermint/tendermint/wiki>
@@ -31,12 +37,23 @@
     <p>Binary and JSON encoding/decoding</p>
   </a></li>
 </ul>
-</div>
+
+      </article-body>
+    </div>
+  </div>
 </template>
 
 <script>
+import Master from './PageIntroMaster'
+import ArticleBody from '@nylira/vue-article-body'
+import Entries from './PageIntroEntries'
 export default {
   name: 'page-docs-entry',
+  components: {
+    Master,
+    ArticleBody,
+    Entries
+  },
   mounted () {
     document.title = 'Source Code - Documentation - Tendermint'
   }

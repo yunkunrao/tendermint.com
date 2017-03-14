@@ -5,60 +5,45 @@ var lib = require('./docs-helpers.js')
 var docs = './content/docs/**/*.md'
 var intro = './content/intro/**/*.md'
 
-// templating
-var htmlTemplate = fs.readFileSync('./build/templates/Entries.html', 'utf8')
-var template = require('es6-template-strings')
-
 // functions
-function writePages (data) {
-  let string = '\n'
+function writeRoutes (prefix, data) {
+  let string =
+    `function r (page) { return require('../content/${prefix}/' + page + '.vue') }\nexport default [\n`
   for (var i = 0; i < data.length; i++) {
     let d = data[i]
     if (d.elementName === 'index') {
-      string +=
-        `  <${d.elementName} v-if="r()"></${d.elementName}>\n`
+      string +=`  { path: '/${prefix}', component: r('index') },\n`
+    } else if (i === data.length - 1) {
+      string +=`  { path: '/${prefix}/${d.pathname}', component: r('${d.pathname}') }\n`
     } else {
-      string +=
-        `  <${d.elementName} v-if="r('${d.routeName}')"></${d.elementName}>\n`
+      string +=`  { path: '/${prefix}/${d.pathname}', component: r('${d.pathname}') },\n`
     }
   }
-  // console.log(string)
+  console.log(string)
+  string += ']\n'
   return string
 }
 
-function writeComponents (data) {
-  let string = '\n'
-  for (var i = 0; i < data.length; i++) {
-    let d = data[i]
-    string += `    ${d.pascalName}: require('${d.vueFilename}')`
-    if (i !== data.length - 1) string += ',\n'
-    else string += '\n  '
-  }
-  // console.log(string)
-  return string
-}
-
-function writeTemplate (data, filename) {
-  let pages = writePages(data)
-  let components = writeComponents(data)
-
-  let filedata = template(htmlTemplate, { pages: pages, components: components })
-
+function writeTemplate (data, prefix, filename) {
+  let filedata = writeRoutes(prefix, data)
   fs.writeFileSync(filename, filedata, 'utf8')
   console.log(`  ✓ ${filename}`)
 }
 
-function buildAll (wildcard, filename) {
+function buildAll (wildcard, prefix, filename) {
   let filenames
   glob(wildcard, function (err, files) {
     if (err) console.log(err)
     filenames = files
     let data = lib.filesToArray(filenames)
-    writeTemplate(data, filename)
+    writeTemplate(data, prefix, filename)
   })
 }
 
+buildAll(intro, 'intro', './src/router/routesIntro.js')
+buildAll(docs, 'docs', './src/router/routesDocs.js')
+
 module.exports = function () {
-  buildAll(docs, './src/components/PageDocsEntries.vue')
-  buildAll(intro, './src/components/PageIntroEntries.vue')
+  buildAll(intro, 'intro', './src/router/routesIntro.js')
+  buildAll(docs, 'docs', './src/router/routesDocs.js')
 }

@@ -1,5 +1,11 @@
+</script>
 <template>
-  <div><h1 id=byzantine-consensus-algorithm>Byzantine Consensus Algorithm</h1>
+  <div class="master-detail page-intro-entry">
+    <master></master>
+    <div class="detail">
+      <article-body>
+        <entries></entries>
+        <h1 id=byzantine-consensus-algorithm>Byzantine Consensus Algorithm</h1>
 <p><em>The draft 0.6 whitepaper is outdated. The new algorithm is detailed below.  See <a href=#revisions>revisions</a></em></p>
 <h2 id=terms>Terms</h2>
 <ul>
@@ -170,12 +176,23 @@ conflicting reorg-proposals are signed.</p>
 <li>Reduced the minimum number of signature steps from 3 to 2 by removing the &#x201C;commit&#x201D; vote and step.</li>
 <li>The protocol is more asynchronous: instead of each round taking a predetermined duration of time, each step of a round progresses after +2/3 of the step&#x2019;s votes are found and a timeout is reached, or immediately after +2/3 of matching votes (e.g. a PoLC for prevotes, or a commit for precommits).</li>
 </ol>
-</div>
+
+      </article-body>
+    </div>
+  </div>
 </template>
 
 <script>
+import Master from './PageIntroMaster'
+import ArticleBody from '@nylira/vue-article-body'
+import Entries from './PageIntroEntries'
 export default {
   name: 'page-docs-entry',
+  components: {
+    Master,
+    ArticleBody,
+    Entries
+  },
   mounted () {
     document.title = 'Byzantine Consensus Algorithm - Documentation - Tendermint'
   }

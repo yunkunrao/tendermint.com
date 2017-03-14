@@ -1,5 +1,11 @@
+</script>
 <template>
-  <div><h1 id=configuration>Configuration</h1>
+  <div class="master-detail page-intro-entry">
+    <master></master>
+    <div class="detail">
+      <article-body>
+        <entries></entries>
+        <h1 id=configuration>Configuration</h1>
 <p>TendermintCore can be configured via a TOML file in <code>$TMROOT/config.toml</code>.  Some of these parameters can be overridden by command-line flags.</p>
 <h3 id=config-parameters>Config parameters</h3>
 <p>The main config parameters are defined <a href=https://github.com/tendermint/tendermint/blob/master/config/tendermint/config.go>here</a>.</p>
@@ -27,12 +33,23 @@
 <li><code>mempool_*</code>: Various mempool parameters <strong>TODO</strong></li>
 </ul>
 <p><strong>TODO</strong> Document command-line flag parameters from <a href=https://github.com/tendermint/tendermint/blob/master/cmd/tendermint/flags.go>here</a></p>
-</div>
+
+      </article-body>
+    </div>
+  </div>
 </template>
 
 <script>
+import Master from './PageIntroMaster'
+import ArticleBody from '@nylira/vue-article-body'
+import Entries from './PageIntroEntries'
 export default {
   name: 'page-docs-entry',
+  components: {
+    Master,
+    ArticleBody,
+    Entries
+  },
   mounted () {
     document.title = 'Configuration - Documentation - Tendermint'
   }

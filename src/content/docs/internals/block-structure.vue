@@ -1,5 +1,11 @@
+</script>
 <template>
-  <div><h1 id=block-structure>Block Structure</h1>
+  <div class="master-detail page-intro-entry">
+    <master></master>
+    <div class="detail">
+      <article-body>
+        <entries></entries>
+        <h1 id=block-structure>Block Structure</h1>
 <p>The tendermint consensus engine records all agreements by a supermajority of
 nodes into a blockchain, which is replicated among all nodes.  This blockchain
 is accessible via various rpc endpoints, mainly <code>/block?height=</code> to get the full
@@ -142,12 +148,23 @@ for !partSet2.IsComplete() {
 data2, _ := ioutil.ReadAll(partSet2.GetReader())
 bytes.Equal(data, data2) // true
 </code></pre>
-</div>
+
+      </article-body>
+    </div>
+  </div>
 </template>
 
 <script>
+import Master from './PageIntroMaster'
+import ArticleBody from '@nylira/vue-article-body'
+import Entries from './PageIntroEntries'
 export default {
   name: 'page-docs-entry',
+  components: {
+    Master,
+    ArticleBody,
+    Entries
+  },
   mounted () {
     document.title = 'Block Structure - Documentation - Tendermint'
   }

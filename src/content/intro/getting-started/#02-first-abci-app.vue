@@ -1,5 +1,11 @@
+</script>
 <template>
-  <div><h1 id=first-tendermint-app>First Tendermint App</h1>
+  <div class="master-detail page-intro-entry">
+    <master></master>
+    <div class="detail">
+      <article-body>
+        <entries></entries>
+        <h1 id=first-tendermint-app>First Tendermint App</h1>
 <p>As a general purpose blockchain engine, Tendermint is agnostic to the application you want to run.
 So, to run a complete blockchain that does something useful, you must start two programs:
 one is Tendermint Core, the other is your application, which can be written in any programming language.
@@ -157,12 +163,23 @@ and how to send transactions and query for the latest state.
 But the true power of Tendermint comes from its ability to securely and efficiently run an application
 across a distributed network of nodes, while keeping them all in sync using its state-of-the-art consensus protocol.
 This is the subject of the next tutorial, where we show you <router-link to=/intro/getting-started/deploy-testnet>how to deploy Tendermint networks</router-link>.</p>
-</div>
+
+      </article-body>
+    </div>
+  </div>
 </template>
 
 <script>
+import Master from './PageIntroMaster'
+import ArticleBody from '@nylira/vue-article-body'
+import Entries from './PageIntroEntries'
 export default {
   name: 'page-docs-entry',
+  components: {
+    Master,
+    ArticleBody,
+    Entries
+  },
   mounted () {
     document.title = '2. First ABCI App - Documentation - Tendermint'
   }

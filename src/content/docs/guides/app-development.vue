@@ -1,5 +1,11 @@
+</script>
 <template>
-  <div><h1 id=application-development-guide>Application Development Guide</h1>
+  <div class="master-detail page-intro-entry">
+    <master></master>
+    <div class="detail">
+      <article-body>
+        <entries></entries>
+        <h1 id=application-development-guide>Application Development Guide</h1>
 <h2 id=abci-design>ABCI Design</h2>
 <p>The purpose of ABCI is to provide a clean interface between state transition machines on one computer and the mechanics of their replication across multiple computers. The former we call &#x2018;application logic&#x2019; and the latter the &#x2018;consensus engine&#x2019;. Application logic validates transactions and optionally executes transactions against some persistent state. A consensus engine ensures all transactions are replicated in the same order on every machine. We call each machine in a consensus engine a &#x2018;validator&#x2019;, and each validator runs the same transactions through the same application logic. In particular, we are interested in blockchain-style consensus engines, where transactions are committed in hash-linked blocks.</p>
 <p>The ABCI design has a few distinct components:</p>
@@ -122,12 +128,23 @@ the latter is the response from that Commit.</li>
 to ensure both Tendermint and the app are synced to the latest block height.</p>
 <p>If the app returns a LastBlockHeight of 0, Tendermint will just replay all blocks.</p>
 <p>Note this functionality is only available in v0.8.0 and up.</p>
-</div>
+
+      </article-body>
+    </div>
+  </div>
 </template>
 
 <script>
+import Master from './PageIntroMaster'
+import ArticleBody from '@nylira/vue-article-body'
+import Entries from './PageIntroEntries'
 export default {
   name: 'page-docs-entry',
+  components: {
+    Master,
+    ArticleBody,
+    Entries
+  },
   mounted () {
     document.title = 'App Development - Documentation - Tendermint'
   }

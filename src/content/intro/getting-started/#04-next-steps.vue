@@ -1,5 +1,11 @@
+</script>
 <template>
-  <div><h1 id=next-steps>Next Steps</h1>
+  <div class="master-detail page-intro-entry">
+    <master></master>
+    <div class="detail">
+      <article-body>
+        <entries></entries>
+        <h1 id=next-steps>Next Steps</h1>
 <p>By now you&#x2019;ve seen how to run a simple example ABCI application on a local Tendermint node
 and on a remote Tendermint cluster.</p>
 <p>To learn more about building ABCI applications and integrating with Tendermint, see the <router-link to=/docs/guides/app-development>Developer Guides</router-link>.
@@ -12,12 +18,23 @@ There is also the <router-link to=/static/docs/tendermint.pdf>original whitepape
 <p>See our <router-link to=/community>Community</router-link> page for more ways to collaborate.</p>
 <p>You can also <router-link to=/contact>get in touch with the team</router-link>.</p>
 <p>Most importantly, enjoy!</p>
-</div>
+
+      </article-body>
+    </div>
+  </div>
 </template>
 
 <script>
+import Master from './PageIntroMaster'
+import ArticleBody from '@nylira/vue-article-body'
+import Entries from './PageIntroEntries'
 export default {
   name: 'page-docs-entry',
+  components: {
+    Master,
+    ArticleBody,
+    Entries
+  },
   mounted () {
     document.title = '4. Next Steps - Documentation - Tendermint'
   }

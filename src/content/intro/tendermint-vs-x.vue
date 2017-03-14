@@ -1,5 +1,11 @@
+</script>
 <template>
-  <div><h1 id=tendermint-vs-other-software>Tendermint vs. Other Software</h1>
+  <div class="master-detail page-intro-entry">
+    <master></master>
+    <div class="detail">
+      <article-body>
+        <entries></entries>
+        <h1 id=tendermint-vs-other-software>Tendermint vs. Other Software</h1>
 <p>Tendermint is broadly similar to two classes of software.
 The first class consists of distributed key-value stores,
 like Zookeeper, etcd, and consul, which use non-BFT consensus.
@@ -53,12 +59,23 @@ It uses Tendermint as its consensus engine, and provides a particular applicatio
 <li>Read an overview of the motivation and design behind the <router-link to=/intro/abci-overview>Application BlockChain Interface</router-link>.</li>
 <li>Continue with the <router-link to=/intro/getting-started/download-tendermint>Getting Started</router-link> guide to install and run example tendermint applications.</li>
 </ul>
-</div>
+
+      </article-body>
+    </div>
+  </div>
 </template>
 
 <script>
+import Master from './PageIntroMaster'
+import ArticleBody from '@nylira/vue-article-body'
+import Entries from './PageIntroEntries'
 export default {
   name: 'page-docs-entry',
+  components: {
+    Master,
+    ArticleBody,
+    Entries
+  },
   mounted () {
     document.title = 'Tendermint vs X - Documentation - Tendermint'
   }
