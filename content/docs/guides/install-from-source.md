@@ -1,11 +1,11 @@
-# Install From Source
+# Install from Source
 
 This page provides instructions on installing Tendermint from source.
-To download pre-built binaries, see the [downloads page](intro/getting-started/download-tendermint).
+To download pre-built binaries, see the [downloads page](/intro/getting-started/download-tendermint).
 
 ## Install Go
 
-Make sure you have installed Go and [set the GOPATH](https://github.com/tendermint/tendermint/wiki/Setting-GOPATH).
+Make sure you have [installed Go](/docs/guides/install-go) and set the `GOPATH`.
 
 ## Install Tendermint
 

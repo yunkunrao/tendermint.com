@@ -162,7 +162,7 @@ const state = {
       category: 'advisor',
       ids: {
         email: 'ashhan',
-        linkedin: 'https://www.linkedin.com/in/ashhan/',
+        linkedin: 'ashhan',
         website: 'seunghwanhan.com'
       }
     },
@@ -175,6 +175,16 @@ const state = {
       ids: {
         linkedin: 'jimyang'
       }
+    },
+    {
+      slug: 'thomas-greco',
+      name: 'Thomas Greco',
+      title: 'Advisor',
+      bio: 'Thomas Greco is Special Advisor to Omise (おみせ), an Asia-Pacific fintech company developing solutions that can add value to a financially disintermediated future. He also served as a special advisor to the Ethereum Foundation.',
+      ids: {
+        website: 'omise.co'
+      },
+      category: 'advisor'
     }
   ]
 }

@@ -1,9 +1,9 @@
 <template>
-  <div><h1 id=install-from-source>Install From Source</h1>
+  <div><h1 id=install-from-source>Install from Source</h1>
 <p>This page provides instructions on installing Tendermint from source.
-To download pre-built binaries, see the <a href=intro/getting-started/download-tendermint>downloads page</a>.</p>
+To download pre-built binaries, see the <router-link to=/intro/getting-started/download-tendermint>downloads page</router-link>.</p>
 <h2 id=install-go>Install Go</h2>
-<p>Make sure you have installed Go and <a href=https://github.com/tendermint/tendermint/wiki/Setting-GOPATH>set the GOPATH</a>.</p>
+<p>Make sure you have <router-link to=/docs/guides/install-go>installed Go</router-link> and set the <code>GOPATH</code>.</p>
 <h2 id=install-tendermint>Install Tendermint</h2>
 <p>You should be able to install the latest with a simple</p>
 <pre><code>go get github.com/tendermint/tendermint/cmd/tendermint

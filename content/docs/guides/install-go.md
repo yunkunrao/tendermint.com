@@ -15,7 +15,7 @@ First, make your GOPATH directory
 
 > mkdir ~/gocode
 
-Then, set environment variables in your shell startup script. On OS X, this is ~/.bash_profile. For different operating systems or shells, the path may be different. For Ubuntu, it may be ~/.profile or ~/.bashrc.
+Then, set environment variables in your shell startup script. On OS X, this is `~/.bash_profile`. For different operating systems or shells, the path may be different. For Ubuntu, it may be `~/.profile` or `~/.bashrc`.
 
 ```
 echo export GOPATH=\"\$HOME/gocode\" >> ~/.bash_profile

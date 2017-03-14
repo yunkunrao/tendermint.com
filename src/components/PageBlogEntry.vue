@@ -41,10 +41,14 @@ export default {
     },
     entry () {
       let slug = this.$route.params.entry
-      if (this.allPosts) {
-        return this.allPosts.find(p => p.slug === slug)
+      let post = this.allPosts.find(p => p.slug === slug)
+      if (post) {
+        return post
+      } else {
+        return {
+          title: ''
+        }
       }
-      return {}
     },
     facebookUrl () {
       let url = 'https://www.facebook.com/sharer/sharer.php?u='
@@ -66,6 +70,9 @@ export default {
     gotoBlog () {
       this.$router.push('/blog')
     }
+  },
+  beforeMount () {
+    if (this.entry.title === '') this.$router.push('/404')
   },
   mounted () {
     document.title = this.entry.title + ' - Tendermint'
