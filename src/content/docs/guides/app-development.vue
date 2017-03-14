@@ -49,7 +49,7 @@ Tendermint supports two kinds of implementation of the server:</p>
 <li>GRPC</li>
 </ul>
 <p>Both can be tested using the <code>abci-cli</code> by setting the <code>--abci</code> flag appropriately (ie. to <code>socket</code> or <code>grpc</code>).</p>
-<p>See examples, in various stages of maintenance, in <a href=https://github.com/tendermint/abci/tree/master/server>go</a>, <a href=https://github.com/tendermint/js-abci>javascript</a>, <a href=https://github.com/tendermint/abci/tree/master/example/python3/abci>python</a>, <a href=https://github.com/mdyring/cpp-abci>c++</a>, and <a href=https://github.com/jABCI/jABCI>java</a>.</p>
+<p>See examples, in various stages of maintenance, in <a href=https://github.com/tendermint/abci/tree/master/server>Go</a>, <a href=https://github.com/tendermint/js-abci>JavaScript</a>, <a href=https://github.com/tendermint/abci/tree/master/example/python3/abci>Python</a>, <a href=https://github.com/mdyring/cpp-tmsp>C++</a>, and <a href=https://github.com/jTendermint/jabci>Java</a>.</p>
 <h3 id=grpc>GRPC</h3>
 <p>If GRPC is available in your language, this is the easiest approach,
 though it will have significant performance overhead.</p>
