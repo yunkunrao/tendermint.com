@@ -74,7 +74,7 @@ const state = {
       slug: 'ethan-frey',
       name: 'Ethan Frey',
       title: 'Software Engineer',
-      bio: '',
+      bio: 'Ethan has many years of experience in backend web development, and looks to bring all the tooling we enjoy from the web to help everyone build powerful blockchain applications based on tendermint. And along the way disrupt an industry or two…',
       ids: {
         email: 'ethanfrey',
         github: 'ethanfrey',
@@ -167,16 +167,6 @@ const state = {
       }
     },
     {
-      slug: 'jim-yang',
-      name: 'Jim Yang',
-      title: 'Advisor',
-      bio: 'Jim Yang co-founded Identyx, where he served as CEO until its acquisition by Red Hat. Identyx developed an open source enterprise identity management software.',
-      category: 'advisor',
-      ids: {
-        linkedin: 'jimyang'
-      }
-    },
-    {
       slug: 'thomas-greco',
       name: 'Thomas Greco',
       title: 'Advisor',
@@ -185,6 +175,16 @@ const state = {
         website: 'omise.co'
       },
       category: 'advisor'
+    },
+    {
+      slug: 'jim-yang',
+      name: 'Jim Yang',
+      title: 'Advisor',
+      bio: 'Jim Yang co-founded Identyx, where he served as CEO until its acquisition by Red Hat. Identyx developed an open source enterprise identity management software.',
+      category: 'advisor',
+      ids: {
+        linkedin: 'jimyang'
+      }
     }
   ]
 }
