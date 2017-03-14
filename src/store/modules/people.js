@@ -167,7 +167,7 @@ const state = {
       }
     },
     {
-      slug: 'franck-mikulecz',
+      slug: '',
       name: 'Franck Mikulecz',
       title: 'Advisor',
       bio: 'Franck is founder and CEO of BAXTER, a group of companies focused on foreign exchange and technology. Having spent years in a market perpetually dominated by Banks, Franck feels the urge to help deliver the "disruption" promise of the Blockchain. With FXCH Ltd, a Clearing and Settlement startup, his goal is simply to drag FX, screaming and kicking into the cryptocurrency era.',
