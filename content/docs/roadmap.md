@@ -24,6 +24,7 @@ FEATURES:
 - Tooling to run multiple blockchains/apps, possibly in a single process
 - State syncing (without transaction replay)
 - Transaction indexing and improved support for querying history and state
+- Add authentication and rate-limitting to the RPC
 
 IMPROVEMENTS:
 

@@ -22,6 +22,7 @@ While the commit size may grow unbounded in size, it makes a fork immediately sl
 <li>Tooling to run multiple blockchains/apps, possibly in a single process</li>
 <li>State syncing (without transaction replay)</li>
 <li>Transaction indexing and improved support for querying history and state</li>
+<li>Add authentication and rate-limitting to the RPC</li>
 </ul>
 <p>IMPROVEMENTS:</p>
 <ul>
