@@ -162,6 +162,7 @@ const state = {
       category: 'advisor',
       ids: {
         email: 'ashhan',
+        linkedin: 'https://www.linkedin.com/in/ashhan/',
         website: 'seunghwanhan.com'
       }
     },
