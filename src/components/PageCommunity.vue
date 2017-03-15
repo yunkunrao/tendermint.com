@@ -11,13 +11,21 @@
       <div class="section section-default">
         <div class="section-container">
           <card-title>Collaborate</card-title>
-          <card-community v-for="link in communityLinks" :link="link"></card-community>
+          <card-community
+            v-for="link in communityLinks"
+            :link="link"
+            :key="link.url">
+          </card-community>
         </div>
       </div>
       <div class="section section-default">
         <div class="section-container">
           <card-title>Company</card-title>
-          <card-community v-for="link in companyLinks" :link="link"></card-community>
+          <card-community
+            v-for="link in companyLinks"
+            :link="link"
+            :key="link.url">
+          </card-community>
         </div>
       </div>
     </div>

@@ -16,7 +16,11 @@
     <section class="section-default page-content">
       <div class="section-container">
         <div class="section-content">
-          <card-bounty v-for="bounty in filteredBounties" :bounty="bounty"></card-bounty>
+          <card-bounty
+            v-for="bounty in filteredBounties"
+            :key="bounty.id"
+            :bounty="bounty">
+          </card-bounty>
         </div>
       </div>
     </section>

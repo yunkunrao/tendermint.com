@@ -11,7 +11,11 @@
     <section class="section-default">
       <div class="section-container">
         <div class="section-content">
-          <card-company v-for="company in companies" :company="company"></card-company>
+          <card-company
+            v-for="company in companies"
+            :company="company.name"
+            :key="company.title">
+          </card-company>
         </div>
       </div>
     </section>

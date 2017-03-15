@@ -11,7 +11,7 @@
       <div class="section-container">
         <div class="section-content">
 
-          <card-post v-for="media in orderedMedia" :url="media.url"
+          <card-post v-for="media in orderedMedia" :key="media.title" :url="media.url"
             :title="media.title"  :desc="media.date + ' - '+ media.company">
           </card-post>
 

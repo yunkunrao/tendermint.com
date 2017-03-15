@@ -10,11 +10,14 @@
     <section class="section-default page-content">
       <div class="section-container">
         <div class="section-content">
-
-          <card-post :title="post.title" :desc="post.description" :url="'/blog/' + post.slug"
-            :meta="post.dateFriendly" v-for="post in posts">
+          <card-post
+            v-for="post in posts"
+            :key="post.slug"
+            :title="post.title"
+            :desc="post.description"
+            :url="'/blog/' + post.slug"
+            :meta="post.dateFriendly">
           </card-post>
-
         </div>
       </div>
     </section>

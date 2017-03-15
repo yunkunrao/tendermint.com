@@ -5,7 +5,6 @@
       <div class="meta">{{ bounty.tags }}</div>
       <div class="desc">Reward: {{ bounty.reward }}</div>
     </router-link>
-    </template>
   </div>
 </template>
 
