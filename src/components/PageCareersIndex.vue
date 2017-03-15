@@ -14,7 +14,10 @@
     <section class="section-default page-content">
       <div class="section-container">
         <div class="section-content">
-          <card-post v-for="career in filteredCareers" :url="'/careers/' + career.id"
+          <card-post
+            v-for="career in filteredCareers"
+            :key="career.id"
+            :url="'/careers/' + career.id"
             :title="career.title" :desc="career.subtitle">
           </card-post>
         </div>

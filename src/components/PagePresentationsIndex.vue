@@ -10,8 +10,13 @@
     <section class="section-default page-content">
       <div class="section-container">
         <div class="section-content">
-          <card-post v-for="p in presentations" :url="'/presentations/' + p.slug"
-            :title="p.title" :desc="p.description" :meta="p.date">
+          <card-post
+            v-for="p in presentations"
+            :key="p.title"
+            :url="'/presentations/' + p.slug"
+            :title="p.title"
+            :desc="p.description"
+            :meta="p.date">
           </card-post>
         </div>
       </div>

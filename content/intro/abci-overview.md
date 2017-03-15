@@ -50,7 +50,7 @@ There can be multiple ABCI socket connections to an application.  Tendermint Cor
 
 It's probably evident that applications designers need to very carefully design their message handlers to create a blockchain that does anything useful but this architecture provides a place to start. The diagram below illustrates the flow of messages via ABCI.
 
-<img src="~assets/images/abci.png">
+<img src="../assets/images/abci.png">
 
 ## A Note on Determinism
 

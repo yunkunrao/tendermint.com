@@ -16,6 +16,7 @@ sync(store, router)
 Vue.use(VueHead)
 Vue.use(VueRouter)
 Vue.use(VueAnalytics, {id: 'UA-51029217-1', router: router})
+Vue.config.productionTip = false
 
 /* eslint no-unused-vars: 0 */
 const app = new Vue({

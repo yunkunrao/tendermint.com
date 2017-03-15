@@ -11,7 +11,11 @@
     <section class="section-default section-team-portraits">
       <div class="section-container">
         <div class="section-content">
-          <card-person v-for="person in teamMembers" :person="person"></card-person>
+          <card-person
+            v-for="person in teamMembers"
+            :key="person.name"
+            :person="person">
+          </card-person>
         </div>
       </div>
     </section>
@@ -19,7 +23,11 @@
     <section class="section-default section-portraits">
       <div class="section-container">
         <div class="section-content">
-          <card-person v-for="person in advisors" :person="person"></card-person>
+          <card-person
+            v-for="person in advisors"
+            :key="person.name"
+            :person="person">
+          </card-person>
         </div>
       </div>
     </section>
