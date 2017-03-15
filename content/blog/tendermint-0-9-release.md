@@ -1,8 +1,8 @@
 ~~~
 title: "Tendermint 0.9 Release"
-description: "Tendermint 0.9.0 makes some important changes to facilitating building and querying applications"
-date: "2017-03-06"
-author: "Jae Kwon"
+description: "Tendermint 0.9.0 makes some important changes to facilitate building and querying applications"
+date: "2017-03-15"
+author: "Ethan Buchman"
 ~~~
 
 > *Credits to our [team](/about),
@@ -25,9 +25,10 @@ details.
 **ABCI: Query takes more arguments and returns more results**
 
 The `Query` message in ABCI has been updated to take additional arguments, and return additional values.
-The new request type allows us to specify the height we want to query from, and they all break up the query into `path` and `data` 
-components for better standardization. Finally, a `prove` flag allows callers to specify whether or not they would like a Merkle proof for the query.
-The new response type includes the same `code` and `log` we are used to, but renames `data` to `value` and includes the `key` used for lookup and the `index` of this key within the tree as well. It also includes a `proof`, if it was requested, and the `height` that the query was taken at. These features make queries much more manageable, and facilitate producing proofs for light-clients!
+First, the new request type allows us to specify the height we want to query from, though loading old states is not implemented yet. 
+Second, while before a query request was just arbitrary bytes, we now break up the query bytes into `path` and `data` components for better standardization. 
+Finally, a `prove` flag allows callers to specify whether or not they would like a Merkle proof for the result of the query.
+The new response type includes the same `code` and `log` we are used to, but renames `data` to `value` and includes the `key` used for lookup and the `index` of this key within the tree. It also includes a `proof`, if it was requested, and the `height` that the query was taken at. These features make queries much more manageable, and facilitate producing proofs for light-clients!
 
 ```
 message RequestQuery{
@@ -55,15 +56,16 @@ A secure light-client in Tendermint needs to verify not only a Merkle proof, but
 
 **Basecoin**
 
-This release was all about getting things ready for a real and useable Basecoin. 
+This release was all about getting things ready for a real and useable [Basecoin](https://github.com/tendermint/basecoin).
 If you're not familiar, Basecoin is our framework for building cryptocurrency applications on Tendermint,
 which we plan to use to build out the [Cosmos Hub](https://cosmos.network) and other blockchains in the Cosmos Network.
 It's an ABCI app that has some built in cryptocurrency functionality, and can be easily extended by plugins implemented in Go, without forking the repository.
+We have a series of example plugins in our [Basecoin examples repository](https://github.com/tendermint/basecoin-examples).
 With this release of Tendermint, we are announcing our first official release of Basecoin, v0.3.0.
 Checkout the [basecoin guide](https://github.com/tendermint/basecoin/blob/master/docs/guide/basecoin-basics.md) to get started!
 
 One of the most important features of the Cosmos Network is InterBlockchain Communication (IBC), 
-which enables different blockchains to send data to one another.
+which enables different blockchains to send data back and forth.
 This works by having the two blockchains act as light-clients of one another. 
 We implemented this functionality as a plugin in Basecoin, and it is available now!
 Check out the [IBC guide](https://github.com/tendermint/basecoin/blob/master/docs/guide/ibc.md) to demo it today!
@@ -74,7 +76,7 @@ Included in this release were various other improvements to Tendermint.
 Notably, we make it easier to start Tendermint in-process with other applications,
 and we made a variety of improvements on the automation and code maintenance front.
 We also fixed some bugs, in particular in keeping Tendermint and its ABCI application in-sync after a restart.
-We also discovered a fixed a subtle bug in Tendermint's proposer selection logic.
+We also discovered and fixed a subtle bug in Tendermint's proposer selection logic.
 For more details about these and other changes, see [the changelog!](https://github.com/tendermint/tendermint/blob/master/CHANGELOG.md#090-march-6-2017).
 
 **Tendermint Roadmap**
