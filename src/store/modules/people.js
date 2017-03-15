@@ -135,26 +135,6 @@ const state = {
       category: 'member'
     },
     {
-      slug: 'dustin-byington',
-      name: 'Dustin Byington',
-      title: 'Advisor',
-      category: 'advisor',
-      ids: {
-        linkedin: 'dbyington',
-        twitter: 'dustin_byington'
-      }
-    },
-    {
-      slug: 'ryan-singer',
-      name: 'Ryan Singer',
-      title: 'Advisor',
-      category: 'advisor',
-      ids: {
-        linkedin: 'ryans',
-        twitter: 'ryan_singer'
-      }
-    },
-    {
       slug: 'henny-han',
       name: 'Ash Han',
       title: 'Advisor',
