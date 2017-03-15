@@ -2,6 +2,8 @@ var path = require('path')
 var utils = require('./utils')
 var config = require('../config')
 var vueLoaderConfig = require('./vue-loader.conf')
+var nib = require('nib')
+
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
@@ -46,6 +48,22 @@ module.exports = {
         include: [resolve('src'), resolve('test')]
       },
       {
+        test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+        loader: 'url-loader',
+        query: {
+          limit: 10000,
+          name: utils.assetsPath('img/[name].[hash:7].[ext]')
+        }
+      },
+      {
+        test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+        loader: 'url-loader',
+        query: {
+          limit: 10000,
+          name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
+        }
+      },
+      {
         test: /\.json/,
         loader: 'json-loader'
       },
@@ -61,22 +79,6 @@ module.exports = {
         loader: 'file-loader',
         query: {
           name: utils.assetsPath('[name].[ext]')
-        }
-      },
-      {
-        test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
-        loader: 'url-loader',
-        query: {
-          limit: 10000,
-          name: utils.assetsPath('img/[name].[hash:7].[ext]')
-        }
-      },
-      {
-        test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
-        loader: 'url-loader',
-        query: {
-          limit: 10000,
-          name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
       }
     ]
