@@ -5,7 +5,7 @@ date: "2017-03-06"
 author: "Jae Kwon"
 ~~~
 
-> *Credits to our [team](https://tendermint.com/about),
+> *Credits to our [team](/about),
 > and [community](http://forum.tendermint.com:3000/) for the hard work in making this
 > release possible.*
 
