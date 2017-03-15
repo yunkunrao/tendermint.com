@@ -1,5 +1,5 @@
 # Download Tendermint
-Tendermint 0.9 has been released.
+Tendermint 0.9 has been released. View the [release notes](/blog/tendermint-0-9-release).
 
 <div class="download-matrix">
   <div class="os os-mac">
