@@ -5,6 +5,7 @@ var glob = require('glob')
 var cheerio = require('cheerio')
 var minify = require('html-minifier').minify
 var lib = require('./docs-helpers.js')
+var mkdirp = require('mkdirp')
 
 // markdown-it settings
 let md = require('markdown-it')({
@@ -72,6 +73,7 @@ function buildAll (wildcard, tmpl) {
 }
 
 module.exports = function () {
+  mkdirp.sync('./src/content')
   buildAll(docs, docsTemplate)
   buildAll(intro, introTemplate)
 }
