@@ -13,6 +13,15 @@ export default {
   components: {
     SectionHomeCover,
     SectionHomeBenefits
+  },
+  head: {
+    title () {
+      return {
+        inner: 'Tendermint',
+        separator: '-',
+        complement: 'Blockchain Consensus'
+      }
+    }
   }
 }
 </script>
