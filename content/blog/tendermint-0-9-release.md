@@ -7,7 +7,7 @@ author: "Jae Kwon"
 
 > *Credits to our [team](https://tendermint.com/about),
 > and [community](http://forum.tendermint.com:3000/) for the hard work in making this
-> release possible.
+> release possible.*
 
 Tendermint 0.9.0 is the result of the last couple months of work, 
 wherein we devoted significant effort to building out an 
