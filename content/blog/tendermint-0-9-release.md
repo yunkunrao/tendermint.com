@@ -1,7 +1,7 @@
 ~~~
 title: "Tendermint 0.9 Release"
 description: "Tendermint 0.9.0 makes some important changes to facilitating building and querying applications"
-date: "2017-03-15"
+date: "2017-03-06"
 author: "Jae Kwon"
 ~~~
 
