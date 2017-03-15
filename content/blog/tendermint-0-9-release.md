@@ -1,10 +1,9 @@
 ~~~
 title: "Tendermint 0.9 Release"
 description: "Tendermint 0.9.0 makes some important changes to facilitating building and querying applications"
-date: "2017-01-25"
+date: "2017-03-15"
 author: "Jae Kwon"
 ~~~
-
 
 > *Credits to our [team](https://tendermint.com/about),
 > and [community](http://forum.tendermint.com:3000/) for the hard work in making this
@@ -18,7 +17,7 @@ and an additional RPC endpoint for easily fetching commit signatures.
 The hard work paid off - we can now do light-client verification of the latest state of a Tendermint blockchain.
 We even demonstrated how this could be used to do [InterBlockchain Communication](https://github.com/tendermint/basecoin/blob/master/docs/guide/ibc.md)!
 
-Get the latest release at [our downloads page](https://tendermint.com/intro/getting-started/download-tendermint).
+Get the latest release at [our downloads page](/intro/getting-started/download-tendermint).
 See the [v0.9.0 release
 notes](https://github.com/tendermint/tendermint/blob/master/CHANGELOG.md#090-march-6-2017) for more
 details.
@@ -87,7 +86,7 @@ Here are some of the items up next on our stack:
 * Update the Tendermint block header for more secure validator set changes and transaction result queries
 * Secure the RPC server
 
-We've also added an [official roadmap to the website](https://tendermint.com/docs/roadmap),
+We've also added an [official roadmap to the website](/docs/roadmap),
 and of course you can keep up with us via [our GitHub issues](https://github.com/tendermint/tendermint/issues), 
 by following us on [Twitter](http://twitter.com/tendermint_team), or by asking us questions directly on
 [our Slack](http://forum.tendermint.com:3000/).
