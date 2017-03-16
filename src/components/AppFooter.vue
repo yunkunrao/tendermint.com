@@ -43,7 +43,7 @@
             <a href="https://github.com/tendermint/tendermint/issues">Issues</a>
           </nav>
         </section>
-      </div><!--sections-->>
+      </div><!--sections-->
     </footer>
   </div>
 </template>

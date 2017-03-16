@@ -1,5 +1,6 @@
 <template>
   <div class="section-bottom-container">
+    <section-cosmos></section-cosmos>
     <section class="section-bottom">
       <h2>Get Started</h2>
       <btn
@@ -19,13 +20,15 @@
 </template>
 
 <script>
+import SectionCosmos from './SectionCosmos'
 import FormEmailSignup from './FormEmailSignup'
 import Btn from '@nylira/vue-button'
 export default {
   name: 'section-bottom',
   components: {
     FormEmailSignup,
-    Btn
+    Btn,
+    SectionCosmos
   },
   methods: {
     go (destination) { this.$router.push(destination) }
@@ -57,10 +60,12 @@ export default {
     margin 0 auto
     max-width 18rem
 
-
 @media screen and (min-width: 720px)
   .section-bottom-container
     display flex
+    flex-flow row wrap
+    .section-cosmos
+      width 100%
     .section-bottom
       padding-top 3rem
       padding-bottom 3rem
