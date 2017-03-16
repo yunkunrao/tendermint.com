@@ -70,7 +70,7 @@ export default {
       companyLinks: [
         {
           route: '/about',
-          title: 'About Tendermint',
+          title: 'About All In Bits, Inc.',
           icon: 'users'
         },
         {

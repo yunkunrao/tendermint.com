@@ -2,7 +2,7 @@
   <div class="page-split page-about">
     <page-header
       title="About"
-      subtitle="Tendermint's mission: to bring simplicity, security, and speed to the world&rsquo;s blockchains."
+      subtitle="All In Bits, Inc. strives to bring simplicity, security, and speed to the world&rsquo;s blockchains."
       type="split"
       theme="tendermint">
     </page-header>

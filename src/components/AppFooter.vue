@@ -5,7 +5,7 @@
       <div class="sections">
         <section>
           <img src="../assets/images/logo-white-alpha-160.png" class="footer-logo">
-          <span>&copy; 2016 Tendermint</span>
+          <span>&copy; 2016 All In Bits, Inc.</span>
         </section>
         <section>
           <header>Company</header>
