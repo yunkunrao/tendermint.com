@@ -1,7 +1,7 @@
 <template>
-  <a class="cover-alert" href="https://cosmos.network">
-    <span class="key">New:</span>
-    <span class="value">Check out Cosmos, the internet of blockchains powered by&nbsp;Tendermint.</span>
+  <a class="cover-alert" href="https://cosmos.network/blog/cosmos-fundraiser-date">
+    <span class="key">ANNOUNCEMENT:</span>
+    <span class="value">Fundraiser date for Cosmos, Internet of Blockchains is set for March 31st, 2017.</span>
     <i class="fa fa-angle-double-right" aria-hidden="true"></i>
   </a>
 </template>

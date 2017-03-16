@@ -2,7 +2,7 @@
   <div class="page-split page-about">
     <page-header
       title="About"
-      subtitle="All In Bits, Inc. strives to bring simplicity, security, and speed to the world&rsquo;s blockchains."
+      subtitle="All In Bits, Inc. is currently working full time on bringing <a href='https://cosmos.network'>Cosmos</a> to reality."
       type="split"
       theme="tendermint">
     </page-header>

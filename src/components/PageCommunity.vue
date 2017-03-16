@@ -10,7 +10,7 @@
     <div class="page-content page-community-content">
       <div class="section section-default">
         <div class="section-container">
-          <card-title>Collaborate</card-title>
+          <card-title>Community</card-title>
           <card-community
             v-for="link in communityLinks"
             :link="link"
@@ -20,7 +20,7 @@
       </div>
       <div class="section section-default">
         <div class="section-container">
-          <card-title>Company</card-title>
+          <card-title>All In Bits, Inc.</card-title>
           <card-community
             v-for="link in companyLinks"
             :link="link"
@@ -70,7 +70,7 @@ export default {
       companyLinks: [
         {
           route: '/about',
-          title: 'About All In Bits, Inc.',
+          title: 'About',
           icon: 'users'
         },
         {

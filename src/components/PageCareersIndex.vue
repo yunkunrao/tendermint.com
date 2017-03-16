@@ -2,7 +2,7 @@
   <div class="page-split page-career-index">
     <page-header
       title="Careers"
-      subtitle="Work with us to improve Tendermint."
+      subtitle="Join us at All In Bits to build and improve <a href='https://cosmos.network'>Cosmos</a> and Tendermint."
       type="split"
       theme="tendermint">
       <div class="tags">
