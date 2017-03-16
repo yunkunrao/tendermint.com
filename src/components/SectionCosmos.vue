@@ -129,7 +129,7 @@ export default {
 
 .section-cosmos-btn.ni-btn-wrapper
   width 100%
-  margin 0 auto 1.5rem
+  margin 0 auto
   max-width 18rem
 
 .section-cosmos-description

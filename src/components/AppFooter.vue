@@ -39,7 +39,7 @@
             <router-link :to="'/intro/getting-started/download-tendermint'">Download</router-link>
             <router-link :to="'/intro'">Introduction</router-link>
             <router-link :to="'/docs'">Documentation</router-link>
-            <router-link :to="'/docs/faq'">FAQ</router-link>
+            <router-link :to="'/docs/guides/contributing'">Contributing</router-link>
             <a href="https://github.com/tendermint/tendermint/issues">Issues</a>
           </nav>
         </section>
