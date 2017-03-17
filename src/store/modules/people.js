@@ -84,10 +84,10 @@ const state = {
       category: 'member'
     },
     {
-      slug: '',
+      slug: 'hannah-copperman',
       name: 'Hannah Copperman',
-      title: 'Administrative Assistant',
-      bio: '',
+      title: 'Hiring Manager',
+      bio: 'Hannah is helping Tendermint build the best team possible.',
       ids: {
         email: 'hannah',
         github: 'hcopperm',
@@ -99,7 +99,7 @@ const state = {
       slug: 'matt-bell',
       name: 'Matt Bell',
       title: 'Software Engineer',
-      bio: '',
+      bio: 'Matt has been working in the cryptocurrency space since 2011. He believes blockchain technologies like Tendermint will transform the world the same way the internet did.',
       ids: {
         email: 'matt',
         github: 'mappum',
@@ -126,7 +126,7 @@ const state = {
       slug: 'paul-homer',
       name: 'Paul Homer',
       title: 'Software Engineer',
-      bio: '',
+      bio: 'Paul is an experienced software developer with a long history of building sophisticated commercial products. He desires to leverage his experiences to help Tendermint become a reliable part of the world\'s technology infrastructure.',
       ids: {
         email: 'paul',
         github: 'phomer',
