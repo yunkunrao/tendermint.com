@@ -1,43 +1,42 @@
 <template>
-  <div class="page-split page-blog-index">
+  <page-split>
     <page-header
       title="Blog"
       subtitle="Learn about what we&rsquo;re working on, right this moment. <a href='/static/feed.xml'>Subscribe</a>"
       type="split"
+      slot="header"
       theme="tendermint">
     </page-header>
-
-    <section class="section-default page-content">
-      <div class="section-container">
-        <div class="section-content">
-          <card-post
-            v-for="post in posts"
-            :key="post.slug"
-            :title="post.title"
-            :desc="post.description"
-            :url="'/blog/' + post.slug"
-            :meta="post.dateFriendly">
-          </card-post>
-        </div>
-      </div>
-    </section>
-  </div>
+    <ni-section>
+      <card-post
+        v-for="post in allPosts"
+        :key="post.slug"
+        :title="post.title"
+        :desc="post.description"
+        :url="'/blog/' + post.slug"
+        :meta="post.dateFriendly">
+      </card-post>
+    </ni-section>
+  </page-split>
 </template>
 
 <script>
-import PageHeader from '@nylira/vue-page-header'
 import { mapGetters } from 'vuex'
 import CardPost from './CardPost'
-
+import NiSection from './NiSection'
+import PageHeader from '@nylira/vue-page-header'
+import PageSplit from '@nylira/vue-page-split'
 export default {
   name: 'page-blog-index',
   components: {
+    CardPost,
+    NiSection,
     PageHeader,
-    CardPost
+    PageSplit
   },
-  computed: mapGetters({
-    posts: 'allPosts'
-  }),
+  computed: {
+    ...mapGetters(['allPosts'])
+  },
   mounted () {
     document.title = 'Blog - Tendermint'
   }

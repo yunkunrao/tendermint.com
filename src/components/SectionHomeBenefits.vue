@@ -1,7 +1,6 @@
 <template>
-  <section class="section-default section-dark section-home-benefits">
-    <div class="section-container">
-      <div class="blocks">
+  <ni-section class="ni-section-dark section-home-benefits">
+    <div class="blocks">
       <div class="block">
         <i class="fa fa-server"></i> 
         <div class="text">
@@ -44,14 +43,17 @@
           <div class="value">All of Tendermint's source code is licensed under Apache 2.0. Check it out on <a  href="https://github.com/tendermint">GitHub</a>.</div>
         </div>
       </div>
-      </div><!--blocks-->
-    </div>
-  </section>
+    </div><!--blocks-->
+  </ni-section>
 </template>
 
 <script>
+import NiSection from './NiSection'
 export default {
-  name: 'section-home-benefits'
+  name: 'section-home-benefits',
+  components: {
+    NiSection
+  }
 }
 </script>
 
@@ -59,6 +61,7 @@ export default {
 @require '../styles/variables.styl'
 
 .section-home-benefits
+  border-bottom 1px solid lighten(mcolor, 10%) !important
   .blocks
     padding-top x
 

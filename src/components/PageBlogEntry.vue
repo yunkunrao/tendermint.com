@@ -5,13 +5,20 @@
       :subtitle="entrySubtitle"
       theme="tendermint">
     </page-header>
-    <div class="page-blog-content">
-      <article-body v-html="entry.body"></article-body>
-      <article-footer :facebook-url="facebookUrl" :twitter-url="twitterUrl">
+    <article-body>
+      <div v-html="entry.body"></div>
+    </article-body>
+    <ni-section>
+      <article-footer
+        :facebook-url="facebookUrl"
+        :twitter-url="twitterUrl">
       </article-footer>
       <section-comments></section-comments>
-    </div>
-    <btn-thumb icon="chevron-left" @click.native="gotoBlog"></btn-thumb>
+      <btn-thumb
+        icon="chevron-left"
+        @click.native="gotoBlog">
+      </btn-thumb>
+    </ni-section>
   </div>
 </template>
 
@@ -21,14 +28,16 @@ import PageHeader from '@nylira/vue-page-header'
 import ArticleBody from '@nylira/vue-article-body'
 import ArticleFooter from './ArticleFooter'
 import BtnThumb from './BtnThumb'
+import NiSection from './NiSection'
 import SectionComments from './SectionComments'
 export default {
   name: 'page-blog-entry',
   components: {
-    PageHeader,
     ArticleBody,
-    BtnThumb,
     ArticleFooter,
+    BtnThumb,
+    NiSection,
+    PageHeader,
     SectionComments
   },
   computed: {
@@ -79,13 +88,3 @@ export default {
   }
 }
 </script>
-
-<style lang="stylus">
-@require '../styles/variables.styl'
-
-.page-blog-entry
-  background c-app-fg
-
-.page-blog-content
-  padding-bottom 3rem
-</style>

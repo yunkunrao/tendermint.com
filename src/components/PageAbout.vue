@@ -1,49 +1,42 @@
 <template>
-  <div class="page-split page-about">
+  <page-split>
     <page-header
       title="About"
       subtitle="All In Bits, Inc. is currently working full time on bringing <a href='https://cosmos.network'>Cosmos</a> to reality."
       type="split"
+      slot="header"
       theme="tendermint">
     </page-header>
-
-    <div class="page-content">
-    <section class="section-default section-team-portraits">
-      <div class="section-container">
-        <div class="section-content">
-          <card-person
-            v-for="person in teamMembers"
-            :key="person.name"
-            :person="person">
-          </card-person>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-default section-portraits">
-      <div class="section-container">
-        <div class="section-content">
-          <card-person
-            v-for="person in advisors"
-            :key="person.name"
-            :person="person">
-          </card-person>
-        </div>
-      </div>
-    </section>
-    </div>
-  </div>
+    <ni-section>
+      <card-person
+        v-for="person in teamMembers"
+        :key="person.name"
+        :person="person">
+      </card-person>
+    </ni-section>
+    <ni-section>
+      <card-person
+        v-for="person in advisors"
+        :key="person.name"
+        :person="person">
+      </card-person>
+    </ni-section>
+  </page-split>
 </template>
 
 <script>
-import PageHeader from '@nylira/vue-page-header'
 import { mapGetters } from 'vuex'
 import CardPerson from './CardPerson'
+import NiSection from './NiSection'
+import PageHeader from '@nylira/vue-page-header'
+import PageSplit from '@nylira/vue-page-split'
 export default {
   name: 'page-about',
   components: {
+    CardPerson,
+    NiSection,
     PageHeader,
-    CardPerson
+    PageSplit
   },
   computed: {
     teamMembers () {

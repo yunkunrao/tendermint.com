@@ -1,47 +1,45 @@
 <template>
-  <div class="page-split page-community">
+  <page-split>
     <page-header
       title="Community"
       subtitle="Discover the vibrant ecosystem around Tendermint."
       type="split"
+      slot="header"
       theme="tendermint">
     </page-header>
-
-    <div class="page-content page-community-content">
-      <div class="section section-default">
-        <div class="section-container">
-          <card-title>Community</card-title>
-          <card-community
-            v-for="link in communityLinks"
-            :link="link"
-            :key="link.url">
-          </card-community>
-        </div>
-      </div>
-      <div class="section section-default">
-        <div class="section-container">
-          <card-title>All In Bits, Inc.</card-title>
-          <card-community
-            v-for="link in companyLinks"
-            :link="link"
-            :key="link.url">
-          </card-community>
-        </div>
-      </div>
-    </div>
-  </div>
+    <ni-section>
+      <card-title>Community</card-title>
+      <card-community
+        v-for="link in communityLinks"
+        :link="link"
+        :key="link.url">
+      </card-community>
+    </ni-section>
+    <ni-section>
+      <card-title>All In Bits, Inc.</card-title>
+      <card-community
+        v-for="link in companyLinks"
+        :link="link"
+        :key="link.url">
+      </card-community>
+    </ni-section>
+  </page-split>
 </template>
 
 <script>
-import PageHeader from '@nylira/vue-page-header'
 import CardCommunity from './CardCommunity'
 import CardTitle from './CardTitle'
+import NiSection from './NiSection'
+import PageHeader from '@nylira/vue-page-header'
+import PageSplit from '@nylira/vue-page-split'
 export default {
   name: 'page-community',
   components: {
-    PageHeader,
     CardCommunity,
-    CardTitle
+    CardTitle,
+    NiSection,
+    PageHeader,
+    PageSplit
   },
   data () {
     return {
@@ -96,10 +94,3 @@ export default {
   }
 }
 </script>
-
-<style lang="stylus">
-@require '../styles/variables.styl'
-
-.page-community-content
-  background #fff
-</style>

@@ -32,8 +32,6 @@ export default {
   border-bottom 1px solid bc
   margin 0 auto
 
-  &:first-of-type
-    margin-top -1.5*x
   &:last-of-type
     border-bottom none
 

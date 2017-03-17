@@ -21,10 +21,9 @@ export default {
 @import '../styles/variables.styl'
 
 .article-footer
-  border-top 4px solid bc
   display flex
   margin 0 auto
-  padding 1rem 1.25rem 3rem
+  padding 1rem 1.25rem
   max-width 60rem
 
   .index

@@ -17,7 +17,6 @@ export default [
   { path: '/contact', component: r('Contact') },
   { path: '/careers', component: r('CareersIndex') },
   { path: '/careers/:entry', component: r('CareersEntry') },
-  { path: '/companies', component: r('Companies') },
   { path: '/ecosystem', component: r('SoftwareEcosystem') },
   { path: '/presentations', component: r('PresentationsIndex') },
   { path: '/presentations/:entry', component: r('PresentationsEntry') },

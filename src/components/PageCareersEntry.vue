@@ -5,34 +5,27 @@
       :subtitle="career.subtitle"
       theme="tendermint">
     </page-header>
-
-    <section class="section-default">
-      <div class="section-container">
-        <div class="section-content">
-          <article-body>
-            <p>This job can be full-time or part-time. We welcome people who are interested in working remotely as well as onsite in San Francisco or Toronto.</p>
-            <h2>Responsibilities</h2>
-            <ul class="responsibilities">
-              <li v-for="r in career.responsibilities" v-html="markdown(r)"></li>
-            </ul>
-            <!--<h2>About this job</h2>-->
-            <h2>Benefits</h2>
-              <ul>
-                <li>Work from anywhere in the world</li>
-                <li>Stock</li>
-                <li>Competitive salary</li>
-                <li>Medical, dental, and vision insurance</li>
-                <li>And much more...</li>
-              </ul>
-            <h2>About Us</h2>
-            Tendermint's mission is to bring simplicity, security, and speed to the world’s blockchains.
-            <h2>Apply for this role</h2>
-            <p>Send us an email with your cover letter and resume:</p>
-            <a href="mailto:hello@tendermint.com" class="btn btn-large">hello@tendermint.com</a>
-          </article-body>
-        </div>
-      </div>
-    </section>
+    <article-body>
+      <p>This job can be full-time or part-time. We welcome people who are interested in working remotely as well as onsite in San Francisco or Toronto.</p>
+      <h2>Responsibilities</h2>
+      <ul class="responsibilities">
+        <li v-for="r in career.responsibilities" v-html="markdown(r)"></li>
+      </ul>
+      <!--<h2>About this job</h2>-->
+      <h2>Benefits</h2>
+        <ul>
+          <li>Work from anywhere in the world</li>
+          <li>Stock</li>
+          <li>Competitive salary</li>
+          <li>Medical, dental, and vision insurance</li>
+          <li>And much more...</li>
+        </ul>
+      <h2>About Us</h2>
+      Tendermint's mission is to bring simplicity, security, and speed to the world’s blockchains.
+      <h2>Apply for this role</h2>
+      <p>Send us an email with your cover letter and resume:</p>
+      <a href="mailto:hello@tendermint.com" class="btn btn-large">hello@tendermint.com</a>
+    </article-body>
   </div>
 </template>
 

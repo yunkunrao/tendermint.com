@@ -6,28 +6,25 @@
       type="center"
       theme="tendermint">
     </page-header>
-
-    <section class="section-default">
-      <div class="section-container">
-        <div class="section-content">
-          <div class="youtube" :id="entry.id"></div>
-          <presentation-footer :facebook-url="facebookUrl" :twitter-url="twitterUrl"></presentation-footer>
-          <comments></comments>
-        </div>
-      </div>
-    </section>
+    <ni-section>
+      <div class="youtube" :id="entry.id"></div>
+      <presentation-footer :facebook-url="facebookUrl" :twitter-url="twitterUrl"></presentation-footer>
+      <comments></comments>
+    </ni-section>
   </div>
 </template>
 
 <script>
-import PageHeader from '@nylira/vue-page-header'
 import { mapGetters } from 'vuex'
 import $ from 'jquery'
-import SectionComments from './SectionComments'
+import NiSection from './NiSection'
+import PageHeader from '@nylira/vue-page-header'
 import PagePresentationsFooter from './PagePresentationsFooter'
+import SectionComments from './SectionComments'
 export default {
   name: 'page-presentations-entry',
   components: {
+    NiSection,
     PageHeader,
     PagePresentationsFooter,
     SectionComments

@@ -1,42 +1,42 @@
 <template>
-  <div class="page-split page-career-index">
+  <page-split class="page-careers-index">
     <page-header
       title="Careers"
       subtitle="Join us at All In Bits to build and improve <a href='https://cosmos.network'>Cosmos</a> and Tendermint."
       type="split"
+      slot="header"
       theme="tendermint">
       <div class="tags">
         <div id="tag-all" class="tag active" @click="setActiveTag($event)">all</div>
         <div class="tag" v-for="tag in tags" @click="setActiveTag($event,tag)">{{ tag }}</div>
       </div>
     </page-header>
-
-    <section class="section-default page-content">
-      <div class="section-container">
-        <div class="section-content">
-          <card-post
-            v-for="career in filteredCareers"
-            :key="career.id"
-            :url="'/careers/' + career.id"
-            :title="career.title" :desc="career.subtitle">
-          </card-post>
-        </div>
-      </div>
-    </section>
-  </div>
+    <ni-section>
+      <card-post
+        v-for="career in filteredCareers"
+        :key="career.id"
+        :url="'/careers/' + career.id"
+        :title="career.title" :desc="career.subtitle">
+      </card-post>
+    </ni-section>
+  </page-split>
 </template>
 
 <script>
-import PageHeader from '@nylira/vue-page-header'
+import $ from 'jquery'
 import { mapGetters } from 'vuex'
 import { union, orderBy } from 'lodash'
-import $ from 'jquery'
 import CardPost from './CardPost'
+import NiSection from './NiSection'
+import PageHeader from '@nylira/vue-page-header'
+import PageSplit from '@nylira/vue-page-split'
 export default {
-  name: 'page-career-index',
+  name: 'page-careers-index',
   components: {
+    CardPost,
+    NiSection,
     PageHeader,
-    CardPost
+    PageSplit
   },
   computed: {
     tags () {
@@ -88,7 +88,7 @@ export default {
 <style lang="stylus">
 @require '../styles/variables.styl'
 
-.page-career-index
+.page-careers-index
   .tags
     margin-top 1rem
     text-align center
@@ -112,12 +112,12 @@ export default {
       background darken(acolor,25%)
 
 @media screen and (min-width: 720px)
-  .page-career-index
+  .page-careers-index
     .tag
       font-size x
 
 @media screen and (min-width: 960px)
-  .page-career-index
+  .page-careers-index
     .tags
       justify-content flex-start
 </style>

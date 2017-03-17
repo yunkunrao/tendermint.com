@@ -5,30 +5,24 @@
       :subtitle="bounty.subtitle"
       theme="tendermint">
     </page-header>
-    <section class="section-default">
-      <div class="section-container">
-        <div class="section-content">
-          <article-body>
-            <h2>Requirements</h2>
-            <ul class="requirements">
-              <li v-for="r in bounty.requirements">{{ r }}</li>
-            </ul>
-            <h2>Reward</h2>
-            <p>{{ bounty.reward }}</p>
-            <h2>Deliver the bounty</h2>
-            <p>Email us with the name of the bounty, a link to your source code, and your BTC deposit address:</p>
-            <a href="mailto:hello@tendermint.com" class="btn btn-large">hello@tendermint.com</a>
-          </article-body>
-        </div>
-      </div>
-    </section>
+    <article-body>
+      <h2>Requirements</h2>
+      <ul class="requirements">
+        <li v-for="r in bounty.requirements">{{ r }}</li>
+      </ul>
+      <h2>Reward</h2>
+      <p>{{ bounty.reward }}</p>
+      <h2>Deliver the bounty</h2>
+      <p>Email us with the name of the bounty, a link to your source code, and your BTC deposit address:</p>
+      <a href="mailto:hello@tendermint.com" class="btn btn-large">hello@tendermint.com</a>
+    </article-body>
   </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import ArticleBody from '@nylira/vue-article-body'
 import PageHeader from '@nylira/vue-page-header'
-import { mapGetters } from 'vuex'
 export default {
   name: 'page-bounties-entry',
   components: {

@@ -1,9 +1,10 @@
 <template>
-  <div class="page-split page-software-ecosystem">
+  <page-split class="page-software-ecosystem">
     <page-header
       title="Ecosystem"
       subtitle="Explore Tendermint's software ecosystem."
       type="split"
+      slot="header"
       theme="tendermint">
       <field
         type="text"
@@ -13,145 +14,141 @@
         v-model="searchQuery">
       </field>
     </page-header>
-
-    <div class="page-content">
-
-      <section class="section-default" v-show="abciApps.length > 0">
-        <div class="section-container">
-          <card-title>ABCI Apps</card-title>
-          <div class="section-content">
-            <div class="software-header">
-              <div class="name active" @click="reorderBy('name')">Title</div>
-              <div class="author" @click="reorderBy('author')">Author</div>
-              <div class="tech" @click="reorderBy('tech')">Language</div>
-              <div class="description" @click="reorderBy('description')">Description</div>
-            </div>
-            <div class="software-list">
-              <div class="software" v-for="entry in abciApps"><a :href="entry.url">
-                  <div class="name">{{ entry.name }}</div>
-                  <div class="author">
-                    <span class="key">
-                      Author:</span><span class="value">{{ entry.author }}
-                    </span>
-                  </div>
-                  <div class="language">
-                    <span class="key">
-                      Language:</span><span class="value">{{ entry.language }}
-                    </span>
-                  </div>
-                  <div class="description">{{ entry.description }}</div>
-              </a></div>
-            </div>
+    <ni-section v-show="abciApps.length > 0">
+      <card-title>ABCI Apps</card-title>
+      <div class="section-content">
+        <div class="software-header">
+          <div class="name active" @click="reorderBy('name')">Title</div>
+          <div class="author" @click="reorderBy('author')">Author</div>
+          <div class="tech" @click="reorderBy('tech')">Language</div>
+          <div class="description" @click="reorderBy('description')">Description</div>
+        </div>
+        <div class="software-list">
+          <div class="software" v-for="entry in abciApps">
+            <a :href="entry.url">
+              <div class="name">{{ entry.name }}</div>
+              <div class="author">
+                <span class="key">
+                  Author:</span><span class="value">{{ entry.author }}
+                </span>
+              </div>
+              <div class="language">
+                <span class="key">
+                  Language:</span><span class="value">{{ entry.language }}
+                </span>
+              </div>
+              <div class="description">{{ entry.description }}</div>
+            </a>
           </div>
         </div>
-      </section>
-
-      <section class="section-default" v-show="abciServers.length > 0">
-        <div class="section-container">
-          <card-title>ABCI Servers</card-title>
-          <div class="section-content">
-            <div class="software-header">
-              <div class="name active" @click="reorderBy('name')">Title</div>
-              <div class="author" @click="reorderBy('author')">Author</div>
-              <div class="tech" @click="reorderBy('tech')">Language</div>
-            </div>
-            <div class="software-list">
-              <div class="software" v-for="entry in abciServers"><a :href="entry.url">
-                  <div class="name">{{ entry.name }}</div>
-                  <div class="author">
-                    <span class="key">
-                      Author:</span><span class="value">{{ entry.author }}
-                    </span>
-                  </div>
-                  <div class="language">
-                    <span class="key">
-                      Language:</span><span class="value">{{ entry.language }}
-                    </span>
-                  </div>
-              </a></div>
-            </div>
+      </div>
+    </ni-section>
+    <ni-section v-show="abciServers.length > 0">
+      <card-title>ABCI Servers</card-title>
+      <div class="section-content">
+        <div class="software-header">
+          <div class="name active" @click="reorderBy('name')">Title</div>
+          <div class="author" @click="reorderBy('author')">Author</div>
+          <div class="tech" @click="reorderBy('tech')">Language</div>
+        </div>
+        <div class="software-list">
+          <div class="software" v-for="entry in abciServers">
+            <a :href="entry.url">
+              <div class="name">{{ entry.name }}</div>
+              <div class="author">
+                <span class="key">
+                  Author:</span><span class="value">{{ entry.author }}
+                </span>
+              </div>
+              <div class="language">
+                <span class="key">
+                  Language:</span><span class="value">{{ entry.language }}
+                </span>
+              </div>
+            </a>
           </div>
         </div>
-      </section>
-
-      <section class="section-default" v-show="deploymentTools.length > 0">
-        <div class="section-container">
-          <card-title>Deployment Tools</card-title>
-          <div class="section-content">
-            <div class="software-header">
-              <div class="name active" @click="reorderBy('name')">Title</div>
-              <div class="author" @click="reorderBy('author')">Author</div>
-              <div class="tech" @click="reorderBy('tech')">Technology</div>
-              <div class="description" @click="reorderBy('description')">Description</div>
-            </div>
-            <div class="software-list">
-              <div class="software" v-for="entry in deploymentTools"><a :href="entry.url">
-                  <div class="name">{{ entry.name }}</div>
-                  <div class="author">
-                    <span class="key">
-                      Author:</span><span class="value">{{ entry.author }}
-                    </span>
-                  </div>
-                  <div class="technology">
-                    <span class="key">
-                      Technology:</span><span class="value">{{ entry.technology }}
-                    </span>
-                  </div>
-                  <div class="description">{{ entry.description }}</div>
-              </a></div>
-            </div>
+      </div>
+    </ni-section>
+    <ni-section v-show="deploymentTools.length > 0">
+      <card-title>Deployment Tools</card-title>
+      <div class="section-content">
+        <div class="software-header">
+          <div class="name active" @click="reorderBy('name')">Title</div>
+          <div class="author" @click="reorderBy('author')">Author</div>
+          <div class="tech" @click="reorderBy('tech')">Technology</div>
+          <div class="description" @click="reorderBy('description')">Description</div>
+        </div>
+        <div class="software-list">
+          <div class="software" v-for="entry in deploymentTools">
+            <a :href="entry.url">
+              <div class="name">{{ entry.name }}</div>
+              <div class="author">
+                <span class="key">
+                  Author:</span><span class="value">{{ entry.author }}
+                </span>
+              </div>
+              <div class="technology">
+                <span class="key">
+                  Technology:</span><span class="value">{{ entry.technology }}
+                </span>
+              </div>
+              <div class="description">{{ entry.description }}</div>
+            </a>
           </div>
         </div>
-      </section>
-
-      <section class="section-default" v-show="competitors.length > 0">
-        <div class="section-container">
-          <card-title>Competition (Collaborators?)</card-title>
-          <div class="section-content">
-            <div class="software-header">
-              <div class="name active" @click="reorderBy('name')">Title</div>
-              <div class="author" @click="reorderBy('author')">Author</div>
-              <div class="tech" @click="reorderBy('tech')">Language</div>
-              <div class="description" @click="reorderBy('description')">Description</div>
-            </div>
-            <div class="software-list">
-              <div class="software" v-for="entry in competitors"><a :href="entry.url">
-                  <div class="name">{{ entry.name }}</div>
-                  <div class="author">
-                    <span class="key">
-                      Author:</span><span class="value">{{ entry.author }}
-                    </span>
-                  </div>
-                  <div class="language">
-                    <span class="key">
-                      Language:</span><span class="value">{{ entry.language }}
-                    </span>
-                  </div>
-                  <div class="description">{{ entry.description }}</div>
-              </a></div>
-            </div>
+      </div>
+    </ni-section>
+    <ni-section v-show="competitors.length > 0">
+      <card-title>Competition (Collaborators?)</card-title>
+      <div class="section-content">
+        <div class="software-header">
+          <div class="name active" @click="reorderBy('name')">Title</div>
+          <div class="author" @click="reorderBy('author')">Author</div>
+          <div class="tech" @click="reorderBy('tech')">Language</div>
+          <div class="description" @click="reorderBy('description')">Description</div>
+        </div>
+        <div class="software-list">
+          <div class="software" v-for="entry in competitors">
+            <a :href="entry.url">
+              <div class="name">{{ entry.name }}</div>
+              <div class="author">
+                <span class="key">
+                  Author:</span><span class="value">{{ entry.author }}
+                </span>
+              </div>
+              <div class="language">
+                <span class="key">
+                  Language:</span><span class="value">{{ entry.language }}
+                </span>
+              </div>
+              <div class="description">{{ entry.description }}</div>
+            </a>
           </div>
         </div>
-      </section>
-    </div>
-  </div>
+      </div>
+    </ni-section>
+  </page-split>
 </template>
 
 <script>
-import PageHeader from '@nylira/vue-page-header'
 import { mapGetters } from 'vuex'
 import { orderBy } from 'lodash'
 import $ from 'jquery'
 import Fuse from 'fuse.js'
 import Field from '@nylira/vue-input'
 import CardTitle from './CardTitle'
-
+import NiSection from './NiSection'
+import PageHeader from '@nylira/vue-page-header'
+import PageSplit from '@nylira/vue-page-split'
 export default {
   name: 'page-software-ecosystem',
   components: {
-    PageHeader,
+    CardTitle,
     Field,
-    CardTitle
+    NiSection,
+    PageHeader,
+    PageSplit
   },
   computed: {
     abciApps () {
@@ -254,9 +251,6 @@ export default {
 @require '../styles/variables.styl'
 
 .page-software-ecosystem
-  .section-default .section-container .section-content
-    padding 0.5rem 1rem
-
   .ni-page-header
     .ni-field
       margin-top 1rem
@@ -319,10 +313,6 @@ export default {
 
 @media screen and (min-width: 720px)
   .page-software-ecosystem
-
-    .section-default .section-container .section-content
-      padding 0
-
     .software-header
       display flex
 

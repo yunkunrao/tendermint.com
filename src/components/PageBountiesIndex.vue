@@ -1,9 +1,10 @@
 <template>
-  <div class="page-split page-bounties-index">
+  <page-split class="page-bounties-index">
     <page-header
       title="Bounties"
       subtitle="Get paid in BTC by working on Tendermint-based projects."
       type="split"
+      slot="header"
       theme="tendermint">
       <div class="tags">
         <div id="tag-all" class="tag active" @click="setActiveTag($event)">all</div>
@@ -12,32 +13,31 @@
         </div>
       </div>
     </page-header>
-
-    <section class="section-default page-content">
-      <div class="section-container">
-        <div class="section-content">
-          <card-bounty
-            v-for="bounty in filteredBounties"
-            :key="bounty.id"
-            :bounty="bounty">
-          </card-bounty>
-        </div>
-      </div>
-    </section>
-  </div>
+    <ni-section>
+      <card-bounty
+        v-for="bounty in filteredBounties"
+        :key="bounty.id"
+        :bounty="bounty">
+      </card-bounty>
+    </ni-section>
+  </page-split>
 </template>
 
 <script>
-import PageHeader from '@nylira/vue-page-header'
+import $ from 'jquery'
 import { mapGetters } from 'vuex'
 import { union, orderBy } from 'lodash'
-import $ from 'jquery'
 import CardBounty from './CardBounty'
+import NiSection from './NiSection'
+import PageHeader from '@nylira/vue-page-header'
+import PageSplit from '@nylira/vue-page-split'
 export default {
   name: 'page-bounties-index',
   components: {
+    CardBounty,
+    NiSection,
     PageHeader,
-    CardBounty
+    PageSplit
   },
   computed: {
     tags () {
@@ -57,9 +57,7 @@ export default {
         return orderedBounties.filter(bounty => bounty.tags.includes(activeTag))
       }
     },
-    ...mapGetters({
-      bounties: 'allBounties'
-    })
+    ...mapGetters({ bounties: 'allBounties' })
   },
   data () {
     return {
@@ -79,7 +77,6 @@ export default {
       return
     }
   },
-
   mounted () {
     document.title = 'Bounties - Tendermint'
   }
