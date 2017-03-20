@@ -12,11 +12,15 @@ function writeRoutes (prefix, data) {
   for (var i = 0; i < data.length; i++) {
     let d = data[i]
     if (d.elementName === 'index') {
-      string +=`  { path: '/${prefix}', component: r('index') },\n`
-    } else if (i === data.length - 1) {
-      string +=`  { path: '/${prefix}/${d.routePath}', component: r('${d.vuePath}') }\n`
+      string += `  { path: '/${prefix}', component: r('index') }`
     } else {
-      string +=`  { path: '/${prefix}/${d.routePath}', component: r('${d.vuePath}') },\n`
+      string += `  { path: '/${prefix}/${d.routePath}', component: r('${d.vuePath}') }`
+    }
+
+    if (i === data.length - 1) {
+      string += '\n'
+    } else {
+      string += ',\n'
     }
   }
   string += ']\n'

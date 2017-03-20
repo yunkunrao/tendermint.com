@@ -4,9 +4,9 @@
   <nav>
   <div class="title">Index</div>
   <router-link :to="'/intro'" exact>Introduction</router-link>
-  <router-link :to="'/intro/abci-overview'">ABCI Overview</router-link>
-  <router-link :to="'/intro/consensus-overview'">Consensus Overview</router-link>
-  <router-link :to="'/intro/tendermint-vs-x'">Tendermint vs X</router-link>
+  <router-link :to="'/intro/tendermint-vs-x'">1. Tendermint vs X</router-link>
+  <router-link :to="'/intro/abci-overview'">2. ABCI Overview</router-link>
+  <router-link :to="'/intro/consensus-overview'">3. Consensus Overview</router-link>
   <div class="title">Getting Started</div>
   <router-link :to="'/intro/getting-started/download-tendermint'">1. Download Tendermint</router-link>
   <router-link :to="'/intro/getting-started/first-app'">2. First App</router-link>
@@ -35,11 +35,11 @@ export default {
   methods: {
     toggleAutomatic () {
       let self = this
-      if ($(window).width() >= 720) self.isActive = true
+      if ($(window).width() >= 768) self.isActive = true
       else self.isActive = false
     },
     toggleManual () {
-      if ($(window).width() < 720) {
+      if ($(window).width() < 768) {
         this.isActive = !this.isActive
       }
     }
