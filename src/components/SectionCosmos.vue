@@ -29,7 +29,7 @@
           </btn>
         </template>
         <template v-else>
-          <div class="section-cosmos-description">The team behind Tendermint also built  <strong>Cosmos, Internet of Blockchains</strong>. The fundraiser for Cosmos will begin on March 31st, 2017 at 6AM PDT.</div>
+          <div class="section-cosmos-description">The team behind Tendermint also built  <strong>Cosmos, Internet of Blockchains</strong>. The fundraiser for Cosmos will begin on {{ pdtStartDate }}.</div>
           <btn
             class="section-cosmos-btn"
             size="lg"
@@ -47,7 +47,7 @@
 import { mapGetters } from 'vuex'
 import Btn from '@nylira/vue-button'
 import TimeRemaining from './TimeRemaining'
-import moment from 'moment'
+import moment from 'moment-timezone'
 export default {
   name: 'section-cosmos',
   components: {
@@ -55,6 +55,16 @@ export default {
     TimeRemaining
   },
   computed: {
+    pdtStartDate () {
+      let utc = moment.utc(this.config.START_DATETIME)
+      let pdt = moment(utc).tz(this.config.TIMEZONE)
+      return pdt.format('LLL z')
+    },
+    localStartDate () {
+      let utc = moment.utc(this.config.START_DATETIME)
+      let local = moment(utc).local()
+      return moment(local).format('LLL z')
+    },
     startDate () {
       return moment(moment.utc(this.config.START_DATETIME)).local()
     },

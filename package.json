@@ -24,6 +24,7 @@
     "cheerio": "^0.22.0",
     "es6-template-strings": "^2.0.1",
     "json-loader": "^0.5.4",
+    "moment-timezone": "^0.5.11",
     "nib": "^1.1.2",
     "rss": "^1.2.2",
     "stylus-loader": "^2.4.0",

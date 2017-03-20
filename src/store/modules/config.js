@@ -1,7 +1,8 @@
 const state = {
-  ENDS_AFTER: 42,
+  ENDS_AFTER: 14,
   SALE_URL: 'https://fundraiser.cosmos.network',
   SELF_URL: 'https://cosmos.network/',
+  TIMEZONE: 'America/Los_Angeles',
   ANNOUNCE_DATETIME: '2017-03-15 07:10:00',
   START_DATETIME: '2017-03-31 13:00:00',
   PASSWORD_MIN: 8,

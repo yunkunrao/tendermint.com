@@ -1,10 +1,25 @@
 <template>
   <a class="cover-alert" href="https://cosmos.network/blog/cosmos-fundraiser-date">
     <span class="key">ANNOUNCEMENT:</span>
-    <span class="value">Fundraiser date for Cosmos, Internet of Blockchains is set for March 31st, 2017.</span>
+    <span class="value">Fundraiser for Cosmos, Internet of Blockchains begins {{ pdtStartDate }}</span>
     <i class="fa fa-angle-double-right" aria-hidden="true"></i>
   </a>
 </template>
+
+<script>
+import { mapGetters } from 'vuex'
+import moment from 'moment-timezone'
+export default {
+  computed: {
+    pdtStartDate () {
+      let utc = moment.utc(this.config.START_DATETIME)
+      let pdt = moment(utc).tz(this.config.TIMEZONE)
+      return pdt.format('LLL z')
+    },
+    ...mapGetters(['config'])
+  }
+}
+</script>
 
 <style lang="stylus">
 @require '../styles/variables.styl'
