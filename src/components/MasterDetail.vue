@@ -27,8 +27,8 @@
   z-index 1
 
   nav
-    padding-top 3*x
-    padding-bottom x*0.75
+    padding-top 3rem
+    padding-bottom 0.75rem
     position relative
     height 100vh
     overflow-y scroll
@@ -45,23 +45,23 @@
     display none
 
   .title
-    font-size 0.75*x
+    font-size 0.75rem
     font-weight bold
     text-transform uppercase
     letter-spacing 0.0625em
     line-height 2
-    padding x x*1.5 x*0.25
+    padding 1rem 1.5rem 0.25rem
 
     color lighten(mcolor, 40%)
 
   a + .title
-    margin-top 0.75*x
+    margin-top 0.75rem
   a
     display block
-    padding 0.25*x x*1.5
-    padding-left 1.25*x
+    padding 0.25rem 1.5rem
+    padding-left 1.25rem
     position relative
-    border-left 0.25*x solid transparent
+    border-left 0.25rem solid transparent
 
     color txt
     color lighten(mcolor,75%)
@@ -75,46 +75,23 @@
 
 @media screen and (min-width: 768px)
   .master
-    width 30vw
+    width 16rem
 
     nav
-      padding-top 3.5*x
+      padding-top 3.5rem
 
     .btn-thumb
       display none !important
 
   .detail
-    margin-left 30vw
-    padding-left 0.5rem
-    padding-right 0.5rem
+    margin-left 16rem
 
   .master-detail + .app-bottom .section-cosmos
-    padding-left 230.39px !important
+    padding-left 16rem !important
 
   .master-detail + .app-bottom .app-footer
     .sections
-      padding-left 216px + 3*x !important
+      padding-left 16rem + 2rem !important
     section
       flex 0 0 50% !important
-
-@media screen and (min-width: 1024px)
-  .master-detail + .app-bottom .section-cosmos
-    padding-left 307.19px !important
-
-  .master-detail + .app-bottom .app-footer
-    .sections
-      padding-left 320px + x !important
-      padding-right x !important
-    section
-      flex 0 0 25% !important
-
-  .detail
-    padding-left 1.75rem
-    padding-right 1.75rem
-
-@media screen and (min-width: 1280px)
-  .master
-    width 25vw
-  .detail
-    margin-left 25vw
 </style>
