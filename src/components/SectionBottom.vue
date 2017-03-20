@@ -56,11 +56,12 @@ export default {
     line-height 1
     margin-bottom 1.5rem
   
-  #download-button .ni-btn, form
+  #download-button, form
     margin 0 auto
+    width 100%
     max-width 18rem
 
-@media screen and (min-width: 720px)
+@media screen and (min-width: 768px)
   .section-bottom-container
     display flex
     flex-flow row wrap
@@ -71,7 +72,7 @@ export default {
       padding-bottom 3rem
       flex 1
 
-@media screen and (min-width: 960px)
+@media screen and (min-width: 1024px)
   .section-bottom-container
     .section-bottom
       h2

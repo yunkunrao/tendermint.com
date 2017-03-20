@@ -81,7 +81,7 @@ export default {
     width 18*x
     text-decoration none
 
-@media screen and (min-width: 720px)
+@media screen and (min-width: 768px)
   .page-bounties-entry
     .tags
       margin-top 2*x

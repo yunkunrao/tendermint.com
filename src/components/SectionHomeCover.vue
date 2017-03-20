@@ -98,7 +98,7 @@ export default {
   .section-home-cover .section-container
     padding 3*x 1.75*x
 
-@media screen and (min-width: 400px)
+@media screen and (min-width: 414px)
   .section-home-cover .section-container
     padding 3*x 2.25*x
 
@@ -107,7 +107,7 @@ export default {
     .tagline
       font-size 1.095*x
 
-@media screen and (min-width: 720px)
+@media screen and (min-width: 768px)
   .section-home-cover .section-container
     padding 4*x 2*x
     max-width 640px
@@ -139,7 +139,7 @@ export default {
     right -20vw
     opacity 0.15
 
-@media screen and (min-width: 960px)
+@media screen and (min-width: 1024px)
   .section-home-cover .section-container
     max-width 900px
     .tagline
@@ -151,7 +151,7 @@ export default {
     top -7.5vw
     right -20vw
 
-@media screen and (min-width: 1200px)
+@media screen and (min-width: 1280px)
   .section-home-cover .section-container
     padding 5*x 2*x 6*x
     max-width 1080px
@@ -160,7 +160,7 @@ export default {
     width 70vw
     height 70vw
 
-@media screen and (min-width: 1800px)
+@media screen and (min-width: 1680px)
   .section-home-logo
     top -15vw
     right -15vw

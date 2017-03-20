@@ -50,11 +50,11 @@ export default {
   methods: {
     toggleAutomatic () {
       let self = this
-      if ($(window).width() >= 720) self.isActive = true
+      if ($(window).width() >= 768) self.isActive = true
       else self.isActive = false
     },
     toggleManual () {
-      if ($(window).width() < 720) {
+      if ($(window).width() < 768) {
         this.isActive = !this.isActive
       }
     }

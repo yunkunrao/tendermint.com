@@ -37,8 +37,9 @@ export default {
   }
 }
 </script>
+
 <style lang="stylus">
-.form-email-signup
+form.form-email-signup
   .input-group
     display flex
 </style>

@@ -89,7 +89,7 @@ export default {
       &:hover .label
         text-decoration underline
 
-@media screen and (min-width: 720px)
+@media screen and (min-width: 768px)
   .card-company
     flex-flow row
     margin-bottom 3*x
@@ -110,7 +110,7 @@ export default {
       .title
         font-size x
 
-@media screen and (min-width: 960px)
+@media screen and (min-width: 1024px)
   .card-company
     .data
       display flex

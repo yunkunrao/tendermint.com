@@ -102,7 +102,7 @@ export default {
       p
         margin 0
 
-@media screen and (min-width: 720px)
+@media screen and (min-width: 768px)
   .page-career-entry
     .tags
       margin-top 2*x

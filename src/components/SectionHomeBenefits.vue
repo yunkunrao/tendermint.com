@@ -102,7 +102,7 @@ export default {
       .text
         padding 0 1.5*x
 
-@media screen and (min-width: 400px)
+@media screen and (min-width: 414px)
   .section-home-benefits
     .block
       i.fa
@@ -110,7 +110,7 @@ export default {
         height 4*x
         font-size 2*x
 
-@media screen and (min-width: 720px)
+@media screen and (min-width: 768px)
   .section-home-benefits
     .blocks
       padding-top 2*x
@@ -128,7 +128,7 @@ export default {
       .key
         font-size 1.25*x
 
-@media screen and (min-width: 960px)
+@media screen and (min-width: 1024px)
   .section-home-benefits
     .blocks
       padding-top 3*x
@@ -151,7 +151,7 @@ export default {
       .value
         font-size 1.25*x
 
-@media screen and (min-width: 1200px)
+@media screen and (min-width: 1280px)
   .section-home-benefits
     .blocks
       max-width 1080px

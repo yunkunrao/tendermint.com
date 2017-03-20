@@ -311,7 +311,7 @@ export default {
     .description
       margin-top 0.5*x
 
-@media screen and (min-width: 720px)
+@media screen and (min-width: 768px)
   .page-software-ecosystem
     .software-header
       display flex

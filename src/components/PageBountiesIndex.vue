@@ -110,7 +110,7 @@ export default {
     &.active
       background darken(acolor,25%)
 
-@media screen and (min-width: 720px)
+@media screen and (min-width: 768px)
   .page-bounties-index
     .tags
       margin-top 2*x
@@ -118,7 +118,7 @@ export default {
     .tag
       font-size x
     
-@media screen and (min-width: 960px)
+@media screen and (min-width: 1024px)
   .page-bounties-index
     .tags
       justify-content flex-start

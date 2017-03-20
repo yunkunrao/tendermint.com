@@ -61,7 +61,7 @@
     padding-left 1.5rem
     padding-right 1.5rem
 
-@media screen and (min-width: 720px)
+@media screen and (min-width: 768px)
   .ni-section-title
     font-size 1.5rem
 
@@ -69,7 +69,7 @@
     padding-left 2rem
     padding-right 2rem
 
-@media screen and (min-width: 960px)
+@media screen and (min-width: 1024px)
   .ni-section-title
     text-align left
 </style>

@@ -108,12 +108,12 @@ export default {
     .section
       padding x
 
-@media screen and (min-width: 400px)
+@media screen and (min-width: 414px)
   .app-footer
     .sections
       padding x
 
-@media screen and (min-width: 720px)
+@media screen and (min-width: 768px)
   .app-footer
     .sections
       padding 2*x
@@ -122,14 +122,14 @@ export default {
       header
         margin-bottom x
 
-@media screen and (min-width: 960px)
+@media screen and (min-width: 1024px)
   .app-footer
     .sections
-      max-width 960px
+      max-width 1024px
     section
       flex 0 0 25%
 
-@media screen and (min-width: 1200px)
+@media screen and (min-width: 1280px)
   .app-footer
     .sections
       max-width 1200px

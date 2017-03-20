@@ -111,12 +111,12 @@ export default {
     &.active
       background darken(acolor,25%)
 
-@media screen and (min-width: 720px)
+@media screen and (min-width: 768px)
   .page-careers-index
     .tag
       font-size x
 
-@media screen and (min-width: 960px)
+@media screen and (min-width: 1024px)
   .page-careers-index
     .tags
       justify-content flex-start

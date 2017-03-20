@@ -32,9 +32,7 @@
     position relative
     height 100vh
     overflow-y scroll
-
     z-index 10
-
     background c-app-bg
 
   .btn-thumb
@@ -75,7 +73,7 @@
       color lighten(mcolor,75%)
       border-left-color link
 
-@media screen and (min-width: 720px)
+@media screen and (min-width: 768px)
   .master
     width 30vw
 
@@ -99,7 +97,7 @@
     section
       flex 0 0 50% !important
 
-@media screen and (min-width: 960px)
+@media screen and (min-width: 1024px)
   .master-detail + .app-bottom .section-cosmos
     padding-left 307.19px !important
 
@@ -114,7 +112,7 @@
     padding-left 1.75rem
     padding-right 1.75rem
 
-@media screen and (min-width: 1200px)
+@media screen and (min-width: 1280px)
   .master
     width 25vw
   .detail

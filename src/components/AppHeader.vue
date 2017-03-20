@@ -25,11 +25,8 @@ export default {
 <style lang="stylus">
 @require '../styles/variables.styl'
 
-default-border-top-sm()
-  border-top 3px solid c-app-bg
-
 default-border-top()
-  border-top 4px solid c-app-bg
+  border-top 0.25rem solid c-app-bg
 
 highlighted-border-top-color()
   border-top-color lighten(mcolor, 33%) !important
@@ -39,18 +36,19 @@ highlighted-border-top-color()
   top 0
   left 0
   z-index 100
-  background mcolor
   width 100vw
   display flex
-  height 2.4*x
+  height 3rem
+  background alpha(mcolor, 95%)
+  backdrop-filter blur(0.125rem)
 
   a.nav-home
     display block
-    default-border-top-sm()
+    default-border-top()
     border-top-color darken(acolor,25%) !important
     img
-      width 2.4*x - 3px
-      height 2.4*x - 3px
+      width 3rem - 0.25rem
+      height 3rem - 0.25rem
     &:hover
       border-top-color darken(acolor,25%) !important
 
@@ -58,16 +56,16 @@ highlighted-border-top-color()
     flex 1
     display flex
     justify-content flex-end
-    default-border-top-sm()
-    padding-right 0.5*x
+    default-border-top()
+    padding-right 0.5rem
     a
       display block
-      padding 0 0.5*x
+      padding 0 0.5rem
       color lighten(mcolor,75%)
-      default-border-top-sm()
-      margin-top -3px
-      line-height 2.4*x - 3px
-      font-size 0.9*x
+      default-border-top()
+      margin-top -0.25rem
+      line-height 3rem - 0.25rem
+      font-size 0.9rem
 
       .label
         display none
@@ -79,35 +77,20 @@ highlighted-border-top-color()
       &.router-link-active
         highlighted-border-top-color()
 
-@media screen and (min-height: 400px)
-  .app-header
-    height 3*x
-    a.nav-home
-      default-border-top()
-      img
-        width 3*x - 4px
-        height 3*x - 4px
-    nav
-      default-border-top()
-      a
-        default-border-top()
-        margin-top -4px
-        line-height 3*x - 4px
-
 @media screen and (min-width: 360px)
   .app-header
     nav
       a
-        font-size x
+        font-size 1rem
         &.nav-code
           display block
 
-@media screen and (min-width: 400px)
+@media screen and (min-width: 414px)
   .app-header
     nav
-      padding-left 0.75*x
+      padding-left 0.75rem
       a
-        padding 0 0.75*x
+        padding 0 0.75rem
 
 @media screen and (min-width: 480px)
   .app-header
@@ -120,14 +103,14 @@ highlighted-border-top-color()
   .app-header
     nav
       a
-        padding 0 1.5*x
+        padding 0 1.5rem
 
-@media screen and (min-width: 720px)
+@media screen and (min-width: 768px)
   .app-header
     nav
       a
         i.fa
-          margin-right 0.25*x
+          margin-right 0.25rem
         .label
           display inline
 </style>
