@@ -29,42 +29,45 @@ export default {
 @require '../styles/variables.styl'
 
 .card-post
-  border-bottom 1px solid bc
-  margin 0 auto
-
-  &:last-of-type
-    border-bottom none
-
-  .title
-    font-weight 500
-    line-height 1.25
-    color txt
-  .meta
-    text-transform uppercase
-    font-size 0.75em
-    font-weight 500
-    line-height 2
-    color light
-  .desc
-    max-width 40em
+  margin-bottom 1rem
 
   a
-    padding 1.5*x 0
+    border 1px solid bc
+    padding 1rem
     display block
     color txt
     &:hover .title
       color link
 
+  &:last-of-type
+    margin-bottom 0
+
+  .title
+    font-weight bold
+    line-height 1.25
+    color txt
+
+  .title, .meta
+    margin-bottom 0.25rem
+
+  .meta
+    font-weight 500
+    line-height 2
+    color light
+
+  .desc
+    max-width 40em
+    color dim
+
 @media screen and (min-width: 360px)
   .card-post
     .title
       font-size 1.125em
-    .meta
-      font-size 0.85em
 
 @media screen and (min-width: 768px)
   .card-post
-    font-size 1.125*x
+    .title
+      font-size 1.25*x
     a
-      padding 2*x 0
+      padding 1.5rem
 </style>

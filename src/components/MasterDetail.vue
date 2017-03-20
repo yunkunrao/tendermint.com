@@ -91,7 +91,23 @@
 
   .master-detail + .app-bottom .app-footer
     .sections
-      padding-left 16rem + 2rem !important
+      margin-left 16rem !important
     section
       flex 0 0 50% !important
+
+@media screen and (min-width: 1024px)
+  .master
+    width 20rem
+
+  .detail
+    margin-left 20rem
+
+  .master-detail + .app-bottom .section-cosmos
+    padding-left 20rem !important
+
+  .master-detail + .app-bottom .app-footer
+    .sections
+      margin-left 20rem !important
+    section
+      flex 0 0 25% !important
 </style>

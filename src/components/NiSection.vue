@@ -58,18 +58,19 @@
 
 @media screen and (min-width: 360px)
   .ni-section-main
-    padding-left 1.5rem
-    padding-right 1.5rem
+    padding 1.5rem
 
 @media screen and (min-width: 768px)
   .ni-section-title
     font-size 1.5rem
 
   .ni-section-main
-    padding-left 2rem
-    padding-right 2rem
+    padding 2rem
 
 @media screen and (min-width: 1024px)
   .ni-section-title
     text-align left
+
+  .ni-section-main
+    padding 3rem
 </style>

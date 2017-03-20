@@ -132,7 +132,9 @@ export default {
 @media screen and (min-width: 1280px)
   .app-footer
     .sections
-      max-width 1200px
+      max-width 100vw
+      padding-left 3rem
+      padding-right 3rem
     section
       flex 0 0 25%
 </style>

@@ -88,19 +88,17 @@ export default {
 
 .page-bounties-index
   .tags
-    margin-top 1.5*x
-    text-align center
+    margin-top 1rem
     max-width 40*x
     display flex
     flex-flow row wrap
-    justify-content center
 
   .tag
-    font-size 0.75*x
+    font-size 1rem
     background lighten(bc, 50%)
     color dim
-    margin-right 0.25*x
-    margin-bottom 0.25*x
+    margin-right 0.5rem
+    margin-bottom 0.5rem
     padding 0.25*x 0.5*x
 
     cursor pointer
@@ -114,9 +112,6 @@ export default {
   .page-bounties-index
     .tags
       margin-top 2*x
-
-    .tag
-      font-size x
     
 @media screen and (min-width: 1024px)
   .page-bounties-index

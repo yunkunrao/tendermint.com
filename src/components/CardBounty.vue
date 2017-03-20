@@ -1,16 +1,27 @@
 <template>
   <div class="card-bounty">
     <router-link :to="/bounties/ + bounty.id">
-      <div class="title">{{ bounty.title }}</div>
-      <div class="meta">{{ bounty.tags }}</div>
-      <div class="desc">Reward: {{ bounty.reward }}</div>
+      <main>
+        <div class="title">{{ bounty.title }}</div>
+        <div class="meta ">
+          <span class="card-tag" v-for="tag in bounty.tags">{{tag}}</span>
+        </div>
+      </main>
+      <div class="reward">
+        <i class="fa fa-btc"></i>
+        <span>{{ bounty.reward }}</span>
+      </div>
     </router-link>
   </div>
 </template>
 
 <script>
+import CardPost from './CardPost'
 export default {
   name: 'card-bounty',
+  components: {
+    CardPost
+  },
   props: ['bounty']
 }
 </script>
@@ -20,44 +31,69 @@ export default {
 @require '../styles/variables.styl'
 
 .card-bounty
-  border-bottom 1px solid bc
-  margin 0 auto
+  margin-bottom 1rem
 
-  &:first-of-type
-    margin-top -1.5*x
   &:last-of-type
-    border-bottom none
-
-  .title
-    font-weight 500
-    line-height 1.25
-    color txt
-  .meta
-    text-transform uppercase
-    font-size 0.75em
-    font-weight 500
-    line-height 2
-    color light
-  .desc
-    max-width 40em
+    margin-bottom 0
 
   a
-    padding 1.5*x 0
+    border 1px solid bc
+    padding 0.75rem
     display block
     color txt
     &:hover .title
       color link
 
-@media screen and (min-width: 360px)
-  .card-bounty
+  .title
+    font-weight bold
+    line-height 1.25
+
+  .meta
+    font-weight 500
+    line-height 2
+    color light
+    margin-bottom 0.5rem
+
+  .card-tag
+    margin-right 0.5rem
+
+  .reward
+    border 1px solid bc
+    display flex
+    width 10rem
+
+    flex-flow row
+    align-items center
+    justify-content space-between
+
+    i.fa
+      width 2rem
+      height 2rem
+      border-right 1px solid bc
+      color hsl(40,100%,50%)
+      display flex
+      align-items center
+      justify-content center
+    span
+      flex 1
+      text-align right
+      height 2rem
+      padding 0 0.5rem
+      background lighten(bc, 50%)
+
+      display flex
+      align-items center
+      justify-content flex-end
+
+@media screen and (min-width: 414px)
+  .card-bounty a
+    padding 1rem
     .title
-      font-size 1.125em
-    .meta
-      font-size 0.85em
+      font-size 1.125rem
 
 @media screen and (min-width: 768px)
-  .card-bounty
-    font-size 1.125*x
-    a
-      padding 2*x 0
+  .card-bounty a
+    padding 1.5rem
+    .title
+      font-size 1.25em
 </style>
