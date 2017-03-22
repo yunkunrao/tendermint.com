@@ -69,8 +69,8 @@ export default {
   padding 1rem
 
   .avatar
+    flex 0 0 3rem
     height 3rem
-    width 3rem
     margin-right 0.75rem
 
     img, i.fa
@@ -128,15 +128,15 @@ export default {
 
 @media screen and (min-width:360px)
   .card-person-header .avatar
+    flex 0 0 3.5rem
     height 3.5rem
-    width 3.5rem
  
 @media screen and (min-width:414px)
   .card-person-main
     font-size 0.875rem
   .card-person-header .avatar
+    flex 0 0 4rem
     height 4rem
-    width 4rem
     
 @media screen and (min-width:1280px)
   .card-person
@@ -146,8 +146,8 @@ export default {
   .card-person-header
     flex 1
     .avatar
+      flex 0 0 5rem
       height 5rem
-      width 5rem
       margin-right 1rem
     .text
       height 5rem
