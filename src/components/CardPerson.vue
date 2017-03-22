@@ -73,13 +73,9 @@ export default {
     width 3rem
     margin-right 0.75rem
 
-    display flex
-
     img, i.fa
-      flex 1
-      width 100%
-      height auto
       display block
+      width 100%
 
     i.fa
       font-size 2rem
@@ -95,7 +91,8 @@ export default {
     justify-content center
 
     .name
-      font-weight bold
+      font-weight 600
+      line-height 1.25
 
     .title
       color dim
@@ -129,9 +126,17 @@ export default {
     .label
       display none
 
+@media screen and (min-width:360px)
+  .card-person-header .avatar
+    height 3.5rem
+    width 3.5rem
+ 
 @media screen and (min-width:414px)
   .card-person-main
     font-size 0.875rem
+  .card-person-header .avatar
+    height 4rem
+    width 4rem
     
 @media screen and (min-width:1280px)
   .card-person
