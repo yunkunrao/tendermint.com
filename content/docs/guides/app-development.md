@@ -23,7 +23,7 @@ The ABCI design has a few distinct components:
         - [consensus connection](#consensus-connection): for executing transactions that have been committed. Message sequence is, for every block, `BeginBlock, [DeliverTx, ...], EndBlock, Commit`
         - [query connection](#query-connection): for querying the application state.  only uses Query and Info
 
-<img src="https://github.com/ebuchman/thesis/raw/master/figures/diagrams/abci.png" width="600">
+<img src="../assets/images/abci.png">
 
 The mempool and consensus logic act as clients, and each maintains an open ABCI connection with the application, which hosts a ABCI server. Shown are the request and response types sent on each connection.
 
