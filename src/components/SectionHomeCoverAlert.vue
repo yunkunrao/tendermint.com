@@ -1,5 +1,5 @@
 <template>
-  <a class="cover-alert" href="https://cosmos.network/blog/cosmos-fundraiser-date">
+  <a class="cover-alert" href="https://cosmos.network/blog/fundraiser-delay-announcement-ii">
     <span class="key">ANNOUNCEMENT:</span>
     <span class="value">Fundraiser for Cosmos, Internet of Blockchains begins {{ pdtStartDate }}</span>
     <i class="fa fa-angle-double-right" aria-hidden="true"></i>
