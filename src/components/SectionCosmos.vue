@@ -88,7 +88,7 @@ export default {
       window.location.href = this.config.SELF_URL
     },
     gotoFundraiser () {
-      window.location.href = this.config.SALE_URL
+      window.location.href = this.config.FUNDRAISER_URL
     },
     refreshTimers () {
       if (Date.now() >= moment(this.startDate).valueOf()) {
