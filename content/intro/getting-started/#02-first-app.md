@@ -205,7 +205,7 @@ While we already used the implementation written in Go,
 let's now try the Counter application written in Javascript!
 
 Kill the previous `counter` and `tendermint` processes.
-Change directory to the location of the `github.com/tendermint/abci-js`.
+Change directory to the location of the `github.com/tendermint/js-abci`.
 If you fetched the repository with `go get`, it would be 
 
 ```
