@@ -49,7 +49,7 @@ The `CheckTx` message is similar to `DeliverTx`, but it's only for validating tr
 The `Commit` message is used to compute a cryptographic commitment to the current application state, to be placed into the next block header. This has some handy properties. Inconsistencies in updating that state will now appear as blockchain forks which catches a whole class of programming errors. This also simplifies the development of secure lightweight clients, as Merkle-hash proofs can be verified by checking against the block hash, and the block hash is signed by a quorum of validators.
 
 There are may ways the ABCI can be implemented, including with in-process functions, a binary socket protocol, or even JSON over HTTP.
-We recommend a binary socket protocol, known as the Tendermint Socket Protocol (TMSP) for connecting Tendermint to an application running
+We recommend a binary socket protocol, known as ABCI (formerly the Tendermint Socket Protocol (TMSP)) for connecting Tendermint to an application running
 in another process.
 There can be multiple ABCI connections to an application.  Tendermint Core creates three ABCI connections to the application; one for the validation of transactions when broadcasting in the mempool, one for the consensus engine to run block proposals, and one for querying information from the app.
 
