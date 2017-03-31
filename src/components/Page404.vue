@@ -7,7 +7,7 @@
       theme="tendermint"
       slot="header">
     </page-header>
-    <article-body slot="main">
+    <article-body>
       <p><strong>Whoops!</strong> The page you visited either does not exist or has been deleted in a website reshuffle. We're sorry for the inconvenience. Try visiting one of these pages below:</p>
       <ul>
         <li><router-link :to="'/'">Home</router-link></li>

@@ -7,7 +7,7 @@
       slot="header"
       theme="tendermint">
     </page-header>
-    <article-body slot="main">
+    <article-body>
       <h2>Email</h2>
       <p>Questions or comments for the Tendermint team? Email us at <a href="mailto:hello@tendermint.com">hello@tendermint.com</a> and we'll get back to you promptly.</p>
       <h2>Slack</h2>
