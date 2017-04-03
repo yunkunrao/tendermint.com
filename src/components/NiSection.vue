@@ -78,7 +78,4 @@
 
   .ni-section-title
     font-size 1.25rem
-
-  .ni-section-main
-    padding 1.5rem 3rem 3rem
 </style>

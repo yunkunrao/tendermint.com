@@ -29,7 +29,7 @@
           </btn>
         </template>
         <template v-else>
-          <div class="section-cosmos-description">The team behind Tendermint also built  Cosmos, Internet of Blockchains. The fundraiser for Cosmos will begin on <a href="https://www.worldtimebuddy.com/?qm=1&lid=5391959,2657908,2643743,1835848&h=5391959&date=2017-3-31&sln=6-7">{{ pdtStartDate }}</a>.</div>
+          <div class="section-cosmos-description">The team behind Tendermint also built  Cosmos, Internet of Blockchains. The fundraiser for Cosmos will begin on <a href="https://www.worldtimebuddy.com/?qm=1&lid=8,100,2643743&h=8&date=2017-4-6&sln=6-7">{{ pdtStartDate }}</a>.</div>
           <btn
             class="section-cosmos-btn"
             size="lg"
