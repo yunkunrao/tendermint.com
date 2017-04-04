@@ -2,17 +2,20 @@
   <div class="ni-time-remaining" v-if="fuzzy === true">
     is starting soon
   </div>
-  <div class="ni-time-remaining" :title="date" v-else-if="days > 1">
-    {{ label }} {{ days }} days
+  <div class="ni-time-remaining" :title="date" v-else-if="days > 0">
+    {{ label }} {{ days }} day<template v-if="days > 1">s</template>
+    {{ label }} {{ hours }} hr<template v-if="hours > 1">s</template>
   </div>
-  <div class="ni-time-remaining" :title="date" v-else-if="hours > 1">
-    {{ label }} {{ hours }} hours
+  <div class="ni-time-remaining" :title="date" v-else-if="hours > 0">
+    {{ label }} {{ hours }} hr<template v-if="hours > 1">s</template>
+    {{ label }} {{ minutes }} min<template v-if="minutes > 1">s</template>
   </div>
-  <div class="ni-time-remaining" :title="date" v-else-if="minutes > 1">
-    {{ label }} {{ minutes }} minutes
+  <div class="ni-time-remaining" :title="date" v-else-if="minutes > 0">
+    {{ label }} {{ minutes }} min<template v-if="minutes > 1">s</template>
+    {{ label }} {{ seconds }} sec<template v-if="seconds > 1">s</template>
   </div>
-  <div class="ni-time-remaining" :title="date" v-else-if="seconds > 1">
-    {{ label }} {{ seconds }} seconds
+  <div class="ni-time-remaining" :title="date" v-else-if="seconds > 0">
+    {{ label }} {{ seconds }} second<template v-if="seconds > 1">s</template>
   </div>
   <div class="ni-time-remaining" :title="date" v-else>
     has ended
