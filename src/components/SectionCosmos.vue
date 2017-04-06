@@ -3,15 +3,10 @@
     <div class="section-cosmos-container">
       <header class="section-cosmos-header">
         <h2 class="section-cosmos-title">Cosmos Fundraiser</h2>
-        <time-remaining
-          class="section-cosmos-subtitle"
-          :date="timers.endDate"
-          :started="timers.started"
-          :fuzzy="false">
-        </time-remaining>
+        <div class="section-cosmos-subtitle">raised $16.8 million USD in 28 minutes.</div>
       </header>
       <main class="section-cosmos-main" v-if="timers.ended">
-        <div class="section-cosmos-description">Fundraiser has ended.</div>
+        <div class="section-cosmos-description">Fundraiser has ended on April 6th, 6:28AM PDT. Thank you for the contributions!</div>
         <btn
           class="section-cosmos-btn"
           size="lg"

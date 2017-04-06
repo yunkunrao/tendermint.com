@@ -1,8 +1,8 @@
 <template>
-  <a class="cover-alert" href="https://cosmos.network/blog/fundraiser-delay-announcement-ii">
+  <a class="cover-alert" href="https://cosmos.network">
     <span class="key">ANNOUNCEMENT:</span>
     <span class="value" v-if="timers.ended">
-      Fundraiser for Cosmos, Internet of Blockchains has ended.
+      Fundraiser for Cosmos, Internet of Blockchains has ended. $16.8MM USD raised in 28 min!
     </span>
     <span class="value" v-else-if="timers.started">
       Fundraiser for Cosmos, Internet of Blockchains

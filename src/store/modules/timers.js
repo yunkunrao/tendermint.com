@@ -3,7 +3,7 @@ import moment from 'moment-timezone'
 
 const state = {
   started: false,
-  ended: false,
+  ended: true,
   startDate: '',
   endDate: '',
   pdtStartDate: '',
