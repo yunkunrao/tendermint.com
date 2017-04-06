@@ -41,12 +41,12 @@ export default {
     ]
   },
   mounted () {
-    this.$store.commit('refreshTimers')
-    setInterval(this.$store.commit('refreshTimers'), 1000)
     this.$store.commit('calcStartDate')
     this.$store.commit('calcEndDate')
     this.$store.commit('calcPdtStartDate')
     this.$store.commit('calcLocalStartDate')
+    this.$store.commit('refreshTimers')
+    setInterval(() => this.$store.commit('refreshTimers'), 1000)
   }
 }
 </script>

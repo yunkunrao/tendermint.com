@@ -1,6 +1,6 @@
 function startDatetime () {
   let date = ''
-  if (process.env.NODE_ENV === 'development') date = '2017-04-06 02:45:00'
+  if (process.env.NODE_ENV === 'development') date = '2017-04-06 06:12:00'
   if (process.env.NODE_ENV === 'production') date = '2017-04-06 13:00:00'
   return date
 }

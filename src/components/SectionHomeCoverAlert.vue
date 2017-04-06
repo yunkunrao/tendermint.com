@@ -1,22 +1,40 @@
 <template>
   <a class="cover-alert" href="https://cosmos.network/blog/fundraiser-delay-announcement-ii">
     <span class="key">ANNOUNCEMENT:</span>
-    <span class="value">Fundraiser for Cosmos, Internet of Blockchains begins {{ pdtStartDate }}</span>
+    <span class="value" v-if="timers.ended">
+      Fundraiser for Cosmos, Internet of Blockchains has ended.
+    </span>
+    <span class="value" v-else-if="timers.started">
+      Fundraiser for Cosmos, Internet of Blockchains
+      <time-remaining
+        :date="timers.endDate"
+        :started="timers.started"
+        :fuzzy="false">
+      </time-remaining>
+    </span>
+    <span class="value" v-else>
+      Fundraiser for Cosmos, Internet of Blockchains
+      <time-remaining
+        :date="timers.endDate"
+        :started="timers.started"
+        :fuzzy="false">
+      </time-remaining>
+      on {{ timers.pdtStartDate }}
+    </span>
+
     <i class="fa fa-angle-double-right" aria-hidden="true"></i>
   </a>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
-import moment from 'moment-timezone'
+import TimeRemaining from './TimeRemaining'
 export default {
+  components: {
+    TimeRemaining
+  },
   computed: {
-    pdtStartDate () {
-      let utc = moment.utc(this.config.START_DATETIME)
-      let pdt = moment(utc).tz(this.config.TIMEZONE)
-      return pdt.format('LLL z')
-    },
-    ...mapGetters(['config'])
+    ...mapGetters(['config', 'timers'])
   }
 }
 </script>
@@ -34,6 +52,9 @@ export default {
   overflow hidden
   &:hover
     border-color lighten(mcolor, 35%)
+
+  .ni-time-remaining
+    display inline
 
   i.fa
     display block

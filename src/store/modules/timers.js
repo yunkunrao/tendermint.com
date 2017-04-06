@@ -1,5 +1,5 @@
 import config from './config'
-import moment from 'moment'
+import moment from 'moment-timezone'
 
 const state = {
   started: false,
@@ -14,6 +14,9 @@ const mutations = {
   refreshTimers (state) {
     if (Date.now() >= moment(state.startDate).valueOf()) {
       state.started = true
+      let utcEndDate = moment.utc(config.state.START_DATETIME)
+        .add(config.state.ENDS_AFTER, 'days').valueOf()
+      state.endDate = moment(utcEndDate).local()
     }
     if (Date.now() >= moment(state.endDate).valueOf()) {
       state.ended = true
@@ -23,6 +26,10 @@ const mutations = {
     state.startDate = moment(moment.utc(config.state.START_DATETIME)).local()
   },
   calcEndDate (state) {
+    if (Date.now() >= moment(state.startDate).valueOf()) {
+      state.started = true
+    }
+
     if (state.started) {
       let utcEndDate = moment.utc(config.state.START_DATETIME)
         .add(config.state.ENDS_AFTER, 'days').valueOf()
