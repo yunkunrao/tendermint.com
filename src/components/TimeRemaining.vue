@@ -2,20 +2,12 @@
   <div class="ni-time-remaining" v-if="fuzzy === true">
     is starting soon
   </div>
-  <div class="ni-time-remaining" :title="date" v-else-if="days > 0">
-    {{ label }} {{ days }} day<template v-if="days > 1">s</template>
-    {{ hours }} hr<template v-if="hours > 1">s</template>
-  </div>
-  <div class="ni-time-remaining" :title="date" v-else-if="hours > 0">
-    {{ label }} {{ hours }} hr<template v-if="hours > 1">s</template>
-    {{ minutes }} min<template v-if="minutes > 1">s</template>
-  </div>
-  <div class="ni-time-remaining" :title="date" v-else-if="minutes > 0">
-    {{ label }} {{ minutes }} min<template v-if="minutes > 1">s</template>
-    {{ seconds }} sec<template v-if="seconds > 1">s</template>
-  </div>
-  <div class="ni-time-remaining" :title="date" v-else-if="seconds > 0">
-    {{ label }} {{ seconds }} second<template v-if="seconds > 1">s</template>
+  <div class="ni-time-remaining" :title="date" v-else-if="countingDown">
+    {{ label }} 
+    <template v-if="days > 0">{{ days }}d</template>
+    <template v-if="hours > 0">{{ hours }}h</template>
+    <template v-if="minutes > 0">{{ minutes }}m</template>
+    <template v-if="seconds > 0">{{ seconds }}s</template>
   </div>
   <div class="ni-time-remaining" :title="date" v-else>
     has ended
@@ -26,6 +18,9 @@
 export default {
   name: 'ni-time-remaining',
   computed: {
+    countingDown () {
+      return this.days > 0 || this.hours > 0 || this.minutes > 0 || this.seconds > 0
+    },
     label () {
       if (this.started) return 'is live for'
       else return 'will begin in'
