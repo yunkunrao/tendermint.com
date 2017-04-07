@@ -5,8 +5,8 @@
         <h2 class="section-cosmos-title">Cosmos Fundraiser</h2>
         <div class="section-cosmos-subtitle">raised $16.8 million USD in 28 minutes.</div>
       </header>
-      <main class="section-cosmos-main" v-if="timers.ended">
-        <div class="section-cosmos-description">Fundraiser has ended on April 6th, 6:28AM PDT. Thank you for the contributions!</div>
+      <main class="section-cosmos-main">
+        <div class="section-cosmos-description">Fundraiser has ended on April 6th, 6:28AM PDT. Thank you for your contributions!</div>
         <btn
           class="section-cosmos-btn"
           size="lg"
@@ -14,27 +14,6 @@
           theme="tendermint"
           icon="bar-chart"
           @click.native="gotoFundraiser">
-        </btn>
-      </main>
-      <main class="section-cosmos-main" v-else-if="timers.started">
-        <div class="section-cosmos-description">Fundraiser is live! Click to visit the donation page.</div>
-        <btn
-          class="section-cosmos-btn"
-          size="lg"
-          value="View Fundraiser"
-          theme="tendermint"
-          icon="bar-chart"
-          @click.native="gotoFundraiser">
-        </btn>
-      </main>
-      <main class="section-cosmos-main" v-else>
-        <div class="section-cosmos-description">The team behind Tendermint also built  Cosmos, Internet of Blockchains. The fundraiser for Cosmos will begin on <a href="https://www.worldtimebuddy.com/?qm=1&lid=8,100,2643743&h=8&date=2017-4-6&sln=6-7">{{ timers.pdtStartDate }}</a>.</div>
-        <btn
-          class="section-cosmos-btn"
-          size="lg"
-          value="Visit Cosmos Site"
-          theme="tendermint"
-          @click.native="gotoCosmos">
         </btn>
       </main>
     </div>
@@ -44,15 +23,13 @@
 <script>
 import { mapGetters } from 'vuex'
 import Btn from '@nylira/vue-button'
-import TimeRemaining from './TimeRemaining'
 export default {
   name: 'section-cosmos',
   components: {
-    Btn,
-    TimeRemaining
+    Btn
   },
   computed: {
-    ...mapGetters(['config', 'timers'])
+    ...mapGetters(['config'])
   },
   methods: {
     gotoCosmos () {

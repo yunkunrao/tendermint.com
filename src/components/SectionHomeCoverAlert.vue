@@ -1,40 +1,18 @@
 <template>
   <a class="cover-alert" href="https://cosmos.network">
     <span class="key">ANNOUNCEMENT:</span>
-    <span class="value" v-if="timers.ended">
+    <span class="value">
       Fundraiser for Cosmos, Internet of Blockchains has ended. $16.8MM USD raised in 28 min!
     </span>
-    <span class="value" v-else-if="timers.started">
-      Fundraiser for Cosmos, Internet of Blockchains
-      <time-remaining
-        :date="timers.endDate"
-        :started="timers.started"
-        :fuzzy="false">
-      </time-remaining>
-    </span>
-    <span class="value" v-else>
-      Fundraiser for Cosmos, Internet of Blockchains
-      <time-remaining
-        :date="timers.endDate"
-        :started="timers.started"
-        :fuzzy="false">
-      </time-remaining>
-      on {{ timers.pdtStartDate }}
-    </span>
-
     <i class="fa fa-angle-double-right" aria-hidden="true"></i>
   </a>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
-import TimeRemaining from './TimeRemaining'
 export default {
-  components: {
-    TimeRemaining
-  },
   computed: {
-    ...mapGetters(['config', 'timers'])
+    ...mapGetters(['config'])
   }
 }
 </script>
