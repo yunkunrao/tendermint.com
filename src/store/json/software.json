@@ -64,7 +64,6 @@
       "description": "Encrypted storage web-utility backed by Tendermint"
     }
   ],
-
   "abciServers": [
     {
       "name": "abci",
@@ -106,10 +105,9 @@
       "name": "abci_server",
       "url": "https://github.com/KrzysiekJ/abci_server",
       "language": "Erlang",
-      "author": "Krzysztof Jurewicz",
-    },
+      "author": "Krzysztof Jurewicz"
+    }
   ],
-
   "deploymentTools": [
     {
       "name": "mintnet",
@@ -140,7 +138,6 @@
       "description": "Deploy a tendermint test network in docker containers "
     }
   ],
-
   "competitors": [
     {
       "name": "Hyperledger",
