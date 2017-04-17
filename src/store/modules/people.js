@@ -170,7 +170,7 @@ const state = {
     {
       slug: 'jim-yang',
       name: 'Jim Yang',
-      title: 'Advisor',
+      title: 'Strategy',
       bio: 'Jim Yang co-founded Identyx, where he served as CEO until its acquisition by Red Hat. Identyx developed an open source enterprise identity management software.',
       category: 'advisor',
       ids: {
