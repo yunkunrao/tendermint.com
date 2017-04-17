@@ -101,7 +101,13 @@
       "url": "https://github.com/zballs/ocaml-tmsp",
       "language": "Ocaml",
       "author": "Zach Balder"
-    }
+    },
+    {
+      "name": "abci_server",
+      "url": "https://github.com/KrzysiekJ/abci_server",
+      "language": "Erlang",
+      "author": "Krzysztof Jurewicz",
+    },
   ],
 
   "deploymentTools": [
