@@ -5,7 +5,7 @@
       <h2>Get Started</h2>
       <btn
         id="download-button"
-        @click.native="go('/intro/getting-started/download-tendermint')"
+        @click.native="go('/download')"
         size="lg"
         icon="cloud-download"
         theme="tendermint"

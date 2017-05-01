@@ -16,7 +16,7 @@ Now, we make that easy, with a new rpc endpoint, `/tx?hash=X`.
 We also fixed a few bugs in fast sync mode and in the handshake, and upgraded the Command Line Interface
 to use the phenomenal `github.com/spf13/cobra` library.
 
-Get the latest release at [our downloads page](/intro/getting-started/download-tendermint).
+Get the latest release at [our downloads page](/download).
 See the [v0.9.1 release
 notes](https://github.com/tendermint/tendermint/blob/master/CHANGELOG.md#091-april-18-2017) for more details.
 

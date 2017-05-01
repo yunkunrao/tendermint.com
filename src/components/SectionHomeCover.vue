@@ -8,7 +8,7 @@
       <p class="introduction">Byzantine fault-tolerant replicated state machines in any programming language</p>
       <div class="btns">
         <btn
-          @click.native="go('/intro/getting-started/download-tendermint')"
+          @click.native="go('/download')"
           size="lg"
           icon="cloud-download"
           theme="tendermint"

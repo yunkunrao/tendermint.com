@@ -10,7 +10,7 @@ In this guide, we show you some examples of how to run an application using Tend
 
 ## Install
 
-First, make sure you have [installed Tendermint](/intro/getting-started/download-tendermint).
+First, make sure you have [installed Tendermint](/download).
 The first apps we will work with are written in Go. 
 To install them, you need to [install Go](https://golang.org/doc/install) and 
 [put `$GOPATH/bin` in your `$PATH`](https://github.com/tendermint/tendermint/wiki/Setting-GOPATH). 

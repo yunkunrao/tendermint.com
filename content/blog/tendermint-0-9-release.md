@@ -17,7 +17,7 @@ and an additional RPC endpoint for easily fetching commit signatures.
 The hard work paid off - we can now do light-client verification of the latest state of a Tendermint blockchain.
 We even demonstrated how this could be used to do [InterBlockchain Communication](https://github.com/tendermint/basecoin/blob/master/docs/guide/ibc.md)!
 
-Get the latest release at [our downloads page](/intro/getting-started/download-tendermint).
+Get the latest release at [our downloads page](/download).
 See the [v0.9.0 release
 notes](https://github.com/tendermint/tendermint/blob/master/CHANGELOG.md#090-march-6-2017) for more
 details.

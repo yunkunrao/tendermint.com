@@ -1,7 +1,7 @@
 # Install from Source
 
 This page provides instructions on installing Tendermint from source.
-To download pre-built binaries, see the [downloads page](/intro/getting-started/download-tendermint).
+To download pre-built binaries, see the [Download page](/download).
 
 ## Install Go
 

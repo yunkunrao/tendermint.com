@@ -66,11 +66,11 @@ To add a new page, create a markdown file in `./content/docs/` or `./content/int
 
 By default, pages are ordered alphabetically based on filename. If you want to have a custom order for your documentation, label the files with numbers. Like this:
 
-    ▾ getting-started/
-        #01-download-tendermint.md
-        #02-first-abci-app.md
-        #03-deploy-testnet.md
-        #04-next-steps.md
+    ▾ try-this/
+        #01-blah-blah.md
+        #02-bob-lob-law-app.md
+        #03-blargh.md
+        #04-balhooney.md
 
 ### Creating a New Section
 To add a new section to documentation, add a new directory under `.content/docs/`.
