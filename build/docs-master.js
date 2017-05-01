@@ -60,7 +60,7 @@ function writeLinks (linkObject, filename) {
     let links = gettingStarted
     value += '  <div class="title">Getting Started</div>\n'
     // add download link manually
-    value += `  <router-link to="/intro/getting-started/download-tendermint">1. Download Tendermint</router-link>\n`
+    value += `  <router-link to="/download">1. Download Tendermint</router-link>\n`
     for (var l = 0; l < links.length; l++) {
       value += `  <router-link :to="'${links[l].url}'">${links[l].title}</router-link>\n`
     }

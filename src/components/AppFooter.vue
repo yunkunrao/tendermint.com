@@ -36,7 +36,7 @@
         <section>
           <header>Developers</header>
           <nav>
-            <router-link :to="'/intro/getting-started/download-tendermint'">Download</router-link>
+            <router-link :to="'/download'">Download</router-link>
             <router-link :to="'/intro'">Introduction</router-link>
             <router-link :to="'/docs'">Documentation</router-link>
             <router-link :to="'/docs/guides/contributing'">Contributing</router-link>

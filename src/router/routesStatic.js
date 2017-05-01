@@ -11,7 +11,7 @@ export default [
   { path: '/blog/:entry', component: r('BlogEntry') },
 
   // Download page
-  { path: '/intro/getting-started/download-tendermint', component: r('Download') },
+  { path: '/download', component: r('Download') },
 
   // Other
   { path: '/about', component: r('About') },

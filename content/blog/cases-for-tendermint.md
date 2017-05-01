@@ -74,5 +74,5 @@ For other applications where the former exceptions don't apply, you probably wan
 ## Fin
 
 * Check out the [Tendermint documentation](/docs).
-* Start developing on Tendermint with the [Getting Started](/intro/getting-started/download-tendermint) guide.
+* Start developing on Tendermint with the [Getting Started](/download) guide.
 * Join our Slack channel by clicking on [this link](http://forum.tendermint.com:3000/).
