@@ -10,6 +10,9 @@ export default [
   { path: '/blog', component: r('BlogIndex') },
   { path: '/blog/:entry', component: r('BlogEntry') },
 
+  // Download page
+  { path: '/intro/getting-started/download-tendermint', component: r('Download') },
+
   // Other
   { path: '/about', component: r('About') },
   { path: '/bounties', component: r('BountiesIndex') },
