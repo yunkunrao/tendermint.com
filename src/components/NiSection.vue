@@ -66,14 +66,14 @@
 
 @media screen and (min-width: 768px)
   .ni-section-header
-    padding-left 3rem
-    padding-right 3rem
-    padding-bottom 1rem
-    background bc
+    margin-left 1.5rem
+    margin-right 1.5rem
+    padding 1rem
+    border 1px solid bc
+    border-top none
 
   .ni-section-dark
     .ni-section-header
-      background lighten(mcolor, 2%)
       border-bottom 1px solid lighten(mcolor, 10%)
 
   .ni-section-title
