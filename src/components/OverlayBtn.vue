@@ -20,6 +20,7 @@ export default {
 @media screen and (max-width: 1023px)
   .overlay-btn
     width 2.5em
+    height 2.5em
     line-height 2.5em
     border-radius 1.25em
 
@@ -36,6 +37,7 @@ export default {
 @media screen and (min-width: 360px)
   .overlay-btn
     width 3em
+    height 3em
     line-height 3em
     border-radius 1.5em
 </style>
