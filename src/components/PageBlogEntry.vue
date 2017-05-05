@@ -13,10 +13,10 @@
         :facebook-url="facebookUrl"
         :twitter-url="twitterUrl">
       </article-footer>
-      <section-comments></section-comments>
+      <!--<section-comments></section-comments>-->
     </ni-section>
     <overlay-btns>
-      <overlay-btn v-show="isActive" icon="chevron-left" @click.native="gotoBlog"></overlay-btn>
+      <overlay-btn icon="chevron-left" @click.native="gotoBlog"></overlay-btn>
     </overlay-btns>
   </div>
 </template>
