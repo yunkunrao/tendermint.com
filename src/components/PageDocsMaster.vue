@@ -28,19 +28,22 @@
   <router-link :to="'/docs/internals/validators'">Validators</router-link>
   <router-link :to="'/docs/internals/wire-protocol'">Wire Protocol</router-link>
 </nav>
-  <btn-thumb v-show="isActive" icon="close"></btn-thumb>
-  <btn-thumb v-show="!isActive" icon="bars"></btn-thumb>
+  <overlay-btns>
+    <overlay-btn v-show="isActive" icon="close"></overlay-btn>
+    <overlay-btn v-show="!isActive" icon="bars"></overlay-btn>
+  </overlay-btns>
 </div><!--master-->
 </template>
 
 <script>
 import $ from 'jquery'
-import BtnThumb from './BtnThumb'
-
+import OverlayBtns from './OverlayBtns'
+import OverlayBtn from './OverlayBtn'
 export default {
   name: 'page-docs-master',
   components: {
-    BtnThumb
+    OverlayBtn,
+    OverlayBtns
   },
   data () {
     return {

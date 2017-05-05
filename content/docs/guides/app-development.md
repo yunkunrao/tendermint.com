@@ -18,14 +18,14 @@ The ABCI design has a few distinct components:
         - grpc
 - blockchain protocol
     - abci is connection oriented
-    - Tendermint Core maintains three connections: 
+    - Tendermint Core maintains three connections:
         - [mempool connection](#mempool-connection): for checking if transactions should be relayed before they are committed. only uses `CheckTx`
         - [consensus connection](#consensus-connection): for executing transactions that have been committed. Message sequence is, for every block, `BeginBlock, [DeliverTx, ...], EndBlock, Commit`
         - [query connection](#query-connection): for querying the application state.  only uses Query and Info
 
 <img src="../assets/images/abci.png">
 
-The mempool and consensus logic act as clients, and each maintains an open ABCI connection with the application, which hosts a ABCI server. Shown are the request and response types sent on each connection.
+The mempool and consensus logic act as clients, and each maintains an open ABCI connection with the application, which hosts an ABCI server. Shown are the request and response types sent on each connection.
 
 ## Message Protocol
 
@@ -47,7 +47,7 @@ See examples, in various stages of maintenance, in [Go](https://github.com/tende
 
 ### GRPC
 
-If GRPC is available in your language, this is the easiest approach, 
+If GRPC is available in your language, this is the easiest approach,
 though it will have significant performance overhead.
 
 To get started with GRPC, copy in the [protobuf file](https://github.com/tendermint/abci/blob/master/types/types.proto) and compile it using the GRPC plugin for your language.
@@ -72,7 +72,7 @@ There are currently two use-cases for an ABCI client.
 One is a testing tool, as in the `abci-cli`, which allows ABCI requests to be sent via command line.
 The other is a consensus engine, such as Tendermint Core, which makes requests to the application every time a new transaction is received or a block is committed.
 
-It is unlikely that you will need to implement a client. For details of our client, see [here](https://github.com/tendermint/abci/tree/master/client). 
+It is unlikely that you will need to implement a client. For details of our client, see [here](https://github.com/tendermint/abci/tree/master/client).
 
 ## Blockchain Protocol
 
@@ -88,13 +88,13 @@ To formalize the distinction further, two explicit ABCI connections are made bet
 
 ### Mempool Connection
 
-The mempool connection is used *only* for CheckTx requests. 
+The mempool connection is used *only* for CheckTx requests.
 Transactions are run using CheckTx in the same order they were received by the validator.
 If the CheckTx returns `OK`, the transaction is kept in memory and relayed to other peers in the same order it was received. Otherwise, it is discarded.
 
 CheckTx requests run concurrently with block processing;
 so they should run against a copy of the main application state which is reset after every block.
-This copy is necessary to track transitions made by a sequence of CheckTx requests before they are included in a block. When a block is committed, the application must ensure to reset the mempool state to the latest committed state. Tendermint Core will then filter through all transactions in the mempool, removing any that were included in the block, and re-run the rest using CheckTx against the post-Commit mempool state. 
+This copy is necessary to track transitions made by a sequence of CheckTx requests before they are included in a block. When a block is committed, the application must ensure to reset the mempool state to the latest committed state. Tendermint Core will then filter through all transactions in the mempool, removing any that were included in the block, and re-run the rest using CheckTx against the post-Commit mempool state.
 
 ### Consensus Connection
 
@@ -107,16 +107,16 @@ DeliverTx is the workhorse of the blockchain. Tendermint sends the DeliverTx req
 and relies on the underlying socket protocol (ie. TCP) to ensure they are received by the app in order. They have already been ordered in the global consensus by the Tendermint protocol.
 
 DeliverTx returns a abci.Result, which includes a Code, Data, and Log. The code may be non-zero (non-OK), meaning the corresponding transaction should have been rejected by the mempool,
-but may have been included in a block by a Byzantine proposer. 
+but may have been included in a block by a Byzantine proposer.
 
 The block header will be updated (TODO) to include some commitment to the results of DeliverTx, be it a bitarray of non-OK transactions, or a merkle root of the data returned by the DeliverTx requests, or both.
 
 #### Commit
 
-Once all processing of the block is complete, Tendermint sends the Commit request and blocks waiting 
+Once all processing of the block is complete, Tendermint sends the Commit request and blocks waiting
 for a response. While the mempool may run concurrently with block processing (the BeginBlock, DeliverTxs, and EndBlock), it is locked for the Commit request so that its state can be safely reset during Commit. This means the app *MUST NOT* do any blocking communication with the mempool (ie. broadcast_tx) during Commit, or there will be deadlock. Note also that all remaining transactions in the mempool are replayed on the mempool connection (CheckTx) following a commit.
 
-The Commit response includes a byte array, which is the deterministic state root of the application. It is included in the header of the next block. It can be used to provide easily verified Merkle-proofs of the state of the application. 
+The Commit response includes a byte array, which is the deterministic state root of the application. It is included in the header of the next block. It can be used to provide easily verified Merkle-proofs of the state of the application.
 
 It is expected that the app will persist state to disk on Commit. The option to have all transactions replayed from some previous block is the job of the [Handshake](#handshake).
 
@@ -126,8 +126,8 @@ The BeginBlock request can be used to run some code at the beginning of every bl
 
 The app should remember the latest height and header (ie. from which it has run a successful Commit) so that it can tell Tendermint where to pick up from when it restarts. See information on the Handshake, below.
 
-#### EndBlock 
- 
+#### EndBlock
+
 The EndBlock request can be used to run some code at the end of every block. Additionally, the response may contain a list of validators, which can be used to update the validator set. To add a new validator or update an existing one, simply include them in the list returned in the EndBlock response. To remove one, include it in the list with a `power` equal to `0`. Tendermint core will take care of updating the validator set. Note validator set changes are only available in v0.8.0 and up.
 
 ### Query Connection
@@ -136,7 +136,7 @@ This connection is used to query the application without engaging consensus. It'
 
 Tendermint Core currently uses the Query connection to filter peers upon connecting, according to IP address or public key. For instance, returning non-OK ABCI response to either of the following queries will cause Tendermint to not connect to the corresponding peer:
 
-- `p2p/filter/addr/<addr>`, where `<addr>` is an IP address. 
+- `p2p/filter/addr/<addr>`, where `<addr>` is an IP address.
 - `p2p/filter/pubkey/<pubkey>`, where `<pubkey>` is the hex-encoded ED25519 key of the node (not it's validator key)
 
 Note: these query formats are subject to change!

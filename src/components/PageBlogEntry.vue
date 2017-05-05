@@ -13,12 +13,11 @@
         :facebook-url="facebookUrl"
         :twitter-url="twitterUrl">
       </article-footer>
-      <section-comments></section-comments>
-      <btn-thumb
-        icon="chevron-left"
-        @click.native="gotoBlog">
-      </btn-thumb>
+      <!--<section-comments></section-comments>-->
     </ni-section>
+    <overlay-btns>
+      <overlay-btn icon="chevron-left" @click.native="gotoBlog"></overlay-btn>
+    </overlay-btns>
   </div>
 </template>
 
@@ -27,7 +26,8 @@ import { mapGetters } from 'vuex'
 import PageHeader from '@nylira/vue-page-header'
 import ArticleBody from '@nylira/vue-article-body'
 import ArticleFooter from './ArticleFooter'
-import BtnThumb from './BtnThumb'
+import OverlayBtns from './OverlayBtns'
+import OverlayBtn from './OverlayBtn'
 import NiSection from './NiSection'
 import SectionComments from './SectionComments'
 export default {
@@ -35,7 +35,8 @@ export default {
   components: {
     ArticleBody,
     ArticleFooter,
-    BtnThumb,
+    OverlayBtn,
+    OverlayBtns,
     NiSection,
     PageHeader,
     SectionComments

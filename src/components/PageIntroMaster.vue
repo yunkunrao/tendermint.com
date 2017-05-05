@@ -13,19 +13,22 @@
   <router-link :to="'/intro/getting-started/deploy-testnet'">3. Deploy Testnet</router-link>
   <router-link :to="'/intro/getting-started/next-steps'">4. Next Steps</router-link>
 </nav>
-  <btn-thumb v-show="isActive" icon="close"></btn-thumb>
-  <btn-thumb v-show="!isActive" icon="bars"></btn-thumb>
+  <overlay-btns>
+    <overlay-btn v-show="isActive" icon="close"></overlay-btn>
+    <overlay-btn v-show="!isActive" icon="bars"></overlay-btn>
+  </overlay-btns>
 </div><!--master-->
 </template>
 
 <script>
 import $ from 'jquery'
-import BtnThumb from './BtnThumb'
-
+import OverlayBtns from './OverlayBtns'
+import OverlayBtn from './OverlayBtn'
 export default {
-  name: 'page-docs-master',
+  name: 'page-intro-master',
   components: {
-    BtnThumb
+    OverlayBtn,
+    OverlayBtns
   },
   data () {
     return {
