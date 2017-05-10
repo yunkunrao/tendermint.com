@@ -28,6 +28,9 @@
 
     .ni-section-title, .key, a
       color lighten(mcolor,93%) !important
+      a
+        color lighten(mcolor, 50%) !important
+        font-weight 400
 
     .ni-section-main p, .value
       color lighten(mcolor,70%)
@@ -74,7 +77,7 @@
 
   .ni-section-dark
     .ni-section-header
-      border-bottom 1px solid lighten(mcolor, 10%)
+      border-color lighten(mcolor, 10%)
 
   .ni-section-title
     font-size 1.25rem

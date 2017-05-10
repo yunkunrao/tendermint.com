@@ -17,6 +17,7 @@
       <router-link to="/docs" @click.native="close" exact>Docs</router-link>
       <router-link to="/community" @click.native="close" exact>Community</router-link>
       <router-link to="/blog" @click.native="close" exact>Blog</router-link>
+      <router-link to="/careers" @click.native="close" exact>Careers</router-link>
       <router-link to="/about" @click.native="close" exact>About</router-link>
     </nav>
   </menu>
@@ -252,5 +253,5 @@ navc = #94c0ec
           background linear-gradient(top, lighten(mcolor, 10%), lighten(mcolor, 25%))
           cursor default
           &:hover
-            color txt
+            color navc
 </style>

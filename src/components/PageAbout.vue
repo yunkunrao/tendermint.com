@@ -2,7 +2,7 @@
   <page-split>
     <page-header
       title="About"
-      subtitle="All In Bits, Inc. is currently working full time on bringing <a href='https://cosmos.network'>Cosmos</a> to reality."
+      subtitle="All In Bits, Inc. is currently working full time on bringing <a href='https://cosmos.network'>Cosmos</a> to reality.<br><br><a href='/careers'>We are hiring!</a>"
       type="split"
       slot="header"
       theme="tendermint">

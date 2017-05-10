@@ -2,29 +2,41 @@
   <div class="page-career-entry">
     <page-header
       :title="career.title"
-      :subtitle="career.subtitle"
+      :subtitle="subtitle"
       theme="tendermint">
     </page-header>
     <article-body>
-      <p>This job can be full-time or part-time. We welcome people who are interested in working remotely as well as onsite in San Francisco or Toronto.</p>
-      <h2>Responsibilities</h2>
-      <ul class="responsibilities">
-        <li v-for="r in career.responsibilities" v-html="markdown(r)"></li>
+      <div v-if="career.description" v-html="markdownBlock(career.description)"></div>
+      <template v-if="career.requirements.length > 0">
+      <h2>We're looking for someone with&hellip;</h2>
+      <ul>
+        <li v-for="req in career.requirements" v-html="markdown(req)"></li>
       </ul>
-      <!--<h2>About this job</h2>-->
-      <h2>Benefits</h2>
-        <ul>
-          <li>Work from anywhere in the world</li>
-          <li>Stock</li>
-          <li>Competitive salary</li>
-          <li>Medical, dental, and vision insurance</li>
-          <li>And much more...</li>
-        </ul>
-      <h2>About Us</h2>
-      Tendermint's mission is to bring simplicity, security, and speed to the world’s blockchains.
-      <h2>Apply for this role</h2>
-      <p>Send us an email with your cover letter and resume:</p>
-      <a href="mailto:hello@tendermint.com" class="btn btn-large">hello@tendermint.com</a>
+      </template>
+      <h2>You'll  help us:</h2>
+      <ul>
+        <li v-for="task in career.tasks" v-html="markdown(task)"></li>
+      </ul>
+      <h2>We'll offer:</h2>
+      <ul>
+        <li>Competitive salary</li>
+        <li>Flexible hours (part-time or full-time)</li>
+        <li>Stock options</li>
+        <li>Medical, dental, and vision insurance</li>
+        <li>An environment with plenty of opportunities to learn and innovate</li>
+        <li>Exposure to cutting-edge blockchain technology</li>
+        <li>Potential to work remotely later on</li>
+        <li>And much more&hellip;</li>
+      </ul>
+      <h2>Get in touch</h2>
+      <template v-if="career.id === 'frontend-engineer'">
+        <p>Please submit a cover letter and resume to <a href="mailto:berlin@tendermint.com">berlin@tendermint.com</a>. Make sure to include availability dates and desired working hours per week. We'll write back as soon as we can.</p>
+      <btn size="lg" @click.native="email('berlin@tendermint.com')" icon="envelope-o" value="Send Application"></btn>
+      </template>
+      <template v-else>
+        <p>Please submit a cover letter and resume to <a href="mailto:hello@tendermint.com">hello@tendermint.com</a>. Make sure to include availability dates and desired working hours per week.  We'll write back as soon as we can.</p>
+        <btn size="lg" @click.native="email('hello@tendermint.com')" icon="envelope-o" value="Send Application"></btn>
+      </template>
     </article-body>
   </div>
 </template>
@@ -34,30 +46,42 @@ import PageHeader from '@nylira/vue-page-header'
 import ArticleBody from '@nylira/vue-article-body'
 import { mapGetters } from 'vuex'
 import MarkdownIt from 'markdown-it'
+import Btn from '@nylira/vue-button'
 let md = new MarkdownIt()
 export default {
   name: 'page-career-entry',
   components: {
+    Btn,
     PageHeader,
     ArticleBody
   },
   computed: {
+    subtitle () {
+      return this.capitalize(this.career.area) + ' Position at Tendermint'
+    },
     career () {
-      if (this.careers) {
-        return this.careers.find(j => j.id === this.$route.params.entry)
+      if (this.allCareers) {
+        return this.allCareers.find(c => c.id === this.$route.params.entry)
       }
       return {
         title: 'Loading...',
         subtitle: 'Loading...'
       }
     },
-    ...mapGetters({
-      careers: 'allCareers'
-    })
+    ...mapGetters(['allCareers'])
   },
   methods: {
+    capitalize (string) {
+      return string.charAt(0).toUpperCase() + string.slice(1)
+    },
     markdown (text) {
       return md.renderInline(text)
+    },
+    markdownBlock (text) {
+      return md.render(text)
+    },
+    email (address) {
+      window.location.href = 'mailto:' + address
     }
   },
   mounted () {
@@ -94,9 +118,9 @@ export default {
     &.active
       background darken(acolor,25%)
 
-  a.btn
-    width 18*x
-    text-decoration none
+  .ni-btn-wrapper
+    width 18rem
+    margin-bottom 1.5rem
   .article-body
     li
       p
