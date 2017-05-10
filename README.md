@@ -52,8 +52,15 @@ npm run docs
 # Edit Community > Team
 ./src/store/modules/people.js
 
-# Edit Community > Jobs
-./src/store/json/jobs.json
+# Edit Community > Careers
+./src/store/json/careers.json
+
+# For careers, the 'weight' key is how necessary the role is:
+# 4 = featured on homepage
+# 3 = high
+# 2 = medium
+# 1 = low
+# 0 = job is not listed
 
 # Edit Community > Presentations
 ./src/store/modules/presentations.js

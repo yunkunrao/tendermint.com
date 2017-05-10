@@ -6,18 +6,24 @@
       type="split"
       slot="header"
       theme="tendermint">
+      <!--
       <div class="tags">
         <div id="tag-all" class="tag active" @click="setActiveTag($event)">all</div>
         <div class="tag" v-for="tag in tags" @click="setActiveTag($event,tag)">{{ tag }}</div>
       </div>
+      -->
     </page-header>
     <ni-section>
-      <card-post
-        v-for="career in filteredCareers"
-        :key="career.id"
-        :url="'/careers/' + career.id"
-        :title="career.title" :desc="career.subtitle">
-      </card-post>
+      <div slot="title">Technical Positions</div>
+      <card-career v-for="c in technical" :key="c.id" :career="c"></card-career>
+    </ni-section>
+    <ni-section>
+      <div slot="title">Operations Positions</div>
+      <card-career v-for="c in operations" :key="c.id" :career="c"></card-career>
+    </ni-section>
+    <ni-section>
+      <div slot="title">Community Positions</div>
+      <card-career v-for="c in community" :key="c.id" :career="c"></card-career>
     </ni-section>
   </page-split>
 </template>
@@ -26,14 +32,14 @@
 import $ from 'jquery'
 import { mapGetters } from 'vuex'
 import { union, orderBy } from 'lodash'
-import CardPost from './CardPost'
+import CardCareer from './CardCareer'
 import NiSection from './NiSection'
 import PageHeader from '@nylira/vue-page-header'
 import PageSplit from '@nylira/vue-page-split'
 export default {
   name: 'page-careers-index',
   components: {
-    CardPost,
+    CardCareer,
     NiSection,
     PageHeader,
     PageSplit
@@ -46,19 +52,30 @@ export default {
       })
       return tags
     },
-    filteredCareers () {
+    technical () {
+      return this.careers.filter(c => c.area === 'technical')
+    },
+    operations () {
+      return this.careers.filter(c => c.area === 'operations')
+    },
+    community () {
+      return this.careers.filter(c => c.area === 'community')
+    },
+    careers () {
+      let orderedCareers = orderBy(this.allCareers, ['title'], ['asc'])
+      return orderedCareers
+
+      /*
       let activeTag = this.activeTag
-      let orderedCareers = orderBy(this.careers, ['weight'], ['asc'])
 
       if (activeTag === 'all') {
         return orderedCareers
       } else {
         return orderedCareers.filter(career => career.tags.includes(activeTag))
       }
+      */
     },
-    ...mapGetters({
-      careers: 'allCareers'
-    })
+    ...mapGetters(['allCareers'])
   },
   data () {
     return {

@@ -1,78 +1,367 @@
 [
   {
-    "id": "ethereum_engineer",
-    "title": "Software Engineer: Ethereum",
-    "subtitle": "Go, Ethereum",
-    "tags": ["go", "ethereum", "cryptocurrency"],
-    "weight": 3,
-    "active": true,
-    "responsibilities": [
-      "Develop and maintain Ethermint (https://github.com/tendermint/ethermint)",
-      "Contribute to Go-Ethereum",
-      "Develop a peg to Ethereum"
-    ]
+    "area": "technical",
+    "description": "",
+    "id": "technical-documentation-writer",
+    "location": ["Berlin", "San Francisco", "Toronto"],
+    "requirements": [
+      "General programming experience (2 years minimum)"
+    ],
+    "tasks": [
+      "Improve and write documentation/tutorials at https://tendermint.com/docs"
+    ],
+    "title": "Documentation Writer, Technical",
+    "weight": 3
   },
   {
-    "id": "cryptocurrency_engineer",
-    "title": "Software Engineer: Cryptocurrencies",
-    "subtitle": "Go, Cryptocurrency",
-    "tags": ["go", "cryptocurrency"],
-    "weight": 2,
-    "active": true,
-    "responsibilities": [
+    "area": "technical",
+    "description": "",
+    "id": "ethereum-developer",
+    "location": ["Berlin", "San Francisco", "Toronto"],
+    "requirements": [
+      "Significant golang experience",
+      "Ethereum developer experience (recommended)"
+    ],
+    "tasks": [
+      "Develop and maintain [ethermint](https://github.com/tendermint/ethermint)",
+      "Work on the Cosmos-Ethermint peg",
+      "Contribute to [go-ethereum](https://github.com/ethereum/go-ethereum)"
+    ],
+    "title": "Software Engineer, Ethereum",
+    "weight": 3
+  },
+  {
+    "area": "technical",
+    "description": "",
+    "id": "technical-project-manager",
+    "location": ["Berlin", "San Francisco", "Toronto"],
+    "requirements": [
+      "Project management experience"
+    ],
+    "tasks": [
+      "Improve communication between developers",
+      "Implement project management practices (Scrum or similar)"
+    ],
+    "title": "Project Manager, Technical",
+    "weight": 3
+  },
+  {
+    "area": "technical",
+    "description": "",
+    "id": "security-hardware-engineer",
+    "location": ["Berlin", "San Francisco", "Toronto"],
+    "requirements": [
+      "Experience elliptic curve crypto",
+      "Experience programming secure hardware"
+    ],
+    "tasks": [
+      "Develop solutions for secure signing",
+      "Normal users and Validators"
+    ],
+    "title": "Hardware Engineer, Security",
+    "weight": 7
+  },
+  {
+    "area": "technical",
+    "description": "",
+    "id": "devops-sysops-engineer",
+    "location": ["Berlin", "San Francisco", "Toronto"],
+    "requirements": [
+      "General programming experience (2 years)",
+      "Server administration skills",
+      "Knowledge of secure op-sec"
+    ],
+    "tasks": [
+      "Prepare Test Network and tooling",
+      "Prepare systems for cosmos deployment",
+      "Set up a powerful CI system",
+      "Manage internal server needs",
+      "Manage communication infrastructure - Riot, Matrix, IRC bridges, etc."
+    ],
+    "title": "Software Engineer, DevOps",
+    "weight": 1
+  },
+  {
+    "area": "technical",
+    "description": "Tendermint is a first-of-its kind Proof-of-Stake consensus engine in development since 2015. It is designed to provide developers maximum control in developing their own business logic in a blockchain setting, while relying on a secure consensus algorithm.\n\nWe’re looking for a motivated, experienced Javascript Engineer to work with backend blockchain engineers to develop web applications for novel blockchain applications.\n\nCosmos is a project by the core developers of tendermint to launch a highly-secure public blockchain on this technology. We have recently completed a fundraising round and are looking to rapidly expand, mainly centered around Berlin, Toronto, and San Francisco.\n\nUnder the umbrella of the cosmos system, we are building a number of custom blockchain apps for various usecases.  This position would first work on building some smaller applications to demonstrate and discover best practices with this platform, with the potential of later participating in developing the UI for the main comsos application.",
+    "id": "frontend-engineer",
+    "location": ["Berlin"],
+    "weight": 4,
+    "requirements": [
+      "Minimum 1 years experience in web engineering and Single-Page apps.",
+      "Strong proficiency in HTML2/CSS1/JavaScript (ES2)",
+      "Strong experience with Vue (prefered), ReactJS or AngularJS",
+      "Experience with TDD and willingness to write tests",
+      "Good level of English",
+      "Self-motivated and creative"
+    ],
+    "tasks": [
+      "Develop intuitive web-based interfaces that expose blockchain applications",
+      "Work closely with backend engineers (in Berlin and remote)",
+      "Give feedback to refine the design of the REST-based API, as well as general functionality",
+      "Provide a basic UI/UX design to your applications",
+      "Work with a remote designer if needed to polish the applications"
+    ],
+    "title": "Software Engineer, Frontend"
+  },
+  {
+    "area": "technical",
+    "description": "",
+    "id": "cryptocurrencies-engineer",
+    "location": ["Berlin", "San Francisco", "Toronto"],
+    "requirements": [
+      "Experience in golang",
+      "Experience developing cryptocurrencies"
+    ],
+    "tasks": [
       "Develop modules for building cryptocurrencies on Tendermint in Go",
       "Develop a cryptocurrency using those modules for use in the Cosmos Network"
-    ]
+    ],
+    "title": "Software Engineer, Cryptocurrency",
+    "weight": 1
   },
   {
-    "id": "consensus_engineer",
-    "title": "Software Engineer: Networking and Consensus",
-    "subtitle": "Golang, P2P, Distributed Consensus",
-    "tags": ["golang", "p2p", "consensus"],
-    "weight": 2,
-    "active": true,
-    "responsibilities": [
+    "area": "technical",
+    "description": "",
+    "id": "networking-consensus-engineer",
+    "location": ["Berlin", "San Francisco", "Toronto"],
+    "requirements": [
+      "Significant programming experience, 2+ years",
+      "Computer Science background highly desired",
+      "BFT or FT (e.g. Raft) knowledge desired"
+    ],
+    "tasks": [
       "Improve the implementation of the core Tendermint consensus algorithm and p2p network",
       "Develop a compatible implementation in another programming language"
-    ]
+    ],
+    "title": "Software Engineer, Consensus",
+    "weight": 2
   },
   {
-    "id": "developer_tooling",
-    "title": "Software Engineer: Developer Tooling",
-    "subtitle": "Golang, APIs",
-    "tags": ["golang", "tooling"],
-    "weight": 2,
-    "active": true,
-    "responsibilities": [
+    "area": "technical",
+    "description": "",
+    "id": "developer-tooling-engineer",
+    "location": ["Berlin", "San Francisco", "Toronto"],
+    "requirements": [
+      "Golang, Tooling, APIs"
+    ],
+    "tasks": [
       "Improve and maintain the Tendermint RPC system",
       "Improve and maintain the various CLIs and example applications",
       "Improve and maintain common libraries",
       "Write demos for different Tendermint apps and behaviour"
-    ]
+    ],
+    "title": "Software Engineer, Tooling",
+    "weight": 1
   },
   {
-    "id": "devops_engineer",
-    "title": "DevOps/SysOps Engineer",
-    "subtitle": "DevOps, Continuous Integration, Cloud, Docker, Golang",
-    "tags": ["devops", "cloud", "automation"],
-    "weight": 1,
-    "active": true,
-    "responsibilities": [
-      "Automate more elements of building, testing, and releasing the software via Continuous Integration",
-      "Architect strategies and implement solutions for deploying and managing blockchain networks using the Infrastructure-As-Code paradigm"
-    ]
-  },
-  {
-    "id": "research_engineer",
+    "area": "technical",
+    "description": "",
+    "id": "research-scientist",
+    "location": ["Berlin", "San Francisco", "Toronto"],
+    "requirements": [
+      "Cryptography, Distributed Consensus, Economics, Formal Verification"
+    ],
+    "tasks": [
+      "cryptoeconomics",
+      "advice us on best practices for governance models. consider checks and balances as well as collaborative decision making processes"
+    ],
     "title": "Research Scientist",
-    "subtitle": "Cryptography, Distributed Consensus, Economics, Formal Verification",
-    "tags": ["research"],
-    "weight": 5,
-    "active": true,
-    "responsibilities": [
-      "Analyze, audit, verify, and improve Tendermint protocols and implementations",
-      "Research in cryptoeconomics and related fields such as BFT consensus algorithms and game theory",
-      "Publish blog posts and papers on findings"
-    ]
+    "weight": 2
+  },
+  {
+    "area": "technical",
+    "id": "technical-community-manager",
+    "location": ["Berlin", "San Francisco", "Toronto"],
+    "requirements": [
+      "General programming skills",
+      "Technical management skills"
+    ],
+    "tasks": [
+      "Run and test different ABCI apps",
+      "Make sure breaking changes are fixed",
+      "Coordinate GitHub issues"
+    ],
+    "title": "Community Manager, Technical",
+    "weight": 2
+  },
+  {
+    "area": "technical",
+    "description": "",
+    "id": "product-manager-governance",
+    "location": ["Berlin", "San Francisco", "Toronto"],
+    "requirements": [
+      "Experience with governance and decision making"
+    ],
+    "tasks": [
+      "Design flexible and constructive governance models",
+      "Integrate best practices for decision making",
+      "Consider stakes, attacks, corruption for resilient model"
+    ],
+    "title": "Product Manager, Governance",
+    "weight": 3
+  },
+  {
+    "area": "technical",
+    "description": "",
+    "id": "solidity-engineer",
+    "location": ["Berlin", "San Francisco", "Toronto"],
+    "tasks": [
+      "Write solidity smart contracts for ETH Peg"
+    ],
+    "requirements": [
+      "Experienced solidity developer"
+    ],
+    "title": "Software Engineer, Solidity",
+    "weight": 3
+  },
+  {
+    "area": "operations",
+    "description": "",
+    "id": "finance-manager",
+    "location": ["Berlin", "San Francisco", "Toronto"],
+    "requirements": [
+      "Economic and financial experience"
+    ],
+    "tasks": [
+      "Keep accounting system current",
+      "Process expenses",
+      "Create monthly financial summary",
+      "Manage cryptocurrency, bank, and exchange accounts",
+      "Work with external accountants for tax reporting etc."
+    ],
+    "title": "Finance Manager",
+    "weight": 4
+  },
+  {
+    "area": "operations",
+    "description": "",
+    "id": "operations-manager",
+    "location": ["Berlin", "San Francisco", "Toronto"],
+    "requirements": [
+      "Business administration and legal experience"
+    ],
+    "tasks": [
+      "Create and organize legal documents, employment contracts, etc",
+      "Manage contracts/compliance of Interchain-AIB contracts and AIB-Subsidiaries contracts",
+      "Manage hiring process (categorizing incoming applications, assigning interviews, etc)"
+    ],
+    "title": "Operations Manager",
+    "weight": 1
+  },
+  {
+    "area": "operations",
+    "id": "administrative-assistant",
+    "location": ["Berlin", "San Francisco", "Toronto"],
+    "requirements": [],
+    "tasks": [
+      "Scheduling travels, retreats",
+      "Research support"
+    ],
+    "title": "Administrative Assistant",
+    "weight": 3
+  },
+  {
+    "area": "community",
+    "description": "",
+    "id": "slack-manager",
+    "location": ["Berlin", "San Francisco", "Toronto"],
+    "requirements": [
+      "Moderation experience"
+    ],
+    "tasks": [
+      "Respond to frequent questions and refer to relevant resources",
+      "Compile a FAQ",
+      "Ensure channels are used appropriately, create new ones when required",
+      "Manage spam, abusive comments",
+      "Contain prices/speculation discussion",
+      "Ping team if answers are needed"
+    ],
+    "title": "Slack Manager",
+    "weight": 3
+  },
+  {
+    "area": "community",
+    "description": "",
+    "id": "communications-manager",
+    "location": ["Berlin", "San Francisco", "Toronto"],
+    "requirements": [],
+    "tasks": [
+      "Support developing communication strategy",
+      "Manage editorial calendar / content production",
+      "Plan/manage speaking engagements and conferences",
+      "Support CosmoCon organization",
+      "Write monthly Cosmos newsletter",
+      "Organize regular Community hangouts",
+      "Seed/organize Cosmos meetup groups"
+    ],
+    "title": "Communications Manager",
+    "weight": 1
+  },
+  {
+    "area": "community",
+    "description": "",
+    "id": "social-media-growth-manager",
+    "location": ["Berlin", "San Francisco", "Toronto"],
+    "requirements": [],
+    "tasks": [
+      "Grow social media accounts by selective liking/following",
+      "Manage social media accounts (Cosmos, Interchain, possibly Tendermint)"
+    ],
+    "title": "Social Media Growth Manager",
+    "weight": 1
+  },
+  {
+    "area": "community",
+    "description": "",
+    "id": "blog-copywriter",
+    "location": ["Berlin", "San Francisco", "Toronto"],
+    "requirements": [],
+    "tasks": [
+      "Write stories about the Internet of Blockchains",
+      "Show how people are using Cosmos",
+      "Hype events"
+    ],
+    "title": "Blog Copywriter",
+    "weight": 1
+  },
+  {
+    "area": "community",
+    "description": "",
+    "id": "graphics-designer",
+    "location": ["Berlin", "San Francisco", "Toronto"],
+    "requirements": [],
+    "tasks": [
+      "Generate consistent stylized graphics for blog posts/website/printed materials"
+    ],
+    "title": "Graphics Designer",
+    "weight": 1
+  },
+  {
+    "area": "community",
+    "description": "",
+    "id": "partnership-manager",
+    "location": ["Berlin", "San Francisco", "Toronto"],
+    "requirements": [],
+    "tasks": [
+      "Compile inventory of projects building on Tendermint/Cosmos",
+      "Gather requirements from projects and communicate to tech team",
+      "Develop and maintain relationships with exchanges for Cosmos launch",
+      "Support Cosmos validators"
+    ],
+    "title": "Partnership Manager",
+    "weight": 1
+  },
+  {
+    "area": "community",
+    "description": "",
+    "id": "pr-manager",
+    "location": ["Berlin", "San Francisco", "Toronto"],
+    "requirements": [],
+    "tasks": [
+      "Constantly get Cosmos / IoB stories in the mainstream and industry press"
+    ],
+    "title": "PR Manager",
+    "weight": 1
   }
 ]
