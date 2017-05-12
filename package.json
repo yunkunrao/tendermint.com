@@ -16,10 +16,11 @@
     "build": "node build/blog.js && node build/docs.js && node build/build.js"
   },
   "dependencies": {
-    "@nylira/vue-button": "^2.0.5",
-    "@nylira/vue-input": "^2.1.2",
-    "@nylira/vue-page-header": "^2.1.5",
-    "@nylira/vue-page-split": "^2.1.1",
+    "vue": "^2.2.2",
+    "vue-router": "^2.2.0"
+  },
+  "devDependencies": {
+    "xml-loader": "^1.2.1",
     "cheerio": "^0.22.0",
     "es6-template-strings": "^2.0.1",
     "json-loader": "^0.5.4",
@@ -27,12 +28,11 @@
     "nib": "^1.1.2",
     "rss": "^1.2.2",
     "stylus-loader": "^2.4.0",
-    "vue": "^2.2.2",
-    "vue-router": "^2.2.0",
-    "xml-loader": "^1.2.1"
-  },
-  "devDependencies": {
-    "@nylira/vue-article-body": "^2.1.7",
+    "@nylira/vue-button": "^2.0.5",
+    "@nylira/vue-input": "^2.1.2",
+    "@nylira/vue-page-split": "^2.1.1",
+    "@nylira/vue-article-body": "^2.1.8",
+    "@nylira/vue-page-header": "^2.1.8",
     "autoprefixer": "^6.7.2",
     "babel-core": "^6.22.1",
     "babel-eslint": "^7.1.1",
