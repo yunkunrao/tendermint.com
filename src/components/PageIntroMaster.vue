@@ -22,10 +22,10 @@
 
 <script>
 import $ from 'jquery'
-import OverlayBtns from './OverlayBtns'
 import OverlayBtn from './OverlayBtn'
+import OverlayBtns from './OverlayBtns'
 export default {
-  name: 'page-intro-master',
+  name: 'page-docs-master',
   components: {
     OverlayBtn,
     OverlayBtns
