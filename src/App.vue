@@ -9,7 +9,6 @@
 <script>
 import AppHeader from './components/AppHeader'
 import AppFooter from './components/AppFooter'
-
 export default {
   name: 'app',
   components: {
@@ -39,14 +38,6 @@ export default {
       { r: 'icon', t: 'image/png', sz: '16x16', h: require('./assets/images/favicon/favicon-16x16.png') },
       { r: 'manifest', h: require('./assets/images/favicon/manifest.json') }
     ]
-  },
-  mounted () {
-    this.$store.commit('calcStartDate')
-    this.$store.commit('calcEndDate')
-    this.$store.commit('calcPdtStartDate')
-    this.$store.commit('calcLocalStartDate')
-    // this.$store.commit('refreshTimers')
-    // setInterval(() => this.$store.commit('refreshTimers'), 1000)
   }
 }
 </script>
