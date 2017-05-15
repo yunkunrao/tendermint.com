@@ -8,14 +8,16 @@
       <p class="introduction">Byzantine fault-tolerant replicated state machines in any programming language</p>
       <div class="btns">
         <btn
-          @click.native="go('/download')"
+          type="link"
+          to="/download"
           size="lg"
           icon="cloud-download"
           theme="tendermint"
           value="Download">
         </btn>
         <btn
-          @click.native="go('/intro')"
+          type="link"
+          to="/intro"
           size="lg"
           icon="question"
           theme="alpha-black"
@@ -34,9 +36,6 @@ export default {
   components: {
     SectionHomeCoverAlert,
     Btn
-  },
-  methods: {
-    go (destination) { this.$router.push(destination) }
   }
 }
 </script>
@@ -79,10 +78,10 @@ export default {
 
   .btns
     margin-bottom x
-    .ni-btn-wrapper
+    .ni-btn
       width 100%
       margin-bottom 0.5*x
-      max-width 16*x
+      max-width 18*x
 
   .source
     color lighten(mcolor,50%)
@@ -123,7 +122,7 @@ export default {
       display flex
       flex-flow row nowrap
       max-width 32*x
-      .ni-btn-wrapper
+      .ni-btn
         margin 0
         margin-right x
 

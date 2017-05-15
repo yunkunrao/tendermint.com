@@ -4,8 +4,9 @@
     <section class="section-bottom">
       <h2>Get Started</h2>
       <btn
+        type="link"
         id="download-button"
-        @click.native="go('/download')"
+        to="/download"
         size="lg"
         icon="cloud-download"
         theme="tendermint"
@@ -29,9 +30,6 @@ export default {
     FormEmailSignup,
     Btn,
     SectionCosmos
-  },
-  methods: {
-    go (destination) { this.$router.push(destination) }
   }
 }
 </script>

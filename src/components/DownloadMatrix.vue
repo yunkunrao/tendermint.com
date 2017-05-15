@@ -5,12 +5,12 @@
       <div class="key-value">
         <div class="key">tendermint <span class="version">0.9.2</span></div>
         <div class="value">
-          <btn icon="linux" value="Linux"
-            @click.native="dl('linux', 'tendermint', '0.9.2')"></btn>
-          <btn icon="apple" value="macOS"
-            @click.native="dl('darwin', 'tendermint', '0.9.2')"></btn>
-          <btn icon="windows" value="Windows"
-            @click.native="dl('windows', 'tendermint', '0.9.2')"></btn>
+          <btn type="anchor" icon="linux" value="Linux"
+            :href="dl('linux', 'tendermint', '0.9.2')"></btn>
+          <btn type="anchor"  icon="apple" value="macOS"
+            :href="dl('darwin', 'tendermint', '0.9.2')"></btn>
+          <btn type="anchor"  icon="windows" value="Windows"
+            :href="dl('windows', 'tendermint', '0.9.2')"></btn>
         </div>
       </div>
     </div>
@@ -19,12 +19,12 @@
       <div class="key-value">
         <div class="key">abci <span class="version">0.4.1</span></div>
         <div class="value">
-          <btn icon="linux" value="Linux"
-            @click.native="dl('linux', 'abci', '0.4.1')"></btn>
-          <btn icon="apple" value="macOS"
-            @click.native="dl('darwin', 'abci', '0.4.1')"></btn>
-          <btn icon="windows" value="Windows"
-            @click.native="dl('windows', 'abci', '0.4.1')"></btn>
+          <btn type="anchor"  icon="linux" value="Linux"
+            :href="dl('linux', 'abci', '0.4.1')"></btn>
+          <btn type="anchor"  icon="apple" value="macOS"
+            :href="dl('darwin', 'abci', '0.4.1')"></btn>
+          <btn type="anchor"  icon="windows" value="Windows"
+            :href="dl('windows', 'abci', '0.4.1')"></btn>
         </div>
       </div>
     </div>
@@ -33,12 +33,12 @@
       <div class="key-value">
         <div class="key">basecoin <span class="version">0.4.0</span></div>
         <div class="value">
-          <btn icon="linux" value="Linux"
-            @click.native="dl('linux', 'basecoin', '0.4.0')"></btn>
-          <btn icon="apple" value="macOS"
-            @click.native="dl('darwin', 'basecoin', '0.4.0')"></btn>
-          <btn icon="windows" value="Windows"
-            @click.native="dl('windows', 'basecoin', '0.4.0')"></btn>
+          <btn type="anchor"  icon="linux" value="Linux"
+            :href="dl('linux', 'basecoin', '0.4.0')"></btn>
+          <btn type="anchor"  icon="apple" value="macOS"
+            :href="dl('darwin', 'basecoin', '0.4.0')"></btn>
+          <btn type="anchor"  icon="windows" value="Windows"
+            :href="dl('windows', 'basecoin', '0.4.0')"></btn>
         </div>
       </div>
     </div>
@@ -47,12 +47,12 @@
       <div class="key-value">
         <div class="key">merkleeyes <span class="version">0.1.0</span></div>
         <div class="value">
-          <btn icon="linux" value="Linux"
-            @click.native="dl('linux', 'merkleeyes', '0.1.0')"></btn>
-          <btn icon="apple" value="macOS"
-            @click.native="dl('darwin', 'merkleeyes', '0.1.0')"></btn>
-          <btn icon="windows" value="Windows"
-            @click.native="dl('windows', 'merkleeyes', '0.1.0')"></btn>
+          <btn type="anchor"  icon="linux" value="Linux"
+            :href="dl('linux', 'merkleeyes', '0.1.0')"></btn>
+          <btn type="anchor"  icon="apple" value="macOS"
+            :href="dl('darwin', 'merkleeyes', '0.1.0')"></btn>
+          <btn type="anchor"  icon="windows" value="Windows"
+            :href="dl('windows', 'merkleeyes', '0.1.0')"></btn>
         </div>
       </div>
     </div>
@@ -69,7 +69,7 @@ export default {
   methods: {
     dl (os, name, version) {
       let href = `https://s3-us-west-2.amazonaws.com/tendermint/binaries/${name}/v${version}/${name}_${version}_${os}_amd64.zip`
-      window.location.href = href
+      return href
     }
   }
 }
@@ -106,7 +106,7 @@ export default {
     .value
       display flex
       margin-bottom 0.75em
-      .ni-btn-wrapper
+      .ni-btn
         max-width 8rem
         flex 1
         margin-right 0.25rem
@@ -128,7 +128,7 @@ export default {
   .download-matrix
     .bin
       .value
-        .ni-btn-wrapper
+        .ni-btn
           margin-right 0.375rem
 
 @media screen and (min-width: 768px)
@@ -141,7 +141,7 @@ export default {
       .key-value
         padding 0 1rem
       .value
-        .ni-btn-wrapper
+        .ni-btn
           margin-right 0.5rem
 
 @media screen and (min-width: 1024px)
@@ -152,7 +152,7 @@ export default {
       .key
         margin-top 0.25rem
       .value
-        .ni-btn-wrapper
+        .ni-btn
           margin-right 1rem
           .ni-btn-value
             display inline
