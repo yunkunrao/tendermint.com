@@ -6,9 +6,9 @@
   version "2.1.8"
   resolved "https://registry.yarnpkg.com/@nylira/vue-article-body/-/vue-article-body-2.1.8.tgz#28b37122ffd21f36ad1662959e9a03eed2af7389"
 
-"@nylira/vue-button@2.0.5":
-  version "2.0.5"
-  resolved "https://registry.yarnpkg.com/@nylira/vue-button/-/vue-button-2.0.5.tgz#2a1ead031f6853174b13721442cd8124ce9da9f4"
+"@nylira/vue-button@^3.0.15":
+  version "3.0.15"
+  resolved "https://registry.yarnpkg.com/@nylira/vue-button/-/vue-button-3.0.15.tgz#ad3126df09d43e553d61b9ef662c9af282dfafc1"
 
 "@nylira/vue-input@2.1.2":
   version "2.1.2"

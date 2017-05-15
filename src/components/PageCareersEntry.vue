@@ -34,8 +34,8 @@
       <btn size="lg" @click.native="email('berlin@tendermint.com')" icon="envelope-o" value="Send Application"></btn>
       </template>
       <template v-else>
-        <p>Please submit a cover letter and resume to <a href="mailto:hello@tendermint.com">hello@tendermint.com</a>. Make sure to include availability dates and desired working hours per week.  We'll write back as soon as we can.</p>
-        <btn size="lg" @click.native="email('hello@tendermint.com')" icon="envelope-o" value="Send Application"></btn>
+        <p>Please submit a cover letter and resume to <a href="mailto:careers@tendermint.com">careers@tendermint.com</a>. Make sure to include availability dates and desired working hours per week.  We'll write back as soon as we can.</p>
+        <btn type="anchor" size="lg" href="mailto:careers@tendermint.com" icon="envelope-o" value="Send Application"></btn>
       </template>
     </article-body>
   </div>
