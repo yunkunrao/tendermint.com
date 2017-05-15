@@ -24,13 +24,13 @@ Make sure you're running Node 6 LTS or higher.
 
 ``` bash
 # install dependencies
-npm install
+yarn install
 
 # write some required files
-npm run build
+yarn run build
 
 # serve with hot reload at localhost:8800
-npm run dev
+yarn run dev
 ```
 
 ## 5-Second Editing Guide
@@ -39,12 +39,12 @@ npm run dev
 
 # Edit Blog > Posts
 ./content/blog/
-npm run blog
+yarn run blog
 
 # Edit Documenation
 ./content/intro/
 ./content/docs/
-npm run docs
+yarn run docs
 
 # Edit Community > Software Ecosystem
 ./src/store/json/software.json
@@ -104,4 +104,4 @@ HTML IDs are automatically generated for headings. You can link to them, but ple
 
 Please run the following command to build all documentation.
 
-    npm run docs
+    yarn run docs
