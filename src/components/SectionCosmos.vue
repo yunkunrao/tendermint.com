@@ -8,12 +8,13 @@
       <main class="section-cosmos-main">
         <div class="section-cosmos-description">Fundraiser has ended on April 6th, 6:28AM PDT. Thank you for your contributions!</div>
         <btn
+          type="anchor"
+          :href="config.FUNDRAISER_URL"
           class="section-cosmos-btn"
           size="lg"
           value="View Fundraiser"
           theme="tendermint"
-          icon="bar-chart"
-          @click.native="gotoFundraiser">
+          icon="bar-chart">
         </btn>
       </main>
     </div>
@@ -30,14 +31,6 @@ export default {
   },
   computed: {
     ...mapGetters(['config'])
-  },
-  methods: {
-    gotoCosmos () {
-      window.location.href = this.config.SELF_URL
-    },
-    gotoFundraiser () {
-      window.location.href = this.config.FUNDRAISER_URL
-    }
   }
 }
 </script>
@@ -73,7 +66,7 @@ export default {
 .section-cosmos-form .input-group
   margin 0
 
-.section-cosmos-btn.ni-btn-wrapper
+.section-cosmos-btn.ni-btn
   width 100%
   margin 0 auto
   max-width 18rem
