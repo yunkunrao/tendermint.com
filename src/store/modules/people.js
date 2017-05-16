@@ -138,7 +138,7 @@ const state = {
       slug: 'adrian-brink',
       name: 'Adrian Brink',
       title: 'Software Engineer',
-      bio: 'Adrian is a software engineer that aims to bring the cryptocurrency revolution to the masses. Broad adoption and ubiquitousness will drive the change we want to see.'
+      bio: 'Adrian is a software engineer that aims to bring the cryptocurrency revolution to the masses. Broad adoption and ubiquitousness will drive the change we want to see.',
       ids: {
         email: 'adrian',
         github: 'adrianbrink',
