@@ -135,6 +135,20 @@ const state = {
       category: 'member'
     },
     {
+      slug: 'adrian-brink',
+      name: 'Adrian Brink',
+      title: 'Software Engineer',
+      bio: 'Adrian is a software engineer that aims to bring the cryptocurrency revolution to the masses. Broad adoption and ubiquitousness will drive the change we want to see.'
+      ids: {
+        email: 'adrian',
+        github: 'adrianbrink',
+        keybase: 'adrianbrink',
+        linkedin: 'adrianbrink',
+        twitter: 'adrian_brink'
+      },
+      category: 'member'
+    },
+    {
       slug: 'henny-han',
       name: 'Ash Han',
       title: 'Advisor',
