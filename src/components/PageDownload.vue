@@ -3,7 +3,8 @@
     <master slot="master"></master>
     <article-body slot="detail">
       <h1>Download Tendermint</h1>
-      <p>Tendermint 0.9.2 has been released! View <router-link to="/blog/tendermint-0-9-1-release">latest changes</router-link>.</p>
+
+      <p>Tendermint 0.10.0-rc1 has been released! View <router-link to="https://github.com/tendermint/tendermint/blob/master/CHANGELOG.md#0100-may-18-2017">latest changes</router-link>.</p>
 
       <download-matrix></download-matrix>
 
