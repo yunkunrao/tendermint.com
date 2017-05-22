@@ -45,14 +45,14 @@
     <div class="bin bin-merkleeyes">
       <div class="title"><img src="../assets/images/icon-merkleeyes.png"></div>
       <div class="key-value">
-        <div class="key">merkleeyes <span class="version">0.2.0</span></div>
+        <div class="key">merkleeyes <span class="version">0.1.0</span></div>
         <div class="value">
           <btn type="anchor"  icon="linux" value="Linux"
-            :href="dl('linux', 'merkleeyes', '0.2.0')"></btn>
+            :href="dl('linux', 'merkleeyes', '0.1.0')"></btn>
           <btn type="anchor"  icon="apple" value="macOS"
-            :href="dl('darwin', 'merkleeyes', '0.2.0')"></btn>
+            :href="dl('darwin', 'merkleeyes', '0.1.0')"></btn>
           <btn type="anchor"  icon="windows" value="Windows"
-            :href="dl('windows', 'merkleeyes', '0.2.0')"></btn>
+            :href="dl('windows', 'merkleeyes', '0.1.0')"></btn>
         </div>
       </div>
     </div>
