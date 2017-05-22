@@ -4,7 +4,7 @@
     <article-body slot="detail">
       <h1>Download Tendermint</h1>
 
-      <p>Tendermint 0.10.0-rc1 has been released! View <a href="https://github.com/tendermint/tendermint/blob/master/CHANGELOG.md#0100-may-18-2017">latest changes</a>.</p>
+      <p>Tendermint 0.10.0-rc1 has been released! View <a href="https://github.com/tendermint/tendermint/blob/master/CHANGELOG.md#0100-may-18-2017">latest changes</a> on GitHub.</p>
 
       <download-links></download-links>
 
