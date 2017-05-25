@@ -6,6 +6,7 @@
         <section>
           <img src="../assets/images/logo-white-alpha-160.png" class="footer-logo">
           <span>&copy; {{ new Date().getFullYear() }} All In Bits, Inc.</span>
+          <span>29th Floor, 85 Broad St, New York, NY 10004</span>
         </section>
         <section>
           <header>Company</header>
