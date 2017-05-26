@@ -28,7 +28,7 @@ Depending on how cutting edge you would like to be, you can choose between the
 
 ### Install go1.8
 To explore the possibilities of Ethermint you need a couple of prerequisites.
-First, you need to have go1.8 installed and your $GOPATH properly configured.
+First, you need to have [go1.8](https://golang.org/doc/install) installed and your $GOPATH properly configured.
 This is necessary since while we are currently not shipping binaries for 
 Ethermint.
 
@@ -37,6 +37,7 @@ The second requirement is that you are able to run a Tendermint node, since this
 engine handles all the blockchain aspects, like P2P and consensus. To install
 Tendermint just run `go get -u github.com/tendermint/tendermint/cmd/tendermint` 
 and you should be good to go. If not follow this [link](https://tendermint.com/docs/guides/install).
+As an alternative you can also download [binaries](https://tendermint.com/download).
 
 ### Install Ethermint
 Lastly, we need to install `ethermint` itself. First clone the source code 
