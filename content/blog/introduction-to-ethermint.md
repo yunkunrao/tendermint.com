@@ -29,7 +29,7 @@ Depending on how cutting edge you would like to be, you can choose between the
 ### Install go1.8
 To explore the possibilities of Ethermint you need a couple of prerequisites.
 First, you need to have [go1.8](https://golang.org/doc/install) installed and your $GOPATH properly configured.
-This is necessary since while we are currently not shipping binaries for 
+This is necessary since we are currently not shipping binaries for 
 Ethermint.
 
 ### Install Tendermint
