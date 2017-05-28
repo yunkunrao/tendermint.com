@@ -45,8 +45,8 @@ Lastly, we need to install `ethermint` itself. First clone the source code
 the source code directory and run `make install` and voila, Ethermint should be
 installed.
 
-### Installing geth
-Geth as an Ethereum tool that allows you to attach to a running Ethereum node
+### Install geth
+Geth is an Ethereum tool that allows you to attach to a running Ethereum node
 over RPC. We will use it later to interact with Ethermint. Please follow this
 [guide](https://github.com/ethereum/go-ethereum/wiki/Building-Ethereum) to install
 it on your local machine.
@@ -68,7 +68,7 @@ This tells Ethermint to expose a lot of its functionality over RPC.
 At this stage you should see blocks streaming by in both the Tendermint and the
 Ethermint windows.
 
-### Attaching geth
+### Attaching geth to Ethermint
 In a third terminal window run `geth attach http://localhost:8545`. Now you
 should find yourself in a console environment, where you can use the [Web3](https://github.com/ethereum/wiki/wiki/JavaScript-API)
 commands to interact with the Ethermint node.
