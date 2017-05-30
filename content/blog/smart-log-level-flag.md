@@ -13,7 +13,7 @@ One of the exiting new features in 0.10.0 release is smart `--log_level` flag,
 which now can accept complex queries.
 
 Before, one only could set logging level to either notice, info, warning, debug
-or error (we got rid of the notice and warning levels in the new release).
+or error, and we got rid of the notice and warning levels in the new release.
 
 Now, you are able to set different log level for modules:
 
@@ -22,17 +22,17 @@ Now, you are able to set different log level for modules:
 --log_level=”state:info,mempool:error”
 ```
 
-It will work for any `module=...`. Some of the most known are: consensus,
+It will work for any `module=...`. Some of the most important are: consensus,
 state, p2p, mempool, proxy, node.
 
-Info level (default) would be used for all other modules. To change that you
+Info level (default) is used for all other modules. To change that you
 can use * symbol:
 
 ```
 --log_level=”state:info,mempool:error,*:error”
 ```
 
-These are equivalents:
+These are equivalent:
 
 ```
 --log_level=”info”
@@ -40,10 +40,10 @@ These are equivalents:
 ```
 
 There is a new `none` level, which can be used to suppress the output for some
-modules (or all of them).
+or all modules.
 
 ```
 --log_level=”mempool:error,*:none”
 ```
 
-Have fun playing with them! Hope you liked it.
+Have fun playing with them! Hope you like it.
