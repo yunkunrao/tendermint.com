@@ -12,7 +12,7 @@ categories:
 # Get your cryptocurrency up and running in 10 minutes
 
 So, your Tendermint application is finally ready and you want to distribute it
-and run it on several machines. Or just run it locally by creating a dozen
+and run it on several machines, or just run it locally by creating a dozen
 Docker containers. We have created
 [mintnet-kubernetes](https://github.com/tendermint/tools/tree/master/mintnet-kubernetes)
 to help you achieve this goal as fast as possible. Note that it should be
@@ -24,7 +24,7 @@ using [our set of
 Ansible](https://github.com/tendermint/tools/tree/master/ansible-tendermint)
 scripts to deploy Tendermint.
 
-mintnet-kubernetes - is nothing but a configuration file for
+`mintnet-kubernetes` is a configuration file for
 [Kubernetes](https://kubernetes.io/).
 
 _Kubernetes is an open-source system for automating deployment, scaling, and
@@ -38,7 +38,7 @@ take long, I promise.
 
 There are several ways to install a Kubernetes cluster:
 
-- local Docker-based solution using
+- a local Docker-based solution using
   [Minikube](https://github.com/kubernetes/minikube)
 - hosted solutions using a Web UI or CLI (e.g. GCE)
 - turn-key cloud solutions (e.g. AWS using [Kubernetes
@@ -52,14 +52,14 @@ If you just want to play with your application, choose a local installation
 with Minikube. If you want to run it in the cloud or on bare metal, refer to
 [Picking the Right
 Solution](https://kubernetes.io/docs/getting-started-guides), taking into
-account cost, safety, reliability, and configuration options of those
+account the cost, safety, reliability, and configuration options of those
 solutions.
 
 Further, we will assume that you have a standard 64-bit Linux desktop with
 [VirtualBox](https://www.virtualbox.org/wiki/Downloads) or
 [KVM](http://www.linux-kvm.org/) installed.
 
-1) Installing kubectl
+1) Installing `kubectl`
 
 ```bash
 curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl && chmod +x ./kubectl && sudo mv ./kubectl /usr/local/bin/kubectl
@@ -84,7 +84,7 @@ page.
 minikube start
 ```
 
-4) Downloading a template of configuration for our future cluster
+4) Downloading a configuration template for our future cluster
 
 ```shell
 curl -Lo app.yaml https://raw.githubusercontent.com/tendermint/tools/master/mintnet-kubernetes/examples/basecoin/app.yaml
@@ -101,8 +101,8 @@ extensible with plugins. Writing plugins is out of scope of this article, but
 you can read about it
 [here](https://github.com/tendermint/basecoin/blob/master/docs/guide/basecoin-plugins.md).
 
-Kubernetes DSL (Domain Specific Language) could be difficult for the beginner
-to grasp. Fortunately, we will need to change only a small piece of code.
+Kubernetes DSL (Domain Specific Language) can be difficult for the beginner to
+grasp. Fortunately, we will need to change only a small piece of code.
 
 The most important thing is the application’s genesis.json file. It defines the
 initial distribution of assets. We have 4 nodes by default (`replicas: 4`in
@@ -200,8 +200,8 @@ Signed SendTx:
 {"gas":0,"fee":{"denom":"coin","amount":0},"inputs":[{"address":"DD78A910967982FADF492BCBCFEFA237953A70E4","coins":[{"denom":"MyAwesomeCoin","amount":5}],"sequence":1,"signature":[1,"A091D998E033599471111D8D5F004C3ECB1B15570A83A829293604F107ABF3A02879FBB9DD884263CFC9B468929CB30183F66F9D4C12675E3B69064CFA713803"],"pub_key":[1,"9D9BB981166532214A9A0EE452F302ADD1D2C7163314CE9B4A1322329CA5750F"]}],"outputs":[{"address":"4FCDC7498E4F0B378757FCBD550ED40A5C14600B","coins":[{"denom":"MyAwesomeCoin","amount":5}]}]}
 ```
 
-Checking first account’s balance we should see 5 coins making their way into
-the second account:
+Checking the first account’s balance we should see 5 coins making their way
+into the second account:
 
 ```shell
 kubectl exec -c app tm-0 -- basecoin account $ADDR
