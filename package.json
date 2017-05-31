@@ -20,7 +20,7 @@
     "vue-router": "2.2.0"
   },
   "devDependencies": {
-    "@nylira/vue-article-body": "^2.2.12",
+    "@nylira/vue-article-body": "^2.2.13",
     "@nylira/vue-button": "^3.0.15",
     "@nylira/vue-input": "2.1.2",
     "@nylira/vue-page-header": "2.1.8",
