@@ -187,7 +187,7 @@ Let’s check the first account:
 ADDR=$(kubectl exec -c app tm-0 -- cat /app/key.json | jq ".address" | tr -d "\"")
 
 kubectl exec -c app tm-0 -- basecoin account $ADDR
-{"pub_key":[1,"9D9BB981166532214A9A0EE452F302ADD1D2C7163314CE9B4A1322329CA5750F"],"sequence":0,"coins":[{"denom":"MyAwesomeCoin","amount":1000000000}]}
+{"pub_key":{"type":"ed25519","data":"793B7E33EF94132E16534CC9BA59F74944065FA917A98DB68ABA806D219A4529"},"sequence":1,"coins":[{"denom":"MyAwesomeCoin","amount":999999995}]}
 ```
 
 Great! Let’s try to send a transaction from the first to the second account:
@@ -195,9 +195,10 @@ Great! Let’s try to send a transaction from the first to the second account:
 ```shell
 RECIPIENT=$(kubectl exec -c app tm-1 -- cat /app/key.json | jq ".address" | tr -d "\"")
 
-kubectl exec -c app tm-0 -- basecoin tx send --to 0x$RECIPIENT --amount 5MyAwesomeCoin
+kubectl exec -c app tm-0 -- basecoin tx send --to 0x$RECIPIENT --amount 5MyAwesomeCoin --from /app/key.json --chain_id chain-tTH4mi
 Signed SendTx:
-{"gas":0,"fee":{"denom":"coin","amount":0},"inputs":[{"address":"DD78A910967982FADF492BCBCFEFA237953A70E4","coins":[{"denom":"MyAwesomeCoin","amount":5}],"sequence":1,"signature":[1,"A091D998E033599471111D8D5F004C3ECB1B15570A83A829293604F107ABF3A02879FBB9DD884263CFC9B468929CB30183F66F9D4C12675E3B69064CFA713803"],"pub_key":[1,"9D9BB981166532214A9A0EE452F302ADD1D2C7163314CE9B4A1322329CA5750F"]}],"outputs":[{"address":"4FCDC7498E4F0B378757FCBD550ED40A5C14600B","coins":[{"denom":"MyAwesomeCoin","amount":5}]}]}
+0100000000000000000104636F696E000000000000000001010114A677E98456071E3240EF0A2E0B80FFE7D36515BF010101066D79636F696E0000000000000005010201E6A038849655CD3C94D06BAC1CA74443D312855A9BC3575311842DF74AF7DB772673DF60F3AE08CC5260AE93DCE4DB588EF24D08768D0DE2752F001DDC1DEE0F0001010114E2AFEA4A193E85A2DBB8668D4EA0DC0B1A6AD63A010101066D79636F696E0000000000000005
+Response: 3D54EECAAE072477E6119C6DF1762168F276F0C1 ;
 ```
 
 Checking the first account’s balance we should see 5 coins making their way
@@ -205,7 +206,7 @@ into the second account:
 
 ```shell
 kubectl exec -c app tm-0 -- basecoin account $ADDR
-{"pub_key":[1,"7E8ABCC110A15309DF7E1D2656B3CC839D66A09F08C84624C00E144C32BA1170"],"sequence":1,"coins":[{"denom":"MyAwesomeCoin","amount":995}]}
+{"pub_key":{"type":"ed25519","data":"793B7E33EF94132E16534CC9BA59F74944065FA917A98DB68ABA806D219A4529"},"sequence":2,"coins":[{"denom":"MyAwesomeCoin","amount":999999990}]}
 ```
 
 As you can see, it was fairly simple to launch a new cryptocurrency in a
