@@ -2,7 +2,7 @@
   <router-link :class="cssClass" :to="url">
     <div class="title">{{ career.title }}</div>
     <div class="locations">
-      <div class="location" v-for="l in career.location">
+      <div class="location" v-for="l in career.locations">
         {{ l }}
       </div>
     </div>

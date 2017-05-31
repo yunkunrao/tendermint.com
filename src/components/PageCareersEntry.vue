@@ -8,12 +8,16 @@
     <article-body>
       <div v-if="career.description" v-html="markdownBlock(career.description)"></div>
       <template v-if="career.requirements.length > 0">
-      <h2>We're looking for someone with&hellip;</h2>
-      <ul>
-        <li v-for="req in career.requirements" v-html="markdown(req)"></li>
-      </ul>
+        <h2>We're looking for someone with&hellip;</h2>
+        <ul>
+          <li v-for="req in career.requirements" v-html="markdown(req)"></li>
+        </ul>
       </template>
-      <h2>You'll  help us:</h2>
+      <h2>You should be located near:</h2>
+      <ul>
+        <li v-for="loc in career.locations" v-html="markdown(loc)"></li>
+      </ul>
+      <h2>You'll help us:</h2>
       <ul>
         <li v-for="task in career.tasks" v-html="markdown(task)"></li>
       </ul>
@@ -29,14 +33,8 @@
         <li>And much more&hellip;</li>
       </ul>
       <h2>Get in touch</h2>
-      <template v-if="career.id === 'frontend-engineer'">
-        <p>Please submit a cover letter and resume to <a href="mailto:berlin@tendermint.com">berlin@tendermint.com</a>. Make sure to include availability dates and desired working hours per week. We'll write back as soon as we can.</p>
-      <btn size="lg" @click.native="email('berlin@tendermint.com')" icon="envelope-o" value="Send Application"></btn>
-      </template>
-      <template v-else>
-        <p>Please submit a cover letter and resume to <a href="mailto:careers@tendermint.com">careers@tendermint.com</a>. Make sure to include availability dates and desired working hours per week.  We'll write back as soon as we can.</p>
-        <btn type="anchor" size="lg" href="mailto:careers@tendermint.com" icon="envelope-o" value="Send Application"></btn>
-      </template>
+      <p>Please submit a cover letter and resume to <a href="mailto:careers@tendermint.com">careers@tendermint.com</a>. Make sure to include availability dates, desired working hours per week, and preferred location.  We'll write back as soon as we can.</p>
+      <btn type="anchor" size="lg" href="mailto:careers@tendermint.com" icon="envelope-o" value="Send Application"></btn>
     </article-body>
   </div>
 </template>

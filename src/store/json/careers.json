@@ -3,7 +3,7 @@
     "area": "technical",
     "description": "",
     "id": "technical-documentation-writer",
-    "location": ["Berlin", "San Francisco", "Toronto"],
+    "locations": ["Berlin", "San Francisco", "Toronto"],
     "requirements": [
       "General programming experience (2 years minimum)"
     ],
@@ -17,7 +17,7 @@
     "area": "technical",
     "description": "",
     "id": "ethereum-developer",
-    "location": ["Berlin", "San Francisco", "Toronto"],
+    "locations": ["Berlin", "San Francisco", "Toronto"],
     "requirements": [
       "Significant golang experience",
       "Ethereum developer experience (recommended)"
@@ -34,7 +34,7 @@
     "area": "technical",
     "description": "",
     "id": "technical-project-manager",
-    "location": ["Berlin", "San Francisco", "Toronto"],
+    "locations": ["Berlin", "San Francisco", "Toronto"],
     "requirements": [
       "Project management experience"
     ],
@@ -49,7 +49,7 @@
     "area": "technical",
     "description": "",
     "id": "security-hardware-engineer",
-    "location": ["Berlin", "San Francisco", "Toronto"],
+    "locations": ["Berlin", "San Francisco", "Toronto"],
     "requirements": [
       "Experience elliptic curve crypto",
       "Experience programming secure hardware"
@@ -65,7 +65,7 @@
     "area": "technical",
     "description": "",
     "id": "devops-sysops-engineer",
-    "location": ["Berlin", "San Francisco", "Toronto"],
+    "locations": ["Berlin", "San Francisco", "Toronto"],
     "requirements": [
       "General programming experience (2 years)",
       "Server administration skills",
@@ -85,7 +85,7 @@
     "area": "technical",
     "description": "Tendermint is a first-of-its kind Proof-of-Stake consensus engine in development since 2015. It is designed to provide developers maximum control in developing their own business logic in a blockchain setting, while relying on a secure consensus algorithm.\n\nWe’re looking for a motivated, experienced Javascript Engineer to work with backend blockchain engineers to develop web applications for novel blockchain applications.\n\nCosmos is a project by the core developers of tendermint to launch a highly-secure public blockchain on this technology. We have recently completed a fundraising round and are looking to rapidly expand, mainly centered around Berlin, Toronto, and San Francisco.\n\nUnder the umbrella of the cosmos system, we are building a number of custom blockchain apps for various usecases.  This position would first work on building some smaller applications to demonstrate and discover best practices with this platform, with the potential of later participating in developing the UI for the main comsos application.",
     "id": "frontend-engineer",
-    "location": ["Berlin"],
+    "locations": ["Berlin"],
     "weight": 4,
     "requirements": [
       "Minimum 1 years experience in web engineering and Single-Page apps.",
@@ -108,7 +108,7 @@
     "area": "technical",
     "description": "",
     "id": "cryptocurrencies-engineer",
-    "location": ["Berlin", "San Francisco", "Toronto"],
+    "locations": ["Berlin", "San Francisco", "Toronto"],
     "requirements": [
       "Experience in golang",
       "Experience developing cryptocurrencies"
@@ -124,7 +124,7 @@
     "area": "technical",
     "description": "",
     "id": "networking-consensus-engineer",
-    "location": ["Berlin", "San Francisco", "Toronto"],
+    "locations": ["Berlin", "San Francisco", "Toronto"],
     "requirements": [
       "Significant programming experience, 2+ years",
       "Computer Science background highly desired",
@@ -141,7 +141,7 @@
     "area": "technical",
     "description": "",
     "id": "developer-tooling-engineer",
-    "location": ["Berlin", "San Francisco", "Toronto"],
+    "locations": ["Berlin", "San Francisco", "Toronto"],
     "requirements": [
       "Golang, Tooling, APIs"
     ],
@@ -158,7 +158,7 @@
     "area": "technical",
     "description": "",
     "id": "research-scientist",
-    "location": ["Berlin", "San Francisco", "Toronto"],
+    "locations": ["Berlin", "San Francisco", "Toronto"],
     "requirements": [
       "Cryptography, Distributed Consensus, Economics, Formal Verification"
     ],
@@ -172,7 +172,7 @@
   {
     "area": "technical",
     "id": "technical-community-manager",
-    "location": ["Berlin", "San Francisco", "Toronto"],
+    "locations": ["Berlin", "San Francisco", "Toronto"],
     "requirements": [
       "General programming skills",
       "Technical management skills"
@@ -189,7 +189,7 @@
     "area": "technical",
     "description": "",
     "id": "product-manager-governance",
-    "location": ["Berlin", "San Francisco", "Toronto"],
+    "locations": ["Berlin", "San Francisco", "Toronto"],
     "requirements": [
       "Experience with governance and decision making"
     ],
@@ -205,7 +205,7 @@
     "area": "technical",
     "description": "",
     "id": "solidity-engineer",
-    "location": ["Berlin", "San Francisco", "Toronto"],
+    "locations": ["Berlin", "San Francisco", "Toronto"],
     "tasks": [
       "Write solidity smart contracts for ETH Peg"
     ],
@@ -219,7 +219,7 @@
     "area": "operations",
     "description": "",
     "id": "finance-manager",
-    "location": ["Berlin", "San Francisco", "Toronto"],
+    "locations": ["Berlin", "San Francisco", "Toronto"],
     "requirements": [
       "Economic and financial experience"
     ],
@@ -237,7 +237,7 @@
     "area": "operations",
     "description": "",
     "id": "operations-manager",
-    "location": ["Berlin", "San Francisco", "Toronto"],
+    "locations": ["Berlin", "San Francisco", "Toronto"],
     "requirements": [
       "Business administration and legal experience"
     ],
@@ -252,7 +252,7 @@
   {
     "area": "operations",
     "id": "administrative-assistant",
-    "location": ["Berlin", "San Francisco", "Toronto"],
+    "locations": ["Berlin", "San Francisco", "Toronto"],
     "requirements": [],
     "tasks": [
       "Scheduling travels, retreats",
@@ -265,7 +265,7 @@
     "area": "community",
     "description": "",
     "id": "slack-manager",
-    "location": ["Berlin", "San Francisco", "Toronto"],
+    "locations": ["Berlin", "San Francisco", "Toronto"],
     "requirements": [
       "Moderation experience"
     ],
@@ -284,7 +284,7 @@
     "area": "community",
     "description": "",
     "id": "communications-manager",
-    "location": ["Berlin", "San Francisco", "Toronto"],
+    "locations": ["Berlin", "San Francisco", "Toronto"],
     "requirements": [],
     "tasks": [
       "Support developing communication strategy",
@@ -302,7 +302,7 @@
     "area": "community",
     "description": "",
     "id": "social-media-growth-manager",
-    "location": ["Berlin", "San Francisco", "Toronto"],
+    "locations": ["Berlin", "San Francisco", "Toronto"],
     "requirements": [],
     "tasks": [
       "Grow social media accounts by selective liking/following",
@@ -315,7 +315,7 @@
     "area": "community",
     "description": "",
     "id": "blog-copywriter",
-    "location": ["Berlin", "San Francisco", "Toronto"],
+    "locations": ["Berlin", "San Francisco", "Toronto"],
     "requirements": [],
     "tasks": [
       "Write stories about the Internet of Blockchains",
@@ -329,7 +329,7 @@
     "area": "community",
     "description": "",
     "id": "graphics-designer",
-    "location": ["Berlin", "San Francisco", "Toronto"],
+    "locations": ["Berlin", "San Francisco", "Toronto"],
     "requirements": [],
     "tasks": [
       "Generate consistent stylized graphics for blog posts/website/printed materials"
@@ -341,7 +341,7 @@
     "area": "community",
     "description": "",
     "id": "partnership-manager",
-    "location": ["Berlin", "San Francisco", "Toronto"],
+    "locations": ["Berlin", "San Francisco", "Toronto"],
     "requirements": [],
     "tasks": [
       "Compile inventory of projects building on Tendermint/Cosmos",
@@ -356,7 +356,7 @@
     "area": "community",
     "description": "",
     "id": "pr-manager",
-    "location": ["Berlin", "San Francisco", "Toronto"],
+    "locations": ["Berlin", "San Francisco", "Toronto"],
     "requirements": [],
     "tasks": [
       "Constantly get Cosmos / IoB stories in the mainstream and industry press"
