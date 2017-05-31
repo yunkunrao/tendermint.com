@@ -10,7 +10,6 @@ categories:
     - "tendermint"
 ~~~
 
-# Introduction to Ethermint
 As you might have heard, the Tendermint consensus engine can support almost any
 other crypto-currency, as long as the source code is open-source and some 
 developer is willing to write an ABCI wrapper around it. 

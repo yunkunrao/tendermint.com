@@ -1,13 +1,11 @@
 ~~~
-title: "Announcing Ethermint"
+title: "Announcing Ethermint - GoEthereum powered by Tendermint"
 description: "GoEthereum powered by Tendermint BFT consensus"
 date: "2016-11-16"
 categories: 
     - "ethereum"
     - "abci"
 ~~~
-
-## Announcing Ethermint - GoEthereum powered by Tendermint
 
 While we were at the Shanghai Devcon event a little less than two months ago,
 we met and discovered a number of companies that were very interested in an

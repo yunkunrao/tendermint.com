@@ -1,46 +1,49 @@
-// libs
-var path = require('path')
-var fs = require('fs')
-var glob = require('glob')
-var cheerio = require('cheerio')
-var minify = require('html-minifier').minify
-var lib = require('./docs-helpers.js')
-var mkdirp = require('mkdirp')
+let cheerio = require('cheerio')
+let fs = require('fs')
+let glob = require('glob')
+let hljs = require('highlight.js')
+let lib = require('./docs-helpers.js')
+let minify = require('html-minifier').minify
+let mkdirp = require('mkdirp')
+let path = require('path')
+let template = require('es6-template-strings')
 
-// markdown-it settings
 let md = require('markdown-it')({
   html: true,
   linkify: true,
-  typographer: true
+  typographer: true,
+  highlight (str, lang) {
+    if (lang && hljs.getLanguage(lang)) {
+      try { return hljs.highlight(lang, str).value }
+      catch (__) {}
+    }
+    return ''
+  }
 }).use(require('markdown-it-anchor'))
 
-var docs = './content/docs/**/*.md'
-var intro = './content/intro/**/*.md'
+const docs = './content/docs/**/*.md'
+const intro = './content/intro/**/*.md'
+const docsTemplate = fs.readFileSync('./build/templates/DocsEntry.html', 'utf8')
+const introTemplate = fs.readFileSync('./build/templates/IntroEntry.html', 'utf8')
 
-// templating
-var docsTemplate = fs.readFileSync('./build/templates/DocsEntry.html', 'utf8')
-var introTemplate = fs.readFileSync('./build/templates/IntroEntry.html', 'utf8')
-var template = require('es6-template-strings')
-
-// functions
 function vueify (file, tmpl) {
-  var mdData = fs.readFileSync(file, 'utf8')
-  var htmlData = md.render(mdData)
+  let mdData = fs.readFileSync(file, 'utf8')
+  let htmlData = md.render(mdData)
 
-  var $ = cheerio.load(htmlData)
+  let $ = cheerio.load(htmlData)
 
-  var internalLinks = $('a[href^=\'/\']')
+  let internalLinks = $('a[href^=\'/\']')
 
   $(internalLinks).each(function () {
-    var route = JSON.parse(JSON.stringify($(this).attr('href')))
+    let route = JSON.parse(JSON.stringify($(this).attr('href')))
     route = route.replace('.md', '') // remove .md extension
-    var innerHtml = $(this).html()
+    let innerHtml = $(this).html()
     $(this).replaceWith(`<router-link to="${route}">${innerHtml}</router-link>`)
   })
 
-  var cleaned = $.html()
+  let cleaned = $.html()
 
-  var pageData = minify(cleaned, {
+  let pageData = minify(cleaned, {
     removeComments: true,
     removeCommentsFromCDATA: true,
     removeAttributeQuotes: true,
@@ -53,7 +56,7 @@ function vueify (file, tmpl) {
     removeEmptyElements: true
   })
 
-  var pageTitle = lib.titlify(path.basename(file, '.md'))
+  let pageTitle = lib.titlify(path.basename(file, '.md'))
 
   return template(tmpl, { data: pageData, title: pageTitle })
 }
@@ -66,7 +69,7 @@ function build (file, tmpl) {
 
 function buildAll (wildcard, tmpl) {
   glob(wildcard, function (er, files) {
-    for (var i = 0; i < files.length; i++) {
+    for (let i = 0; i < files.length; i++) {
       build(files[i], tmpl)
     }
   })

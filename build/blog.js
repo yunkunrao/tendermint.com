@@ -1,30 +1,31 @@
 let _ = require('lodash')
 let fs = require('fs')
 let glob = require('glob')
+let hljs = require('highlight.js')
 let moment = require('moment')
-
 let toSlugCase = require('to-slug-case')
 let toPascalCase = require('to-pascal-case')
 let yaml = require('js-yaml')
 
-let blogTitle = 'Tendermint Blog'
+let md = require('markdown-it')({
+  html: true,
+  linkify: true,
+  typographer: true,
+  highlight (str, lang) {
+    if (lang && hljs.getLanguage(lang)) {
+      try { return hljs.highlight(lang, str).value }
+      catch (__) {}
+    }
+    return ''
+  }
+}).use(require('markdown-it-anchor'))
 
-let postsDirectory = './content/blog/'
-let posts = glob.sync(postsDirectory + '*.md')
-
-let postsJsonFile = './src/store/json/posts.json'
-let blogRssFile = './src/assets/feed.xml'
-
-let rssTemplate = require('./blog-rss.js')
-
-// markdown-it settings
-let md = require('markdown-it')
-  ({
-    html: true,
-    linkify: true,
-    typographer: true
-  })
-  .use(require('markdown-it-anchor'))
+const blogTitle = 'Tendermint Blog'
+const postsDirectory = './content/blog/'
+const posts = glob.sync(postsDirectory + '*.md')
+const postsJsonFile = './src/store/json/posts.json'
+const blogRssFile = './src/assets/feed.xml'
+const rssTemplate = require('./blog-rss.js')
 
 function markdownToObject (files) {
   let posts = []
