@@ -9,8 +9,6 @@ categories:
     - "testnet"
 ~~~
 
-# Get your cryptocurrency up and running in 10 minutes
-
 So, your Tendermint application is finally ready and you want to distribute it
 and run it on several machines, or just run it locally by creating a dozen
 Docker containers. We have created

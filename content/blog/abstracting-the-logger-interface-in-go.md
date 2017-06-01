@@ -9,8 +9,6 @@ categories:
     - "tendermint"
 ~~~
 
-# Abstracting the logger interface in Go
-
 This article describes the evolution of logging in Tendermint. We went from
 having a static [log15](https://github.com/inconshreveable/log15/) logger to a
 transparent interface and implementation that uses [go-kit’s
