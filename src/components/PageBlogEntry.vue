@@ -64,7 +64,7 @@ export default {
     },
     email () {
       let url = 'mailto:?Subject='
-      url += `Check out this Cosmos blog post: ${this.entry.title}`
+      url += `Check out this Tendermint blog post: ${this.entry.title}`
       return url
     },
     facebook () {
