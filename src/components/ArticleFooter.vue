@@ -41,7 +41,7 @@ export default {
 
 .article-footer
   margin 0 auto
-  padding 1rem
+  padding 1rem 0
 
   nav
     margin-bottom 1rem
@@ -60,8 +60,11 @@ export default {
     justify-content center
     align-items center
     a
-      padding 0.75rem
       height 3rem
+      width 3rem
+      display flex
+      align-items center
+      justify-content center
 
       i.fa
         font-size 1.5rem
@@ -74,9 +77,13 @@ export default {
         margin-bottom 1rem
 @media screen and (min-width: 768px)
   .article-footer
+    padding 1.5rem 0
     nav 
       flex-flow row nowrap
       margin-bottom 1.5rem
       .ni-btn
-        margin 0 0.75rem
+        margin 0 1.5rem
+    menu
+      a
+        margin 0 0.5rem
 </style>
