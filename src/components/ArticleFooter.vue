@@ -1,15 +1,15 @@
 <template>
-  <div class="article-footer">
+  <div :class="cssClass">
     <nav>
       <btn
-        theme="tendermint"
+        :theme="theme"
         type="link"
         to="/blog"
         icon="angle-left"
         value="Return to Blog Index">
       </btn>
       <btn
-        theme="tendermint"
+        :theme="theme"
         type="anchor"
         href="/static/feed.xml"
         icon="rss"
@@ -32,16 +32,24 @@ export default {
   components: {
     Btn
   },
-  props: ['email', 'reddit', 'facebook', 'twitter']
+  computed: {
+    cssClass () {
+      let value = 'ni-article-footer'
+      if (this.theme) value += ` ni-article-footer-theme-${this.theme}`
+      return value
+    }
+  },
+  props: ['email', 'reddit', 'facebook', 'twitter', 'theme']
 }
 </script>
 
 <style lang="stylus">
 @import '../styles/variables.styl'
 
-.article-footer
+.ni-article-footer
   margin 0 auto
   padding 1rem 0
+  border-top 1px solid bc
 
   nav
     margin-bottom 1rem
@@ -55,6 +63,7 @@ export default {
       max-width 18rem
       &:last-of-type
         margin-bottom 0
+
   menu
     display flex
     justify-content center
@@ -68,16 +77,32 @@ export default {
 
       i.fa
         font-size 1.5rem
-        color lighten(mcolor, 75%)
+        color dim
+
+  &.ni-article-footer-theme-tendermint
+    border-top none
+
+    menu a i.fa
+      color lighten(mcolor, 75%)
+
+@media screen and (min-width: 316px)
+  .ni-article-footer
+    padding 1.125rem 0
 
 @media screen and (min-width: 414px)
-  .article-footer
+  .ni-article-footer
+    padding 1.25rem 0
     nav
       .ni-btn
         margin-bottom 1rem
-@media screen and (min-width: 768px)
-  .article-footer
+
+@media screen and (min-width: 480px)
+  .ni-article-footer
     padding 1.5rem 0
+
+@media screen and (min-width: 768px)
+  .ni-article-footer
+    padding 3rem 0
     nav 
       flex-flow row nowrap
       margin-bottom 1.5rem

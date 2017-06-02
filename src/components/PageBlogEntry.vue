@@ -8,15 +8,13 @@
     <article-body>
       <div v-html="entry.body"></div>
     </article-body>
-    <ni-section>
-      <article-footer
-        :email="email"
-        :facebook="facebook"
-        :reddit="reddit"
-        :twitter="twitter">
-      </article-footer>
-      <!--<section-comments></section-comments>-->
-    </ni-section>
+    <article-footer
+      theme="tendermint"
+      :email="email"
+      :facebook="facebook"
+      :reddit="reddit"
+      :twitter="twitter">
+    </article-footer>
     <overlay-btns>
       <overlay-btn icon="chevron-left" @click.native="gotoBlog"></overlay-btn>
     </overlay-btns>
@@ -31,7 +29,6 @@ import ArticleFooter from './ArticleFooter'
 import OverlayBtns from './OverlayBtns'
 import OverlayBtn from './OverlayBtn'
 import NiSection from './NiSection'
-import SectionComments from './SectionComments'
 export default {
   name: 'page-blog-entry',
   components: {
@@ -40,8 +37,7 @@ export default {
     OverlayBtn,
     OverlayBtns,
     NiSection,
-    PageHeader,
-    SectionComments
+    PageHeader
   },
   computed: {
     entrySubtitle () {
