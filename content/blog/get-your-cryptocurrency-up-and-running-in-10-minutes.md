@@ -17,8 +17,8 @@ to help you achieve this goal as fast as possible. Note that it should be
 primarily used for testing purposes or for tightly-defined chains operated by a
 single stakeholder (see [the security
 precautions](https://github.com/tendermint/tools/tree/master/mintnet-kubernetes#security)).
-If your desire is to launch an application with many stakeholders, consider
-using [our set of
+If you want to launch an application with many stakeholders, consider using
+[our set of
 Ansible](https://github.com/tendermint/tools/tree/master/ansible-tendermint)
 scripts to deploy Tendermint.
 
@@ -211,7 +211,7 @@ As you can see, it was fairly simple to launch a new cryptocurrency in a
 Kubernetes cluster. Moreover, with Kubernetes you can add new nodes (pods) with
 a single command. And using
 [federation](https://kubernetes.io/docs/concepts/cluster-administration/federation/),
-you can be sure that your currency will be alive even after loss of the entire
+you can be sure that your currency will stay alive even after loss of the entire
 cluster!
 
 Clean up:
