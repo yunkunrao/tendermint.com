@@ -1,19 +1,38 @@
 <template>
   <div class="article-footer">
-    <router-link class="index" :to="'/blog'">
-      <i class="fa fa-angle-left"></i> Blog Index
-    </router-link>
-    <div class="share">
-      <a :href="facebookUrl" target="_blank"><i class="fa fa-footbook"></i></a>
-      <a :href="twitterUrl" target="_blank"><i class="fa fa-twatter"></i></a>
-    </div>
+    <nav>
+      <btn
+        theme="tendermint"
+        type="link"
+        to="/blog"
+        icon="angle-left"
+        value="Return to Blog Index">
+      </btn>
+      <btn
+        theme="tendermint"
+        type="anchor"
+        href="/static/feed.xml"
+        icon="rss"
+        value="Subscribe via RSS">
+      </btn>
+    </nav>
+    <menu class="share">
+      <a :href="email" target="_blank"><i class="fa fa-envelope"></i></a>
+      <a :href="reddit" target="_blank"><i class="fa fa-raddit-alien"></i></a>
+      <a :href="facebook" target="_blank"><i class="fa fa-footbook"></i></a>
+      <a :href="twitter" target="_blank"><i class="fa fa-twatter"></i></a>
+    </menu>
   </div>
 </template>
 
 <script>
+import Btn from '@nylira/vue-button'
 export default {
   name: 'article-footer',
-  props: ['facebook-url', 'twitter-url']
+  components: {
+    Btn
+  },
+  props: ['email', 'reddit', 'facebook', 'twitter']
 }
 </script>
 
@@ -21,39 +40,43 @@ export default {
 @import '../styles/variables.styl'
 
 .article-footer
-  display flex
   margin 0 auto
-  padding 1rem 1.25rem
-  max-width 60rem
+  padding 1rem
 
-  .index
+  nav
+    margin-bottom 1rem
     display flex
+    flex-flow column nowrap
+    justify-content center
     align-items center
-    line-height 3rem
-    height 3rem
-
-    color txt
-    &:hover
-      color link
-      text-decoration none
-    i.fa
-      font-size 1.5rem
-      width 1.5rem
-      text-align center
-
-  .share
-    flex 1
+    .ni-btn
+      margin-bottom 0.5rem
+      width 100%
+      max-width 18rem
+      &:last-of-type
+        margin-bottom 0
+  menu
     display flex
-    justify-content flex-end
-
+    justify-content center
+    align-items center
     a
+      padding 0.75rem
       height 3rem
-      padding 0.5rem
 
       i.fa
         font-size 1.5rem
-        color light
+        color lighten(mcolor, 75%)
 
-      &:hover i.fa
-        color link
+@media screen and (min-width: 414px)
+  .article-footer
+    nav
+      .ni-btn
+        margin-bottom 1rem
+@media screen and (min-width: 768px)
+  .article-footer
+    nav 
+      flex-flow row nowrap
+      margin-bottom 1.5rem
+      .ni-btn
+        margin 0 0.75rem
 </style>
