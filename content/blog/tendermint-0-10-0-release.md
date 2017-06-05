@@ -1,7 +1,7 @@
 ~~~
 title: "Tendermint 0.10.0 Release"
 description: "Tendermint 0.10.0 includes some major refactoring of the repositories, config, and logger"
-date: "2017-05-31"
+date: "2017-06-05"
 author: "Ethan Buchman"
 ~~~
 

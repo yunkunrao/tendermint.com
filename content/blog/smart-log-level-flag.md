@@ -1,7 +1,7 @@
 ~~~
 title: "Smart --log_level flag"
 description: "One of the exiting new features in 0.10.0 release is smart `--log_level` flag"
-date: "2017-05-30"
+date: "2017-06-05"
 author: "Anton Kaliaev"
 categories:
     - "logging"
