@@ -1,8 +1,8 @@
 <template>
-  <a class="cover-alert" href="https://cosmos.network">
+  <a class="cover-alert" href="https://hangouts.google.com/hangouts/_/2g3xkp4rkrelhjai5imlfh656ue">
     <span class="key">ANNOUNCEMENT:</span>
     <span class="value">
-      First Tendermint & Cosmos DevChat next Wednesday (07/06) @ 18:00 (UTC+02:00). Come join us!
+      First Tendermint & Cosmos DevChat next Wednesday (07/06) @ 18:00 (UTC+02:00). Come join our call!
     </span>
     <i class="fa fa-angle-double-right" aria-hidden="true"></i>
   </a>
