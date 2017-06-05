@@ -2,7 +2,7 @@
   <a class="cover-alert" href="https://cosmos.network">
     <span class="key">ANNOUNCEMENT:</span>
     <span class="value">
-      First Tendermint & Cosmos DevChat next Wednesday (07/06) @ 18:00 (UTC+02:00). Come join us!
+      Fundraiser for Cosmos, Internet of Blockchains has ended. $16.8MM USD raised in 28 min!
     </span>
     <i class="fa fa-angle-double-right" aria-hidden="true"></i>
   </a>
