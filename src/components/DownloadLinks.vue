@@ -3,56 +3,56 @@
     <div class="bin bin-tendermint">
       <div class="title"><img src="../assets/images/icon-tendermint.png"></div>
       <div class="key-value">
-        <div class="key">tendermint <span class="version">0.10.0-rc1</span></div>
+        <div class="key">tendermint <span class="version">0.10.0</span></div>
         <div class="value">
           <btn type="anchor" icon="linux" value="Linux"
-            :href="dl('linux', 'tendermint', '0.10.0-rc1')"></btn>
+            :href="dl('linux', 'tendermint', '0.10.0')"></btn>
           <btn type="anchor"  icon="apple" value="macOS"
-            :href="dl('darwin', 'tendermint', '0.10.0-rc1')"></btn>
+            :href="dl('darwin', 'tendermint', '0.10.0')"></btn>
           <btn type="anchor"  icon="windows" value="Windows"
-            :href="dl('windows', 'tendermint', '0.10.0-rc1')"></btn>
+            :href="dl('windows', 'tendermint', '0.10.0')"></btn>
         </div>
       </div>
     </div>
     <div class="bin bin-abci">
       <div class="title"><img src="../assets/images/icon-abci.png"></div>
       <div class="key-value">
-        <div class="key">abci <span class="version">0.4.1</span></div>
+        <div class="key">abci <span class="version">0.5.0</span></div>
         <div class="value">
           <btn type="anchor"  icon="linux" value="Linux"
-            :href="dl('linux', 'abci', '0.4.1')"></btn>
+            :href="dl('linux', 'abci', '0.5.0')"></btn>
           <btn type="anchor"  icon="apple" value="macOS"
-            :href="dl('darwin', 'abci', '0.4.1')"></btn>
+            :href="dl('darwin', 'abci', '0.5.0')"></btn>
           <btn type="anchor"  icon="windows" value="Windows"
-            :href="dl('windows', 'abci', '0.4.1')"></btn>
+            :href="dl('windows', 'abci', '0.5.0')"></btn>
         </div>
       </div>
     </div>
     <div class="bin bin-basecoin">
       <div class="title"><img src="../assets/images/icon-basecoin.png"></div>
       <div class="key-value">
-        <div class="key">basecoin <span class="version">0.4.0</span></div>
+        <div class="key">basecoin <span class="version">0.5.2</span></div>
         <div class="value">
           <btn type="anchor"  icon="linux" value="Linux"
-            :href="dl('linux', 'basecoin', '0.4.0')"></btn>
+            :href="dl('linux', 'basecoin', '0.5.2')"></btn>
           <btn type="anchor"  icon="apple" value="macOS"
-            :href="dl('darwin', 'basecoin', '0.4.0')"></btn>
+            :href="dl('darwin', 'basecoin', '0.5.2')"></btn>
           <btn type="anchor"  icon="windows" value="Windows"
-            :href="dl('windows', 'basecoin', '0.4.0')"></btn>
+            :href="dl('windows', 'basecoin', '0.5.2')"></btn>
         </div>
       </div>
     </div>
     <div class="bin bin-merkleeyes">
       <div class="title"><img src="../assets/images/icon-merkleeyes.png"></div>
       <div class="key-value">
-        <div class="key">merkleeyes <span class="version">0.1.0</span></div>
+        <div class="key">merkleeyes <span class="version">0.2.1</span></div>
         <div class="value">
           <btn type="anchor"  icon="linux" value="Linux"
-            :href="dl('linux', 'merkleeyes', '0.1.0')"></btn>
+            :href="dl('linux', 'merkleeyes', '0.2.1')"></btn>
           <btn type="anchor"  icon="apple" value="macOS"
-            :href="dl('darwin', 'merkleeyes', '0.1.0')"></btn>
+            :href="dl('darwin', 'merkleeyes', '0.2.1')"></btn>
           <btn type="anchor"  icon="windows" value="Windows"
-            :href="dl('windows', 'merkleeyes', '0.1.0')"></btn>
+            :href="dl('windows', 'merkleeyes', '0.2.1')"></btn>
         </div>
       </div>
     </div>

@@ -218,4 +218,5 @@ Clean up:
 
 ```shell
 kubectl delete -f ./app.yaml
+kubectl delete pvc -l app=tm
 ```
