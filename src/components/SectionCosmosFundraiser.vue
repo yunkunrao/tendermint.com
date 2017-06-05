@@ -2,19 +2,19 @@
   <div class="section-cosmos">
     <div class="section-cosmos-container">
       <header class="section-cosmos-header">
-        <h2 class="section-cosmos-title">Cosmos HackAtom</h2>
-        <div class="section-cosmos-subtitle">Win $50k! June 9 - July 9</div>
+        <h2 class="section-cosmos-title">Cosmos Fundraiser</h2>
+        <div class="section-cosmos-subtitle">raised $16.8 million USD in 28 minutes.</div>
       </header>
       <main class="section-cosmos-main">
-        <div class="section-cosmos-description">Cosmos is seeking individuals and teams worldwide for a four-week hackathon. Sign up with your plan by June 24th!</div>
+        <div class="section-cosmos-description">Fundraiser has ended on April 6th, 6:28AM PDT. Thank you for your contributions!</div>
         <btn
           type="anchor"
-          href="https://cosmos.network/hackatom"
+          :href="config.FUNDRAISER_URL"
           class="section-cosmos-btn"
           size="lg"
-          value="HackAtom Information"
+          value="View Fundraiser"
           theme="tendermint"
-          icon="trophy">
+          icon="bar-chart">
         </btn>
       </main>
     </div>
