@@ -61,11 +61,11 @@ tendermint node --p2p.seeds=1.2.3.4:46656,4.3.2.1:46656
 
 Until now, our logging implementation was quite lazy. Each package had its own global logger, and it was very difficult to configure it.
 This made it difficult to import Tendermint from other projects, and complicated important features like per-package log levels.
-So we completely overhauled the logger implementation. Loggers must now be explicitly passed where they are needed. 
+So we completely overhauled the logger implementation. Loggers must now be explicitly passed where they are needed.
 We also now support per-package logging that can be specified in the `config.toml` or from the command line.
-We are so proud of our new logging implementation that we wrote a blog post just for it - [check it out!]()
+We are so proud of our new logging implementation that we wrote a blog post just for it - [check it out!](/blog/abstracting-the-logger-interface-in-go)
 
-Please note that we have compressed what was once six log levels down to only three: `error`, `info`, and `debug`. 
+Please note that we have compressed what was once six log levels down to only three: `error`, `info`, and `debug`.
 This probably means you need to change your `config.toml` files to replace `notice` with `info`.
 Better yet, try out our new default setting, which takes advantage of the per-package log levels: `state:info,*:error`!
 It says to use `info` for the `state` package, and `error` for everything else.
