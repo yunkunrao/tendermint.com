@@ -8,26 +8,25 @@ author: "Ethan Buchman"
 > *Credits to our [team](/about),
 > and [community](http://forum.tendermint.com:3000/) for the hard work in making this
 > release possible. Esepcially to [Anton Kaliaev (@melekes)](https://twitter.com/akaliaev)
-> for his work on the new logger, and to Ethan Frey (@ethanfrey) for fixing everything that 
+> for his work on the new logger, and to Ethan Frey (@ethanfrey) for fixing everything that
 > broke during this massive refactor!
 
 The main purpose of Tendermint 0.10.0 is to perform some major, long-overdue, cleanup.
 This includes merging repositories, introducing configuration structs,
 overhauling our logger, and cleaning up the JSON APIs.
 
-TODO
 Get the latest release at [our downloads page](/download).
 See the [v0.10.0 release
-notes](https://github.com/tendermint/tendermint/blob/master/CHANGELOG.md#091-april-18-2017) for more details.
+notes](https://github.com/tendermint/tendermint/blob/master/CHANGELOG.md#0100-june-2-2017) for more details.
 
 **Repository Merging**
 
 When we initially introduced the ABCI in late 2015, we took apart the Tendermint codebase by moving many of the pieces
-into their own repositories. Most notable were the `go-p2p`, `go-rpc`, `go-crypto`, and `go-wire`, libraries, but there 
+into their own repositories. Most notable were the `go-p2p`, `go-rpc`, `go-crypto`, and `go-wire`, libraries, but there
 were also many more like `go-db`, `go-common`, `go-autofile`, and so on. Needless to say, it was painful to synchronize changes
 across all these repositories.
 
-In v0.10.0, we merged `go-p2p` and `go-rpc` back into `tendermint`, in the `p2p` and `rpc/lib` subdirectories, respectively. 
+In v0.10.0, we merged `go-p2p` and `go-rpc` back into `tendermint`, in the `p2p` and `rpc/lib` subdirectories, respectively.
 We also merged most of the other `go-XXX` repositories into a new repository, called `tmlibs`.
 So now `go-common` is `tmlibs/common`, `go-db` is `tmlibs/db`, and so on.
 
@@ -74,9 +73,9 @@ If you think you need more log levels, [take it up with Dave Cheney](https://dav
 
 **Cleaner APIs (no more go-wire!)**
 
-Tendermint is a blockchain engine, which means strict determinism and efficient data formatting are paramount to success. 
-For this reason, we defined our own serialization format - a simple binary representation of the basic data types, but with the additional 
-ability to easily deserialize into interface types in Go. To achieve this, each implementation of an interface is given a type-byte and registered 
+Tendermint is a blockchain engine, which means strict determinism and efficient data formatting are paramount to success.
+For this reason, we defined our own serialization format - a simple binary representation of the basic data types, but with the additional
+ability to easily deserialize into interface types in Go. To achieve this, each implementation of an interface is given a type-byte and registered
 with the serialization library. Then when an interface type is being serialized, its simply prepended with the type-byte of the particular underlying implementation.
 This has been quite useful for things like transactions, keys, protocol messages, events, and so on.
 
@@ -106,7 +105,6 @@ Tendermint should be much easier to use now, both for those using the RPC, and f
 
 Next up for us are some important changes to ABCI to allow apps to decide what to do with validators who are offline or who misbehaved.
 This is critical for Proof-of-Stake protocols that use the security-deposits and "slashing", and is the last big change we need to make to Tendermint
-to prepare for its use in Cosmos. 
+to prepare for its use in Cosmos.
 
 Cheers!
-
