@@ -1,7 +1,7 @@
 ~~~
 title: "Tendermint 0.10.0 Release"
 description: "Tendermint 0.10.0 includes some major refactoring of the repositories, config, and logger"
-date: "2017-05-31"
+date: "2017-06-05"
 author: "Ethan Buchman"
 ~~~
 
@@ -40,7 +40,7 @@ The remaining independent libraries are now the following:
 
 The `go-merkle` repository is an exception. It contained two kinds of Merkle tree: a simple, static tree (eg. for hashing transactions),
 and a dynamic tree, the IAVL tree (eg. for storing state). The former has been moved to `tmlibs/merkle`. The latter can be found in `merkleeyes/iavl`.
-Note that `merkleeyes` is effectively an ABCI wrapper around the IAVL tree, so its a natural place for the library itself to live. It is also not used
+Note that [`merkleeyes`](https://github.com/tendermint/merkleeyes) is effectively an ABCI wrapper around the IAVL tree, so its a natural place for the library itself to live. It is also not used
 by Tendermint core, and is more a part of our application framework (which includes Basecoin) than a part of the core.
 
 **Config Structs**
@@ -48,7 +48,7 @@ by Tendermint core, and is more a part of our application framework (which inclu
 Until now, configuration of a Tendermint node has been completely flat and somewhat adhoc. The config data was stored in a `map` and just passed around everywhere.
 In v0.10.0, we finally provided some structure, by defining an explicit `Config` struct, consisting of substructs for each important piece of Tendermint that needs to be configured. We also updated many functions, wherever suitable, to only pass in required arguments rather than an entire configuration.
 
-The new configuration structs and there defaults can all be found in [config/config.go](https://github.com/tendermint/tendermint/blob/master/config/config.go#L11).
+The new configuration structs and their defaults can all be found in [config/config.go](https://github.com/tendermint/tendermint/blob/master/config/config.go#L11).
 We hope this makes the configuration options in Tendermint much more obvious, and simplifies configuring a node just the way you like it.
 
 Some major differences to note are the `rpc` and `p2p` sub-configs. For instance, to specify seed nodes to connect with from the command line, you need to use the `p2p` prefix:
