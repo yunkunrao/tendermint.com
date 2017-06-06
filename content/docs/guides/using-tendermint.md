@@ -26,15 +26,15 @@ For more elaborate initialization, see our quick and dirty deployment tool, [min
 
 ## Run
 
-To run a tendermint node, use 
+To run a tendermint node, use
 
 ```
-tendermint node 
+tendermint node
 ```
 
 By default, Tendermint will try to connect to a abci appliction on [127.0.0.1:46658](127.0.0.1:46658).
 If you have the `dummy` ABCI app installed, run it in another window.
-If you don't, kill tendermint and run an in-process version with 
+If you don't, kill tendermint and run an in-process version with
 
 ```
 tendermint node --proxy_app=dummy
@@ -84,24 +84,24 @@ Some take no arguments (like `/status`), while others specify the argument name 
 
 WARNING: UNSAFE. Only do this in development and only if you can afford to lose all blockchain data!
 
-To reset a blockchain, stop the node, remove the `~/.tendermint/data` directory and run 
+To reset a blockchain, stop the node, remove the `~/.tendermint/data` directory and run
 
 ```
 tendermint unsafe_reset_priv_validator
 ```
 
-This final step is necessary to reset the `priv_validator.json`, 
-which otherwise prevents you from making conflicting votes in the consensus 
+This final step is necessary to reset the `priv_validator.json`,
+which otherwise prevents you from making conflicting votes in the consensus
 (something that could get you in trouble if you do it on a real blockchain).
 If you don't reset the priv_validator, your fresh new blockchain will not make any blocks.
 
 ## Configuration
 
-Tendermint uses a `config.toml` for configutation. For details, see [the documentation](/docs/internals/configuration). 
+Tendermint uses a `config.toml` for configutation. For details, see [the documentation](/docs/internals/configuration).
 
 Notable options include the socket address of the application (`proxy_app`),
-the listenting address of the tendermint peer (`node_laddr`),
-and the listening address of the rpc server (`rpc_laddr`).
+the listenting address of the tendermint peer (`p2p.laddr`),
+and the listening address of the rpc server (`rpc.laddr`).
 
 Some fields from the config file can be overwritten with flags.
 
@@ -130,7 +130,7 @@ The return value for `broadcast_tx_commit` includes two fields, `check_tx` and `
 the transaction through those ABCI messages.
 
 The benefit of using `broadcast_tx_commit` is that the request returns after the transaction is committed (ie. included in a block),
-but that can take on the order of a second. 
+but that can take on the order of a second.
 For a quick result, use `broadcast_tx_sync`,
 but the transaction will not be committed until later, and by that point its effect on the state may change.
 
@@ -181,13 +181,13 @@ And the `priv_validator.json`:
 ```
 
 The `priv_validator.json` actually contains a private key, and should be kept absolutely secret,
-but for now we work with the plain text. 
+but for now we work with the plain text.
 Note the `last_` fields, which prevent us from signing conflicting messages.
 
 Note also that the `pub_key` (the public key) in the `priv_validator.json` is also present in the `genesis.json`.
 
 The genesis file contains the list of public keys which may participate in the consensus,
-and their corresponding voting power. 
+and their corresponding voting power.
 More than 2/3 of the voting power must be active (ie. the corresponding private keys must be producing signatures)
 for the consensus to make progress.
 In our case, the genesis file contains the public key of our `priv_validator.json`,
@@ -207,7 +207,7 @@ To connect to peers on start-up, specify them in the `config.toml` or on the com
 For instance,
 
 ```
-tendermint node --seeds "1.2.3.4:46656,5.6.7.8:46656"
+tendermint node --p2p.seeds "1.2.3.4:46656,5.6.7.8:46656"
 ```
 
 Alternatively, you can use the `/dial_seeds` endpoint of the RPC to specify peers for a running node to connect to:
@@ -236,7 +236,7 @@ For instance, we could make a new `priv_validator.json`, and copy it's `pub_key`
 We can generate a new `priv_validator.json` with the command:
 
 ```
-tendermint gen_validator 
+tendermint gen_validator
 ```
 
 Now we can update our genesis file. For instance, if the new `priv_validator.json` looks like:
@@ -291,7 +291,7 @@ then the new `genesis.json` will be:
 Update the `genesis.json` in `~/.tendermint`. Copy the genesis file and the new `priv_validator.json`
 to the `~/.tendermint` on a new machine.
 
-Now run `tendermint node` on both machines, and use either `--seeds` or the `/dial_seeds` to get them to peer up.
+Now run `tendermint node` on both machines, and use either `--p2p.seeds` or the `/dial_seeds` to get them to peer up.
 They should start making blocks, and will only continue to do so so long as both of them are online.
 
 To make a Tendermint network that can tolerate one of the validators failing, you need at least four validator nodes.
@@ -302,13 +302,13 @@ See the [application developers guide](/docs/guides/app-development#Handshake) f
 ### Local Network
 
 To run a network locally, say on a single machine, you must change the `_laddr` fields in the `config.toml` (or using the flags)
-so that the listening addresses of the various sockets don't conflict. 
+so that the listening addresses of the various sockets don't conflict.
 Additionally, you must set `addrbook_strict=false` in the `config.toml`,
 otherwise Tendermint's p2p library will deny making connections to peers with the same IP address.
 
 ## More
 
-Got a couple nodes talking to each other using the dummy app? 
+Got a couple nodes talking to each other using the dummy app?
 Try a more sophisticated app like [Ethermint](https://github.com/tendermint/ethermint),
 or learn more about building your own in the [Application Developer's Guide](/docs/guides/app-development).
 
