@@ -42,6 +42,20 @@
         </div>
       </div>
     </div>
+    <div class="bin bin-ethermint">
+      <div class="title"><img src="../assets/images/icon-ethermint.png"></div>
+      <div class="key-value">
+        <div class="key">ethermint <span class="version">0.2.0</span></div>
+        <div class="value">
+          <btn type="anchor"  icon="linux" value="Linux"
+            :href="dl('linux', 'ethermint', '0.2.0')" disabled></btn>
+          <btn type="anchor"  icon="apple" value="macOS"
+            :href="dl('darwin', 'ethermint', '0.2.0')" disabled></btn>
+          <btn type="anchor"  icon="windows" value="Windows"
+            :href="dl('windows', 'ethermint', '0.2.0')" disabled></btn>
+        </div>
+      </div>
+    </div>
     <div class="bin bin-merkleeyes">
       <div class="title"><img src="../assets/images/icon-merkleeyes.png"></div>
       <div class="key-value">
@@ -87,6 +101,7 @@ export default {
     display flex
     .title
       img
+        display block
         width 4em
         height 4em
         margin 0
@@ -105,7 +120,6 @@ export default {
 
     .value
       display flex
-      margin-bottom 0.75em
       .ni-btn
         max-width 8rem
         flex 1
@@ -114,15 +128,6 @@ export default {
           display none
         &:last-of-type
           margin-right 0
-
-    &.bin-tendermint .title
-      background #52b234
-    &.bin-abci .title
-      background #3378f7
-    &.bin-basecoin .title
-      background #5d1ef5
-    &.bin-merkleeyes .title
-      background #aa2cf6
 
 @media screen and (min-width: 360px)
   .download-matrix
@@ -149,8 +154,6 @@ export default {
     .bin
       .key-value
         padding 0 1.5rem
-      .key
-        margin-top 0.25rem
       .value
         .ni-btn
           margin-right 1rem
