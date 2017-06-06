@@ -45,14 +45,14 @@
     <div class="bin bin-ethermint">
       <div class="title"><img src="../assets/images/icon-ethermint.png"></div>
       <div class="key-value">
-        <div class="key">ethermint <span class="version">(coming soon)</span></div>
+        <div class="key">ethermint <span class="version">0.2.0</span></div>
         <div class="value">
           <btn type="anchor"  icon="linux" value="Linux"
-            :href="dl('linux', 'ethermint', '0.2.0')" disabled></btn>
+            :href="dlEthermintLinux( '0.2.0')"></btn>
           <btn type="anchor"  icon="apple" value="macOS"
-            :href="dl('darwin', 'ethermint', '0.2.0')" disabled></btn>
+            :href="dlEthermintMac('0.2.0')"></btn>
           <btn type="anchor"  icon="windows" value="Windows"
-            :href="dl('windows', 'ethermint', '0.2.0')" disabled></btn>
+            :href="dlEthermintWindows('0.2.0')"></btn>
         </div>
       </div>
     </div>
@@ -82,8 +82,16 @@ export default {
   },
   methods: {
     dl (os, name, version) {
-      let href = `https://s3-us-west-2.amazonaws.com/tendermint/binaries/${name}/v${version}/${name}_${version}_${os}_amd64.zip`
-      return href
+      return `https://s3-us-west-2.amazonaws.com/tendermint/binaries/${name}/v${version}/${name}_${version}_${os}_amd64.zip`
+    },
+    dlEthermintLinux (version) {
+      return `https://s3.eu-central-1.amazonaws.com/ethermint/${version}/ethermint_${version}_ethermint-linux-amd64.zip`
+    },
+    dlEthermintMac (version) {
+      return `https://s3.eu-central-1.amazonaws.com/ethermint/${version}/ethermint_${version}_ethermint-darwin-10.6-amd64.zip`
+    },
+    dlEthermintWindows (version) {
+      return `https://s3.eu-central-1.amazonaws.com/ethermint/${version}/ethermint_${version}_ethermint-windows-4.0-amd64.exe.zip`
     }
   }
 }
