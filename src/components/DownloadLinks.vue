@@ -45,7 +45,7 @@
     <div class="bin bin-ethermint">
       <div class="title"><img src="../assets/images/icon-ethermint.png"></div>
       <div class="key-value">
-        <div class="key">ethermint <span class="version">0.2.0</span></div>
+        <div class="key">ethermint <span class="version">(coming soon)</span></div>
         <div class="value">
           <btn type="anchor"  icon="linux" value="Linux"
             :href="dl('linux', 'ethermint', '0.2.0')" disabled></btn>
