@@ -1,7 +1,7 @@
 # Deploy a Testnet
 
 Now that we've seen how ABCI works, and even played with a few applications on a single validator node,
-it's time to deploy a test network to four validator nodes. 
+it's time to deploy a test network to four validator nodes.
 For this deployment, we'll use the `basecoin` application.
 
 ## Manual Deployments
@@ -17,10 +17,10 @@ Here are the steps to setting up a testnet manually:
 2) Install Tendermint and the application of interest on all nodes
 3) Generate a private key for each validator using `tendermint gen_validator`
 4) Compile a list of public keys for each validator into a `genesis.json` file.
-5) Run `tendermint node --seeds=< seed addresses >` on each node, where `< seed addresses >` is a 
+5) Run `tendermint node --p2p.seeds=< seed addresses >` on each node, where `< seed addresses >` is a
 comma separated list of the IP:PORT combination for each node. The default port for Tendermint is `46656`.
-Thus, if the IP addresses of your nodes were `192.168.0.1, 192.168.0.2, 192.168.0.3, 192.168.0.4`, 
-the command would look like: `tendermint node --seeds=192.168.0.1:46656,192.168.0.2:46656,192.168.0.3:46656,192.168.0.4:46656`.
+Thus, if the IP addresses of your nodes were `192.168.0.1, 192.168.0.2, 192.168.0.3, 192.168.0.4`,
+the command would look like: `tendermint node --p2p.seeds=192.168.0.1:46656,192.168.0.2:46656,192.168.0.3:46656,192.168.0.4:46656`.
 
 After a few seconds, all the nodes should connect to eachother and start making blocks!
 For more information, see the Tendermint Networks section of [the guide to using Tendermint](/docs/guides/using-tendermint).
