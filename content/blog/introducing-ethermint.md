@@ -1,5 +1,5 @@
 ~~~
-title: "Introduction to Ethermint"
+title: "Introducing Ethermint"
 description: "Running vanilla Ethereum on top of Tendermint consensus."
 date: "2017-05-26"
 author: "Adrian Brink"
@@ -60,7 +60,8 @@ to start the Tendermint node.
 ### Starting Ethermint
 In a second terminal window switch into the folder with the Ethermint source
 code. Then run `ethermint --datadir ~/.ethermint init dev/genesis.json` to
-initialise the Ethermint files. Afterwards, start the Ethermint node by running
+initialise the Ethermint files. Then in order to have an account with money run 
+`cp -r dev/keystore ~/.ethermint/keystore`. Afterwards, start the Ethermint node by running
 `ethermint --datadir ~/.ethermint --rpc --rpcaddr=0.0.0.0 --ws --wsaddr=0.0.0.0 --rpcapi eth,net,web3,personal,admin`.
 This tells Ethermint to expose a lot of its functionality over RPC.
 
