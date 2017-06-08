@@ -32,7 +32,7 @@ Cons:
 
 This was proposed by @wolfposd on slack and demonstrated by [TMChat](https://github.com/wolfposd/TMChat), a sample app. The concept is to write a custom server for your app (with typical REST API/websockets/etc for easy use by a mobile app). This custom server is in the same binary as the ABCI app and data store, so can easily react to complex events there that involve understanding the data format (send a message if my balance drops below 500). All "writes" sent to this server are proxied via websocket/JSON-RPC to tendermint core.  When they come back as deliver_tx over ABCI, they will be written to the data store. For "reads", we can do any queries we wish that are supported by our architecture, using any web technology that is useful. The general architecture is shown in the following diagram:
 
-<img title="Application Architecture" src="../assets/images/tm-app-example.png">
+<img alt="Application Architecture" src="../assets/images/tm-app-example.png">
 
 Pros:
 * Separates application logic from blockchain logic

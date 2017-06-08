@@ -8,7 +8,6 @@ categories:
     - "tendermint"
 ~~~
 
-# Smart --log_level flag
 One of the exiting new features in 0.10.0 release is smart `--log_level` flag,
 which now can accept complex queries.
 
