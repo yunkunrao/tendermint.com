@@ -53,14 +53,12 @@ Then, write the blog post in Markdown. Do not include the post title in the body
 
 ### Include Images
 
-To include an image in a blog post, place the image in the `./src/assets/images/` directory. Link to the image in the following format:
+To include an image in a blog post, place the image in the `./static/images/` directory. Link to the image in the following format:
 
     <img alt="Application Architecture" src="../static/images/tm-app-example.png">
 
-The `../static/images/` portion of the imgsrc will stay the same for every image, because the post markdown is turned into JSON for filtering and sorting.
-
-### Build for Production
-Please run the following command to build all documentation.
+### Build
+Please run the following command to build the blog.
 
     yarn run blog
 
@@ -88,7 +86,7 @@ To include an image in documentation, place the image in the `./src/assets/image
 
 The `../assets/images/` portion of the imgsrc is immutable because markdown-based docs are built into Vue components located in `./src/content/`.
 
-### Build for Production
+### Build
 Please run the following command to build all documentation.
 
     yarn run docs
