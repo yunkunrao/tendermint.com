@@ -1,42 +1,8 @@
-# Tendermint Website
-
-> The one and only website for Tendermint.
-
-## Production
-
-Please ask the team for deployment privileges.
-
-``` bash
-# add the production server if you haven't already
-git remote add production ubuntu@cosmos.network:~/tendermint.git
-```
-
-``` bash
-# deploy it!
-git checkout master
-git merge develop
-git push production master
-```
-
-## Development
-
-Make sure you're running Node 6 LTS or higher.
-
-``` bash
-# install dependencies
-yarn install
-
-# write some required files
-yarn run build
-
-# serve with hot reload at localhost:8800
-yarn run dev
-```
+# Contributing
 
 ## 5-Second Editing Guide
 
 ``` bash
-
 # Edit Blog > Posts
 ./content/blog/
 yarn run blog
@@ -115,6 +81,14 @@ Please run the following command to build all documentation.
 
 ## Editing Tips
 
+### Include Images
+
+To include an image in a blog post or documentation page, place the image in the `./src/assets/images/` directory. Link to the image in the following format:
+
+    <img alt="Application Architecture" src="../assets/images/tm-app-example.png">
+
+The `../assets/images/` portion of the imgsrc is immutable because all markdown posts are built into Vue components located in `./src/content/`
+
 ### Link to the Site
 If you want to link to other pages in the Tendermint site, please use the full path. This will prevent the user's browser from reloading the entire website. For example:
 
@@ -132,4 +106,3 @@ HTML IDs are automatically generated for headings. You can link to them, but ple
 
     # will work
     [block hash](/docs/internals/tendermint-types#block-hash)
-
