@@ -301,19 +301,6 @@
   {
     "area": "community",
     "description": "",
-    "id": "social-media-growth-manager",
-    "locations": ["Berlin", "San Francisco", "Toronto"],
-    "requirements": [],
-    "tasks": [
-      "Grow social media accounts by selective liking/following",
-      "Manage social media accounts (Cosmos, Interchain, possibly Tendermint)"
-    ],
-    "title": "Social Media Growth Manager",
-    "weight": 1
-  },
-  {
-    "area": "community",
-    "description": "",
     "id": "blog-copywriter",
     "locations": ["Berlin", "San Francisco", "Toronto"],
     "requirements": [],
