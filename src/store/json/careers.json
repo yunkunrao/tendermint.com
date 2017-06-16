@@ -1,21 +1,33 @@
 [
   {
     "area": "technical",
-    "description": "",
+    "description": "Tendermint is looking for a Head of Community Management to lead and manage programs and initiatives to nurture and grow our developer community. Tendermint is a platform for young developers to program, build great blockchain, and develop entrepreneurial skills.\n\nYou will be responsible for building programs, initiatives and social strategy for our developer community. This includes communicating product updates, best practices and announcements from Tendermint with our developer community. You will also act as internal voice of developer - prioritizing and shepherding feedback from community back to product. An understanding of blockchain development and community management best practices is a must as you will own the communication with a very knowledgeable and vested community.",
     "id": "developer-relations-lead",
     "locations": ["Berlin", "San Francisco", "Toronto"],
     "requirements": [
-      "Familiarity with the Tendermint platform and developer ecosystem",
-      "Flawless written and spoken developer English",
-      "Excellent teaching and explaining skills"
+      "Experienced: 5-7 years of experience in developer community management, driving programs, and initiatives",
+      "Strong developer background: Has understanding of software development fundamentals and experience with community management of this audience",
+      "Extraverted: Enjoys communicating with 1000s of eager fans and young adults",
+      "Self-organized: with a desire to get things done",
+      "Excellent communicator: Both written and oral",
+      "Organized: Able to handle complicated situations diplomatically and remain levelheaded",
+      "Passionate: Desire to work on a dynamic team and a willingness to work on new projects.",
+      "Detail-oriented"
     ],
     "tasks": [
-      "Work with marketing and technical writing to improve onboarding",
-      "Nuture a robust developer community",
-      "Organize community meetups"
+      "* Nurture and Grow Community *",
+      "Define and build programs to scale the growth and success of the community - actively looking to nurture developers from one level to the next",
+      "Maintain consistent Tendermint voice and use best practices for answering company inquiries",
+      "Be connected with the community, monitor communication channels",
+      "Set up metrics and drive reporting for community",
+      "Build personal relationships with community members, developers, and internal staff",
+      "* Manage Social Media and Other Communication Channels *",
+      "Create a regular cadence of communications to the broader developer community through a combination of blogging, social media, Medium, and Youtube",
+      "Establish measurable metrics for success and improvement for each channel",
+      "Help establish analytical models to understand community requests and needs"
     ],
-    "title": "Developer Relations, Lead",
-    "weight": 3
+    "title": "Head of Community Management, Developer Relations",
+    "weight": 7
   },
   {
     "area": "technical",
