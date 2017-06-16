@@ -2,6 +2,24 @@
   {
     "area": "technical",
     "description": "",
+    "id": "developer-relations-lead",
+    "locations": ["Berlin", "San Francisco", "Toronto"],
+    "requirements": [
+      "Familiarity with the Tendermint platform and developer ecosystem",
+      "Flawless written and spoken developer English",
+      "Excellent teaching and explaining skills"
+    ],
+    "tasks": [
+      "Work with marketing and technical writing to improve onboarding",
+      "Nuture a robust developer community",
+      "Organize community meetups"
+    ],
+    "title": "Developer Relations, Lead",
+    "weight": 3
+  },
+  {
+    "area": "technical",
+    "description": "",
     "id": "technical-documentation-writer",
     "locations": ["Berlin", "San Francisco", "Toronto"],
     "requirements": [
