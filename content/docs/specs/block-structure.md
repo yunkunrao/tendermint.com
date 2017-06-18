@@ -8,36 +8,36 @@ But what exactly is stored in these blocks?
 
 ### Block
 
-A [Block](/docs/internals/tendermint-types#Block) contains:
+A [Block](/docs/specs/tendermint-types#Block) contains:
 
 * a [Header](#header) contains merkle hashes for various chain states
-* the [Data]((/docs/internals/tendermint-types#Data) is all transactions which are to be processed
+* the [Data]((/docs/specs/tendermint-types#Data) is all transactions which are to be processed
 * the [LastCommit](#commit) > 2/3 signatures for the last block
 
 The signatures returned along with block `H` are those validating block `H-1`.
 This can be a little confusing, but we must also consider that the
-[Header](/docs/internals/tendermint-types#Header) also contains the `LastCommitHash`.
+[Header](/docs/specs/tendermint-types#Header) also contains the `LastCommitHash`.
 It would be impossible for a Header to include the commits that sign it, as it
 would cause an infinite loop here. But when we get block `H`, we find
 `Header.LastCommitHash`, which must match the hash of `LastCommit`.
 
 ### Header
 
-The [Header](/docs/internals/tendermint-types#Header) contains lots of information (follow
+The [Header](/docs/specs/tendermint-types#Header) contains lots of information (follow
 link for up-to-date info).  Notably, it maintains the `Height`, the `LastBlockID`
 (to make it a chain), and hashes of the data, the app state, and the validator set.
 This is important as the only item that is signed by the validators is the `Header`,
 and all other data must be validated against one of the merkle hashes in the `Header`.
 
-The `DataHash` can provide a nice check on the [Data](/docs/internals/tendermint-types#Data)
+The `DataHash` can provide a nice check on the [Data](/docs/specs/tendermint-types#Data)
 returned in this same block. If you are subscribed to new blocks, via tendermint RPC, in order to display or process the new transactions
 you should at least validate that the `DataHash` is valid.
 If it is important to verify autheniticity, you must wait for the `LastCommit` from the next block to make sure the block header (including `DataHash`) was properly signed.
 
 The `ValidatorHash` contains a hash of the current
-[Validators](/docs/internals/tendermint-types#Validator). Tracking all changes in the
+[Validators](/docs/specs/tendermint-types#Validator). Tracking all changes in the
 validator set is complex, but a client can quickly compare this hash
-with the [hash of the currently known validators](/docs/internals/tendermint-types#ValidatorSet.Hash)
+with the [hash of the currently known validators](/docs/specs/tendermint-types#ValidatorSet.Hash)
 to see if there have been changes.
 
 The `AppHash` serves as the basis for validating any merkle proofs that come
@@ -58,8 +58,8 @@ immutability of the block chain, as the application only applies transactions
 
 ### Commit
 
-The [Commit](/docs/internals/tendermint-types#Commit) contains a set of
-[Votes](/docs/internals/tendermint-types#Vote) that were made by the validator set to
+The [Commit](/docs/specs/tendermint-types#Commit) contains a set of
+[Votes](/docs/specs/tendermint-types#Vote) that were made by the validator set to
 reach consensus on this block. This is the key to the security in any PoS
 system, and actually no data that cannot be traced back to a block header
 with a valid set of Votes can be trusted. Thus, getting the Commit data
@@ -77,8 +77,8 @@ Also note that this `chainID` is in the `genesis.json` from _Tendermint_,
 not the `genesis.json` from the basecoin app ([that is a different chainID...](https://github.com/tendermint/basecoin/issues/32)).
 
 Once we have those votes,
-and we calculated the proper [sign bytes](/docs/internals/tendermint-types#Vote.WriteSignBytes)
-using the chainID and a [nice helper function](/docs/internals/tendermint-types#SignBytes),
+and we calculated the proper [sign bytes](/docs/specs/tendermint-types#Vote.WriteSignBytes)
+using the chainID and a [nice helper function](/docs/specs/tendermint-types#SignBytes),
 we can verify them.  The light client is responsible for maintaining a set of
 validators that we trust.  Each vote only stores the validators `Address`, as well
 as the `Signature`. Assuming we have a local copy of the trusted validator set,
@@ -97,7 +97,7 @@ proxy server [proof call](https://github.com/tendermint/light-client/blob/develo
 or the [test code for auditing](https://github.com/tendermint/light-client/blob/develop/rpc/tests/node_test.go#L102).
 
 #### Vote Sign Bytes
-The `sign-bytes` of a vote is produced by taking a [`stable-json`](https://github.com/substack/json-stable-stringify)-like deterministic JSON [`wire`](/docs/internals/wire-protocol) encoding of the vote (excluding the `Signature` field), and wrapping it with `{"chain_id":"my_chain","vote":...}`.
+The `sign-bytes` of a vote is produced by taking a [`stable-json`](https://github.com/substack/json-stable-stringify)-like deterministic JSON [`wire`](/docs/specs/wire-protocol) encoding of the vote (excluding the `Signature` field), and wrapping it with `{"chain_id":"my_chain","vote":...}`.
 
 For example, a precommit vote might have the following `sign-bytes`:
 
@@ -107,7 +107,7 @@ For example, a precommit vote might have the following `sign-bytes`:
 
 ### Block Hash
 
-The [block hash](/docs/internals/tendermint-types#Block.Hash) is the [Simple Tree hash](Merkle-Trees#simple-tree-with-dictionaries) of the fields of the block `Header` encoded as a list of `KVPair`s.
+The [block hash](/docs/specs/tendermint-types#Block.Hash) is the [Simple Tree hash](Merkle-Trees#simple-tree-with-dictionaries) of the fields of the block `Header` encoded as a list of `KVPair`s.
 
 ### Transaction
 
@@ -115,7 +115,7 @@ A transaction is any sequence of bytes.  It is up to your [ABCI](https://github.
 
 ### BlockID
 
-Many of these data structures refer to the [BlockID](/docs/internals/tendermint-types#BlockID),
+Many of these data structures refer to the [BlockID](/docs/specs/tendermint-types#BlockID),
 which is the `BlockHash` (hash of the block header, also referred to by the next block)
 along with the `PartSetHeader`.  The `PartSetHeader` is explained below and is used internally
 to orchestrate the p2p propogation.  For clients, it is basically opaque bytes,
@@ -123,7 +123,7 @@ but they must match for all votes.
 
 ### PartSetHeader
 
-The [PartSetHeader](/docs/internals/tendermint-types#PartSetHeader) contains the total number of pieces in a [PartSet](/docs/internals/tendermint-types#PartSet), and the Merkle root hash of those pieces.
+The [PartSetHeader](/docs/specs/tendermint-types#PartSetHeader) contains the total number of pieces in a [PartSet](/docs/specs/tendermint-types#PartSet), and the Merkle root hash of those pieces.
 
 ### PartSet
 

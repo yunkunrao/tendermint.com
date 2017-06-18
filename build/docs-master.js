@@ -13,9 +13,10 @@ var template = require('es6-template-strings')
 function writeLinks (linkObject, filename) {
   let value = '\n'
   let base = linkObject.base
+  let gettingStarted = linkObject.gettingStarted
   let guides = linkObject.guides
   let internals = linkObject.internals
-  let gettingStarted = linkObject.gettingStarted
+
 
   if (base.length > 0) {
     let links = base
@@ -36,26 +37,7 @@ function writeLinks (linkObject, filename) {
     }
   }
 
-  if (guides.length > 0) {
-    let links = guides
-    value += '  <div class="title">Guides</div>\n'
-    for (var j = 0; j < links.length; j++) {
-      value +=
-        `  <router-link :to="'${links[j].url}'">${links[j].title}</router-link>\n`
-    }
-  }
-
-  if (internals.length > 0) {
-    let links = internals
-    value += '  <div class="title">Internals</div>\n'
-    for (var k = 0; k < links.length; k++) {
-      if (links[k].title !== 'Tendermint Types') {
-        value +=
-          `  <router-link :to="'${links[k].url}'">${links[k].title}</router-link>\n`
-      }
-    }
-  }
-
+  
   if (gettingStarted.length > 0) {
     let links = gettingStarted
     value += '  <div class="title">Getting Started</div>\n'
@@ -66,6 +48,27 @@ function writeLinks (linkObject, filename) {
     }
   }
 
+  if (guides.length > 0) {
+    let links = guides
+    value += '  <div class="title">Guides</div>\n'
+    for (var j = 0; j < links.length; j++) {
+      value +=
+        `  <router-link :to="'${links[j].url}'">${links[j].title}</router-link>\n`
+    }
+  }
+
+/*  
+  if (internals.length > 0) {
+    let links = internals
+    value += '  <div class="title">Internals</div>\n'
+    for (var k = 0; k < links.length; k++) {
+      if (links[k].title !== 'Tendermint Types') {
+        value +=
+          `  <router-link :to="'${links[k].url}'">${links[k].title}</router-link>\n`
+      }
+    }
+  }
+*/
   return value
 }
 

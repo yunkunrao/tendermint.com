@@ -8,6 +8,11 @@
   <router-link :to="'/docs/changelog'">Changelog</router-link>
   <router-link :to="'/docs/roadmap'">Roadmap</router-link>
   <router-link :to="'/docs/source-code'">Source Code</router-link>
+  <div class="title">Getting Started</div>
+  <router-link to="/download">1. Download Tendermint</router-link>
+  <router-link :to="'/docs/getting-started/first-app'">2. First App</router-link>
+  <router-link :to="'/docs/getting-started/deploy-testnet'">3. Deploy Testnet</router-link>
+  <router-link :to="'/docs/getting-started/next-steps'">4. Next Steps</router-link>
   <div class="title">Guides</div>
   <router-link :to="'/docs/guides/abci-cli'">ABCI CLI</router-link>
   <router-link :to="'/docs/guides/app-architecture'">App Architecture</router-link>
@@ -16,18 +21,6 @@
   <router-link :to="'/docs/guides/install-from-source'">Install from Source</router-link>
   <router-link :to="'/docs/guides/install-go'">Install Go</router-link>
   <router-link :to="'/docs/guides/using-tendermint'">Using Tendermint</router-link>
-  <div class="title">Internals</div>
-  <router-link :to="'/docs/internals/block-structure'">Block Structure</router-link>
-  <router-link :to="'/docs/internals/byzantine-consensus-algorithm'">Byzantine Consensus Algorithm</router-link>
-  <router-link :to="'/docs/internals/configuration'">Configuration</router-link>
-  <router-link :to="'/docs/internals/fast-sync'">Fast Sync</router-link>
-  <router-link :to="'/docs/internals/genesis'">Genesis</router-link>
-  <router-link :to="'/docs/internals/light-client-protocol'">Light Client Protocol</router-link>
-  <router-link :to="'/docs/internals/merkle'">Merkle</router-link>
-  <router-link :to="'/docs/internals/rpc'">RPC</router-link>
-  <router-link :to="'/docs/internals/secure-p2p'">Secure P2P</router-link>
-  <router-link :to="'/docs/internals/validators'">Validators</router-link>
-  <router-link :to="'/docs/internals/wire-protocol'">Wire Protocol</router-link>
 </nav>
     <overlay-btns>
       <overlay-btn v-show="isActive" icon="close"></overlay-btn>

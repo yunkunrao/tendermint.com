@@ -97,4 +97,4 @@ guide for more details about using the `tendermint` program.
 
 ## Next Step
 
-Learn how to [create your first ABCI app](/intro/getting-started/first-abci-app).
+Learn how to [create your first ABCI app](/docs/getting-started/first-abci-app).

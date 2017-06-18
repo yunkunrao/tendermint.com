@@ -38,4 +38,4 @@ TODO: a better tutorial here, and Ansible/Terraform.
 
 ## Next Steps
 
-Done trying out the testnet? Continue [onwards](/intro/getting-started/next-steps).
+Done trying out the testnet? Continue [onwards](/docs/getting-started/next-steps).

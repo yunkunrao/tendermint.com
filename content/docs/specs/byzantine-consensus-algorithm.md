@@ -7,8 +7,8 @@ _The draft 0.6 whitepaper is outdated. The new algorithm is detailed below.  See
 - The consensus process in deciding the next block (at some _height_ `H`) is composed of one or many _rounds_.
 - `NewHeight`, `Propose`, `Prevote`, `Precommit`, and `Commit` represent state machine states of a round. (aka `RoundStep` or just "step").
 - A node is said to be _at_ a given height, round, and step, or at `(H,R,S)`, or at `(H,R)` in short to omit the step.
-- To _prevote_ or _precommit_ something means to broadcast a [prevote vote](/docs/internals/block-structure#vote) or [precommit vote](/docs/internals/block-structure#precommit-vote) for something.
-- A vote _at_ `(H,R)` is a vote signed with the bytes for `H` and `R` included in its [`sign-bytes`](/docs/internals/block-structure#vote-sign-bytes).
+- To _prevote_ or _precommit_ something means to broadcast a [prevote vote](/docs/specs/block-structure#vote) or [precommit vote](/docs/specs/block-structure#precommit-vote) for something.
+- A vote _at_ `(H,R)` is a vote signed with the bytes for `H` and `R` included in its [`sign-bytes`](/docs/specs/block-structure#vote-sign-bytes).
 - _+2/3_ is short for "more than 2/3"
 - _1/3+_ is short for "1/3 or more"
 - A set of +2/3 of prevotes for a particular block or `<nil>` at `(H,R)` is called a _proof-of-lock-change_ or _PoLC_ for short.
@@ -65,7 +65,7 @@ Between two nodes there exists a `Connection`, and multiplexed on top of this co
 - Nodes gossip `PartSet` parts of the current round's proposer's proposed block.  A LibSwift inspired algorithm is used to quickly broadcast blocks across the gossip network.
 - Nodes gossip prevote/precommit votes.  A node NODE_A that is ahead of NODE_B can send NODE_B prevotes or precommits for NODE_B's current (or future) round to enable it to progress forward.
 - Nodes gossip prevotes for the proposed PoLC (proof-of-lock-change) round if one is proposed.
-- Nodes gossip to nodes lagging in blockchain height with block [commits](/docs/internals/block-structure/commit) for older blocks.
+- Nodes gossip to nodes lagging in blockchain height with block [commits](/docs/specs/block-structure/commit) for older blocks.
 - Nodes opportunistically gossip `HasVote` messages to hint peers what votes it already has.
 - Nodes broadcast their current state to all neighboring peers. (but is not gossiped further)
 
@@ -142,7 +142,7 @@ Define the JSet (justification-vote-set) at height `H` of a validator `V1` to be
 Further, define the JSet at height `H` of a set of validators `VSet` to be the union of the JSets for each validator in `VSet`.  For a given commit by honest validators at round `R` for block `B` we can construct a JSet to justify the commit for `B` at `R`.
 We say that a JSet _justifies_ a commit at `(H,R)` if all the committers (validators in the commit-set) are each justified in the JSet with no duplicitous vote signatures (by the committers).
 
-- **Lemma**: When a fork is detected by the existence of two conflicting [commits](/docs/internals/validators#commiting-a-block), the union of the JSets for both commits (if they can be compiled) must include double-signing by at least 1/3+ of the validator set. **Proof**: The commit cannot be at the same round, because that would immediately imply double-signing by 1/3+.  Take the union of the JSets of both commits.  If there is no double-signing by at least 1/3+ of the validator set in the union, then no honest validator could have precommitted any different block after the first commit.  Yet, +2/3 did.  Reductio ad absurdum.
+- **Lemma**: When a fork is detected by the existence of two conflicting [commits](/docs/specs/validators#commiting-a-block), the union of the JSets for both commits (if they can be compiled) must include double-signing by at least 1/3+ of the validator set. **Proof**: The commit cannot be at the same round, because that would immediately imply double-signing by 1/3+.  Take the union of the JSets of both commits.  If there is no double-signing by at least 1/3+ of the validator set in the union, then no honest validator could have precommitted any different block after the first commit.  Yet, +2/3 did.  Reductio ad absurdum.
 
 As a corollary, when there is a fork, an external process can determine the blame by requiring each validator to justify all of its round votes.  Either we will find 1/3+ who cannot justify at least one of their votes, and/or, we will find 1/3+ who had double-signed.
 
@@ -158,7 +158,7 @@ Other potential improvements include adding more data in votes such as the last 
 
 ### Censorship Attacks
 
-Due to the definition of a block [commit](/docs/internals/validators#commiting-a-block), any 1/3+ coalition of validators can halt the blockchain by not broadcasting their votes.  Such a coalition can also censor particular transactions by rejecting blocks that include these transactions, though this would result in a significant proportion of block proposals to be rejected, which would slow down the rate of block commits of the blockchain, reducing its utility and value.  The malicious coalition might also broadcast votes in a trickle so as to grind blockchain block commits to a near halt, or engage in any combination of these attacks.
+Due to the definition of a block [commit](/docs/specs/validators#commiting-a-block), any 1/3+ coalition of validators can halt the blockchain by not broadcasting their votes.  Such a coalition can also censor particular transactions by rejecting blocks that include these transactions, though this would result in a significant proportion of block proposals to be rejected, which would slow down the rate of block commits of the blockchain, reducing its utility and value.  The malicious coalition might also broadcast votes in a trickle so as to grind blockchain block commits to a near halt, or engage in any combination of these attacks.
 
 If a global active adversary were also involved, it can partition the network in such a way that it may appear that the wrong subset of validators were responsible for the slowdown.  This is not just a limitation of Tendermint, but rather a limitation of all consensus protocols whose network is potentially controlled by an active adversary.
 

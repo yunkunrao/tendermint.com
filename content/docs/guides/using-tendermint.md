@@ -97,7 +97,7 @@ If you don't reset the priv_validator, your fresh new blockchain will not make a
 
 ## Configuration
 
-Tendermint uses a `config.toml` for configutation. For details, see [the documentation](/docs/internals/configuration).
+Tendermint uses a `config.toml` for configutation. For details, see [the documentation](/docs/specs/configuration).
 
 Notable options include the socket address of the application (`proxy_app`),
 the listenting address of the tendermint peer (`p2p.laddr`),

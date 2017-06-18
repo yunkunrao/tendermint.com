@@ -12,7 +12,7 @@
       <p>If you prefer, you can also install Tendermint <router-link to="/docs/guides/install">from source</router-link>.</p>
 
       <h2>Next Step</h2>
-      <p>Once you've installed Tendermint onto your computer, get started by creating your first <router-link to="/intro/getting-started/first-abci-app">ABCI app</router-link>.</p>
+      <p>Once you've installed Tendermint onto your computer, get started by creating your first <router-link to="/docs/getting-started/first-abci-app">ABCI app</router-link>.</p>
     </article-body>
   </master-detail>
 </template>

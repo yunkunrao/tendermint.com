@@ -18,7 +18,7 @@ There was also a suggestion on slack from @jhon about compiling everything toget
 
 ### Tendermint Core RPC
 
-I believe this was the original design from @ebuchman.  The concept is that the ABCI app is completely hidden from the outside world and only communicated through a tested and secured [interface exposed by the tendermint core](/docs/internals/rpc). This interface exposes a lot of data on the block header and consensus process, which is quite useful for externally verifying the system.  It also includes 3(!) methods to broadcast a transaction (propose it for the blockchain, and possibly await a response).  And one method to query app-specific data from the ABCI application.
+I believe this was the original design from @ebuchman.  The concept is that the ABCI app is completely hidden from the outside world and only communicated through a tested and secured [interface exposed by the tendermint core](/docs/specs/rpc). This interface exposes a lot of data on the block header and consensus process, which is quite useful for externally verifying the system.  It also includes 3(!) methods to broadcast a transaction (propose it for the blockchain, and possibly await a response).  And one method to query app-specific data from the ABCI application.
 
 Pros:
 * Server code already written
