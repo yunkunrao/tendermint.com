@@ -9,8 +9,6 @@ categories:
     - "tendermint"
 ~~~
 
-# Using Ethermint with Geth and Mist
-
 ## Setup
 Please make sure that you have all the following tools installed and can access them through a terminal window.
 
