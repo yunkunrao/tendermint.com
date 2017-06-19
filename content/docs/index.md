@@ -14,9 +14,9 @@ There is also the [original whitepaper](https://tendermint.com/static/docs/tende
 You might also be interested in the [Cosmos Whitepaper](https://cosmos.network/whitepaper),
 which describes Tendermint, ABCI, and how to build a scalable, heterogeneous, cryptocurrency network.
 
-For details on how the software has changed, and what changes are in store, see the [Changelog](/docs/changelog) and the [Roadmap](/docs/roadmap).
+For details on how the software has changed, and what changes are in store, see the [Changelog](https://github.com/tendermint/tendermint/blob/master/CHANGELOG.md) and the [Roadmap](https://github.com/tendermint/tendermint/blob/master/roadmap.md).
 
-If you're interested in contributing, see our [Contributor Guidelines](/docs/contributing)
+If you're interested in contributing, see our [Contributor Guidelines](https://github.com/tendermint/tendermint/blob/master/CONTRIBUTING.md)
 
 The Tendermint [Software Ecosystem](/ecosystem) contains many example applications and related software built by the Tendermint team and others. 
 Check it out for some motivation and inspiration!
