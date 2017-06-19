@@ -62,4 +62,4 @@ It uses Tendermint as its consensus engine, and provides a particular applicatio
 ## Next Steps
 
 - Read an overview of the motivation and design behind the [Application BlockChain Interface](/intro/abci-overview).
-- Continue with the [Getting Started](/download) guide to install and run example tendermint applications.
+- Continue with the [Getting Started](/docs/getting-started) guide to install and run example tendermint applications.

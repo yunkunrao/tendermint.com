@@ -1,6 +1,5 @@
 function r (page) { return require('../content/docs-' + page + '.vue') }
 export default [
-  { path: '/docs/changelog', component: r('changelog') },
   { path: '/docs/getting-started/first-app', component: r('getting-started-#02-first-app') },
   { path: '/docs/getting-started/deploy-testnet', component: r('getting-started-#03-deploy-testnet') },
   { path: '/docs/getting-started/next-steps', component: r('getting-started-#04-next-steps') },
@@ -11,8 +10,6 @@ export default [
   { path: '/docs/guides/install-from-source', component: r('guides-install-from-source') },
   { path: '/docs/guides/using-tendermint', component: r('guides-using-tendermint') },
   { path: '/docs', component: r('index') },
-  { path: '/docs/roadmap', component: r('roadmap') },
-  { path: '/docs/source-code', component: r('source-code') },
   { path: '/docs/specs/block-structure', component: r('specs-block-structure') },
   { path: '/docs/specs/byzantine-consensus-algorithm', component: r('specs-byzantine-consensus-algorithm') },
   { path: '/docs/specs/configuration', component: r('specs-configuration') },

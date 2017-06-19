@@ -3,11 +3,6 @@
   <!-- Edit the template at `./build/templates/TableOfContents.html` -->
   <div class="master" v-bind:class="{ 'mobile-active': isActive, 'mobile-inactive': !isActive }" @click="toggleManual">
     <nav>
-  <div class="title">Index</div>
-  <router-link :to="'/docs'" exact>Documentation</router-link>
-  <router-link :to="'/docs/changelog'">Changelog</router-link>
-  <router-link :to="'/docs/roadmap'">Roadmap</router-link>
-  <router-link :to="'/docs/source-code'">Source Code</router-link>
   <div class="title">Getting Started</div>
   <router-link to="/download">1. Download Tendermint</router-link>
   <router-link :to="'/docs/getting-started/first-app'">2. First App</router-link>
