@@ -19,7 +19,6 @@
   <router-link :to="'/docs/guides/app-development'">App Development</router-link>
   <router-link :to="'/docs/guides/contributing'">Contributing</router-link>
   <router-link :to="'/docs/guides/install-from-source'">Install from Source</router-link>
-  <router-link :to="'/docs/guides/install-go'">Install Go</router-link>
   <router-link :to="'/docs/guides/using-tendermint'">Using Tendermint</router-link>
 </nav>
     <overlay-btns>

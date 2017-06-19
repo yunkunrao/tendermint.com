@@ -9,7 +9,6 @@ export default [
   { path: '/docs/guides/app-development', component: r('guides-app-development') },
   { path: '/docs/guides/contributing', component: r('guides-contributing') },
   { path: '/docs/guides/install-from-source', component: r('guides-install-from-source') },
-  { path: '/docs/guides/install-go', component: r('guides-install-go') },
   { path: '/docs/guides/using-tendermint', component: r('guides-using-tendermint') },
   { path: '/docs', component: r('index') },
   { path: '/docs/roadmap', component: r('roadmap') },
