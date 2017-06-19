@@ -8,7 +8,7 @@ and [App Architecture](/docs/guides/app-architecture) guides.
 
 To learn more about running the Tendermint software, see the [Using Tendermint Guide](/docs/guides/using-tendermint).
 
-To learn more about Tendermint's various pieces, checkout the [Documentation](/docs).
+To learn more about Tendermint's various pieces, check out the [Documentation](/docs).
 For a deeper dive, see [this thesis](https://atrium.lib.uoguelph.ca/xmlui/handle/10214/9769). 
 There is also the [original whitepaper](https://tendermint.com/static/docs/tendermint.pdf), though it is now quite outdated.
 You might also be interested in the [Cosmos Whitepaper](https://cosmos.network/whitepaper),
