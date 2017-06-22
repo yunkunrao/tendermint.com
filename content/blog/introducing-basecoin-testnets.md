@@ -28,65 +28,38 @@ It's probably a good idea to install all three :).
 rm -rf ~/.cosmos-testnets/
 ```
 
-Let's start by setting up some environment variables and directories:
-
-
-```
-export BCHOME_MERCURY_CLIENT=~/.cosmos-testnets/mercury/client
-export BCHOME_MERCURY_SERVER=~/.cosmos-testnets/mercury/server
-export TMHOME_MERCURY=~/.cosmos-testnets/mercury/server/tendermint
-export BCHOME_HERMES_CLIENT=~/.cosmos-testnets/hermes/client
-export BCHOME_HERMES_SERVER=~/.cosmos-testnets/hermes/server
-export TMHOME_HERMES=~/.cosmos-testnets/hermes/server/tendermint
-
-mkdir -p $TMHOME_HERMES $TMHOME_MERCURY
-```
-
-We also create some aliases to use instead of raw `basecli` and `basecoin` to ensure we're using the right configuration for the chain we want to talk to.
+Now, fetch the testnets repository, which contains some initialization files and an install script:
 
 ```
-alias basecli-mercury="basecli --home $BCHOME_MERCURY_CLIENT"
-alias basecli-venus="basecli --home $BCHOME_HERMES_CLIENT"
-alias basecoin-mercury="basecoin --home $BCHOME_MERCURY_SERVER"
-alias basecoin-venus="basecoin --home $BCHOME_HERMES_SERVER"
+TESTNET_FILES=~/.cosmos-testnets/files
+git clone https://github.com/tendermint/testnets $TESTNET_FILES
+cd $TESTNET_FILES
 ```
 
-And since we may run two different chains on one machine, we need to maintain different sets of ports:
+Now run the install script to set some useful environment variables, create directories, and copy the configuration files into place:
 
 ```
-export PORT_PREFIX1=1234
-export PORT_PREFIX2=2345
-export NODE_PORT1=${PORT_PREFIX1}6
-export NODE_PORT2=${PORT_PREFIX2}6
-export RPC_PORT1=${PORT_PREFIX1}7
-export RPC_PORT2=${PORT_PREFIX2}7
-export APP_PORT1=${PORT_PREFIX1}8
-export APP_PORT2=${PORT_PREFIX2}8
+source scripts/mercury-hermes-1.sh
 ```
+
+The install script also creates some useful aliases for us, such as `basecoin-mercury` and `basecoin-hermes` that set the correct home directory.
+We encourage you to inspect the script - it's quite simple!
 
 ## Running a Full Node
 
-To run a full node, we just need the relevant `genesis.json` files. 
-For instance, for `mercury`:
+To run a full node, we just need to start the Basecoin and Tendermint processes.
+All the configuration was handled by the install script.
 
 ```
-curl https://raw.githubusercontent.com/tendermint/testnets/master/mercury/basecoin/genesis.json > $BCHOME_MERCURY_SERVER/genesis.json
-curl https://raw.githubusercontent.com/tendermint/testnets/master/mercury/tendermint/genesis.json > $TMHOME_MERCURY/genesis.json
-
-# start basecoin and tendermint
-basecoin-mercury start --address tcp://localhost:$APP_PORT1 --without-tendermint &> mercury-basecoin.log &
-TMHOME=$TMHOME_MERCURY tendermint node --proxy_app tcp://localhost:$APP_PORT1 --p2p.laddr tcp://localhost:$NODE_PORT1 --rpc.laddr tcp://localhost:$RPC_PORT1 --p2p.seeds mercury-node0.testnets.interblock.io:46656,mercury-node1.testnets.interblock.io:46656,mercury-node2.testnets.interblock.io:46656,mercury-node3.testnets.interblock.io:46656,mercury-node4.testnets.interblock.io:46656,mercury-node5.testnets.interblock.io:46656,mercury-node6.testnets.interblock.io:46656 --log_level=info &> mercury-tendermint.log &
+basecoin-mercury start --address tcp://localhost:23458 --without-tendermint &> mercury-basecoin.log &
+tendermint-mercury node &> mercury-tendermint.log &
 ```
 
 For `hermes`, we do the same thing:
 
 ```
-curl https://raw.githubusercontent.com/tendermint/testnets/master/hermes/basecoin/genesis.json > $BCHOME_HERMES_SERVER/genesis.json
-curl https://raw.githubusercontent.com/tendermint/testnets/master/hermes/tendermint/genesis.json > $TMHOME_HERMES/genesis.json
-
-# start basecoin and tendermint
-basecoin-hermes start --address tcp://localhost:$APP_PORT2 --without-tendermint &> hermes-basecoin.log &
-TMHOME=$TMHOME_HERMES tendermint node --proxy_app tcp://localhost:$APP_PORT2 --p2p.laddr $NODE_PORT2 --rpc.laddr $RPC_PORT2 --p2p.seeds hermes-node0.testnets.interblock.io:46656,hermes-node1.testnets.interblock.io:46656,hermes-node2.testnets.interblock.io:46656,hermes-node3.testnets.interblock.io:46656,hermes-node4.testnets.interblock.io:46656,hermes-node5.testnets.interblock.io:46656,hermes-node6.testnets.interblock.io:46656 --log_level=info &> hermes-tendermint.log &
+basecoin-hermes start --address tcp://localhost:12348 --without-tendermint &> hermes-basecoin.log &
+tendermint-hermes node &> hermes-tendermint.log &
 ```
 
 You are now running two full nodes, both syncing with the testnet. Check on their progress with `tail -f mercury-tendermint.log` and `tail -f hermes-tendermint.log`
@@ -102,7 +75,7 @@ we're running locally. If you don't run the relay yourself, you will be only be 
 
 
 
-
+TODO
 
 
 ## Get Coins
