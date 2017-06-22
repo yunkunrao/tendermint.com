@@ -37,7 +37,7 @@ export BCHOME_MERCURY_SERVER=~/.cosmos-testnets/mercury/server
 export TMHOME_MERCURY=~/.cosmos-testnets/mercury/server/tendermint
 export BCHOME_HERMES_CLIENT=~/.cosmos-testnets/hermes/client
 export BCHOME_HERMES_SERVER=~/.cosmos-testnets/hermes/server
-export TMHOME_HERMES=~/.cosmos-testnets/mercury/server/tendermint
+export TMHOME_HERMES=~/.cosmos-testnets/hermes/server/tendermint
 
 mkdir -p $TMHOME_HERMES $TMHOME_MERCURY
 ```
@@ -70,19 +70,19 @@ To run a full node, we just need the relevant `genesis.json` files.
 For instance, for `mercury`:
 
 ```
-curl https://s3-us-west-2.amazonaws.com/tendermint/testnets/mercury/basecoin/genesis.json > $BCHOME_MERCURY_SERVER/genesis.json
-curl https://s3-us-west-2.amazonaws.com/tendermint/testnets/mercury/tendermint/genesis.json > $TMHOME_MERCURY/genesis.json
+curl https://raw.githubusercontent.com/tendermint/testnets/master/mercury/basecoin/genesis.json > $BCHOME_MERCURY_SERVER/genesis.json
+curl https://raw.githubusercontent.com/tendermint/testnets/master/mercury/tendermint/genesis.json > $TMHOME_MERCURY/genesis.json
 
 # start basecoin and tendermint
 basecoin-mercury start --address tcp://localhost:$APP_PORT1 --without-tendermint &> mercury-basecoin.log &
-TMHOME=$TMHOME_MERCURY tendermint node --proxy_app tcp://localhost:$APP_PORT1 --p2p.laddr $NODE_PORT1 --rpc.laddr $RPC_PORT1 --p2p.seeds mercury-node0.testnets.interblock.io:46656,mercury-node1.testnets.interblock.io:46656,mercury-node2.testnets.interblock.io:46656,mercury-node3.testnets.interblock.io:46656,mercury-node4.testnets.interblock.io:46656,mercury-node5.testnets.interblock.io:46656,mercury-node6.testnets.interblock.io:46656 --log_level=info &> mercury-tendermint.log &
+TMHOME=$TMHOME_MERCURY tendermint node --proxy_app tcp://localhost:$APP_PORT1 --p2p.laddr tcp://localhost:$NODE_PORT1 --rpc.laddr tcp://localhost:$RPC_PORT1 --p2p.seeds mercury-node0.testnets.interblock.io:46656,mercury-node1.testnets.interblock.io:46656,mercury-node2.testnets.interblock.io:46656,mercury-node3.testnets.interblock.io:46656,mercury-node4.testnets.interblock.io:46656,mercury-node5.testnets.interblock.io:46656,mercury-node6.testnets.interblock.io:46656 --log_level=info &> mercury-tendermint.log &
 ```
 
 For `hermes`, we do the same thing:
 
 ```
-curl https://s3-us-west-2.amazonaws.com/tendermint/testnets/hermes/basecoin/genesis.json > $BCHOME_HERMES_SERVER/genesis.json
-curl https://s3-us-west-2.amazonaws.com/tendermint/testnets/hermes/tendermint/genesis.json > $TMHOME_HERMES/genesis.json
+curl https://raw.githubusercontent.com/tendermint/testnets/master/hermes/basecoin/genesis.json > $BCHOME_HERMES_SERVER/genesis.json
+curl https://raw.githubusercontent.com/tendermint/testnets/master/hermes/tendermint/genesis.json > $TMHOME_HERMES/genesis.json
 
 # start basecoin and tendermint
 basecoin-hermes start --address tcp://localhost:$APP_PORT2 --without-tendermint &> hermes-basecoin.log &
@@ -93,12 +93,23 @@ You are now running two full nodes, both syncing with the testnet. Check on thei
 
 It may take some time to sync up. You can see the latest height for remote nodes under the `/status` endpoint, for instance at http://merucry-node4.testnets.interblock.io:46657/status.
 
+## Running a Relay
+
+If we want to be able to send funds from one chain to the other, we must ensure some process is relaying the necessary information.
+For this, we use the `basecoin relay` command to start a process that listens for outgoing packets from multiple chains and forwards them to their destination.
+For now, the relay is quite simple and only works with two chains, and with one node from each chain. So we can use it to relay between the two full nodes 
+we're running locally. If you don't run the relay yourself, you will be only be able to send coins across chains if someone else does.
+
+
+
+
+
 
 ## Get Coins
 
 To send transactions, you need an account and some coins. First things first, generate a key.
 We'll generate the key on `hermes`, but you're just as welcome to make keys and request coins on `mercury`.
-Note that the seem key will not work on multiple chains unless you do some manual work moving files across directories ...
+Note that the same key will not work on multiple chains unless you do some manual work moving files across directories ...
 
 ```
 basecli-hermes keys new mykey
