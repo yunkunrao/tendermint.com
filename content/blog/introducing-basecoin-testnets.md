@@ -73,16 +73,42 @@ For this, we use the `basecoin relay` command to start a process that listens fo
 For now, the relay is quite simple and only works with two chains, and with one node from each chain. So we can use it to relay between the two full nodes 
 we're running locally. If you don't run the relay yourself, you will be only be able to send coins across chains if someone else does.
 
+For now, we'll run a relay, because we're still cleaning up the tool. Soon, we'll stop running it, and y'all can run them yourselves ;).
+If you want to run one already, you can see how it works in the [IBC guide](https://github.com/tendermint/basecoin/blob/master/docs/guide/ibc.md).
 
+### Challenge
 
-TODO
-
+After playing with the tools for a bit, and especially after working through the [IBC guide](https://github.com/tendermint/basecoin/blob/master/docs/guide/ibc.md),
+it will be possible to find the private key being used for the relay. It has a bunch of coins. Go steal them. Write a blog post about it.
+Collect your reward :)
 
 ## Get Coins
 
-To send transactions, you need an account and some coins. First things first, generate a key.
+To send transactions, you need an account and some coins. But to check your account balance securely,
+you need to initialize a light-client and authenticate the validator set hash. This only needs to be done once,
+and afterwards, all transactions and state can be trustlessly verified! 
+
+The validator hashes for mercury and hermes are:
+
+```
+mercury  TODO
+hermes 
+```
+
+You can initalize the light-clients to use your local full nodes.
+If you don't have a full node, follow the instructions above to run one, or change `--node` to point to a public node,
+for instance `tcp://hermes-node4.testnets.interblock.io:46657`.
+
+```
+basecli-mercury init --chain-id=mercury --node=tcp://localhost:23457
+basecli-hermes init --chain-id=hermes --node=tcp://localhost:12347
+```
+
+Make sure the validator set hashes match up!
+
+Now you're ready to generate a key.
 We'll generate the key on `hermes`, but you're just as welcome to make keys and request coins on `mercury`.
-Note that the same key will not work on multiple chains unless you do some manual work moving files across directories ...
+Note that the same key will not work on multiple chains unless you do some manual work moving files across directories...
 
 ```
 basecli-hermes keys new mykey
@@ -90,23 +116,12 @@ ME=$(basecli-hermes keys get mykey | awk '{print $2}')
 echo $ME
 ```
 
-Now ask someone in the #testnets channel on the [tendermint slack]() to send some coins to your address.
+Now ask someone in the #testnets channel on the [tendermint slack](http://forum.tendermint.com:3000/) to send some coins to your address.
 You can check your balance with:
 
 ```
 basecli-hermes query account $ME
 ```
-
-By default it will look for a local node. To use a remote node, use the `--node` flag.
-
-While you're waiting for coins, initialize the client:
-
-```
-basecli-hermes init --chain-id=hermes ---node=tcp://localhost:$RPC_PORT2
-```
-
-If you don't have a full node, follow the instructions above to run one, or change `--node` to point to a public node,
-for instance `tcp://hermes-node4.testnets.interblock.io:46657`.
 
 ## Send Transactions
 
@@ -121,7 +136,7 @@ basecli-hermes tx send --name=mykey --amount=5bumblebee --to=0x$ME2 --sequence=1
 
 Of course, you may need to replace `5bumblebee` with some number of whatever coins you have.
 Remember, you also need to increase the `--sequence` value with each subsequent transaction
-from the same accounnt!
+from the same account! If you forget what the sequence number should be, check by querying for your account.
 
 You can also send funds to an account on the other blockchain! If we're on `hermes`, we can send funds to `mercury` like so:
 
@@ -132,7 +147,7 @@ ME3=$(basecli-mercury keys get mykey | awk '{print $2}')
 basecli-hermes tx send --name=mykey --amount=5bumblebee --to=mercury/0x$ME2 --sequence=2
 ```
 
-Sending coins to an account on a different chain is a simple as just prefixing the address with the chain ID!
+Sending coins to an account on a different chain is simple as just prefixing the address with the chain ID!
 
 Now check your balance on `mercury`:
 
@@ -141,3 +156,12 @@ basecli-mercury query account $ME3
 ```
 
 Tada!
+
+## Conclusion
+
+Here we demonstrated how to run full nodes on the two testnets, how to run light-clients on them,
+and how to send coins between them. The UX is still a little rough, but we wanted to get this out there
+so folks could start playing with it and giving feedback. We will continue polishing the tools and rolling out 
+upgrades to the testnets as they become available, including letting others become validators. We are also
+working on the UI element, but it still needs some love. Stay tuned for a more complete testnet roadmap.
+
