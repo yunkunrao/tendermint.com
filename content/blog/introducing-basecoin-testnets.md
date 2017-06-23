@@ -64,7 +64,7 @@ tendermint-hermes node &> hermes-tendermint.log &
 
 You are now running two full nodes, both syncing with the testnet. Check on their progress with `tail -f mercury-tendermint.log` and `tail -f hermes-tendermint.log`
 
-It may take some time to sync up. You can see the latest height for remote nodes under the `/status` endpoint, for instance at `http://merucry-node4.testnets.interblock.io:46657/status`.
+It may take some time to sync up. You can see the latest height for remote nodes under the `/status` endpoint, for instance at `http://mercury-node4.testnets.interblock.io:46657/status`.
 
 ## Running a Relay
 
@@ -101,7 +101,7 @@ If you don't have a full node, follow the instructions above to run one, or chan
 for instance `tcp://hermes-node4.testnets.interblock.io:46657`.
 
 ```
-basecli-mercury init --chain-id=mercury --node=tcp://localhost:23457
+basecli-mercury init --node=tcp://localhost:23457
 ```
 
 Verify that the validator hash is as above. 
@@ -114,7 +114,7 @@ rm -rf ~/.cosmos-testnets/mercury/client
 tail -f mercury-tendermint.log
 
 # wait until it slows down. then
-basecli-mercury init --chain-id=mercury --node=tcp://localhost:23457
+basecli-mercury init --node=tcp://localhost:23457
 ```
 
 Verify the validator hash.
@@ -122,7 +122,7 @@ Verify the validator hash.
 Do the same for hermes:
 
 ```
-basecli-hermes init --chain-id=hermes --node=tcp://localhost:12347
+basecli-hermes init --node=tcp://localhost:12347
 ```
 
 Verify the validator hash.
@@ -152,7 +152,7 @@ Once you have coins, you can send funds to a different account:
 basecli-hermes keys new mykey2
 ME2=$(basecli-hermes keys get mykey2 | awk '{print $2}')
 
-basecli-hermes tx send --name=mykey --amount=5bumblebee --to=0x$ME2 --sequence=1
+basecli-hermes tx send --name=mykey --amount=5bumblebee --to=$ME2 --sequence=1
 ```
 
 Of course, you may need to replace `5bumblebee` with some number of whatever coins you have.
@@ -165,7 +165,7 @@ You can also send funds to an account on the other blockchain! If we're on `herm
 basecli-mercury keys new mykey
 ME3=$(basecli-mercury keys get mykey | awk '{print $2}')
 
-basecli-hermes tx send --name=mykey --amount=5bumblebee --to=mercury/0x$ME2 --sequence=2
+basecli-hermes tx send --name=mykey --amount=5bumblebee --to=mercury/$ME2 --sequence=2
 ```
 
 Sending coins to an account on a different chain is simple as just prefixing the address with the chain ID!
@@ -177,6 +177,10 @@ basecli-mercury query account $ME3
 ```
 
 Tada!
+
+## Clean Up
+
+To kill the processes, just run `killall tendermint basecoin`. You should be able to restart them any time.
 
 ## Conclusion
 
