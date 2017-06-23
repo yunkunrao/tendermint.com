@@ -91,8 +91,8 @@ and afterwards, all transactions and state can be trustlessly verified!
 The validator hashes for mercury and hermes are:
 
 ```
-mercury  TODO
-hermes 
+mercury F135CD1311FC01CB71EDD2CAFA296AE006B07644
+hermes 7C7F71CB8888DFBFC98470D57C9B19894A7638E0
 ```
 
 You can initalize the light-clients to use your local full nodes.
