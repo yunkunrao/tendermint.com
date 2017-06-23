@@ -1,6 +1,6 @@
 ~~~
 title: "Introducing Basecoin Testnets"
-description: "We're launching two Basecoin testnets that can send coins back and forth between eachother"
+description: "We're launching two Basecoin testnets that can send coins back and forth between each other"
 date: "2017-06-21"
 categories: 
     - "testnets"
@@ -64,14 +64,14 @@ tendermint-hermes node &> hermes-tendermint.log &
 
 You are now running two full nodes, both syncing with the testnet. Check on their progress with `tail -f mercury-tendermint.log` and `tail -f hermes-tendermint.log`
 
-It may take some time to sync up. You can see the latest height for remote nodes under the `/status` endpoint, for instance at http://merucry-node4.testnets.interblock.io:46657/status.
+It may take some time to sync up. You can see the latest height for remote nodes under the `/status` endpoint, for instance at `http://merucry-node4.testnets.interblock.io:46657/status`.
 
 ## Running a Relay
 
 If we want to be able to send funds from one chain to the other, we must ensure some process is relaying the necessary information.
 For this, we use the `basecoin relay` command to start a process that listens for outgoing packets from multiple chains and forwards them to their destination.
 For now, the relay is quite simple and only works with two chains, and with one node from each chain. So we can use it to relay between the two full nodes 
-we're running locally. If you don't run the relay yourself, you will be only be able to send coins across chains if someone else does.
+we're running locally. If you don't run the relay yourself, you will only be able to send coins across chains if someone else does.
 
 For now, we'll run a relay, because we're still cleaning up the tool. Soon, we'll stop running it, and y'all can run them yourselves ;).
 If you want to run one already, you can see how it works in the [IBC guide](https://github.com/tendermint/basecoin/blob/master/docs/guide/ibc.md).
