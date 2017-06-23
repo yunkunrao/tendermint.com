@@ -91,8 +91,9 @@ and afterwards, all transactions and state can be trustlessly verified!
 The validator hashes for mercury and hermes are:
 
 ```
-mercury F135CD1311FC01CB71EDD2CAFA296AE006B07644
-hermes 7C7F71CB8888DFBFC98470D57C9B19894A7638E0
+# Validator Set Hashes
+mercury: F135CD1311FC01CB71EDD2CAFA296AE006B07644
+hermes: 7C7F71CB8888DFBFC98470D57C9B19894A7638E0
 ```
 
 You can initalize the light-clients to use your local full nodes.
@@ -101,10 +102,30 @@ for instance `tcp://hermes-node4.testnets.interblock.io:46657`.
 
 ```
 basecli-mercury init --chain-id=mercury --node=tcp://localhost:23457
+```
+
+Verify that the validator hash is as above. 
+If the command failed, you're not fully synced yet. We need to fix this.
+In the meantime, remove the client directory, wait for your node to sync, 
+and then try to initialize again:
+
+```
+rm -rf ~/.cosmos-testnets/mercury/client
+tail -f mercury-tendermint.log
+
+# wait until it slows down. then
+basecli-mercury init --chain-id=mercury --node=tcp://localhost:23457
+```
+
+Verify the validator hash.
+
+Do the same for hermes:
+
+```
 basecli-hermes init --chain-id=hermes --node=tcp://localhost:12347
 ```
 
-Make sure the validator set hashes match up!
+Verify the validator hash.
 
 Now you're ready to generate a key.
 We'll generate the key on `hermes`, but you're just as welcome to make keys and request coins on `mercury`.
