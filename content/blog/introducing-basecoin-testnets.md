@@ -7,7 +7,8 @@ categories:
     - "basecoin"
 ~~~
 
-With the release of [Basecoin v0.6.0](), we're announcing the availability of our two public Basecoin testnets:
+With the release of [Basecoin v0.6.0](https://github.com/tendermint/basecoin/releases/tag/v0.6.0), 
+we're announcing the availability of our two public Basecoin testnets:
 `mercury` and `hermes`. We are hosting seven validators for each network and invite the community to run their own 
 full-nodes and to try sending transactions across the chains. This post explains how to do that.
 
@@ -15,11 +16,22 @@ In the future, we'll upgrade the application to allow new validators to particip
 
 ## Install
 
-If you just want to run a node, install [basecoin]() and [tendermint]().
+Install Basecoin and Tendermint from the [downloads page](https://tendermint.com/download).
 
-If you want to send transactions and make queries, install [basecli]().
+Note the Basecoin zip-file contains two binaries: `basecoin` and `basecli`. You need both.
 
-It's probably a good idea to install all three :).
+Make sure you put `basecoin`, `basecli`, and `tendermint` somewhere on your `$PATH`.
+
+Check that everything is installed:
+
+```
+# v0.10.0
+tendermint version
+
+# v0.6.0
+basecoin version
+basecli version
+```
 
 ### Preliminaries
 
@@ -107,7 +119,7 @@ basecli-mercury init --node=tcp://localhost:23457
 Verify that the validator hash is as above. 
 If the command failed, you're not fully synced yet. We need to fix this.
 In the meantime, remove the client directory, wait for your node to sync, 
-and then try to initialize again:
+and then try to initialize again. You can check the latest height at `http://mercury-node2.testnets.interblock.io:46657/status`.
 
 ```
 rm -rf ~/.cosmos-testnets/mercury/client
