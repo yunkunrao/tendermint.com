@@ -31,14 +31,14 @@
     <div class="bin bin-basecoin">
       <div class="title"><img src="../assets/images/icon-basecoin.png"></div>
       <div class="key-value">
-        <div class="key">basecoin <span class="version">0.5.2</span></div>
+        <div class="key">basecoin <span class="version">0.6.0</span></div>
         <div class="value">
           <btn type="anchor"  icon="linux" value="Linux"
-            :href="dl('linux', 'basecoin', '0.5.2')"></btn>
+            :href="dl('linux', 'basecoin', '0.6.0')"></btn>
           <btn type="anchor"  icon="apple" value="macOS"
-            :href="dl('darwin', 'basecoin', '0.5.2')"></btn>
+            :href="dl('darwin', 'basecoin', '0.6.0')"></btn>
           <btn type="anchor"  icon="windows" value="Windows"
-            :href="dl('windows', 'basecoin', '0.5.2')"></btn>
+            :href="dl('windows', 'basecoin', '0.6.0')"></btn>
         </div>
       </div>
     </div>
