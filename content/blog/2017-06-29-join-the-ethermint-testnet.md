@@ -96,7 +96,7 @@ tendermint-venus node &> venus-tendermint.log &
 
 And lastly you need to start the Ethermint instance by running:
 ```bash
-ethermint-venus --rpc -- rpcaddr=0.0.0.0 ws - wsaddr=0.0.0.0  -- rpcapi eth,net,web3,personal,admin &> venus-ethermint.log &
+ethermint-venus --rpc --rpcaddr=0.0.0.0 --rpccorsdomain=* --ws --wsaddr=0.0.0.0  --rpcapi eth,net,web3,personal,admin,txpool &> venus-ethermint.log &
 ```
 
 You are now running a full ethermint node that is syncing with the venus testnet. You can check
