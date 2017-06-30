@@ -116,7 +116,7 @@ blazzing fast block time to send transactions.
 In the near future I will also be publishing benchmarking results, cost per transactions comparisons and use cases that
 can only be tackled with Ethermint and not the standard Ethereum networks.
 
-If you have any questions, please ask me on []twitter](https://twitter.com/adrian_brink), via [slack](http://slack.cosmos.network/) or via [email](mailto:adrian@tendermint.com).
+If you have any questions, please ask me on [twitter](https://twitter.com/adrian_brink), via [slack](http://slack.cosmos.network/) or via [email](mailto:adrian@tendermint.com).
 I am happy to help anyone who has problems getting up and running or who just has a simple question.
 
 
