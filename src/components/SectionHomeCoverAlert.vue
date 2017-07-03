@@ -2,7 +2,7 @@
   <a class="cover-alert" href="https://hangouts.google.com/hangouts/_/2g3xkp4rkrelhjai5imlfh656ue">
     <span class="key">ANNOUNCEMENT:</span>
     <span class="value">
-      Tendermint &amp; Cosmos DevChat every Wednesday @ 6PM (UTC+2). Come join our call!
+      Tendermint &amp; Cosmos DevChat every other Wednesday @ 6PM (UTC+2). Come join our call!
     </span>
     <i class="fa fa-angle-double-right" aria-hidden="true"></i>
   </a>
