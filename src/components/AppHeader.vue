@@ -23,7 +23,7 @@
   </menu>
 
   <div class="header-item header-item-alert">
-    <a href="https://github.com/cosmos/cosmos">
+    <a href="https://github.com/tendermint">
       <i class="fa fa-github"></i>
     <span class="label" v-if="desktop">GitHub</span>
     </a>
