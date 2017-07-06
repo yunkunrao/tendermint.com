@@ -1,8 +1,8 @@
 <template>
-  <a class="cover-alert" href="https://hangouts.google.com/hangouts/_/2g3xkp4rkrelhjai5imlfh656ue">
+  <a class="cover-alert" href="https://www.meetup.com/Tendermint-COSMOS-Core-Developer-Chat">
     <span class="key">ANNOUNCEMENT:</span>
     <span class="value">
-      Tendermint &amp; Cosmos DevChat every other Thursday @ 5PM (UTC+2). Come join our call!
+      Tendermint &amp; Cosmos DevChat every 2nd and 4th Thursday @ 5PM (UTC+2) of the month. Check out our MeetUp page for the most up-to-date information!
     </span>
     <i class="fa fa-angle-double-right" aria-hidden="true"></i>
   </a>
