@@ -1,12 +1,12 @@
 function r (page) { return require('../content/docs-' + page + '.vue') }
 export default [
+  { path: '/docs/changelog', component: r('changelog') },
   { path: '/docs/getting-started/first-app', component: r('getting-started-#02-first-app') },
   { path: '/docs/getting-started/deploy-testnet', component: r('getting-started-#03-deploy-testnet') },
   { path: '/docs/getting-started/next-steps', component: r('getting-started-#04-next-steps') },
   { path: '/docs/guides/abci-cli', component: r('guides-abci-cli') },
   { path: '/docs/guides/app-architecture', component: r('guides-app-architecture') },
   { path: '/docs/guides/app-development', component: r('guides-app-development') },
-  { path: '/docs/guides/contributing', component: r('guides-contributing') },
   { path: '/docs/guides/install-from-source', component: r('guides-install-from-source') },
   { path: '/docs/guides/using-tendermint', component: r('guides-using-tendermint') },
   { path: '/docs', component: r('index') },

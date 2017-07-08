@@ -19,7 +19,7 @@
 
 <script>
 import MasterDetail from './MasterDetail'
-import Master from '../components/PageIntroMaster'
+import Master from '../components/PageDocsMaster'
 import ArticleBody from '@nylira/vue-article-body'
 import DownloadLinks from './DownloadLinks'
 export default {
