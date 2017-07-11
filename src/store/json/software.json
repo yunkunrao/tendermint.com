@@ -29,8 +29,8 @@
       "description": "Tendermint IAVL tree implemented as an abci app"
     },
     {
-      "name": "ErisDB",
-      "url": "https://github.com/eris-ltd/erisdb",
+      "name": "Burrow",
+      "url": "https://github.com/hyperledger/burrow",
       "language": "Go",
       "author": "Monax Industries",
       "description": "Ethereum Virtual Machine augmented with native permissioning scheme and global key-value store"

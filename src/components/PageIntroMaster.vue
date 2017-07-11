@@ -8,11 +8,7 @@
   <router-link :to="'/intro/tendermint-vs-x'">1. Tendermint vs X</router-link>
   <router-link :to="'/intro/abci-overview'">2. ABCI Overview</router-link>
   <router-link :to="'/intro/consensus-overview'">3. Consensus Overview</router-link>
-  <div class="title">Getting Started</div>
-  <router-link to="/download">1. Download Tendermint</router-link>
-  <router-link :to="'/intro/getting-started/first-app'">2. First App</router-link>
-  <router-link :to="'/intro/getting-started/deploy-testnet'">3. Deploy Testnet</router-link>
-  <router-link :to="'/intro/getting-started/next-steps'">4. Next Steps</router-link>
+  <router-link :to="'/downloads'" exact>4. Getting Started</router-link>
 </nav>
     <overlay-btns>
       <overlay-btn v-show="isActive" icon="close"></overlay-btn>

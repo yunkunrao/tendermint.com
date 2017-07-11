@@ -1,6 +1,6 @@
 <h1>Using Tendermint</h1>
 <p>This is a guide to using the <code>tendermint</code> program from the command line.
-It assumes only that you <router-link to="/intro/getting-started/install">have tendermint installed</router-link> and have some rudimentary idea
+It assumes only that you <router-link to="/docs/getting-started/install">have tendermint installed</router-link> and have some rudimentary idea
 of what Tendermint and ABCI are.</p>
 <p>You can see the help menu with <code>tendermint --help</code>, and the version number with <code>tendermint version</code>.</p>
 <h2>Directory Root</h2>
@@ -53,7 +53,7 @@ which otherwise prevents you from making conflicting votes in the consensus
 (something that could get you in trouble if you do it on a real blockchain).
 If you don’t reset the priv_validator, your fresh new blockchain will not make any blocks.</p>
 <h2>Configuration</h2>
-<p>Tendermint uses a <code>config.toml</code> for configutation. For details, see <router-link to="/docs/internals/configuration">the documentation</router-link>.</p>
+<p>Tendermint uses a <code>config.toml</code> for configutation. For details, see <router-link to="/docs/specs/configuration">the documentation</router-link>.</p>
 <p>Notable options include the socket address of the application (<code>proxy_app</code>),
 the listenting address of the tendermint peer (<code>node_laddr</code>),
 and the listening address of the rpc server (<code>rpc_laddr</code>).</p>

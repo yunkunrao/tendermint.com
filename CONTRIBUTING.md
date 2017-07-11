@@ -108,7 +108,7 @@ If you want to link to other pages in the Tendermint site, please use the full p
     [block hash](./tendermint-types#block-hash)
 
     # will work
-    [block hash](/docs/internals/tendermint-types#block-hash)
+    [block hash](/docs/specs/tendermint-types#block-hash)
 
 ### Link to Headings (e.g. `<h1><h2><h3>`)
 HTML IDs are automatically generated for headings. You can link to them, but please remember to use the slug case format. 'this-is-slug-case'
@@ -117,4 +117,4 @@ HTML IDs are automatically generated for headings. You can link to them, but ple
     [block hash](./tendermint-types#Block.Hash)
 
     # will work
-    [block hash](/docs/internals/tendermint-types#block-hash)
+    [block hash](/docs/specs/tendermint-types#block-hash)

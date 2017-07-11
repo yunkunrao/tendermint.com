@@ -5,7 +5,7 @@ To download pre-built binaries, see the [Download page](/download).
 
 ## Install Go
 
-Make sure you have [installed Go](/docs/guides/install-go) and set the `GOPATH`.
+Make sure you have [installed Go](https://golang.org/doc/install) and set the `GOPATH`.
 
 ## Install Tendermint
 
@@ -97,4 +97,4 @@ guide for more details about using the `tendermint` program.
 
 ## Next Step
 
-Learn how to [create your first ABCI app](/intro/getting-started/first-abci-app).
+Learn how to [create your first ABCI app](/docs/getting-started/first-abci-app).

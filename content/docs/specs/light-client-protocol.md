@@ -6,7 +6,7 @@ See our developing [light-client repository](github.com/tendermint/light-client)
 
 ## Overview
 
-The objective of the light client protocol is to get a [commit](/docs/internals/validators#committing-a-block) for a recent [block hash](/docs/internals/block-structure#block-hash) where the commit includes a majority of signatures from the last known validator set.  From there, all the application state is verifiable with [merkle proofs](/docs/internals/merkle-trees#iavl-tree).
+The objective of the light client protocol is to get a [commit](/docs/specs/validators#committing-a-block) for a recent [block hash](/docs/specs/block-structure#block-hash) where the commit includes a majority of signatures from the last known validator set.  From there, all the application state is verifiable with [merkle proofs](/docs/specs/merkle-trees#iavl-tree).
 
 ### Syncing the Validator Set
 TODO

@@ -70,7 +70,7 @@ While programmers can avoid non-determinism by being careful, it is also possibl
 ## Next Steps
 
 - Read an overview of [how the consensus algorithm works](/intro/consensus-overview).
-- Continue with the [Getting Started](/download) guide to install and run example tendermint applications.
+- Continue with the [Getting Started](/docs/getting-started) guide to install and run example tendermint applications.
 
 ## Contributions
 

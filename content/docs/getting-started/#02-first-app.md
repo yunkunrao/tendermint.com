@@ -253,4 +253,4 @@ You saw how applications could be written in different languages,
 and how to send transactions and query for the latest state.
 But the true power of Tendermint comes from its ability to securely and efficiently run an application 
 across a distributed network of nodes, while keeping them all in sync using its state-of-the-art consensus protocol.
-This is the subject of the next tutorial, where we show you [how to deploy Tendermint networks](/intro/getting-started/deploy-testnet).
+This is the subject of the next tutorial, where we show you [how to deploy Tendermint networks](/docs/getting-started/deploy-testnet).

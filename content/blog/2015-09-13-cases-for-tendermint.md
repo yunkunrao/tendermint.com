@@ -15,7 +15,7 @@ Tendermint is not a fork of Bitcoin, NXT, Ripple, or Ethereum.  Tendermint is it
 
 Tendermint offers:
 
-* Byzantine fault-tolerant consensus with unparalleled speed and security guarantees -- without mining. [(see spec)](/docs/internals/consensus)
+* Byzantine fault-tolerant consensus with unparalleled speed and security guarantees -- without mining. [(see spec)](/docs/specs/consensus)
 * A very clean codebase with clear separation of concerns -- no spaghetti, thanks Golang!
 * Throttled/fair P2P stack to handle multiplexed channels of communication.
 * Clear P2P logic with the [reactor pattern](https://en.wikipedia.org/wiki/Reactor_pattern)
