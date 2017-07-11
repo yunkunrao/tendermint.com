@@ -1,6 +1,6 @@
 ~~~
 title: "The Security of Cryptocurrency Protocols"
-description: "Security analysis of cryptocurrency protocols is complicated by incentive-alignment and extrinsic factors.  A look at more robust security guarantees"
+description: "Security analysis of cryptocurrency protocols is complicated by incentive-alignment and extrinsic factors. A look at more robust security guarantees."
 date: "2014-11-19"
 categories: 
     - "consensus"
