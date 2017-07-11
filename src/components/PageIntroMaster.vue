@@ -8,7 +8,7 @@
   <router-link :to="'/intro/tendermint-vs-x'">1. Tendermint vs X</router-link>
   <router-link :to="'/intro/abci-overview'">2. ABCI Overview</router-link>
   <router-link :to="'/intro/consensus-overview'">3. Consensus Overview</router-link>
-  <router-link :to="'/downloads'" exact>4. Getting Started</router-link>
+  <router-link :to="'/download'" exact>4. Getting Started</router-link>
 </nav>
     <overlay-btns>
       <overlay-btn v-show="isActive" icon="close"></overlay-btn>

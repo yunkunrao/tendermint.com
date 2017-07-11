@@ -49,7 +49,7 @@ function writeLinks (linkObject, filename) {
   }
 
   if (filename === './src/components/PageIntroMaster.vue') {
-    value += `  <router-link :to="'/downloads'" exact>Getting Started</router-link>\n`
+    value += `  <router-link :to="'/download'" exact>4. Getting Started</router-link>\n`
   }
 
   if (guides.length > 0) {
