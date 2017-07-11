@@ -48,6 +48,10 @@ function writeLinks (linkObject, filename) {
 
   }
 
+  if (filename === './src/components/PageIntroMaster.vue') {
+    value += `  <router-link :to="'/downloads'" exact>Getting Started</router-link>\n`
+  }
+
   if (guides.length > 0) {
     let links = guides
     value += '  <div class="title">Guides</div>\n'
