@@ -37,6 +37,9 @@ export default {
   computed: {
     ...mapGetters(['allPosts'])
   },
+  created () {
+    window.location.replace('https://blog.cosmos.network/tendermint/home')
+  },
   mounted () {
     document.title = 'Blog - Tendermint'
   }

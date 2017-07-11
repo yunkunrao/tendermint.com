@@ -1,36 +1,24 @@
-<template>
-<header class="app-header">
-  <div class="container">
+<template lang='pug'>
+header.app-header
+  .container
+    .header-item(@click='toggleMenuApp' v-if='!desktop')
+      i.fa.fa-bars(v-if='!activeMenuApp')
+      i.fa.fa-times(v-else='')
+    router-link.header-item.header-item-flush(to='/')
+      img(src='../assets/images/logo-green-88.jpg' alt='Tendermint logo')
+    menu.menu-popup.menu-app(v-if='activeMenuApp || desktop')
+      nav.nav-app
+        router-link(to='/intro' @click.native='close' exact='') Intro
+        router-link(to='/docs' @click.native='close' exact='') Docs
+        router-link(to='/community' @click.native='close' exact='') Community
+        a(href='https://blog.cosmos.network/tendermint/home' @click.native='close' target='_blank') Blog
+        router-link(to='/careers' @click.native='close' exact='') Careers
+        router-link(to='/about' @click.native='close' exact='') About
+    .header-item.header-item-alert
+      a(href='https://github.com/tendermint')
+        i.fa.fa-github
+        span.label(v-if='desktop') GitHub
 
-  <div class="header-item" @click="toggleMenuApp" v-if="!desktop">
-    <i v-if="!activeMenuApp" class="fa fa-bars"></i>
-    <i v-else class="fa fa-times"></i>
-  </div>
-
-  <router-link to="/" class="header-item header-item-flush">
-    <img src="../assets/images/logo-green-88.jpg" alt="Tendermint logo"/>
-  </router-link>
-
-  <menu class="menu-popup menu-app" v-if="activeMenuApp || desktop">
-    <nav class="nav-app">
-      <router-link to="/intro" @click.native="close" exact>Intro</router-link>
-      <router-link to="/docs" @click.native="close" exact>Docs</router-link>
-      <router-link to="/community" @click.native="close" exact>Community</router-link>
-      <router-link to="/blog" @click.native="close" exact>Blog</router-link>
-      <router-link to="/careers" @click.native="close" exact>Careers</router-link>
-      <router-link to="/about" @click.native="close" exact>About</router-link>
-    </nav>
-  </menu>
-
-  <div class="header-item header-item-alert">
-    <a href="https://github.com/tendermint">
-      <i class="fa fa-github"></i>
-    <span class="label" v-if="desktop">GitHub</span>
-    </a>
-  </div>
-
-  </div>
-</header>
 </template>
 
 <script>
