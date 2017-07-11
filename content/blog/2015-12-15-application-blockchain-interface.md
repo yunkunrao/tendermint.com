@@ -7,7 +7,7 @@ categories:
 ~~~
 
 > After you read this post, don't forget to check out our tutorials and guides!  They also appear at the end of this page.
-1. [Run your first ABCI application](/intro/getting-started/first-abci)
+1. [Run your first ABCI application](/docs/getting-started/first-abci)
 2. [Learn more about the ABCI](/docs/guides/app-development)
 
 ## Motivation
@@ -74,7 +74,7 @@ While programmers can avoid non-determinism by being careful, it is also possibl
 
 Follow these tutorials to quickly get started developing your ABCI application.
 
-1. [Run your first ABCI application](/intro/getting-started/first-abci)
+1. [Run your first ABCI application](/docs/getting-started/first-abci)
 2. [Learn more about the ABCI](/docs/guides/app-development)
 
 ## Contributions

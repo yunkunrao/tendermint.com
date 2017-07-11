@@ -216,5 +216,5 @@ which connects to the app using three separate connections,
 each with its own pattern of messages. 
 
 For more information, see the [application developers guide](/docs/guides/app-development).
-For examples of running an ABCI app with Tendermint, see the [introductory guide](/intro/getting-started/first-abci-app).
+For examples of running an ABCI app with Tendermint, see the [introductory guide](/docs/getting-started/first-abci-app).
 

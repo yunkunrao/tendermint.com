@@ -3,7 +3,7 @@
 * Examples: 
     http://tendermint.nylira.com/blog
     http://tendermint.nylira.com/careers
-    http://tendermint.nylira.com/docs/internals/validators
+    http://tendermint.nylira.com/docs/specs/validators
 
 # 2016-11-15
 * Hiding pages
@@ -160,7 +160,7 @@ Tomorrow: implement the jobs page, finish updating the homepage design and conte
     * New design for Intro/Docs subpages to use the space more efficiently
     * Overhauled routing code for the Intro/Docs pages to be less repetitive and simpler to update purely with markdown.
 * Docs 
-    * Added the sidebar http://tendermint.nylira.com/docs/internals/consensus
+    * Added the sidebar http://tendermint.nylira.com/docs/specs/consensus
 
 Tomorrow is making the toggle sidebar button work, and more design improvements for the homepage.
 

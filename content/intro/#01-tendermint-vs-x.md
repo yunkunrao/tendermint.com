@@ -5,7 +5,7 @@ The first class consists of distributed key-value stores,
 like Zookeeper, etcd, and consul, which use non-BFT consensus.
 The second class is known as "blockchain technology",
 and consists of both cryptocurrencies like Bitcoin and Ethereum, 
-and alternative distributed ledger designs like Hyperledger and ErisDB.
+and alternative distributed ledger designs like Hyperledger's Burrow.
 
 ## Zookeeper, etcd, consul
 
@@ -45,9 +45,9 @@ And we plan to do the same for Bitcoin, ZCash, and various other deterministic a
 
 Another example of a cryptocurrency application built on Tendermint is [Cosmos](http://cosmos.network)
 
-## Hyperledger, ErisDB
+## Fabric, Burrow
 
-[Hyperledger](https://github.com/hyperledger/fabric), takes a similar approach to Tendermint, but is more opinionated about how the state is managed,
+[Fabric](https://github.com/hyperledger/fabric), takes a similar approach to Tendermint, but is more opinionated about how the state is managed,
 and requires that all application behaviour runs in potentially many docker containers, modules it calls "chaincode". 
 It uses an implementation of [PBFT](http://pmg.csail.mit.edu/papers/osdi99.pdf) 
 from a team at IBM that is 
@@ -55,11 +55,11 @@ from a team at IBM that is
 It is possible to implement this docker-based behaviour as a ABCI app in Tendermint, 
 though extending Tendermint to handle non-determinism remains for future work.
 
-[ErisDB](https://github.com/eris-ltd/eris-db) is an implementation of the Ethereum Virtual Machine and Ethereum transaction mechanics,
+[Burrow](https://github.com/hyperledger/burrow) is an implementation of the Ethereum Virtual Machine and Ethereum transaction mechanics,
 with additional features for a name-registry, permissions, and native contracts, and an alternative blockchain API.
 It uses Tendermint as its consensus engine, and provides a particular application state.
 
 ## Next Steps
 
 - Read an overview of the motivation and design behind the [Application BlockChain Interface](/intro/abci-overview).
-- Continue with the [Getting Started](/download) guide to install and run example tendermint applications.
+- Continue with the [Getting Started](/docs/getting-started) guide to install and run example tendermint applications.
