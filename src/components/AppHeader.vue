@@ -250,7 +250,7 @@ navc = #94c0ec
         &:hover
           color link
         &.router-link-active
-          background lighten(mcolor, 15%)
+          background lighten(mcolor, 14%)
           cursor default
           &:hover
             color navc
