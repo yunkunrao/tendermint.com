@@ -24,7 +24,7 @@
           value="Learn More">
         </btn>
       </div>
-      <p class="source"><i class="fa fa-github"></i> View source code on <a href="https://github.com/tendermint">GitHub</a></p>
+      <p class="source"><i class="fa fa-github"></i> View source code on <a href="https://github.com/tendermint" target="_blank">GitHub</a></p>
     </div>
   </section>
 </template>
