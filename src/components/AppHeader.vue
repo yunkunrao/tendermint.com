@@ -15,7 +15,7 @@ header.app-header
         router-link(to='/careers' @click.native='close' exact='') Careers
         router-link(to='/about' @click.native='close' exact='') About
     .header-item.header-item-alert
-      a(href='https://github.com/tendermint')
+      a(href='https://github.com/tendermint' target="_blank")
         i.fa.fa-github
         span.label(v-if='desktop') GitHub
 
