@@ -8,7 +8,7 @@
       slot="header">
     </page-header>
     <article-body>
-      <p><strong>Whoops!</strong> The page you visited either does not exist or has been deleted in a website reshuffle. We're sorry for the inconvenience. Try visiting one of these pages below:</p>
+      <p><strong>Whoops!</strong> The page you visited either does not exist or has been moved elsewhere in a website reshuffle. We're sorry for the inconvenience. Try visiting one of these pages below:</p>
       <ul>
         <li><router-link :to="'/'">Home</router-link></li>
         <li><router-link :to="'/intro'">Intro</router-link></li>
