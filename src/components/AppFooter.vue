@@ -1,52 +1,44 @@
-<template>
-  <div class="app-bottom">
-    <section-bottom></section-bottom>
-    <footer class="app-footer">
-      <div class="sections">
-        <section>
-          <img src="../assets/images/logo-white-alpha-160.png" class="footer-logo">
-          <span>&copy; {{ new Date().getFullYear() }} All In Bits, Inc.</span>
-          <span>29th Floor, 85 Broad St, New York, NY 10004</span>
-        </section>
-        <section>
-          <header>Company</header>
-          <router-link :to="'/blog'">Blog</router-link>
-          <router-link :to="'/about'">About</router-link>
-          <router-link :to="'/careers'">Careers</router-link>
-          <router-link :to="'/press'">Press</router-link>
-          <router-link :to="'/contact'">Contact</router-link>
-        </section>
-        <section>
-          <header>Community</header>
-          <a href="https://www.facebook.com/tendermint/">
-            <i class="fa fa-footbook"></i>Facebook
-          </a>
-          <a href="https://github.com/tendermint/tendermint">
-            <i class="fa fa-github"></i>GitHub
-          </a>
-          <a href="https://www.linkedin.com/company/tendermint">
-            <i class="fa fa-linkedout"></i>LinkedIn
-          </a>
-          <a href="http://forum.tendermint.com:3000">
-            <i class="fa fa-slick"></i>Slack
-          </a>
-          <a href="https://twitter.com/tendermint_team">
-            <i class="fa fa-twatter"></i>Twitter
-          </a>
-        </section>
-        <section>
-          <header>Developers</header>
-          <nav>
-            <router-link :to="'/download'">Download</router-link>
-            <router-link :to="'/intro'">Introduction</router-link>
-            <router-link :to="'/docs'">Documentation</router-link>
-            <router-link :to="'/docs/guides/contributing'">Contributing</router-link>
-            <a href="https://github.com/tendermint/tendermint/issues">Issues</a>
-          </nav>
-        </section>
-      </div><!--sections-->
-    </footer>
-  </div>
+<template lang='pug'>
+.app-bottom
+  section-bottom
+  footer.app-footer
+    .sections
+      section
+        img.footer-logo(src='../assets/images/logo-white-alpha-160.png')
+        span © {{ new Date().getFullYear() }} All In Bits, Inc.
+        span 29th Floor, 85 Broad St, New York, NY 10004
+      section
+        header Company
+        router-link(:to="'/about'") About
+        a(href='https://blog.cosmos.network/tendermint/home', target='_blank') Blog
+        router-link(:to="'/careers'") Careers
+        router-link(:to="'/contact'") Contact
+        router-link(:to="'/press'") Press
+      section
+        header Community
+        a(href='https://www.facebook.com/tendermint/')
+          i.fa.fa-footbook
+          | Facebook
+        a(href='https://github.com/tendermint/tendermint')
+          i.fa.fa-github
+          | GitHub
+        a(href='https://www.linkedin.com/company/tendermint')
+          i.fa.fa-linkedout
+          | LinkedIn
+        a(href='http://forum.tendermint.com:3000')
+          i.fa.fa-slick
+          | Slack
+        a(href='https://twitter.com/tendermint_team')
+          i.fa.fa-twatter
+          | Twitter
+      section
+        header Developers
+        nav
+          router-link(:to="'/download'") Download
+          router-link(:to="'/intro'") Introduction
+          router-link(:to="'/docs'") Documentation
+          a(href='https://github.com/tendermint/tendermint/wiki/Contributing' target='_blank') Contributing
+          a(href='https://github.com/tendermint/tendermint/issues') Issues
 </template>
 
 <script>

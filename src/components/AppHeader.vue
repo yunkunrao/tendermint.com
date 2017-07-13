@@ -10,10 +10,10 @@ header.app-header
       nav.nav-app
         router-link(to='/intro' @click.native='close' exact='') Intro
         router-link(to='/docs' @click.native='close' exact='') Docs
-        router-link(to='/community' @click.native='close' exact='') Community
         a(href='https://blog.cosmos.network/tendermint/home' @click.native='close' target='_blank') Blog
-        router-link(to='/careers' @click.native='close' exact='') Careers
         router-link(to='/about' @click.native='close' exact='') About
+        router-link(to='/careers' @click.native='close' exact='') Careers
+        router-link(to='/community' @click.native='close' exact='') Community
     .header-item.header-item-alert
       a(href='https://github.com/tendermint' target="_blank")
         i.fa.fa-github
