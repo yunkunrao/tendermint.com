@@ -8,7 +8,7 @@
 export default {
   name: 'page-redirect-to-medium',
   mounted () {
-    document.title = 'Redirecting to Medium - Tendermint'
+    document.title = 'Redirecting to Medium - Tendermint - Blockchain Consensus'
     window.location.replace('https://blog.cosmos.network/tendermint/home')
   }
 }
@@ -40,4 +40,3 @@ export default {
     font-size 1.5rem
     color lighten(mcolor, 90%)
 </style>
-
