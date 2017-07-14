@@ -1,18 +1,19 @@
 <template lang='pug'>
-  #redirect
-    i.fa.fa-spinner.fa-spin
-    p Redirecting you to Medium&hellip;
+#redirect
+  i.fa.fa-spinner.fa-spin
+  p Redirecting you to Medium&hellip;
 </template>
 
 <script>
 export default {
   name: 'page-redirect-to-medium',
   mounted () {
-    document.title = 'Redirecting to Medium Blog - Tendermint'
+    document.title = 'Redirecting to Medium - Tendermint'
     window.location.replace('https://blog.cosmos.network/tendermint/home')
   }
 }
 </script>
+
 <style lang="stylus">
 @require '../styles/variables.styl'
 #redirect
