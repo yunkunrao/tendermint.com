@@ -14,7 +14,7 @@
         <li><router-link :to="'/intro'">Intro</router-link></li>
         <li><router-link :to="'/docs'">Docs</router-link></li>
         <li><router-link :to="'/community'">Community</router-link></li>
-        <li><router-link :to="'/blog'">Blog</router-link></li>
+        <li><router-link :to="'https://blog.cosmos.network/tendermint/home'">Blog</router-link></li>
       </ul>
       <p>Please notify us at <a href="mailto:hello@tendermint.com">hello@tendermint.com</a> and we will fix this error as soon as we can. Thank you for your patience.</p>
     </article-body>

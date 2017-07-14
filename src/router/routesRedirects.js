@@ -23,9 +23,12 @@ export default [
 
   { path: '/docs/specs/consensus',
     redirect: '/docs/specs/byzantine-consensus-algorithm' },
-  { path: '/blog/tendermint-socket-protocol',
-    redirect: '/blog/abci-the-application-blockchain-interface' },
   { path: '/docs/guides/install', redirect: '/docs/guides/install-from-source' },
+
+  // redirect all blog posts to medium
+  { path: '/posts', redirect: '/blog' },
+  { path: '/posts/:entry', redirect: '/blog' },
+  { path: '/blog/:entry', redirect: '/blog' },
 
   // other pages
   { path: '/code', redirect: '/docs' },
@@ -34,7 +37,5 @@ export default [
   { path: '/jobs/:entry', redirect: '/careers/:entry' },
   { path: '/media', redirect: '/presentations' },
   { path: '/media/:entry', redirect: '/presentations/:entry' },
-  { path: '/posts', redirect: '/blog' },
-  { path: '/posts/:entry', redirect: '/blog/:entry' },
   { path: '/guides/contributing', redirect: '/docs/guides/contributing' }
 ]

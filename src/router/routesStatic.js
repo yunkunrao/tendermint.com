@@ -7,8 +7,7 @@ export default [
   { path: '/community', component: r('Community') },
 
   // Blog
-  { path: '/blog', component: r('BlogIndex') },
-  { path: '/blog/:entry', component: r('BlogEntry') },
+  { path: '/blog', component: r('RedirectToMedium') },
 
   // Download page
   { path: '/download', component: r('Download') },
