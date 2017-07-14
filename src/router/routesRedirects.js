@@ -16,10 +16,10 @@ export default [
 
   // download
   { path: '/downloads', redirect: '/download' },
-  { path: '/docs/getting-started/install', redirect: '/download' },
-  { path: '/docs/getting-started/download', redirect: '/download' },
+  { path: '/intro/getting-started/install', redirect: '/download' },
+  { path: '/intro/getting-started/download', redirect: '/download' },
   { path: '/intro/download-tendermint', redirect: '/download' },
-  { path: '/docs/getting-started/download-tendermint', redirect: '/download' },
+  { path: '/intro/getting-started/download-tendermint', redirect: '/download' },
 
   { path: '/docs/specs/consensus',
     redirect: '/docs/specs/byzantine-consensus-algorithm' },
