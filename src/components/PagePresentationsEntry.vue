@@ -9,7 +9,6 @@
     <ni-section>
       <div class="youtube" :id="entry.id"></div>
       <presentation-footer :facebook-url="facebookUrl" :twitter-url="twitterUrl"></presentation-footer>
-      <comments></comments>
     </ni-section>
   </div>
 </template>
@@ -20,14 +19,12 @@ import $ from 'jquery'
 import NiSection from './NiSection'
 import PageHeader from '@nylira/vue-page-header'
 import PagePresentationsFooter from './PagePresentationsFooter'
-import SectionComments from './SectionComments'
 export default {
   name: 'page-presentations-entry',
   components: {
     NiSection,
     PageHeader,
-    PagePresentationsFooter,
-    SectionComments
+    PagePresentationsFooter
   },
   computed: {
     entry () {
