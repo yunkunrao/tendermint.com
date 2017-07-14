@@ -1,4 +1,5 @@
 export default [
+  { path: '/intro/getting-started', redirect: '/docs/getting-started' },
   { path: '/intro/tmsp-overview', redirect: '/intro/abci-overview' },
   { path: '/intro/tendermint-vs', redirect: '/intro/tendermint-vs-x' },
   { path: '/intro/first-tmsp',
