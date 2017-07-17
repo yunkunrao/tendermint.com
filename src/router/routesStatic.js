@@ -10,7 +10,7 @@ export default [
   { path: '/blog', component: r('RedirectToMedium') },
 
   // Download page
-  { path: '/download', component: r('Download') },
+  { path: '/downloads', component: r('Download') },
 
   // Other
   { path: '/about', component: r('About') },
@@ -23,6 +23,7 @@ export default [
   { path: '/presentations', component: r('PresentationsIndex') },
   { path: '/presentations/:entry', component: r('PresentationsEntry') },
   { path: '/press', component: r('Press') },
+  { path: '/privacy', component: r('Privacy') },
 
   // Wildcards
   { path: '/404', component: r('404') },

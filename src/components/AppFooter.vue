@@ -13,7 +13,7 @@
         a(href='https://blog.cosmos.network/tendermint/home', target='_blank') Blog
         router-link(:to="'/careers'") Careers
         router-link(:to="'/contact'") Contact
-        router-link(:to="'/press'") Press
+        router-link(:to="'/privacy'") Privacy
       section
         header Community
         a(href='https://www.facebook.com/tendermint/')

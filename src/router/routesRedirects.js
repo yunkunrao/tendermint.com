@@ -15,11 +15,11 @@ export default [
   { path: '/intro/tendermint-vs', redirect: '/intro/tendermint-vs-x' },
 
   // download
-  { path: '/downloads', redirect: '/download' },
-  { path: '/intro/getting-started/install', redirect: '/download' },
-  { path: '/intro/getting-started/download', redirect: '/download' },
-  { path: '/intro/download-tendermint', redirect: '/download' },
-  { path: '/intro/getting-started/download-tendermint', redirect: '/download' },
+  { path: '/download', redirect: '/downloads' },
+  { path: '/intro/getting-started/install', redirect: '/downloads' },
+  { path: '/intro/getting-started/download', redirect: '/downloads' },
+  { path: '/intro/download-tendermint', redirect: '/downloads' },
+  { path: '/intro/getting-started/download-tendermint', redirect: '/downloads' },
 
   { path: '/docs/specs/consensus',
     redirect: '/docs/specs/byzantine-consensus-algorithm' },

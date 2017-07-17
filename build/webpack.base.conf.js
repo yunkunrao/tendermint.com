@@ -68,6 +68,10 @@ module.exports = {
         loader: 'json-loader'
       },
       {
+        test: /\.md$/,
+        loader: 'vue-markdown-loader'
+      },
+      {
         test: /\.pdf/,
         loader: 'file-loader',
         query: {
