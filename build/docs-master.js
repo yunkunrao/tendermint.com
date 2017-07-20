@@ -15,7 +15,7 @@ function writeLinks (linkObject, filename) {
   let base = linkObject.base
   let gettingStarted = linkObject.gettingStarted
   let guides = linkObject.guides
-  let internals = linkObject.internals
+  let specs = linkObject.specs
 
 
   if (base.length > 0) {
@@ -60,10 +60,10 @@ function writeLinks (linkObject, filename) {
     }
   }
 
-/*  
-  if (internals.length > 0) {
-    let links = internals
-    value += '  <div class="title">Internals</div>\n'
+ 
+  if (specs.length > 0) {
+    let links = specs
+    value += '  <div class="title">Specs</div>\n'
     for (var k = 0; k < links.length; k++) {
       if (links[k].title !== 'Tendermint Types') {
         value +=
@@ -71,7 +71,6 @@ function writeLinks (linkObject, filename) {
       }
     }
   }
-*/
   return value
 }
 
@@ -86,7 +85,7 @@ function arrayToObject (array) {
   let object = {}
   object.base = array.filter(f => f.section === 'Docs' || f.section === 'Intro')
   object.guides = array.filter(f => f.section === 'Guides')
-  //object.internals = array.filter(f => f.section === 'Internals')
+  object.specs = array.filter(f => f.section === 'Specs')
   object.gettingStarted = array.filter(f => f.section === 'Getting Started')
   return object
 }
