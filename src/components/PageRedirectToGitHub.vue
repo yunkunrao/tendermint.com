@@ -1,7 +1,7 @@
 <template lang='pug'>
 redirect(
-  label='Redirecting you to Medium'
-  url='https://blog.cosmos.network/tendermint/home'
+  label='Redirecting you to GitHub'
+  url='https://github.com/tendermint'
 )
 </template>
 

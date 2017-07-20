@@ -8,17 +8,16 @@ header.app-header
       img(src='../assets/images/logo-green-88.jpg' alt='Tendermint logo')
     menu.menu-popup.menu-app(v-if='activeMenuApp || desktop')
       nav.nav-app
-        router-link(to='/intro' @click.native='close' exact='') Intro
-        router-link(to='/docs' @click.native='close' exact='') Docs
-        a(href='https://blog.cosmos.network/tendermint/home' @click.native='close' target='_blank') Blog
-        router-link(to='/about' @click.native='close' exact='') About
-        router-link(to='/careers' @click.native='close' exact='') Careers
-        router-link(to='/community' @click.native='close' exact='') Community
+        router-link(to='/intro' @click.native='close' exact) Intro
+        router-link(to='/docs' @click.native='close' exact) Docs
+        router-link(to='/blog' @click.native='close' exact) Blog
+        router-link(to='/about' @click.native='close' exact) About
+        router-link(to='/careers' @click.native='close' exact) Careers
+        router-link(to='/community' @click.native='close' exact) Community
     .header-item.header-item-alert
-      a(href='https://github.com/tendermint' target="_blank")
+      router-link(to='/github' @click.native='close' exact)
         i.fa.fa-github
         span.label(v-if='desktop') GitHub
-
 </template>
 
 <script>

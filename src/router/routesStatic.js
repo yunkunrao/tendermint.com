@@ -6,9 +6,6 @@ export default [
   // Community
   { path: '/community', component: r('Community') },
 
-  // Blog
-  { path: '/blog', component: r('RedirectToMedium') },
-
   // Download page
   { path: '/downloads', component: r('Download') },
 
@@ -24,6 +21,10 @@ export default [
   { path: '/presentations/:entry', component: r('PresentationsEntry') },
   { path: '/press', component: r('Press') },
   { path: '/privacy', component: r('Privacy') },
+
+  // External
+  { path: '/blog', component: r('RedirectToMedium') },
+  { path: '/github', component: r('RedirectToGitHub') },
 
   // Wildcards
   { path: '/404', component: r('404') },

@@ -45,7 +45,6 @@ function writeLinks (linkObject, filename) {
           `  <router-link :to="'${links[i].url}'">${links[i].title}</router-link>\n`
       }
     }
-
   }
 
   if (filename === './src/components/PageIntroMaster.vue') {

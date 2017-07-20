@@ -9,10 +9,12 @@
   <router-link :to="'/docs/getting-started/deploy-testnet'">3. Deploy Testnet</router-link>
   <router-link :to="'/docs/getting-started/next-steps'">4. Next Steps</router-link>
   <router-link :to="'/docs/changelog'">Changelog</router-link>
+  <router-link :to="'/docs/roadmap'">Roadmap</router-link>
   <div class="title">Guides</div>
   <router-link :to="'/docs/guides/abci-cli'">ABCI CLI</router-link>
   <router-link :to="'/docs/guides/app-architecture'">App Architecture</router-link>
   <router-link :to="'/docs/guides/app-development'">App Development</router-link>
+  <router-link :to="'/docs/guides/contributing'">Contributing</router-link>
   <router-link :to="'/docs/guides/install-from-source'">Install from Source</router-link>
   <router-link :to="'/docs/guides/using-tendermint'">Using Tendermint</router-link>
 </nav>
