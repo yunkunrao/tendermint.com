@@ -45,28 +45,28 @@
     <div class="bin bin-ethermint">
       <div class="title"><img src="../assets/images/icon-ethermint.png"></div>
       <div class="key-value">
-        <div class="key">ethermint <span class="version">0.3.0</span></div>
+        <div class="key">ethermint <span class="version">0.4.0</span></div>
         <div class="value">
           <btn type="anchor"  icon="linux" value="Linux"
-            :href="dlEthermintLinux( '0.3.0')"></btn>
+            :href="dlEthermintLinux( '0.4.0')"></btn>
           <btn type="anchor"  icon="apple" value="macOS"
-            :href="dlEthermintMac('0.3.0')"></btn>
+            :href="dlEthermintMac('0.4.0')"></btn>
           <btn type="anchor"  icon="windows" value="Windows"
-            :href="dlEthermintWindows('0.3.0')"></btn>
+            :href="dlEthermintWindows('0.4.0')"></btn>
         </div>
       </div>
     </div>
     <div class="bin bin-merkleeyes">
       <div class="title"><img src="../assets/images/icon-merkleeyes.png"></div>
       <div class="key-value">
-        <div class="key">merkleeyes <span class="version">0.2.2</span></div>
+        <div class="key">merkleeyes <span class="version">0.2.4</span></div>
         <div class="value">
           <btn type="anchor"  icon="linux" value="Linux"
-            :href="dl('linux', 'merkleeyes', '0.2.2')"></btn>
+            :href="dl('linux', 'merkleeyes', '0.2.4')"></btn>
           <btn type="anchor"  icon="apple" value="macOS"
-            :href="dl('darwin', 'merkleeyes', '0.2.2')"></btn>
+            :href="dl('darwin', 'merkleeyes', '0.2.4')"></btn>
           <btn type="anchor"  icon="windows" value="Windows"
-            :href="dl('windows', 'merkleeyes', '0.2.2')"></btn>
+            :href="dl('windows', 'merkleeyes', '0.2.4')"></btn>
         </div>
       </div>
     </div>
@@ -106,6 +106,7 @@ export default {
 
   .bin
     border-top 1px solid bc
+    margin-bottom 1rem
     display flex
     .title
       img
