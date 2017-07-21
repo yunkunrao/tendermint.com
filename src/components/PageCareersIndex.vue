@@ -53,13 +53,13 @@ export default {
       return tags
     },
     technical () {
-      return this.careers.filter(c => c.area === 'technical')
+      return this.careers.filter(c => c.area === 'technical' && c.weight !== 0)
     },
     operations () {
-      return this.careers.filter(c => c.area === 'operations')
+      return this.careers.filter(c => c.area === 'operations' && c.weight !== 0)
     },
     community () {
-      return this.careers.filter(c => c.area === 'community')
+      return this.careers.filter(c => c.area === 'community' && c.weight !== 0)
     },
     careers () {
       let orderedCareers = orderBy(this.allCareers, ['title'], ['asc'])
