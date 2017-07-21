@@ -2,11 +2,11 @@
   <div class="section-cosmos">
     <div class="section-cosmos-container">
       <header class="section-cosmos-header">
-        <h2 class="section-cosmos-title">Cosmos HackAtom</h2>
-        <div class="section-cosmos-subtitle">Win $50k! June 9 - July 9</div>
+        <h2 class="section-cosmos-title">Cosmos HackAtom #2</h2>
+        <div class="section-cosmos-subtitle">Win $50k! August 5 - September 5</div>
       </header>
       <main class="section-cosmos-main">
-        <div class="section-cosmos-description">Cosmos is seeking individuals and teams worldwide for a four-week, $50k USD hackathon. Sign up now!</div>
+        <div class="section-cosmos-description">Cosmos is seeking individuals and teams worldwide for another four-week, $50k USD hackathon. Sign up now!</div>
         <btn
           type="anchor"
           href="https://cosmos.network/hackatom"
