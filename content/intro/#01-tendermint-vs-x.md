@@ -33,8 +33,8 @@ The layout of this Tendermint website content is also ripped directly and withou
 
 Tendermint emerged in the tradition of cryptocurrencies like Bitcoin, Ethereum, etc.
 with the goal of providing a more efficient and secure consensus algorithm than Bitcoin's Proof of Work.
-In the early days, Tendermint had a simple currency built in, and to participate in consensus 
-user's had to "bond" units of the currency into a security deposit which could be revoked if they misbehaved - 
+In the early days, Tendermint had a simple currency built in, and to participate in consensus,
+users had to "bond" units of the currency into a security deposit which could be revoked if they misbehaved -
 this is what made Tendermint a Proof-of-Stake algorithm.
 
 Since then, Tendermint has evolved to be a general purpose blockchain consensus engine that can host arbitrary application states.
@@ -62,4 +62,4 @@ It uses Tendermint as its consensus engine, and provides a particular applicatio
 ## Next Steps
 
 - Read an overview of the motivation and design behind the [Application BlockChain Interface](/intro/abci-overview).
-- Continue with the [Getting Started](/docs/getting-started) guide to install and run example tendermint applications.
+- Continue with the [Getting Started](/docs/getting-started) guide to install and run example Tendermint applications.

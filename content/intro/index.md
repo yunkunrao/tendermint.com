@@ -18,7 +18,7 @@ The theory of BFT is decades old, but software implementations have only became 
 due largely to the success of "blockchain technology" like Bitcoin and Ethereum. 
 Blockchain technology is just a reformalization of BFT in a more modern setting,
 with emphasis on peer-to-peer networking and cryptographic authentication.
-The name derrives from the way transactions are batched in blocks,
+The name derives from the way transactions are batched in blocks,
 where each block contains a cryptographic hash of the previous one, forming a chain.
 In practice, the blockchain data structure actually optimizes BFT design.
 
