@@ -265,19 +265,26 @@
   },
   {
     "area": "operations",
-    "description": "",
-    "id": "operations-manager",
-    "locations": ["Berlin", "San Francisco", "Toronto"],
+    "description": "All in Bits GmbH is looking for an Operations Manager to manage the day-to-day responsibilities around managing the company. The position requires experience in executive support, excellent oral and written communication skills, fluency in English and German, exceptional attention to detail and a keen ability to thrive in a fast paced and dynamic environment with constantly evolving priorities. Enthusiasm for blockchain and cryptocurrencies are a big plus. The person will also play a key role in setting up a new 1000-qm Blockchain Hub in Berlin. Opportunity to take on additional responsibility in marketing, project management or business development.",
+    "id": "operations-manager-berlin",
+    "locations": ["Berlin"],
     "requirements": [
-      "Business administration and legal experience"
+      "3 years of experience in project management or executive assistance",
+      "Exceptional professionalism, communication and interpersonal skills",
+      "Fluency in both German and English",
+      "Attention to detail, accuracy, reliability",
+      "Interest in and enthusiasm for blockchain technology"
     ],
     "tasks": [
-      "Create and organize legal documents, employment contracts, etc",
-      "Manage contracts/compliance of Interchain-AIB contracts and AIB-Subsidiaries contracts",
-      "Manage hiring process (categorizing incoming applications, assigning interviews, etc)"
+      "Manage operational activities of company including onboarding employees, coordinating accounting and tax-related issues",
+      "Creating and maintaining key contractual agreements",
+      "Implement systems to file, organize and archive information",
+      "Managing organization of upcoming conferences, meetups and events",
+      "General administrative duties (preparing meeting materials, writing reports, setting up events)"
     ],
     "title": "Operations Manager",
-    "weight": 1
+    "weight": 1,
+    "contact": "To apply please send a cover letter and CV to careers@tendermint.com using the headline 'AIB GmbH Operations Manager'. Also include a separate document (max 1 page) addressing the following question: Describe the different organizations and projects related to Cosmos and what their relationships are."
   },
   {
     "area": "operations",

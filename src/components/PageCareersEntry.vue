@@ -33,7 +33,8 @@
         <li>And much more&hellip;</li>
       </ul>
       <h2>Get in touch</h2>
-      <p>Please submit a cover letter and resume to <a href="mailto:careers@tendermint.com">careers@tendermint.com</a>. Make sure to include availability dates, desired working hours per week, and preferred location.  We'll write back as soon as we can.</p>
+      <p v-if="career.contact" v-html="markdownBlock(career.contact)"></p>
+      <p v-else>Please submit a cover letter and resume to <a href="mailto:careers@tendermint.com">careers@tendermint.com</a>. Make sure to include availability dates, desired working hours per week, and preferred location.  We'll write back as soon as we can.</p>
       <btn type="anchor" size="lg" href="mailto:careers@tendermint.com" icon="envelope-o" value="Send Application"></btn>
     </article-body>
   </div>
