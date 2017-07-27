@@ -123,18 +123,6 @@ const state = {
       category: 'member'
     },
     {
-      slug: 'paul-homer',
-      name: 'Paul Homer',
-      title: 'Software Engineer',
-      bio: 'Paul is an experienced software developer with a long history of building sophisticated commercial products. He desires to leverage his experiences to help Tendermint become a reliable part of the world\'s technology infrastructure.',
-      ids: {
-        email: 'paul',
-        github: 'phomer',
-        linkedin: 'paulhomer'
-      },
-      category: 'member'
-    },
-    {
       slug: 'adrian-brink',
       name: 'Adrian Brink',
       title: 'Software Engineer',
