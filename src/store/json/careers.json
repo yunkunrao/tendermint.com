@@ -63,37 +63,6 @@
   {
     "area": "technical",
     "description": "",
-    "id": "technical-project-manager",
-    "locations": ["Berlin", "San Francisco", "Toronto"],
-    "requirements": [
-      "Project management experience"
-    ],
-    "tasks": [
-      "Improve communication between developers",
-      "Implement project management practices (Scrum or similar)"
-    ],
-    "title": "Project Manager, Technical",
-    "weight": 3
-  },
-  {
-    "area": "technical",
-    "description": "",
-    "id": "security-hardware-engineer",
-    "locations": ["Berlin", "San Francisco", "Toronto"],
-    "requirements": [
-      "Experience elliptic curve crypto",
-      "Experience programming secure hardware"
-    ],
-    "tasks": [
-      "Develop solutions for secure signing",
-      "Normal users and Validators"
-    ],
-    "title": "Hardware Engineer, Security",
-    "weight": 7
-  },
-  {
-    "area": "technical",
-    "description": "",
     "id": "devops-sysops-engineer",
     "locations": ["Berlin", "San Francisco", "Toronto"],
     "requirements": [
@@ -137,22 +106,6 @@
   {
     "area": "technical",
     "description": "",
-    "id": "cryptocurrencies-engineer",
-    "locations": ["Berlin", "San Francisco", "Toronto"],
-    "requirements": [
-      "Experience in golang",
-      "Experience developing cryptocurrencies"
-    ],
-    "tasks": [
-      "Develop modules for building cryptocurrencies on Tendermint in Go",
-      "Develop a cryptocurrency using those modules for use in the Cosmos Network"
-    ],
-    "title": "Software Engineer, Cryptocurrency",
-    "weight": 1
-  },
-  {
-    "area": "technical",
-    "description": "",
     "id": "networking-consensus-engineer",
     "locations": ["Berlin", "San Francisco", "Toronto"],
     "requirements": [
@@ -183,53 +136,6 @@
     ],
     "title": "Software Engineer, Tooling",
     "weight": 1
-  },
-  {
-    "area": "technical",
-    "description": "",
-    "id": "research-scientist",
-    "locations": ["Berlin", "San Francisco", "Toronto"],
-    "requirements": [
-      "Cryptography, Distributed Consensus, Economics, Formal Verification"
-    ],
-    "tasks": [
-      "cryptoeconomics",
-      "advice us on best practices for governance models. consider checks and balances as well as collaborative decision making processes"
-    ],
-    "title": "Research Scientist",
-    "weight": 2
-  },
-  {
-    "area": "technical",
-    "id": "technical-community-manager",
-    "locations": ["Berlin", "San Francisco", "Toronto"],
-    "requirements": [
-      "General programming skills",
-      "Technical management skills"
-    ],
-    "tasks": [
-      "Run and test different ABCI apps",
-      "Make sure breaking changes are fixed",
-      "Coordinate GitHub issues"
-    ],
-    "title": "Community Manager, Technical",
-    "weight": 2
-  },
-  {
-    "area": "technical",
-    "description": "",
-    "id": "product-manager-governance",
-    "locations": ["Berlin", "San Francisco", "Toronto"],
-    "requirements": [
-      "Experience with governance and decision making"
-    ],
-    "tasks": [
-      "Design flexible and constructive governance models",
-      "Integrate best practices for decision making",
-      "Consider stakes, attacks, corruption for resilient model"
-    ],
-    "title": "Product Manager, Governance",
-    "weight": 3
   },
   {
     "area": "technical",
