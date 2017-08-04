@@ -1,7 +1,7 @@
 [
   {
     "area": "technical",
-    "description": "Tendermint is looking for a Head of Community Management to lead and manage programs and initiatives to nurture and grow our developer community. Tendermint is a platform for young developers to program, build great blockchain, and develop entrepreneurial skills.\n\nYou will be responsible for building programs, initiatives and social strategy for our developer community. This includes communicating product updates, best practices and announcements from Tendermint with our developer community. You will also act as internal voice of developer - prioritizing and shepherding feedback from community back to product. An understanding of blockchain development and community management best practices is a must as you will own the communication with a very knowledgeable and vested community.",
+    "description": "Tendermint is looking for a Head of Community Management to lead and manage programs and initiatives to nurture and grow our developer community.\n\nYou will be responsible for building programs, initiatives and social strategy, as well as communicating product updates, best practices, and other announcements from Tendermint to our developer community. You will also act as an internal voice for external developers - prioritizing and shepherding feedback from the community back into the product. An understanding of blockchain development and community management best practices is a must as you will own the communication with a very knowledgeable and vested community.",
     "id": "developer-relations-lead",
     "locations": ["Berlin", "San Francisco", "Toronto"],
     "requirements": [
@@ -114,28 +114,13 @@
       "BFT or FT (e.g. Raft) knowledge desired"
     ],
     "tasks": [
-      "Improve the implementation of the core Tendermint consensus algorithm and p2p network",
-      "Develop a compatible implementation in another programming language"
+      "Optimize our implementation of the Tendermint consensus algorithm and p2p network",
+      "Research, design, and implement improvements to the consensus and related protocols",
+      "Help formalize the specification of the Tendermint consensus and ensure the implementation adheres to the spec",
+      "Develop a compatible implementation in another programming language, according to the specification"
     ],
     "title": "Software Engineer, Consensus",
-    "weight": 2
-  },
-  {
-    "area": "technical",
-    "description": "",
-    "id": "developer-tooling-engineer",
-    "locations": ["Berlin", "San Francisco", "Toronto"],
-    "requirements": [
-      "Golang, Tooling, APIs"
-    ],
-    "tasks": [
-      "Improve and maintain the Tendermint RPC system",
-      "Improve and maintain the various CLIs and example applications",
-      "Improve and maintain common libraries",
-      "Write demos for different Tendermint apps and behaviour"
-    ],
-    "title": "Software Engineer, Tooling",
-    "weight": 1
+    "weight": 4
   },
   {
     "area": "technical",
@@ -143,9 +128,12 @@
     "id": "solidity-engineer",
     "locations": ["Berlin", "San Francisco", "Toronto"],
     "tasks": [
-      "Write solidity smart contracts for ETH Peg"
+      "Write solidity smart contracts for creating Ethereum side-chains using Tendermint Consensus",
+      "Write other solidity smart contracts to demonstrate the Ethermint stack",
+      "Help develop an alternative smart contracting language"
     ],
     "requirements": [
+      "Broad language experience with desire to learn Solidity; or",
       "Experienced solidity developer"
     ],
     "title": "Software Engineer, Solidity",
