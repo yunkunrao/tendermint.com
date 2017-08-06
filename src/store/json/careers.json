@@ -195,7 +195,7 @@
   {
     "area": "community",
     "description": "",
-    "id": "slack-manager",
+    "id": "chat-manager",
     "locations": ["Berlin", "San Francisco", "Toronto"],
     "requirements": [
       "Moderation experience"
@@ -208,7 +208,7 @@
       "Contain prices/speculation discussion",
       "Ping team if answers are needed"
     ],
-    "title": "Slack Manager",
+    "title": "Rocket Chat Manager",
     "weight": 3
   },
   {

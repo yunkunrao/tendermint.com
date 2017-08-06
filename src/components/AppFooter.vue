@@ -25,9 +25,9 @@
         a(href='https://www.linkedin.com/company/tendermint')
           i.fa.fa-linkedout
           | LinkedIn
-        a(href='http://forum.tendermint.com:3000')
-          i.fa.fa-slick
-          | Slack
+        a(href='https://cosmos.rocket.chat')
+          i.fa.fa-rocket
+          | Chat on Rocket
         a(href='https://twitter.com/tendermint_team')
           i.fa.fa-twatter
           | Twitter
