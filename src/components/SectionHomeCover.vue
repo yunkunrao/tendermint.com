@@ -16,12 +16,13 @@
           value="Download">
         </btn>
         <btn
-          type="link"
-          to="/intro"
+          target="_blank"
+          type="anchor"
+          href="https://cosmos.rocket.chat"
           size="lg"
-          icon="question"
+          icon="rocket"
           theme="alpha-black"
-          value="Learn More">
+          value="Chat on Rocket">
         </btn>
       </div>
       <p class="source"><i class="fa fa-github"></i> View source code on <a href="https://github.com/tendermint" target="_blank">GitHub</a></p>
