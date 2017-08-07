@@ -11,7 +11,7 @@
       <h2>Email</h2>
       <p>Questions or comments for the Tendermint team? Email us at <a href="mailto:hello@tendermint.com">hello@tendermint.com</a> and we'll get back to you promptly.</p>
       <h2>Slack</h2>
-      <p>We also hang out all day on Slack. <a href="http://forum.tendermint.com:3000/">Come join us!</a></p>
+      <p>We also hang out all day on Rocket. <a href="https://cosmos.rocket.chat/">Come join us!</a></p>
       <h2>Other</h2>
       <p>We are also reachable by other methods.</p>
       <ul>

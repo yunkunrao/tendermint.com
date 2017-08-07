@@ -45,9 +45,9 @@ export default {
     return {
       communityLinks: [
         {
-          url: 'http://forum.tendermint.com:3000/',
-          title: 'Slack Chat',
-          icon: 'slick'
+          url: 'http://cosmos.rocket.chat',
+          title: 'Chat on Rocket',
+          icon: 'rocket'
         },
         {
           url: 'https://github.com/tendermint/tendermint/issues',
