@@ -1,10 +1,19 @@
 # Introduction to Tendermint
 
-Welcome to the Tendermint guide!  This is the best place to start if you're new
-to Tendermint.  If you're already familiar with the basics of Tendermint and
+Welcome to the Tendermint guide! This is the best place to start if you're new
+to Tendermint. If you're already familiar with the basics of Tendermint and
 ABCI, find more details in the [documentation](/docs).
 
 ## What is Tendermint?
+
+
+### From a Slack Conversation
+
+(edited for clarity)
+
+It's like how Apache Web Server sits in front of Wordpress, and talks to Wordpress via `fastcgi`. They both combine into one server-side process that handles connection logic, like throttling and security. Tendermint is like Apache Web Server for distributed ledgers. It handles things like p2p networking, consensus, transaction broadcasting, etc. It's agnostic to any business logic process of transactions; to Tendermint they look like binary bytes. You plug in a program that processes the raw transaction bytes. Once a network of validators agree on a block and commit it, the transactions get pushed into the application via ABCI, a network socket protocol that is analogous to `fastcgi` in the Apache Web Server & Wordpress example. What will be the next Wordpress nobody knows.
+
+### Another explanation
 
 Tendermint is software for securely and consistently replicating an application on many machines.
 By securely, we mean that Tendermint works even if up to 1/3 of machines fail in arbitrary ways.
