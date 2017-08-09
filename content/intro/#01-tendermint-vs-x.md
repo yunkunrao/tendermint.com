@@ -63,3 +63,6 @@ It uses Tendermint as its consensus engine, and provides a particular applicatio
 
 - Read an overview of the motivation and design behind the [Application BlockChain Interface](/intro/abci-overview).
 - Continue with the [Getting Started](/docs/getting-started) guide to install and run example Tendermint applications.
+- Inspect the following diagram for [Tendermint in a (technical) nutshell](https://github.com/mobfoundry/hackatom/blob/master/tminfo.pdf)
+
+<img src="../assets/images/tm-transaction-flow.png">
