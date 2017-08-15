@@ -4,7 +4,7 @@
   <div class="master" v-bind:class="{ 'mobile-active': isActive, 'mobile-inactive': !isActive }" @click="toggleManual">
     <nav>
   <div class="title">Getting Started</div>
-  <router-link to="/download">1. Download Tendermint</router-link>
+  <router-link to="/downloads">1. Download Tendermint</router-link>
   <router-link :to="'/docs/getting-started/first-app'">2. First App</router-link>
   <router-link :to="'/docs/getting-started/deploy-testnet'">3. Deploy Testnet</router-link>
   <router-link :to="'/docs/getting-started/next-steps'">4. Next Steps</router-link>
@@ -14,9 +14,20 @@
   <router-link :to="'/docs/guides/abci-cli'">ABCI CLI</router-link>
   <router-link :to="'/docs/guides/app-architecture'">App Architecture</router-link>
   <router-link :to="'/docs/guides/app-development'">App Development</router-link>
-  <router-link :to="'/docs/guides/contributing'">Contributing</router-link>
   <router-link :to="'/docs/guides/install-from-source'">Install from Source</router-link>
   <router-link :to="'/docs/guides/using-tendermint'">Using Tendermint</router-link>
+  <div class="title">Specs</div>
+  <router-link :to="'/docs/specs/block-structure'">Block Structure</router-link>
+  <router-link :to="'/docs/specs/byzantine-consensus-algorithm'">Byzantine Consensus Algorithm</router-link>
+  <router-link :to="'/docs/specs/configuration'">Configuration</router-link>
+  <router-link :to="'/docs/specs/fast-sync'">Fast Sync</router-link>
+  <router-link :to="'/docs/specs/genesis'">Genesis</router-link>
+  <router-link :to="'/docs/specs/light-client-protocol'">Light Client Protocol</router-link>
+  <router-link :to="'/docs/specs/merkle'">Merkle</router-link>
+  <router-link :to="'/docs/specs/rpc'">RPC</router-link>
+  <router-link :to="'/docs/specs/secure-p2p'">Secure P2P</router-link>
+  <router-link :to="'/docs/specs/validators'">Validators</router-link>
+  <router-link :to="'/docs/specs/wire-protocol'">Wire Protocol</router-link>
 </nav>
     <overlay-btns>
       <overlay-btn v-show="isActive" icon="close"></overlay-btn>

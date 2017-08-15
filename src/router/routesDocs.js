@@ -7,7 +7,6 @@ export default [
   { path: '/docs/guides/abci-cli', component: r('guides-abci-cli') },
   { path: '/docs/guides/app-architecture', component: r('guides-app-architecture') },
   { path: '/docs/guides/app-development', component: r('guides-app-development') },
-  { path: '/docs/guides/contributing', component: r('guides-contributing') },
   { path: '/docs/guides/install-from-source', component: r('guides-install-from-source') },
   { path: '/docs/guides/using-tendermint', component: r('guides-using-tendermint') },
   { path: '/docs', component: r('index') },
