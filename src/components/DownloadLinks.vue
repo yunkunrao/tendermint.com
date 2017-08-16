@@ -3,14 +3,14 @@
     <div class="bin bin-tendermint">
       <div class="title"><img src="../assets/images/icon-tendermint.png"></div>
       <div class="key-value">
-        <div class="key">tendermint <span class="version">0.10.2</span></div>
+        <div class="key">tendermint <span class="version">0.10.3</span></div>
         <div class="value">
           <btn type="anchor" icon="linux" value="Linux"
-            :href="dl('linux', 'tendermint', '0.10.2')"></btn>
+            :href="dl('linux', 'tendermint', '0.10.3')"></btn>
           <btn type="anchor"  icon="apple" value="macOS"
-            :href="dl('darwin', 'tendermint', '0.10.2')"></btn>
+            :href="dl('darwin', 'tendermint', '0.10.3')"></btn>
           <btn type="anchor"  icon="windows" value="Windows"
-            :href="dl('windows', 'tendermint', '0.10.2')"></btn>
+            :href="dl('windows', 'tendermint', '0.10.3')"></btn>
         </div>
       </div>
     </div>
