@@ -48,11 +48,11 @@
         <div class="key">ethermint <span class="version">0.4.0</span></div>
         <div class="value">
           <btn type="anchor"  icon="linux" value="Linux"
-            :href="dlEthermintLinux( '0.4.0')"></btn>
+            :href="dlEthermintLinux()"></btn>
           <btn type="anchor"  icon="apple" value="macOS"
-            :href="dlEthermintMac('0.4.0')"></btn>
+            :href="dlEthermintMac()"></btn>
           <btn type="anchor"  icon="windows" value="Windows"
-            :href="dlEthermintWindows('0.4.0')"></btn>
+            :href="dlEthermintWindows()"></btn>
         </div>
       </div>
     </div>
@@ -84,14 +84,14 @@ export default {
     dl (os, name, version) {
       return `https://s3-us-west-2.amazonaws.com/tendermint/binaries/${name}/v${version}/${name}_${version}_${os}_amd64.zip`
     },
-    dlEthermintLinux (version) {
-      return `https://s3.eu-central-1.amazonaws.com/ethermint/${version}/ethermint_${version}_ethermint-linux-amd64.zip`
+    dlEthermintLinux () {
+      return 'https://s3-us-west-2.amazonaws.com/tendermint/binaries/ethermint/0.4.0/ethermint_0.4.0_linux-amd64.zip'
     },
-    dlEthermintMac (version) {
-      return `https://s3.eu-central-1.amazonaws.com/ethermint/${version}/ethermint_${version}_ethermint-darwin-10.6-amd64.zip`
+    dlEthermintDarwin () {
+      return 'https://s3-us-west-2.amazonaws.com/tendermint/binaries/ethermint/0.4.0/ethermint_0.4.0_darwin-10.6-amd64.zip'
     },
-    dlEthermintWindows (version) {
-      return `https://s3.eu-central-1.amazonaws.com/ethermint/${version}/ethermint_${version}_ethermint-windows-4.0-amd64.exe.zip`
+    dlEthermintWindows () {
+      return 'https://github.com/tendermint/ethermint/releases/download/v0.4.0/ethermint_0.4.0_windows-4.0-amd64.zip'
     }
   }
 }
