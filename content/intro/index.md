@@ -44,4 +44,4 @@ for a wide variety of distributed applications. [Get started with Tendermint](/d
 ## Next Steps
 
 - See how [Tendermint compares to other software](/intro/tendermint-vs).
-- Continue with the [Getting Started](/docs/getting-started) guide to install and run example tendermint applications.
+- Continue with the [Getting Started](/download) guide to install and run example tendermint applications.

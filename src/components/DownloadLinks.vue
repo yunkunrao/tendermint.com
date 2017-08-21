@@ -50,7 +50,7 @@
           <btn type="anchor"  icon="linux" value="Linux"
             :href="dlEthermintLinux()"></btn>
           <btn type="anchor"  icon="apple" value="macOS"
-            :href="dlEthermintMac()"></btn>
+            :href="dlEthermintDarwin()"></btn>
           <btn type="anchor"  icon="windows" value="Windows"
             :href="dlEthermintWindows()"></btn>
         </div>
