@@ -67,15 +67,16 @@
     "locations": ["Berlin", "San Francisco", "Toronto"],
     "requirements": [
       "General programming experience (2 years)",
-      "Server administration skills",
-      "Knowledge of secure op-sec"
+      "Linux server administration skills",
+      "Working knowledge of Git",
+      "Understanding of operational security",
+      "Experience with cloud providers such as AWS, GCE, Digital Ocean"
     ],
     "tasks": [
-      "Prepare Test Network and tooling",
-      "Prepare systems for cosmos deployment",
-      "Set up a powerful CI system",
-      "Manage internal server needs",
-      "Manage communication infrastructure - Riot, Matrix, IRC bridges, etc."
+      "Develop and maintain a powerful Continuous Integration (CI) system across repositories to prevent regressions and keep software, documentation, and websites in sync",
+      "Develop and maintain an automated build and release system, integrated in the CI, to ensure the latest builds are easily accessible",
+      "Develop and maintain tools and services for deploying and managing Tendermint clusters",
+      "Contribute to general automation and server needs within the company and across the stack"
     ],
     "title": "Software Engineer, DevOps",
     "weight": 1
@@ -179,18 +180,6 @@
     "title": "Operations Manager",
     "weight": 1,
     "contact": "To apply please send a cover letter and CV to careers@tendermint.com using the headline 'AIB GmbH Operations Manager'. Also include a separate document (max 1 page) addressing the following question: Describe the different organizations and projects related to Cosmos and what their relationships are."
-  },
-  {
-    "area": "operations",
-    "id": "administrative-assistant",
-    "locations": ["Berlin", "San Francisco", "Toronto"],
-    "requirements": [],
-    "tasks": [
-      "Scheduling travels, retreats",
-      "Research support"
-    ],
-    "title": "Administrative Assistant",
-    "weight": 3
   },
   {
     "area": "community",
