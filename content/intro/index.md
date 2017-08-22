@@ -9,9 +9,9 @@ ABCI, find more details in the [documentation](/docs).
 
 ### From a Slack Conversation
 
-(edited for clarity)
+> It's like how Apache Web Server sits in front of Wordpress, and talks to Wordpress via `fastcgi`. They both combine into one server-side process that handles connection logic, like throttling and security. Tendermint is like Apache Web Server for distributed ledgers. It handles things like p2p networking, consensus, transaction broadcasting, etc. It's agnostic to any business logic process of transactions; to Tendermint they look like binary bytes. You plug in a program that processes the raw transaction bytes. Once a network of validators agree on a block and commit it, the transactions get pushed into the application via ABCI, a network socket protocol that is analogous to `fastcgi` in the Apache Web Server & Wordpress example. What will be the next Wordpress nobody knows.
 
-It's like how Apache Web Server sits in front of Wordpress, and talks to Wordpress via `fastcgi`. They both combine into one server-side process that handles connection logic, like throttling and security. Tendermint is like Apache Web Server for distributed ledgers. It handles things like p2p networking, consensus, transaction broadcasting, etc. It's agnostic to any business logic process of transactions; to Tendermint they look like binary bytes. You plug in a program that processes the raw transaction bytes. Once a network of validators agree on a block and commit it, the transactions get pushed into the application via ABCI, a network socket protocol that is analogous to `fastcgi` in the Apache Web Server & Wordpress example. What will be the next Wordpress nobody knows.
+*(edited for clarity)*
 
 ### Another explanation
 
