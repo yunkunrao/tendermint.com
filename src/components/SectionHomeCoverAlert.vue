@@ -1,8 +1,8 @@
 <template>
-  <a class="cover-alert" href="https://www.meetup.com/Tendermint-COSMOS-Core-Developer-Chat">
+  <a class="cover-alert" href="https://www.meetup.com/COSMOS-Hub-Core-Developer-Chat/">
     <span class="key">ANNOUNCEMENT:</span>
     <span class="value">
-      Tendermint &amp; Cosmos DevChat every 2nd and 4th Thursday @ 5PM (UTC+2) of the month. Check out our MeetUp page for the most up-to-date information!
+      The COSMOS Hub developer chat is happening every 1st Thursday @ 17:00 (UTC+2) of the month. Check out our MeetUp page for the most up-to-date information!
     </span>
     <i class="fa fa-angle-double-right" aria-hidden="true"></i>
   </a>
