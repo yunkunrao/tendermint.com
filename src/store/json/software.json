@@ -1,11 +1,18 @@
 {
   "abciApps": [
     {
-      "name": "Basecoin",
-      "url": "https://github.com/tendermint/basecoin",
+      "name": "Cosmos SDK",
+      "url": "https://github.com/cosmos/cosmos-sdk",
       "language": "Go",
-      "author": "Tendermint",
+      "author": "Cosmos",
       "description": "A prototypical account based crypto currency state machine supporting plugins"
+    },
+    {
+      "name": "cb-ledger",
+      "url": "https://github.com/block-finance/cpp-abci",
+      "language": "C++",
+      "author": "Block Finance",
+      "description": "Custodian Bank Ledger, integrating central banking with the blockchains of tomorrow."
     },
     {
       "name": "Clearchain",
