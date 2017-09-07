@@ -9,7 +9,7 @@
     </page-header>
     <ni-section>
       <card-person
-        v-for="person in teamMembers"
+        v-for="person in employees"
         :key="person.name"
         :person="person">
       </card-person>
@@ -39,8 +39,8 @@ export default {
     PageSplit
   },
   computed: {
-    teamMembers () {
-      return this.people.filter(p => p.category === 'member')
+    employees () {
+      return this.people.filter(p => p.category === 'employee')
     },
     advisors () {
       return this.people.filter(p => p.category === 'advisor')

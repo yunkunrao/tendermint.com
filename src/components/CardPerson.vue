@@ -3,7 +3,7 @@
   <div class="card-person-header">
     <div class="avatar">
       <img v-if="person.slug !==''" :src="avatarSrc(person.slug)" :alt="person.name">
-      <i v-else class="fa fa-user"></i>
+      <img v-else src="../assets/images/people/default.jpg">
     </div>
     <div class="text">
       <div class="name">{{ person.name }}</div>
