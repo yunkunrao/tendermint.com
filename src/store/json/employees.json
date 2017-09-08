@@ -37,7 +37,8 @@
       "github": "nylira",
       "keybase": "peng",
       "linkedin": "nylira",
-      "twitter": "zcpeng"
+      "twitter": "zcpeng",
+      "website": "nylira.com"
     },
     "category": "employee"
   },
@@ -51,7 +52,8 @@
       "github": "crainbf",
       "keybase": "crainbf",
       "linkedin": "bfcrain",
-      "twitter": "crainbf"
+      "twitter": "crainbf",
+      "website": "epicenter.tv"
     },
     "category": "employee"
   },
@@ -65,7 +67,22 @@
       "github": "adrianbrink",
       "keybase": "adrianbrink",
       "linkedin": "adrianbrink",
-      "twitter": "adrian_brink"
+      "twitter": "adrian_brink",
+      "website": "adrianbrink.com"
+    },
+    "category": "employee"
+  },
+  {
+    "slug": "alexis-sellier",
+    "name": "Alexis Sellier",
+    "title": "Software Engineer",
+    "bio": "",
+    "ids": {
+      "email": "alexis",
+      "github": "cloudhead",
+      "keybase": "cloudhead",
+      "twitter": "cloudhead",
+      "website": "cloudhead.io"
     },
     "category": "employee"
   },
@@ -79,14 +96,15 @@
       "github": "melekes",
       "keybase": "melekes",
       "linkedin": "melekes",
-      "twitter": "akaliaev"
+      "twitter": "akaliaev",
+      "website": "homeonrails.com"
     },
     "category": "employee"
   },
   {
     "slug": "christine-chiang",
     "name": "Christine Chiang",
-    "title": "Communications",
+    "title": "Communications Manager",
     "bio": "Christine is the content creator and communications lead for the Cosmos project, the Internet of Blockchains.",
     "ids": {
       "email": "chjango",
@@ -110,20 +128,33 @@
     "category": "employee"
   },
   {
-    "slug": "",
+    "slug": "gautier-marin",
+    "name": "Gautier Marin",
+    "title": "Partnership Manager",
+    "bio": "",
+    "ids": {
+      "email": "gautier",
+      "linkedin": "gautier-marin-dagannaud-349107120",
+      "twitter": "gautier_md"
+    },
+    "category": "employee"
+  },
+  {
+    "slug": "greg-szabo",
     "name": "Greg Szabo",
-    "title": "DevOps",
+    "title": "DevOps Engineer",
     "bio": "",
     "ids": {
       "email": "greg",
-      "github": "greg-szabo"
+      "github": "greg-szabo",
+      "linkedin": "gergelymszabo"
     },
     "category": "employee"
   },
   {
     "slug": "jessica-gelbard",
     "name": "Jessica Gelbard",
-    "title": "HR & Culture Manager ",
+    "title": "HR & Culture Manager",
     "bio": "",
     "ids": {
       "email": "jessica",
@@ -140,7 +171,8 @@
       "email": "judd",
       "github": "keppel",
       "linkedin": "juddkeppel",
-      "twitter": "juddkeppel"
+      "twitter": "juddkeppel",
+      "website": "kep.io"
     },
     "category": "employee"
   },
@@ -170,6 +202,19 @@
     "category": "employee"
   },
   {
+    "slug": "ola-kohut",
+    "name": "Ola Kohut",
+    "title": "Marketing/Communications",
+    "bio": "",
+    "ids": {
+      "email": "ola",
+      "linkedin": "olakohut",
+      "twitter": "koholaa",
+      "website": "olakohut.com"
+    },
+    "category": "employee"
+  },
+  {
     "slug": "rigel-rozanski",
     "name": "Rigel Rozanski",
     "title": "Software Engineer",
@@ -185,21 +230,22 @@
   {
     "slug": "sunny-aggarwal",
     "name": "Sunny Aggarwal",
-    "title": "Researcher",
+    "title": "Dev Relations/Researcher",
     "bio": "",
     "ids": {
       "email": "sunny",
       "github": "sunnya97",
       "keybase": "sunnya97",
       "linkedin": "aggarwalsunny",
-      "twitter": "sunnya97"
+      "twitter": "sunnya97",
+      "website": "sunnya97.com"
     },
     "category": "employee"
   },
   {
     "slug": "zach-ramsay",
     "name": "Zach Ramsay",
-    "title": "Documentation",
+    "title": "Documentation Guru",
     "bio": "",
     "ids": {
       "email": "zach",

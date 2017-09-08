@@ -2,7 +2,7 @@
   <page-split class="page-careers-index">
     <page-header
       title="Careers"
-      subtitle="Join us at All In Bits to build and improve <a href='https://cosmos.network'>Cosmos</a> and Tendermint."
+      subtitle="Join us at All In Bits to build and improve <a href='https://cosmos.network'>Cosmos</a> and Tendermint.<br><br>Jobs here are constantly updated. If your specialty is unlisted, we encourage you to still apply."
       type="split"
       slot="header"
       theme="tendermint">
@@ -13,15 +13,15 @@
       </div>
       -->
     </page-header>
-    <ni-section>
+    <ni-section v-if="technical.length > 0">
       <div slot="title">Technical Positions</div>
       <card-career v-for="c in technical" :key="c.id" :career="c"></card-career>
     </ni-section>
-    <ni-section>
+    <ni-section v-if="operations.length > 0">
       <div slot="title">Operations Positions</div>
       <card-career v-for="c in operations" :key="c.id" :career="c"></card-career>
     </ni-section>
-    <ni-section>
+    <ni-section v-if="community.length > 0">
       <div slot="title">Community Positions</div>
       <card-career v-for="c in community" :key="c.id" :career="c"></card-career>
     </ni-section>

@@ -30,7 +30,7 @@
     "category": "advisor",
     "ids": {
       "email": "hugh",
-      "linkedin": "jimyang"
+      "linkedin": "hugh-rooney-174003141"
     }
   },
   {
@@ -41,7 +41,8 @@
     "category": "advisor",
     "ids": {
       "email": "jimyang",
-      "linkedin": "jimyang"
+      "linkedin": "jimyang",
+      "twitter": "jimyangx"
     }
   },
   {
@@ -58,13 +59,14 @@
     "slug": "zaki-manian",
     "name": "Zaki Manian",
     "title": "Strategy",
-    "bio": "Jim Yang co-founded Identyx, where he served as CEO until its acquisition by Red Hat. Identyx developed an open source enterprise identity management software.",
+    "bio": "",
     "category": "advisor",
     "ids": {
       "github": "zmanian",
       "keybase": "zmanian",
       "linkedin": "zmanian",
-      "twitter": "zmanian"
+      "twitter": "zmanian",
+      "website": "zaki.manian.org"
     }
   }
 ]
