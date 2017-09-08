@@ -10,10 +10,12 @@ header.app-header
       nav.nav-app
         router-link(to='/intro' @click.native='close' exact) Intro
         router-link(to='/docs' @click.native='close' exact) Docs
-        router-link(to='/blog' @click.native='close' exact) Blog
         router-link(to='/about' @click.native='close' exact) About
-        router-link(to='/careers' @click.native='close' exact) Careers
         router-link(to='/community' @click.native='close' exact) Community
+        router-link(to='/careers' @click.native='close' exact) Careers
+      nav.nav-external
+        a(href='https://blog.cosmos.network/tendermint/home' @click.native='close' target='_blank')
+          | Blog #[i.fa.fa-medium]
     .header-item.header-item-alert
       router-link(to='/github' @click.native='close' exact)
         i.fa.fa-github
@@ -81,6 +83,7 @@ navc = #94c0ec
   background alpha(mcolor, 95%)
   backdrop-filter blur(0.125rem)
   shadow()
+  font-weight 400
 
   .container
     max-width 1024px
@@ -151,11 +154,6 @@ navc = #94c0ec
         align-items center
         cursor pointer
         font-weight 400
-        i.fa
-          margin-right 0.25rem
-        img
-          height 1rem
-          margin-right 0.1rem
 
   .menu-popup
     z-index 101
@@ -177,6 +175,7 @@ navc = #94c0ec
       display flex
       flex-flow column
       padding 1.5rem 3rem
+
       > a, > p
         padding 0.75rem 0
       > a
@@ -222,10 +221,8 @@ navc = #94c0ec
   .menu-popup.menu-app
     display flex
     padding 0 1rem
-
     .container
       display flex
-
     nav
       display flex
       flex-flow row
@@ -234,8 +231,13 @@ navc = #94c0ec
         padding 0 1rem
         color navc
         line-height 3rem
+        i.fa
+          color alpha(navc, 50%)
+          margin-left 0.5rem
         &:hover
           color link
+          i.fa
+            color link
         &.router-link-active
           background lighten(mcolor, 14%)
           cursor default
