@@ -198,7 +198,7 @@
       "Ping team if answers are needed"
     ],
     "title": "Rocket Chat Manager",
-    "weight": 3
+    "weight": 0
   },
   {
     "area": "community",
@@ -216,7 +216,7 @@
       "Seed/organize Cosmos meetup groups"
     ],
     "title": "Communications Manager",
-    "weight": 1
+    "weight": 0
   },
   {
     "area": "community",
@@ -230,7 +230,7 @@
       "Hype events"
     ],
     "title": "Blog Copywriter",
-    "weight": 1
+    "weight": 0
   },
   {
     "area": "community",
@@ -269,6 +269,6 @@
       "Constantly get Cosmos / IoB stories in the mainstream and industry press"
     ],
     "title": "PR Manager",
-    "weight": 1
+    "weight": 0
   }
 ]
