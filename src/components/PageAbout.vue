@@ -8,6 +8,7 @@
       theme="tendermint">
     </page-header>
     <ni-section>
+      <div slot="title">Team</div>
       <card-person
         v-for="person in employees"
         :key="person.name"
@@ -15,6 +16,7 @@
       </card-person>
     </ni-section>
     <ni-section>
+      <div slot="title">Advisors</div>
       <card-person
         v-for="person in advisors"
         :key="person.name"
