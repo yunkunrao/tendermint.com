@@ -11,7 +11,7 @@
       "linkedin": "yjkwon",
       "twitter": "jaekwon"
     },
-    "category": "employee"
+    "tags": ["aib", "interchain"]
   },
   {
     "slug": "ethan-buchman",
@@ -25,7 +25,7 @@
       "linkedin": "ethan-buchman-10b34944",
       "twitter": "buchmanster"
     },
-    "category": "employee"
+    "tags": ["aib", "interchain"]
   },
   {
     "slug": "peng-zhong",
@@ -40,7 +40,7 @@
       "twitter": "zcpeng",
       "website": "nylira.com"
     },
-    "category": "employee"
+    "tags": ["aib"]
   },
   {
     "slug": "brian-crain",
@@ -55,7 +55,7 @@
       "twitter": "crainbf",
       "website": "epicenter.tv"
     },
-    "category": "employee"
+    "tags": ["aib"]
   },
   {
     "slug": "adrian-brink",
@@ -70,7 +70,7 @@
       "twitter": "adrian_brink",
       "website": "adrianbrink.com"
     },
-    "category": "employee"
+    "tags": ["aib"]
   },
   {
     "slug": "alexis-sellier",
@@ -84,7 +84,7 @@
       "twitter": "cloudhead",
       "website": "cloudhead.io"
     },
-    "category": "employee"
+    "tags": ["aib"]
   },
   {
     "slug": "anton-kaliaev",
@@ -99,7 +99,7 @@
       "twitter": "akaliaev",
       "website": "homeonrails.com"
     },
-    "category": "employee"
+    "tags": ["aib"]
   },
   {
     "slug": "christine-chiang",
@@ -112,7 +112,7 @@
       "linkedin": "chjango",
       "twitter": "chjango"
     },
-    "category": "employee"
+    "tags": ["aib"]
   },
   {
     "slug": "ethan-frey",
@@ -125,7 +125,7 @@
       "keybase": "ethanfrey",
       "linkedin": "ethanfrey"
     },
-    "category": "employee"
+    "tags": ["aib"]
   },
   {
     "slug": "gautier-marin",
@@ -137,7 +137,7 @@
       "linkedin": "gautier-marin-dagannaud-349107120",
       "twitter": "gautier_md"
     },
-    "category": "employee"
+    "tags": ["aib"]
   },
   {
     "slug": "greg-szabo",
@@ -149,7 +149,7 @@
       "github": "greg-szabo",
       "linkedin": "gergelymszabo"
     },
-    "category": "employee"
+    "tags": ["aib"]
   },
   {
     "slug": "jessica-gelbard",
@@ -160,7 +160,7 @@
       "email": "jessica",
       "linkedin": "jessica-gelbard-437540112"
     },
-    "category": "employee"
+    "tags": ["aib"]
   },
   {
     "slug": "judd-keppel",
@@ -174,7 +174,7 @@
       "twitter": "juddkeppel",
       "website": "kep.io"
     },
-    "category": "employee"
+    "tags": ["aib"]
   },
   {
     "slug": "matt-bell",
@@ -188,7 +188,7 @@
       "linkedin": "matt-bell-941aa146",
       "twitter": "mappum"
     },
-    "category": "employee"
+    "tags": ["aib"]
   },
   {
     "slug": "matt-oneill",
@@ -199,7 +199,7 @@
       "email": "matt.oneill",
       "linkedin": "operationalfocus"
     },
-    "category": "employee"
+    "tags": ["aib"]
   },
   {
     "slug": "ola-kohut",
@@ -212,7 +212,7 @@
       "twitter": "koholaa",
       "website": "olakohut.com"
     },
-    "category": "employee"
+    "tags": ["aib"]
   },
   {
     "slug": "rigel-rozanski",
@@ -225,7 +225,7 @@
       "keybase": "rigel",
       "linkedin": "rigel-rozanski-28340559"
     },
-    "category": "employee"
+    "tags": ["aib"]
   },
   {
     "slug": "sunny-aggarwal",
@@ -240,7 +240,7 @@
       "twitter": "sunnya97",
       "website": "sunnya97.com"
     },
-    "category": "employee"
+    "tags": ["aib"]
   },
   {
     "slug": "zach-ramsay",
@@ -254,6 +254,87 @@
       "linkedin": "zach-ramsay-7a473a94",
       "twitter": "cerebralbosons"
     },
-    "category": "employee"
+    "tags": ["aib"]
+  },
+  {
+    "slug": "henny-han",
+    "name": "Ash Han",
+    "title": "Advisor",
+    "bio": "Ash Han is a founder of Finector, a leading research/consulting firm specialized in distributed ledger technology. He is an advisor of various blockchain-related startups such as Tendermint and Chronobank.io and also an author of multiple books and papers on blockchain.",
+    "tags": ["advisors"],
+    "ids": {
+      "email": "ashhan",
+      "linkedin": "ashhan",
+      "website": "seunghwanhan.com"
+    }
+  },
+  {
+    "slug": "franck-mikulecz",
+    "name": "Franck Mikulecz",
+    "title": "Advisor",
+    "bio": "Franck is founder and CEO of BAXTER, a group of companies focused on foreign exchange and technology. Having spent years in a market perpetually dominated by Banks, Franck feels the urge to help deliver the \"disruption\" promise of the Blockchain. With FXCH Ltd, a Clearing and Settlement startup, his goal is simply to drag FX, screaming and kicking into the cryptocurrency era.",
+    "tags": ["advisors"],
+    "ids": {
+      "linkedin": "franckmikulecz",
+      "twitter": "franckmikulecz"
+    }
+  },
+  {
+    "slug": "hugh-rooney",
+    "name": "Hugh Rooney",
+    "title": "Strategy",
+    "bio": "",
+    "tags": ["advisors"],
+    "ids": {
+      "email": "hugh",
+      "linkedin": "hugh-rooney-174003141"
+    }
+  },
+  {
+    "slug": "jim-yang",
+    "name": "Jim Yang",
+    "title": "Strategy",
+    "bio": "Jim Yang co-founded Identyx, where he served as CEO until its acquisition by Red Hat. Identyx developed an open source enterprise identity management software.",
+    "tags": ["advisors"],
+    "ids": {
+      "email": "jimyang",
+      "linkedin": "jimyang",
+      "twitter": "jimyangx"
+    }
+  },
+  {
+    "slug": "thomas-greco",
+    "name": "Thomas Greco",
+    "title": "Advisor",
+    "bio": "Thomas Greco is Special Advisor to Omise (おみせ), an Asia-Pacific fintech company developing solutions that can add value to a financially disintermediated future. He also served as a special advisor to the Ethereum Foundation.",
+    "ids": {
+      "website": "omise.co"
+    },
+    "tags": ["advisors"]
+  },
+  {
+    "slug": "zaki-manian",
+    "name": "Zaki Manian",
+    "title": "Strategy",
+    "bio": "",
+    "tags": ["advisors"],
+    "ids": {
+      "github": "zmanian",
+      "keybase": "zmanian",
+      "linkedin": "zmanian",
+      "twitter": "zmanian",
+      "website": "zaki.manian.org"
+    }
+  },
+  {
+    "slug": "guido-schmitz-krummacher",
+    "name": "Guido Schmitz-Krummacher",
+    "title": "Board Member",
+    "bio": "Guido Schmitz-Krummacher is our Board Member based in Switzerland. He has worked for 25 years for SME in MD, Board or CEO positions. Guido joined the crypto-industry a year ago and is a interchain of different crypto foundations and companies.",
+    "tags": ["interchain"],
+    "ids": {
+      "linkedin": "guidos1",
+      "website": "www.sielva-management.com/de/uber-uns/ihre-ansprechsperson"
+    }
   }
 ]

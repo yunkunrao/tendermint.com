@@ -1,8 +1,7 @@
-import employees from '../json/employees.json'
-import advisors from '../json/advisors.json'
+import people from '../json/people.json'
 
 const state = {
-  all: employees.concat(advisors)
+  all: people
 }
 
 export default {

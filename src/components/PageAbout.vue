@@ -10,7 +10,7 @@
     <ni-section>
       <div slot="title">Team</div>
       <card-person
-        v-for="person in employees"
+        v-for="person in ppl('aib')"
         :key="person.name"
         :person="person">
       </card-person>
@@ -18,7 +18,7 @@
     <ni-section>
       <div slot="title">Advisors</div>
       <card-person
-        v-for="person in advisors"
+        v-for="person in ppl('advisors')"
         :key="person.name"
         :person="person">
       </card-person>
@@ -41,18 +41,13 @@ export default {
     PageSplit
   },
   computed: {
-    employees () {
-      return this.people.filter(p => p.category === 'employee')
-    },
-    advisors () {
-      return this.people.filter(p => p.category === 'advisor')
-    },
-    ...mapGetters({
-      people: 'allPeople'
-    })
+    ...mapGetters(['allPeople'])
   },
   mounted () {
     document.title = 'About - Tendermint'
+  },
+  methods: {
+    ppl (tag) { return this.allPeople.filter(p => p.tags.includes(tag)) }
   }
 }
 </script>
