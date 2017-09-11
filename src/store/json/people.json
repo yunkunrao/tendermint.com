@@ -60,7 +60,7 @@
   {
     "slug": "adrian-brink",
     "name": "Adrian Brink",
-    "title": "Software Engineer",
+    "title": "Software Developer",
     "bio": "Adrian is a software engineer that aims to bring the cryptocurrency revolution to the masses. Broad adoption and ubiquitousness will drive the change we want to see.",
     "ids": {
       "email": "adrian",
@@ -75,7 +75,7 @@
   {
     "slug": "alexis-sellier",
     "name": "Alexis Sellier",
-    "title": "Software Engineer",
+    "title": "Software Developer",
     "bio": "",
     "ids": {
       "email": "alexis",
@@ -89,7 +89,7 @@
   {
     "slug": "anton-kaliaev",
     "name": "Anton Kaliaev",
-    "title": "Software Engineer",
+    "title": "Software Developer",
     "bio": "Anton is a software engineer with more than 6 years of experience. He has worked in web, video processing, and telecom industries and has extensive knowledge, which he hopes will help him make Tendermint better. Always passionate about learning. Loves occasional traveling and enjoys writing his own blog.",
     "ids": {
       "email": "anton",
@@ -117,13 +117,24 @@
   {
     "slug": "ethan-frey",
     "name": "Ethan Frey",
-    "title": "Software Engineer",
+    "title": "Software Developer",
     "bio": "Ethan has many years of experience in backend web development, and looks to bring all the tooling we enjoy from the web to help everyone build powerful blockchain applications based on tendermint. And along the way disrupt an industry or two…",
     "ids": {
       "email": "ethanfrey",
       "github": "ethanfrey",
       "keybase": "ethanfrey",
       "linkedin": "ethanfrey"
+    },
+    "tags": ["aib"]
+  },
+  {
+    "slug": "fabian-weber",
+    "name": "Fabian Weber",
+    "title": "Software Developer",
+    "bio": "",
+    "ids": {
+      "email": "fabian",
+      "linkedin": "fabian-weber-04100a37"
     },
     "tags": ["aib"]
   },
@@ -142,7 +153,7 @@
   {
     "slug": "greg-szabo",
     "name": "Greg Szabo",
-    "title": "DevOps Engineer",
+    "title": "Development Operations",
     "bio": "",
     "ids": {
       "email": "greg",
@@ -165,7 +176,7 @@
   {
     "slug": "judd-keppel",
     "name": "Judd Keppel",
-    "title": "Software Engineer",
+    "title": "Software Developer",
     "bio": "",
     "ids": {
       "email": "judd",
@@ -179,7 +190,7 @@
   {
     "slug": "matt-bell",
     "name": "Matt Bell",
-    "title": "Software Engineer",
+    "title": "Software Developer",
     "bio": "Matt has been working in the cryptocurrency space since 2011. He believes blockchain technologies like Tendermint will transform the world the same way the internet did.",
     "ids": {
       "email": "matt",
@@ -204,7 +215,7 @@
   {
     "slug": "ola-kohut",
     "name": "Ola Kohut",
-    "title": "Marketing/Communications",
+    "title": "Marketing Manager",
     "bio": "",
     "ids": {
       "email": "ola",
@@ -217,7 +228,7 @@
   {
     "slug": "rigel-rozanski",
     "name": "Rigel Rozanski",
-    "title": "Software Engineer",
+    "title": "Software Developer",
     "bio": "Rigel is inspired by blockchain as a means of reducing entropy as the interactions of technology grow to manifold complexities. His interests lie in the crossroads between blockchain and the geospatial realm.",
     "ids": {
       "email": "rigel",
@@ -230,7 +241,7 @@
   {
     "slug": "sunny-aggarwal",
     "name": "Sunny Aggarwal",
-    "title": "Dev Relations/Researcher",
+    "title": "Research Scientist",
     "bio": "",
     "ids": {
       "email": "sunny",
@@ -243,6 +254,21 @@
     "tags": ["aib"]
   },
   {
+    "slug": "william-light",
+    "name": "William Light",
+    "title": "Hardware Developer",
+    "bio": "",
+    "ids": {
+      "email": "william",
+      "github": "wrl",
+      "keybase": "wrl",
+      "twitter": "wrl",
+      "website": "williamlight.net"
+    },
+    "tags": ["aib"]
+  },
+
+  {
     "slug": "zach-ramsay",
     "name": "Zach Ramsay",
     "title": "Documentation Guru",
@@ -253,6 +279,17 @@
       "keybase": "zramsay",
       "linkedin": "zach-ramsay-7a473a94",
       "twitter": "cerebralbosons"
+    },
+    "tags": ["aib"]
+  },
+  {
+    "slug": "zarko-milosevic",
+    "name": "Zarko Milosevic",
+    "title": "Research Scientist",
+    "bio": "",
+    "ids": {
+      "email": "zarko",
+      "linkedin": "zarko-milosevic-8a87375"
     },
     "tags": ["aib"]
   },
