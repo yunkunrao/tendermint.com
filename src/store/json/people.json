@@ -60,7 +60,7 @@
   {
     "slug": "adrian-brink",
     "name": "Adrian Brink",
-    "title": "Software Developer",
+    "title": "Software Engineer",
     "bio": "Adrian is a software engineer that aims to bring the cryptocurrency revolution to the masses. Broad adoption and ubiquitousness will drive the change we want to see.",
     "ids": {
       "email": "adrian",
@@ -75,7 +75,7 @@
   {
     "slug": "alexis-sellier",
     "name": "Alexis Sellier",
-    "title": "Software Developer",
+    "title": "Software Engineer",
     "bio": "",
     "ids": {
       "email": "alexis",
@@ -89,7 +89,7 @@
   {
     "slug": "anton-kaliaev",
     "name": "Anton Kaliaev",
-    "title": "Software Developer",
+    "title": "Software Engineer",
     "bio": "Anton is a software engineer with more than 6 years of experience. He has worked in web, video processing, and telecom industries and has extensive knowledge, which he hopes will help him make Tendermint better. Always passionate about learning. Loves occasional traveling and enjoys writing his own blog.",
     "ids": {
       "email": "anton",
@@ -117,7 +117,7 @@
   {
     "slug": "ethan-frey",
     "name": "Ethan Frey",
-    "title": "Software Developer",
+    "title": "Software Engineer",
     "bio": "Ethan has many years of experience in backend web development, and looks to bring all the tooling we enjoy from the web to help everyone build powerful blockchain applications based on tendermint. And along the way disrupt an industry or two…",
     "ids": {
       "email": "ethanfrey",
@@ -130,7 +130,7 @@
   {
     "slug": "fabian-weber",
     "name": "Fabian Weber",
-    "title": "Software Developer",
+    "title": "Software Engineer",
     "bio": "",
     "ids": {
       "email": "fabian",
@@ -153,7 +153,7 @@
   {
     "slug": "greg-szabo",
     "name": "Greg Szabo",
-    "title": "Development Operations",
+    "title": "DevOps Engineer",
     "bio": "",
     "ids": {
       "email": "greg",
@@ -176,7 +176,7 @@
   {
     "slug": "judd-keppel",
     "name": "Judd Keppel",
-    "title": "Software Developer",
+    "title": "Software Engineer",
     "bio": "",
     "ids": {
       "email": "judd",
@@ -190,7 +190,7 @@
   {
     "slug": "matt-bell",
     "name": "Matt Bell",
-    "title": "Software Developer",
+    "title": "Software Engineer",
     "bio": "Matt has been working in the cryptocurrency space since 2011. He believes blockchain technologies like Tendermint will transform the world the same way the internet did.",
     "ids": {
       "email": "matt",
@@ -228,7 +228,7 @@
   {
     "slug": "rigel-rozanski",
     "name": "Rigel Rozanski",
-    "title": "Software Developer",
+    "title": "Software Engineer",
     "bio": "Rigel is inspired by blockchain as a means of reducing entropy as the interactions of technology grow to manifold complexities. His interests lie in the crossroads between blockchain and the geospatial realm.",
     "ids": {
       "email": "rigel",
@@ -256,7 +256,7 @@
   {
     "slug": "william-light",
     "name": "William Light",
-    "title": "Hardware Developer",
+    "title": "Hardware Engineer",
     "bio": "",
     "ids": {
       "email": "william",
