@@ -174,19 +174,6 @@
     "tags": ["aib"]
   },
   {
-    "slug": "jordan-bibla",
-    "name": "Jordan Bibla",
-    "title": "Product Manager",
-    "bio": "",
-    "ids": {
-      "email": "jordan",
-      "linkedin": "jbibla",
-      "twitter": "jordanbibla",
-      "website": "jordanbibla.com"
-    },
-    "tags": ["aib"]
-  },
-  {
     "slug": "judd-keppel",
     "name": "Judd Keppel",
     "title": "Software Engineer",
