@@ -22,9 +22,9 @@
         a(href='https://github.com/tendermint/tendermint')
           i.fa.fa-github
           | GitHub
-        a(href='https://www.linkedin.com/company/tendermint')
-          i.fa.fa-linkedout
-          | LinkedIn
+        a(href='https://reddit.com/r/cosmosnetwork')
+          i.fa.fa-raddit
+          | Reddit
         a(href='https://cosmos.rocket.chat')
           i.fa.fa-rocket
           | Chat on Rocket
