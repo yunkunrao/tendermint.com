@@ -9,19 +9,23 @@
     </page-header>
     <ni-section>
       <div slot="title">Team</div>
-      <card-person
-        v-for="person in ppl('aib')"
-        :key="person.name"
-        :person="person">
-      </card-person>
+      <div class="team-cards">
+        <card-person
+          v-for="person in ppl('aib')"
+          :key="person.slug"
+          :person="person">
+        </card-person>
+      </div>
     </ni-section>
     <ni-section>
       <div slot="title">Advisors</div>
-      <card-person
-        v-for="person in ppl('advisors')"
-        :key="person.name"
-        :person="person">
-      </card-person>
+      <div class="team-cards">
+        <card-person
+          v-for="person in ppl('advisors')"
+          :key="person.slug"
+          :person="person">
+        </card-person>
+      </div>
     </ni-section>
   </page-split>
 </template>
@@ -51,3 +55,24 @@ export default {
   }
 }
 </script>
+
+<style lang="stylus">
+@import '../styles/variables.styl'
+
+.team-cards
+  max-width 960px
+
+@media screen and (min-width: 720px)
+  .team-cards
+    display flex
+    flex-flow row wrap
+
+    .person-wrapper
+      flex 0 0 50%
+
+@media screen and (min-width: 960px)
+  .team-cards
+    margin 0 auto
+    .person-wrapper
+      flex 0 0 33.333%
+</style>
