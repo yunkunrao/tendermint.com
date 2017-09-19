@@ -1,10 +1,9 @@
 import VueRouter from 'vue-router'
 import routesRedirects from './routesRedirects.js'
-import routesIntro from './routesIntro.js'
-import routesDocs from './routesDocs.js'
+
 import routesStatic from './routesStatic.js'
 
-const routes = [...routesRedirects, ...routesIntro, ...routesDocs, ...routesStatic]
+const routes = [...routesRedirects, ...routesStatic]
 
 const router = new VueRouter({
   mode: 'history',

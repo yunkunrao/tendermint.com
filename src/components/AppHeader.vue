@@ -8,8 +8,8 @@ header.app-header
       img(src='../assets/images/logo-green-88.jpg' alt='Tendermint logo')
     menu.menu-popup.menu-app(v-if='activeMenuApp || desktop')
       nav.nav-app
-        router-link(to='/intro' @click.native='close' exact) Intro
-        router-link(to='/docs' @click.native='close' exact) Docs
+
+        a(href='http://tendermint.readthedocs.io/en/master/' target='_blank') Docs
         router-link(to='/about' @click.native='close' exact) About
         router-link(to='/community' @click.native='close' exact) Community
         router-link(to='/careers' @click.native='close' exact) Careers

@@ -35,8 +35,7 @@
         header Developers
         nav
           router-link(:to="'/download'") Download
-          router-link(:to="'/intro'") Introduction
-          router-link(:to="'/docs'") Documentation
+
           a(href='https://github.com/tendermint/tendermint/wiki/Contributing' target='_blank') Contributing
           a(href='https://github.com/tendermint/tendermint/issues') Issues
 </template>

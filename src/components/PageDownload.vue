@@ -1,6 +1,6 @@
 <template>
   <master-detail>
-    <master slot="master"></master>
+
     <article-body slot="detail">
       <h1>Download Tendermint</h1>
       <p>Tendermint 0.10.3 has been released! View <a href="https://github.com/tendermint/tendermint/blob/master/CHANGELOG.md#0103-august-10-2017">the changelog</a>.</p>
@@ -18,7 +18,7 @@
 
 <script>
 import MasterDetail from './MasterDetail'
-import Master from '../components/PageDocsMaster'
+
 import ArticleBody from '@nylira/vue-article-body'
 import DownloadLinks from './DownloadLinks'
 export default {
@@ -26,7 +26,7 @@ export default {
   components: {
     ArticleBody,
     DownloadLinks,
-    Master,
+
     MasterDetail
   },
   mounted () {

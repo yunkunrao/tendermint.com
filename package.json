@@ -11,7 +11,7 @@
     "test": "npm run unit && npm run e2e",
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs",
     "docs": "node build/docs.js",
-    "build": "node build/docs.js && node build/build.js"
+    "build": " node build/build.js"
   },
   "dependencies": {
     "highlight.js": "^9.12.0",
