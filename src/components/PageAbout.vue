@@ -9,7 +9,7 @@
     </page-header>
     <ni-section>
       <div slot="title">Team</div>
-      <div class="team-cards">
+      <div class="people">
         <card-person
           v-for="person in ppl('aib')"
           :key="person.slug"
@@ -19,7 +19,7 @@
     </ni-section>
     <ni-section>
       <div slot="title">Advisors</div>
-      <div class="team-cards">
+      <div class="people">
         <card-person
           v-for="person in ppl('advisors')"
           :key="person.slug"
@@ -59,11 +59,11 @@ export default {
 <style lang="stylus">
 @import '../styles/variables.styl'
 
-.team-cards
+.people
   max-width 960px
 
 @media screen and (min-width: 720px)
-  .team-cards
+  .people
     display flex
     flex-flow row wrap
 
@@ -71,7 +71,7 @@ export default {
       flex 0 0 50%
 
 @media screen and (min-width: 960px)
-  .team-cards
+  .people
     margin 0 auto
     .person-wrapper
       flex 0 0 33.333%
