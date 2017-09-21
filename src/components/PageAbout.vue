@@ -11,17 +11,8 @@
       <div slot="title">Team</div>
       <div class="people">
         <card-person
+          group="aib"
           v-for="person in ppl('aib')"
-          :key="person.slug"
-          :person="person">
-        </card-person>
-      </div>
-    </ni-section>
-    <ni-section>
-      <div slot="title">Advisors</div>
-      <div class="people">
-        <card-person
-          v-for="person in ppl('advisors')"
           :key="person.slug"
           :person="person">
         </card-person>
@@ -51,7 +42,7 @@ export default {
     document.title = 'About - Tendermint'
   },
   methods: {
-    ppl (tag) { return this.allPeople.filter(p => p.tags.includes(tag)) }
+    ppl (tag) { return this.allPeople.filter(p => p.groups[tag]) }
   }
 }
 </script>
