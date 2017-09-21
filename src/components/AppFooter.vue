@@ -34,7 +34,7 @@
       section
         header Developers
         nav
-          router-link(:to="'/download'") Download
+          router-link(to="/downloads") Downloads
           a(href='https://tendermint.readthedocs.io/en/master/' target='_blank') Documentation
           a(href='https://github.com/tendermint/tendermint' target='_blank')  Source Code
           a(href='https://github.com/tendermint/tendermint/issues' target='_blank') Issues
