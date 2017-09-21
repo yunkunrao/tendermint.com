@@ -11,8 +11,7 @@
       <p><strong>Whoops!</strong> The page you visited either does not exist or has been moved elsewhere in a website reshuffle. We're sorry for the inconvenience. Try visiting one of these pages below:</p>
       <ul>
         <li><router-link :to="'/'">Home</router-link></li>
-
-
+        <li><router-link :to="'https://tendermint.readthedocs.io/en/master/'">Read The Docs</router-link></li>
         <li><router-link :to="'/community'">Community</router-link></li>
         <li><router-link :to="'https://blog.cosmos.network/tendermint/home'">Blog</router-link></li>
       </ul>

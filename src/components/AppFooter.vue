@@ -35,9 +35,10 @@
         header Developers
         nav
           router-link(:to="'/download'") Download
-
-          a(href='https://github.com/tendermint/tendermint/wiki/Contributing' target='_blank') Contributing
-          a(href='https://github.com/tendermint/tendermint/issues') Issues
+          a(href='https://tendermint.readthedocs.io/en/master/' target='_blank') Documentation
+          a(href='https://github.com/tendermint/tendermint' target='_blank')  Source Code
+          a(href='https://github.com/tendermint/tendermint/issues' target='_blank') Issues
+          a(href='https://github.com/tendermint/tendermint/blob/master/CODE_OF_CONDUCT.md' target='_blank')  Code of Conduct
 </template>
 
 <script>
