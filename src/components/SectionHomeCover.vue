@@ -25,7 +25,7 @@
           value="Chat on Rocket">
         </btn>
       </div>
-      <p class="source"><i class="fa fa-github"></i> View source code on <a href="https://github.com/tendermint" target="_blank">GitHub</a></p>
+      <a href="https://github.com/tendermint" target="_blank" class="source"><i class="fa fa-github"></i> View source code on <strong>GitHub</strong></a>
     </div>
   </section>
 </template>
@@ -84,11 +84,11 @@ export default {
       margin-bottom 0.5*x
       max-width 18*x
 
-  .source
+  a.source
     color lighten(mcolor,50%)
     i.fa
       padding-right 0.25rem
-    a
+    strong
       color lighten(mcolor,70%)
 
 .section-home-logo
