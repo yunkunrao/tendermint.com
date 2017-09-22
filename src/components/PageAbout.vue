@@ -51,9 +51,9 @@ export default {
 @import '../styles/variables.styl'
 
 .people
-  max-width 960px
+  max-width 1024px
 
-@media screen and (min-width: 720px)
+@media screen and (min-width: 768px)
   .people
     display flex
     flex-flow row wrap
@@ -61,7 +61,7 @@ export default {
     .person-wrapper
       flex 0 0 50%
 
-@media screen and (min-width: 960px)
+@media screen and (min-width: 1280px)
   .people
     margin 0 auto
     .person-wrapper
