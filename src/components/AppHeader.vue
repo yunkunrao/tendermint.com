@@ -8,12 +8,13 @@ header.app-header
       img(src='../assets/images/logo-green-88.jpg' alt='Tendermint logo')
     menu.menu-popup.menu-app(v-if='activeMenuApp || desktop')
       nav.nav-app
-
-        a(href='http://tendermint.readthedocs.io/en/master/' target='_blank') Docs
-        router-link(to='/about' @click.native='close' exact) About
+        router-link(to='/downloads' @click.native='close' exact) Downloads
         router-link(to='/community' @click.native='close' exact) Community
         router-link(to='/careers' @click.native='close' exact) Careers
+        router-link(to='/about' @click.native='close' exact) About
       nav.nav-external
+        a(href='http://tendermint.readthedocs.io/en/master/' target='_blank')
+          | Docs #[i.fa.fa-book]
         a(href='https://blog.cosmos.network/tendermint/home' @click.native='close' target='_blank')
           | Blog #[i.fa.fa-medium]
     .header-item.header-item-alert

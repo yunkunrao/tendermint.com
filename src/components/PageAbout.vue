@@ -11,17 +11,8 @@
       <div slot="title">Team</div>
       <div class="people">
         <card-person
+          group="aib"
           v-for="person in ppl('aib')"
-          :key="person.slug"
-          :person="person">
-        </card-person>
-      </div>
-    </ni-section>
-    <ni-section>
-      <div slot="title">Advisors</div>
-      <div class="people">
-        <card-person
-          v-for="person in ppl('advisors')"
           :key="person.slug"
           :person="person">
         </card-person>
@@ -51,7 +42,7 @@ export default {
     document.title = 'About - Tendermint'
   },
   methods: {
-    ppl (tag) { return this.allPeople.filter(p => p.tags.includes(tag)) }
+    ppl (tag) { return this.allPeople.filter(p => p.groups[tag]) }
   }
 }
 </script>
@@ -60,9 +51,9 @@ export default {
 @import '../styles/variables.styl'
 
 .people
-  max-width 960px
+  max-width 1024px
 
-@media screen and (min-width: 720px)
+@media screen and (min-width: 768px)
   .people
     display flex
     flex-flow row wrap
@@ -70,7 +61,7 @@ export default {
     .person-wrapper
       flex 0 0 50%
 
-@media screen and (min-width: 960px)
+@media screen and (min-width: 1280px)
   .people
     margin 0 auto
     .person-wrapper
