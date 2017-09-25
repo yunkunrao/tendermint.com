@@ -60,7 +60,7 @@ export default {
           icon: 'btc'
         },
         {
-          route: '/ecosystem',
+          url: 'http://tendermint.readthedocs.io/projects/tools/en/master/ecosystem.html',
           title: 'Software Ecosystem',
           icon: 'code'
         }
