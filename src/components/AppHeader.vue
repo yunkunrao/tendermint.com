@@ -169,7 +169,7 @@ navc = #94c0ec
     bottom 0
     width 100vw
 
-    background alpha(mcolor, 95%)
+    background c-app-fg
     user-select none
 
     nav
