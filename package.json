@@ -99,7 +99,7 @@
     "sinon": "1.17.7",
     "sinon-chai": "2.8.0",
     "stylus": "0.54.5",
-    "stylus-loader": "2.4.0",
+    "stylus-loader": "3.0.1",
     "to-title-case": "1.0.0",
     "url-loader": "0.5.7",
     "vue-analytics": "2.3.0",

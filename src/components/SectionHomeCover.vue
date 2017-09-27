@@ -54,7 +54,6 @@ export default {
     margin-top 3rem
     padding 2*x 1.5*x
     position relative
-    z-index 5
 
   h1
     color lighten(mcolor,90%)
