@@ -86,7 +86,7 @@
     "description": "Tendermint is a first-of-its kind Proof-of-Stake consensus engine in development since 2015. It is designed to provide developers maximum control in developing their own business logic in a blockchain setting, while relying on a secure consensus algorithm.\n\nWe’re looking for a motivated, experienced Javascript Engineer to work with backend blockchain engineers to develop web applications for novel blockchain applications.\n\nCosmos is a project by the core developers of tendermint to launch a highly-secure public blockchain on this technology. We have recently completed a fundraising round and are looking to rapidly expand, mainly centered around Berlin, Toronto, and San Francisco.\n\nUnder the umbrella of the cosmos system, we are building a number of custom blockchain apps for various usecases.  This position would first work on building some smaller applications to demonstrate and discover best practices with this platform, with the potential of later participating in developing the UI for the main comsos application.",
     "id": "frontend-engineer",
     "locations": ["Berlin"],
-    "weight": 4,
+    "weight": 0,
     "requirements": [
       "Minimum 1 years experience in web engineering and Single-Page apps.",
       "Strong proficiency in HTML5/CSS3/JavaScript (ES6)",
