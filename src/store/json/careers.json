@@ -41,7 +41,7 @@
       "Improve and write documentation/tutorials at https://tendermint.com/docs"
     ],
     "title": "Documentation Writer, Technical",
-    "weight": 3
+    "weight": 0
   },
   {
     "area": "technical",
@@ -79,7 +79,7 @@
       "Contribute to general automation and server needs within the company and across the stack"
     ],
     "title": "Software Engineer, DevOps",
-    "weight": 1
+    "weight": 0
   },
   {
     "area": "technical",
@@ -120,7 +120,7 @@
       "Help formalize the specification of the Tendermint consensus and ensure the implementation adheres to the spec",
       "Develop a compatible implementation in another programming language, according to the specification"
     ],
-    "title": "Software Engineer, Consensus",
+    "title": "Software Engineer, P2P",
     "weight": 4
   },
   {
@@ -138,7 +138,7 @@
       "Experienced solidity developer"
     ],
     "title": "Software Engineer, Solidity",
-    "weight": 3
+    "weight": 0
   },
   {
     "area": "operations",
@@ -178,7 +178,7 @@
       "General administrative duties (preparing meeting materials, writing reports, setting up events)"
     ],
     "title": "Operations Manager",
-    "weight": 1,
+    "weight": 0,
     "contact": "To apply please send a cover letter and CV to careers@tendermint.com using the headline 'AIB GmbH Operations Manager'. Also include a separate document (max 1 page) addressing the following question: Describe the different organizations and projects related to Cosmos and what their relationships are."
   },
   {
