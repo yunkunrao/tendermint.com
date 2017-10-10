@@ -1,9 +1,8 @@
-import data from '../json/bounties.json'
+let url = 'https://raw.githubusercontent.com/tendermint/aib-data/master/json/bounties.json'
 
-const state = {
-  all: data
-}
+fetch(url)
+  .then(response => response.json())
+  .then(json => (state.all = json))
 
-export default {
-  state
-}
+const state = { all: '' }
+export default { state }

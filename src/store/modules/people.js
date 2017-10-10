@@ -1,9 +1,8 @@
-import people from '../json/people.json'
+let url = 'https://raw.githubusercontent.com/tendermint/aib-data/master/json/people.json'
 
-const state = {
-  all: people
-}
+fetch(url)
+  .then(response => response.json())
+  .then(json => (state.all = json))
 
-export default {
-  state
-}
+const state = { all: '' }
+export default { state }

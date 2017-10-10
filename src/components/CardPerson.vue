@@ -2,7 +2,7 @@
   <div class="person-wrapper">
     <div class="card-person" @click="setPopup(true)">
       <div class="avatar">
-        <img :src="avatarSrc">
+        <img :src="portrait(person.slug)">
         <i class="fa fa-search"></i>
       </div>
       <div class="text">
@@ -20,22 +20,17 @@
 </template>
 
 <script>
+import { portrait } from '../scripts/cdn.js'
 import ModalPerson from './ModalPerson'
 export default {
   name: 'card-person',
   components: {
     ModalPerson
   },
-  data () {
-    return {
-      activePopup: false
-    }
-  },
-  computed: {
-    avatarSrc () {
-      return require('../assets/images/people/' + this.person.slug + '.jpg')
-    }
-  },
+  data: () => ({
+    activePopup: false,
+    portrait: portrait
+  }),
   methods: {
     setPopup (state) {
       this.activePopup = state
@@ -45,8 +40,8 @@ export default {
 }
 </script>
 
-<style lang="stylus">
-@import '../styles/variables.styl'
+<style scoped lang="stylus">
+@import '~@/styles/variables.styl'
 
 .card-person
   padding 0.5rem
