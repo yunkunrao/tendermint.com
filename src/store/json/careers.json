@@ -121,7 +121,11 @@
       "Develop a compatible implementation in another programming language, according to the specification"
     ],
     "title": "Software Engineer, P2P",
+<<<<<<< HEAD
     "weight": 0
+=======
+    "weight": 4
+>>>>>>> master
   },
   {
     "area": "technical",
