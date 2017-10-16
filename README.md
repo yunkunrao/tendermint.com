@@ -35,4 +35,8 @@ npm run dev
 
 ## Contributing
 
-See `./CONTRIBUTING.md`
+* Edit [Documentation](http://tendermint.readthedocs.io/en/master/)
+* Edit Community > [Software Ecosystem](https://github.com/tendermint/aib-data/blob/master/json/careers.json)
+* Edit Community > [Team](https://github.com/tendermint/aib-data/blob/master/json/people.json)
+* Edit Community > [Careers](https://github.com/tendermint/aib-data/blob/master/json/careers.json)
+* Edit Community > Presentations: `./src/store/modules/presentations.js`
