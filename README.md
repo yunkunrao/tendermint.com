@@ -6,18 +6,6 @@
 
 Please ask the team for deployment privileges.
 
-``` bash
-# add the production server if you haven't already
-git remote add production ubuntu@cosmos.network:~/tendermint.git
-```
-
-``` bash
-# deploy it!
-git checkout master
-git merge develop
-git push production master
-```
-
 ## Development
 
 Make sure you're running Node 6 LTS or higher.

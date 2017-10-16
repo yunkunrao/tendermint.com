@@ -1,8 +1,8 @@
 <template>
-  <a class="cover-alert" href="https://www.meetup.com/COSMOS-Hub-Core-Developer-Chat/">
+  <a class="cover-alert" href="https://www.meetup.com/COSMOS-Hub-Core-Developer-Chat/" target="_blank">
     <span class="key">ANNOUNCEMENT:</span>
     <span class="value">
-      The COSMOS Hub developer chat is happening every 1st Thursday @ 17:00 (UTC+2) of the month. Check out our MeetUp page for the most up-to-date information!
+      Cosmos Developer Chat is happening every 1st Thursday @ 17:00 (UTC+2) of the month. Check out our Meetup page to learn more.
     </span>
     <i class="fa fa-angle-double-right" aria-hidden="true"></i>
   </a>
