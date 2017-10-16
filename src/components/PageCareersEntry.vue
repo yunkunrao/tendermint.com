@@ -1,43 +1,35 @@
-<template>
-  <div class="page-career-entry">
-    <page-header
-      :title="career.title"
-      :subtitle="subtitle"
-      theme="tendermint">
-    </page-header>
-    <article-body>
-      <div v-if="career.description" v-html="markdownBlock(career.description)"></div>
-      <template v-if="career.requirements.length > 0">
-        <h2>We're looking for someone with&hellip;</h2>
-        <ul>
-          <li v-for="req in career.requirements" v-html="markdown(req)"></li>
-        </ul>
-      </template>
-      <h2>You should be located near:</h2>
-      <ul>
-        <li v-for="loc in career.locations" v-html="markdown(loc)"></li>
-      </ul>
-      <h2>You'll help us:</h2>
-      <ul>
-        <li v-for="task in career.tasks" v-html="markdown(task)"></li>
-      </ul>
-      <h2>We'll offer:</h2>
-      <ul>
-        <li>Competitive salary</li>
-        <li>Flexible hours (part-time or full-time)</li>
-        <li>Stock options</li>
-        <li>Medical, dental, and vision insurance</li>
-        <li>An environment with plenty of opportunities to learn and innovate</li>
-        <li>Exposure to cutting-edge blockchain technology</li>
-        <li>Potential to work remotely later on</li>
-        <li>And much more&hellip;</li>
-      </ul>
-      <h2>Get in touch</h2>
-      <p v-if="career.contact" v-html="markdownBlock(career.contact)"></p>
-      <p v-else>Please submit a cover letter and resume to <a href="mailto:careers@tendermint.com">careers@tendermint.com</a>. Make sure to include availability dates, desired working hours per week, and preferred location.  We'll write back as soon as we can.</p>
-      <btn type="anchor" size="lg" href="mailto:careers@tendermint.com" icon="envelope-o" value="Send Application"></btn>
-    </article-body>
-  </div>
+<template lang="pug">
+.page-career-entry
+  page-header(:title='career.title', :subtitle='subtitle', theme='tendermint')
+  article-body
+    div(v-if='career.description', v-html='markdownBlock(career.description)')
+    template(v-if='career.requirements.length > 0')
+      h2 We're looking for someone with…
+      ul
+        li(v-for='req in career.requirements', v-html='markdown(req)')
+    h2 You should be located near:
+    ul
+      li(v-for='loc in career.locations', v-html='markdown(loc)')
+    h2 You'll help us:
+    ul
+      li(v-for='task in career.tasks', v-html='markdown(task)')
+    h2 We'll offer:
+    ul
+      li Competitive salary
+      li Flexible hours (part-time or full-time)
+      li Stock options
+      li Medical, dental, and vision insurance
+      li An environment with plenty of opportunities to learn and innovate
+      li Exposure to cutting-edge blockchain technology
+      li Potential to work remotely later on
+      li And much more…
+    h2 Get in touch
+    p(v-if='career.contact', v-html='markdownBlock(career.contact)')
+    p(v-else='')
+      | Please submit a cover letter and resume to 
+      a(href='mailto:careers@tendermint.com') careers@tendermint.com
+      | . Make sure to include availability dates, desired working hours per week, and preferred location.  We'll write back as soon as we can.
+    btn(type='anchor', size='lg', href='mailto:careers@tendermint.com', icon='envelope-o', value='Send Application')
 </template>
 
 <script>

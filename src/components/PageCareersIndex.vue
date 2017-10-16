@@ -64,16 +64,6 @@ export default {
     careers () {
       let orderedCareers = orderBy(this.allCareers, ['title'], ['asc'])
       return orderedCareers
-
-      /*
-      let activeTag = this.activeTag
-
-      if (activeTag === 'all') {
-        return orderedCareers
-      } else {
-        return orderedCareers.filter(career => career.tags.includes(activeTag))
-      }
-      */
     },
     ...mapGetters(['allCareers'])
   },
