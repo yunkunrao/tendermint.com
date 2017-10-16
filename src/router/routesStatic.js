@@ -1,4 +1,4 @@
-function r (page) { return () => require('../components/Page' + page) }
+function r (page) { return require('../components/Page' + page) }
 export default [
   // Home
   { path: '/', component: r('Index') },
