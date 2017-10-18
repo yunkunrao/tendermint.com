@@ -13,9 +13,9 @@ header.app-header
         router-link(to='/careers' @click.native='close' exact) Careers
         router-link(to='/about' @click.native='close' exact) About
       nav.nav-external
-        a(href='http://tendermint.readthedocs.io/en/master/' target='_blank')
+        a(:href='links.tm.docs.index' target='_blank')
           | Docs #[i.fa.fa-book]
-        a(href='https://blog.cosmos.network/tendermint/home' @click.native='close' target='_blank')
+        a(:href='links.tm.blog' @click.native='close' target='_blank')
           | Blog #[i.fa.fa-medium]
     .header-item.header-item-alert
       router-link(to='/github' @click.native='close' exact)
@@ -29,7 +29,7 @@ import disableScroll from 'disable-scroll'
 export default {
   name: 'app-header',
   computed: {
-    ...mapGetters(['config'])
+    ...mapGetters(['config', 'links'])
   },
   data: () => ({
     activeMenuApp: false,

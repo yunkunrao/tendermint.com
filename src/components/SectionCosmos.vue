@@ -9,7 +9,7 @@
         <div class="section-cosmos-description">Cosmos is seeking individuals and teams worldwide for another four-week, $50k USD hackathon. Sign up now!</div>
         <btn
           type="anchor"
-          href="https://cosmos.network/hackatom"
+          :href="links.cosmos.hackatom"
           class="section-cosmos-btn"
           size="lg"
           value="HackAtom Information"
@@ -30,7 +30,7 @@ export default {
     Btn
   },
   computed: {
-    ...mapGetters(['config'])
+    ...mapGetters(['config', 'links'])
   }
 }
 </script>

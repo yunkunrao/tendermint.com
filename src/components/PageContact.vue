@@ -11,7 +11,7 @@
       <h2>Email</h2>
       <p>Questions or comments for the Tendermint team? Email us at <a :href="'mailto:' + links.tm.email">{{links.tm.email}}</a> and we'll get back to you promptly.</p>
       <h2>Chat</h2>
-      <p>We also hang out all day on chat. <a :href="links.tm.chat">Chat with us!</a></p>
+      <p>We also hang out all day on chat. <a :href="links.cosmos.chat">Chat with us!</a></p>
       <h2>Other</h2>
       <p>We are also reachable by other methods.</p>
       <ul>

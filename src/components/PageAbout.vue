@@ -36,7 +36,7 @@ export default {
     PageSplit
   },
   computed: {
-    ...mapGetters(['allPeople'])
+    ...mapGetters(['allPeople', 'links'])
   },
   mounted () {
     document.title = 'About - Tendermint'

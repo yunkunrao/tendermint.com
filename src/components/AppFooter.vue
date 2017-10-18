@@ -16,7 +16,7 @@
         router-link(:to="'/privacy'") Privacy
       section
         header Community
-        a(:href='links.cosmos.chat')
+        a(:href='links.tm.chat')
           i.fa.fa-comments-o
           | Chat
         a(:href='links.tm.facebook')
@@ -35,10 +35,10 @@
         header Developers
         nav
           router-link(to="/downloads") Downloads
-          a(href='links.tm.docs' target='_blank') Documentation
-          a(href='links.tm.github.source' target='_blank')  Source Code
-          a(href='links.tm.github.issues' target='_blank') Issues
-          a(href='links.tm.github.coc' target='_blank')  Code of Conduct
+          a(:href='links.tm.docs.index' target='_blank') Documentation
+          a(:href='links.tm.github.source' target='_blank')  Source Code
+          a(:href='links.tm.github.issues' target='_blank') Issues
+          a(:href='links.tm.github.coc' target='_blank')  Code of Conduct
 </template>
 
 <script>
@@ -46,9 +46,7 @@ import SectionBottom from './SectionBottom'
 import {mapGetters} from 'vuex'
 export default {
   name: 'app-footer',
-  computed: {
-    ...mapGetters(['links'])
-  },
+  computed: { ...mapGetters(['links']) },
   components: {
     SectionBottom
   }

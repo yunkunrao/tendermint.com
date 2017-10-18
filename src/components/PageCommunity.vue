@@ -1,32 +1,16 @@
-<template>
-  <page-split>
-    <page-header
-      title="Community"
-      subtitle="Discover the vibrant ecosystem around Tendermint."
-      type="split"
-      slot="header"
-      theme="tendermint">
-    </page-header>
-    <ni-section>
-      <card-title>Community</card-title>
-      <card-community
-        v-for="link in communityLinks"
-        :link="link"
-        :key="link.url">
-      </card-community>
-    </ni-section>
-    <ni-section>
-      <card-title>All In Bits, Inc.</card-title>
-      <card-community
-        v-for="link in companyLinks"
-        :link="link"
-        :key="link.url">
-      </card-community>
-    </ni-section>
-  </page-split>
+<template lang="pug">
+page-split
+  page-header(title='Community', subtitle='Discover the vibrant ecosystem around Tendermint.', type='split', slot='header', theme='tendermint')
+  ni-section
+    card-title Community
+    card-community(v-for='link in communityLinks', :link='link', :key='link.url')
+  ni-section
+    card-title All In Bits, Inc.
+    card-community(v-for='link in companyLinks', :link='link', :key='link.url')
 </template>
 
 <script>
+import {mapGetters} from 'vuex'
 import CardCommunity from './CardCommunity'
 import CardTitle from './CardTitle'
 import NiSection from './NiSection'
@@ -41,16 +25,17 @@ export default {
     PageHeader,
     PageSplit
   },
-  data () {
-    return {
-      communityLinks: [
+  computed: {
+    ...mapGetters(['links']),
+    communityLinks () {
+      return [
         {
-          url: 'http://cosmos.rocket.chat',
+          url: this.links.tm.chat,
           title: 'Chat on Matrix',
           icon: 'comments-o'
         },
         {
-          url: 'https://github.com/tendermint/tendermint/issues',
+          url: this.links.tm.github.issues,
           title: 'Github Issues',
           icon: 'github-alt'
         },
@@ -60,12 +45,14 @@ export default {
           icon: 'btc'
         },
         {
-          url: 'http://tendermint.readthedocs.io/projects/tools/en/master/ecosystem.html',
+          url: this.links.tm.docs.ecosystem,
           title: 'Software Ecosystem',
           icon: 'code'
         }
-      ],
-      companyLinks: [
+      ]
+    },
+    companyLinks () {
+      return [
         {
           route: '/about',
           title: 'About',

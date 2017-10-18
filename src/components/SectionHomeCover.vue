@@ -18,25 +18,29 @@
         <btn
           target="_blank"
           type="anchor"
-          href="https://riot.im/app/#/room/#cosmos:matrix.org"
+          :href="links.tm.chat"
           size="lg"
           icon="comments-o"
           theme="alpha-black"
-          value="Chat on Matrix">
+          value="Chat">
         </btn>
       </div>
-      <a href="https://github.com/tendermint" target="_blank" class="source"><i class="fa fa-github"></i> View source code on <strong>GitHub</strong></a>
+      <a :href="links.tm.github.organization" target="_blank" class="source"><i class="fa fa-github"></i> View source code on <strong>GitHub</strong></a>
     </div>
   </section>
 </template>
 
 <script>
+import {mapGetters} from 'vuex'
 import SectionHomeCoverAlert from './SectionHomeCoverAlert.vue'
 import Btn from '@nylira/vue-button'
 export default {
   components: {
     SectionHomeCoverAlert,
     Btn
+  },
+  computed: {
+    ...mapGetters(['links'])
   }
 }
 </script>
