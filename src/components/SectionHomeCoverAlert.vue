@@ -1,5 +1,5 @@
 <template>
-  <a class="cover-alert" :href="links.cosmos.devChat" target="_blank">
+  <a class="cover-alert" :href="links.cosmos.meetups.devchat" target="_blank">
     <span class="key">ALERT:</span>
     <span class="value">
       Cosmos Developer Chat is happening every 1st Thursday @ 17:00 (UTC+2) of the month. Check out our Meetup page to learn more.
