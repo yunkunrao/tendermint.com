@@ -1,82 +1,66 @@
-<template>
-  <div class="download-matrix">
-    <div class="bin bin-tendermint">
-      <div class="title"><img src="../assets/images/icon-tendermint.png"></div>
-      <div class="key-value">
-        <div class="key">tendermint <span class="version">0.10.3</span></div>
-        <div class="value">
-          <btn type="anchor" icon="linux" value="Linux"
-            :href="dl('linux', 'tendermint', '0.10.3')"></btn>
-          <btn type="anchor"  icon="apple" value="macOS"
-            :href="dl('darwin', 'tendermint', '0.10.3')"></btn>
-          <btn type="anchor"  icon="windows" value="Windows"
-            :href="dl('windows', 'tendermint', '0.10.3')"></btn>
-        </div>
-      </div>
-    </div>
-    <div class="bin bin-abci">
-      <div class="title"><img src="../assets/images/icon-abci.png"></div>
-      <div class="key-value">
-        <div class="key">abci <span class="version">0.5.0</span></div>
-        <div class="value">
-          <btn type="anchor"  icon="linux" value="Linux"
-            :href="dl('linux', 'abci', '0.5.0')"></btn>
-          <btn type="anchor"  icon="apple" value="macOS"
-            :href="dl('darwin', 'abci', '0.5.0')"></btn>
-          <btn type="anchor"  icon="windows" value="Windows"
-            :href="dl('windows', 'abci', '0.5.0')"></btn>
-        </div>
-      </div>
-    </div>
-    <div class="bin bin-basecoin">
-      <div class="title"><img src="../assets/images/icon-basecoin.png"></div>
-      <div class="key-value">
-        <div class="key">basecoin <span class="version">0.6.1</span></div>
-        <div class="value">
-          <btn type="anchor"  icon="linux" value="Linux"
-            :href="dl('linux', 'basecoin', '0.6.1')"></btn>
-          <btn type="anchor"  icon="apple" value="macOS"
-            :href="dl('darwin', 'basecoin', '0.6.1')"></btn>
-          <btn type="anchor"  icon="windows" value="Windows"
-            :href="dl('windows', 'basecoin', '0.6.1')"></btn>
-        </div>
-      </div>
-    </div>
-    <div class="bin bin-ethermint">
-      <div class="title"><img src="../assets/images/icon-ethermint.png"></div>
-      <div class="key-value">
-        <div class="key">ethermint <span class="version">0.4.0</span></div>
-        <div class="value">
-          <btn type="anchor"  icon="linux" value="Linux"
-            :href="dlEthermintLinux()"></btn>
-          <btn type="anchor"  icon="apple" value="macOS"
-            :href="dlEthermintDarwin()"></btn>
-          <btn type="anchor"  icon="windows" value="Windows"
-            :href="dlEthermintWindows()"></btn>
-        </div>
-      </div>
-    </div>
-    <div class="bin bin-merkleeyes">
-      <div class="title"><img src="../assets/images/icon-merkleeyes.png"></div>
-      <div class="key-value">
-        <div class="key">merkleeyes <span class="version">0.2.4</span></div>
-        <div class="value">
-          <btn type="anchor"  icon="linux" value="Linux"
-            :href="dl('linux', 'merkleeyes', '0.2.4')"></btn>
-          <btn type="anchor"  icon="apple" value="macOS"
-            :href="dl('darwin', 'merkleeyes', '0.2.4')"></btn>
-          <btn type="anchor"  icon="windows" value="Windows"
-            :href="dl('windows', 'merkleeyes', '0.2.4')"></btn>
-        </div>
-      </div>
-    </div>
-  </div>
+<template lang="pug">
+.download-links
+  .bin.bin-tendermint
+    .title
+      img(src='../assets/images/icon-tendermint.png')
+    .key-value
+      .key
+        | tendermint 
+        span.version 0.10.3
+      .value
+        btn(type='anchor', icon='linux', value='Linux', :href="dl('linux', 'tendermint', '0.10.3')")
+        btn(type='anchor', icon='apple', value='macOS', :href="dl('darwin', 'tendermint', '0.10.3')")
+        btn(type='anchor', icon='windows', value='Windows', :href="dl('windows', 'tendermint', '0.10.3')")
+  .bin.bin-abci
+    .title
+      img(src='../assets/images/icon-abci.png')
+    .key-value
+      .key
+        | abci 
+        span.version 0.5.0
+      .value
+        btn(type='anchor', icon='linux', value='Linux', :href="dl('linux', 'abci', '0.5.0')")
+        btn(type='anchor', icon='apple', value='macOS', :href="dl('darwin', 'abci', '0.5.0')")
+        btn(type='anchor', icon='windows', value='Windows', :href="dl('windows', 'abci', '0.5.0')")
+  .bin.bin-basecoin
+    .title
+      img(src='../assets/images/icon-basecoin.png')
+    .key-value
+      .key
+        | basecoin 
+        span.version 0.6.1
+      .value
+        btn(type='anchor', icon='linux', value='Linux', :href="dl('linux', 'basecoin', '0.6.1')")
+        btn(type='anchor', icon='apple', value='macOS', :href="dl('darwin', 'basecoin', '0.6.1')")
+        btn(type='anchor', icon='windows', value='Windows', :href="dl('windows', 'basecoin', '0.6.1')")
+  .bin.bin-ethermint
+    .title
+      img(src='../assets/images/icon-ethermint.png')
+    .key-value
+      .key
+        | ethermint 
+        span.version 0.4.0
+      .value
+        btn(type='anchor', icon='linux', value='Linux', :href='dlEthermintLinux()')
+        btn(type='anchor', icon='apple', value='macOS', :href='dlEthermintDarwin()')
+        btn(type='anchor', icon='windows', value='Windows', :href='dlEthermintWindows()')
+  .bin.bin-merkleeyes
+    .title
+      img(src='../assets/images/icon-merkleeyes.png')
+    .key-value
+      .key
+        | merkleeyes 
+        span.version 0.2.4
+      .value
+        btn(type='anchor', icon='linux', value='Linux', :href="dl('linux', 'merkleeyes', '0.2.4')")
+        btn(type='anchor', icon='apple', value='macOS', :href="dl('darwin', 'merkleeyes', '0.2.4')")
+        btn(type='anchor', icon='windows', value='Windows', :href="dl('windows', 'merkleeyes', '0.2.4')")
 </template>
 
 <script>
 import Btn from '@nylira/vue-button'
 export default {
-  name: 'download-matrix',
+  name: 'download-links',
   components: {
     Btn
   },
@@ -100,7 +84,7 @@ export default {
 <style lang="stylus">
 @require '../styles/variables.styl'
 
-.download-matrix
+.download-links
   font-family sans
   font-size 1rem
 
@@ -139,14 +123,14 @@ export default {
           margin-right 0
 
 @media screen and (min-width: 360px)
-  .download-matrix
+  .download-links
     .bin
       .value
         .ni-btn
           margin-right 0.375rem
 
 @media screen and (min-width: 768px)
-  .download-matrix
+  .download-links
     .bin
       .title
         img
@@ -159,7 +143,7 @@ export default {
           margin-right 0.5rem
 
 @media screen and (min-width: 1024px)
-  .download-matrix
+  .download-links
     .bin
       .key-value
         padding 0 1.5rem

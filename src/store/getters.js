@@ -5,3 +5,4 @@ export const allPeople = state => state.people.all
 export const allPresentations = state => state.presentations.all
 export const allSoftware = state => state.software
 export const config = state => state.config
+export const links = state => state.links.data

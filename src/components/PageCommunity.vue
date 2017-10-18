@@ -46,8 +46,8 @@ export default {
       communityLinks: [
         {
           url: 'http://cosmos.rocket.chat',
-          title: 'Chat on Rocket',
-          icon: 'rocket'
+          title: 'Chat on Matrix',
+          icon: 'comments-o'
         },
         {
           url: 'https://github.com/tendermint/tendermint/issues',

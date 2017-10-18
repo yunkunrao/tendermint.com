@@ -5,46 +5,50 @@
     .sections
       section
         img.footer-logo(src='../assets/images/logo-white-alpha-160.png')
-        span © {{ new Date().getFullYear() }} All In Bits, Inc.
+        span &copy; {{ new Date().getFullYear() }} All In Bits, Inc.
         span 29th Floor, 85 Broad St, New York, NY 10004
       section
         header Company
         router-link(:to="'/about'") About
-        a(href='https://blog.cosmos.network/tendermint/home', target='_blank') Blog
+        a(:href='links.tm.blog' target='_blank') Blog
         router-link(:to="'/careers'") Careers
         router-link(:to="'/contact'") Contact
         router-link(:to="'/privacy'") Privacy
       section
         header Community
-        a(href='https://www.facebook.com/tendermint/')
+        a(:href='links.cosmos.chat')
+          i.fa.fa-comments-o
+          | Chat
+        a(:href='links.tm.facebook')
           i.fa.fa-footbook
           | Facebook
-        a(href='https://github.com/tendermint/tendermint')
+        a(:href='links.tm.github.organization')
           i.fa.fa-github
           | GitHub
-        a(href='https://reddit.com/r/cosmosnetwork')
+        a(:href='links.cosmos.reddit')
           i.fa.fa-raddit
           | Reddit
-        a(href='https://cosmos.rocket.chat')
-          i.fa.fa-rocket
-          | Chat on Rocket
-        a(href='https://twitter.com/tendermint_team')
+        a(:href='links.tm.twitter')
           i.fa.fa-twatter
           | Twitter
       section
         header Developers
         nav
           router-link(to="/downloads") Downloads
-          a(href='https://tendermint.readthedocs.io/en/master/' target='_blank') Documentation
-          a(href='https://github.com/tendermint/tendermint' target='_blank')  Source Code
-          a(href='https://github.com/tendermint/tendermint/issues' target='_blank') Issues
-          a(href='https://github.com/tendermint/tendermint/blob/master/CODE_OF_CONDUCT.md' target='_blank')  Code of Conduct
+          a(href='links.tm.docs' target='_blank') Documentation
+          a(href='links.tm.github.source' target='_blank')  Source Code
+          a(href='links.tm.github.issues' target='_blank') Issues
+          a(href='links.tm.github.coc' target='_blank')  Code of Conduct
 </template>
 
 <script>
 import SectionBottom from './SectionBottom'
+import {mapGetters} from 'vuex'
 export default {
   name: 'app-footer',
+  computed: {
+    ...mapGetters(['links'])
+  },
   components: {
     SectionBottom
   }

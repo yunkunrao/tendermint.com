@@ -18,11 +18,11 @@
         <btn
           target="_blank"
           type="anchor"
-          href="https://cosmos.rocket.chat"
+          href="https://riot.im/app/#/room/#cosmos:matrix.org"
           size="lg"
-          icon="rocket"
+          icon="comments-o"
           theme="alpha-black"
-          value="Chat on Rocket">
+          value="Chat on Matrix">
         </btn>
       </div>
       <a href="https://github.com/tendermint" target="_blank" class="source"><i class="fa fa-github"></i> View source code on <strong>GitHub</strong></a>
