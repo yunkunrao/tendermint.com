@@ -6,7 +6,6 @@
       section
         img.footer-logo(src='../assets/images/logo-white-alpha-160.png')
         span &copy; {{ new Date().getFullYear() }} All In Bits, Inc.
-        span 29th Floor, 85 Broad St, New York, NY 10004
       section
         header Company
         router-link(:to="'/about'") About
