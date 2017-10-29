@@ -12,7 +12,7 @@
       </field>
       <btn
         type="submit"
-        value="Alert"
+        value="Subscribe"
         size="lg"
         theme="tendermint"
         id="mc-embedded-subscribe">
