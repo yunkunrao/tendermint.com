@@ -11,7 +11,7 @@
       <p>Tendermint 0.10.3 has been released! View <a href="https://github.com/tendermint/tendermint/blob/master/CHANGELOG.md#0103-august-10-2017">the changelog</a>.</p>
       <download-links></download-links>
       <h2>Install From Source</h2>
-      <p>If you prefer, you can also install Tendermint <router-link to="/docs/guides/install">from source</router-link>.</p>
+      <p>If you prefer, you can also install Tendermint <a href="https://tendermint.readthedocs.io/en/master/install.html">from source</a>.</p>
     </article-body>
   </page-split>
 </template>
