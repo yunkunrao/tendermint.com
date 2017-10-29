@@ -1,8 +1,8 @@
 <template>
   <a class="cover-alert" :href="links.cosmos.meetups.devchat" target="_blank">
-    <span class="key">ALERT:</span>
+    <span class="key">Alert:</span>
     <span class="value">
-      Cosmos Developer Chat is happening every 1st Thursday @ 17:00 (UTC+2) of the month. Check out our Meetup page to learn more.
+      Cosmos Developer Chat is happening every 1st Thursday @ 17:00 (UTC+2) of the month. Learn more
     </span>
     <i class="fa fa-angle-double-right" aria-hidden="true"></i>
   </a>
@@ -35,20 +35,13 @@ export default {
     display inline
 
   i.fa
-    display block
-    position absolute
-    bottom -0.25rem
-    right 0.25rem
-    font-size 3rem
-    line-height 1
-    color lighten(mcolor, 5%)
-    z-index -1
+    color lighten(mcolor,50%)
 
   .key
+    font-weight 600
     text-transform uppercase
-    color #fff
-    font-weight 500
     color lighten(mcolor,90%)
+    font-size 0.875rem
   .value
     color lighten(mcolor,70%)
 
