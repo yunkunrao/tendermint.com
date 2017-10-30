@@ -60,7 +60,7 @@ page-split
       :anchor='links.tm.community.facebook')
     card-community(
       dt='LinkedIn'
-      dd='View our official company profile on LinkedIn'
+      dd='View our official company profile on LinkedIn.'
       icon='linkedout'
       :anchor='links.tm.community.linkedin')
 </template>
@@ -83,7 +83,7 @@ export default {
     ...mapGetters(['links'])
   },
   mounted () {
-    document.title = 'Community - Cosmos - Internet of Blockchains'
+    document.title = 'Community - Tendermint'
   }
 }
 </script>
