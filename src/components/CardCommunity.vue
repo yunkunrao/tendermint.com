@@ -1,51 +1,60 @@
-<template>
-  <a class="community-link" :href="link.url" v-if="link.url" target="_blank">
-    <i :class="'fa fa-' + link.icon"></i>{{ link.title }}
-    <i class="fa fa-external-link"></i>
-  </a>
-  <router-link class="community-link" :to="link.route" v-else>
-    <i :class="'fa fa-' + link.icon"></i>{{ link.title }}
-  </router-link>
+<template lang="pug">
+a.card-community(:href='anchor' target='_blank')
+  .icon: i(:class="'fa fa-' + icon")
+  .text
+    .dt {{ dt }}
+    .dd {{ dd }}
 </template>
 
 <script>
 export default {
   name: 'card-community',
-  props: ['link']
+  props: ['anchor', 'dt', 'dd', 'icon']
 }
 </script>
 
 <style lang="stylus">
 @require '../styles/variables.styl'
 
-.community-link
-  width 100%
-  height 3rem
+.card-community + .card-community
+  border-top none
+
+.card-community
   display flex
-  align-items center
-  padding 0 1rem
-  border-bottom 1px solid bc
-  font-weight 400
+  border 1px solid bc
 
-  position relative
-  &:last-of-type
-    border-bottom none
-
-  i.fa
-    width 1rem
+  .icon
+    flex 0 0 3rem
     display flex
+    align-items center
     justify-content center
-    margin-right 0.5rem
-    &.fa-external-link
-      margin 0
-      position absolute
-      top 0
-      right 0
-      color light
-      height 3rem
-      width 3rem
-      align-items center
+
+    border-right 1px solid bc
+    i.fa
+      font-size 1.5rem
+      color link
+
+  .text
+    padding 0.5rem 0.75rem
+    .dt
+      font-weight 500
+      color txt
+    .dd
+      color dim
+      font-size 0.75rem
 
   &:hover
-    background lighten(mcolor, 98%)
+    background-color alpha(link, 3%)
+    .text .dt
+      color link
+
+@media screen and (min-width: 768px)
+  .card-community
+    .icon
+      flex 0 0 4rem
+      i.fa
+        font-size 1.75rem
+    .text
+      .dd
+        font-size 1rem
 </style>

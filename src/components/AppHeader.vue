@@ -84,7 +84,6 @@ navc = #94c0ec
   background alpha(mcolor, 95%)
   backdrop-filter blur(0.125rem)
   shadow()
-  font-weight 400
 
   .container
     max-width 1024px
@@ -112,7 +111,6 @@ navc = #94c0ec
       margin-left 0.5rem
     i.fa, .label
       color navc
-      font-weight 400
 
     .label
       user-select none
@@ -154,7 +152,6 @@ navc = #94c0ec
         display flex
         align-items center
         cursor pointer
-        font-weight 400
 
   .menu-popup
     z-index 101

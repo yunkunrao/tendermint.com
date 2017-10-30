@@ -30,7 +30,6 @@
       color lighten(mcolor,93%) !important
       a
         color lighten(mcolor, 50%) !important
-        font-weight 400
 
     .ni-section-main p, .value
       color lighten(mcolor,70%)

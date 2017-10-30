@@ -109,7 +109,6 @@ export default {
       line-height 3rem
       .version
         color light
-        font-weight 300
 
     .value
       display flex

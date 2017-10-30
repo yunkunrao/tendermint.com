@@ -1,18 +1,67 @@
 <template lang="pug">
 page-split
-  page-header(title='Community', subtitle='Discover the vibrant ecosystem around Tendermint.', type='split', slot='header', theme='tendermint')
+  page-header(title='Community' subtitle='Join and contribute to the vibrant Cosmos & Tendermint community.' type='split' slot='header' theme="tendermint")
   ni-section
-    card-title Community
-    card-community(v-for='link in communityLinks', :link='link', :key='link.url')
+    div(slot="title") Discuss & Chat
+    card-community(
+      dt='Discourse'
+      dd='Read the latest developer updates and join community discussions.'
+      icon='university'
+      :anchor='links.cosmos.community.discourse')
+    card-community(
+      dt='IRC'
+      dd='Join the #cosmos_network channel on the irc.freenode.net server.'
+      icon='hashtag'
+      :anchor='links.cosmos.community.irc')
+    card-community(
+      dt='Matrix'
+      dd='Use riot.im to chat with us in the the #cosmos:matrix.org room.'
+      icon='comments-o'
+      :anchor='links.cosmos.community.matrix')
+    card-community(
+      dt='Telegram'
+      dd='Join the `cosmosproject` Telegram group to chat with us.'
+      icon='telegram'
+      :anchor='links.cosmos.community.telegram')
   ni-section
-    card-title All In Bits, Inc.
-    card-community(v-for='link in companyLinks', :link='link', :key='link.url')
+    div(slot="title") Social Media
+    card-community(
+      dt='BitcoinTalk'
+      dd='Keep up with updates on our thread in the BitcoinTalk forum.'
+      icon='bitcoin'
+      :anchor='links.cosmos.community.bitcointalk')
+    card-community(
+      dt='Facebook'
+      dd='Like the `cosmosproject` page to get updates in your Facebook feed.'
+      icon='footbook'
+      :anchor='links.cosmos.community.facebook')
+    card-community(
+      dt='Reddit'
+      dd='Subscribe to /r/cosmosnetwork to get news on your Reddit homepage.'
+      icon='raddit'
+      :anchor='links.cosmos.community.reddit')
+    card-community(
+      dt='Twitter'
+      dd='Follow @cosmos, our official Twitter account.'
+      icon='twatter'
+      :anchor='links.cosmos.community.twitter')
+  ni-section
+    div(slot="title") Tendermint
+    card-community(
+      dt='Facebook'
+      dd='Like the `tendermint` page to get updates in your Facebook feed.'
+      icon='footbook'
+      :anchor='links.tm.community.facebook')
+    card-community(
+      dt='Twitter'
+      dd='Follow @tendermint_team, our official Twitter account.'
+      icon='twatter'
+      :anchor='links.tm.community.twitter')
 </template>
 
 <script>
 import {mapGetters} from 'vuex'
 import CardCommunity from './CardCommunity'
-import CardTitle from './CardTitle'
 import NiSection from './NiSection'
 import PageHeader from '@nylira/vue-page-header'
 import PageSplit from '@nylira/vue-page-split'
@@ -20,64 +69,15 @@ export default {
   name: 'page-community',
   components: {
     CardCommunity,
-    CardTitle,
     NiSection,
     PageHeader,
     PageSplit
   },
   computed: {
-    ...mapGetters(['links']),
-    communityLinks () {
-      return [
-        {
-          url: this.links.tm.chat,
-          title: 'Chat on Matrix',
-          icon: 'comments-o'
-        },
-        {
-          url: this.links.tm.github.issues,
-          title: 'Github Issues',
-          icon: 'github-alt'
-        },
-        {
-          route: '/bounties',
-          title: 'Code Bounties',
-          icon: 'btc'
-        },
-        {
-          url: this.links.tm.docs.ecosystem,
-          title: 'Software Ecosystem',
-          icon: 'code'
-        }
-      ]
-    },
-    companyLinks () {
-      return [
-        {
-          route: '/about',
-          title: 'About',
-          icon: 'users'
-        },
-        {
-          route: '/careers',
-          title: 'Careers',
-          icon: 'user'
-        },
-        {
-          route: '/presentations',
-          title: 'Presentations',
-          icon: 'video-camera'
-        },
-        {
-          route: '/press',
-          title: 'Press Mentions',
-          icon: 'newspaper-o'
-        }
-      ]
-    }
+    ...mapGetters(['links'])
   },
   mounted () {
-    document.title = 'Community - Tendermint'
+    document.title = 'Community - Cosmos - Internet of Blockchains'
   }
 }
 </script>
