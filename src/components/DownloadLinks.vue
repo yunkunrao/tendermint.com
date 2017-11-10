@@ -5,18 +5,18 @@
       img(src='../assets/images/icon-tendermint.png')
     .key-value
       .key
-        | tendermint 
-        span.version 0.10.3
+        | tendermint
+        span.version 0.12.0
       .value
-        btn(type='anchor', icon='linux', value='Linux', :href="dl('linux', 'tendermint', '0.10.3')")
-        btn(type='anchor', icon='apple', value='macOS', :href="dl('darwin', 'tendermint', '0.10.3')")
-        btn(type='anchor', icon='windows', value='Windows', :href="dl('windows', 'tendermint', '0.10.3')")
+        btn(type='anchor', icon='linux', value='Linux', :href="dl('linux', 'tendermint', '0.12.0')")
+        btn(type='anchor', icon='apple', value='macOS', :href="dl('darwin', 'tendermint', '0.12.0')")
+        btn(type='anchor', icon='windows', value='Windows', :href="dl('windows', 'tendermint', '0.11.1')")
   .bin.bin-abci
     .title
       img(src='../assets/images/icon-abci.png')
     .key-value
       .key
-        | abci 
+        | abci
         span.version 0.5.0
       .value
         btn(type='anchor', icon='linux', value='Linux', :href="dl('linux', 'abci', '0.5.0')")
@@ -27,7 +27,7 @@
       img(src='../assets/images/icon-basecoin.png')
     .key-value
       .key
-        | basecoin 
+        | basecoin
         span.version 0.6.1
       .value
         btn(type='anchor', icon='linux', value='Linux', :href="dl('linux', 'basecoin', '0.6.1')")
@@ -38,7 +38,7 @@
       img(src='../assets/images/icon-ethermint.png')
     .key-value
       .key
-        | ethermint 
+        | ethermint
         span.version 0.4.0
       .value
         btn(type='anchor', icon='linux', value='Linux', :href='dlEthermintLinux()')
@@ -49,7 +49,7 @@
       img(src='../assets/images/icon-merkleeyes.png')
     .key-value
       .key
-        | merkleeyes 
+        | merkleeyes
         span.version 0.2.4
       .value
         btn(type='anchor', icon='linux', value='Linux', :href="dl('linux', 'merkleeyes', '0.2.4')")
