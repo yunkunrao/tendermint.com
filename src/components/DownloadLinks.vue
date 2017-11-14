@@ -17,44 +17,22 @@
     .key-value
       .key
         | abci
-        span.version 0.5.0
+        span.version 0.7.1
       .value
-        btn(type='anchor', icon='linux', value='Linux', :href="dl('linux', 'abci', '0.5.0')")
-        btn(type='anchor', icon='apple', value='macOS', :href="dl('darwin', 'abci', '0.5.0')")
-        btn(type='anchor', icon='windows', value='Windows', :href="dl('windows', 'abci', '0.5.0')")
-  .bin.bin-basecoin
-    .title
-      img(src='../assets/images/icon-basecoin.png')
-    .key-value
-      .key
-        | basecoin
-        span.version 0.6.1
-      .value
-        btn(type='anchor', icon='linux', value='Linux', :href="dl('linux', 'basecoin', '0.6.1')")
-        btn(type='anchor', icon='apple', value='macOS', :href="dl('darwin', 'basecoin', '0.6.1')")
-        btn(type='anchor', icon='windows', value='Windows', :href="dl('windows', 'basecoin', '0.6.1')")
+        btn(type='anchor', icon='linux', value='Linux', :href="dl('linux', 'abci', '0.7.1')")
+        btn(type='anchor', icon='apple', value='macOS', :href="dl('darwin', 'abci', '0.7.1')")
+        btn(type='anchor', icon='windows', value='Windows', :href="dl('windows', 'abci', '0.7.1')")
   .bin.bin-ethermint
     .title
       img(src='../assets/images/icon-ethermint.png')
     .key-value
       .key
         | ethermint
-        span.version 0.4.0
+        span.version 0.5.3
       .value
         btn(type='anchor', icon='linux', value='Linux', :href='dlEthermintLinux()')
         btn(type='anchor', icon='apple', value='macOS', :href='dlEthermintDarwin()')
         btn(type='anchor', icon='windows', value='Windows', :href='dlEthermintWindows()')
-  .bin.bin-merkleeyes
-    .title
-      img(src='../assets/images/icon-merkleeyes.png')
-    .key-value
-      .key
-        | merkleeyes
-        span.version 0.2.4
-      .value
-        btn(type='anchor', icon='linux', value='Linux', :href="dl('linux', 'merkleeyes', '0.2.4')")
-        btn(type='anchor', icon='apple', value='macOS', :href="dl('darwin', 'merkleeyes', '0.2.4')")
-        btn(type='anchor', icon='windows', value='Windows', :href="dl('windows', 'merkleeyes', '0.2.4')")
 </template>
 
 <script>
@@ -69,13 +47,13 @@ export default {
       return `https://s3-us-west-2.amazonaws.com/tendermint/binaries/${name}/v${version}/${name}_${version}_${os}_amd64.zip`
     },
     dlEthermintLinux () {
-      return 'https://s3-us-west-2.amazonaws.com/tendermint/binaries/ethermint/0.4.0/ethermint_0.4.0_linux-amd64.zip'
+      return 'https://s3-us-west-2.amazonaws.com/tendermint/binaries/ethermint/0.5.3/ethermint_0.5.3_linux-amd64.zip'
     },
     dlEthermintDarwin () {
-      return 'https://s3-us-west-2.amazonaws.com/tendermint/binaries/ethermint/0.4.0/ethermint_0.4.0_darwin-10.6-amd64.zip'
+      return 'https://s3-us-west-2.amazonaws.com/tendermint/binaries/ethermint/0.5.3/ethermint_0.5.3_darwin-10.6-amd64.zip'
     },
     dlEthermintWindows () {
-      return 'https://github.com/tendermint/ethermint/releases/download/v0.4.0/ethermint_0.4.0_windows-4.0-amd64.zip'
+      return 'https://s3-us-west-2.amazonaws.com/tendermint/binaries/ethermint/0.5.3/ethermint_0.5.3_windows-4.0-amd64.exe.zip'
     }
   }
 }
