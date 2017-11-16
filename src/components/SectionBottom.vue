@@ -1,6 +1,6 @@
 <template>
   <div class="section-bottom-container">
-    <section-cosmos></section-cosmos>
+    <!--<section-cosmos></section-cosmos>-->
     <section class="section-bottom">
       <h2>Get Started</h2>
       <btn
@@ -21,15 +21,15 @@
 </template>
 
 <script>
-import SectionCosmos from './SectionCosmos'
+// import SectionCosmos from './SectionCosmos'
 import FormEmailSignup from './FormEmailSignup'
 import Btn from '@nylira/vue-button'
 export default {
   name: 'section-bottom',
   components: {
     FormEmailSignup,
-    Btn,
-    SectionCosmos
+    Btn
+    // SectionCosmos
   }
 }
 </script>
