@@ -1,6 +1,6 @@
 {
   "name": "tendermint.github.io",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The website for Tendermint.",
   "author": "All In Bits, Inc <hello@tendermint.com>",
   "private": true,
