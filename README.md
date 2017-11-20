@@ -12,13 +12,13 @@ Make sure you're running Node 6 LTS or higher.
 
 ``` bash
 # install dependencies
-npm install
+yarn install
 
 # write some required files
-npm run build
+yarn run build
 
 # serve with hot reload at localhost:8800
-npm run dev
+yarn run dev
 ```
 
 ## Contributing
