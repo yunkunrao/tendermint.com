@@ -6,11 +6,11 @@
     .key-value
       .key
         | tendermint
-        span.version 0.12.0
+        span.version 0.12.1
       .value
-        btn(type='anchor', icon='linux', value='Linux', :href="dl('linux', 'tendermint', '0.12.0')")
-        btn(type='anchor', icon='apple', value='macOS', :href="dl('darwin', 'tendermint', '0.12.0')")
-        btn(type='anchor', icon='windows', value='Windows', :href="dl('windows', 'tendermint', '0.11.1')")
+        btn(type='anchor', icon='linux', value='Linux', :href="dl('linux', 'tendermint', '0.12.1')")
+        btn(type='anchor', icon='apple', value='macOS', :href="dl('darwin', 'tendermint', '0.12.1')")
+        btn(type='anchor', icon='windows', value='Windows', :href="dl('windows', 'tendermint', '0.12.1')")
   .bin.bin-abci
     .title
       img(src='../assets/images/icon-abci.png')
