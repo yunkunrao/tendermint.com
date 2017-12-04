@@ -9,6 +9,7 @@ header.app-header
     menu.menu-popup.menu-app(v-if='activeMenuApp || desktop')
       nav.nav-app
         router-link(to='/downloads' @click.native='close' exact) Downloads
+        router-link(to='/bounties' @click.native='close' exact) Bounties
         router-link(to='/community' @click.native='close' exact) Community
         router-link(to='/careers' @click.native='close' exact) Careers
         router-link(to='/about' @click.native='close' exact) About

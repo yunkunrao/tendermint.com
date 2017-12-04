@@ -6,20 +6,13 @@
       type="split"
       slot="header"
       theme="tendermint">
-      <div class="tags">
-        <div id="tag-all" class="tag active" @click="setActiveTag($event)">all</div>
-        <div class="tag" v-for="tag in tags" @click="setActiveTag($event,tag)">
-          {{ tag }}
-        </div>
-      </div>
     </page-header>
-    <ni-section>
-      <card-bounty
-        v-for="bounty in filteredBounties"
-        :key="bounty.id"
-        :bounty="bounty">
-      </card-bounty>
-    </ni-section>
+    <article-body>
+      <h2>The Tendermint Bug Bounty Program</h2>
+      <p>To responsibly report a vulnerability for $$$ in Tendermint core, please fill out <a target="_blank" href="https://goo.gl/forms/pAohzyeZTpszEZxm2">this form</a>. Our team will evaluate the report, rate its severity, and then get back to you as fast as we can.</p>
+      <p>Thank you,</p>
+      <p>The Tendermint team!</p>
+    </article-body>
   </page-split>
 </template>
 
@@ -31,13 +24,15 @@ import CardBounty from './CardBounty'
 import NiSection from './NiSection'
 import PageHeader from '@nylira/vue-page-header'
 import PageSplit from '@nylira/vue-page-split'
+import ArticleBody from '@nylira/vue-article-body'
 export default {
   name: 'page-bounties-index',
   components: {
     CardBounty,
     NiSection,
     PageHeader,
-    PageSplit
+    PageSplit,
+    ArticleBody
   },
   computed: {
     tags () {
