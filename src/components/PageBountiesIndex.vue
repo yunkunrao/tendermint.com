@@ -8,21 +8,31 @@
       theme="tendermint">
     </page-header>
     <article-body>
-      <h2>The Tendermint / Cosmos Network Bug Bounty Program</h2>
-      <p> If you discover some vulnerability in Tendermint Core, the Tendermint libraries (go-wire, ...) or the ABCI repository you might be eligible for our bounty program. </p>
-      <p> The vulnerability must be applicable to Tendermint Core running the Persistent Dummy application in-process, or out-of-process via the socket server. </p>
-      <p> To responsibly report a vulnerability for points in the bug bounty program, please fill out <a target="_blank" href="https://goo.gl/forms/pAohzyeZTpszEZxm2">this form</a>. </p> 
-      <p> Our team will evaluate the report, rate its severity, and then get back to you as fast as we can.</p>
-      <p> The following table shows the rewards for each level of severity. One point is redeemable at $1 via BTC or ETH. </p>
-      <table>
-        <tr>
-          <td>Critical - up to 7,500+ points</td>
-          <td>High - up to 5,000 points</td>
-          <td>Medium - up to 2,500 points</td>
-          <td>Low - up to 1,000 points</td>
-          <td>Note - up to 500 points</td>
-        </tr>
-      </table>
+      <h2>Bug Bounty Program for Tendermint & Cosmos</h2>
+      <p>If you discover a vulnerability in Tendermint Core, the Tendermint libraries or the ABCI repository you might be eligible for our bounty program:</p>
+
+      <ul>
+        <li><a href="https://github.com/tendermint/tendermint">tendermint</a></li>
+        <li><a href="https://github.com/tendermint/abci">abci</a></li>
+        <li><a href="https://github.com/tendermint/go-wire">go-wire</a></li>
+        <li><a href="https://github.com/tendermint/go-crypto">go-crypto</a></li>
+        <li><a href="https://github.com/tendermint/iavl">iavl</a></li>
+      </ul>
+
+      <p>The vulnerability must be applicable to Tendermint Core running the Persistent Dummy application in-process, or out-of-process via the socket server.</p>
+
+      <h3>Reporting a vulnerability</h3>
+      <p> To responsibly report a vulnerability for points in the bug bounty program, please fill out <a target="_blank" href="https://goo.gl/forms/pAohzyeZTpszEZxm2">this form</a>. Our team will evaluate the report, rate its severity, and then get back to you as fast as we can.</p>
+
+      <h3>Rewards</h3>
+      <p> The following list shows the rewards for each level of severity. One point is redeemable for <code>$1.00 USD</code> with BTC or ETH.</p>
+      <ul>
+        <li><strong>Critical</strong> - up to 7,500+ points</li>
+        <li><strong>High</strong> - up to 5,000 points</li>
+        <li><strong>Medium</strong> - up to 2,500 points</li>
+        <li><strong>Low</strong> - up to 1,000 points</li>
+        <li><strong>Note</strong> - up to 500 points</li>
+      </ul>
     </article-body>
   </page-split>
 </template>
