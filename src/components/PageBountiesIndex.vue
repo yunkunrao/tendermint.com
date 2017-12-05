@@ -2,16 +2,27 @@
   <page-split class="page-bounties-index">
     <page-header
       title="Bounties"
-      subtitle="Get paid in BTC by working on Tendermint-based projects."
+      subtitle="Get paid in BTC or ETH by working on Tendermint-based projects."
       type="split"
       slot="header"
       theme="tendermint">
     </page-header>
     <article-body>
-      <h2>The Tendermint Bug Bounty Program</h2>
-      <p>To responsibly report a vulnerability for $$$ in Tendermint core, please fill out <a target="_blank" href="https://goo.gl/forms/pAohzyeZTpszEZxm2">this form</a>. Our team will evaluate the report, rate its severity, and then get back to you as fast as we can.</p>
-      <p>Thank you,</p>
-      <p>The Tendermint team!</p>
+      <h2>The Tendermint / Cosmos Network Bug Bounty Program</h2>
+      <p> If you discover some vulnerability in Tendermint Core, the Tendermint libraries (go-wire, ...) or the ABCI repository you might be eligible for our bounty program. </p>
+      <p> The vulnerability must be applicable to Tendermint Core running the Persistent Dummy application in-process, or out-of-process via the socket server. </p>
+      <p> To responsibly report a vulnerability for points in the bug bounty program, please fill out <a target="_blank" href="https://goo.gl/forms/pAohzyeZTpszEZxm2">this form</a>. </p> 
+      <p> Our team will evaluate the report, rate its severity, and then get back to you as fast as we can.</p>
+      <p> The following table shows the rewards for each level of severity. One point is redeemable at $1 via BTC or ETH. </p>
+      <table>
+        <tr>
+          <td>Critical - up to 7,500+ points</td>
+          <td>High - up to 5,000 points</td>
+          <td>Medium - up to 2,500 points</td>
+          <td>Low - up to 1,000 points</td>
+          <td>Note - up to 500 points</td>
+        </tr>
+      </table>
     </article-body>
   </page-split>
 </template>
