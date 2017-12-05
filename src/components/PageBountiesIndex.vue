@@ -9,7 +9,7 @@
     </page-header>
     <article-body>
       <h2>Bug Bounty Program for Tendermint & Cosmos</h2>
-      <p>If you discover a vulnerability in Tendermint Core, the Tendermint libraries or the ABCI repository you might be eligible for our bounty program. The vulnerability must be applicable to Tendermint Core running the Persistent Dummy application in-process, or out-of-process via the socket server.</p>
+      <p>If you discover a vulnerability in Tendermint Core, the Tendermint libraries, or the ABCI repository, you might be eligible for our bounty program. The vulnerability must be applicable to Tendermint Core running the persistent Dummy application in-process, or out-of-process via the socket server.</p>
 
       <h3>Applicable repositories</h3>
       <p>You can hunt for bugs and vulnerabilities in these following Tendermint repositories:</p>
@@ -23,10 +23,10 @@
 
       <h3>Reporting a vulnerability</h3>
       <p> To responsibly report a vulnerability for points in the bug bounty program, please fill out the form below. Our team will evaluate the report, rate its severity, and then get back to you as fast as we can.</p>
-      <btn href="https://goo.gl/forms/pAohzyeZTpszEZxm2" target="_blank" value="Report Vulernability" size="lg"></btn>
+      <btn type="anchor" href="https://goo.gl/forms/pAohzyeZTpszEZxm2" target="_blank" value="Report Vulnerability" size="lg"></btn>
 
       <h3>Rewards</h3>
-      <p> The following list shows the rewards for each level of severity. One point is redeemable for <code>$1.00 USD</code> with BTC or ETH.</p>
+      <p>The following list shows the rewards for each level of severity. One point is redeemable for <code>$1.00 USD</code> with BTC or ETH.</p>
       <ul>
         <li><strong>Critical Severity</strong> - up to 7,500+ points</li>
         <li><strong>High Severity</strong> - up to 5,000 points</li>
