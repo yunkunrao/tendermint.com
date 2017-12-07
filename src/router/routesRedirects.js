@@ -11,5 +11,11 @@ export default [// download
   { path: '/jobs/:entry', redirect: '/careers/:entry' },
   { path: '/media', redirect: '/presentations' },
   { path: '/media/:entry', redirect: '/presentations/:entry' },
-  { path: '/guides/contributing', redirect: '/docs/guides/contributing' }
+  { path: '/guides/contributing', redirect: '/docs/guides/contributing' },
+  {
+    path: '/docs*',
+    beforeEnter: () => {
+      window.location = 'https://tendermint.readthedocs.io/en/master/'
+    }
+  }
 ]
