@@ -8,7 +8,6 @@
       slot="header">
     </page-header>
     <article-body>
-      <p>Tendermint 0.12.1 has been released! View <a href="https://github.com/tendermint/tendermint/blob/master/CHANGELOG.md#0121-november-27-2017">the changelog</a>.</p>
       <download-links></download-links>
       <h2>Install From Source</h2>
       <p>If you prefer, you can also install Tendermint <a href="https://tendermint.readthedocs.io/en/master/install.html">from source</a>.</p>

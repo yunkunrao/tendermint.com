@@ -4,35 +4,26 @@
     .title
       img(src='../assets/images/icon-tendermint.png')
     .key-value
-      .key
-        | tendermint
-        span.version 0.12.1
+      .key tendermint
       .value
-        btn(type='anchor', icon='linux', value='Linux', :href="dl('linux', 'tendermint', '0.12.1')")
-        btn(type='anchor', icon='apple', value='macOS', :href="dl('darwin', 'tendermint', '0.12.1')")
-        btn(type='anchor', icon='windows', value='Windows', :href="dl('windows', 'tendermint', '0.12.1')")
+        btn(type='anchor', icon='github', value='View Releases' target="_blank"
+          href="https://github.com/tendermint/tendermint/releases")
   .bin.bin-abci
     .title
       img(src='../assets/images/icon-abci.png')
     .key-value
-      .key
-        | abci
-        span.version 0.7.1
+      .key abci
       .value
-        btn(type='anchor', icon='linux', value='Linux', :href="dl('linux', 'abci', '0.7.1')")
-        btn(type='anchor', icon='apple', value='macOS', :href="dl('darwin', 'abci', '0.7.1')")
-        btn(type='anchor', icon='windows', value='Windows', :href="dl('windows', 'abci', '0.7.1')")
+        btn(type='anchor', icon='github', value='View Releases' target="_blank"
+          href="https://github.com/tendermint/abci/releases")
   .bin.bin-ethermint
     .title
       img(src='../assets/images/icon-ethermint.png')
     .key-value
-      .key
-        | ethermint
-        span.version 0.5.3
+      .key ethermint
       .value
-        btn(type='anchor', icon='linux', value='Linux', :href='dlEthermintLinux()')
-        btn(type='anchor', icon='apple', value='macOS', :href='dlEthermintDarwin()')
-        btn(type='anchor', icon='windows', value='Windows', :href='dlEthermintWindows()')
+        btn(type='anchor', icon='github', value='View Releases' target="_blank"
+          href='https://github.com/tendermint/ethermint/releases')
 </template>
 
 <script>
@@ -41,20 +32,6 @@ export default {
   name: 'download-links',
   components: {
     Btn
-  },
-  methods: {
-    dl (os, name, version) {
-      return `https://s3-us-west-2.amazonaws.com/tendermint/binaries/${name}/v${version}/${name}_${version}_${os}_amd64.zip`
-    },
-    dlEthermintLinux () {
-      return 'https://s3-us-west-2.amazonaws.com/tendermint/binaries/ethermint/0.5.3/ethermint_0.5.3_linux-amd64.zip'
-    },
-    dlEthermintDarwin () {
-      return 'https://s3-us-west-2.amazonaws.com/tendermint/binaries/ethermint/0.5.3/ethermint_0.5.3_darwin-10.6-amd64.zip'
-    },
-    dlEthermintWindows () {
-      return 'https://s3-us-west-2.amazonaws.com/tendermint/binaries/ethermint/0.5.3/ethermint_0.5.3_windows-4.0-amd64.exe.zip'
-    }
   }
 }
 </script>
@@ -91,7 +68,7 @@ export default {
     .value
       display flex
       .ni-btn
-        max-width 8rem
+        max-width 16rem
         flex 1
         margin-right 0.25rem
         .ni-btn-value
