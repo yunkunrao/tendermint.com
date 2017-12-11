@@ -1,8 +1,8 @@
 <template>
   <page-split class="page-security">
     <page-header
-      title="Privacy Policy"
-      subtitle="Learn about our privacy policy."
+      title="Security"
+      subtitle="Learn about security and vulnerability reports at Tendermint."
       type="split"
       slot="header"
       theme="tendermint">
@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import MarkdownContent from 'content/security.md'
+import MarkdownContent from '../../content/security.md'
 import PageHeader from '@nylira/vue-page-header'
 import PageSplit from '@nylira/vue-page-split'
 import ArticleBody from '@nylira/vue-article-body'

@@ -21,6 +21,7 @@ export default [
   { path: '/presentations/:entry', component: r('PresentationsEntry') },
   { path: '/press', component: r('Press') },
   { path: '/privacy', component: r('Privacy') },
+  { path: '/security', component: r('Security') },
 
   // External
   { path: '/blog', component: r('RedirectToMedium') },

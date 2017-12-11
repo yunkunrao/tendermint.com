@@ -19,7 +19,7 @@ Once we receive a vulnerability report, Tendermint will take these steps to addr
 
 ## Bug Bounty Program
 
-At Tendermint, we strongly believe in compensating researchers for the time they invest in making cryptocurrencies stronger and more resilient. Depending on the severity and criticality of an issue, researchers who report bugs and respect our vulnerability disclosure policy may be eligible for rewards through our bug bounty program with HackerOne.
+At Tendermint, we strongly believe in compensating researchers for the time they invest in making cryptocurrencies stronger and more resilient. Depending on the severity and criticality of an issue, researchers who report bugs and respect our vulnerability disclosure policy may be eligible for rewards through our [bug bounty program](https://blog.cosmos.network/bug-bounty-program-for-tendermint-cosmos-833c67693586) with HackerOne.
 
 * Bounty reward amounts are based on many factors, including impact, risk, likelihood of exploitation, and report quality. 
 * There is no maximum reward in the program, but critical bugs are eligible for rewards equivalent to $2,500 in ETH or more. For severe bugs or exceptional bug reports, we may decide to pay lower-tier bugs a higher-tier reward.
@@ -27,10 +27,9 @@ At Tendermint, we strongly believe in compensating researchers for the time they
 * If we receive duplicate bug reports, we will award a bounty to the first person who reported the issue.
 * Any bugs that are found in services that we use (i.e. Mailchimp, Meetup, RiotChat) are ineligible for rewards, and should be disclosed directly to those services.
 
-To learn more about the scope of our bug bounty program or to report a bug, please visit [HackerOne].
+To learn more about the scope of our bug bounty program or to report a bug, please visit HackerOne.
 
 ## Contact Us
 
-If you find a security issue, you can contact our team directly at [security@tendermint.com](mailto:security@tendermint.com), or report it to our bug bounty program on [HackerOne]. 
-
+If you find a security issue, you can contact our team directly at [security@tendermint.com](mailto:security@tendermint.com), or report it to our bug bounty program on HackerOne. 
 To report a security vulnerability through an encrypted channel, please email us so that so that a member of our team can verify and exchange public keys with you.
