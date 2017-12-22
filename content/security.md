@@ -32,4 +32,4 @@ To learn more about the scope of our bug bounty program or to report a bug, plea
 ## Contact Us
 
 If you find a security issue, you can contact our team directly at [security@tendermint.com](mailto:security@tendermint.com), or report it to our bug bounty program on HackerOne. 
-To report a security vulnerability through an encrypted channel, please email us so that so that a member of our team can verify and exchange public keys with you.
+To report a security vulnerability through an encrypted channel, please email us so that so that a member of our team can verify and exchange public keys with you. Ethan Buchman's key can be found here: https://keybase.io/ebuchman .
