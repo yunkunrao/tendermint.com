@@ -2,8 +2,6 @@ var path = require('path')
 var utils = require('./utils')
 var config = require('../config')
 var vueLoaderConfig = require('./vue-loader.conf')
-var nib = require('nib')
-
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
@@ -24,6 +22,19 @@ module.exports = {
     extensions: ['.js', '.vue', '.json'],
     alias: {
       '@': resolve('src'),
+      assets: resolve('src/assets'),
+      images: resolve('src/assets/images'),
+      content: resolve('content'),
+      scripts: resolve('src/scripts'),
+      variables: resolve('src/styles/variables.styl'),
+      buttons: resolve('src/components/buttons'),
+      cards: resolve('src/components/cards'),
+      common: resolve('src/components/common'),
+      forms: resolve('src/components/forms'),
+      modals: resolve('src/components/modals'),
+      navigation: resolve('src/components/navigation'),
+      pages: resolve('src/components/pages'),
+      sections: resolve('src/components/sections')
     }
   },
   module: {
@@ -31,7 +42,7 @@ module.exports = {
       {
         test: /\.(js|vue)$/,
         loader: 'eslint-loader',
-        enforce: "pre",
+        enforce: 'pre',
         include: [resolve('src'), resolve('test')],
         options: {
           formatter: require('eslint-friendly-formatter')
