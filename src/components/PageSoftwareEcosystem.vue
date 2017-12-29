@@ -151,12 +151,13 @@ export default {
     PageSplit
   },
   computed: {
+    ...mapGetters(['allSoftware']),
     abciApps () {
       let key = this.activeKey
       let query = this.searchQuery
       if (key === 'tech') { key = ['language'] }
       if (key === 'name') { key = [app => app.name.toLowerCase()] }
-      let results = orderBy(this.software.abciApps, key, ['asc'])
+      let results = orderBy(this.allSoftware.abciApps, key, ['asc'])
 
       if (query) {
         let options = {
@@ -174,7 +175,7 @@ export default {
       let query = this.searchQuery
       if (key === 'tech') { key = ['language'] }
       if (key === 'name') { key = [app => app.name.toLowerCase()] }
-      let results = orderBy(this.software.abciServers, key, ['asc'])
+      let results = orderBy(this.allSoftware.abciServers, key, ['asc'])
 
       if (query) {
         let options = {
@@ -192,7 +193,7 @@ export default {
       let query = this.searchQuery
       if (key === 'tech') { key = ['technology'] }
       if (key === 'name') { key = [app => app.name.toLowerCase()] }
-      let results = orderBy(this.software.deploymentTools, key, ['asc'])
+      let results = orderBy(this.allSoftware.deploymentTools, key, ['asc'])
 
       if (query) {
         let options = {
@@ -210,7 +211,7 @@ export default {
       let query = this.searchQuery
       if (key === 'tech') { key = ['language'] }
       if (key === 'name') { key = [app => app.name.toLowerCase()] }
-      let results = orderBy(this.software.competitors, key, ['asc'])
+      let results = orderBy(this.allSoftware.competitors, key, ['asc'])
 
       if (query) {
         let options = {
@@ -220,12 +221,8 @@ export default {
         let fuse = new Fuse(results, options)
         return fuse.search(this.searchQuery)
       }
-
       return results
-    },
-    ...mapGetters({
-      software: 'allSoftware'
-    })
+    }
   },
   data () {
     return {
@@ -242,6 +239,7 @@ export default {
     }
   },
   mounted () {
+    console.log(this.allSoftware)
     document.title = 'Software Ecosystem - Tendermint'
   }
 }
