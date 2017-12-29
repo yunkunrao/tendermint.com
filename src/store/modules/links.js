@@ -4,6 +4,21 @@ window.fetch(url)
   .then(response => response.json())
   .then(json => (state.data = json))
 
-const state = { data: '' }
+const state = {
+  data: {
+    tm: {
+      blog: '',
+      docs: {
+        index: ''
+      },
+      github: {
+        organization: ''
+      }
+    },
+    cosmos: {
+      reddit: ''
+    }
+  }
+}
 
 export default { state }
