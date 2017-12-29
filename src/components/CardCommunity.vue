@@ -1,5 +1,10 @@
 <template lang="pug">
-a.card-community(:href='anchor' target='_blank')
+a.card-community(v-if="anchor" :href='anchor' target='_blank')
+  .icon: i(:class="'fa fa-' + icon")
+  .text
+    .dt {{ dt }}
+    .dd {{ dd }}
+router-link.card-community(v-else :to='to')
   .icon: i(:class="'fa fa-' + icon")
   .text
     .dt {{ dt }}
@@ -9,7 +14,7 @@ a.card-community(:href='anchor' target='_blank')
 <script>
 export default {
   name: 'card-community',
-  props: ['anchor', 'dt', 'dd', 'icon']
+  props: ['anchor', 'dt', 'dd', 'icon', 'to']
 }
 </script>
 

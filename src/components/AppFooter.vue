@@ -34,10 +34,10 @@
         header Developers
         nav
           router-link(to="/downloads") Downloads
+          router-link(to="/ecosystem") Ecosystem
           a(:href='links.tm.docs.index' target='_blank') Documentation
           a(:href='links.tm.github.source' target='_blank')  Source Code
           a(:href='links.tm.github.issues' target='_blank') Issues
-          a(:href='links.tm.github.coc' target='_blank')  Code of Conduct
 </template>
 
 <script>
