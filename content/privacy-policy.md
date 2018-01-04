@@ -144,6 +144,5 @@ If there are any questions regarding this privacy policy, you may contact us usi
 * 29th Floor, 85 Broad St
 * New York, NY 10004
 * United States
-* hello@tendermint.com
 
 Last Edited on 2017-07-17

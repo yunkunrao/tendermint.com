@@ -1,8 +1,8 @@
 <template>
-  <a class="cover-alert" :href="links.cosmos.meetups.devchat" target="_blank">
+  <a class="cover-alert" :href="links.cosmos.website" target="_blank">
     <span class="key">Alert:</span>
     <span class="value">
-      Cosmos Developer Chat is happening every 1st Thursday @ 17:00 (UTC+2) of the month. Learn more
+      All of us at Tendermint are preparing the Cosmos Network for release. Visit the project website
     </span>
     <i class="fa fa-angle-double-right" aria-hidden="true"></i>
   </a>

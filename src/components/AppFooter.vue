@@ -8,36 +8,25 @@
         span &copy; {{ new Date().getFullYear() }} All In Bits, Inc.
       section
         header Company
-        router-link(:to="'/about'") About
+        router-link(to="/about") About
+        router-link(to="/careers") Careers
+        router-link(to="/privacy") Privacy
         a(:href='links.tm.blog' target='_blank') Blog
-        router-link(:to="'/careers'") Careers
-        router-link(:to="'/contact'") Contact
-        router-link(:to="'/privacy'") Privacy
-      section
-        header Community
-        a(:href='links.tm.chat')
-          i.fa.fa-comments-o
-          | Chat
-        a(:href='links.tm.facebook')
-          i.fa.fa-footbook
-          | Facebook
-        a(:href='links.tm.github.organization')
-          i.fa.fa-github
-          | GitHub
-        a(:href='links.cosmos.reddit')
-          i.fa.fa-raddit
-          | Reddit
-        a(:href='links.tm.twitter')
-          i.fa.fa-twatter
-          | Twitter
+        a(:href='links.tm.twitter') @tendermint_team
       section
         header Developers
-        nav
-          router-link(to="/downloads") Downloads
-          router-link(to="/ecosystem") Ecosystem
-          a(:href='links.tm.docs.index' target='_blank') Documentation
-          a(:href='links.tm.github.source' target='_blank')  Source Code
-          a(:href='links.tm.github.issues' target='_blank') Issues
+        router-link(to="/downloads") Downloads
+        router-link(to="/ecosystem") Ecosystem
+        a(:href='links.tm.docs.index' target='_blank') Documentation
+        a(:href='links.tm.github.source' target='_blank')  Source Code
+        a(:href='links.tm.github.issues' target='_blank') Issues
+      section
+        header Cosmos
+        a(href='https://cosmos.network' target="_blank") Cosmos Network
+        a(:href='links.cosmos.community.matrix' target="_blank") Developer Chat
+        a(:href='links.cosmos.community.telegram' target="_blank") Community Chat
+        a(:href='links.cosmos.reddit' target="_blank") /r/cosmosnetwork
+        a(:href='links.cosmos.twitter' target="_blank") @cosmos
 </template>
 
 <script>
@@ -53,7 +42,7 @@ export default {
 </script>
 
 <style lang="stylus">
-@require '../styles/variables.styl'
+@require '~variables'
 
 .app-footer
   background mcolor
