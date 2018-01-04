@@ -2,19 +2,19 @@
   <div class="section-cosmos">
     <div class="section-cosmos-container">
       <header class="section-cosmos-header">
-        <h2 class="section-cosmos-title">Cosmos HackAtom #2</h2>
-        <div class="section-cosmos-subtitle">Win $50k! August 5 - September 14</div>
+        <h2 class="section-cosmos-title">The Cosmos Network</h2>
+        <div class="section-cosmos-subtitle">Launching in Q1 2018</div>
       </header>
       <main class="section-cosmos-main">
-        <div class="section-cosmos-description">Cosmos is seeking individuals and teams worldwide for another four-week, $50k USD hackathon. Sign up now!</div>
+        <div class="section-cosmos-description">All of us at Tendermint are working hard on preparing the Cosmos Network for release. We're aiming to launch version 1.0 in February of this year.</div>
         <btn
           type="anchor"
-          :href="links.cosmos.hackatom"
+          :href="links.cosmos.website"
           class="section-cosmos-btn"
           size="lg"
-          value="HackAtom Information"
+          value="Visit Cosmos Network"
           theme="tendermint"
-          icon="trophy">
+          icon="external-link">
         </btn>
       </main>
     </div>

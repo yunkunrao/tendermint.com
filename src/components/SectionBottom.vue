@@ -1,41 +1,30 @@
-<template>
-  <div class="section-bottom-container">
-    <!--<section-cosmos></section-cosmos>-->
-    <section class="section-bottom">
-      <h2>Get Started</h2>
-      <btn
-        type="link"
-        id="download-button"
-        to="/download"
-        size="lg"
-        icon="cloud-download"
-        theme="tendermint"
-        value="Download">
-      </btn>
-    </section>
-    <section class="section-bottom">
-      <h2>Get Newsletter</h2>
-      <form-email-signup></form-email-signup>
-    </section>
-  </div>
+<template lang="pug">
+.section-bottom-container
+  section-cosmos
+  section.section-bottom
+    h2 Get Started
+    btn#download-button(type='link', to='/download', size='lg', icon='cloud-download', theme='tendermint', value='Download')
+  section.section-bottom
+    h2 Get Newsletter
+    form-email-signup
 </template>
 
 <script>
-// import SectionCosmos from './SectionCosmos'
+import SectionCosmos from './SectionCosmos'
 import FormEmailSignup from './FormEmailSignup'
 import Btn from '@nylira/vue-button'
 export default {
   name: 'section-bottom',
   components: {
+    Btn,
     FormEmailSignup,
-    Btn
-    // SectionCosmos
+    SectionCosmos
   }
 }
 </script>
 
 <style lang="stylus">
-@require '../styles/variables.styl'
+@require '~variables'
 
 .section-bottom-container
   background mcolor
