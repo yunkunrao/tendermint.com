@@ -18,8 +18,16 @@ export default [
   { path: '/security', component: r('Security') },
 
   // External
-  { path: '/blog', component: r('RedirectToMedium') },
-  { path: '/github', component: r('RedirectToGitHub') },
+  { path: '/blog',
+    beforeEnter: () => {
+      window.location.assign('https://blog.cosmos.network/tendermint/home')
+    }
+  },
+  { path: '/github',
+    beforeEnter: () => {
+      window.location.assign('https://github.com/tendermint')
+    }
+  },
 
   // Wildcards
   { path: '/404', component: r('404') },
