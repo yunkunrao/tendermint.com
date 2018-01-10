@@ -3,17 +3,11 @@ export default [
   // Home
   { path: '/', component: r('Index') },
 
-  // Community
-  { path: '/community', component: r('Community') },
-
   // Download page
   { path: '/downloads', component: r('Download') },
 
   // Other
   { path: '/about', component: r('About') },
-  { path: '/bounties', component: r('BountiesIndex') },
-  { path: '/bounties/:entry', component: r('BountiesEntry') },
-  { path: '/contact', component: r('Contact') },
   { path: '/careers', component: r('CareersIndex') },
   { path: '/careers/:entry', component: r('CareersEntry') },
   { path: '/ecosystem', component: r('SoftwareEcosystem') },
