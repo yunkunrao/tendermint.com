@@ -1,37 +1,28 @@
-<template>
-  <page-split class="page-careers-index">
-    <page-header
-      title="Careers"
-      subtitle="Join us at Tendermint to build and improve <a href='https://cosmos.network'>Cosmos</a> and Tendermint.<br><br>Jobs here are constantly updated. If your specialty is unlisted, we encourage you to still apply."
-      type="split"
-      slot="header"
-      theme="tendermint">
-      <!--
-      <div class="tags">
-        <div id="tag-all" class="tag active" @click="setActiveTag($event)">all</div>
-        <div class="tag" v-for="tag in tags" @click="setActiveTag($event,tag)">{{ tag }}</div>
-      </div>
-      -->
-    </page-header>
-    <ni-section v-if="technical.length > 0">
-      <div slot="title">Technical Positions</div>
-      <card-career v-for="c in technical" :key="c.id" :career="c"></card-career>
-    </ni-section>
-    <ni-section v-if="operations.length > 0">
-      <div slot="title">Operations Positions</div>
-      <card-career v-for="c in operations" :key="c.id" :career="c"></card-career>
-    </ni-section>
-    <ni-section v-if="community.length > 0">
-      <div slot="title">Community Positions</div>
-      <card-career v-for="c in community" :key="c.id" :career="c"></card-career>
-    </ni-section>
-  </page-split>
+<template lang="pug">
+page-split.page-careers-index
+  page-header(
+    title='Careers'
+    subtitle="Join us at Tendermint to build and improve <a href='https://cosmos.network'>Cosmos</a> and Tendermint.<br><br>Jobs here are constantly updated. If your specialty is unlisted, we encourage you to still apply."
+    type='split'
+    slot='header'
+    theme='tendermint')
+
+  ni-section(v-if='technical.length > 0')
+    div(slot='title') Technical Positions
+    card-career(v-for='c in technical', :key='c.id', :career='c')
+
+  ni-section(v-if='operations.length > 0')
+    div(slot='title') Operations Positions
+    card-career(v-for='c in operations', :key='c.id', :career='c')
+
+  ni-section(v-if='community.length > 0')
+    div(slot='title') Community Positions
+    card-career(v-for='c in community', :key='c.id', :career='c')
 </template>
 
 <script>
-import $ from 'jquery'
 import { mapGetters } from 'vuex'
-import { union, orderBy } from 'lodash'
+import { orderBy } from 'lodash'
 import CardCareer from './CardCareer'
 import NiSection from './NiSection'
 import PageHeader from '@nylira/vue-page-header'
@@ -45,45 +36,20 @@ export default {
     PageSplit
   },
   computed: {
-    tags () {
-      let tags = []
-      this.careers.map(function (career) {
-        tags = union(tags, career.tags)
-      })
-      return tags
-    },
     technical () {
-      return this.careers.filter(c => c.area === 'technical' && c.weight !== 0)
+      return this.careers.filter(c => c.area === 'technical')
     },
     operations () {
-      return this.careers.filter(c => c.area === 'operations' && c.weight !== 0)
+      return this.careers.filter(c => c.area === 'operations')
     },
     community () {
-      return this.careers.filter(c => c.area === 'community' && c.weight !== 0)
+      return this.careers.filter(c => c.area === 'community')
     },
     careers () {
       let orderedCareers = orderBy(this.allCareers, ['title'], ['asc'])
       return orderedCareers
     },
     ...mapGetters(['allCareers'])
-  },
-  data () {
-    return {
-      activeTag: 'all'
-    }
-  },
-  methods: {
-    setActiveTag ($event, tagName) {
-      $('.tag').removeClass('active')
-      if (tagName) {
-        $($event.target).addClass('active')
-        this.activeTag = tagName
-        return
-      }
-      $('#tag-all').addClass('active')
-      this.activeTag = 'all'
-      return
-    }
   },
   mounted () {
     document.title = 'Careers - Tendermint'
@@ -93,7 +59,7 @@ export default {
 
 
 <style lang="stylus">
-@require '../styles/variables.styl'
+@require '~variables'
 
 .page-careers-index
   .tags

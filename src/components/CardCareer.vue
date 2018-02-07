@@ -1,11 +1,6 @@
 <template>
   <router-link :class="cssClass" :to="url">
     <div class="title">{{ career.title }}</div>
-    <div class="locations">
-      <div class="location" v-for="l in career.locations">
-        {{ l }}
-      </div>
-    </div>
   </router-link>
 </template>
 
@@ -14,7 +9,7 @@ export default {
   name: 'card-career',
   computed: {
     url () {
-      return '/careers/' + this.career.id
+      return '/careers/' + this.career.slug
     },
     cssClass () {
       let value = 'card-career'
@@ -27,7 +22,7 @@ export default {
 </script>
 
 <style lang="stylus">
-@require '../styles/variables.styl'
+@require '~variables'
 
 .card-career + .card-career
   border-top none
