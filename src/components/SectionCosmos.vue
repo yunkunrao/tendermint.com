@@ -1,24 +1,12 @@
-<template>
-  <div class="section-cosmos">
-    <div class="section-cosmos-container">
-      <header class="section-cosmos-header">
-        <h2 class="section-cosmos-title">The Cosmos Network</h2>
-        <div class="section-cosmos-subtitle">Launching in Q1 2018</div>
-      </header>
-      <main class="section-cosmos-main">
-        <div class="section-cosmos-description">All of us at Tendermint are working hard on preparing the Cosmos Network for release. We're aiming to launch version 1.0 in February of this year.</div>
-        <btn
-          type="anchor"
-          :href="links.cosmos.website"
-          class="section-cosmos-btn"
-          size="lg"
-          value="Visit Cosmos Network"
-          theme="tendermint"
-          icon="external-link">
-        </btn>
-      </main>
-    </div>
-  </div>
+<template lang="pug">
+.section-cosmos
+  .section-cosmos-container
+    header.section-cosmos-header
+      h2.section-cosmos-title The Cosmos Network
+      .section-cosmos-subtitle Launching Soon
+    main.section-cosmos-main
+      .section-cosmos-description All of us at Tendermint are working hard on preparing the Cosmos Network for release. We"re aiming to launch soon &ndash; #[a(href="https://cosmos.network/roadmap") follow our roadmap].
+      btn.section-cosmos-btn(type="anchor" :href="links.cosmos.website" size="lg" value="Visit Cosmos Network" theme="tendermint" icon="external-link")
 </template>
 
 <script>
@@ -36,7 +24,7 @@ export default {
 </script>
 
 <style lang="stylus">
-@import '../styles/variables.styl'
+@import '~variables'
 
 .section-cosmos
   border-bottom 1px solid lighten(mcolor, 10%)
