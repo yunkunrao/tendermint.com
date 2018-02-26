@@ -12,6 +12,7 @@ header.app-header
         router-link(to='/security' @click.native='close' exact) Security
         router-link(to='/about' @click.native='close' exact) About
         router-link(to='/careers' @click.native='close' exact) Careers
+        router-link(to='/contribute' @click.native='close' exact) Contribute
       nav.nav-external
         a(:href='links.tm.docs.index' target='_blank')
           | Docs #[i.fa.fa-book]

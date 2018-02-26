@@ -16,7 +16,10 @@ const state = {
       }
     },
     cosmos: {
-      reddit: ''
+      reddit: '',
+      community: {
+        matrix: ''
+      }
     }
   }
 }

@@ -39,6 +39,9 @@ export default {
       { r: 'icon', t: 'image/png', sz: '16x16', h: require('./assets/images/favicon/favicon-16x16.png') },
       { r: 'manifest', h: require('./assets/images/favicon/manifest.json') }
     ]
+  },
+  mounted () {
+    this.$store.commit('initializeContribute')
   }
 }
 </script>
