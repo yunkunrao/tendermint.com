@@ -1,134 +1,81 @@
-<template>
-  <page-split class="page-software-ecosystem">
-    <page-header
-      title="Ecosystem"
-      subtitle="Explore Tendermint's software ecosystem."
-      type="split"
-      slot="header"
-      theme="tendermint">
-      <field
-        type="text"
-        placeholder="Search..."
-        theme="tendermint"
-        size="large"
-        v-model="searchQuery">
-      </field>
-    </page-header>
-    <ni-section v-show="abciApps.length > 0">
-      <card-title>ABCI Apps</card-title>
-      <div class="section-content">
-        <div class="software-header">
-          <div class="name active" @click="reorderBy('name')">Title</div>
-          <div class="author" @click="reorderBy('author')">Author</div>
-          <div class="tech" @click="reorderBy('tech')">Language</div>
-          <div class="description" @click="reorderBy('description')">Description</div>
-        </div>
-        <div class="software-list">
-          <div class="software" v-for="entry in abciApps">
-            <a :href="entry.url">
-              <div class="name">{{ entry.name }}</div>
-              <div class="author">
-                <span class="key">
-                  Author:</span><span class="value">{{ entry.author }}
-                </span>
-              </div>
-              <div class="language">
-                <span class="key">
-                  Language:</span><span class="value">{{ entry.language }}
-                </span>
-              </div>
-              <div class="description">{{ entry.description }}</div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </ni-section>
-    <ni-section v-show="abciServers.length > 0">
-      <card-title>ABCI Servers</card-title>
-      <div class="section-content">
-        <div class="software-header">
-          <div class="name active" @click="reorderBy('name')">Title</div>
-          <div class="author" @click="reorderBy('author')">Author</div>
-          <div class="tech" @click="reorderBy('tech')">Language</div>
-        </div>
-        <div class="software-list">
-          <div class="software" v-for="entry in abciServers">
-            <a :href="entry.url">
-              <div class="name">{{ entry.name }}</div>
-              <div class="author">
-                <span class="key">
-                  Author:</span><span class="value">{{ entry.author }}
-                </span>
-              </div>
-              <div class="language">
-                <span class="key">
-                  Language:</span><span class="value">{{ entry.language }}
-                </span>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </ni-section>
-    <ni-section v-show="deploymentTools.length > 0">
-      <card-title>Deployment Tools</card-title>
-      <div class="section-content">
-        <div class="software-header">
-          <div class="name active" @click="reorderBy('name')">Title</div>
-          <div class="author" @click="reorderBy('author')">Author</div>
-          <div class="tech" @click="reorderBy('tech')">Technology</div>
-          <div class="description" @click="reorderBy('description')">Description</div>
-        </div>
-        <div class="software-list">
-          <div class="software" v-for="entry in deploymentTools">
-            <a :href="entry.url">
-              <div class="name">{{ entry.name }}</div>
-              <div class="author">
-                <span class="key">
-                  Author:</span><span class="value">{{ entry.author }}
-                </span>
-              </div>
-              <div class="technology">
-                <span class="key">
-                  Technology:</span><span class="value">{{ entry.technology }}
-                </span>
-              </div>
-              <div class="description">{{ entry.description }}</div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </ni-section>
-    <ni-section v-show="competitors.length > 0">
-      <card-title>Competition (Collaborators?)</card-title>
-      <div class="section-content">
-        <div class="software-header">
-          <div class="name active" @click="reorderBy('name')">Title</div>
-          <div class="author" @click="reorderBy('author')">Author</div>
-          <div class="tech" @click="reorderBy('tech')">Language</div>
-          <div class="description" @click="reorderBy('description')">Description</div>
-        </div>
-        <div class="software-list">
-          <div class="software" v-for="entry in competitors">
-            <a :href="entry.url">
-              <div class="name">{{ entry.name }}</div>
-              <div class="author">
-                <span class="key">
-                  Author:</span><span class="value">{{ entry.author }}
-                </span>
-              </div>
-              <div class="language">
-                <span class="key">
-                  Language:</span><span class="value">{{ entry.language }}
-                </span>
-              </div>
-              <div class="description">{{ entry.description }}</div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </ni-section>
-  </page-split>
+<template lang="pug">
+page-split.page-software-ecosystem
+  page-header(title='Ecosystem', subtitle="Explore Tendermint's software ecosystem.", type='split', slot='header', theme='tendermint')
+    field(type='text', placeholder='Search...', theme='tendermint', size='large', v-model='searchQuery')
+  ni-section(v-show='abciApps.length > 0')
+    card-title ABCI Apps
+    .section-content
+      .software-header
+        .name.active(@click="reorderBy('name')") Title
+        .author(@click="reorderBy('author')") Author
+        .tech(@click="reorderBy('tech')") Language
+        .description(@click="reorderBy('description')") Description
+      .software-list
+        .software(v-for='entry in abciApps'): a(:href='entry.url')
+          .name {{ entry.name }}
+          .author
+            span.key Author:
+            span.value {{ entry.author }}
+          .language
+            span.key Language:
+            span.value {{ entry.language }}
+          .description {{ entry.description }}
+
+  ni-section(v-show='abciServers.length > 0')
+    card-title ABCI Servers
+    .section-content
+      .software-header
+        .name.active(@click="reorderBy('name')") Title
+        .author(@click="reorderBy('author')") Author
+        .tech(@click="reorderBy('tech')") Language
+      .software-list
+        .software(v-for='entry in abciServers'): a(:href='entry.url')
+          .name {{ entry.name }}
+          .author
+            span.key Author:
+            span.value {{ entry.author }}
+          .language
+            span.key Language:
+            span.value {{ entry.language }}
+          .description {{ entry.description }}
+
+  ni-section(v-show='deploymentTools.length > 0')
+    card-title Deployment Tools
+    .section-content
+      .software-header
+        .name.active(@click="reorderBy('name')") Title
+        .author(@click="reorderBy('author')") Author
+        .tech(@click="reorderBy('tech')") Technology
+        .description(@click="reorderBy('description')") Description
+      .software-list
+        .software(v-for='entry in deploymentTools'): a(:href='entry.url')
+          .name {{ entry.name }}
+          .author
+            span.key Author:
+            span.value {{ entry.author }}
+          .language
+            span.key Language:
+            span.value {{ entry.language }}
+          .description {{ entry.description }}
+
+  ni-section(v-show='competitors.length > 0')
+    card-title Competition (Collaborators?)
+    .section-content
+      .software-header
+        .name.active(@click="reorderBy('name')") Title
+        .author(@click="reorderBy('author')") Author
+        .tech(@click="reorderBy('tech')") Language
+        .description(@click="reorderBy('description')") Description
+      .software-list
+        .software(v-for='entry in competitors'): a(:href='entry.url')
+          .name {{ entry.name }}
+          .author
+            span.key Author:
+            span.value {{ entry.author }}
+          .language
+            span.key Language:
+            span.value {{ entry.language }}
+          .description {{ entry.description }}
 </template>
 
 <script>
@@ -151,13 +98,13 @@ export default {
     PageSplit
   },
   computed: {
-    ...mapGetters(['allSoftware']),
+    ...mapGetters(['ecosystem']),
     abciApps () {
       let key = this.activeKey
       let query = this.searchQuery
       if (key === 'tech') { key = ['language'] }
       if (key === 'name') { key = [app => app.name.toLowerCase()] }
-      let results = orderBy(this.allSoftware.abciApps, key, ['asc'])
+      let results = orderBy(this.ecosystem.abciApps, key, ['asc'])
 
       if (query) {
         let options = {
@@ -175,7 +122,7 @@ export default {
       let query = this.searchQuery
       if (key === 'tech') { key = ['language'] }
       if (key === 'name') { key = [app => app.name.toLowerCase()] }
-      let results = orderBy(this.allSoftware.abciServers, key, ['asc'])
+      let results = orderBy(this.ecosystem.abciServers, key, ['asc'])
 
       if (query) {
         let options = {
@@ -193,7 +140,7 @@ export default {
       let query = this.searchQuery
       if (key === 'tech') { key = ['technology'] }
       if (key === 'name') { key = [app => app.name.toLowerCase()] }
-      let results = orderBy(this.allSoftware.deploymentTools, key, ['asc'])
+      let results = orderBy(this.ecosystem.deploymentTools, key, ['asc'])
 
       if (query) {
         let options = {
@@ -211,7 +158,7 @@ export default {
       let query = this.searchQuery
       if (key === 'tech') { key = ['language'] }
       if (key === 'name') { key = [app => app.name.toLowerCase()] }
-      let results = orderBy(this.allSoftware.competitors, key, ['asc'])
+      let results = orderBy(this.ecosystem.competitors, key, ['asc'])
 
       if (query) {
         let options = {
@@ -239,14 +186,13 @@ export default {
     }
   },
   mounted () {
-    console.log(this.allSoftware)
     document.title = 'Software Ecosystem - Tendermint'
   }
 }
 </script>
 
 <style lang="stylus">
-@require '../styles/variables.styl'
+@require '~variables'
 
 .page-software-ecosystem
   .ni-page-header
