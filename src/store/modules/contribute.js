@@ -1,5 +1,9 @@
 import axios from 'axios'
-let url = 'https://api.github.com/repos/tendermint/tendermint/issues?state=open&labels=help+wanted&per_page=100'
+
+// example GitHub API call for tendermint/tendermint issues
+// let url = 'https://api.github.com/repos/tendermint/tendermint/issues?state=open&labels=help+wanted&per_page=100'
+//
+let url = 'https://api.github.com/search/issues?q=is%3Aopen+is%3Aissue+user%3Atendermint+label%3A"help+wanted"'
 
 const state = {
   issues: []
@@ -7,7 +11,8 @@ const state = {
 
 const mutations = {
   async initializeContribute (state) {
-    state.issues = (await axios.get(url)).data
+    let items = (await axios.get(url)).data.items
+    state.issues = items
   }
 }
 
