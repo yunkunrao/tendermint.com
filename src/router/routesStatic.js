@@ -10,6 +10,7 @@ export default [
   { path: '/about', component: r('About') },
   { path: '/careers', component: r('CareersIndex') },
   { path: '/careers/:entry', component: r('CareersEntry') },
+  { path: '/contribute', component: r('Contribute') },
   { path: '/ecosystem', component: r('SoftwareEcosystem') },
   { path: '/presentations', component: r('PresentationsIndex') },
   { path: '/presentations/:entry', component: r('PresentationsEntry') },

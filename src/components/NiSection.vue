@@ -14,7 +14,7 @@
 </template>
 
 <style lang="stylus">
-@require '../styles/variables.styl'
+@require '~variables'
 
 .ni-section
   border-bottom 1px solid bc
