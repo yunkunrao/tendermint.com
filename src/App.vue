@@ -41,6 +41,7 @@ export default {
     ]
   },
   mounted () {
+    this.$store.commit('initEcosystem')
     this.$store.commit('initializeContribute')
   }
 }
