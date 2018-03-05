@@ -7,12 +7,12 @@ import modules from './modules'
 
 Vue.use(Vuex)
 
-const debug = process.env.NODE_ENV !== 'production'
+// const debug = process.env.NODE_ENV !== 'production'
 
 export default new Vuex.Store({
   actions,
   getters,
-  modules,
+  modules
   // plugins: debug ? [createLogger()] : [],
-  strict: debug
+  // strict: debug
 })

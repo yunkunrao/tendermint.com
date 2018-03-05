@@ -6,3 +6,4 @@ export const allPresentations = state => state.presentations.all
 export const allSoftware = state => state.software.all
 export const config = state => state.config
 export const links = state => state.links.data
+export const issues = state => state.contribute.issues
