@@ -59,7 +59,7 @@ page-split.page-software-ecosystem
           .description {{ entry.description }}
 
   ni-section(v-show='competitors.length > 0')
-    card-title Competition (Collaborators?)
+    card-title Competition
     .section-content
       .software-header
         .name.active(@click="reorderBy('name')") Title
