@@ -37,7 +37,6 @@ page-split.page-software-ecosystem
           .language
             span.key Language:
             span.value {{ entry.language }}
-          .description {{ entry.description }}
 
   ni-section(v-show='deploymentTools.length > 0')
     card-title Deployment Tools
@@ -45,7 +44,6 @@ page-split.page-software-ecosystem
       .software-header
         .name.active(@click="reorderBy('name')") Title
         .author(@click="reorderBy('author')") Author
-        .tech(@click="reorderBy('tech')") Technology
         .description(@click="reorderBy('description')") Description
       .software-list
         .software(v-for='entry in deploymentTools'): a(:href='entry.url')
@@ -53,9 +51,6 @@ page-split.page-software-ecosystem
           .author
             span.key Author:
             span.value {{ entry.author }}
-          .language
-            span.key Language:
-            span.value {{ entry.language }}
           .description {{ entry.description }}
 </template>
 
