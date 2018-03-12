@@ -20,7 +20,7 @@ ni-section.ni-section-dark.section-home-benefits
       i.fa.fa-bolt
       .text
         .key Lightning Fast
-        .value Tendermint supports thousands of transaction per second at 1000ms latencies.
+        .value Tendermint supports thousands of transactions per second.
     .block
       i.fa.fa-cloud-upload
       .text
@@ -88,7 +88,7 @@ export default {
         width 3.5*x
         height 3.5*x
         font-size 1.75*x
-        
+
       .text
         padding 0 1.5*x
 
