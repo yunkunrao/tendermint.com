@@ -57,25 +57,6 @@ page-split.page-software-ecosystem
             span.key Language:
             span.value {{ entry.language }}
           .description {{ entry.description }}
-
-  ni-section(v-show='competitors.length > 0')
-    card-title Competition (Collaborators?)
-    .section-content
-      .software-header
-        .name.active(@click="reorderBy('name')") Title
-        .author(@click="reorderBy('author')") Author
-        .tech(@click="reorderBy('tech')") Language
-        .description(@click="reorderBy('description')") Description
-      .software-list
-        .software(v-for='entry in competitors'): a(:href='entry.url')
-          .name {{ entry.name }}
-          .author
-            span.key Author:
-            span.value {{ entry.author }}
-          .language
-            span.key Language:
-            span.value {{ entry.language }}
-          .description {{ entry.description }}
 </template>
 
 <script>
@@ -151,23 +132,6 @@ export default {
         return fuse.search(this.searchQuery)
       }
 
-      return results
-    },
-    competitors () {
-      let key = this.activeKey
-      let query = this.searchQuery
-      if (key === 'tech') { key = ['language'] }
-      if (key === 'name') { key = [app => app.name.toLowerCase()] }
-      let results = orderBy(this.ecosystem.competitors, key, ['asc'])
-
-      if (query) {
-        let options = {
-          threshold: 0.25,
-          keys: ['name', 'author', 'language', 'description']
-        }
-        let fuse = new Fuse(results, options)
-        return fuse.search(this.searchQuery)
-      }
       return results
     }
   },
