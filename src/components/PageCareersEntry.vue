@@ -3,12 +3,6 @@
   page-header(:title='career.title' :subtitle='subtitle' theme='tendermint')
   article-body
     div(v-html="markdown(career.body)")
-    btn(
-      type='anchor'
-      size='lg'
-      href='mailto:careers@tendermint.com'
-      icon='envelope-o'
-      value='Send Application')
 </template>
 
 <script>
@@ -16,11 +10,9 @@ import PageHeader from '@nylira/vue-page-header'
 import ArticleBody from '@nylira/vue-article-body'
 import { mapGetters } from 'vuex'
 import MarkdownIt from 'markdown-it'
-import Btn from '@nylira/vue-button'
 export default {
   name: 'page-career-entry',
   components: {
-    Btn,
     PageHeader,
     ArticleBody
   },
@@ -57,6 +49,8 @@ export default {
 
 <style lang="stylus">
 @require '~variables'
+.ni-article-body
+  padding-bottom 3rem
 
 .page-career-entry
   .tags
