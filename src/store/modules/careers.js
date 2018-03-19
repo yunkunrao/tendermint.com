@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { Base64 } from 'js-base64'
 
 let prefix = 'https://api.github.com/repos/tendermint/aib-data/contents/'
 let careerUrl = prefix + 'md/careers'
@@ -29,7 +30,7 @@ function addArea (file) {
 }
 
 function addTitle (file) {
-  let body = window.atob(file.content)
+  let body = Base64.decode(file.content)
   let title = body.split('\n')[0]
   let titleArray = title.split(' ')
   titleArray.shift()
@@ -39,7 +40,7 @@ function addTitle (file) {
 }
 
 function addBody (file) {
-  let body = window.atob(file.content)
+  let body = Base64.decode(file.content)
   body = body.split('\n')
   body.shift()
   file.body = body.join('\n')
