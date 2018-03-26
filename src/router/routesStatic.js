@@ -24,6 +24,12 @@ export default [
       window.location.assign('https://blog.cosmos.network/tendermint/home')
     }
   },
+  {
+    path: '/docs*',
+    beforeEnter: () => {
+      window.location.assign('https://tendermint.readthedocs.io/en/master/')
+    }
+  },
   { path: '/github',
     beforeEnter: () => {
       window.location.assign('https://github.com/tendermint')

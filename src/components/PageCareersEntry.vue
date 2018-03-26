@@ -31,7 +31,7 @@
 
     h3 How to apply:
     p To apply, please fill out this form:
-    btn(type="anchor" href="https://goo.gl/forms/jpdRI1wD8pdfoqKl2" target="_blank" value="Tendermint Application Form" color="primary" size="lg")
+    btn(type="anchor" :href="config.CAREER_APPLICATION_URL" target="_blank" value="Tendermint Application Form" size="lg" theme="tendermint")
 </template>
 
 <script>
@@ -48,7 +48,7 @@ export default {
     ArticleBody
   },
   computed: {
-    ...mapGetters(['allCareers']),
+    ...mapGetters(['allCareers', 'config']),
     career () {
       if (this.allCareers) {
         return this.allCareers.find(c => c.slug === this.$route.params.entry)

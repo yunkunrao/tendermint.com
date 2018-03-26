@@ -6,6 +6,7 @@ function startDatetime () {
 }
 
 const state = {
+  CAREER_APPLICATION_URL: 'https://goo.gl/forms/jpdRI1wD8pdfoqKl2',
   ENDS_AFTER: 14,
   FUNDRAISER_URL: 'https://fundraiser.cosmos.network',
   SELF_URL: 'https://cosmos.network/',

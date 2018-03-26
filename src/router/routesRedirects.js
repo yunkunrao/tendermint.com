@@ -1,3 +1,4 @@
+import config from '../store/modules/config.js'
 export default [
   // redirect all blog posts to medium
   { path: '/posts', redirect: '/blog' },
@@ -5,20 +6,24 @@ export default [
   { path: '/blog/:entry', redirect: '/blog' },
 
   // other pages
-  { path: '/apply', redirect: '/careers' },
+  {
+    path: '/apply',
+    beforeEnter: () => {
+      window.location.assign(config.state.CAREER_APPLICATION_URL)
+    }
+  },
   { path: '/code', redirect: '/docs' },
   { path: '/download', redirect: '/downloads' },
   { path: '/guide', redirect: '/docs' },
   { path: '/jobs', redirect: '/careers' },
   { path: '/jobs/:entry', redirect: '/careers/:entry' },
-  { path: '/join', redirect: '/careers' },
+  {
+    path: '/join',
+    beforeEnter: () => {
+      window.location.assign(config.state.CAREER_APPLICATION_URL)
+    }
+  },
   { path: '/media', redirect: '/presentations' },
   { path: '/media/:entry', redirect: '/presentations/:entry' },
-  { path: '/guides/contributing', redirect: '/docs/guides/contributing' },
-  {
-    path: '/docs*',
-    beforeEnter: () => {
-      window.location = 'https://tendermint.readthedocs.io/en/master/'
-    }
-  }
+  { path: '/guides/contributing', redirect: '/docs/guides/contributing' }
 ]
