@@ -3,10 +3,10 @@
   page-header(:title='career.title' :subtitle='subtitle' theme='tendermint')
 
   article-body
-    h3 About us
-    p Tendermint is building state-of-the-art consensus and networking protocols to enable internet-scale distributed applications. We’re passionate, self-driven, industry leaders whose mission is to build a better, freer internet. We're also building the <a href="https://cosmos.network target="_blank">Cosmos Network</a>, a decentralized network of independent parallel blockchains, each powered by classical BFT consensus algorithms like Tendermint Core. We believe the technology we're building will have a major impact on human beings around the world. We’re well funded and growing quickly.
+    h3 About us:
+    p Tendermint is building state-of-the-art consensus and networking protocols to enable internet-scale distributed applications. We’re passionate, self-driven, industry leaders whose mission is to build a better, freer internet. We're also building the <a href="https://cosmos.network" target="_blank">Cosmos Network</a>, a decentralized network of independent parallel blockchains, each powered by classical BFT consensus algorithms like Tendermint Core. We believe the technology we're building will have a major impact on human beings around the world. We’re well funded and growing quickly.
 
-    h3 How we work
+    h3 How we work:
     p Our software development teams are broken up into <a href="https://github.com/tendermint" target="_blank">Tendermint</a>, <a href="https://github.com/cosmos/cosmos-sdk" target="_blank">Cosmos SDK</a>, and <a href="https://github.com/cosmos/voyager" target="_blank">Voyager</a>. Our teams leverage agile methodologies to move quickly and stay focused. Most of us work out of our offices in Berkeley, Toronto, and Berlin, but some of our employees work remotely. Communication is important to us and we rely heavily on Slack, Zoom, and GitHub to help us stay in sync. Everything we build is open source and available on GitHub.
 
     div(v-html="markdown(career.body)")
@@ -30,10 +30,12 @@
     p The process can take up to 3 weeks.
 
     h3 How to apply:
-    p To apply, please fill out <a href="https://goo.gl/forms/jpdRI1wD8pdfoqKl2" target="_blank">this form</a>.
+    p To apply, please fill out this form:
+    btn(type="anchor" :href="config.CAREER_APPLICATION_URL" target="_blank" value="Tendermint Application Form" size="lg" theme="tendermint")
 </template>
 
 <script>
+import Btn from '@nylira/vue-button'
 import PageHeader from '@nylira/vue-page-header'
 import ArticleBody from '@nylira/vue-article-body'
 import { mapGetters } from 'vuex'
@@ -41,11 +43,12 @@ import MarkdownIt from 'markdown-it'
 export default {
   name: 'page-career-entry',
   components: {
+    Btn,
     PageHeader,
     ArticleBody
   },
   computed: {
-    ...mapGetters(['allCareers']),
+    ...mapGetters(['allCareers', 'config']),
     career () {
       if (this.allCareers) {
         return this.allCareers.find(c => c.slug === this.$route.params.entry)
