@@ -25,43 +25,43 @@ page-split.page-careers-index
 </template>
 
 <script>
-import {mapGetters} from 'vuex';
-import {orderBy} from 'lodash';
-import CardCareer from './CardCareer';
-import NiSection from './NiSection';
-import PageHeader from '@nylira/vue-page-header';
-import PageSplit from '@nylira/vue-page-split';
+import {mapGetters} from 'vuex'
+import {orderBy} from 'lodash'
+import CardCareer from './CardCareer'
+import NiSection from './NiSection'
+import PageHeader from '@nylira/vue-page-header'
+import PageSplit from '@nylira/vue-page-split'
 export default {
   name: 'page-careers-index',
   components: {
     CardCareer,
     NiSection,
     PageHeader,
-    PageSplit,
+    PageSplit
   },
   computed: {
-    technical() {
-      return this.careers.filter(c => c.area === 'technical');
+    technical () {
+      return this.careers.filter(c => c.area === 'technical')
     },
-    design() {
-      return this.careers.filter(c => c.area === 'design');
+    design () {
+      return this.careers.filter(c => c.area === 'design')
     },
-    operations() {
-      return this.careers.filter(c => c.area === 'operations');
+    operations () {
+      return this.careers.filter(c => c.area === 'operations')
     },
-    community() {
-      return this.careers.filter(c => c.area === 'community');
+    community () {
+      return this.careers.filter(c => c.area === 'community')
     },
-    careers() {
-      let orderedCareers = orderBy(this.allCareers, ['title'], ['asc']);
-      return orderedCareers;
+    careers () {
+      let orderedCareers = orderBy(this.allCareers, ['title'], ['asc'])
+      return orderedCareers
     },
-    ...mapGetters(['allCareers']),
+    ...mapGetters(['allCareers'])
   },
-  mounted() {
-    document.title = 'Careers - Tendermint';
-  },
-};
+  mounted () {
+    document.title = 'Careers - Tendermint'
+  }
+}
 </script>
 
 
