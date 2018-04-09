@@ -11,6 +11,10 @@ page-split.page-careers-index
     div(slot='title') Technical Positions
     card-career(v-for='c in technical', :key='c.id', :career='c')
 
+  ni-section(v-if='design.length > 0')
+    div(slot='title') Design Positions
+    card-career(v-for='c in design', :key='c.id', :career='c')
+
   ni-section(v-if='operations.length > 0')
     div(slot='title') Operations Positions
     card-career(v-for='c in operations', :key='c.id', :career='c')
@@ -21,40 +25,43 @@ page-split.page-careers-index
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
-import { orderBy } from 'lodash'
-import CardCareer from './CardCareer'
-import NiSection from './NiSection'
-import PageHeader from '@nylira/vue-page-header'
-import PageSplit from '@nylira/vue-page-split'
+import {mapGetters} from 'vuex';
+import {orderBy} from 'lodash';
+import CardCareer from './CardCareer';
+import NiSection from './NiSection';
+import PageHeader from '@nylira/vue-page-header';
+import PageSplit from '@nylira/vue-page-split';
 export default {
   name: 'page-careers-index',
   components: {
     CardCareer,
     NiSection,
     PageHeader,
-    PageSplit
+    PageSplit,
   },
   computed: {
-    technical () {
-      return this.careers.filter(c => c.area === 'technical')
+    technical() {
+      return this.careers.filter(c => c.area === 'technical');
     },
-    operations () {
-      return this.careers.filter(c => c.area === 'operations')
+    design() {
+      return this.careers.filter(c => c.area === 'design');
     },
-    community () {
-      return this.careers.filter(c => c.area === 'community')
+    operations() {
+      return this.careers.filter(c => c.area === 'operations');
     },
-    careers () {
-      let orderedCareers = orderBy(this.allCareers, ['title'], ['asc'])
-      return orderedCareers
+    community() {
+      return this.careers.filter(c => c.area === 'community');
     },
-    ...mapGetters(['allCareers'])
+    careers() {
+      let orderedCareers = orderBy(this.allCareers, ['title'], ['asc']);
+      return orderedCareers;
+    },
+    ...mapGetters(['allCareers']),
   },
-  mounted () {
-    document.title = 'Careers - Tendermint'
-  }
-}
+  mounted() {
+    document.title = 'Careers - Tendermint';
+  },
+};
 </script>
 
 
