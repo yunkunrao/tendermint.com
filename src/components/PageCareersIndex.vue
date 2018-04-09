@@ -11,6 +11,10 @@ page-split.page-careers-index
     div(slot='title') Technical Positions
     card-career(v-for='c in technical', :key='c.id', :career='c')
 
+  ni-section(v-if='design.length > 0')
+    div(slot='title') Design Positions
+    card-career(v-for='c in design', :key='c.id', :career='c')
+
   ni-section(v-if='operations.length > 0')
     div(slot='title') Operations Positions
     card-career(v-for='c in operations', :key='c.id', :career='c')
@@ -21,8 +25,8 @@ page-split.page-careers-index
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
-import { orderBy } from 'lodash'
+import {mapGetters} from 'vuex'
+import {orderBy} from 'lodash'
 import CardCareer from './CardCareer'
 import NiSection from './NiSection'
 import PageHeader from '@nylira/vue-page-header'
@@ -38,6 +42,9 @@ export default {
   computed: {
     technical () {
       return this.careers.filter(c => c.area === 'technical')
+    },
+    design () {
+      return this.careers.filter(c => c.area === 'design')
     },
     operations () {
       return this.careers.filter(c => c.area === 'operations')
