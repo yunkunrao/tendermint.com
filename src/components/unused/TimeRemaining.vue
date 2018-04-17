@@ -16,41 +16,43 @@
 
 <script>
 export default {
-  name: 'ni-time-remaining',
+  name: "ni-time-remaining",
   computed: {
-    countingDown () {
-      return this.days > 0 || this.hours > 0 || this.minutes > 0 || this.seconds > 0
+    countingDown() {
+      return (
+        this.days > 0 || this.hours > 0 || this.minutes > 0 || this.seconds > 0
+      )
     },
-    label () {
-      if (this.started) return 'is live for'
-      else return 'will begin in'
+    label() {
+      if (this.started) return "is live for"
+      else return "will begin in"
     },
-    usableDate () {
+    usableDate() {
       return Math.trunc(Date.parse(this.date) / 1000)
     },
-    seconds () {
+    seconds() {
       return (this.usableDate - this.now) % 60
     },
-    minutes () {
+    minutes() {
       return Math.trunc((this.usableDate - this.now) / 60) % 60
     },
-    hours () {
+    hours() {
       return Math.trunc((this.usableDate - this.now) / 60 / 60) % 24
     },
-    days () {
+    days() {
       return Math.trunc((this.usableDate - this.now) / 60 / 60 / 24)
     }
   },
-  data () {
+  data() {
     return {
-      now: Math.trunc((new Date()).getTime() / 1000)
+      now: Math.trunc(new Date().getTime() / 1000)
     }
   },
-  mounted () {
+  mounted() {
     window.setInterval(() => {
-      this.now = Math.trunc((new Date()).getTime() / 1000)
+      this.now = Math.trunc(new Date().getTime() / 1000)
     }, 1000)
   },
-  props: ['date', 'fuzzy', 'started']
+  props: ["date", "fuzzy", "started"]
 }
 </script>

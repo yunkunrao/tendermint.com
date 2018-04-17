@@ -34,15 +34,15 @@ ni-section.ni-section-dark.section-home-benefits
 </template>
 
 <script>
-import {mapGetters} from 'vuex'
-import NiSection from './NiSection'
+import { mapGetters } from "vuex"
+import NiSection from "./NiSection"
 export default {
-  name: 'section-home-benefits',
+  name: "section-home-benefits",
   components: {
     NiSection
   },
   computed: {
-    ...mapGetters(['links'])
+    ...mapGetters(["links"])
   }
 }
 </script>

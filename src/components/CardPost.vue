@@ -19,8 +19,8 @@
 
 <script>
 export default {
-  name: 'card-post',
-  props: ['title', 'desc', 'meta', 'url']
+  name: "card-post",
+  props: ["title", "desc", "meta", "url"]
 }
 </script>
 

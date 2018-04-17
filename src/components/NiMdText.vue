@@ -3,24 +3,25 @@
 </template>
 
 <script>
-import MarkdownIt from 'markdown-it'
+import MarkdownIt from "markdown-it"
 export default {
-  name: 'ni-md-text',
+  name: "ni-md-text",
   data: () => ({
-    text: '## Loading...'
+    text: "## Loading..."
   }),
   methods: {
-    markdown (text) {
+    markdown(text) {
       let md = new MarkdownIt()
       return md.render(text)
     }
   },
-  mounted () {
-    window.fetch(this.url)
+  mounted() {
+    window
+      .fetch(this.url)
       .then(response => response.text())
       .then(text => (this.text = text))
   },
-  props: ['url']
+  props: ["url"]
 }
 </script>
 

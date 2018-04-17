@@ -55,17 +55,17 @@ page-split.page-software-ecosystem
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
-import { orderBy } from 'lodash'
-import $ from 'jquery'
-import Fuse from 'fuse.js'
-import Field from '@nylira/vue-input'
-import CardTitle from './CardTitle'
-import NiSection from './NiSection'
-import PageHeader from '@nylira/vue-page-header'
-import PageSplit from '@nylira/vue-page-split'
+import { mapGetters } from "vuex"
+import { orderBy } from "lodash"
+import $ from "jquery"
+import Fuse from "fuse.js"
+import Field from "@nylira/vue-input"
+import CardTitle from "./CardTitle"
+import NiSection from "./NiSection"
+import PageHeader from "@nylira/vue-page-header"
+import PageSplit from "@nylira/vue-page-split"
 export default {
-  name: 'page-software-ecosystem',
+  name: "page-software-ecosystem",
   components: {
     CardTitle,
     Field,
@@ -74,18 +74,22 @@ export default {
     PageSplit
   },
   computed: {
-    ...mapGetters(['ecosystem']),
-    abciApps () {
+    ...mapGetters(["ecosystem"]),
+    abciApps() {
       let key = this.activeKey
       let query = this.searchQuery
-      if (key === 'tech') { key = ['language'] }
-      if (key === 'name') { key = [app => app.name.toLowerCase()] }
-      let results = orderBy(this.ecosystem.abciApps, key, ['asc'])
+      if (key === "tech") {
+        key = ["language"]
+      }
+      if (key === "name") {
+        key = [app => app.name.toLowerCase()]
+      }
+      let results = orderBy(this.ecosystem.abciApps, key, ["asc"])
 
       if (query) {
         let options = {
           threshold: 0.25,
-          keys: ['name', 'author', 'language', 'description']
+          keys: ["name", "author", "language", "description"]
         }
         let fuse = new Fuse(results, options)
         return fuse.search(this.searchQuery)
@@ -93,17 +97,21 @@ export default {
 
       return results
     },
-    abciServers () {
+    abciServers() {
       let key = this.activeKey
       let query = this.searchQuery
-      if (key === 'tech') { key = ['language'] }
-      if (key === 'name') { key = [app => app.name.toLowerCase()] }
-      let results = orderBy(this.ecosystem.abciServers, key, ['asc'])
+      if (key === "tech") {
+        key = ["language"]
+      }
+      if (key === "name") {
+        key = [app => app.name.toLowerCase()]
+      }
+      let results = orderBy(this.ecosystem.abciServers, key, ["asc"])
 
       if (query) {
         let options = {
           threshold: 0.25,
-          keys: ['name', 'author', 'language', 'description']
+          keys: ["name", "author", "language", "description"]
         }
         let fuse = new Fuse(results, options)
         return fuse.search(this.searchQuery)
@@ -111,17 +119,21 @@ export default {
 
       return results
     },
-    deploymentTools () {
+    deploymentTools() {
       let key = this.activeKey
       let query = this.searchQuery
-      if (key === 'tech') { key = ['technology'] }
-      if (key === 'name') { key = [app => app.name.toLowerCase()] }
-      let results = orderBy(this.ecosystem.deploymentTools, key, ['asc'])
+      if (key === "tech") {
+        key = ["technology"]
+      }
+      if (key === "name") {
+        key = [app => app.name.toLowerCase()]
+      }
+      let results = orderBy(this.ecosystem.deploymentTools, key, ["asc"])
 
       if (query) {
         let options = {
           threshold: 0.25,
-          keys: ['name', 'author', 'technology', 'description']
+          keys: ["name", "author", "technology", "description"]
         }
         let fuse = new Fuse(results, options)
         return fuse.search(this.searchQuery)
@@ -130,22 +142,22 @@ export default {
       return results
     }
   },
-  data () {
+  data() {
     return {
-      activeKey: 'name',
-      searchQuery: ''
+      activeKey: "name",
+      searchQuery: ""
     }
   },
   methods: {
-    reorderBy (key) {
-      $('.software-header div').removeClass('active')
-      $('.' + key).addClass('active')
+    reorderBy(key) {
+      $(".software-header div").removeClass("active")
+      $("." + key).addClass("active")
       this.activeKey = key
       // console.log('reordering by', this.activeKey)
     }
   },
-  mounted () {
-    document.title = 'Software Ecosystem - Tendermint'
+  mounted() {
+    document.title = "Software Ecosystem - Tendermint"
   }
 }
 </script>

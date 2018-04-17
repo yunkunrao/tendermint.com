@@ -31,16 +31,16 @@
 </template>
 
 <script>
-import {mapGetters} from 'vuex'
-import SectionHomeCoverAlert from './SectionHomeCoverAlert.vue'
-import Btn from '@nylira/vue-button'
+import { mapGetters } from "vuex"
+import SectionHomeCoverAlert from "./SectionHomeCoverAlert.vue"
+import Btn from "@nylira/vue-button"
 export default {
   components: {
     SectionHomeCoverAlert,
     Btn
   },
   computed: {
-    ...mapGetters(['links'])
+    ...mapGetters(["links"])
   }
 }
 </script>

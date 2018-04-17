@@ -6,18 +6,18 @@
 
 <script>
 export default {
-  name: 'card-career',
+  name: "card-career",
   computed: {
-    url () {
-      return '/careers/' + this.career.slug
+    url() {
+      return "/careers/" + this.career.slug
     },
-    cssClass () {
-      let value = 'card-career'
-      if (this.theme === 'dark') value += ' card-career-dark'
+    cssClass() {
+      let value = "card-career"
+      if (this.theme === "dark") value += " card-career-dark"
       return value
     }
   },
-  props: ['career', 'theme']
+  props: ["career", "theme"]
 }
 </script>
 

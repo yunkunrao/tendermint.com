@@ -16,20 +16,20 @@
 </template>
 
 <script>
-import PageSplit from '@nylira/vue-page-split'
-import ArticleBody from '@nylira/vue-article-body'
-import DownloadLinks from './DownloadLinks'
-import PageHeader from '@nylira/vue-page-header'
+import PageSplit from "@nylira/vue-page-split"
+import ArticleBody from "@nylira/vue-article-body"
+import DownloadLinks from "./DownloadLinks"
+import PageHeader from "@nylira/vue-page-header"
 export default {
-  name: 'page-intro-download',
+  name: "page-intro-download",
   components: {
     ArticleBody,
     DownloadLinks,
     PageSplit,
     PageHeader
   },
-  mounted () {
-    document.title = 'Downloads - Tendermint - Blockchain Consensus'
+  mounted() {
+    document.title = "Downloads - Tendermint - Blockchain Consensus"
   }
 }
 </script>

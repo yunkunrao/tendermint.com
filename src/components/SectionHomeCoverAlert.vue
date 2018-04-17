@@ -9,10 +9,10 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters } from "vuex"
 export default {
   computed: {
-    ...mapGetters(['config', 'links'])
+    ...mapGetters(["config", "links"])
   }
 }
 </script>

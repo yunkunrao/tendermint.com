@@ -1,42 +1,30 @@
-function r (page) { return require('../components/Page' + page) }
+import PageIndex from "comp/PageIndex"
+import PageAbout from "comp/PageAbout"
+import PageCareersIndex from "comp/PageCareersIndex"
+import PageCareersEntry from "comp/PageCareersEntry"
+import PageContribute from "comp/PageContribute"
+import PageDownload from "comp/PageDownload"
+import PageSoftwareEcosystem from "comp/PageSoftwareEcosystem"
+import PagePresentationsIndex from "comp/PagePresentationsIndex"
+import PagePresentationsEntry from "comp/PagePresentationsEntry"
+import PagePress from "comp/PagePress"
+import PagePrivacy from "comp/PagePrivacy"
+import PageSecurity from "comp/PageSecurity"
+import Page404 from "comp/Page404"
+
 export default [
-  // Home
-  { path: '/', component: r('Index') },
-
-  // Download page
-  { path: '/downloads', component: r('Download') },
-
-  // Other
-  { path: '/about', component: r('About') },
-  { path: '/careers', component: r('CareersIndex') },
-  { path: '/careers/:entry', component: r('CareersEntry') },
-  { path: '/contribute', component: r('Contribute') },
-  { path: '/ecosystem', component: r('SoftwareEcosystem') },
-  { path: '/presentations', component: r('PresentationsIndex') },
-  { path: '/presentations/:entry', component: r('PresentationsEntry') },
-  { path: '/press', component: r('Press') },
-  { path: '/privacy', component: r('Privacy') },
-  { path: '/security', component: r('Security') },
-
-  // External
-  { path: '/blog',
-    beforeEnter: () => {
-      window.location.assign('https://blog.cosmos.network/tendermint/home')
-    }
-  },
-  {
-    path: '/docs*',
-    beforeEnter: () => {
-      window.location.assign('https://tendermint.readthedocs.io/en/master/')
-    }
-  },
-  { path: '/github',
-    beforeEnter: () => {
-      window.location.assign('https://github.com/tendermint')
-    }
-  },
-
-  // Wildcards
-  { path: '/404', component: r('404') },
-  { path: '*', component: r('404') }
+  { path: "/", component: PageIndex },
+  { path: "/about", component: PageAbout },
+  { path: "/careers", component: PageCareersIndex },
+  { path: "/careers/:entry", component: PageCareersEntry },
+  { path: "/contribute", component: PageContribute },
+  { path: "/downloads", component: PageDownload },
+  { path: "/ecosystem", component: PageSoftwareEcosystem },
+  { path: "/presentations", component: PagePresentationsIndex },
+  { path: "/presentations/:entry", component: PagePresentationsEntry },
+  { path: "/press", component: PagePress },
+  { path: "/privacy", component: PagePrivacy },
+  { path: "/security", component: PageSecurity },
+  { path: "/404", component: Page404 },
+  { path: "*", component: Page404 }
 ]

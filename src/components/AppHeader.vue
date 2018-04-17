@@ -25,35 +25,38 @@ header.app-header
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
-import disableScroll from 'disable-scroll'
+import { mapGetters } from "vuex"
+import disableScroll from "disable-scroll"
 export default {
-  name: 'app-header',
+  name: "app-header",
   computed: {
-    ...mapGetters(['config', 'links'])
+    ...mapGetters(["config", "links"])
   },
   data: () => ({
     activeMenuApp: false,
     desktop: false
   }),
   methods: {
-    close () {
+    close() {
       this.activeMenuApp = false
       disableScroll.off()
     },
-    goto (route) {
+    goto(route) {
       this.close()
       // console.log('going to', route)
       this.$router.push(route)
       return
     },
-    toggleMenuApp () {
+    toggleMenuApp() {
       this.activeMenuApp = !this.activeMenuApp
       if (this.activeMenuApp) disableScroll.on()
       else disableScroll.off()
     },
-    watchWindowSize () {
-      let w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0)
+    watchWindowSize() {
+      let w = Math.max(
+        document.documentElement.clientWidth,
+        window.innerWidth || 0
+      )
       if (w >= 1024) {
         this.close()
         this.desktop = true
@@ -63,7 +66,7 @@ export default {
       return
     }
   },
-  mounted () {
+  mounted() {
     this.watchWindowSize()
     window.onresize = this.watchWindowSize
   }

@@ -7,14 +7,14 @@
 
 <script>
 export default {
-  name: 'section-comments',
-  mounted () {
+  name: "section-comments",
+  mounted() {
     /**
-    * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO
-    * INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT:
-    * https://disqus.com/admin/universalcode/#configuration-variables
-    */
+     * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO
+     * INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT:
+     * https://disqus.com/admin/universalcode/#configuration-variables
+     */
     /*
     var disqus_config = function () {
       this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
@@ -23,11 +23,11 @@ export default {
     */
 
     let d = document
-    let s = d.createElement('script')
+    let s = d.createElement("script")
 
-    s.src = '//tendermint.disqus.com/embed.js'
+    s.src = "//tendermint.disqus.com/embed.js"
 
-    s.setAttribute('data-timestamp', +new Date())
+    s.setAttribute("data-timestamp", +new Date())
 
     let el = d.head || d.body
 

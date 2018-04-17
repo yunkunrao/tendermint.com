@@ -20,10 +20,10 @@
 </template>
 
 <script>
-import { portrait } from '../scripts/cdn.js'
-import ModalPerson from './ModalPerson'
+import { portrait } from "../scripts/cdn.js"
+import ModalPerson from "./ModalPerson"
 export default {
-  name: 'card-person',
+  name: "card-person",
   components: {
     ModalPerson
   },
@@ -32,11 +32,11 @@ export default {
     portrait: portrait
   }),
   methods: {
-    setPopup (state) {
+    setPopup(state) {
       this.activePopup = state
     }
   },
-  props: ['person', 'group']
+  props: ["person", "group"]
 }
 </script>
 

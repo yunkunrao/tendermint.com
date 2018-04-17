@@ -1,21 +1,22 @@
-import VueRouter from 'vue-router'
-import routesRedirects from './routesRedirects.js'
+import VueRouter from "vue-router"
+import routesRedirects from "./routesRedirects.js"
 
-import routesStatic from './routesStatic.js'
+import routesStatic from "./routesStatic.js"
 
 const routes = [...routesRedirects, ...routesStatic]
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: "history",
   routes,
-  scrollBehavior (to, from, savedPosition) {
+  scrollBehavior(to) {
     if (to.hash) {
-      let name = to.hash.replace('#', '')
+      let name = to.hash.replace("#", "")
       let obj =
-        document.querySelector(to.hash) || document.querySelector(`[name="${name}"]`)
+        document.querySelector(to.hash) ||
+        document.querySelector(`[name="${name}"]`)
 
       let rect = obj.getBoundingClientRect()
-      console.log('hash exists', obj, 'obj.top', rect.top)
+      console.log("hash exists", obj, "obj.top", rect.top)
       return {
         // selector: to.hash
         x: rect.left,

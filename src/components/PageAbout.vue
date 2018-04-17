@@ -22,14 +22,14 @@ page-split
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
-import CardLink from './CardLink'
-import CardPerson from './CardPerson'
-import NiSection from './NiSection'
-import PageHeader from '@nylira/vue-page-header'
-import PageSplit from '@nylira/vue-page-split'
+import { mapGetters } from "vuex"
+import CardLink from "./CardLink"
+import CardPerson from "./CardPerson"
+import NiSection from "./NiSection"
+import PageHeader from "@nylira/vue-page-header"
+import PageSplit from "@nylira/vue-page-split"
 export default {
-  name: 'page-about',
+  name: "page-about",
   components: {
     CardLink,
     CardPerson,
@@ -38,13 +38,15 @@ export default {
     PageSplit
   },
   computed: {
-    ...mapGetters(['allPeople', 'links'])
+    ...mapGetters(["allPeople", "links"])
   },
-  mounted () {
-    document.title = 'About - Tendermint'
+  mounted() {
+    document.title = "About - Tendermint"
   },
   methods: {
-    ppl (tag) { return this.allPeople.filter(p => p.groups[tag]) }
+    ppl(tag) {
+      return this.allPeople.filter(p => p.groups[tag])
+    }
   }
 }
 </script>

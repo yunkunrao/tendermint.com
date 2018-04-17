@@ -1,24 +1,26 @@
-let url = 'https://raw.githubusercontent.com/tendermint/aib-data/master/json/links.json'
+let url =
+  "https://raw.githubusercontent.com/tendermint/aib-data/master/json/links.json"
 
-window.fetch(url)
+window
+  .fetch(url)
   .then(response => response.json())
   .then(json => (state.data = json))
 
 const state = {
   data: {
     tm: {
-      blog: '',
+      blog: "",
       docs: {
-        index: ''
+        index: ""
       },
       github: {
-        organization: ''
+        organization: ""
       }
     },
     cosmos: {
-      reddit: '',
+      reddit: "",
       community: {
-        matrix: ''
+        matrix: ""
       }
     }
   }

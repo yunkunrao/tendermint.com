@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  props: ['facebook-url', 'twitter-url']
+  props: ["facebook-url", "twitter-url"]
 }
 </script>
 

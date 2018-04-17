@@ -6,20 +6,20 @@
 </template>
 
 <script>
-import SectionHomeCover from './SectionHomeCover'
-import SectionHomeBenefits from './SectionHomeBenefits'
+import SectionHomeCover from "./SectionHomeCover"
+import SectionHomeBenefits from "./SectionHomeBenefits"
 export default {
-  name: 'page-index',
+  name: "page-index",
   components: {
     SectionHomeCover,
     SectionHomeBenefits
   },
   head: {
-    title () {
+    title() {
       return {
-        inner: 'Tendermint',
-        separator: '-',
-        complement: 'Blockchain Consensus'
+        inner: "Tendermint",
+        separator: "-",
+        complement: "Blockchain Consensus"
       }
     }
   }

@@ -6,20 +6,20 @@
 </template>
 
 <script>
-import NiSection from './NiSection'
-import CardCareer from './CardCareer'
-import { mapGetters } from 'vuex'
+import NiSection from "./NiSection"
+import CardCareer from "./CardCareer"
+import { mapGetters } from "vuex"
 export default {
-  name: 'section-home-careers',
+  name: "section-home-careers",
   components: {
     NiSection,
     CardCareer
   },
   computed: {
-    careers () {
+    careers() {
       return this.allCareers.filter(c => c.weight === 4)
     },
-    ...mapGetters(['allCareers'])
+    ...mapGetters(["allCareers"])
   }
 }
 </script>

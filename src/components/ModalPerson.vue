@@ -39,24 +39,24 @@
 </template>
 
 <script>
-import { portrait } from '../scripts/cdn.js'
-import disableScroll from 'disable-scroll'
-import CardPerson from './CardPerson'
+import { portrait } from "../scripts/cdn.js"
+import disableScroll from "disable-scroll"
+import CardPerson from "./CardPerson"
 export default {
-  name: 'section-people',
+  name: "section-people",
   components: {
     CardPerson
   },
   data: () => ({
     portrait: portrait
   }),
-  mounted () {
+  mounted() {
     disableScroll.on()
   },
-  beforeDestroy () {
+  beforeDestroy() {
     disableScroll.off()
   },
-  props: ['person', 'group']
+  props: ["person", "group"]
 }
 </script>
 

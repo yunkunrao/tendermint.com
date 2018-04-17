@@ -16,14 +16,14 @@
 </template>
 
 <script>
-import NiSection from './NiSection'
-import PageHeader from '@nylira/vue-page-header'
-import PageSplit from '@nylira/vue-page-split'
-import { mapGetters } from 'vuex'
-import { orderBy } from 'lodash'
-import CardPost from './CardPost'
+import NiSection from "./NiSection"
+import PageHeader from "@nylira/vue-page-header"
+import PageSplit from "@nylira/vue-page-split"
+import { mapGetters } from "vuex"
+import { orderBy } from "lodash"
+import CardPost from "./CardPost"
 export default {
-  name: 'page-press',
+  name: "page-press",
   components: {
     CardPost,
     NiSection,
@@ -31,13 +31,15 @@ export default {
     PageSplit
   },
   computed: {
-    orderedMedia () { return orderBy(this.media, ['date'], ['desc']) },
+    orderedMedia() {
+      return orderBy(this.media, ["date"], ["desc"])
+    },
     ...mapGetters({
-      media: 'allMedia'
+      media: "allMedia"
     })
   },
-  mounted () {
-    document.title = 'Press Info - Tendermint'
+  mounted() {
+    document.title = "Press Info - Tendermint"
   }
 }
 </script>

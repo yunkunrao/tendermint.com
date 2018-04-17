@@ -27,9 +27,9 @@
 </template>
 
 <script>
-import Btn from '@nylira/vue-button'
+import Btn from "@nylira/vue-button"
 export default {
-  name: 'download-links',
+  name: "download-links",
   components: {
     Btn
   }

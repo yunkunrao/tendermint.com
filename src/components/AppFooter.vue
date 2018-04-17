@@ -30,11 +30,11 @@
 </template>
 
 <script>
-import SectionBottom from './SectionBottom'
-import {mapGetters} from 'vuex'
+import SectionBottom from "./SectionBottom"
+import { mapGetters } from "vuex"
 export default {
-  name: 'app-footer',
-  computed: { ...mapGetters(['links']) },
+  name: "app-footer",
+  computed: { ...mapGetters(["links"]) },
   components: {
     SectionBottom
   }

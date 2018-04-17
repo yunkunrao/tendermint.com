@@ -14,20 +14,20 @@
 </template>
 
 <script>
-import MarkdownContent from '../../content/privacy-policy.md'
-import PageHeader from '@nylira/vue-page-header'
-import PageSplit from '@nylira/vue-page-split'
-import ArticleBody from '@nylira/vue-article-body'
+import MarkdownContent from "content/privacy-policy.md"
+import PageHeader from "@nylira/vue-page-header"
+import PageSplit from "@nylira/vue-page-split"
+import ArticleBody from "@nylira/vue-article-body"
 export default {
-  name: 'page-privacy',
+  name: "page-privacy",
   components: {
     ArticleBody,
     PageHeader,
     PageSplit,
     MarkdownContent
   },
-  mounted () {
-    document.title = 'Privacy Policy - Tendermint'
+  mounted() {
+    document.title = "Privacy Policy - Tendermint"
   }
 }
 </script>

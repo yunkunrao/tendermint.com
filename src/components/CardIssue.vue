@@ -8,20 +8,20 @@ a.ni-card-issue(:href="issue.html_url" target="_blank")
 </template>
 
 <script>
-import moment from 'moment'
-import MarkdownIt from 'markdown-it'
+import moment from "moment"
+import MarkdownIt from "markdown-it"
 export default {
-  name: 'ni-card-issue',
+  name: "ni-card-issue",
   methods: {
-    prettyDate (date) {
-      return moment(date).format('MMM D, YYYY, h:mm A')
+    prettyDate(date) {
+      return moment(date).format("MMM D, YYYY, h:mm A")
     },
-    markdown (text) {
+    markdown(text) {
       let md = new MarkdownIt()
       return md.renderInline(text)
     }
   },
-  props: ['issue']
+  props: ["issue"]
 }
 </script>
 

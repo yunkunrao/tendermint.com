@@ -6,8 +6,8 @@
 
 <script>
 export default {
-  name: 'card-link',
-  props: ['icon', 'link', 'title']
+  name: "card-link",
+  props: ["icon", "link", "title"]
 }
 </script>
 

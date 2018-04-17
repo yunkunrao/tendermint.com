@@ -22,15 +22,15 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
-import Btn from '@nylira/vue-button'
+import { mapGetters } from "vuex"
+import Btn from "@nylira/vue-button"
 export default {
-  name: 'section-cosmos',
+  name: "section-cosmos",
   components: {
     Btn
   },
   computed: {
-    ...mapGetters(['config'])
+    ...mapGetters(["config"])
   }
 }
 </script>

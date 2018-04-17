@@ -35,45 +35,45 @@
 </template>
 
 <script>
-import Btn from '@nylira/vue-button'
-import PageHeader from '@nylira/vue-page-header'
-import ArticleBody from '@nylira/vue-article-body'
-import { mapGetters } from 'vuex'
-import MarkdownIt from 'markdown-it'
+import Btn from "@nylira/vue-button"
+import PageHeader from "@nylira/vue-page-header"
+import ArticleBody from "@nylira/vue-article-body"
+import { mapGetters } from "vuex"
+import MarkdownIt from "markdown-it"
 export default {
-  name: 'page-career-entry',
+  name: "page-career-entry",
   components: {
     Btn,
     PageHeader,
     ArticleBody
   },
   computed: {
-    ...mapGetters(['allCareers', 'config']),
-    career () {
+    ...mapGetters(["allCareers", "config"]),
+    career() {
       if (this.allCareers) {
         return this.allCareers.find(c => c.slug === this.$route.params.entry)
       }
-      return { title: 'Loading...', subtitle: 'Loading...' }
+      return { title: "Loading...", subtitle: "Loading..." }
     },
-    subtitle () {
-      return this.capitalize(this.career.area) + ' Position at Tendermint'
+    subtitle() {
+      return this.capitalize(this.career.area) + " Position at Tendermint"
     }
   },
   methods: {
-    capitalize (string) {
+    capitalize(string) {
       return string.charAt(0).toUpperCase() + string.slice(1)
     },
-    markdown (text) {
+    markdown(text) {
       let md = new MarkdownIt()
       console.log(this.career)
       return md.render(text)
     },
-    email (address) {
-      window.location.href = 'mailto:' + address
+    email(address) {
+      window.location.href = "mailto:" + address
     }
   },
-  mounted () {
-    document.title = this.career.title + ' - Careers - Tendermint'
+  mounted() {
+    document.title = this.career.title + " - Careers - Tendermint"
   }
 }
 </script>

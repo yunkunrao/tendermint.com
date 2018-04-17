@@ -10,20 +10,20 @@ page-split.page-security
 </template>
 
 <script>
-import PageHeader from '@nylira/vue-page-header'
-import PageSplit from '@nylira/vue-page-split'
-import ArticleBody from '@nylira/vue-article-body'
-import MdText from './NiMdText'
+import PageHeader from "@nylira/vue-page-header"
+import PageSplit from "@nylira/vue-page-split"
+import ArticleBody from "@nylira/vue-article-body"
+import MdText from "./NiMdText"
 export default {
-  name: 'page-security',
+  name: "page-security",
   components: {
     ArticleBody,
     MdText,
     PageHeader,
     PageSplit
   },
-  mounted () {
-    document.title = 'Security - Tendermint'
+  mounted() {
+    document.title = "Security - Tendermint"
   }
 }
 </script>

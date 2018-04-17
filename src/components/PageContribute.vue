@@ -12,13 +12,13 @@ page-split.page-contribute-index
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
-import CardIssue from './CardIssue'
-import NiSection from './NiSection'
-import PageHeader from '@nylira/vue-page-header'
-import PageSplit from '@nylira/vue-page-split'
+import { mapGetters } from "vuex"
+import CardIssue from "./CardIssue"
+import NiSection from "./NiSection"
+import PageHeader from "@nylira/vue-page-header"
+import PageSplit from "@nylira/vue-page-split"
 export default {
-  name: 'page-careers-index',
+  name: "page-careers-index",
   components: {
     CardIssue,
     NiSection,
@@ -26,10 +26,10 @@ export default {
     PageSplit
   },
   computed: {
-    ...mapGetters(['issues'])
+    ...mapGetters(["issues"])
   },
-  mounted () {
-    document.title = 'Contribute - Tendermint'
+  mounted() {
+    document.title = "Contribute - Tendermint"
   }
 }
 </script>

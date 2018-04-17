@@ -21,14 +21,14 @@
 </template>
 
 <script>
-import NiSection from './NiSection'
-import PageHeader from '@nylira/vue-page-header'
-import PageSplit from '@nylira/vue-page-split'
-import { mapGetters } from 'vuex'
-import { orderBy } from 'lodash'
-import CardPost from './CardPost'
+import NiSection from "./NiSection"
+import PageHeader from "@nylira/vue-page-header"
+import PageSplit from "@nylira/vue-page-split"
+import { mapGetters } from "vuex"
+import { orderBy } from "lodash"
+import CardPost from "./CardPost"
 export default {
-  name: 'page-presentations-index',
+  name: "page-presentations-index",
   components: {
     CardPost,
     NiSection,
@@ -36,13 +36,15 @@ export default {
     PageSplit
   },
   computed: {
-    presentations () { return orderBy(this.allPresentations, ['date'], ['desc']) },
+    presentations() {
+      return orderBy(this.allPresentations, ["date"], ["desc"])
+    },
     ...mapGetters({
-      allPresentations: 'allPresentations'
+      allPresentations: "allPresentations"
     })
   },
-  mounted () {
-    document.title = 'Presentations - Tendermint'
+  mounted() {
+    document.title = "Presentations - Tendermint"
   }
 }
 </script>

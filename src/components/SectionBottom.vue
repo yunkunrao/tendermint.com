@@ -10,11 +10,11 @@
 </template>
 
 <script>
-import SectionCosmos from './SectionCosmos'
-import FormEmailSignup from './FormEmailSignup'
-import Btn from '@nylira/vue-button'
+import SectionCosmos from "./SectionCosmos"
+import FormEmailSignup from "./FormEmailSignup"
+import Btn from "@nylira/vue-button"
 export default {
-  name: 'section-bottom',
+  name: "section-bottom",
   components: {
     Btn,
     FormEmailSignup,
