@@ -1,12 +1,13 @@
 <template lang="pug">
-page-split
-  page-header(title='About', subtitle="We are currently working full time on bringing <a href='https://cosmos.network'>Cosmos</a> to reality.<br><br><a href='/careers'>We are hiring!</a>", type='split', slot='header', theme='tendermint')
-  ni-section
-    div(slot='title') Team
-    .people
+page(title="About" )
+  div(slot="subtitle") We are currently working full time on bringing <a href='https://cosmos.network'>Cosmos</a> to reality. We're also hiring blockchain engineers. Join us!
+  div(slot="menu")
+    btn(icon="person_add" value="Join our team!" type="anchor" href="https://tendermint.com/careers" target="_blank" color="primary")
+
+  part(title='Tendermint Team')
+    cards.people
       card-person(group='aib', v-for="person in ppl('aib')", :key='person.slug', :person='person')
-  ni-section
-    div(slot='title') Company
+  part(title='Company')
     card-link(
       icon='user'
       link='/careers'
@@ -23,51 +24,51 @@ page-split
 
 <script>
 import { mapGetters } from "vuex"
+import Btn from "@nylira/vue-button"
 import CardLink from "./CardLink"
-import CardPerson from "./CardPerson"
-import NiSection from "./NiSection"
-import PageHeader from "@nylira/vue-page-header"
-import PageSplit from "@nylira/vue-page-split"
+import CardPerson from "cards/CardPerson"
+import Cards from "common/NiCards"
+import Page from "common/NiPage"
+import Part from "common/NiPart"
 export default {
   name: "page-about",
+  metaInfo: { title: "About" },
   components: {
-    CardLink,
+    Btn,
+    Cards,
     CardPerson,
-    NiSection,
-    PageHeader,
-    PageSplit
+    CardLink,
+    Page,
+    Part
   },
   computed: {
-    ...mapGetters(["allPeople", "links"])
-  },
-  mounted() {
-    document.title = "About - Tendermint"
+    ...mapGetters(["people"])
   },
   methods: {
     ppl(tag) {
-      return this.allPeople.filter(p => p.groups[tag])
+      if (this.people) {
+        return this.people.filter(p => p.groups[tag])
+      } else {
+        return []
+      }
     }
   }
 }
 </script>
 
 <style lang="stylus">
-@import '../styles/variables.styl'
+@import '~variables'
 
 .people
-  max-width 1024px
+  margin-bottom 1rem
 
 @media screen and (min-width: 768px)
   .people
-    display flex
-    flex-flow row wrap
-
-    .person-wrapper
+    .ni-card-person
       flex 0 0 50%
 
-@media screen and (min-width: 1280px)
+@media screen and (min-width: 1024px)
   .people
-    margin 0 auto
-    .person-wrapper
+    .ni-card-person
       flex 0 0 33.333%
 </style>

@@ -1,11 +1,7 @@
-<template>
-  <a class="cover-alert" :href="links.cosmos.website" target="_blank">
-    <span class="key">Alert:</span>
-    <span class="value">
-      All of us at Tendermint are preparing the Cosmos Network for release. Visit the project website
-    </span>
-    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-  </a>
+<template lang="pug">
+a.cover-alert(:href='links.cosmos.website' target='_blank')
+  span.key Alert:!{' '}
+  span.value All of us at Tendermint are preparing the Cosmos Network for release. Visit the project website &raquo;
 </template>
 
 <script>
@@ -18,32 +14,29 @@ export default {
 </script>
 
 <style lang="stylus">
-@require '../styles/variables.styl'
+@require '~variables'
 
 .cover-alert
   display block
-  border 1px solid lighten(mcolor,20%)
+  border 1px solid var(--bc-dim)
   padding 0.4375rem 0.75rem
   margin-bottom 2rem
   font-size 0.75rem
   position relative
   overflow hidden
   &:hover
-    border-color lighten(mcolor, 35%)
+    border-color var(--link)
 
   .ni-time-remaining
     display inline
 
-  i.fa
-    color lighten(mcolor,50%)
-
   .key
     font-weight 600
     text-transform uppercase
-    color lighten(mcolor,90%)
+    color var(--bright)
     font-size 0.875rem
   .value
-    color lighten(mcolor,70%)
+    color var(--txt)
 
 @media screen and (min-width:360px)
   .cover-alert

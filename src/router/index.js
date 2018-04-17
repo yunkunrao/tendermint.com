@@ -1,6 +1,5 @@
 import VueRouter from "vue-router"
 import routesRedirects from "./routesRedirects.js"
-
 import routesStatic from "./routesStatic.js"
 
 const routes = [...routesRedirects, ...routesStatic]
@@ -16,7 +15,6 @@ const router = new VueRouter({
         document.querySelector(`[name="${name}"]`)
 
       let rect = obj.getBoundingClientRect()
-      console.log("hash exists", obj, "obj.top", rect.top)
       return {
         // selector: to.hash
         x: rect.left,

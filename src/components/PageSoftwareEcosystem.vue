@@ -177,11 +177,11 @@ export default {
 
     div
       padding 0.5rem 1rem
-      color light
+      color var(--dim)
       cursor pointer
 
       &.active
-        color txt
+        color var(--txt)
 
     .name
       flex 4
@@ -203,15 +203,15 @@ export default {
     a
       flex 1
       padding 0.5*x x
-      border 1px solid bc
-      color txt
+      border 1px solid var(--bc)
+      color var(--txt)
 
       &:hover
-        border-color link
+        border-color var(--link)
 
     .name
       font-weight bold
-      color link
+      color var(--link)
 
     .author, .technology, .language
       font-size 0.75*x
@@ -239,11 +239,10 @@ export default {
           display flex
           flex-flow row nowrap
           border none
-          border-top 1px solid bc
+          border-top 1px solid var(--bc)
           padding 0
           &:hover
             border-color bc
-            background lighten(mcolor, 97%)
 
           .name, .author, .language, .technology, .description
             padding 0.5rem 1rem
@@ -255,7 +254,7 @@ export default {
           .author, .language, .technology
             flex 3
             font-size x
-            color txt
+            color var(--txt)
             .key
               display none
 

@@ -1,29 +1,19 @@
 <template lang="pug">
-page-split.page-security
-  page-header(
-    title='Security'
-    subtitle='Learn about security and vulnerability reports at Tendermint.'
-    slot='header'
-    theme='tendermint')
-  article-body: md-text(
-    url='https://raw.githubusercontent.com/tendermint/aib-data/master/md/security.md')
+page(title="Security" subtitle="Learn about security and vulnerability reports at Tendermint.")
+  text-container(url='https://api.github.com/repos/tendermint/aib-data/contents/md/security.md')
 </template>
 
 <script>
-import PageHeader from "@nylira/vue-page-header"
-import PageSplit from "@nylira/vue-page-split"
-import ArticleBody from "@nylira/vue-article-body"
-import MdText from "./NiMdText"
+import DownloadLinks from "comp/DownloadLinks"
+import Page from "common/NiPage"
+import TextContainer from "common/NiTextContainer"
 export default {
   name: "page-security",
+  metaInfo: { title: "Security" },
   components: {
-    ArticleBody,
-    MdText,
-    PageHeader,
-    PageSplit
-  },
-  mounted() {
-    document.title = "Security - Tendermint"
+    DownloadLinks,
+    Page,
+    TextContainer
   }
 }
 </script>

@@ -2,8 +2,8 @@
 header.app-header
   .container
     .header-item(@click='toggleMenuApp' v-if='!desktop')
-      i.fa.fa-bars(v-if='!activeMenuApp')
-      i.fa.fa-times(v-else='')
+      i.material-icons(v-if='!activeMenuApp') menu
+      i.material-icons(v-else='') close
     router-link.header-item.header-item-flush(to='/')
       img(src='../assets/images/logo-green-88.jpg' alt='Tendermint logo')
     menu.menu-popup.menu-app(v-if='activeMenuApp || desktop')
@@ -15,12 +15,12 @@ header.app-header
         router-link(to='/contribute' @click.native='close' exact) Contribute
       nav.nav-external
         a(:href='links.tm.docs.index' target='_blank')
-          | Docs #[i.fa.fa-book]
+          | Docs #[i.material-icons book]
         a(:href='links.tm.blog' @click.native='close' target='_blank')
-          | Blog #[i.fa.fa-medium]
+          | Blog #[i.fab.fa-medium]
     .header-item.header-item-alert
       router-link(to='/github' @click.native='close' exact)
-        i.fa.fa-github
+        i.fab.fa-github
         span.label(v-if='desktop') GitHub
 </template>
 
@@ -43,7 +43,6 @@ export default {
     },
     goto(route) {
       this.close()
-      // console.log('going to', route)
       this.$router.push(route)
       return
     },
@@ -74,7 +73,7 @@ export default {
 </script>
 
 <style lang="stylus">
-@require '../styles/variables.styl'
+@require '~variables'
 
 navc = #94c0ec
 
@@ -85,9 +84,8 @@ navc = #94c0ec
   z-index 100
   width 100%
 
-  background alpha(mcolor, 95%)
-  backdrop-filter blur(0.125rem)
-  shadow()
+  background var(--app-bg)
+  border-bottom 1px solid var(--bc)
 
   .container
     max-width 1024px
@@ -102,19 +100,19 @@ navc = #94c0ec
     align-items center
     padding 0 1rem
 
-    color navc
+    color var(--txt)
     cursor pointer
     &:hover
-      color link
+      color var(--link)
 
-    i.fa
+    i
       width 1rem
       text-align center
       position relative
-    i.fa + .label
+    i + .label
       margin-left 0.5rem
-    i.fa, .label
-      color navc
+    i, .label
+      color var(--txt)
 
     .label
       user-select none
@@ -127,28 +125,9 @@ navc = #94c0ec
     &.header-item-flush
       padding 0
 
-    &.header-item-alert
-      justify-content flex-end
-      .alert
-        df()
-        font-size 0.5rem
-        font-weight 600
-        line-height 1
-        color #fff
-        display flex
-        align-items center
-        justify-content center
-
-        width 0.666rem
-        height 0.666rem
-        border-radius 0.333rem
-        background #f00
-        position absolute
-        bottom -0.3rem
-        right -0.3rem
     &:hover
       i.fa, .label
-        color link
+        color var(--link)
 
   .menu-app
     nav
@@ -170,7 +149,7 @@ navc = #94c0ec
     bottom 0
     width 100vw
 
-    background c-app-fg
+    background var(--app-fg)
     user-select none
 
     nav
@@ -181,38 +160,17 @@ navc = #94c0ec
       > a, > p
         padding 0.75rem 0
       > a
-        color txt
-        border-bottom 1px solid bc
+        color var(--txt)
+        border-bottom 1px solid var(--bc)
         display flex
         align-items center
         justify-content space-between
         user-select none
         &.disabled
-          color light
+          color var(--dim)
           cursor not-allowed
         &:hover
-          color link
-        .alert
-          display flex
-          align-items center
-          background link
-          color c-app-fg
-          font-size 0.75rem
-          padding 0 0.5rem
-          border-radius 0.25rem
-          height 1.5rem
-          i.fa
-            color c-app-fg
-          i.fa + .ni-time-left
-            margin-left 0.25rem
-      > p
-        .ni-time-left
-          display inline
-          font-weight bold
-        a
-          color link
-          &:hover
-            text-decoration underline
+          color var(--link)
 
 @media screen and (min-width: 1024px)
   .app-header
@@ -231,18 +189,18 @@ navc = #94c0ec
       align-items center
       > a
         padding 0 1rem
-        color navc
+        color var(--txt)
         line-height 3rem
-        i.fa
+        i
           color alpha(navc, 50%)
           margin-left 0.5rem
         &:hover
-          color link
-          i.fa
-            color link
+          color var(--link)
+          i
+            color var(--link)
         &.router-link-active
-          background lighten(mcolor, 14%)
+          background var(--app-fg)
           cursor default
           &:hover
-            color navc
+            color var(--link)
 </style>

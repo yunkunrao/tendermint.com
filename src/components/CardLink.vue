@@ -12,7 +12,7 @@ export default {
 </script>
 
 <style lang="stylus">
-@require '../styles/variables.styl'
+@require '~variables'
 
 .card-link
   width 100%
@@ -20,7 +20,7 @@ export default {
   display flex
   align-items center
   padding 0 1rem
-  border-bottom 1px solid bc
+  border-bottom 1px solid var(--bc)
 
   position relative
   &:last-of-type
@@ -40,7 +40,4 @@ export default {
       height 3rem
       width 3rem
       align-items center
-
-  &:hover
-    background lighten(mcolor, 98%)
 </style>

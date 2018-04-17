@@ -9,22 +9,22 @@ reset-html5()
   box-sizing border-box
 
 body
-  background c-app-bg
+  background var(--app-bg)
   padding-top 3rem + 4*px
   -webkit-text-size-adjust 100%
 
 a
-  color link
+  color var(--link)
   text-decoration none
   cursor pointer
   &:hover
-    color hover
+    color var(--hover)
 
 body, input, button, textarea
   df()
 
 strong
-  font-weight 600
+  font-weight 500
 
 em
   font-style italic
@@ -57,7 +57,7 @@ h5, .h5
 
 h6, .h6
   font-size h6
-  color dim
+  color var(--dim)
   text-transform uppercase
   letter-spacing 0.0625em
 
@@ -100,9 +100,6 @@ h6, .h6
 .desktop-block
 .desktop-flex
   display none
-
-.ni-page-header
-  border none !important
 
 @media screen and (min-width: 768px)
   .mobile

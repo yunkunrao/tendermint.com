@@ -1,38 +1,21 @@
-<template>
-  <section class="section-home-cover">
-    <img class="section-home-logo" src="../assets/images/logo-blue-alpha-2048.png">
-    <div class="section-container">
-      <section-home-cover-alert></section-home-cover-alert>
-      <h1>Tendermint</h1>
-      <p class="tagline">Blockchain Consensus</p>
-      <p class="introduction">Byzantine fault-tolerant replicated state machines in any programming language</p>
-      <div class="btns">
-        <btn
-          type="link"
-          to="/download"
-          size="lg"
-          icon="cloud-download"
-          theme="tendermint"
-          value="Download">
-        </btn>
-        <btn
-          target="_blank"
-          type="anchor"
-          :href="links.tm.chat"
-          size="lg"
-          icon="comments-o"
-          theme="alpha-black"
-          value="Chat">
-        </btn>
-      </div>
-      <a :href="links.tm.github.organization" target="_blank" class="source"><i class="fa fa-github"></i> View source code on <strong>GitHub</strong></a>
-    </div>
-  </section>
+<template lang="pug">
+section.section-home-cover
+  img.section-home-logo(src='../assets/images/logo-blue-alpha-2048.png')
+  .section-container
+    section-home-cover-alert
+    h1 Tendermint
+    p.tagline Blockchain Consensus
+    p.introduction Byzantine fault-tolerant replicated state machines in any programming language
+    .btns
+      btn(type='link' to='/download' size='lg' icon='get_app' color='primary' value='Download')
+      btn(target='_blank' type='anchor' href='https://riot.im/app/#/group/+cosmos:matrix.org' size='lg' icon='chat' value='Community Chat')
+    a.source(:href='links.tm.github.organization' target='_blank')
+      | #[i.fab.fa-github] View source code on #[strong GitHub]
 </template>
 
 <script>
 import { mapGetters } from "vuex"
-import SectionHomeCoverAlert from "./SectionHomeCoverAlert.vue"
+import SectionHomeCoverAlert from "comp/SectionHomeCoverAlert.vue"
 import Btn from "@nylira/vue-button"
 export default {
   components: {
@@ -46,12 +29,11 @@ export default {
 </script>
 
 <style lang="stylus">
-@require '../styles/variables.styl'
+@require '~variables'
 
 .section-home-cover
-  background mcolor
   position relative
-  border-bottom 1px solid lighten(mcolor, 10%)
+  border-bottom 1px solid var(--bc)
   margin-top -3rem
 
   .section-container
@@ -60,14 +42,14 @@ export default {
     position relative
 
   h1
-    color lighten(mcolor,90%)
+    color var(--bright)
     font-weight 700
     line-height 1
     font-size 2.75*x
     margin-bottom 0.5*x
 
   .tagline
-    color lighten(mcolor,50%)
+    color var(--dim)
     font-size x
     text-transform uppercase
     letter-spacing 0.075em
@@ -75,7 +57,7 @@ export default {
     margin-bottom 2*x
 
   .introduction
-    color lighten(mcolor,70%)
+    color var(--dim)
     max-width 20*x
     font-size 1.25*x
     margin-bottom 3*x
@@ -88,11 +70,11 @@ export default {
       max-width 18*x
 
   a.source
-    color lighten(mcolor,50%)
+    color var(--txt)
     i.fa
       padding-right 0.25rem
     strong
-      color lighten(mcolor,70%)
+      color var(--link)
 
 .section-home-logo
   display none
@@ -132,7 +114,7 @@ export default {
 
   .section-home-cover
     overflow hidden
-    
+
   .section-home-logo
     display block
     width 80vw

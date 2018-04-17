@@ -11,18 +11,17 @@ export default {
 </script>
 
 <style lang="stylus">
-@require '../styles/variables.styl'
+@require '~variables'
 
 .card-title
   padding 0 1rem
   font-size 1rem
   line-height 3
-  border-bottom 1px solid bc
+  border-bottom 1px solid var(--bc)
   font-weight 500
-  background lighten(bc,75%)
+  background var(--app-fg)
 
 @media screen and (min-width:768px)
   .card-title
-    border-top 1px solid bc
-
+    border-top 1px solid var(--bc)
 </style>

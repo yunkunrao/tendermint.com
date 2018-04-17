@@ -4,7 +4,6 @@
   footer.app-footer
     .sections
       section
-        img.footer-logo(src='../assets/images/logo-white-alpha-160.png')
         span &copy; {{ new Date().getFullYear() }} All In Bits, Inc.
       section
         header Company
@@ -30,7 +29,7 @@
 </template>
 
 <script>
-import SectionBottom from "./SectionBottom"
+import SectionBottom from "comp/SectionBottom"
 import { mapGetters } from "vuex"
 export default {
   name: "app-footer",
@@ -45,16 +44,13 @@ export default {
 @require '~variables'
 
 .app-footer
-  background mcolor
-  border-bottom 4px solid c-app-bg
-
   .footer-logo
     width 80px
     height 80px
 
   .sections
     padding x 0
-    color c-app-fg
+    color var(--app-fg)
     margin 0 auto
 
     display flex
@@ -66,23 +62,25 @@ export default {
 
     header
       padding 0.25*x 0.5*x
-
-      color lighten(mcolor, 55%)
-
+      color var(--dim)
       font-size 0.75*x
       font-weight bold
       text-transform uppercase
       letter-spacing 0.0625em
 
     a, span
-      color lighten(mcolor,90%)
+      color var(--txt)
       display block
       padding 0.25*x 0.5*x
+
       i.fa
-        display inine-block
+        display inline-block
         text-align center
         width 1.5*x
         margin-right 0.5*x
+    a
+      &:hover
+        color var(--link)
 
 @media screen and (min-width: 360px)
   .app-footer

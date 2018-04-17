@@ -7,14 +7,12 @@
         name="EMAIL"
         type="email"
         size="lg"
-        placeholder="name@example.com"
-        theme="tendermint">
+        placeholder="name@example.com">
       </field>
       <btn
         type="submit"
         value="Subscribe"
         size="lg"
-        theme="tendermint"
         id="mc-embedded-subscribe">
       </btn>
     </div>
@@ -42,4 +40,8 @@ export default {
 form.form-email-signup
   .input-group
     display flex
+    .ni-field
+      border-right none
+    .ni-btn__container
+      border-radius 0 0.25rem 0.25rem 0
 </style>

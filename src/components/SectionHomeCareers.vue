@@ -1,5 +1,5 @@
 <template>
-  <ni-section class="ni-section-dark section-home-careers">
+  <ni-section class="section-home-careers">
     <div slot="title">Tendermint is Hiring <router-link to="/careers">(see all)</router-link></div>
     <card-career v-for="c in careers" :key="c.id" :career="c" theme="dark"></card-career>
   </ni-section>
@@ -25,10 +25,9 @@ export default {
 </script>
 
 <style lang="stylus">
-@require '../styles/variables.styl'
+@require '~variables'
 
 .section-home-careers
-  border-bottom 1px solid lighten(mcolor, 10%) !important
   .blocks
     padding-top x
 

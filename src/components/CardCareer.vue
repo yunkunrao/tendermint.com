@@ -13,7 +13,6 @@ export default {
     },
     cssClass() {
       let value = "card-career"
-      if (this.theme === "dark") value += " card-career-dark"
       return value
     }
   },
@@ -29,9 +28,8 @@ export default {
 
 .card-career
   display block
-
-  color txt
-  border 1px solid bc
+  color var(--txt)
+  border 1px solid var(--bc)
   padding 0.5em
 
   .locations
@@ -39,25 +37,16 @@ export default {
 
   .location
     font-size 0.75rem
-    color dim
+    color var(--dim)
     &:not(:last-of-type):after
       content '/'
       display inline-block
       padding 0 0.5rem 0 0.25rem
-      color light
+      color var(--light)
 
   &:hover
     .title
-      color link
-
-  &.card-career-dark
-    border-color lighten(mcolor, 10%)
-    .location
-      color lighten(mcolor, 50%)
-      &:after
-        color lighten(mcolor, 20%)
-    &:hover
-      background lighten(mcolor, 3%)
+      color var(--link)
 
 @media screen and (min-width: 768px)
   .card-career

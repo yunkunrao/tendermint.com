@@ -6,7 +6,7 @@
       .section-cosmos-subtitle Launching Soon
     main.section-cosmos-main
       .section-cosmos-description All of us at Tendermint are working hard on preparing the Cosmos Network for release. We"re aiming to launch soon &ndash; #[a(href="https://cosmos.network/roadmap") follow our roadmap].
-      btn.section-cosmos-btn(type="anchor" :href="links.cosmos.website" size="lg" value="Visit Cosmos Network" theme="tendermint" icon="external-link")
+      btn.section-cosmos-btn(type="anchor" :href="links.cosmos.website" size="lg" value="Visit Cosmos Network" icon="link")
 </template>
 
 <script>
@@ -27,8 +27,9 @@ export default {
 @import '~variables'
 
 .section-cosmos
-  border-bottom 1px solid lighten(mcolor, 10%)
-  color lighten(mcolor, 60%)
+  border-bottom 1px solid var(--bc)
+  border-top 1px solid var(--bc)
+  margin-top 1.5rem
 
 .section-cosmos-container
   max-width 40rem
@@ -43,7 +44,7 @@ export default {
 .section-cosmos-title
   font-size 1.5rem
   font-weight 600
-  color lighten(mcolor, 75%)
+  color var(--bright)
 
 .section-cosmos-subtitle
   font-size 1.375rem
@@ -65,7 +66,7 @@ export default {
   max-width 26rem
   font-size 0.875rem
   a
-    color lighten(mcolor, 80%)
+    color var(--link)
     font-weight 500
 
 @media screen and (min-width: 768px)
