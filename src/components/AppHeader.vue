@@ -101,6 +101,8 @@ navc = #94c0ec
 
     color var(--txt)
     cursor pointer
+    &:first-child
+      padding-left 0
     &:hover
       color var(--link)
 
@@ -172,7 +174,9 @@ navc = #94c0ec
   .app-header
     .container
       .header-item
-        width 8rem
+        padding 0 1.5rem
+        &:first-child
+          padding-left 0
 
   .menu-popup.menu-app
     display flex
