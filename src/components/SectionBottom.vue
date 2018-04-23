@@ -33,7 +33,7 @@ export default {
   flex-flow column
   justify-content center
   h2
-    color var(--dim)
+    color var(--bright)
     font-weight 500
     font-size 1.25rem
     text-align center

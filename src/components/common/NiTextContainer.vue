@@ -25,7 +25,7 @@ export default {
 .ni-text
   hr
     border none
-    border-top 1px solid bc
+    border-top 1px solid var(--bc)
     background transparent
     height 0
     margin 0
@@ -51,7 +51,7 @@ export default {
   code
     mono()
     margin-bottom 1.5rem
-    background app-fg
+    background var(--app-fg)
     font-weight bold
     padding 0 0.25rem
     overflow-wrap break-word
@@ -66,21 +66,21 @@ export default {
     overflow-x scroll
     padding 0.375rem 0.5rem
     line-height 1.125
-    background app-fg
-    color txt
+    background var(--app-fg)
+    color var(--txt)
     & + figcaption
       margin-top -1.5rem
-      background app-fg
+      background var(--app-fg)
       border 1px solid #eee
       border-top none
       padding 0.5rem
-      color txt
+      color var(--txt)
       margin-bottom 1.5rem
     code
       margin-bottom 0
       font-weight normal
-      background app-fg
-      color txt
+      background var(--app-fg)
+      color var(--txt)
       padding 0
   p
     &:empty
@@ -102,9 +102,9 @@ export default {
     align-items center
     justify-content center
     margin-bottom 1.5rem
-    background app-fg
+    background var(--app-fg)
     padding 1rem
-    border-top 1px solid bc
+    border-top 1px solid var(--bc)
     img
       max-height 75vh
       max-width 87.5vw
@@ -122,7 +122,7 @@ export default {
     margin-top 1.5rem
 
   h1 + p
-    color dim
+    color var(--dim)
     font-size 1.25rem
     margin-top -0.5rem
 
@@ -139,21 +139,21 @@ export default {
     padding-top 1.5rem
 
   table
-    border 1px solid bc
+    border 1px solid var(--bc)
     border-collapse collapse
     width 100%
     th
-      font-weight 600
-      background app-fg
-      color dim
+      font-weight 500
+      background var(--app-fg)
+      color var(--dim)
       border 1px solid #e0e0e0
       padding 0.25em 0.5em
 
   blockquote
     padding 0.75rem 1rem
-    background app-fg
+    background var(--app-fg)
     position relative
-    color txt
+    color var(--txt)
 
     & + h2
       margin-top 1.5rem

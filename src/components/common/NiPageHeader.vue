@@ -33,6 +33,8 @@ export default {
   align-items center
   position relative
   overflow hidden
+  border-bottom 1px solid var(--bc)
+
 
 .ni-page-header-splash
   position absolute
@@ -59,14 +61,15 @@ export default {
     padding-right 0.375rem
 
 .ni-page-header-title > div
+  font-weight 600
   display flex
   align-items center
   color var(--bright)
 
 .ni-page-header-subtitle > div
   color var(--dim)
-  font-weight 400
   max-width 40rem
+  font-weight 400
 
 .ni-page-header-title + .ni-page-header-subtitle
   margin-top 0.5rem
@@ -85,9 +88,6 @@ export default {
       height 7rem
 
 @media screen and (max-width: 1023px)
-  .ni-page-header
-    border-bottom 1px solid var(--bc)
-
   .ni-page-header-backdrop
     display none
 

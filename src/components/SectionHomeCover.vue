@@ -4,13 +4,10 @@ section.section-home-cover
   .section-container
     section-home-cover-alert
     h1 Tendermint
-    p.tagline Blockchain Consensus
-    p.introduction Byzantine fault-tolerant replicated state machines in any programming language
+    p.introduction Byzantine-fault tolerant state machine replication. Or blockchain, for short.
     .btns
-      btn(type='link' to='/download' size='lg' icon='get_app' color='primary' value='Download')
-      btn(target='_blank' type='anchor' href='https://riot.im/app/#/group/+cosmos:matrix.org' size='lg' icon='chat' value='Community Chat')
-    a.source(:href='links.tm.github.organization' target='_blank')
-      | #[i.fab.fa-github] View source code on #[strong GitHub]
+      btn(type='anchor' href='https://github.com/tendermint/tendermint/releases' size='lg' icon='cloud_download' color='primary' value='Download' target="_blank")
+      btn(target='_blank' type='anchor' href='https://riot.im/app/#/group/+cosmos:matrix.org' size='lg' icon='chat' value='Join Chat')
 </template>
 
 <script>
@@ -38,7 +35,7 @@ export default {
 
   .section-container
     margin-top 3rem
-    padding 2*x 1.5*x
+    padding 3*x 1.5*x
     position relative
 
   h1
@@ -46,14 +43,6 @@ export default {
     font-weight 700
     line-height 1
     font-size 2.75*x
-    margin-bottom 0.5*x
-
-  .tagline
-    color var(--dim)
-    font-size x
-    text-transform uppercase
-    letter-spacing 0.075em
-    font-weight 500
     margin-bottom 2*x
 
   .introduction
@@ -64,17 +53,12 @@ export default {
 
   .btns
     margin-bottom x
+    &:last-of-type
+      margin-bottom 0
     .ni-btn
       width 100%
       margin-bottom 0.5*x
       max-width 18*x
-
-  a.source
-    color var(--txt)
-    i.fa
-      padding-right 0.25rem
-    strong
-      color var(--link)
 
 .section-home-logo
   display none
@@ -122,7 +106,7 @@ export default {
     position absolute
     top -2.5vw
     right -20vw
-    opacity 0.15
+    opacity 0.05
 
 @media screen and (min-width: 1024px)
   .section-home-cover .section-container

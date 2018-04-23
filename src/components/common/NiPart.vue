@@ -40,7 +40,7 @@ export default {
   // margin-top 1rem
   height 2rem
   padding 0 1rem
-  background app-fg
+  background var(--app-fg)
 
 .ni-part-header-container
   display flex
@@ -49,16 +49,15 @@ export default {
 
 .ni-part-title
 .ni-part-menu
-  color dim
+  color var(--dim)
   margin 0
 
   a
-    color link
+    color var(--link)
     &:hover
-      color hover
+      color var(--hover)
 
 .ni-part-title
   flex 1
-  color bright
-  font-weight 400
+  color var(--bright)
 </style>

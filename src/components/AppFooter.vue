@@ -64,9 +64,9 @@ export default {
       padding 0.25*x 0.5*x
       color var(--dim)
       font-size 0.75*x
-      font-weight bold
       text-transform uppercase
       letter-spacing 0.0625em
+      font-weight 500
 
     a, span
       color var(--txt)

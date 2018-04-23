@@ -8,7 +8,6 @@ header.app-header
       img(src='../assets/images/logo-green-88.jpg' alt='Tendermint logo')
     menu.menu-popup.menu-app(v-if='activeMenuApp || desktop')
       nav.nav-app
-        router-link(to='/downloads' @click.native='close' exact) Downloads
         router-link(to='/security' @click.native='close' exact) Security
         router-link(to='/about' @click.native='close' exact) About
         router-link(to='/careers' @click.native='close' exact) Careers
@@ -192,7 +191,6 @@ navc = #94c0ec
         color var(--txt)
         line-height 3rem
         i
-          color alpha(navc, 50%)
           margin-left 0.5rem
         &:hover
           color var(--link)

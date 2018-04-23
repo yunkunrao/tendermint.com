@@ -1,7 +1,6 @@
 <template lang="pug">
 a.cover-alert(:href='links.cosmos.website' target='_blank')
-  span.key Alert:!{' '}
-  span.value All of us at Tendermint are preparing the Cosmos Network for release. Visit the project website &raquo;
+  | All of us at Tendermint are preparing the Cosmos Network for release. #[strong View project &raquo;]
 </template>
 
 <script>
@@ -18,25 +17,31 @@ export default {
 
 .cover-alert
   display block
-  border 1px solid var(--bc-dim)
-  padding 0.4375rem 0.75rem
+  border-top 1px solid var(--bc)
+  padding 0.4375rem 0.5rem
   margin-bottom 2rem
   font-size 0.75rem
   position relative
-  overflow hidden
+  color var(--txt)
+
+  &:before
+    content ''
+    height 2*px
+    width 4rem
+    background var(--txt)
+    display block
+    position absolute
+    top -2px
+    left 0
+
+  strong
+    color var(--link)
+
   &:hover
-    border-color var(--link)
-
-  .ni-time-remaining
-    display inline
-
-  .key
-    font-weight 600
-    text-transform uppercase
-    color var(--bright)
-    font-size 0.875rem
-  .value
     color var(--txt)
+    strong
+      text-decoration underline
+
 
 @media screen and (min-width:360px)
   .cover-alert

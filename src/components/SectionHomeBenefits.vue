@@ -5,7 +5,7 @@ ni-section.section-home-benefits
       i.material-icons storage
       .text
         .key Byzantine Fault-Tolerant
-        .value Tendermint tolerates up to one third of your machines failing arbitrarily. This includes explicitly malicious behaviour.
+        .value Tendermint tolerates up to 1/3 of your machines failing arbitrarily. This includes explicitly malicious behaviour.
     .block
       i.material-icons content_copy
       .text
@@ -65,11 +65,13 @@ export default {
 
       width 3*x
       height 3*x
-      color var(--primary)
 
       display flex
       justify-content center
       align-items center
+      color var(--txt)
+      background var(--app-fg)
+      border-radius 0.5rem
 
     .text
       flex 1
@@ -78,7 +80,6 @@ export default {
     .key
       margin 0 0 0.5*x
       font-weight 500
-      font-size 1.125*x
 
 @media screen and (min-width: 360px)
   .section-home-benefits
@@ -110,10 +111,11 @@ export default {
       margin-bottom 3*x
 
       i
-        font-size 3*x
         width 5*x
         height 5*x
 
+      .text
+        padding-left 2rem
       .key
         font-size 1.25*x
 
@@ -128,17 +130,10 @@ export default {
     .block
       flex 0 0 50%
       margin-bottom 4.5*x
-      padding 0 x
+      padding x
       i
-        font-size 3*x
         width 5*x
         height 5*x
-      .key
-        font-size 1.5*x
-        margin-bottom x
-
-      .value
-        font-size 1.25*x
 
 @media screen and (min-width: 1280px)
   .section-home-benefits

@@ -2,11 +2,10 @@
 .section-cosmos
   .section-cosmos-container
     header.section-cosmos-header
-      h2.section-cosmos-title The Cosmos Network
-      .section-cosmos-subtitle Launching Soon
+      h2.section-cosmos-title Cosmos
     main.section-cosmos-main
-      .section-cosmos-description All of us at Tendermint are working hard on preparing the Cosmos Network for release. We"re aiming to launch soon &ndash; #[a(href="https://cosmos.network/roadmap") follow our roadmap].
-      btn.section-cosmos-btn(type="anchor" :href="links.cosmos.website" size="lg" value="Visit Cosmos Network" icon="link")
+      .section-cosmos-description All of us at Tendermint are working hard on preparing the Cosmos Network for release. We're aiming to launch soon &ndash; #[a(href="https://cosmos.network/roadmap") follow our roadmap].
+      btn.section-cosmos-btn(type="anchor" :href="links.cosmos.website" size="lg" value="Learn about Cosmos" icon="link")
 </template>
 
 <script>
@@ -43,11 +42,8 @@ export default {
 
 .section-cosmos-title
   font-size 1.5rem
-  font-weight 600
+  font-weight 500
   color var(--bright)
-
-.section-cosmos-subtitle
-  font-size 1.375rem
 
 .section-cosmos-form
   border none
