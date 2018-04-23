@@ -10,13 +10,9 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "@nylira/vue-article-body": "^3.5.0",
     "@nylira/vue-button": "^4.4.3",
     "@nylira/vue-field": "^1.4.0",
-    "@nylira/vue-input": "^3.4.0",
     "@nylira/vue-notifications": "^1.5.0",
-    "@nylira/vue-page-header": "^2.3.0",
-    "@nylira/vue-page-split": "^2.2.0",
     "axios": "^0.18.0",
     "disable-scroll": "^0.4.0",
     "fuse.js": "^3.2.0",

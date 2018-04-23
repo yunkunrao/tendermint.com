@@ -6,7 +6,7 @@ section.section-home-cover
     h1 Tendermint
     p.introduction Byzantine-fault tolerant state machine replication. Or blockchain, for short.
     .btns
-      btn(type='anchor' href='https://github.com/tendermint/tendermint/releases' size='lg' icon='cloud_download' color='primary' value='Download' target="_blank")
+      btn(type='link' :to="{ name: 'downloads' }" size='lg' icon='cloud_download' color='primary' value='Download')
       btn(target='_blank' type='anchor' href='https://riot.im/app/#/group/+cosmos:matrix.org' size='lg' icon='chat' value='Join Chat')
 </template>
 

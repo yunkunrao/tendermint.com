@@ -628,10 +628,6 @@
     call-me-maybe "^1.0.1"
     glob-to-regexp "^0.3.0"
 
-"@nylira/vue-article-body@^3.5.0":
-  version "3.5.0"
-  resolved "https://registry.yarnpkg.com/@nylira/vue-article-body/-/vue-article-body-3.5.0.tgz#343de6fb36bb4a4e9fe2f0e83df4eb9239a6d770"
-
 "@nylira/vue-button@^4.4.3":
   version "4.4.3"
   resolved "https://registry.yarnpkg.com/@nylira/vue-button/-/vue-button-4.4.3.tgz#068252a7e39beff9e35589bc1071a8a94379e212"
@@ -640,21 +636,9 @@
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/@nylira/vue-field/-/vue-field-1.4.0.tgz#660a8fea621005b1c393c6b20488f6c3d7f6c5e5"
 
-"@nylira/vue-input@^3.4.0":
-  version "3.4.0"
-  resolved "https://registry.yarnpkg.com/@nylira/vue-input/-/vue-input-3.4.0.tgz#741346ce0613b831b756fccb253731015fa5c246"
-
 "@nylira/vue-notifications@^1.5.0":
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/@nylira/vue-notifications/-/vue-notifications-1.5.0.tgz#a6f027c4ecd8ca99ed7dbbcc04d5b67288d8d0f6"
-
-"@nylira/vue-page-header@^2.3.0":
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/@nylira/vue-page-header/-/vue-page-header-2.3.0.tgz#89cc18374c19bb659c9169f327e69a91b0093fbf"
-
-"@nylira/vue-page-split@^2.2.0":
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/@nylira/vue-page-split/-/vue-page-split-2.2.0.tgz#ac73a3965bbc7fd6526271a18a552b9b2283cbf1"
 
 "@types/babel-types@*", "@types/babel-types@^7.0.0":
   version "7.0.1"

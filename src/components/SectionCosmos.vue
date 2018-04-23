@@ -5,7 +5,7 @@
       h2.section-cosmos-title Cosmos
     main.section-cosmos-main
       .section-cosmos-description All of us at Tendermint are working hard on preparing the Cosmos Network for release. We're aiming to launch soon &ndash; #[a(href="https://cosmos.network/roadmap") follow our roadmap].
-      btn.section-cosmos-btn(type="anchor" :href="links.cosmos.website" size="lg" value="Learn about Cosmos" icon="link")
+      btn.section-cosmos-btn(type="anchor" :href="links.cosmos.website" size="lg" value="Learn about Cosmos" icon="link" color="primary")
 </template>
 
 <script>

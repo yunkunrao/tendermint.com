@@ -1,8 +1,10 @@
 <template lang="pug">
-.page-career-entry
-  page-header(:title='career.title' :subtitle='subtitle' theme='tendermint')
+page(:title="career.title" :subtitle="subtitle")
+  div(slot="subtitle") Work with us to build the future of the decentralized web with #[a(href='https://cosmos.network') Cosmos]. If your speciality is not listed below, we still encourage you to apply.
+  div(slot="menu")
+    btn(icon="mail" value="Apply for Job" type="anchor" href="https://tendermint.com/careers" target="_blank" color="primary")
 
-  article-body
+  text-container
     h3 About us:
     p Tendermint is building state-of-the-art consensus and networking protocols to enable internet-scale distributed applications. We’re passionate, self-driven, industry leaders whose mission is to build a better, freer internet. We're also building the <a href="https://cosmos.network" target="_blank">Cosmos Network</a>, a decentralized network of independent parallel blockchains, each powered by classical BFT consensus algorithms like Tendermint Core. We believe the technology we're building will have a major impact on human beings around the world. We’re well funded and growing quickly.
 
@@ -35,17 +37,24 @@
 </template>
 
 <script>
-import Btn from "@nylira/vue-button"
-import PageHeader from "@nylira/vue-page-header"
-import ArticleBody from "@nylira/vue-article-body"
-import { mapGetters } from "vuex"
 import MarkdownIt from "markdown-it"
+import { mapGetters } from "vuex"
+import Btn from "@nylira/vue-button"
+import Page from "common/NiPage"
+import Part from "common/NiPart"
+import TextContainer from "common/NiTextContainer"
 export default {
   name: "page-career-entry",
+  metaInfo: {
+    title() {
+      return this.career.title + " - Careers - Tendermint"
+    }
+  },
   components: {
     Btn,
-    PageHeader,
-    ArticleBody
+    Page,
+    Part,
+    TextContainer
   },
   computed: {
     ...mapGetters(["allCareers", "config"]),
@@ -64,16 +73,12 @@ export default {
       return string.charAt(0).toUpperCase() + string.slice(1)
     },
     markdown(text) {
-      let md = new MarkdownIt()
-      console.log(this.career)
+      const md = new MarkdownIt()
       return md.render(text)
     },
     email(address) {
       window.location.href = "mailto:" + address
     }
-  },
-  mounted() {
-    document.title = this.career.title + " - Careers - Tendermint"
   }
 }
 </script>

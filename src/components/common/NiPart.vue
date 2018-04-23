@@ -24,6 +24,7 @@ export default {
 .ni-part
   position relative
   max-width width-main
+  margin-bottom 3rem
 
 .ni-part-container
 .ni-part-header

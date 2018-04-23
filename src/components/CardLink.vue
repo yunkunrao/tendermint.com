@@ -1,6 +1,6 @@
 <template>
   <router-link class="card-link" :to="link">
-    <i :class="'fa fa-' + icon"></i>{{ title }}
+    <i class="material-icons">{{ icon }}</i>{{ title }}
   </router-link>
 </template>
 
@@ -26,7 +26,7 @@ export default {
   &:last-of-type
     border-bottom none
 
-  i.fa
+  i
     width 1rem
     display flex
     justify-content center

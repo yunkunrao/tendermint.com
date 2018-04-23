@@ -4,25 +4,25 @@
     .title
       img(src='~images/icon-tendermint.png')
     .key-value
-      .key tendermint
+      .key Tendermint Core
       .value
-        btn(type='anchor', icon='code', value='View Releases' target="_blank"
+        btn(type='anchor', icon='link', value='View Releases' target="_blank"
           href="https://github.com/tendermint/tendermint/releases")
   .bin.bin-abci
     .title
       img(src='~images/icon-abci.png')
     .key-value
-      .key abci
+      .key ABCI
       .value
-        btn(type='anchor', icon='code', value='View Releases' target="_blank"
+        btn(type='anchor', icon='link', value='View Releases' target="_blank"
           href="https://github.com/tendermint/abci/releases")
   .bin.bin-ethermint
     .title
       img(src='~images/icon-ethermint.png')
     .key-value
-      .key ethermint
+      .key Ethermint
       .value
-        btn(type='anchor', icon='code', value='View Releases' target="_blank"
+        btn(type='anchor', icon='link', value='View Releases' target="_blank"
           href='https://github.com/tendermint/ethermint/releases')
 </template>
 

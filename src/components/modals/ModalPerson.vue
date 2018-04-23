@@ -90,7 +90,7 @@ export default {
     font-family 'Material Icons'
     font-size h3
     cursor pointer
-    color var(--link)
+    color var(--dim)
 
   .avatar
     display block
@@ -128,7 +128,7 @@ export default {
       align-items center
       justify-content center
 
-      color var(--link)
+      color var(--dim)
 
       &:hover
         color var(--hover)

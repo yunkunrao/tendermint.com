@@ -36,9 +36,6 @@ export default {
 
   text-align left
 
-  &:nth-of-type(2n)
-    background var(--app-fg)
-
   &:hover
     .ni-card-issue__title
       color var(--link)

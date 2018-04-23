@@ -9,15 +9,11 @@ page(title="About" )
       card-person(group='aib', v-for="person in ppl('aib')", :key='person.slug', :person='person')
   part(title='Company')
     card-link(
-      icon='user'
-      link='/careers'
-      title='Careers')
-    card-link(
-      icon='video-camera'
+      icon='video_library'
       link='/presentations'
       title='Presentations')
     card-link(
-      icon='newspaper-o'
+      icon='language'
       link='/press'
       title='Press Mentions')
 </template>

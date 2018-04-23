@@ -1,13 +1,11 @@
-<template>
-  <div class="page-presentations-footer">
-    <router-link class="index" :to="'/presentations'">
-      <i class="fa fa-angle-left"></i> Presentations Index
-    </router-link>
-    <div class="share">
-      <a :href="facebookUrl" target="_blank"><i class="fa fa-footbook"></i></a>
-      <a :href="twitterUrl" target="_blank"><i class="fa fa-twatter"></i></a>
-    </div>
-  </div>
+<template lang="pug">
+.page-presentations-footer
+  router-link.index(:to="'/presentations'") &laquo; All Presentations
+  .share
+    a(:href='facebookUrl', target='_blank')
+      i.fab.fa-facebook
+    a(:href='twitterUrl', target='_blank')
+      i.fab.fa-twitter
 </template>
 
 <script>
@@ -17,10 +15,10 @@ export default {
 </script>
 
 <style lang="stylus">
-@import '../styles/variables.styl'
+@import '~variables'
 
 .page-presentations-footer
-  border-top 4px solid bc
+  border-top 4px solid var(--bc)
   display flex
   margin-top 3rem
   padding 1.5rem 0
@@ -30,11 +28,11 @@ export default {
     align-items center
     line-height 3rem
     height 3rem
-    color txt
+    color var(--txt)
     &:hover
-      color link
+      color var(--link)
       text-decoration none
-    i.fa
+    i
       font-size 1.5rem
       width 1.5rem
       text-align center
@@ -48,10 +46,10 @@ export default {
       height 3rem
       padding 0.5rem
 
-      i.fa
+      i
         font-size 1.5rem
-        color light
+        color var(--light)
 
-      &:hover i.fa
-        color link
+      &:hover i
+        color var(--link)
 </style>

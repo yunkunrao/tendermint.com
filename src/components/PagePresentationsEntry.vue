@@ -1,30 +1,30 @@
-<template>
-  <div class="page-presentations-entry">
-    <page-header
-      :title="entry.title"
-      :subtitle="'Uploaded on ' + entry.date"
-      type="center"
-      theme="tendermint">
-    </page-header>
-    <ni-section>
-      <div class="youtube" :id="entry.id"></div>
-      <presentation-footer :facebook-url="facebookUrl" :twitter-url="twitterUrl"></presentation-footer>
-    </ni-section>
-  </div>
+<template lang="pug">
+page.page-presentations-entry(:title="entry.title"
+  :subtitle="'Published on ' + entry.date")
+  text-container
+    .youtube(:id='entry.id')
+    presentations-footer(:facebook-url='facebookUrl', :twitter-url='twitterUrl')
 </template>
 
 <script>
 import { mapGetters } from "vuex"
 import $ from "jquery"
-import NiSection from "./NiSection"
-import PageHeader from "@nylira/vue-page-header"
-import PagePresentationsFooter from "./PagePresentationsFooter"
+import Btn from "@nylira/vue-button"
+import Page from "common/NiPage"
+import PresentationsFooter from "comp/PagePresentationsFooter"
+import TextContainer from "common/NiTextContainer"
 export default {
   name: "page-presentations-entry",
+  metaInfo: {
+    title() {
+      return this.entry.title + " - Presentations"
+    }
+  },
   components: {
-    NiSection,
-    PageHeader,
-    PagePresentationsFooter
+    Btn,
+    Page,
+    PresentationsFooter,
+    TextContainer
   },
   computed: {
     entry() {
@@ -49,8 +49,6 @@ export default {
     ...mapGetters(["allPresentations"])
   },
   mounted() {
-    document.title = this.entry.title + " - Presentations - Tendermint"
-
     let self = this
 
     $(".youtube").each(function() {
@@ -91,7 +89,7 @@ export default {
 </script>
 
 <style lang="stylus">
-@require '../styles/variables.styl'
+@require '~variables'
 
 .page-presentations-entry
   .youtube
@@ -103,7 +101,7 @@ export default {
     margin-left -1*x
     margin-right -1*x
 
-  div.youtube 
+  div.youtube
     position relative
     cursor pointer
     background #000 no-repeat center center

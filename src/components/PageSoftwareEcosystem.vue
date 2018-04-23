@@ -1,57 +1,53 @@
 <template lang="pug">
-page-split.page-software-ecosystem
-  page-header(title='Ecosystem', subtitle="Explore Tendermint's software ecosystem.", type='split', slot='header', theme='tendermint')
-    field(type='text', placeholder='Search...', theme='tendermint', size='large', v-model='searchQuery')
-  ni-section(v-show='abciApps.length > 0')
-    card-title ABCI Apps
-    .section-content
-      .software-header
-        .name.active(@click="reorderBy('name')") Title
-        .author(@click="reorderBy('author')") Author
-        .tech(@click="reorderBy('tech')") Language
-        .description(@click="reorderBy('description')") Description
-      .software-list
-        .software(v-for='entry in abciApps'): a(:href='entry.url')
-          .name {{ entry.name }}
-          .author
-            span.key Author:
-            span.value {{ entry.author }}
-          .language
-            span.key Language:
-            span.value {{ entry.language }}
-          .description {{ entry.description }}
+page.page-software-ecosystem(title="Software Ecosystem")
+  div(slot="subtitle") Explore Tendermint's software ecosystem.
+  div(slot="menu")
+    field(type='text', placeholder='Search...', v-model='searchQuery')
 
-  ni-section(v-show='abciServers.length > 0')
-    card-title ABCI Servers
-    .section-content
-      .software-header
-        .name.active(@click="reorderBy('name')") Title
-        .author(@click="reorderBy('author')") Author
-        .tech(@click="reorderBy('tech')") Language
-      .software-list
-        .software(v-for='entry in abciServers'): a(:href='entry.url')
-          .name {{ entry.name }}
-          .author
-            span.key Author:
-            span.value {{ entry.author }}
-          .language
-            span.key Language:
-            span.value {{ entry.language }}
+  part(title="ABCI Apps" v-show='abciApps.length > 0')
+    .software-header
+      .name.active(@click="reorderBy('name')") Title
+      .author(@click="reorderBy('author')") Author
+      .tech(@click="reorderBy('tech')") Language
+      .description(@click="reorderBy('description')") Description
+    .software-list
+      .software(v-for='entry in abciApps'): a(:href='entry.url')
+        .name {{ entry.name }}
+        .author
+          span.key Author:
+          span.value {{ entry.author }}
+        .language
+          span.key Language:
+          span.value {{ entry.language }}
+        .description {{ entry.description }}
 
-  ni-section(v-show='deploymentTools.length > 0')
-    card-title Deployment Tools
-    .section-content
-      .software-header
-        .name.active(@click="reorderBy('name')") Title
-        .author(@click="reorderBy('author')") Author
-        .description(@click="reorderBy('description')") Description
-      .software-list
-        .software(v-for='entry in deploymentTools'): a(:href='entry.url')
-          .name {{ entry.name }}
-          .author
-            span.key Author:
-            span.value {{ entry.author }}
-          .description {{ entry.description }}
+  part(title="ABCI Servers" v-show='abciServers.length > 0')
+    .software-header
+      .name.active(@click="reorderBy('name')") Title
+      .author(@click="reorderBy('author')") Author
+      .tech(@click="reorderBy('tech')") Language
+    .software-list
+      .software(v-for='entry in abciServers'): a(:href='entry.url')
+        .name {{ entry.name }}
+        .author
+          span.key Author:
+          span.value {{ entry.author }}
+        .language
+          span.key Language:
+          span.value {{ entry.language }}
+
+  part(title="Deployment Tools" v-show='deploymentTools.length > 0')
+    .software-header
+      .name.active(@click="reorderBy('name')") Title
+      .author(@click="reorderBy('author')") Author
+      .description(@click="reorderBy('description')") Description
+    .software-list
+      .software(v-for='entry in deploymentTools'): a(:href='entry.url')
+        .name {{ entry.name }}
+        .author
+          span.key Author:
+          span.value {{ entry.author }}
+        .description {{ entry.description }}
 </template>
 
 <script>
@@ -59,19 +55,15 @@ import { mapGetters } from "vuex"
 import { orderBy } from "lodash"
 import $ from "jquery"
 import Fuse from "fuse.js"
-import Field from "@nylira/vue-input"
-import CardTitle from "./CardTitle"
-import NiSection from "./NiSection"
-import PageHeader from "@nylira/vue-page-header"
-import PageSplit from "@nylira/vue-page-split"
+import Field from "@nylira/vue-field"
+import Page from "common/NiPage"
+import Part from "common/NiPart"
 export default {
   name: "page-software-ecosystem",
   components: {
-    CardTitle,
     Field,
-    NiSection,
-    PageHeader,
-    PageSplit
+    Page,
+    Part
   },
   computed: {
     ...mapGetters(["ecosystem"]),

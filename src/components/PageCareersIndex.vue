@@ -2,7 +2,7 @@
 page(title="Careers" )
   div(slot="subtitle") Work with us to build the future of the decentralized web with #[a(href='https://cosmos.network') Cosmos]. If your speciality is not listed below, we still encourage you to apply.
   div(slot="menu")
-    btn(icon="check_circle" value="Apply" type="anchor" href="https://tendermint.com/careers" target="_blank" color="primary")
+    btn(icon="mail" value="Apply to Tendermint" type="anchor" href="https://tendermint.com/careers" target="_blank" color="primary")
 
   part(title='Technical Positions' v-if='technical.length > 0')
     div(slot='title') Technical Positions
@@ -30,6 +30,7 @@ import Page from "common/NiPage"
 import Part from "common/NiPart"
 export default {
   name: "page-careers-index",
+  metaInfo: { title: "Careers" },
   components: {
     Btn,
     CardCareer,
@@ -54,9 +55,6 @@ export default {
       return orderedCareers
     },
     ...mapGetters(["allCareers"])
-  },
-  mounted() {
-    document.title = "Careers - Tendermint"
   }
 }
 </script>

@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import Field from "@nylira/vue-input"
+import Field from "@nylira/vue-field"
 import Btn from "@nylira/vue-button"
 export default {
   name: "form-email-signup",
