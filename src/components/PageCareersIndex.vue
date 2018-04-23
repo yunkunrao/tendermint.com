@@ -1,25 +1,22 @@
 <template lang="pug">
-page-split.page-careers-index
-  page-header(
-    title='Careers'
-    subtitle="Join us at Tendermint to build and improve <a href='https://cosmos.network'>Cosmos</a> and Tendermint.<br><br>Jobs here are constantly updated. If your specialty is unlisted, we encourage you to still apply."
-    type='split'
-    slot='header'
-    theme='tendermint')
+page(title="Careers" )
+  div(slot="subtitle") Work with us to build the future of the decentralized web with #[a(href='https://cosmos.network') Cosmos]. If your speciality is not listed below, we still encourage you to apply.
+  div(slot="menu")
+    btn(icon="check_circle" value="Apply" type="anchor" href="https://tendermint.com/careers" target="_blank" color="primary")
 
-  ni-section(v-if='technical.length > 0')
+  part(title='Technical Positions' v-if='technical.length > 0')
     div(slot='title') Technical Positions
     card-career(v-for='c in technical', :key='c.id', :career='c')
 
-  ni-section(v-if='design.length > 0')
+  part(title='Design Positions' v-if='design.length > 0')
     div(slot='title') Design Positions
     card-career(v-for='c in design', :key='c.id', :career='c')
 
-  ni-section(v-if='operations.length > 0')
+  part(title='Operations Positions' v-if='operations.length > 0')
     div(slot='title') Operations Positions
     card-career(v-for='c in operations', :key='c.id', :career='c')
 
-  ni-section(v-if='community.length > 0')
+  part(title='Community Positions' v-if='community.length > 0')
     div(slot='title') Community Positions
     card-career(v-for='c in community', :key='c.id', :career='c')
 </template>
@@ -27,17 +24,17 @@ page-split.page-careers-index
 <script>
 import { mapGetters } from "vuex"
 import { orderBy } from "lodash"
+import Btn from "@nylira/vue-button"
 import CardCareer from "./CardCareer"
-import NiSection from "./NiSection"
-import PageHeader from "@nylira/vue-page-header"
-import PageSplit from "@nylira/vue-page-split"
+import Page from "common/NiPage"
+import Part from "common/NiPart"
 export default {
   name: "page-careers-index",
   components: {
+    Btn,
     CardCareer,
-    NiSection,
-    PageHeader,
-    PageSplit
+    Page,
+    Part
   },
   computed: {
     technical() {

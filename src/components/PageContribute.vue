@@ -1,29 +1,25 @@
 <template lang="pug">
-page-split.page-contribute-index
-  page-header(
-    title='Contribute'
-    subtitle="We need your help! Please aid us in fix bugs and add features to Tendermint. Explore these issues to see where your skills can be of use."
-    type='split'
-    slot='header'
-    theme='tendermint')
-  ni-section
-    div(slot='title') Tendermint Issues
+page(title="Contribute" )
+  div(slot="subtitle") Please aid us in fix bugs and add features to Tendermint. Explore these issues to see where your skills may be most useful.
+  div(slot="menu")
+    btn(icon="code" value="Tendermint Core" type="anchor" href="https://github.com/tendermint/tendermint" target="_blank" color="primary")
+  part(title='Tendermint Issues')
     card-issue(v-for="i in issues" :key="i.id" :issue="i")
 </template>
 
 <script>
 import { mapGetters } from "vuex"
+import Btn from "@nylira/vue-button"
 import CardIssue from "./CardIssue"
-import NiSection from "./NiSection"
-import PageHeader from "@nylira/vue-page-header"
-import PageSplit from "@nylira/vue-page-split"
+import Page from "common/NiPage"
+import Part from "common/NiPart"
 export default {
   name: "page-careers-index",
   components: {
+    Btn,
     CardIssue,
-    NiSection,
-    PageHeader,
-    PageSplit
+    Page,
+    Part
   },
   computed: {
     ...mapGetters(["issues"])

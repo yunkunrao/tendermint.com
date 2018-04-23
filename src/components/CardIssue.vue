@@ -30,8 +30,6 @@ export default {
 
 .ni-card-issue
   display block
-  border 1px solid var(--bc)
-  border-bottom none
   color var(--txt)
   display flex
   flex-flow row nowrap
@@ -50,7 +48,6 @@ export default {
   display flex
   justify-content center
   padding 0.75rem 0.5rem 0.5rem
-  border-right 1px solid var(--bc)
 
   i
     font-size 1.25rem

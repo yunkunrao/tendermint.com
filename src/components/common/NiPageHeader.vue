@@ -33,8 +33,6 @@ export default {
   align-items center
   position relative
   overflow hidden
-  border-bottom 1px solid var(--bc)
-
 
 .ni-page-header-splash
   position absolute
@@ -88,6 +86,9 @@ export default {
       height 7rem
 
 @media screen and (max-width: 1023px)
+  .ni-page-header
+    border-bottom 1px solid var(--bc)
+
   .ni-page-header-backdrop
     display none
 

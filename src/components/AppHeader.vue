@@ -9,9 +9,9 @@ header.app-header
     menu.menu-popup.menu-app(v-if='activeMenuApp || desktop')
       nav.nav-app
         router-link(to='/security' @click.native='close' exact) Security
-        router-link(to='/about' @click.native='close' exact) About
-        router-link(to='/careers' @click.native='close' exact) Careers
         router-link(to='/contribute' @click.native='close' exact) Contribute
+        router-link(to='/careers' @click.native='close' exact) Careers
+        router-link(to='/about' @click.native='close' exact) About
       nav.nav-external
         a(:href='links.tm.docs.index' target='_blank')
           | Docs #[i.material-icons book]
@@ -83,8 +83,7 @@ navc = #94c0ec
   z-index 100
   width 100%
 
-  background var(--app-bg)
-  border-bottom 1px solid var(--bc)
+  background var(--app-bg-alpha)
 
   .container
     max-width 1024px
@@ -120,9 +119,6 @@ navc = #94c0ec
       display block
       height 3rem
       width auto
-
-    &.header-item-flush
-      padding 0
 
     &:hover
       i.fa, .label
@@ -187,7 +183,7 @@ navc = #94c0ec
       flex-flow row
       align-items center
       > a
-        padding 0 1rem
+        padding 0 1.25rem
         color var(--txt)
         line-height 3rem
         i
@@ -200,5 +196,5 @@ navc = #94c0ec
           background var(--app-fg)
           cursor default
           &:hover
-            color var(--link)
+            color var(--txt)
 </style>

@@ -77,8 +77,7 @@ export default {
     background var(--app-fg)
     .avatar
       i.material-icons
-        background var(--hover)
-        color var(--bright)
+        color var(--hover)
     .name
       color var(--bright)
 

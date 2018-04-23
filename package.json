@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@nylira/vue-article-body": "^3.5.0",
-    "@nylira/vue-button": "^4.4.0",
+    "@nylira/vue-button": "^4.4.3",
     "@nylira/vue-field": "^1.4.0",
     "@nylira/vue-input": "^3.4.0",
     "@nylira/vue-notifications": "^1.5.0",
@@ -52,7 +52,9 @@
     "vue-template-compiler": "^2.5.13"
   },
   "babel": {
-    "presets": ["@vue/app"]
+    "presets": [
+      "@vue/app"
+    ]
   },
   "eslintConfig": {
     "root": true,
@@ -67,7 +69,11 @@
       "autoprefixer": {}
     }
   },
-  "browserslist": ["> 1%", "last 2 versions", "not ie <= 8"],
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
   "prettier": {
     "semi": false
   }

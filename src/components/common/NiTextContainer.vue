@@ -32,7 +32,7 @@ export default {
     padding 0
 
   a
-    color link
+    color var(--link)
     overflow-wrap break-word
     word-wrap break-word
     -ms-word-break break-all
@@ -40,7 +40,7 @@ export default {
     word-break break-word
     &:hover
       text-decoration underline
-      color hover
+      color var(--hover)
 
   strong
     font-weight bold
@@ -71,7 +71,7 @@ export default {
     & + figcaption
       margin-top -1.5rem
       background var(--app-fg)
-      border 1px solid #eee
+      border 1px solid var(--bc--)
       border-top none
       padding 0.5rem
       color var(--txt)
@@ -127,7 +127,7 @@ export default {
     margin-top -0.5rem
 
   h2
-    border-top 0.25rem solid bc-dim
+    border-top 0.25rem solid var(--bc-dim)
     padding-top 1rem
     + p, + ul, + ol, + blockquote
       margin-bottm 3rem
@@ -146,7 +146,7 @@ export default {
       font-weight 500
       background var(--app-fg)
       color var(--dim)
-      border 1px solid #e0e0e0
+      border 1px solid var(--bc-dim)
       padding 0.25em 0.5em
 
   blockquote

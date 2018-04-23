@@ -2,7 +2,7 @@
 page(title="About" )
   div(slot="subtitle") We are currently working full time on bringing <a href='https://cosmos.network'>Cosmos</a> to reality. We're also hiring blockchain engineers. Join us!
   div(slot="menu")
-    btn(icon="person_add" value="Join our team!" type="anchor" href="https://tendermint.com/careers" target="_blank" color="primary")
+    btn(icon="person_add" value="Join Tendermint" type="link" :to="{ name: 'careers' }" color="primary")
 
   part(title='Tendermint Team')
     cards.people
