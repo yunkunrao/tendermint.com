@@ -4,27 +4,12 @@ function resolve(dir) {
   return path.join(__dirname, dir)
 }
 
-let markdown = require("markdown-it")({
-  preset: "default",
-  html: true,
-  typographer: true,
-  linkify: true,
-  preprocess: (markdownIt, source) => source
-})
-
-markdown.use(require("markdown-it-anchor"))
-markdown.use(require("markdown-it-table-of-contents"), {
-  includeLevel: [2, 3, 4, 5],
-  containerClass: "minimal-toc"
-})
-
 module.exports = {
   chainWebpack: config => {
     config.resolve.alias
       .set("assets", resolve("src/assets"))
       .set("images", resolve("src/assets/images"))
       .set("comp", resolve("src/components"))
-      .set("content", resolve("src/content"))
       .set("scripts", resolve("src/scripts"))
       .set("variables", resolve("src/styles/variables.styl"))
       .set("buttons", resolve("src/components/buttons"))
@@ -40,11 +25,5 @@ module.exports = {
       .test(/\.pdf/)
       .use("")
       .loader("file-loader")
-    config.module
-      .rule("markdown")
-      .test(/\.md/)
-      .use("")
-      .loader("vue-markdown-loader")
-      .options(markdown)
   }
 }
