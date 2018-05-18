@@ -1,48 +1,30 @@
-<template>
-  <page-split>
-    <page-header
-      title="Presentations"
-      subtitle="Watch presentations and other videos about and by the Tendermint team."
-      type="split"
-      slot="header"
-      theme="tendermint">
-    </page-header>
-    <ni-section>
-      <card-post
-        v-for="p in presentations"
-        :key="p.title"
-        :url="'/presentations/' + p.slug"
-        :title="p.title"
-        :desc="p.description"
-        :meta="p.date">
-      </card-post>
-    </ni-section>
-  </page-split>
+<template lang="pug">
+page(title="Presentations" subtitle="Watch presentations and other videos about and by the Tendermint team.")
+  text-container
+    card-post(v-for='p in presentations' :key='p.title' :url="'/presentations/' + p.slug" :title='p.title' :desc='p.description' :meta='p.date')
 </template>
 
 <script>
-import NiSection from './NiSection'
-import PageHeader from '@nylira/vue-page-header'
-import PageSplit from '@nylira/vue-page-split'
-import { mapGetters } from 'vuex'
-import { orderBy } from 'lodash'
-import CardPost from './CardPost'
+import { mapGetters } from "vuex"
+import { orderBy } from "lodash"
+import CardPost from "./CardPost"
+import Page from "common/NiPage"
+import TextContainer from "common/NiTextContainer"
 export default {
-  name: 'page-presentations-index',
+  name: "page-presentations-index",
+  metaInfo: { title: "Presentations" },
   components: {
     CardPost,
-    NiSection,
-    PageHeader,
-    PageSplit
+    Page,
+    TextContainer
   },
   computed: {
-    presentations () { return orderBy(this.allPresentations, ['date'], ['desc']) },
+    presentations() {
+      return orderBy(this.allPresentations, ["date"], ["desc"])
+    },
     ...mapGetters({
-      allPresentations: 'allPresentations'
+      allPresentations: "allPresentations"
     })
-  },
-  mounted () {
-    document.title = 'Presentations - Tendermint'
   }
 }
 </script>

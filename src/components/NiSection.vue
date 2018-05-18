@@ -17,22 +17,9 @@
 @require '~variables'
 
 .ni-section
-  border-bottom 1px solid bc
-
+  border-bottom 1px solid var(--bc)
   &:last-of-type
-    border-bottom none
-
-  &.ni-section-dark
-    background mcolor
-    border-bottom-color lighten(mcolor, 10%)
-
-    .ni-section-title, .key, a
-      color lighten(mcolor,93%) !important
-      a
-        color lighten(mcolor, 50%) !important
-
-    .ni-section-main p, .value
-      color lighten(mcolor,70%)
+    border none
 
 .ni-section-container
 .ni-section-header
@@ -73,10 +60,6 @@
     padding 1rem
     border 1px solid bc
     border-top none
-
-  .ni-section-dark
-    .ni-section-header
-      border-color lighten(mcolor, 10%)
 
   .ni-section-title
     font-size 1.25rem

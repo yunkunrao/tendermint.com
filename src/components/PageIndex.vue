@@ -1,25 +1,24 @@
-<template>
-  <div class="page-index">
-    <section-home-cover></section-home-cover>
-    <section-home-benefits></section-home-benefits>
-  </div>
+<template lang="pug">
+.page-index
+  section-home-cover
+  section-home-benefits
 </template>
 
 <script>
-import SectionHomeCover from './SectionHomeCover'
-import SectionHomeBenefits from './SectionHomeBenefits'
+import SectionHomeCover from "comp/SectionHomeCover"
+import SectionHomeBenefits from "comp/SectionHomeBenefits"
 export default {
-  name: 'page-index',
+  name: "page-index",
   components: {
     SectionHomeCover,
     SectionHomeBenefits
   },
   head: {
-    title () {
+    title() {
       return {
-        inner: 'Tendermint',
-        separator: '-',
-        complement: 'Blockchain Consensus'
+        inner: "Tendermint",
+        separator: "-",
+        complement: "Blockchain Consensus"
       }
     }
   }

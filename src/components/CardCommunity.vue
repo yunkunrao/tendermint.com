@@ -13,8 +13,8 @@ router-link.card-community(v-else :to='to')
 
 <script>
 export default {
-  name: 'card-community',
-  props: ['anchor', 'dt', 'dd', 'icon', 'to']
+  name: "card-community",
+  props: ["anchor", "dt", "dd", "icon", "to"]
 }
 </script>
 

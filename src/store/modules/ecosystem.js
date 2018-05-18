@@ -1,10 +1,11 @@
-import getJson from 'scripts/getJson'
-let url = 'https://api.github.com/repos/tendermint/aib-data/contents/json/ecosystem.json'
+import getJson from "scripts/getJson"
+let url =
+  "https://api.github.com/repos/tendermint/aib-data/contents/json/ecosystem.json"
 
 const state = { data: {} }
 
 const mutations = {
-  async initEcosystem (state) {
+  async initEcosystem(state) {
     state.data = await getJson(url)
   }
 }

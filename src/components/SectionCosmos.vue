@@ -2,23 +2,22 @@
 .section-cosmos
   .section-cosmos-container
     header.section-cosmos-header
-      h2.section-cosmos-title The Cosmos Network
-      .section-cosmos-subtitle Launching Soon
+      h2.section-cosmos-title Cosmos
     main.section-cosmos-main
-      .section-cosmos-description All of us at Tendermint are working hard on preparing the Cosmos Network for release. We"re aiming to launch soon &ndash; #[a(href="https://cosmos.network/roadmap") follow our roadmap].
-      btn.section-cosmos-btn(type="anchor" :href="links.cosmos.website" size="lg" value="Visit Cosmos Network" theme="tendermint" icon="external-link")
+      .section-cosmos-description All of us at Tendermint are working hard on preparing the Cosmos Network for release. We're aiming to launch soon &ndash; #[a(href="https://cosmos.network/roadmap") follow our roadmap].
+      btn.section-cosmos-btn(type="anchor" :href="links.cosmos.website" size="lg" value="Learn about Cosmos" icon="link" color="primary")
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
-import Btn from '@nylira/vue-button'
+import { mapGetters } from "vuex"
+import Btn from "@nylira/vue-button"
 export default {
-  name: 'section-cosmos',
+  name: "section-cosmos",
   components: {
     Btn
   },
   computed: {
-    ...mapGetters(['config', 'links'])
+    ...mapGetters(["config", "links"])
   }
 }
 </script>
@@ -27,8 +26,9 @@ export default {
 @import '~variables'
 
 .section-cosmos
-  border-bottom 1px solid lighten(mcolor, 10%)
-  color lighten(mcolor, 60%)
+  border-bottom 1px solid var(--bc)
+  border-top 1px solid var(--bc)
+  margin-top 1.5rem
 
 .section-cosmos-container
   max-width 40rem
@@ -42,11 +42,8 @@ export default {
 
 .section-cosmos-title
   font-size 1.5rem
-  font-weight 600
-  color lighten(mcolor, 75%)
-
-.section-cosmos-subtitle
-  font-size 1.375rem
+  font-weight 500
+  color var(--bright)
 
 .section-cosmos-form
   border none
@@ -65,7 +62,7 @@ export default {
   max-width 26rem
   font-size 0.875rem
   a
-    color lighten(mcolor, 80%)
+    color var(--link)
     font-weight 500
 
 @media screen and (min-width: 768px)

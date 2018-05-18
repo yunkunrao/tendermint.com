@@ -1,78 +1,84 @@
-<template>
-  <div class="page-presentations-entry">
-    <page-header
-      :title="entry.title"
-      :subtitle="'Uploaded on ' + entry.date"
-      type="center"
-      theme="tendermint">
-    </page-header>
-    <ni-section>
-      <div class="youtube" :id="entry.id"></div>
-      <presentation-footer :facebook-url="facebookUrl" :twitter-url="twitterUrl"></presentation-footer>
-    </ni-section>
-  </div>
+<template lang="pug">
+page.page-presentations-entry(:title="entry.title"
+  :subtitle="'Published on ' + entry.date")
+  text-container
+    .youtube(:id='entry.id')
+    presentations-footer(:facebook-url='facebookUrl', :twitter-url='twitterUrl')
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
-import $ from 'jquery'
-import NiSection from './NiSection'
-import PageHeader from '@nylira/vue-page-header'
-import PagePresentationsFooter from './PagePresentationsFooter'
+import { mapGetters } from "vuex"
+import $ from "jquery"
+import Btn from "@nylira/vue-button"
+import Page from "common/NiPage"
+import PresentationsFooter from "comp/PagePresentationsFooter"
+import TextContainer from "common/NiTextContainer"
 export default {
-  name: 'page-presentations-entry',
+  name: "page-presentations-entry",
+  metaInfo: {
+    title() {
+      return this.entry.title + " - Presentations"
+    }
+  },
   components: {
-    NiSection,
-    PageHeader,
-    PagePresentationsFooter
+    Btn,
+    Page,
+    PresentationsFooter,
+    TextContainer
   },
   computed: {
-    entry () {
+    entry() {
       let slug = this.$route.params.entry
       if (this.allPresentations) {
         return this.allPresentations.find(p => p.slug === slug)
       }
       return {}
     },
-    facebookUrl () {
-      let url = 'https://www.facebook.com/sharer/sharer.php?u='
+    facebookUrl() {
+      let url = "https://www.facebook.com/sharer/sharer.php?u="
       if (this.entry) url += `${this.entry.title} ${window.location.href}`
       else url += ` ${window.location.href}`
       return url
     },
-    twitterUrl () {
-      let url = 'https://twitter.com/home?status='
+    twitterUrl() {
+      let url = "https://twitter.com/home?status="
       if (this.entry) url += `${this.entry.title} ${window.location.href}`
       else url += ` ${window.location.href}`
       return url
     },
-    ...mapGetters([
-      'allPresentations'
-    ])
+    ...mapGetters(["allPresentations"])
   },
-  mounted () {
-    document.title = this.entry.title + ' - Presentations - Tendermint'
-
+  mounted() {
     let self = this
 
-    $('.youtube').each(function () {
+    $(".youtube").each(function() {
       // Set the BG image from the youtube ID
-      $(this).css('background-image', 'url(//i.ytimg.com/vi/' + this.id + '/hqdefault.jpg)')
+      $(this).css(
+        "background-image",
+        "url(//i.ytimg.com/vi/" + this.id + "/hqdefault.jpg)"
+      )
 
       // Click the video div
-      $(document).delegate('#' + this.id, 'click', function () {
+      $(document).delegate("#" + this.id, "click", function() {
         // Build embed URL
-        let iframeUrl = '//www.youtube.com/embed/' + this.id + '?autoplay=1&autohide=1'
+        let iframeUrl =
+          "//www.youtube.com/embed/" + this.id + "?autoplay=1&autohide=1"
 
-        if (self.entry.start) { iframeUrl += '&start=' + self.entry.start }
+        if (self.entry.start) {
+          iframeUrl += "&start=" + self.entry.start
+        }
 
         // Grab extra parameters set on div
-        if ($(this).data('params')) {
-          iframeUrl += '&' + $(this).data('params')
+        if ($(this).data("params")) {
+          iframeUrl += "&" + $(this).data("params")
         }
 
         // Build iframe tag
-        let iframe = $('<iframe/>', { 'allowfullscreen': 'allowfullscreen', 'frameborder': '0', 'src': iframeUrl })
+        let iframe = $("<iframe/>", {
+          allowfullscreen: "allowfullscreen",
+          frameborder: "0",
+          src: iframeUrl
+        })
 
         // Replace the YouTube thumbnail with YouTube HTML5 Player
         $(this).append(iframe)
@@ -83,7 +89,7 @@ export default {
 </script>
 
 <style lang="stylus">
-@require '../styles/variables.styl'
+@require '~variables'
 
 .page-presentations-entry
   .youtube
@@ -95,7 +101,7 @@ export default {
     margin-left -1*x
     margin-right -1*x
 
-  div.youtube 
+  div.youtube
     position relative
     cursor pointer
     background #000 no-repeat center center

@@ -6,11 +6,13 @@
 
 <script>
 export default {
-  name: 'overlay-btn',
+  name: "overlay-btn",
   computed: {
-    cssClass () { return 'fa fa-' + this.icon }
+    cssClass() {
+      return "fa fa-" + this.icon
+    }
   },
-  props: ['icon']
+  props: ["icon"]
 }
 </script>
 

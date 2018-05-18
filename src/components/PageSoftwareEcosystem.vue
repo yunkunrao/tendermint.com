@@ -1,91 +1,87 @@
 <template lang="pug">
-page-split.page-software-ecosystem
-  page-header(title='Ecosystem', subtitle="Explore Tendermint's software ecosystem.", type='split', slot='header', theme='tendermint')
-    field(type='text', placeholder='Search...', theme='tendermint', size='large', v-model='searchQuery')
-  ni-section(v-show='abciApps.length > 0')
-    card-title ABCI Apps
-    .section-content
-      .software-header
-        .name.active(@click="reorderBy('name')") Title
-        .author(@click="reorderBy('author')") Author
-        .tech(@click="reorderBy('tech')") Language
-        .description(@click="reorderBy('description')") Description
-      .software-list
-        .software(v-for='entry in abciApps'): a(:href='entry.url')
-          .name {{ entry.name }}
-          .author
-            span.key Author:
-            span.value {{ entry.author }}
-          .language
-            span.key Language:
-            span.value {{ entry.language }}
-          .description {{ entry.description }}
+page.page-software-ecosystem(title="Software Ecosystem")
+  div(slot="subtitle") Explore Tendermint's software ecosystem.
+  div(slot="menu")
+    field(type='text', placeholder='Search...', v-model='searchQuery')
 
-  ni-section(v-show='abciServers.length > 0')
-    card-title ABCI Servers
-    .section-content
-      .software-header
-        .name.active(@click="reorderBy('name')") Title
-        .author(@click="reorderBy('author')") Author
-        .tech(@click="reorderBy('tech')") Language
-      .software-list
-        .software(v-for='entry in abciServers'): a(:href='entry.url')
-          .name {{ entry.name }}
-          .author
-            span.key Author:
-            span.value {{ entry.author }}
-          .language
-            span.key Language:
-            span.value {{ entry.language }}
+  part(title="ABCI Apps" v-show='abciApps.length > 0')
+    .software-header
+      .name.active(@click="reorderBy('name')") Title
+      .author(@click="reorderBy('author')") Author
+      .tech(@click="reorderBy('tech')") Language
+      .description(@click="reorderBy('description')") Description
+    .software-list
+      .software(v-for='entry in abciApps'): a(:href='entry.url')
+        .name {{ entry.name }}
+        .author
+          span.key Author:
+          span.value {{ entry.author }}
+        .language
+          span.key Language:
+          span.value {{ entry.language }}
+        .description {{ entry.description }}
 
-  ni-section(v-show='deploymentTools.length > 0')
-    card-title Deployment Tools
-    .section-content
-      .software-header
-        .name.active(@click="reorderBy('name')") Title
-        .author(@click="reorderBy('author')") Author
-        .description(@click="reorderBy('description')") Description
-      .software-list
-        .software(v-for='entry in deploymentTools'): a(:href='entry.url')
-          .name {{ entry.name }}
-          .author
-            span.key Author:
-            span.value {{ entry.author }}
-          .description {{ entry.description }}
+  part(title="ABCI Servers" v-show='abciServers.length > 0')
+    .software-header
+      .name.active(@click="reorderBy('name')") Title
+      .author(@click="reorderBy('author')") Author
+      .tech(@click="reorderBy('tech')") Language
+    .software-list
+      .software(v-for='entry in abciServers'): a(:href='entry.url')
+        .name {{ entry.name }}
+        .author
+          span.key Author:
+          span.value {{ entry.author }}
+        .language
+          span.key Language:
+          span.value {{ entry.language }}
+
+  part(title="Deployment Tools" v-show='deploymentTools.length > 0')
+    .software-header
+      .name.active(@click="reorderBy('name')") Title
+      .author(@click="reorderBy('author')") Author
+      .description(@click="reorderBy('description')") Description
+    .software-list
+      .software(v-for='entry in deploymentTools'): a(:href='entry.url')
+        .name {{ entry.name }}
+        .author
+          span.key Author:
+          span.value {{ entry.author }}
+        .description {{ entry.description }}
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
-import { orderBy } from 'lodash'
-import $ from 'jquery'
-import Fuse from 'fuse.js'
-import Field from '@nylira/vue-input'
-import CardTitle from './CardTitle'
-import NiSection from './NiSection'
-import PageHeader from '@nylira/vue-page-header'
-import PageSplit from '@nylira/vue-page-split'
+import { mapGetters } from "vuex"
+import { orderBy } from "lodash"
+import $ from "jquery"
+import Fuse from "fuse.js"
+import Field from "@nylira/vue-field"
+import Page from "common/NiPage"
+import Part from "common/NiPart"
 export default {
-  name: 'page-software-ecosystem',
+  name: "page-software-ecosystem",
   components: {
-    CardTitle,
     Field,
-    NiSection,
-    PageHeader,
-    PageSplit
+    Page,
+    Part
   },
   computed: {
-    ...mapGetters(['ecosystem']),
-    abciApps () {
+    ...mapGetters(["ecosystem"]),
+    abciApps() {
       let key = this.activeKey
       let query = this.searchQuery
-      if (key === 'tech') { key = ['language'] }
-      if (key === 'name') { key = [app => app.name.toLowerCase()] }
-      let results = orderBy(this.ecosystem.abciApps, key, ['asc'])
+      if (key === "tech") {
+        key = ["language"]
+      }
+      if (key === "name") {
+        key = [app => app.name.toLowerCase()]
+      }
+      let results = orderBy(this.ecosystem.abciApps, key, ["asc"])
 
       if (query) {
         let options = {
           threshold: 0.25,
-          keys: ['name', 'author', 'language', 'description']
+          keys: ["name", "author", "language", "description"]
         }
         let fuse = new Fuse(results, options)
         return fuse.search(this.searchQuery)
@@ -93,17 +89,21 @@ export default {
 
       return results
     },
-    abciServers () {
+    abciServers() {
       let key = this.activeKey
       let query = this.searchQuery
-      if (key === 'tech') { key = ['language'] }
-      if (key === 'name') { key = [app => app.name.toLowerCase()] }
-      let results = orderBy(this.ecosystem.abciServers, key, ['asc'])
+      if (key === "tech") {
+        key = ["language"]
+      }
+      if (key === "name") {
+        key = [app => app.name.toLowerCase()]
+      }
+      let results = orderBy(this.ecosystem.abciServers, key, ["asc"])
 
       if (query) {
         let options = {
           threshold: 0.25,
-          keys: ['name', 'author', 'language', 'description']
+          keys: ["name", "author", "language", "description"]
         }
         let fuse = new Fuse(results, options)
         return fuse.search(this.searchQuery)
@@ -111,17 +111,21 @@ export default {
 
       return results
     },
-    deploymentTools () {
+    deploymentTools() {
       let key = this.activeKey
       let query = this.searchQuery
-      if (key === 'tech') { key = ['technology'] }
-      if (key === 'name') { key = [app => app.name.toLowerCase()] }
-      let results = orderBy(this.ecosystem.deploymentTools, key, ['asc'])
+      if (key === "tech") {
+        key = ["technology"]
+      }
+      if (key === "name") {
+        key = [app => app.name.toLowerCase()]
+      }
+      let results = orderBy(this.ecosystem.deploymentTools, key, ["asc"])
 
       if (query) {
         let options = {
           threshold: 0.25,
-          keys: ['name', 'author', 'technology', 'description']
+          keys: ["name", "author", "technology", "description"]
         }
         let fuse = new Fuse(results, options)
         return fuse.search(this.searchQuery)
@@ -130,22 +134,22 @@ export default {
       return results
     }
   },
-  data () {
+  data() {
     return {
-      activeKey: 'name',
-      searchQuery: ''
+      activeKey: "name",
+      searchQuery: ""
     }
   },
   methods: {
-    reorderBy (key) {
-      $('.software-header div').removeClass('active')
-      $('.' + key).addClass('active')
+    reorderBy(key) {
+      $(".software-header div").removeClass("active")
+      $("." + key).addClass("active")
       this.activeKey = key
       // console.log('reordering by', this.activeKey)
     }
   },
-  mounted () {
-    document.title = 'Software Ecosystem - Tendermint'
+  mounted() {
+    document.title = "Software Ecosystem - Tendermint"
   }
 }
 </script>
@@ -165,11 +169,11 @@ export default {
 
     div
       padding 0.5rem 1rem
-      color light
+      color var(--dim)
       cursor pointer
 
       &.active
-        color txt
+        color var(--txt)
 
     .name
       flex 4
@@ -191,15 +195,15 @@ export default {
     a
       flex 1
       padding 0.5*x x
-      border 1px solid bc
-      color txt
+      border 1px solid var(--bc)
+      color var(--txt)
 
       &:hover
-        border-color link
+        border-color var(--link)
 
     .name
       font-weight bold
-      color link
+      color var(--link)
 
     .author, .technology, .language
       font-size 0.75*x
@@ -227,11 +231,10 @@ export default {
           display flex
           flex-flow row nowrap
           border none
-          border-top 1px solid bc
+          border-top 1px solid var(--bc)
           padding 0
           &:hover
             border-color bc
-            background lighten(mcolor, 97%)
 
           .name, .author, .language, .technology, .description
             padding 0.5rem 1rem
@@ -243,7 +246,7 @@ export default {
           .author, .language, .technology
             flex 3
             font-size x
-            color txt
+            color var(--txt)
             .key
               display none
 

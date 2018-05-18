@@ -8,20 +8,20 @@ a.ni-card-issue(:href="issue.html_url" target="_blank")
 </template>
 
 <script>
-import moment from 'moment'
-import MarkdownIt from 'markdown-it'
+import moment from "moment"
+import MarkdownIt from "markdown-it"
 export default {
-  name: 'ni-card-issue',
+  name: "ni-card-issue",
   methods: {
-    prettyDate (date) {
-      return moment(date).format('MMM D, YYYY, h:mm A')
+    prettyDate(date) {
+      return moment(date).format("MMM D, YYYY, h:mm A")
     },
-    markdown (text) {
+    markdown(text) {
       let md = new MarkdownIt()
       return md.renderInline(text)
     }
   },
-  props: ['issue']
+  props: ["issue"]
 }
 </script>
 
@@ -30,31 +30,25 @@ export default {
 
 .ni-card-issue
   display block
-  border 1px solid bc
-  border-bottom none
-  color txt
+  color var(--txt)
   display flex
   flex-flow row nowrap
 
   text-align left
 
-  &:nth-of-type(2n)
-    background #f6f6f6
-
   &:hover
     .ni-card-issue__title
-      color link
+      color var(--link)
 
 .ni-card-issue__state
   text-transform uppercase
   display flex
   justify-content center
   padding 0.75rem 0.5rem 0.5rem
-  border-right 1px solid bc
 
   i
     font-size 1.25rem
-    color #0c0
+    color var(--primary)
 
 .ni-card-issue__text
   flex 1
@@ -66,6 +60,6 @@ export default {
   margin-bottom 0.25rem
 
 .ni-card-issue__body
-  color dim
+  color var(--dim)
   font-size 0.75rem
 </style>

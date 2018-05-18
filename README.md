@@ -2,29 +2,19 @@
 
 > The website for Tendermint - Blockchain Consensus.
 
-## Production
-
-Please ask the team for deployment privileges.
-
 ## Development
 
 Make sure you're running Node 6 LTS or higher.
 
-``` bash
+```bash
 # install dependencies
-yarn install
+yarn
 
-# write some required files
-yarn run build
 
-# serve with hot reload at localhost:8800
-yarn run dev
+# serve with hot reload at localhost:8080
+yarn serve
 ```
 
-## Contributing
+## Production
 
-* Edit [Documentation](http://tendermint.readthedocs.io/en/master/)
-* Edit Community > [Software Ecosystem](https://github.com/tendermint/aib-data/blob/master/json/careers.json)
-* Edit Community > [Team](https://github.com/tendermint/aib-data/blob/master/json/people.json)
-* Edit Community > [Careers](https://github.com/tendermint/aib-data/blob/master/json/careers.json)
-* Edit Community > Presentations: `./src/store/modules/presentations.js`
+Run `yarn build` and then serve the generated `./dist` directory

@@ -10,10 +10,10 @@
 </template>
 
 <style lang="stylus">
-@require '../styles/variables.styl'
+@require '~variables'
 
 .master-detail
-  background c-app-fg
+  background app-fg
   min-height 100vh
 
 .master-detail + .app-bottom .section-bottom
@@ -33,7 +33,7 @@
     height 100vh
     overflow-y scroll
     z-index 10
-    background c-app-bg
+    background app-bg
 
   .btn-thumb
     display block
@@ -52,7 +52,7 @@
     line-height 2
     padding 1rem 1.5rem 0.25rem
 
-    color lighten(mcolor, 40%)
+    color lighten(mc, 40%)
 
   a + .title
     margin-top 0.75rem
@@ -64,13 +64,13 @@
     border-left 0.25rem solid transparent
 
     color txt
-    color lighten(mcolor,75%)
+    color lighten(mc,75%)
 
     &:hover
-      color lighten(mcolor,90%)
+      color lighten(mc,90%)
       border-left-color link
     &.router-link-active
-      color lighten(mcolor,75%)
+      color lighten(mc,75%)
       border-left-color link
 
 @media screen and (min-width: 768px)
