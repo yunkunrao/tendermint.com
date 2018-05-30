@@ -2,7 +2,7 @@
 page(title="Careers" )
   div(slot="subtitle") Work with us to build the future of the decentralized web with #[a(href='https://cosmos.network') Cosmos]. If your speciality is not listed below, we still encourage you to apply.
   div(slot="menu")
-    btn(icon="mail" value="Apply to Tendermint" type="anchor" href="https://tendermint.com/careers" target="_blank" color="primary")
+    btn(icon="mail" value="Apply for Job" type="anchor" :href="config.CAREER_APPLICATION_URL" target="_blank" color="primary")
 
   part(title='Technical Positions' v-if='technical.length > 0')
     div(slot='title') Technical Positions
@@ -54,7 +54,7 @@ export default {
       let orderedCareers = orderBy(this.allCareers, ["title"], ["asc"])
       return orderedCareers
     },
-    ...mapGetters(["allCareers"])
+    ...mapGetters(["allCareers", "config"])
   }
 }
 </script>
