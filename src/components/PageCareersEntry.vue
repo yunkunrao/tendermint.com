@@ -2,7 +2,7 @@
 page(:title="career.title" :subtitle="subtitle")
   div(slot="subtitle") Work with us to build the future of the decentralized web with #[a(href='https://cosmos.network') Cosmos]. If your speciality is not listed below, we still encourage you to apply.
   div(slot="menu")
-    btn(icon="mail" value="Apply for Job" type="anchor" href="https://tendermint.com/careers" target="_blank" color="primary")
+    btn(icon="mail" value="Apply for Job" type="anchor" :href="config.CAREER_APPLICATION_URL" target="_blank" color="primary")
 
   text-container
     h3 About us:
